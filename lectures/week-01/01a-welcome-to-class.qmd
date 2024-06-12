@@ -1,0 +1,30 @@
+---
+title: Welcome to <br> Data Analytics and Visualization
+subtitle: Harvey Mudd College
+author: Prof. Gabe Hope
+date: XX August 2024
+format: revealjs
+---
+
+## 
+
+![](img/stories-no-numbers.png)
+
+## Why visualization?
+
+-   [New York Times: The 25 photos that defined the modern age](https://www.nytimes.com/2024/06/03/t-magazine/photography-robert-frank-gordon-parks.html?campaign_id=190&emc=edit_ufn_20240611&instance_id=125955&nl=from-the-times&regi_id=212532248&segment_id=169299&te=1&user_id=9dc5ddec9efc7b95f11756bf96a8beae)
+
+## Data visuals that changed history
+
+::: panel-tabset
+## **Florence Nightingale**
+
+> Nightingale was a nurse and statistician who used her analytic abilities to better understand and improve public health. Nightingale worked to convince Queen Victoria that poor sanitation and overcrowding were causing unnecessary death. She was able to show, for example, that peacetime soldiers (who lived in poorly kept barracks) were dying in much higher number than comparable civilian men. Her genius was to collect data meticulously and to display it in ways that were accessible to the general public. Her visualizations are lauded as pioneering and the first of their kind to tell effective stories of important issues.
+
+## Plot
+
+![](img/florence-nightingale-plot.png)
+
+<!-- DRAFT DIAGRAM
+Surviving drafts of Nightingale's diagrams give a rare peek into her team's creative process. Drawn by government clerks, these drafts show how the team refined original ideas to improve information design. They also reveal that the mechanical precision of the final lithographs was not present in the original references. This early sketch gives a preview of one of Nightingale's most famous graphics (below), which reveals how army deaths from preventable diseases (blue) outnumbered hospital deaths from wounds (red). British Library Imaging Services -->
+:::
