@@ -14,7 +14,7 @@ format: revealjs
 
 -   [New York Times: The 25 photos that defined the modern age](https://www.nytimes.com/2024/06/03/t-magazine/photography-robert-frank-gordon-parks.html?campaign_id=190&emc=edit_ufn_20240611&instance_id=125955&nl=from-the-times&regi_id=212532248&segment_id=169299&te=1&user_id=9dc5ddec9efc7b95f11756bf96a8beae)
 
-## Data visuals that changed history
+## Amazing data visuals in 'history'
 
 ::: panel-tabset
 ## **Florence Nightingale**
@@ -23,8 +23,21 @@ format: revealjs
 
 ## Plot
 
-![](img/florence-nightingale-plot.png)
-
-<!-- DRAFT DIAGRAM
-Surviving drafts of Nightingale's diagrams give a rare peek into her team's creative process. Drawn by government clerks, these drafts show how the team refined original ideas to improve information design. They also reveal that the mechanical precision of the final lithographs was not present in the original references. This early sketch gives a preview of one of Nightingale's most famous graphics (below), which reveals how army deaths from preventable diseases (blue) outnumbered hospital deaths from wounds (red). British Library Imaging Services -->
+![Surviving drafts of Nightingale's diagrams give a rare peek into her team's creative process. Drawn by government clerks, these drafts show how the team refined original ideas to improve information design. They also reveal that the mechanical precision of the final lithographs was not present in the original references. This early sketch gives a preview of one of Nightingale's most famous graphics (below), which reveals how army deaths from preventable diseases (blue) outnumbered hospital deaths from wounds (red). British Library Imaging Services](img/florence-nightingale-plot.png)
 :::
+
+## Amazing data visuals in 'history'
+
+::: panel-tabset
+## **W.E.B. Du Bois**
+
+Du Bois was a sociologist and among the earliest data scientists. As Battle-Baptiste and Rusert say, his work can be thought of as[^1]
+
+> the rendering of information in a visual format to help communicate data while also generating new patterns and knoweldge throughout the act of visualization itselt.
+
+## Plot
+
+![Original illustration (left) created by WEB Du Bois, and updated version (right) by Mona Chalabi Photograph: Mona Chalabi](img/du-bois-plot.png)
+:::
+
+[^1]: Battle-Baptiste and Rusert, W.E.B. Du Bois’s Data Portraits: Visualizing Black America, the color line at the turn of the twentieth century, 2018, page 8.
