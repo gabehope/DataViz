@@ -6,6 +6,14 @@ date: XX August 2024
 format: revealjs
 ---
 
+<!--
+Outline of this class:
+1. Broad motivation for data analytics and visualization
+2. Examples (mainly via visuals) of exact things they are going to be able to do after this class
+3. Visual of class syllabus
+4. Assessment
+-->
+
 ## 
 
 ![](img/stories-no-numbers.png)
