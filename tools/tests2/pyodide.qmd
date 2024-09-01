@@ -1,0 +1,37 @@
+---
+title: Pyodide in Quarto HTML Documents
+format:
+    revealjs: default
+revealjs-plugins:
+  - pointer
+filters: 
+  - pyodide
+---
+
+This is a pyodide-enabled code cell in a Quarto HTML document.
+
+```{pyodide-python}
+
+import altair as alt
+import pandas as pd
+
+data = pd.DataFrame({'x': ['A', 'B', 'C', 'D', 'E'],
+                     'y': [5, 3, 6, 7, 2]})
+alt.Chart(data).mark_bar().encode(
+    x='x',
+    y='y',
+)
+```
+
+```{pyodide-python}
+data = pd.DataFrame({'x': ['A', 'B', 'C', 'D', 'E'],
+                     'y': [5, 3, 6, 7, 2]})
+alt.Chart(data).mark_bar().encode(
+    x='x',
+    y='y',
+)
+```
+
+```{ojs}
+console.log(('a'))
+```

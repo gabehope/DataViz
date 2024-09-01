@@ -1,0 +1,58 @@
+---
+title: "Course Syllabus"
+---
+
+# Course Description
+
+This course will focus on developing the practical skills needed to be an effective data scientist. In particular, students will learn how to collect and clean data, apply methods from statistics and machine learning, and make effective visualizations with industry-standard tools. Through realistic case-studies, students will gain hands-on experience working with various types of data including: tabular, time-series, geo-spatial and network data. A strong emphasis will be placed on clear communication, model interpretability and social responsibility.
+
+**Course Slack:** You can find the course slack channel [here](https://join.slack.com/t/dataanalytics-f947408/shared_invite/zt-2owz7arhx-XkFPHu4jhjnR2dqaNuef_g)
+
+## Instructor
+
+::::: columns
+::: {.column width="50%"}
+![](pictures/gabe.png){fig-align="left" width="300"}
+:::
+
+::: {.column width="50%"}
+Prof. Gabe Hope (he/him)
+
+**Email:** ghope\@g.hmc.edu
+
+**Office:** MacGregor 311
+
+**Office hours** (MCG 311)**:**
+
+-   **Mondays** 3-4pm
+
+-   **Thursdays** 3:30-5pm
+:::
+:::::
+
+### About me
+
+-   **What to call me:** You can call me any combination of Prof./Professor/Dr. and Hope/Gabe. My full name is actually John Gabriel Hope.
+-   **Where I'm from:** I grew up in New York City, but I've been living in southern California for the past 7 years.
+-   **Where I went to school:** I earned my Ph.D. from the University of California, Irvine advised by [Erik Sudderth](https://www.ics.uci.edu/~sudderth/). Before that I attended Brown University at the start of my Ph.D. and did my undergraduate studies at Washington University in St. Louis.
+-   **My research interests:** My research focuses on using neural networks to find interpretable structures in data. I mainly focus on image data, though I have also worked on analyzing motion-capture, audio and climate data among other things!
+
+## Topics covered (tentative!)
+
+-   Data visualization
+
+-   Data wrangling and preprocessing
+
+-   Model-free data analysis
+
+-   Statistical data analysis
+
+-   Timeseries, geo-spatial and network data analysis
+
+## Recommended textbooks
+
+[R for Data Science](https://r4ds.hadley.nz/) ([Python port](https://byuidatascience.github.io/python4ds/))
+
+[Modern Data Science with R](https://mdsr-book.github.io/mdsr3e/)
+
+[Python for Data Analysis](https://wesmckinney.com/book/)

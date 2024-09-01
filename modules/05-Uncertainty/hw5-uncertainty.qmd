@@ -1,0 +1,99 @@
+---
+title: "Homework 5: Communicating results effectively"
+subtitle: Data Analytics and Visualization, Fall 2024
+author: Prof. Gabe Hope
+institute: Harvey Mudd College
+date: August 2024
+format: html
+---
+
+# Learning objectives
+- Understand and critique an existing piece of data analytics reporting
+- Communicate ideas and findings effectively with data visualization tools
+- Work as a team to create a singular concept
+
+# Logistics
+
+## Timeline
+- **Friday, September XX 11:59pm** Create a gradescope submission for your assignment with all group members.
+- **Thursday, September XX 11:59pm** Submit your final assignment on Gradescope
+- **Friday, September XX 11:59pm** Submit your reflections on Gradescope.
+- **Thursday, September XX 11:59pm** Submit your peer feedback on Gradescope.
+
+## Groups
+This assignment **must** be completed in groups of 2-3 students. The instructor reserves the right to add students to a group as needed.
+
+Once you have chosen your group, please create a submission on Gradescope with all group memebers by **Friday, September XX**. 
+
+# Assignment
+
+**Goal:** Unlike previous assignments, every group will look at the same data for this assignment. In particular, we'll be reading and discussing a now classic piece of data journalism that exposed racial disparities in a machine learning-based system used in several jurisdictions to aid with sentencing recommendations for convicted criminals. 
+
+In 2016, ProPublica analyzed data from Broward County Florida with the goal of determining how prosecutors used a piece of commerial software called COMPAS, to predict recitivism rates (commiting the same crime again), which are used in sentencing. They found significant issues with the application of this software. 
+
+**Read the article and corresponding analysis published by ProPublica.** Make sure that every member of your group reads both pieces. You're not expected to understand all of techniques used by the authors, but much of it should be familiar at this point. As you read consider the following questions:
+
+- What do the authors do to effectively communicate the results of their analysis to a general audience? What could be improved?
+- Do the authors make effictive use of visualization to tell their story? What could be improved?
+- What follow-up research questions would you have about this data? Are there other data sources that could be used to augmet the analysis presented?
+- What are the core ethical questions raised by this article? What impacts do you hope this work would have?
+- The COMPAS software itself is likely based on some of the same data analysis techniques we've discussed. What do you think went wrong in building it? Could such a system ever be built "correctly"?
+
+**Discuss the article as a group.** You can focus on any of the questions above or any others that you might have related to this piece. You don't need to discuss everything, feel free to focus on 1-2 subjects that most interest you. 
+
+**Download the data** used by ProPublica for this article. The data is available on their Github page here. 
+
+**Create a new visualization** using the data to augment the published article. Your visualization can either be serve to bolster the thesis of the article by improving the presentation of the results, or could explore some related aspect of the data, possibly pulling additional data from other sources. In this case it is fine if you'd like to build off of an existing visualization from the original article, but make sure to justify *why* this visualization needs improving and *what* your re-make adds. Your team should create a *single visualization* agreed upon by the team. Aim to make it publication ready. Your visualization should also include an appropriate caption to explain what is being shown. 
+
+**Submit a 1-3 page (including figures) report.** Your report should have 3 sections. In the first, write a short (1 paragraph) summary of the article. In the section section, write up to a 1 page critique of the aritcle (remember a critique can be a positive or negative assessment). Finally include your new visualization (including caption) and in 1-2 paragraphs explain what this new visualization would add to the existing work.
+
+
+## Requirements checklist
+
+- [ ] **Read** the article and analysis.
+- [ ] **Discuss** as a group.
+- [ ] **Access and load** the data from ProPublica. 
+- [ ] Create a **new visualization** using the data.
+- [ ] Submit a report that: **summerizes ProPublica's work**, **summerizes your discussion**, and **explains your visualization**.
+
+## Format and submission
+
+Assignments should follow the homework Quarto template. Each submission should be rendered as a PDF and submitted through Gradescope. 
+
+## Rubric
+
+Both peer and intstructor feedback will use the following rubric for assesment.
+
+## Reflections
+Individual reflections are due on Gradescope within 1 day of submitting the final assignment. Each reflection will ask the following questions. 
+
+- How long did you spend on this assignment?
+- What did you contribute in working on this assignment? Is there anything you are proud of or think you could have done better?
+- Did each group member contribute (roughly) equally to this assignment?
+- Do you have any feedback for the instructor about how this assignment could be improved? (Or any other issues with the course?)
+- Did you recieve any particular peer or instructor feedback that you felt helped you produce a better submission?
+
+The goal of reflections is to help you think about your progress throughout this course and to help the instructor identify any potential issues. They will be much more helpful if you answer honestly. Reflections will only be graded based on completion, **not** on content and responses will **not** be shared with your peers. You should **not spend more than 5 minutes** completing the reflection.
+
+## Peer feedback
+
+Once the assignment has been completed you will be assigned to provide feedback on the submission of one of your peers. Peer feedback must be submitted on Gradescope within 1 week of the assignment due date. You should aim to spend **10-20 minutes** providing feedback.
+
+Please also refer to the guidelines for effective feedback.
+
+:::{.callout-note}
+While your options are valued and may be referenced in instructor feedback, peer feedback will not be directly used to determine assignment grades.
+:::
+
+## Time estimates
+
+Below is a (rough) outline of how much time each team member should aim to work on each part of this assignment. If you find that any part of this assingment is taking considerably longer, please reach out to the instructor.
+
+- **Reading the articles:** 30-60 minutes.
+- **Creating a visualization:** up to 60 minutes.
+- **Analyzing a variable:** 30-60 minutes.
+- **Writing the report:** up to 60 minutes.
+- **Reflections and peer feedback:** <30 minutes.
+
+**Total:** 3-4 hours
+

@@ -1,0 +1,86 @@
+---
+format: 
+    pdf:
+        include-in-header: 
+            text: '\pagenumbering{gobble}'
+---
+
+
+# Name:
+
+*Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
+
+# Data Analytics and Visualization: Week 1 - Introduction
+
+## In-class exercise
+
+Find 2-3 people around you and form a group (make sure at least 1 person has a laptop or tablet). Then navigate to the following webpage: 
+
+- <https://projects.fivethirtyeight.com/2024-election-forecast>
+
+As a group discuss the following questions and jot down any thoughts below:
+
+#### What information is this page trying to present? 
+*Consider questions one could answer with the information presented and why so many different visualizations are included. Try to go deeper than the question of: **who is going to win?*** 
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  Is the information presented clearly? 
+*Try to identify one **good** choice the authors made that in presenting this analysis. Then try to identify something that you found confusing or that could be improved.*
+
+
+|
+|
+|
+|
+
+#### What new skills would you need to replicate this work? 
+*Think about which parts (if any) of this presentation you're confident you could replicate with your current skill set and which parts might require learning new tools and techniques. **(These are things we'll learn in this class!)***
+
+
+|
+|
+|
+|
+|
+|
+|
+
+
+#### What impacts could this analysis have? 
+*Consider who is most interested in this data and how their decisions might change based on the analysis. Then consider the impacts of these decisions and the potential risks if the analysis is incorrect or misleading.*
+
+
+|
+|
+|
+|
+|
+|
+|
+
+
+## Reflection (*complete at the end of class*)
+
+#### What are you excited to learn in this class?
+
+|
+|
+|
+|
+|
+
+
+#### Are there any concerns you have about this class?
+
+|
+|
+|
+|

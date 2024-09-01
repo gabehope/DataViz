@@ -1,0 +1,746 @@
+---
+title: "Data Analytics and Visualization"
+subtitle: "0-1: Introduction to Data Representations and Visualization"
+author: "Prof. Gabe Hope"
+format: 
+    revealjs:
+        theme: ["../../../../theme.scss"]
+revealjs-plugins:
+  - tldraw
+---
+
+
+## Warmup exercise
+
+*What information is shown in this plot?*
+```{python}
+#| echo: false
+import pandas as pd
+from lets_plot import *
+LetsPlot.setup_html()
+
+nations = pd.read_csv('data/nations.csv')
+
+ggplot(nations, aes(x='income', y='lifeExpectancy', size='population')) + geom_point(aes(fill='region'), tooltips=layer_tooltips(['name']), stroke=0.5, shape=21, alpha=0.7) + scale_size(trans='sqrt', range = (0.2,12)) + scale_x_continuous(trans='log2', breaks=[500, 700, 1000, 5000, 7000, 10000, 50000, 70000,]) + ggsize(800, 500) + ggtitle('The Wealth and Health of Nations')
+```
+
+## Information shown
+
+- Countries! (names)
+- Populations
+- Incomes
+- Life expectencies
+- Regions
+
+## Data source: Gapminder
+
+::::: columns
+::: {.column width="40%"}
+
+![](pictures/gapminder_logo.png){fig-align="center"}
+
+![](pictures/gapminder.png){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+**Gapminder** is a Swedish non-profit organization focused on global development
+
+- Founded by Hans Rosling
+*"Gapminder identifies systematic misconceptions about important global trends and proportions and uses reliable data to develop easy to understand teaching materials to rid people of their misconceptions."*
+
+:::
+:::::
+
+# What is data?
+
+Some *rough* definitions
+
+## Dataset:
+
+A collection of **values** that capture various aspects of the world (Typically for a specific **domain**)
+
+![](pictures/world.png){fig-align="center"}
+
+## Variable:
+
+A **variable** defines some *measurement* we can make about the world
+
+#### Nations dataset
+- A country's *name*, *population*, *income*, *life expectency*, *etc.*
+
+#### Colleges dataset
+- A college's *name*, *tuition*, *enrollment*, *type (public vs. private)*, *etc.*
+
+## Observation:
+
+An **observation** is a collection of *values* corresponding to a single *entity*
+
+::::: columns
+::: {.column width="50%"}
+
+![](pictures/us.png){fig-align="center" height=250}
+
+- Name: *United States*
+- Population:  *300M*
+- Life exp.: *76.3*
+- Income: *47,000*
+:::
+
+::: {.column width="50%"}
+
+![](pictures/chile.png){fig-align="center" height=250}
+
+- Name: *Chile*
+- Population:  *20M*
+- Life exp.: *78.9*
+- Income: *17,000*
+
+:::
+:::::
+
+## Observation:
+
+An **observation** is a collection of *values* corresponding to a single *entity*
+
+::::: columns
+::: {.column width="50%"}
+
+- Name: *Harvey Mudd*
+- Tuition:  *$68,262*
+- Enrollment: *915*
+- Type: *Private*
+:::
+
+::: {.column width="50%"}
+- Name: *UC Irvine*
+- Tuition:  *$17,105*
+- Enrollment: *29,503*
+- Type: *Public*
+
+:::
+:::::
+
+## One way to think of this:
+![](pictures/colleges.png){fig-align="center"}
+
+:::{style="font-size: 50%"}
+Credit: R. Jordan Crouser, Smith College
+:::
+
+## Another way to think of this:
+![](pictures/code.png){fig-align="center"}
+
+:::{style="font-size: 50%"}
+Credit: R. Jordan Crouser, Smith College
+:::
+
+## Yet another way to think of this:
+![](pictures/placards.png){fig-align="center"}
+
+:::{style="font-size: 50%"}
+Credit: R. Jordan Crouser, Smith College
+:::
+
+# Let's get to code!
+
+## The **Pandas** library
+
+
+
+**Pandas** is the core library we'll use for representing datasets in code
+
+The central data structure in Pandas is the `DataFrame`
+
+::::: columns
+::: {.column width="50%" style="font-size: 70%"}
+```{python}
+#| echo: true
+
+# A DataFrame object
+nations = pd.read_csv('data/nations.csv')
+nations.head() # Shows first 5 rows
+```
+
+:::
+
+::: {.column width="50%"}
+- A 2-dimensional "array" of values
+- We can view it as a *table* with *rows* and *columns*
+
+:::
+:::::
+
+## The **Pandas** library
+
+Each column has a *label*, as shown.
+
+- Should specify what the values in a column mean
+
+::::: columns
+::: {.column width="50%" style="font-size: 70%"}
+```{python}
+#| echo: true
+
+# A DataFrame object
+nations = pd.read_csv('data/nations.csv')
+nations.head() # Shows first 5 rows
+```
+
+:::
+
+::: {.column width="50%"}
+```{python}
+#| echo: true
+nations.columns
+```
+
+:::{style="font-size: 70%"}
+Rows can (*sort of*) have labels too, we'll get back to this!
+
+:::
+
+:::
+:::::
+
+## Series
+
+Each column in Pandas is a 1-dimensional array-like object called a **series**
+
+::::: columns
+::: {.column width="50%"}
+```{python}
+#| echo: true
+nations['population']
+```
+
+:::
+
+::: {.column width="50%"}
+
+
+```{python}
+#| echo: true
+nations['name']
+```
+
+:::
+:::::
+
+# **Tidy Data:** A framework for using data frames
+
+::::: columns
+::: {.column width="50%"}
+![](pictures/hadley.jpg){fig-align="center"}
+:::
+::: {.column width="50%" style="font-size: 70%"}
+
+> *“Happy families are all alike; every unhappy family is unhappy in its own way.”* –– Leo Tolstoy
+
+> *“Tidy datasets are all alike, but every messy dataset is messy in its own way.”* –– **Hadley Wickham
+:::
+:::::
+
+## There's more than one way to represent the same data
+
+```{python}
+#| echo: false
+base_url = "https://github.com/byuidatascience/data4python4ds/raw/master/data-raw/"
+table1 = pd.read_csv("{}table1/table1.csv".format(base_url))
+table2 = pd.read_csv("{}table2/table2.csv".format(base_url))
+table3 = pd.read_csv("{}table3/table3.csv".format(base_url))
+table4a = pd.read_csv("{}table4a/table4a.csv".format(base_url))
+table4b = pd.read_csv("{}table4b/table4b.csv".format(base_url))
+table5 = pd.read_csv("{}table5/table5.csv".format(base_url), dtype = 'object')
+```
+
+What makes sense to you?
+
+::: {.panel-tabset}
+
+## A
+
+```{python}
+#| echo: false
+table1.style.hide(axis='index')
+```
+
+## B
+
+```{python}
+#| echo: false
+table2.style.hide(axis='index')
+```
+
+## C
+
+```{python}
+#| echo: false
+table3.style.hide(axis='index')
+```
+
+## D
+
+::::: columns
+::: {.column width="50%"}
+```{python}
+#| echo: false
+table4a.style.hide(axis='index')
+```
+:::
+
+::: {.column width="50%"}
+```{python}
+#| echo: false
+table4b.style.hide(axis='index')
+```
+:::
+:::::
+
+:::
+
+## Wickham's **tidy data** principles
+
+
+![](pictures/tidy.png){fig-align="center"}
+
+- Each variable forms a column.
+- Each observation forms a row.
+- Each type of observational unit forms a table (DataFrame)
+- Each value has its own cell.
+
+
+
+## Why tidy data?
+
+**Consistency**
+
+- Different practitioners tools have a consistent *format* for data
+- Useful for visualization in particular
+
+**Implementation**
+
+- Easier and more efficient to implement
+
+## Common ways data might be *messy*
+
+::: {.panel-tabset}
+
+## Tidy
+
+- Tidy data
+
+```{python}
+#| echo: false
+table1.style.hide(axis='index')
+```
+
+## Too long
+
+- Multiple variables are stored in one column
+
+```{python}
+#| echo: false
+table2.style.hide(axis='index')
+```
+
+## Too compact
+
+- Multiple values are stored in one cell
+
+```{python}
+#| echo: false
+table3.style.hide(axis='index')
+```
+
+## Too wide
+
+- Variables are stored in both rows and columns. (*Wide form data*)
+- A single observational unit is stored in multiple tables
+
+::::: columns
+::: {.column width="50%"}
+```{python}
+#| echo: false
+table4a.style.hide(axis='index')
+```
+:::
+
+::: {.column width="50%"}
+```{python}
+#| echo: false
+table4b.style.hide(axis='index')
+```
+:::
+:::::
+
+## Not separated
+
+- Multiple types of observational units are stored in the same table
+
+:::
+
+## Tidy data for machine learning
+
+Data in machine learning typically uses the tidy format, but in *matrix* rather than *table* (DataFrame) form
+
+- Still have column = variable, row = observation
+
+We can extract a matrix by accessing the *values* property
+
+```{python}
+#| echo: True
+nations[['population', 'income', 'lifeExpectancy']].values
+```
+
+
+
+## Always the right choice?
+
+**No!** In some cases untidy data can be preferred!
+
+- Often for performance/memory reasons
+- We'll cover this when we get to spatial data
+
+# Types and schema
+
+## Variable types
+
+A defining characteristic of a variable is its **type**
+
+```{python}
+#| echo: true
+nations['population'].dtype
+```
+
+- This should be familar to computer scientists!
+
+The **type** of a variable determines what kinds of values it can take and how we should interpret them
+
+## Variable types
+
+::::: columns 
+::: {.column width="30%"}
+
+- **Nominal**
+    - Categorical
+    - Arbitrary
+- Ordinal
+- Quantitative
+    - Interval
+    - Ratio
+:::
+
+::: {.column width="70%" style="font-size: 80%"}
+### Nominal variables
+
+An *unordered* set of non-numeric values, representing labels or categories
+
+#### Categorical - Finite
+Possible values are finite and *known*
+
+- Colors: *{red, green, blue}*
+- Regions: *{South Asia, Europe & Central Asia, ...}*
+
+#### Arbitrary - Infinite
+Possible values are unbounded 
+
+- Addresses: *{“12 Main St. Boston MA”, “45 Wall St. New York NY”, …}*
+- Names: *{“John Smith”, “Jane Doe”, …}*
+:::
+::::: 
+
+## Variable types
+
+::::: columns 
+::: {.column width="30%"}
+
+- Nominal
+    - Categorical
+    - Arbitrary
+- **Ordinal**
+- Quantitative
+    - Interval
+    - Ratio
+:::
+
+::: {.column width="70%" style="font-size: 80%"}
+### Ordinal variables
+
+An *ordered* set of (usually) non-numeric values, representing levels
+
+- Grades: *{A, B, C, D, F}*
+- Ratings: *{G, PG, PG-13, R}*
+:::
+::::: 
+
+## Variable types
+
+::::: columns 
+::: {.column width="30%"}
+
+- Nominal
+    - Categorical
+    - Arbitrary
+- Ordinal
+- **Quantitative**
+    - Interval
+    - Ratio
+:::
+
+::: {.column width="70%" style="font-size: 80%"}
+### Quantitative variables
+
+Numeric data that we can perform mathematical operations on
+
+
+#### Interval
+Location of 0 is arbitrary, only differences/intervals can be compared
+
+- Date-Times: *Jan, 19, 2006*
+
+#### Ratio
+0 is well-defined and meaningful. Can compare values as *ratios*
+
+- Height: *{5'3", 6'1", 5'9",...}*
+- Population: *23M, 350k, 1.4B, ...*
+:::
+::::: 
+
+## Operations by type
+::: {style="font-size: 80%"}
+
+#### Nominal (Labels or categories)
+- Concrete types: `str`, `bool`, `category`
+- Operations: =, ≠    
+
+#### Ordinal (Ordered, non-numeric)
+- Concrete types: `str`, `int`, `category`
+- Operations: =, ≠, <, > 
+
+#### Interval (Arbitrary 0)
+- Concrete types: `float`, `int`, `datetime`
+- Operations: =, ≠, <, >, -
+
+#### Ratio (Well-defined 0)
+- Concrete types: `float`, `int`, `timedelta`
+- Operations: =, ≠, <, >, -, / 
+:::
+
+## Schema
+
+The **schema** of a data frame is the specification of the set of variables and the type of each variable
+
+- In Pandas we can access this with `df.info`
+
+```{python}
+#| echo: true
+nations.info()
+```
+
+## Series
+
+We can also convert the type of a series
+
+```{python}
+#| echo: true
+nations['population'].astype(float).head()
+```
+
+```{python}
+#| echo: true
+nations['population'] = nations['population'].astype(float)
+nations.info()
+```
+
+## Nominal types
+
+Non-numeric values use the `object` type by default
+
+- Therefore are treated as *arbitrary* nominal types
+
+```{python}
+#| echo: true
+nations.info()
+```
+## Nominal types
+
+If we want a nominal value to be **categorical** or **ordinal**, we can tell Pandas explicitly
+```{python}
+#| echo: true
+nations['region'] = nations['region'].astype('category')
+nations.info()
+```
+
+```{python}
+#| echo: true
+nations['region'].dtype
+```
+
+
+## Index
+
+The **index** of a DataFrame in Pandas is a special column used to identify each row.
+
+- Mostly exists for performance reasons. Any column could be used as an index. 
+
+By default the index is a new column that identifies each row with an integer
+
+```{python}
+#| echo: true
+nations.head()
+```
+
+## Index
+
+But we can set any column as the index
+
+- Some operations will depend on what the index is
+
+```{python}
+#| echo: true
+nations.set_index('name').head()
+```
+
+## Missing data
+
+Sometimes a value doesn't exist! 
+
+- What if we don't know the life expectency for a country?
+
+
+## Missing data
+Pandas uses special values to denote missingness:
+
+- `np.NaN` (Not a number) for general numeric types and categorical types
+- `NaT` (Not a time) for datetime types
+- `None` or `pd.NA` for other types
+
+
+# Visualization
+
+Why create visualizations?
+
+## Visual language
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/bertin.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+Images perceived as a set of signs
+
+Sender encodes information in signs
+
+Receiver decodes information from signs
+
+- ***Jacques Bertin** - Sémiologie Graphique, 1967*
+
+:::
+:::::
+
+
+
+
+## Conceptual strategy
+
+Map each *data dimension* (variable) to a corresponding *visual dimension*
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+```{python}
+#| echo: false
+nations.head()
+```
+:::
+
+::: {.column width="50%"}
+```{python}
+#| echo: false
+import pandas as pd
+from lets_plot import *
+LetsPlot.setup_html()
+
+nations = pd.read_csv('data/nations.csv')
+
+ggplot(nations, aes(x='income', y='lifeExpectancy', size='population')) + geom_point(aes(fill='region'), tooltips=layer_tooltips(['name']), stroke=0.5, shape=21, alpha=0.7) + scale_size(trans='sqrt', range = (0.2,12)) + scale_x_continuous(trans='log2', breaks=[500, 700, 1000, 5000, 7000, 10000, 50000, 70000,]) + ggsize(800, 500) + ggtitle('The Wealth and Health of Nations')
+```
+
+:::
+:::::
+
+## Visual encoding dimensions
+
+![](pictures/encodings.png){fig-align="center"}
+
+
+## Example - William Playfair, 1786
+
+![](pictures/playfair.png){fig-align="center"}
+
+# Visualizations in code 
+
+ggplot + Let's Plot
+
+## Ggplot
+
+**ggplot** is a hugely influential visualizatation library.
+
+- Designed by Hadley Wickham
+- Only for the R language
+
+**Let's Plot** is a port for Python (and Kotlin)
+
+- We'll be using it in class
+
+# Example: Cars
+
+
+
+
+# File formats and loading data
+
+## CSV (and TSV) files
+"Simplest" and most common data file format. 
+
+- Plain text file
+- Each line is a row
+- Each column is separated by a *delimiter*: "," for CSV, `tab` for TSV.
+- First row (usually) specifies column labels
+
+## Loading CSV (and TSV) files
+
+Files can be loaded into Pandas with `pd.read_csv()`
+
+## CSV (and TSV) issues
+
+**No explicit schema!** We need to *guess* the type of each column
+
+- Pandas usally does a good job, but could get it wrong!
+
+## CSV (and TSV) issues
+
+**Ambiguity!** *What if a value contains a comma?*
+
+- Usually handled by *quoting* text
+- Leads to its own issues
+
+## CSV (and TSV) issues
+
+**Lack of standardization!** Many different ways of handling different data types
+
+- Leads to this:
+
+## Python
+
+We can load a DataFrame from Python structures a s well
+
+- Column format
+
+- Records format
+
+## JSON (**J**ava**S**cript **O**bject **N**otation)
+
+**JSON** is a plain text format that describes nested `list` and `dict` structures (`array` and `object` in JavaScript)
+
+- Pandas can read and write JSON using the columns or records format

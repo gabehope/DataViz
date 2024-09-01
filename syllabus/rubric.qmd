@@ -1,0 +1,92 @@
+---
+title: "Course Grading"
+subtitle: Data Analytics and Visualization, Fall 2024
+author: Prof. Gabe Hope
+institute: Harvey Mudd College
+date: August 2024
+format: html
+---
+
+# Course grades
+
+As this course is still under active development I cannot yet guarantee exact cutoffs for each grade. Harvey Mudd does not impose expectations for the grade distribution, so every student that meets the requirements for a given grade will earn it. The following is the maximum cutoff of each letter grade, the actual cutoff for each grade may be lower that what is listed below:
+
+-   \>90%: **A**
+
+-   \>80%: **B**
+
+-   \>70%: **C**
+
+-   \>60%: **D**
+
+As the semester progresses, I may update this guide to provide a clearer picture of how grades will be assigned.
+
+# Course grade breakdown
+
+## Effort
+
+#### **10%** - Participation
+
+Participation will be based on both attendence and participation in in-class discussions and activities. Regular attendence will result in a 50% participation grade *at minimum*. As stated in the attendence policy this means no more than **1 unexcused absence per month**. If you also engage in in-class activities and contribute to in-class discussion semi-regularly, you will recieve full marks for participation.
+
+**Expected time commitment:** 0-30 minutes per week
+
+- Occasional prep for in-class discussions.
+
+#### **10%** - Reflections and feedback
+
+For each homework assignment and the final project, you will be asked to submit a (very) short reflection on the assignment. You will also be asked to provide peer feedback to a submission from another group. These submissions will simply be graded on a **satisfactory**, **needs improvement** and **no submission** scale. 
+
+**Expected time commitment:** 15-20 minutes per week
+
+- Short reflections (~5 minutes)
+- Peer reviews (10-20 minutes for a **satisfactory** grade)
+
+## Correctness
+
+#### **20%** - Quizzes
+
+Individual quizzes will be assigned most weeks covering the topics introduced in class. Quizzes will be submitted through gradescope and will be auto-graded. Individual questions will have no oppurtunities for partial credit, and submissions beyond the late deadline will not be accepted. However the final quiz grade will drop the lowest 20% of questions. Thus the quiz grade will be computed with the following formula:
+
+$$\min\left(\frac{\text{correct}}{0.8 \cdot \text{total}},\ 1 \right) \cdot 20\%$$
+
+That means answering 80% of quiz questions correctly will still result in a final quiz grade of 100% (higher scores will **not** result in extra credit). For further examples: 72% correct would correspond to a 90% quiz grade, 60% would correspond to a 75% quiz grade, etc.
+
+**Expected time commitment:** 30-90 minutes per week
+
+## Qualitative assessment
+
+#### **30%** - Homeworks
+
+Group homework assignments will be given on a weekly or semi-weekly basis throughout the semester. Homeworks will be graded based on the homework and project rubric. Peer reviews will not be explicitly used in grading, but I reserve the right to consider the opinions expressed in peer reviews when assigning grades.
+
+**Expected time commitment:** 2-4 hours per week 
+
+- **Not** concurrent with final project
+
+#### **30%** - Final Project
+
+The final project will be assigned in place of homeworks for the last few weeks of the course. Further details will be provided closer to the assignment date.
+
+**Expected time commitment:** 2-4 hours per week 
+
+- **Not** concurrent with homeworks
+
+# Rubric for homeworks and final project
+
+**Under construction!** Details will be filled in soon.
+
+## 40% - Visualization
+
+## 40% - Analysis
+
+## 20% - Writing
+
+### Introduction
+    - Justification is given for *why* the given data is worth looking at.
+    - It is clear what the *goals* of the analysis are; i.e. what question are we trying to answer?
+    - It is clear how the data was obtained and any sources are cited.
+        - If the data was collected youself, the collection methodology should be clearly outlined.
+    - Any potential (ethical, bias, correctness, etc.) issues with the data are clearly identified and discussed.
+        - Data should generalbly be from a reliable source; e.g.: government agency, established non-profit, official records-keeper for a given sport/industry, trusted news source etc. 
+        - Data from 

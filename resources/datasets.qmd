@@ -1,0 +1,138 @@
+---
+title: Datasets for Data Analytics and Visualization
+subtitle: Harvey Mudd College
+author: Prof. Gabe Hope
+date: August 2024
+format: html
+---
+
+This page pulls together a collection of reliable data sources for visualization and analysis projects. Feel free to use this list as a jumping off point for homeworks and course projects! It is by no means exhaustive; there are nearly unlimited great data sources available on the internet. If you'd like to suggest an addition to this page you can do so with [this form](https://forms.gle/xqWXDctqQ93fU5fAA).
+
+# Repositories
+
+#### Responsible datasets in context
+<https://www.responsible-datasets-in-context.com>
+
+#### UCI Machine Learning Repository
+
+<https://archive.ics.uci.edu/>
+
+# Society
+
+#### Stanford open policing dataset
+
+<https://openpolicing.stanford.edu/data/>
+
+#### Zillow House prices
+
+<https://www.zillow.com/research/data/>
+
+#### Campaign Finance Data
+
+<https://www.fec.gov/data/>
+
+#### Bureau of Labor Statistics
+
+<https://www.bls.gov/>
+
+#### Gun Violence Archieve
+
+<https://www.gunviolencearchive.org/>
+
+#### Gapminder data
+
+<https://www.gapminder.org/data/>
+
+#### Our World in Data
+
+<https://ourworldindata.org/>
+
+#### World Inequality Database
+
+<https://wid.world/>
+
+#### World Bank Open Data
+
+<https://datacatalog.worldbank.org/home>
+
+#### Emerson College Polling
+
+<https://emersoncollegepolling.com/>
+
+# City/State data (Housing, health, transportation etc.)
+
+#### California Open Data
+
+<https://data.ca.gov/>
+
+#### NYC Open Data
+
+<https://opendata.cityofnewyork.us/>
+
+#### NYS Open Data
+
+<https://data.ny.gov/>
+
+#### LA Open Data
+
+<https://data.lacity.org/>
+
+#### US Census Bureau
+
+<https://data.census.gov/>
+
+# Public health
+
+#### CDC Data Portal
+
+<https://data.cdc.gov/>
+
+# Sports and games
+
+#### Data sources for video games
+
+<https://github.com/leomaurodesenv/game-datasets>
+
+#### Lahman Baseball database
+
+<http://seanlahman.com/>
+
+#### Kaggle NBA Database
+
+<https://www.kaggle.com/datasets/wyattowalsh/basketball>
+
+#### Sports reference (paid for query access)
+
+[https://www.sports-reference.com](https://www.sports-reference.com/?utm_source=stathead&utm_medium=sr_xsite&utm_campaign=2023_01_srnav&__hstc=205977932.0f8d9b67404c743dd2b6e17c3e15c155.1721258091759.1721258091759.1721258091759.1&__hssc=205977932.638.1721258091760&__hsfp=2143267167)
+
+# Climate
+
+#### NOAA
+
+<https://psl.noaa.gov/data/index.html>
+
+#### Google Earth Engine
+
+<https://developers.google.com/earth-engine/datasets/>
+
+# Transportation
+
+#### NHTSA Crash Data
+
+<https://cdan.dot.gov/>
+
+#### Bureau of Transportation Statistics
+
+<https://www.bts.gov/A-Z-Index>
+
+# Entertainment
+
+#### IMDB Data
+
+<https://developer.imdb.com/non-commercial-datasets/>
+
+# Network data
+
+#### Stanford Network Analysis
+
+<https://snap.stanford.edu/data/index.html>

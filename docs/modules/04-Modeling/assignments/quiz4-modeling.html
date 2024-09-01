@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.54">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Quiz 4 – Data Analytics and Visualization</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Data Analytics and Visualization</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../calendar/calendar.qmd"> 
+<span class="menu-text">Calendar</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://drive.google.com/drive/folders/1JFhwmcFBTHiRbfhQ0VRDj9xIPxFpHuWj?usp=drive_link"> 
+<span class="menu-text">Homeworks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../assignments/final-project/outline.qmd"> 
+<span class="menu-text">Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/orgs/CS152/"> 
+<span class="menu-text">Github</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.gradescope.com/courses/710173"> 
+<span class="menu-text">Gradescope</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#part-1-fixing-models" id="toc-part-1-fixing-models" class="nav-link active" data-scroll-target="#part-1-fixing-models">Part 1: Fixing models</a>
+  <ul class="collapse">
+  <li><a href="#q1-issues-with-k-means" id="toc-q1-issues-with-k-means" class="nav-link" data-scroll-target="#q1-issues-with-k-means">Q1: Issues with K-means</a></li>
+  </ul></li>
+  <li><a href="#part-2-preprocessing" id="toc-part-2-preprocessing" class="nav-link" data-scroll-target="#part-2-preprocessing">Part 2: Preprocessing</a>
+  <ul class="collapse">
+  <li><a href="#q2-factor-data" id="toc-q2-factor-data" class="nav-link" data-scroll-target="#q2-factor-data">Q2: Factor data</a>
+  <ul class="collapse">
+  <li><a href="#answer" id="toc-answer" class="nav-link" data-scroll-target="#answer">Answer:</a></li>
+  </ul></li>
+  <li><a href="#q3-preprocessing-variables" id="toc-q3-preprocessing-variables" class="nav-link" data-scroll-target="#q3-preprocessing-variables">Q3 Preprocessing variables</a></li>
+  <li><a href="#q4-missing-data" id="toc-q4-missing-data" class="nav-link" data-scroll-target="#q4-missing-data">Q4: Missing data</a></li>
+  </ul></li>
+  <li><a href="#part-2-tree-based-models" id="toc-part-2-tree-based-models" class="nav-link" data-scroll-target="#part-2-tree-based-models">Part 2: Tree-based models</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Quiz 4</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="cell-2" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> vega_datasets <span class="im">import</span> data</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, SVG</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot.mapping <span class="im">import</span> as_discrete</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+            <div id="Hdl3x5"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.3/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("Hdl3x5").appendChild(div);
+                    };
+                    var e = document.getElementById("Hdl3x5");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
+</div>
+<section id="part-1-fixing-models" class="level1">
+<h1>Part 1: Fixing models</h1>
+<p>The following question uses this dataset of measurements of penguin bills. One goal of this dataset is to determine the species of a penguin from its bill. In the visualization below, we can see that the 3 species are relatively well separated by these measurements. In practice though, we may not know which penguin belongs to which species. In this case we may want to try to find species by <em>clustering</em> our measurements.</p>
+<p><em>This data was collected by Dr.&nbsp;Kristen Gorman at the Palmer Station in Antarctica.</em></p>
+<div id="cell-5" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> sns.load_dataset(<span class="st">"penguins"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> penguins[(penguins[<span class="st">'sex'</span>] <span class="op">==</span> <span class="st">'Male'</span>)][[<span class="st">'body_mass_g'</span>, <span class="st">'bill_length_mm'</span>, <span class="st">'species'</span>]].dropna()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>ggplot(penguins, aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, y<span class="op">=</span><span class="st">'bill_length_mm'</span>, shape<span class="op">=</span>as_discrete(<span class="st">'species'</span>, order<span class="op">=</span><span class="dv">1</span>), color<span class="op">=</span>as_discrete(<span class="st">'species'</span>, order<span class="op">=</span><span class="dv">1</span>))) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    geom_point() <span class="op">+\</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    scale_color_brewer(palette<span class="op">=</span><span class="st">"Set2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+   <div id="LZk1lw"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"data":{
+"body_mass_g":[3750.0,3650.0,4675.0,3800.0,4400.0,4500.0,4200.0,3600.0,3950.0,3800.0,3550.0,3950.0,3900.0,3900.0,4150.0,3950.0,4650.0,3900.0,4400.0,4600.0,3425.0,4150.0,4300.0,4050.0,3700.0,3800.0,3750.0,4400.0,4050.0,3950.0,4100.0,4450.0,3900.0,4150.0,4250.0,3900.0,4000.0,4700.0,4200.0,3550.0,3800.0,3950.0,4300.0,4450.0,4300.0,4350.0,4100.0,4725.0,4250.0,3550.0,3900.0,4775.0,4600.0,4275.0,4075.0,3775.0,3325.0,3500.0,3875.0,4000.0,4300.0,4000.0,3500.0,4475.0,3900.0,3975.0,4250.0,3475.0,3725.0,3650.0,4250.0,3750.0,4000.0,3900.0,3650.0,3725.0,3750.0,3700.0,3775.0,4050.0,4050.0,3300.0,4400.0,3400.0,3800.0,4150.0,3800.0,4550.0,4300.0,4100.0,3600.0,4800.0,4500.0,3950.0,3550.0,4450.0,4300.0,3250.0,3950.0,4050.0,3450.0,4050.0,3800.0,3950.0,4000.0,3775.0,4100.0,5700.0,5700.0,5400.0,5200.0,5150.0,5550.0,5850.0,5850.0,6300.0,5350.0,5700.0,5050.0,5100.0,5650.0,5550.0,5250.0,6050.0,5400.0,5250.0,5350.0,5700.0,4750.0,5550.0,5400.0,5300.0,5300.0,5000.0,5050.0,5000.0,5550.0,5300.0,5650.0,5700.0,5800.0,5550.0,5000.0,5100.0,5800.0,6000.0,5950.0,5450.0,5350.0,5600.0,5300.0,5550.0,5400.0,5650.0,5200.0,4925.0,5250.0,5600.0,5500.0,5500.0,5500.0,5500.0,5950.0,5500.0,5850.0,6000.0,5750.0,5400.0],
+"bill_length_mm":[39.1,39.3,39.2,38.6,34.6,42.5,46.0,37.7,38.2,38.8,40.6,40.5,37.2,40.9,39.2,38.8,39.8,40.8,44.1,39.6,41.1,42.3,40.1,42.0,41.4,40.6,37.6,41.3,41.1,41.6,41.1,41.8,39.7,45.8,42.8,37.2,42.1,42.9,35.1,41.3,36.3,38.3,41.1,39.6,40.8,40.3,43.2,41.0,37.8,39.7,38.2,43.2,45.6,42.2,42.7,37.3,41.1,37.7,41.4,40.6,41.5,44.1,43.1,37.5,41.1,40.2,39.7,40.6,40.7,39.0,39.2,37.8,41.5,50.0,51.3,52.7,51.3,51.3,51.7,52.0,50.5,50.3,49.2,48.5,50.6,52.0,49.5,52.8,54.2,51.0,49.7,52.0,53.5,49.0,50.9,50.8,49.0,51.5,51.4,50.7,52.2,49.3,50.2,51.9,55.8,49.6,50.8,50.0,50.0,47.6,46.7,46.8,49.0,48.4,49.3,49.2,48.7,50.2,46.3,46.1,47.8,50.0,47.3,59.6,48.4,44.4,48.7,49.6,49.6,50.5,50.5,45.2,48.5,50.1,45.0,45.5,50.4,46.2,54.3,49.8,49.5,50.7,46.4,48.2,48.6,51.1,45.2,52.5,50.0,50.8,51.3,52.1,52.2,49.5,50.8,49.4,51.1,55.9,49.1,46.8,53.4,48.1,49.8,51.5,55.1,48.8,50.4,49.9],
+"species":["Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Adelie","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Chinstrap","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo","Gentoo"]
+},
+"mapping":{
+"x":"body_mass_g",
+"y":"bill_length_mm",
+"shape":"species",
+"color":"species"
+},
+"data_meta":{
+"mapping_annotations":[{
+"aes":"shape",
+"annotation":"as_discrete",
+"parameters":{
+"label":"species",
+"order":1.0
+}
+},{
+"aes":"color",
+"annotation":"as_discrete",
+"parameters":{
+"label":"species",
+"order":1.0
+}
+}]
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"color",
+"palette":"Set2",
+"scale_mapper_kind":"color_brewer"
+}],
+"layers":[{
+"geom":"point",
+"mapping":{
+},
+"data_meta":{
+},
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("LZk1lw");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+<section id="q1-issues-with-k-means" class="level2">
+<h2 class="anchored" data-anchor-id="q1-issues-with-k-means">Q1: Issues with K-means</h2>
+<p>The code below runs k-means on the penguins dataset, this time using the variables <code>bill_length_mm</code> and <code>body_weight_g</code>. Notice that despite the 3 species seeming to be well-separated in the visualization above, K-means does a poor job at recovering the 3 clusters.</p>
+<div id="cell-7" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> pairwise_distances</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>measurements_only <span class="op">=</span> penguins[[<span class="st">'bill_length_mm'</span>, <span class="st">'body_mass_g'</span>]]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>num_clusters <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">55</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>measurements_with_clusters <span class="op">=</span> measurements_only.copy()</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>measurements_with_clusters[<span class="st">'cluster'</span>] <span class="op">=</span> np.random.randint(<span class="dv">0</span>, num_clusters, (measurements_only.shape[<span class="dv">0</span>],))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> iteration <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    centroids <span class="op">=</span> measurements_with_clusters.groupby(<span class="st">'cluster'</span>).mean()</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    distances <span class="op">=</span> pairwise_distances(measurements_only, centroids)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    measurements_with_clusters[<span class="st">'cluster'</span>] <span class="op">=</span> distances.argmin(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>ggplot(measurements_with_clusters, aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, y<span class="op">=</span><span class="st">'bill_length_mm'</span>, shape<span class="op">=</span>as_discrete(<span class="st">'cluster'</span>, order<span class="op">=</span><span class="dv">1</span>), color<span class="op">=</span>as_discrete(<span class="st">'cluster'</span>, order<span class="op">=</span><span class="dv">1</span>))) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    geom_point() <span class="op">+\</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    scale_color_brewer(palette<span class="op">=</span><span class="st">"Set2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+   <div id="uFx6Cs"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"data":{
+"bill_length_mm":[39.1,39.3,39.2,38.6,34.6,42.5,46.0,37.7,38.2,38.8,40.6,40.5,37.2,40.9,39.2,38.8,39.8,40.8,44.1,39.6,41.1,42.3,40.1,42.0,41.4,40.6,37.6,41.3,41.1,41.6,41.1,41.8,39.7,45.8,42.8,37.2,42.1,42.9,35.1,41.3,36.3,38.3,41.1,39.6,40.8,40.3,43.2,41.0,37.8,39.7,38.2,43.2,45.6,42.2,42.7,37.3,41.1,37.7,41.4,40.6,41.5,44.1,43.1,37.5,41.1,40.2,39.7,40.6,40.7,39.0,39.2,37.8,41.5,50.0,51.3,52.7,51.3,51.3,51.7,52.0,50.5,50.3,49.2,48.5,50.6,52.0,49.5,52.8,54.2,51.0,49.7,52.0,53.5,49.0,50.9,50.8,49.0,51.5,51.4,50.7,52.2,49.3,50.2,51.9,55.8,49.6,50.8,50.0,50.0,47.6,46.7,46.8,49.0,48.4,49.3,49.2,48.7,50.2,46.3,46.1,47.8,50.0,47.3,59.6,48.4,44.4,48.7,49.6,49.6,50.5,50.5,45.2,48.5,50.1,45.0,45.5,50.4,46.2,54.3,49.8,49.5,50.7,46.4,48.2,48.6,51.1,45.2,52.5,50.0,50.8,51.3,52.1,52.2,49.5,50.8,49.4,51.1,55.9,49.1,46.8,53.4,48.1,49.8,51.5,55.1,48.8,50.4,49.9],
+"body_mass_g":[3750.0,3650.0,4675.0,3800.0,4400.0,4500.0,4200.0,3600.0,3950.0,3800.0,3550.0,3950.0,3900.0,3900.0,4150.0,3950.0,4650.0,3900.0,4400.0,4600.0,3425.0,4150.0,4300.0,4050.0,3700.0,3800.0,3750.0,4400.0,4050.0,3950.0,4100.0,4450.0,3900.0,4150.0,4250.0,3900.0,4000.0,4700.0,4200.0,3550.0,3800.0,3950.0,4300.0,4450.0,4300.0,4350.0,4100.0,4725.0,4250.0,3550.0,3900.0,4775.0,4600.0,4275.0,4075.0,3775.0,3325.0,3500.0,3875.0,4000.0,4300.0,4000.0,3500.0,4475.0,3900.0,3975.0,4250.0,3475.0,3725.0,3650.0,4250.0,3750.0,4000.0,3900.0,3650.0,3725.0,3750.0,3700.0,3775.0,4050.0,4050.0,3300.0,4400.0,3400.0,3800.0,4150.0,3800.0,4550.0,4300.0,4100.0,3600.0,4800.0,4500.0,3950.0,3550.0,4450.0,4300.0,3250.0,3950.0,4050.0,3450.0,4050.0,3800.0,3950.0,4000.0,3775.0,4100.0,5700.0,5700.0,5400.0,5200.0,5150.0,5550.0,5850.0,5850.0,6300.0,5350.0,5700.0,5050.0,5100.0,5650.0,5550.0,5250.0,6050.0,5400.0,5250.0,5350.0,5700.0,4750.0,5550.0,5400.0,5300.0,5300.0,5000.0,5050.0,5000.0,5550.0,5300.0,5650.0,5700.0,5800.0,5550.0,5000.0,5100.0,5800.0,6000.0,5950.0,5450.0,5350.0,5600.0,5300.0,5550.0,5400.0,5650.0,5200.0,4925.0,5250.0,5600.0,5500.0,5500.0,5500.0,5500.0,5950.0,5500.0,5850.0,6000.0,5750.0,5400.0],
+"cluster":[0.0,0.0,2.0,0.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,2.0,0.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,2.0,2.0,0.0,0.0,2.0,2.0,0.0,0.0,0.0,2.0,2.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,2.0,2.0,0.0,0.0,2.0,2.0,0.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0]
+},
+"mapping":{
+"x":"body_mass_g",
+"y":"bill_length_mm",
+"shape":"cluster",
+"color":"cluster"
+},
+"data_meta":{
+"mapping_annotations":[{
+"aes":"shape",
+"annotation":"as_discrete",
+"parameters":{
+"label":"cluster",
+"order":1.0
+}
+},{
+"aes":"color",
+"annotation":"as_discrete",
+"parameters":{
+"label":"cluster",
+"order":1.0
+}
+}]
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"color",
+"palette":"Set2",
+"scale_mapper_kind":"color_brewer"
+}],
+"layers":[{
+"geom":"point",
+"mapping":{
+},
+"data_meta":{
+},
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("uFx6Cs");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+<p>Identify the problem, and choose the <strong>best</strong> approach to resolve this issue. (<em>Feel free to test your approach!</em>)</p>
+<ul>
+<li><strong>Standardize</strong> the data.</li>
+<li>Use the <strong>k-medians</strong> algorithm instead of k-means.</li>
+<li>Increase the <strong>number of clusters</strong>.</li>
+<li>Run k-means <strong>multiple times</strong>.</li>
+<li>Take a <strong>subset</strong> of the data.</li>
+</ul>
+</section>
+</section>
+<section id="part-2-preprocessing" class="level1">
+<h1>Part 2: Preprocessing</h1>
+<p>For the next few questions, we’ll return to the Gapminder dataset that we looked at in previous assignments. As a reminder, this dataset tracks various economic, health and human developtment metrics for coutries around the world. In this case, we’ll look at how location and economic indicators affect life expectency.</p>
+<section id="q2-factor-data" class="level2">
+<h2 class="anchored" data-anchor-id="q2-factor-data">Q2: Factor data</h2>
+<p>We’ll start with a very rough approach. Each country is given a label of one of four regions: <code>Africa</code>, <code>Americas</code>, <code>Asia</code> and <code>Europe</code>. Let’s look how this region and average income predicts life expectency for the year 2019.</p>
+<p>Using the data in <code>lex_data</code> below, fit a regression model that predicts <code>life exp</code> <strong>from</strong> <code>region</code> and <code>income</code>. Under this model, what is the <em>change in life expectency</em> when changing a country’s region from <strong>Africa</strong> to <strong>Europe</strong> (holding income constant)?</p>
+<p>What would the difference be if our model did <strong>not</strong> account for <code>income</code>?</p>
+<div id="cell-13" class="cell" data-execution_count="113">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>countries <span class="op">=</span> pd.read_csv(<span class="st">'data/countries.csv'</span>)[[<span class="st">'name'</span>, <span class="st">'four_regions'</span>]].set_index(<span class="st">'name'</span>).rename(columns<span class="op">=</span>{<span class="st">'four_regions'</span>: <span class="st">'region'</span>})</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>countries[<span class="st">'region'</span>] <span class="op">=</span> countries.region.astype(<span class="st">'category'</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>life_exp <span class="op">=</span> pd.read_csv(<span class="st">'data/lex.csv'</span>)[[<span class="st">'country'</span>, <span class="st">'2019'</span>]].set_index(<span class="st">'country'</span>).rename(columns<span class="op">=</span>{<span class="st">'2019'</span>: <span class="st">'life exp'</span>})</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>income <span class="op">=</span> pd.read_csv(<span class="st">'data/income.csv'</span>)[[<span class="st">'country'</span>, <span class="st">'2019'</span>]].set_index(<span class="st">'country'</span>).rename(columns<span class="op">=</span>{<span class="st">'2019'</span>: <span class="st">'income'</span>})</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>lex_data <span class="op">=</span> countries.join(life_exp).join(income).dropna()</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>ggplot(lex_data.reset_index(), aes(x<span class="op">=</span><span class="st">'income'</span>, y<span class="op">=</span><span class="st">'life exp'</span>, color<span class="op">=</span><span class="st">'region'</span>)) <span class="op">+</span> geom_point(tooltips<span class="op">=</span>layer_tooltips([<span class="st">'name'</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="113">
+   <div id="Homzv6"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"data":{
+"name":["Australia","Brunei","Cambodia","China","Fiji","Hong Kong, China","Indonesia","Japan","Kiribati","North Korea","South Korea","Lao","Malaysia","Marshall Islands","Micronesia, Fed. Sts.","Mongolia","Myanmar","Nauru","New Zealand","Palau","Papua New Guinea","Philippines","Samoa","Singapore","Solomon Islands","Taiwan","Thailand","Timor-Leste","Tonga","Tuvalu","Vanuatu","Vietnam","Albania","Andorra","Armenia","Austria","Azerbaijan","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Czech Republic","Denmark","Estonia","Finland","France","Georgia","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kazakhstan","Kyrgyz Republic","Latvia","Lithuania","Luxembourg","Moldova","Monaco","Montenegro","Netherlands","Norway","Poland","Portugal","Romania","Russia","San Marino","Serbia","Slovak Republic","Slovenia","Spain","Sweden","Switzerland","Tajikistan","Turkey","Turkmenistan","Ukraine","Uzbekistan","Antigua and Barbuda","Argentina","Bahamas","Barbados","Belize","Bolivia","Brazil","Chile","Colombia","Costa Rica","Cuba","Dominica","Dominican Republic","Ecuador","El Salvador","Grenada","Guatemala","Guyana","Haiti","Honduras","Jamaica","Mexico","Nicaragua","Panama","Paraguay","Peru","St. Kitts and Nevis","St. Lucia","St. Vincent and the Grenadines","Suriname","Trinidad and Tobago","Uruguay","Venezuela","Algeria","Bahrain","Djibouti","Egypt","Iran","Iraq","Israel","Jordan","Kuwait","Lebanon","Libya","Malta","Morocco","Oman","Qatar","Saudi Arabia","Syria","Tunisia","Palestine","Yemen","Canada","Afghanistan","Bangladesh","Bhutan","India","Maldives","Nepal","Pakistan","Sri Lanka","Angola","Benin","Botswana","Burkina Faso","Burundi","Cameroon","Cape Verde","Central African Republic","Chad","Comoros","Congo, Dem. Rep.","Congo, Rep.","Cote d'Ivoire","Equatorial Guinea","Eritrea","Ethiopia","Gabon","Gambia","Ghana","Guinea","Guinea-Bissau","Kenya","Lesotho","Liberia","Madagascar","Malawi","Mali","Mauritania","Mauritius","Mozambique","Namibia","Niger","Nigeria","Rwanda","Sao Tome and Principe","Senegal","Seychelles","Sierra Leone","Somalia","South Africa","Sudan","Tanzania","Togo","Uganda","Zambia","Zimbabwe","South Sudan"],
+"region":["asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","asia","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","asia","asia","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","europe","asia","europe","asia","europe","asia","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","americas","africa","asia","africa","africa","asia","asia","asia","asia","asia","asia","africa","europe","africa","asia","asia","asia","asia","africa","asia","asia","americas","asia","asia","asia","asia","asia","asia","asia","asia","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa","africa"],
+"life exp":[82.9,74.4,69.9,77.6,68.4,85.3,71.4,84.8,60.8,73.2,82.9,69.0,75.0,65.5,64.1,68.1,69.5,63.4,81.8,67.5,64.7,71.8,70.5,84.8,59.2,80.3,78.4,70.6,73.0,67.9,65.5,74.5,78.5,82.2,75.7,82.2,71.0,74.0,81.4,77.0,73.3,78.7,80.8,79.5,81.1,78.0,81.9,82.9,73.4,81.2,80.9,76.6,84.1,82.0,83.1,71.9,73.4,75.9,76.2,82.9,74.3,80.1,75.9,81.7,82.9,78.1,81.7,75.5,73.0,82.2,75.7,77.6,81.4,83.1,82.8,84.0,69.6,78.4,70.8,73.8,68.4,76.3,76.6,73.4,76.2,74.5,72.0,75.8,80.2,80.2,80.1,78.7,72.3,73.2,76.4,75.7,73.3,72.6,67.3,63.8,72.1,76.3,75.6,75.4,80.0,76.6,80.3,72.1,75.1,73.0,72.7,74.9,77.5,75.0,76.2,77.0,66.8,71.0,77.8,73.3,83.0,78.2,81.5,76.6,75.9,82.6,73.3,74.0,76.3,74.5,73.9,77.7,74.8,67.7,82.2,63.3,74.5,73.2,70.8,79.1,71.1,65.9,77.3,65.1,64.5,62.3,61.7,63.8,63.4,73.7,52.4,60.4,68.7,65.0,65.4,64.3,66.0,63.8,68.8,67.8,66.7,66.3,61.2,61.0,66.5,51.8,66.1,65.5,64.7,61.8,70.8,75.5,58.4,65.2,62.5,64.3,68.7,70.9,68.5,73.6,61.8,58.5,65.1,70.5,67.2,65.0,66.2,63.2,61.0,63.7],
+"income":[65.0,64.0,5.83,14.2,7.91,62.1,7.34,52.4,6.25,4.0,46.4,6.78,33.8,11.6,5.82,10.2,7.37,8.04,43.6,18.3,4.44,8.0,11.4,117.0,4.17,50.0,16.0,4.0,9.5,12.1,5.43,14.2,13.7,61.9,7.91,66.2,19.2,19.1,59.0,28.8,27.4,29.1,51.6,39.4,62.7,41.0,58.8,56.2,7.97,65.9,28.5,28.3,64.0,55.8,49.9,12.8,7.09,32.9,38.4,84.5,12.1,71.6,17.7,62.7,74.1,28.0,35.3,21.5,23.7,60.3,16.6,26.0,43.4,46.9,57.7,77.4,7.87,22.2,12.8,14.9,3.4,22.6,21.7,33.5,16.1,8.63,19.6,21.1,25.3,15.5,25.5,11.8,13.0,16.5,15.4,13.0,15.6,10.3,14.6,3.97,10.1,15.4,14.3,11.7,33.5,19.5,13.8,30.6,20.9,14.4,18.6,26.0,28.8,5.0,9.65,51.0,5.83,6.76,14.5,12.6,41.9,13.6,48.2,27.6,22.3,54.5,11.8,33.5,105.0,48.0,6.37,14.2,13.4,2.51,65.7,4.62,4.7,12.5,4.97,18.7,7.59,5.02,9.25,5.26,4.84,9.75,4.41,2.03,6.12,11.1,2.35,3.81,6.64,2.38,3.44,5.88,16.4,2.96,4.66,12.3,5.09,5.84,4.53,4.29,3.64,4.43,3.71,1.68,2.07,5.0,6.92,17.7,2.1,10.8,2.91,3.65,3.54,5.57,6.09,23.1,4.0,2.76,11.8,3.95,3.38,4.66,3.52,2.98,4.5,1.83]
+},
+"mapping":{
+"x":"income",
+"y":"life exp",
+"color":"region"
+},
+"data_meta":{
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"point",
+"mapping":{
+},
+"tooltips":{
+"formats":[],
+"variables":["name"]
+},
+"data_meta":{
+},
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("Homzv6");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+<div id="cell-14" class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> lex_data[<span class="st">'life exp'</span>]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dataframe with only the appropriate, pre-processed inputs</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> inputs.values.astype(<span class="bu">float</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearRegression().fit(x, y)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(<span class="bu">zip</span>(inputs.columns, model.coef_)))</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Determine the answer to the question</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="answer" class="level3">
+<h3 class="anchored" data-anchor-id="answer">Answer:</h3>
+<p>Using the code below, we see that our model predicts that someone in Europe will live <strong>7.29</strong> years longer on average than someone in Africa. Without accounting for income, we would expect that someone in Europe would live <strong>13.24</strong> years longer.</p>
+<div id="cell-16" class="cell" data-execution_count="99">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> lex_data[<span class="st">'life exp'</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> pd.get_dummies(lex_data[[<span class="st">'income'</span>, <span class="st">'region'</span>]])</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> inputs.values.astype(<span class="bu">float</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearRegression().fit(x, y)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(<span class="bu">zip</span>(inputs.columns, model.coef_)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[('income', np.float64(0.1698422298358171)), ('region_africa', np.float64(-4.759524551712193)), ('region_americas', np.float64(2.4407878796344997)), ('region_asia', np.float64(-0.21874771041487953)), ('region_europe', np.float64(2.537484382492568))]</code></pre>
+</div>
+</div>
+<div id="cell-17" class="cell" data-execution_count="112">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Difference incl. income:'</span>, model.coef_[<span class="op">-</span><span class="dv">1</span>] <span class="op">-</span> model.coef_[<span class="dv">1</span>])</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>europe_mean <span class="op">=</span> lex_data.groupby(<span class="st">'region'</span>).mean().loc[<span class="st">'europe'</span>][<span class="st">'life exp'</span>]</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>africa_mean <span class="op">=</span> lex_data.groupby(<span class="st">'region'</span>).mean().loc[<span class="st">'africa'</span>][<span class="st">'life exp'</span>]</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Difference without income:'</span>, europe_mean <span class="op">-</span> africa_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Difference incl. income: 7.2970089342047615
+Difference without income: 13.242725366876329</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/var/folders/t9/fjsr8h1x7c7cg4vqw_xhjq2w0000gn/T/ipykernel_57949/3938476771.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  europe_mean = lex_data.groupby('region').mean().loc['europe']['life exp']
+/var/folders/t9/fjsr8h1x7c7cg4vqw_xhjq2w0000gn/T/ipykernel_57949/3938476771.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  africa_mean = lex_data.groupby('region').mean().loc['africa']['life exp']</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="q3-preprocessing-variables" class="level2">
+<h2 class="anchored" data-anchor-id="q3-preprocessing-variables">Q3 Preprocessing variables</h2>
+<p>Look back to the <code>income</code> vs.&nbsp;<code>life exp</code> visualization from <code>q2</code>.</p>
+<p>Based on this plot what would you expect to be the most useful transformation of the <code>income</code> variable for our linear regression? (<em>Feel free to test the transforms in code!</em>)</p>
+<ul>
+<li>Standardization</li>
+<li>Imputation</li>
+<li>Reciprocal transform</li>
+<li>Log transform</li>
+</ul>
+<p><strong>Discussion:</strong> Do you think that applying this transformation in the visualization above would aid or harm the interpret-ability of the plot?</p>
+</section>
+<section id="q4-missing-data" class="level2">
+<h2 class="anchored" data-anchor-id="q4-missing-data">Q4: Missing data</h2>
+<p>We’ll now try a more sophisticated model with more data, focusing on economic indicators. In this case we’ll model <code>life exp</code> as a function of average <code>income</code>, human development <code>hdi</code>, and income inequality (measured by the <code>gini</code> index). We’ll take 30 years of data from the from 1990 until 2019. The code below loads a dataframe with this data. Unfortunately we don’t actually have measurements of these 3 variables for every country for every year!</p>
+<div id="cell-20" class="cell" data-execution_count="134">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>life_exp <span class="op">=</span> pd.read_csv(<span class="st">'data/lex.csv'</span>).melt(id_vars<span class="op">=</span><span class="st">'country'</span>).rename(columns<span class="op">=</span>{<span class="st">'variable'</span>: <span class="st">'year'</span>, <span class="st">'value'</span>: <span class="st">'life exp'</span>}).set_index([<span class="st">'country'</span>, <span class="st">'year'</span>])</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>income <span class="op">=</span> pd.read_csv(<span class="st">'data/income.csv'</span>).melt(id_vars<span class="op">=</span><span class="st">'country'</span>).rename(columns<span class="op">=</span>{<span class="st">'variable'</span>: <span class="st">'year'</span>, <span class="st">'value'</span>: <span class="st">'income'</span>})</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>gini <span class="op">=</span> pd.read_csv(<span class="st">'data/gini.csv'</span>).melt(id_vars<span class="op">=</span><span class="st">'country'</span>).rename(columns<span class="op">=</span>{<span class="st">'variable'</span>: <span class="st">'year'</span>, <span class="st">'value'</span>: <span class="st">'gini'</span>})</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>hdi <span class="op">=</span> pd.read_csv(<span class="st">'data/hdi_human_development_index.csv'</span>).melt(id_vars<span class="op">=</span><span class="st">'country'</span>).rename(columns<span class="op">=</span>{<span class="st">'variable'</span>: <span class="st">'year'</span>, <span class="st">'value'</span>: <span class="st">'hdi'</span>})</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> income.merge(life_exp, on<span class="op">=</span>[<span class="st">'country'</span>, <span class="st">'year'</span>]).merge(gini, on<span class="op">=</span>[<span class="st">'country'</span>, <span class="st">'year'</span>]).merge(hdi, on<span class="op">=</span>[<span class="st">'country'</span>, <span class="st">'year'</span>]).set_index([<span class="st">'country'</span>, <span class="st">'year'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Which variable of the 3 inputs in <code>data</code> has missing values?</p>
+<p>Based on the data, is it reasonable to assume that values are <em>missing completely at random</em>?</p>
+<ul>
+<li>Yes</li>
+<li>No</li>
+</ul>
+<p><em>Remove observations</em> with missing values from the dataset and fit a linear regression model. What is <code>hdi</code> coefficient of this model?</p>
+<p>Fill in missing values with <em>mean imputation</em> and fit a linear regression model. What is <code>hdi</code> coefficient of this model?</p>
+<div id="cell-22" class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>fixed_data <span class="op">=</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> fixed_data[[<span class="st">'hdi'</span>, <span class="st">'gini'</span>, <span class="st">'income'</span>]].values.astype(<span class="bu">float</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> fixed_data[<span class="st">'life exp'</span>].values.astype(<span class="bu">float</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>fixed_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="part-2-tree-based-models" class="level1">
+<h1>Part 2: Tree-based models</h1>
+<p><strong>Outline</strong> Fill in the entropy formula for a recursive implementation of descision tree fitting.</p>
+<p>What is the depth of a tree that perfectly separates the data?</p>
+<p>What percentage of held-out data is correctly classified for the <em>tree</em> and for <em>logistic regression</em>?</p>
+<div id="cell-25" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ucimlrepo <span class="im">import</span> fetch_ucirepo </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># fetch dataset </span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>heart_disease <span class="op">=</span> fetch_ucirepo(<span class="bu">id</span><span class="op">=</span><span class="dv">45</span>) </span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co"># data (as pandas dataframes) </span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> heart_disease.data.features </span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> heart_disease.data.targets </span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># metadata </span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(heart_disease.metadata) </span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co"># variable information </span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(heart_disease.variables) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{'uci_id': 45, 'name': 'Heart Disease', 'repository_url': 'https://archive.ics.uci.edu/dataset/45/heart+disease', 'data_url': 'https://archive.ics.uci.edu/static/public/45/data.csv', 'abstract': '4 databases: Cleveland, Hungary, Switzerland, and the VA Long Beach', 'area': 'Health and Medicine', 'tasks': ['Classification'], 'characteristics': ['Multivariate'], 'num_instances': 303, 'num_features': 13, 'feature_types': ['Categorical', 'Integer', 'Real'], 'demographics': ['Age', 'Sex'], 'target_col': ['num'], 'index_col': None, 'has_missing_values': 'yes', 'missing_values_symbol': 'NaN', 'year_of_dataset_creation': 1989, 'last_updated': 'Fri Nov 03 2023', 'dataset_doi': '10.24432/C52P4X', 'creators': ['Andras Janosi', 'William Steinbrunn', 'Matthias Pfisterer', 'Robert Detrano'], 'intro_paper': {'title': 'International application of a new probability algorithm for the diagnosis of coronary artery disease.', 'authors': 'R. Detrano, A. Jánosi, W. Steinbrunn, M. Pfisterer, J. Schmid, S. Sandhu, K. Guppy, S. Lee, V. Froelicher', 'published_in': 'American Journal of Cardiology', 'year': 1989, 'url': 'https://www.semanticscholar.org/paper/a7d714f8f87bfc41351eb5ae1e5472f0ebbe0574', 'doi': None}, 'additional_info': {'summary': 'This database contains 76 attributes, but all published experiments refer to using a subset of 14 of them.  In particular, the Cleveland database is the only one that has been used by ML researchers to date.  The "goal" field refers to the presence of heart disease in the patient.  It is integer valued from 0 (no presence) to 4. Experiments with the Cleveland database have concentrated on simply attempting to distinguish presence (values 1,2,3,4) from absence (value 0).  \n   \nThe names and social security numbers of the patients were recently removed from the database, replaced with dummy values.\n\nOne file has been "processed", that one containing the Cleveland database.  All four unprocessed files also exist in this directory.\n\nTo see Test Costs (donated by Peter Turney), please see the folder "Costs" ', 'purpose': None, 'funded_by': None, 'instances_represent': None, 'recommended_data_splits': None, 'sensitive_data': None, 'preprocessing_description': None, 'variable_info': 'Only 14 attributes used:\r\n      1. #3  (age)       \r\n      2. #4  (sex)       \r\n      3. #9  (cp)        \r\n      4. #10 (trestbps)  \r\n      5. #12 (chol)      \r\n      6. #16 (fbs)       \r\n      7. #19 (restecg)   \r\n      8. #32 (thalach)   \r\n      9. #38 (exang)     \r\n      10. #40 (oldpeak)   \r\n      11. #41 (slope)     \r\n      12. #44 (ca)        \r\n      13. #51 (thal)      \r\n      14. #58 (num)       (the predicted attribute)\r\n\r\nComplete attribute documentation:\r\n      1 id: patient identification number\r\n      2 ccf: social security number (I replaced this with a dummy value of 0)\r\n      3 age: age in years\r\n      4 sex: sex (1 = male; 0 = female)\r\n      5 painloc: chest pain location (1 = substernal; 0 = otherwise)\r\n      6 painexer (1 = provoked by exertion; 0 = otherwise)\r\n      7 relrest (1 = relieved after rest; 0 = otherwise)\r\n      8 pncaden (sum of 5, 6, and 7)\r\n      9 cp: chest pain type\r\n        -- Value 1: typical angina\r\n        -- Value 2: atypical angina\r\n        -- Value 3: non-anginal pain\r\n        -- Value 4: asymptomatic\r\n     10 trestbps: resting blood pressure (in mm Hg on admission to the hospital)\r\n     11 htn\r\n     12 chol: serum cholestoral in mg/dl\r\n     13 smoke: I believe this is 1 = yes; 0 = no (is or is not a smoker)\r\n     14 cigs (cigarettes per day)\r\n     15 years (number of years as a smoker)\r\n     16 fbs: (fasting blood sugar &gt; 120 mg/dl)  (1 = true; 0 = false)\r\n     17 dm (1 = history of diabetes; 0 = no such history)\r\n     18 famhist: family history of coronary artery disease (1 = yes; 0 = no)\r\n     19 restecg: resting electrocardiographic results\r\n        -- Value 0: normal\r\n        -- Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of &gt; 0.05 mV)\r\n        -- Value 2: showing probable or definite left ventricular hypertrophy by Estes\' criteria\r\n     20 ekgmo (month of exercise ECG reading)\r\n     21 ekgday(day of exercise ECG reading)\r\n     22 ekgyr (year of exercise ECG reading)\r\n     23 dig (digitalis used furing exercise ECG: 1 = yes; 0 = no)\r\n     24 prop (Beta blocker used during exercise ECG: 1 = yes; 0 = no)\r\n     25 nitr (nitrates used during exercise ECG: 1 = yes; 0 = no)\r\n     26 pro (calcium channel blocker used during exercise ECG: 1 = yes; 0 = no)\r\n     27 diuretic (diuretic used used during exercise ECG: 1 = yes; 0 = no)\r\n     28 proto: exercise protocol\r\n          1 = Bruce     \r\n          2 = Kottus\r\n          3 = McHenry\r\n          4 = fast Balke\r\n          5 = Balke\r\n          6 = Noughton \r\n          7 = bike 150 kpa min/min  (Not sure if "kpa min/min" is what was written!)\r\n          8 = bike 125 kpa min/min  \r\n          9 = bike 100 kpa min/min\r\n         10 = bike 75 kpa min/min\r\n         11 = bike 50 kpa min/min\r\n         12 = arm ergometer\r\n     29 thaldur: duration of exercise test in minutes\r\n     30 thaltime: time when ST measure depression was noted\r\n     31 met: mets achieved\r\n     32 thalach: maximum heart rate achieved\r\n     33 thalrest: resting heart rate\r\n     34 tpeakbps: peak exercise blood pressure (first of 2 parts)\r\n     35 tpeakbpd: peak exercise blood pressure (second of 2 parts)\r\n     36 dummy\r\n     37 trestbpd: resting blood pressure\r\n     38 exang: exercise induced angina (1 = yes; 0 = no)\r\n     39 xhypo: (1 = yes; 0 = no)\r\n     40 oldpeak = ST depression induced by exercise relative to rest\r\n     41 slope: the slope of the peak exercise ST segment\r\n        -- Value 1: upsloping\r\n        -- Value 2: flat\r\n        -- Value 3: downsloping\r\n     42 rldv5: height at rest\r\n     43 rldv5e: height at peak exercise\r\n     44 ca: number of major vessels (0-3) colored by flourosopy\r\n     45 restckm: irrelevant\r\n     46 exerckm: irrelevant\r\n     47 restef: rest raidonuclid (sp?) ejection fraction\r\n     48 restwm: rest wall (sp?) motion abnormality\r\n        0 = none\r\n        1 = mild or moderate\r\n        2 = moderate or severe\r\n        3 = akinesis or dyskmem (sp?)\r\n     49 exeref: exercise radinalid (sp?) ejection fraction\r\n     50 exerwm: exercise wall (sp?) motion \r\n     51 thal: 3 = normal; 6 = fixed defect; 7 = reversable defect\r\n     52 thalsev: not used\r\n     53 thalpul: not used\r\n     54 earlobe: not used\r\n     55 cmo: month of cardiac cath (sp?)  (perhaps "call")\r\n     56 cday: day of cardiac cath (sp?)\r\n     57 cyr: year of cardiac cath (sp?)\r\n     58 num: diagnosis of heart disease (angiographic disease status)\r\n        -- Value 0: &lt; 50% diameter narrowing\r\n        -- Value 1: &gt; 50% diameter narrowing\r\n        (in any major vessel: attributes 59 through 68 are vessels)\r\n     59 lmt\r\n     60 ladprox\r\n     61 laddist\r\n     62 diag\r\n     63 cxmain\r\n     64 ramus\r\n     65 om1\r\n     66 om2\r\n     67 rcaprox\r\n     68 rcadist\r\n     69 lvx1: not used\r\n     70 lvx2: not used\r\n     71 lvx3: not used\r\n     72 lvx4: not used\r\n     73 lvf: not used\r\n     74 cathef: not used\r\n     75 junk: not used\r\n     76 name: last name of patient  (I replaced this with the dummy string "name")', 'citation': None}}
+        name     role         type demographic  \
+0        age  Feature      Integer         Age   
+1        sex  Feature  Categorical         Sex   
+2         cp  Feature  Categorical        None   
+3   trestbps  Feature      Integer        None   
+4       chol  Feature      Integer        None   
+5        fbs  Feature  Categorical        None   
+6    restecg  Feature  Categorical        None   
+7    thalach  Feature      Integer        None   
+8      exang  Feature  Categorical        None   
+9    oldpeak  Feature      Integer        None   
+10     slope  Feature  Categorical        None   
+11        ca  Feature      Integer        None   
+12      thal  Feature  Categorical        None   
+13       num   Target      Integer        None   
+
+                                          description  units missing_values  
+0                                                None  years             no  
+1                                                None   None             no  
+2                                                None   None             no  
+3   resting blood pressure (on admission to the ho...  mm Hg             no  
+4                                   serum cholestoral  mg/dl             no  
+5                     fasting blood sugar &gt; 120 mg/dl   None             no  
+6                                                None   None             no  
+7                         maximum heart rate achieved   None             no  
+8                             exercise induced angina   None             no  
+9   ST depression induced by exercise relative to ...   None             no  
+10                                               None   None             no  
+11  number of major vessels (0-3) colored by flour...   None            yes  
+12                                               None   None            yes  
+13                         diagnosis of heart disease   None             no  </code></pre>
+</div>
+</div>
+<div id="cell-26" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> heart_disease.data.features.join(heart_disease.data.targets)[[<span class="st">'age'</span>, <span class="st">'trestbps'</span>, <span class="st">'chol'</span>, <span class="st">'thalach'</span>, <span class="st">'num'</span>]]</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'num'</span>] <span class="op">=</span> (features[<span class="st">'num'</span>] <span class="op">&gt;</span> <span class="dv">0</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>thalach <span class="op">=</span> data[<span class="st">'thalach'</span>].values.astype(<span class="bu">float</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>thalach[np.random.rand(<span class="op">*</span>thalach.shape) <span class="op">&lt;</span> <span class="fl">0.2</span>] <span class="op">=</span> np.nan</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'thalach'</span>] <span class="op">=</span> thalach</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[2], line 2</span>
+<span class="ansi-green-fg ansi-bold">      1</span> data <span style="color:rgb(98,98,98)">=</span> heart_disease<span style="color:rgb(98,98,98)">.</span>data<span style="color:rgb(98,98,98)">.</span>features<span style="color:rgb(98,98,98)">.</span>join(heart_disease<span style="color:rgb(98,98,98)">.</span>data<span style="color:rgb(98,98,98)">.</span>targets)[[<span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">age</span><span style="color:rgb(175,0,0)">'</span>, <span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">trestbps</span><span style="color:rgb(175,0,0)">'</span>, <span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">chol</span><span style="color:rgb(175,0,0)">'</span>, <span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">thalach</span><span style="color:rgb(175,0,0)">'</span>, <span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">num</span><span style="color:rgb(175,0,0)">'</span>]]
+<span class="ansi-green-fg">----&gt; 2</span> data[<span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">num</span><span style="color:rgb(175,0,0)">'</span>] <span style="color:rgb(98,98,98)">=</span> (<span class="ansi-yellow-bg">features</span>[<span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">num</span><span style="color:rgb(175,0,0)">'</span>] <span style="color:rgb(98,98,98)">&gt;</span> <span style="color:rgb(98,98,98)">0</span>)<span style="color:rgb(98,98,98)">.</span>astype(<span style="color:rgb(0,135,0)">int</span>)
+<span class="ansi-green-fg ansi-bold">      5</span> thalach <span style="color:rgb(98,98,98)">=</span> data[<span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">thalach</span><span style="color:rgb(175,0,0)">'</span>]<span style="color:rgb(98,98,98)">.</span>values<span style="color:rgb(98,98,98)">.</span>astype(<span style="color:rgb(0,135,0)">float</span>)
+<span class="ansi-green-fg ansi-bold">      6</span> thalach[np<span style="color:rgb(98,98,98)">.</span>random<span style="color:rgb(98,98,98)">.</span>rand(<span style="color:rgb(98,98,98)">*</span>thalach<span style="color:rgb(98,98,98)">.</span>shape) <span style="color:rgb(98,98,98)">&lt;</span> <span style="color:rgb(98,98,98)">0.2</span>] <span style="color:rgb(98,98,98)">=</span> np<span style="color:rgb(98,98,98)">.</span>nan
+
+<span class="ansi-red-fg">NameError</span>: name 'features' is not defined</pre>
+</div>
+</div>
+</div>
+<div id="cell-27" class="cell" data-execution_count="263">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="263">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">trestbps</th>
+<th data-quarto-table-cell-role="th">chol</th>
+<th data-quarto-table-cell-role="th">thalach</th>
+<th data-quarto-table-cell-role="th">num</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>63</td>
+<td>145</td>
+<td>233</td>
+<td>150.0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>67</td>
+<td>160</td>
+<td>286</td>
+<td>108.0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>67</td>
+<td>120</td>
+<td>229</td>
+<td>129.0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>37</td>
+<td>130</td>
+<td>250</td>
+<td>NaN</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>41</td>
+<td>130</td>
+<td>204</td>
+<td>172.0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">298</td>
+<td>45</td>
+<td>110</td>
+<td>264</td>
+<td>132.0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">299</td>
+<td>68</td>
+<td>144</td>
+<td>193</td>
+<td>141.0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">300</td>
+<td>57</td>
+<td>130</td>
+<td>131</td>
+<td>115.0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">301</td>
+<td>57</td>
+<td>130</td>
+<td>236</td>
+<td>174.0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">302</td>
+<td>38</td>
+<td>138</td>
+<td>175</td>
+<td>173.0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+<p>303 rows × 5 columns</p>
+</div>
+</div>
+</div>
+<div id="cell-28" class="cell" data-execution_count="258">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>fixed_data <span class="op">=</span> data.dropna().fillna(features.median())</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> fixed_data[[<span class="st">'age'</span>, <span class="st">'trestbps'</span>, <span class="st">'chol'</span>, <span class="st">'thalach'</span>]].values.astype(<span class="bu">float</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> fixed_data[<span class="st">'num'</span>].values</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-29" class="cell" data-execution_count="259">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LogisticRegression().fit(x, y)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>model.score(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="259">
+<pre><code>0.7090163934426229</code></pre>
+</div>
+</div>
+<div id="cell-30" class="cell" data-execution_count="260">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>features.dropna().values</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="260">
+<pre><code>array([[ 63., 145., 233., 150.,   0.],
+       [ 67., 160., 286., 108.,   1.],
+       [ 37., 130., 250., 187.,   0.],
+       ...,
+       [ 68., 144., 193., 141.,   1.],
+       [ 57., 130., 131., 115.,   1.],
+       [ 57., 130., 236., 174.,   1.]])</code></pre>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

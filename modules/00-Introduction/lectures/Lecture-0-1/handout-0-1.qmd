@@ -1,0 +1,78 @@
+---
+format: 
+    pdf:
+        include-in-header: 
+            text: '\pagenumbering{gobble}'
+---
+
+
+# Name:
+
+*Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
+
+# Data Analytics and Visualization: Week 1 - Thinking about data
+
+## In-class questions
+
+#### What information is contained in this plot? 
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  Which data organization is most logical to you? 
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+#### What *visual dimension* is encoding each piece of information? 
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+#### Which encoding scheme seems most valuable?
+
+
+|
+|
+|
+|
+|
+|
+|
+
+
+## Reflection (*complete at the end of class*)
+
+#### Did these concepts seems obvious or obvious in *hindsight*?
+
+|
+|
+|
+|
+|
+|
+|
+|
+#### Have you used any of these libraries before?

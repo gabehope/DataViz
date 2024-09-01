@@ -1,0 +1,93 @@
+---
+title: Software and tools
+subtitle: Harvey Mudd College
+author: Prof. Gabe Hope
+date: August 2024
+format: html
+---
+
+## Python
+
+Assignments and projects in this course will be based on Python 3. We will be using the following packages throughout this course:
+
+-   [**NumPy**](https://numpy.org/) and [**SciPy**](https://scipy.org/): The industry-standard Python libraries for working with vectors, matrices and general numerical computing.
+
+-   [**Pandas**](https://pandas.pydata.org/docs/) The most widely used Python library for data frames and general data analysis. 
+
+-   [**Lets-Plot**](https://lets-plot.org/) (or [**Plotnine**](https://plotnine.org/)): Python libraries for visualization that adapt the interface of the [ggplot2](https://ggplot2.tidyverse.org/) [R](https://www.r-project.org/about.html) library.
+
+-   [**SciKit-Learn**](https://scikit-learn.org/stable/): A popular library for basic machine learning and statistical modeling.
+
+## Jupyter
+
+Most quizzes will be distributed and submitted as [Jupyter](https://jupyter.org/) notebooks. In practice, you will be able to open quiz notebooks directly in [Google Colab](https://colab.research.google.com/) without any local installation.
+
+If you wish to run Jupyter notebooks on your own computer, instructions for installing it are available [here](https://jupyter.org/install). Once installed, you can launch a JupyterLab server locally on you computer using the command:
+
+``` bash
+jupyter lab
+```
+
+This will open the Jupyter Lab application in a web browser. Resources and documentation for working with Jupyter notebooks are available [here](https://docs.jupyter.org/en/latest/).
+
+## Quarto
+
+[Quarto](https://quarto.org/) is an open-source publishing system for scientific and technical work. I strongly recommend using Quarto for homeworks and the final project. Similar to Jupyter, Quarto allows for Python code, code outputs and [markdown-formatted](https://quarto.org/docs/authoring/markdown-basics.html) text to be mixed within a single document, however Quarto provides significantly more flexibility when it comes to formatting and rendering. For homeworks, you will typically render documents to PDF for upload to gradescope, but Quarto can render to a variety of formats. In fact, this entire website was built with Quarto!
+
+The disadvantage of Quarto compared to Jupyter is that Quarto documents must be compiled and run all at once, rather than interactively. However, Quarto can convert Jupyter notebooks to Quarto files for further formatting or even render notebooks directly. See [this guide](https://quarto.org/docs/tools/jupyter-lab.html) for details. 
+
+To get started with Quarto in VSCode, see [this guide](https://quarto.org/docs/get-started/hello/vscode.html).
+
+## Latex (style) equations
+
+For homework assignments you may occasionally want to typeset mathematical expressions or derivations as Latex-style equations. Latex equations are supported directly within Jupyter and Quarto. To write an equation in a text/markdown cell, simply surround the equation with `$` symbols as: `$y = x^2 + 1$`, which produces the output: $y=x^2 +1$. You can write block equation using double dollar-signs as `$$y = x^2 + 1$$`, which puts the equation on its own centered line.
+
+An extensive reference for Latex equations is available [here](http://tug.ctan.org/info/undergradmath/undergradmath.pdf).
+
+## VSCode (Optional)
+
+[Visual Studio Code](https://code.visualstudio.com/) is a free development environment developed by Microsoft. It is available for Mac, Windows and Linux, and provides convenient tools for working with Python, Git, Jupyter and Quarto. It is what I use to develop the materials for this course, and it is what I would recommend using for homework assignments. This is completely optional however. You are welcome to use whatever environment you feel most comfortable with.
+
+Here are resources for getting started:
+
+-   Recommended extensions for data science and working with Jupyter notebooks are listed [here](https://code.visualstudio.com/docs/datascience/overview).
+
+-   Instructions for setting up Python in VSCode are [here](https://code.visualstudio.com/docs/python/python-tutorial).
+
+-   Instructions for working with Jupyter notebooks in VSCode are [here](https://code.visualstudio.com/docs/datascience/jupyter-notebooks).
+
+- Instructions for setting up Quarto in VSCode are [here](https://quarto.org/docs/get-started/hello/vscode.html).
+
+-   Instructions for setting up Git in VSCode are [here](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git).
+
+## Alternative tools
+
+While course materials will use the Python/Pandas/Lets-Plot stack, other languages and libraries offer similar functionality with different trade-offs. As the homework assignments, quizzes and projects in this class are largely language and library-agnostic, you may consider experimenting with some of the following alternatives.
+
+:::{.callout-tip}
+If you are interested in learning to use these alternatives and would like to be involved in helping to translate course materials, let me know!
+:::
+
+#### Python alternatives
+
+-   [**R:**](https://www.r-project.org/about.html) The most popular open-source language built specifically for statistics and data analysis. It is widely used in the statistics and data science community. It includes native support for data frames and many high-quality libraries such as [ggplot2](https://ggplot2.tidyverse.org/)
+
+-   [**Julia:**](https://julialang.org/) Another popular open-source alternative to Python and R.
+
+-   [**ObservableJS:**](https://observablehq.com/@observablehq/observable-javascript) A Javascript-based framework for interactive data analysis and visualization. Includes its own high-quality data visualization library [Observable Plot](https://observablehq.com/plot/), which itself is built on the widely used [D3](https://d3js.org/) visualization library. Later in the course we will touch on using Javascript and Observable for visualization.
+
+#### Pandas alternatives
+
+-   [**Polars:**](https://pola.rs/) A relatively new library that is rapidly gaining popularity as an alternative to Pandas. It aims to accomplish the same goals with improved performance and updated syntax.
+
+-   [**SQLite:**](https://docs.python.org/3/library/sqlite3.html) A lightweight database engine included with Python and accessible through the `sqlite3` module. While SQL databases are less suited to general data science than Pandas, they offer many of the same operations with potential for greater scalibility. Both Pandas and Polars offer SQL interoperability.
+
+#### Lets-Plot alternatives
+
+-   [**Altair:**](https://altair-viz.github.io/) A popular visualization library with a similar philosophy to ggplot2 and Lets-Plot, but with significantly different syntax.
+
+-   [**Seaborn:**](https://seaborn.pydata.org/tutorial/introduction.html) Another popular visualization library, closely integrated with Pandas. Often simpler for basic plots, but less flexible than other libaries.
+
+-   [**Plotly:**](https://seaborn.pydata.org/tutorial/introduction.html) A cross-platform library with a Python interface and support for 3-D visualizations and animation. Has many cool features, but a less elegant and flexible inferface than alternatives.
+
+-   [**Matplotlib:**](https://matplotlib.org/) The de-facto standard for statistical and scientific visualization in Python. Base Matplotlib is losing favor due to its outdated interface and steep learning curve, but many libraries, such as Seaborn and Plotnine, are built on top of Matplotlib's powerful rendering engine.

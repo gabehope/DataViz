@@ -1,0 +1,91 @@
+---
+title: "Course Policies"
+subtitle: Data Analytics and Visualization, Fall 2024
+author: Prof. Gabe Hope
+institute: Harvey Mudd College
+date: August 2024
+format: html
+---
+
+## Feedback
+
+This is a new course that is under active development and as such, I anticipate there will be issues and growing pains. I am always open to feedback and suggestions about how to improve the course. Please feel free to raise any issues with me either in person or via email.
+
+If you have an issue with the course that you would like me to be aware of, but do not want your name to be associated with, you can use [this form](https://forms.gle/9piRXsKNRnN2PcAv5) to submit an anonymous issue. Please continue to remain constructive and kind when submitting feedback in this way.
+
+## Guidelines for respectful class discussion
+
+The goal of in-class discussions to understand each others perspectives and to contribute to both our own learning and that of our peers. To make sure that in-class discussions are aligned with these goals please be mindful of the following guidelines:
+
+-   **Avoid judgment:** Students enter this class with a variety of backgrounds, experience and viewpoints. Be positive and encouraging to your peers even if you feel they are incorrect. Strive to make sure those around you feel comfortable answering questions even if they are not completely sure of their answer and give opinions that they are not sure others will agree with. Remember that giving an answer different from what the instructor was looking for can lead to productive and informative discussions.
+
+-   **Allow everyone a chance to speak:** We want to give every student a chance to participate in the class and in discussions. If you find yourself speaking, answering or asking questions far more than your peers, consider encouraging others to speak instead. Remember that in-class time is not your only opportunity to discuss this material and you are welcome to ask more questions in office hours.
+
+-   **Practice active listening:** When having in-class discussions make sure to acknowledge the answers and opinions of others before offering your own. Avoid interrupting others. Your thoughts deserve to be heard and understood, so it's important that we work together to make sure everyone's contributions are considered.
+
+-   **Be kind:** Do not use harsh or disparaging language in class. Avoid blame or speculation about other students. Aim to be charitable in your interpretations of other peoples words. Respect the boundaries set by others.
+
+-   **Be inclusive:** Be respectful of everyone's background and identity. Avoid making assumptions or generalizations based on someone's (perceived) social group. Do not ask individuals to speak for their social group.
+
+## Attendence Policy
+
+Attendence is **strongly** encouraged as it is beneficial for both your own learning and that of your peers who may learn from your knowledge and viewpoints. Not only is attendance reflected in your participation grade, it is also highly correlated with performance on exams and homework. That said, I understand that there are times where students may miss class for a variety of reasons. If you miss a class (or several) please contact me by email or slack and we can work out a plan to catch you up on the material. **Up to 1 unexcused absence per month will not affect your participation grade, neither will excused absences due to illness, injury, etc.**
+
+## Collaboration policy - Homeworks & projects
+
+Homeworks and projects in this course are group assignments and will generally be open-ended. You are welcome and encouraged to discuss your approaches with students in other groups, however you may not share completed assignments until after the due date.
+
+## Collaboration policy - Quizzes
+
+Quizzes in this course are designed to evaluate your individual understanding of the course material and to ensure that you are keeping up with the concepts presented in class. Remember that do not need 100% on every quiz to recieve the highest possible quiz grade. 
+
+Under the quiz collaboration policy you **may**:
+
+-   Discuss published course materials and topics
+
+-   Share helpful examples and resources with other students
+
+-   Help other students with technical issues such as setting up GitHub and Python environments.
+
+-   View snippets of another student's code for the purpose of debugging small technical issues (exceptions, syntax errors etc.)
+
+You **may not:**
+
+-   Copy/paste another student's completed answers to any problem or allow another student to copy/paste your answers
+
+-   Share answers to completed problems with other students
+
+-   Distribute or post online any assignments, problems and/or solutions.
+
+
+This collaboration policy is covered by the Harvey Mudd honor code and violations will be referred to the honor code board.
+
+
+## AI Policy
+
+AI and large language models (LLMs) can be useful tools for learning, therefore their use is not forbidden in this course. You may consult ChatGPT and other AI tools while completing assignments for this class for *certain explicit purposes* including:
+
+- Determining correct syntax for code and library usage
+- Finding sources for data and examples
+- Asking for alternative explanations of concepts covered in the course
+- Aiding in communication (drafting emails etc.) with other students and professors.
+
+Please keep in mind that large language models have **significant** pitfalls and dangers. They may provide false or misleading information and may reflect harmful biases. Use at your own risk; *you* will be held responsible for any issues arising from the use of these tools.
+
+For the purpose of assignments, I consider these models to be covered by the course collaboration policy, as if they are a student outside the class. That means you may interact with them to discuss course topics, but **you may not share assignment problems or solutions with them**, nor may you copy/paste answers from them. Assignment solutions *must* be your own. This applies to both math/coding problems *and* subjective analysis. Violations of this policy may be treated as honor code violations. If you have any questions about what is appropriate, please reach out to me.
+
+## Academic issues and wellness
+
+My primary goal is for every student to understand the material to the best extent possible and hopefully enjoy learning the material at the same time. If at any point you are concerned about your grade or feel you are struggling for any reason I encourage you to reach out to me either via slack/email or during office hours. I will also try to reach out to you if I notice you are struggling with the material or are not on track to pass the class.
+
+I also want you to prioritize your mental and physical well-being. The college has several resources that can help you with this. The academic deans (academicdeans\@g.hmc.edu) can help you keep on top of your academic progress. The office of health and wellness (<https://www.hmc.edu/health-wellness/>) can help you with a wide range of physical and metal health issues. I encourage you to be proactive, if you are starting to feel anxious, overwhelmed or depressed seeking help early can be extremely valuable. If you are unsure where to go, I can help guide you to the appropriate resource. The [Claremont Care Guide](https://www.hmc.edu/student-life/wp-content/uploads/sites/4/2013/05/The-Claremont-Colleges-Care-Guide.pdf), provides a useful guide if you or someone you know is in urgent distress.
+
+## Accommodations
+
+If you have a disability (for example, mental health, learning, chronic health, physical, hearing, vision, neurological, etc.) and expect barriers related to this course, it is important to request accommodations and establish a plan. Requests for accommodations must go through the [Office of Accessible Education](https://www.hmc.edu/student-success/accessible-education/requesting-accommodations/). I am happy to work with them to establish an appropriate plan for this course. I also encourage reaching out to them if you are unsure of your eligibility for accommodations, they can help determine what is appropriate for you.
+
+Remember that requests for accommodations must be made each semester. If you are not already registered this process can take time and accommodations cannot be applied retroactively, so starting the process early is important.
+
+## COVID Safety
+
+College policy states that masks are no longer required indoors. I will not require masks in class, but students who prefer to continue wearing masks are should do so. If you are feeling sick please stay home and let me know so that I can provide you with the relevant course materials.

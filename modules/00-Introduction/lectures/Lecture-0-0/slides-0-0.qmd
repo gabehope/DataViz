@@ -1,0 +1,525 @@
+---
+title: "Data Analytics and Visualization"
+subtitle: "Course introduction"
+author: "Prof. Gabe Hope"
+format: revealjs
+---
+
+# Welcome!
+
+## About me
+
+::::: columns
+::: {.column width="30%"}
+![](pictures/gabe.png){fig-align="left" width="300"}
+:::
+
+::: {.column width="70%"}
+Prof. Gabe Hope (he/him)
+
+**Email:** ghope\@g.hmc.edu
+
+**Office:** MacGregor 322
+
+**Office hours: TBA**
+
+:::
+:::::
+
+## My background
+
+::::: columns
+::: {.column width="30%"}
+![](pictures/gabe.png){fig-align="left" width="300"}
+:::
+
+::: {.column width="70%"}
+Prof. Gabe Hope (he/him)
+
+-  **Where I'm from:** New York City, but I've been living in southern California for the past 7 years.
+-  **Where I went to school:** University of California, Irvine advised by [Erik Sudderth](https://www.ics.uci.edu/~sudderth/). 
+
+:::
+:::::
+
+
+## My research
+
+-  My research focuses on using neural networks to find interpretable structures in data. 
+-  I mainly focus on image data, though I have also worked on analyzing motion-capture, audio and climate data!
+
+::::: columns
+::: {.column width="40%"}
+**Image in-painting**
+![](pictures/qavi.png){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+**Motion-capture analysis**
+![](pictures/svae.png){fig-align="center"}
+:::
+:::::
+
+## About you!
+
+- Your name & preferred pronouns
+- Your year and major
+- What interested you about this class?
+    - *Do you want to work with a particular kind of data?*
+    - *Did you just think it sounded cool?* 😎
+
+# About this class
+
+## What are the goals of this class?
+
+### Exercise!
+
+- Go to this webpage: <https://projects.fivethirtyeight.com/2024-election-forecast/>
+
+- Follow the instructions on the handout
+
+## What information is this page trying to present? 
+
+## Is the information presented clearly? 
+
+## What new skills would you need to replicate this work? 
+
+## What impacts could this analysis have? 
+
+# So, what will this class cover?
+
+
+## Data collection
+::::: columns
+::: {.column width="50%"}
+![](pictures/collection.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+Where do we find data?
+
+How do we assess the reliability and biases of data?
+:::
+:::::
+
+## Data *wrangling*
+::::: columns
+::: {.column width="50%" style="font-size: 30%;"}
+```{python}
+#| echo: false
+
+import pandas as pd
+
+pd.read_csv('data/poll_list_538.csv').head(8)
+```
+:::
+
+::: {.column width="50%"}
+How do we represent and interpret data?
+
+How do we go from raw data to something useful?
+
+How do we summarize our data?
+:::
+:::::
+
+## Data visualization
+::::: columns
+::: {.column width="50%"}
+![](pictures/viz.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+How do we use visualization to understand data?
+
+How do we make good decisions about how to present data?
+
+What tools do we have to build visualizations?
+:::
+:::::
+
+## Statistics and modeling
+::::: columns
+::: {.column width="50%"}
+![](pictures/statistics.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+How can we use data to infer hidden information?
+
+How do we make well-founded predictions of future events?
+:::
+:::::
+
+## Communication
+::::: columns
+::: {.column width="50%"}
+![](pictures/communication.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+How do we effectively communicate results?
+
+How do we convince others that our conclusions are correct?
+:::
+:::::
+
+# What *kinds* of data will we cover?
+
+## Structured data
+
+![](pictures/tabular.svg){fig-align="center"}
+
+## Timeseries data
+
+![](pictures/timeseries.png){fig-align="center"}
+
+## Geospatial data
+
+![](pictures/geospatial.png){fig-align="center"}
+
+## Spatio-temporal data
+
+![](pictures/climate.gif){fig-align="center"}
+
+## Network data
+
+![](pictures/network.png){fig-align="center"}
+
+# Course logistics
+
+## Course website
+
+::::: columns
+::: {.column width="50%"}
+![](pictures/website.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+The course website is available here: **TBA**
+
+
+This will be the primary resource for all information relating to this course.
+:::
+:::::
+
+
+## Feedback
+
+#### This is a new course that is under active development!
+
+- Some aspects will be experimental
+
+- There may be (a lot) of rough edges
+
+#### Your feedback is valuable!
+
+- Feel free to raise issues with me directly
+
+- You can also give anonymous feedback at any time [here](https://forms.gle/9piRXsKNRnN2PcAv5)
+
+## Class structures
+
+#### Five main components in this class
+- Lectures
+- Discussions
+- Quizzes
+- Homeworks
+- Project
+
+## Lectures
+
+- Each class session will generally include at some lecture time
+
+- Certain topics may be covered in pre-recorded lectures
+
+- Slides will be available on the course calendar
+
+## Discussions
+
+- Each class session will also generally include some discussion time
+
+- This is how we'll explore the more subjective aspects of visualization, interpretation and communication
+
+- Participation will be a (small) part of your grade
+    - If you feel this is something you struggle with (as I did!), let me know
+
+## Guidelines for class discussion
+
+*Please read the guidelines for respectful class discussion on the course website*
+
+The high-level takeaways are:
+
+-   **Avoid judgment**
+
+-   **Allow everyone a chance to speak**
+
+-   **Practice active listening**
+
+-   **Be kind** 
+
+-   **Be inclusive**
+
+## Attendence Policy
+
+Attendence is **strongly** encouraged and **will** be graded
+
+- If you miss a class (or several) please contact me and I can help you catch up.
+
+- **Things happen!** Up to 1 unexcused absence per month will not affect your grade, neither will excused absences due to illness, injury, etc.
+
+## Quizzes
+
+::::: columns
+::: {.column width="40%"}
+![](pictures/colab.png){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+- These are the main *individual* assesments for this course
+- Assigned weekly
+- Distributed as Jupyter notebooks through Google Colab
+- Submit answers via GradeScope
+:::
+:::::
+
+
+## Quiz grading
+
+Quiz answers will be auto-graded
+
+- No partial credit, no late submissions
+    - *Unfortunately as this is a new course, I have lots of prep work and no grutors who've taken the class* 😔
+
+**But!** Your grade will only depend on your best 80% of answers
+
+- Across all quizzes
+- This means you can skip 2 out of 10 quizzes or 20% of questions on every quiz and still get a perfect grade
+
+## Collaboration policy - Quizzes
+
+Under the quiz collaboration policy you **may**:
+
+-   Discuss published course materials and topics
+
+-   Share helpful examples and resources with other students
+
+-   Help other students with technical issues such as setting up GitHub and Python environments.
+
+-   View snippets of another student's code for the purpose of debugging small technical issues (exceptions, syntax errors etc.)
+
+## Collaboration policy - Quizzes
+
+Under the quiz collaboration policy you **may not:**
+
+-   Copy/paste another student's completed answers to any problem or allow another student to copy/paste your answers
+
+-   Share answers to completed problems with other students
+
+-   Distribute or post online any assignments, problems and/or solutions.
+
+
+*This collaboration policy is covered by the Harvey Mudd honor code and violations will be referred to the honor code board.*
+
+## Homeworks
+
+Homeworks will be in the form of open-ended group assignments (i.e. mini projects)
+
+- Generally will involve creating a visualization or performing some analysis on a dataset of your choosing
+- *Must* be completed in groups of 2-3 students 
+- Assigned weekly or semi-weekly
+- Distributed on the course website
+- Submit reports via GradeScope
+
+## Homeworks
+
+![](pictures/hw.png){fig-align="center"}
+
+## Homework feedback and grades
+
+Homeworks will include a *very short* individual reflection
+
+- How you felt about the assignment and what you contributed
+
+Homeworks will also be peer-reviewed
+
+- You will review one other groups work for each assignment
+- Your feedback will primarily be for the benefit of your peers, the instructor (me) will be responsible for assigning grades
+
+## Final project
+
+Will have a similar form to homeworks
+
+- Details TBA later in the semester!
+
+## That sounds like a lot to keep track of!
+
+**It is!** But each part should be small, manageable and hopefully *fun*
+
+- I will send out reminders for assignments, and other submissions
+
+- I am also creating a course Google calendar that you can sync to, so you can make sure you're up-to-date.
+
+- If you have trouble, let me know! I may adjust how things work over the semester to better fit your needs
+
+## AI Policy
+
+Large language models (e.g. ChatGPT) are covered by the course collaboration policy, as if they are a student outside the class. 
+
+- You *may* interact with them to discuss course topics
+- **You may not share assignment problems or solutions**
+- **You may not copy/paste outputs into your solutions**
+- Applies to math/coding problems *and* subjective analysis. 
+
+*Violations of this policy may be treated as honor code violations.* 
+
+## Academic issues and wellness
+::: {style="font-size: 80%;"}
+Prioritize your mental and physical well-being!
+
+- Let me know if you are struggling with the assignments or the material. My job is to help!
+
+Remember the college's resources:
+
+- The academic deans (academicdeans\@g.hmc.edu) can help you keep on top of your academic progress. 
+- The office of health and wellness (<https://www.hmc.edu/health-wellness/>) can help you with a wide range of physical and metal health issues.
+- The [Claremont Care Guide](https://www.hmc.edu/student-life/wp-content/uploads/sites/4/2013/05/The-Claremont-Colleges-Care-Guide.pdf), provides a useful guide if you or someone you know is in urgent distress.
+:::
+## Accommodations
+
+If you need academic accomodations, don't forget that requests must go through the [Office of Accessible Education](https://www.hmc.edu/student-success/accessible-education/requesting-accommodations/). 
+
+I will work with them to establish an appropriate plan for this course. 
+
+- If you are unsure of your eligibility for accommodations, reach out! They can help determine what is appropriate for you.
+
+- Remember that requests for accommodations must be made each semester.
+
+## Content heads up
+
+In this class we'll often discuss sensitive issues involving *race, class, gender, politics, social justice and more*.
+
+- **These topics are incredibly important!** Data analytics and visualization play an important role in how we discuss them.
+
+- As someone with a privilidged background and identity, I'm not necessarily the most qualified to discuss them
+
+- I will do the best I can, but you should *always feel free* to call me out (publicly or privately).
+
+# Course grades
+
+## Letter grades
+
+Maximum cutoff of each letter grade:
+
+-   \>90%: **A**
+
+-   \>80%: **B**
+
+-   \>70%: **C**
+
+-   \>60%: **D**
+
+The actual cutoff for each grade may be lower!
+
+## Breakdown - Graded on effort
+
+#### **10%** - Participation
+
+**Expected time commitment:** 0-30 minutes per week
+
+- Occasional prep for in-class discussions.
+
+#### **10%** - Reflections and feedback
+
+**Expected time commitment:** 15-20 minutes per week
+
+- Short reflections (~5 minutes)
+- Peer reviews (10-20 minutes for a **satisfactory** grade)
+
+## Breakdown - Graded on correctness
+
+#### **20%** - Quizzes
+
+**Expected time commitment:** 30-90 minutes per week
+
+## Breakdown - Graded on qualitative assessment
+
+#### **30%** - Homeworks
+
+**Expected time commitment:** 2-4 hours per week 
+
+- **Not** concurrent with final project
+
+#### **30%** - Final Project
+
+**Expected time commitment:** 2-4 hours per week 
+
+- **Not** concurrent with homeworks
+
+# Software and tools
+
+## Python
+
+::: {style="font-size: 60%;"}
+Assignments and projects in this course will be based on Python 3. We will be using the following packages throughout this course:
+
+-   [**NumPy**](https://numpy.org/) and [**SciPy**](https://scipy.org/): The industry-standard Python libraries for working with vectors, matrices and general numerical computing.
+
+-   [**Pandas**](https://pandas.pydata.org/docs/) The most widely used Python library for data frames and general data analysis. 
+
+-   [**Lets-Plot**](https://lets-plot.org/) (or [**Plotnine**](https://plotnine.org/)): Python libraries for visualization that adapt the interface of the [ggplot2](https://ggplot2.tidyverse.org/) [R](https://www.r-project.org/about.html) library.
+
+-   [**SciKit-Learn**](https://scikit-learn.org/stable/): A popular library for basic machine learning and statistical modeling.
+:::
+
+## Jupyter
+
+Most quizzes will be distributed and submitted as [Jupyter](https://jupyter.org/) notebooks. 
+
+In practice, you will be able to open quiz notebooks directly in [Google Colab](https://colab.research.google.com/) without any local installation.
+
+## Quarto
+
+[Quarto](https://quarto.org/) is an open-source publishing system for scientific and technical work. 
+
+You will use this for publishing homeworks and projects!
+
+
+## Alternative tools
+
+While course materials will use the Python/Pandas/Lets-Plot stack, you're free to use alternative tools for homeworks, quizzes and projects.
+
+:::{.callout-tip}
+If you are interested in learning to use these alternatives and would like to be involved in helping to translate course materials, let me know!
+:::
+
+## Python alternatives
+::: {style="font-size: 60%;"}
+-   [**R:**](https://www.r-project.org/about.html) The most popular open-source language built specifically for statistics and data analysis. It is widely used in the statistics and data science community. It includes native support for data frames and many high-quality libraries such as [ggplot2](https://ggplot2.tidyverse.org/)
+
+-   [**Julia:**](https://julialang.org/) Another popular open-source alternative to Python and R.
+
+-   [**ObservableJS:**](https://observablehq.com/@observablehq/observable-javascript) A Javascript-based framework for interactive data analysis and visualization. Includes its own high-quality data visualization library [Observable Plot](https://observablehq.com/plot/), which itself is built on the widely used [D3](https://d3js.org/) visualization library. Later in the course we will touch on using Javascript and Observable for visualization.
+
+:::
+
+## Pandas alternatives
+::: {style="font-size: 60%;"}
+-   [**Polars:**](https://pola.rs/) A relatively new library that is rapidly gaining popularity as an alternative to Pandas. It aims to accomplish the same goals with improved performance and updated syntax.
+
+-   [**SQLite:**](https://docs.python.org/3/library/sqlite3.html) A lightweight database engine included with Python and accessible through the `sqlite3` module. While SQL databases are less suited to general data science than Pandas, they offer many of the same operations with potential for greater scalibility. Both Pandas and Polars offer SQL interoperability.
+:::
+
+## Lets-Plot alternatives
+::: {style="font-size: 60%;"}
+-   [**Altair:**](https://altair-viz.github.io/) A popular visualization library with a similar philosophy to ggplot2 and Lets-Plot, but with significantly different syntax.
+
+-   [**Seaborn:**](https://seaborn.pydata.org/tutorial/introduction.html) Another popular visualization library, closely integrated with Pandas. Often simpler for basic plots, but less flexible than other libaries.
+
+-   [**Plotly:**](https://seaborn.pydata.org/tutorial/introduction.html) A cross-platform library with a Python interface and support for 3-D visualizations and animation. Has many cool features, but a less elegant and flexible inferface than alternatives.
+
+-   [**Matplotlib:**](https://matplotlib.org/) The de-facto standard for statistical and scientific visualization in Python. Base Matplotlib is losing favor due to its outdated interface and steep learning curve, but many libraries, such as Seaborn and Plotnine, are built on top of Matplotlib's powerful rendering engine.
+:::
+
+
+

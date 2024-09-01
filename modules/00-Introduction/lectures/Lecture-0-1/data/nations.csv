@@ -1,0 +1,181 @@
+name,region,income,population,lifeExpectancy
+Angola,Sub-Saharan Africa,5055.59,12707546,47.58
+Benin,Sub-Saharan Africa,1457.57,8294941,61.89
+Botswana,Sub-Saharan Africa,12282.28,1638393,55.12
+Burkina Faso,Sub-Saharan Africa,1234.42,14761339,53.38
+Burundi,Sub-Saharan Africa,457.07,8691005,50.95
+Cameroon,Sub-Saharan Africa,1997.18,18054929,51.39
+Cape Verde,Sub-Saharan Africa,3456.14,426113,71.68
+Chad,Sub-Saharan Africa,1557.83,10541156,48.97
+Comoros,Sub-Saharan Africa,1016.42,731281,65.77
+"Congo, Dem. Rep.",Sub-Saharan Africa,358.8,66604314,47.81
+"Congo, Rep.",Sub-Saharan Africa,3834.67,3903318,53.75
+Cote d'Ivoire,Sub-Saharan Africa,1520.23,18373060,57.86
+Equatorial Guinea,Sub-Saharan Africa,15342.2,562339,50.64
+Eritrea,Sub-Saharan Africa,548.37,5028475,60.03
+Ethiopia,Sub-Saharan Africa,812.16,78254090,55.69
+Gabon,Sub-Saharan Africa,12704.99,1484149,60.89
+Ghana,Sub-Saharan Africa,1382.95,23336661,56.83
+Guinea,Sub-Saharan Africa,908.86,10211437,58.35
+Guinea-Bissau,Sub-Saharan Africa,568.94,1502442,48.2
+Kenya,Sub-Saharan Africa,1493.53,36529155,54.95
+Lesotho,Sub-Saharan Africa,1521.4,2002749,45.56
+Liberia,Sub-Saharan Africa,474.9,3332483,58.71
+Madagascar,Sub-Saharan Africa,1006.9,19757525,60.81
+Malawi,Sub-Saharan Africa,866.35,13647273,53.88
+Mali,Sub-Saharan Africa,1136.17,12360306,48.84
+Mauritania,Sub-Saharan Africa,1775.87,3364940,56.99
+Mauritius,Sub-Saharan Africa,11411.53,1260781,72.1
+Mayotte,Sub-Saharan Africa,9617.82,216334,75.99
+Mozambique,Sub-Saharan Africa,888.65,20203186,48.13
+Namibia,Sub-Saharan Africa,4952.26,2063927,61.72
+Niger,Sub-Saharan Africa,643.39,13272679,51.95
+Nigeria,Sub-Saharan Africa,2158.98,138283240,48.17
+Reunion,Sub-Saharan Africa,7670.12,808506,76.64
+Rwanda,Sub-Saharan Africa,995.27,9077425,50.69
+Sao Tome and Principe,Sub-Saharan Africa,1703.43,205901,65.86
+Senegal,Sub-Saharan Africa,1700.05,12548243,55.91
+Sierra Leone,Sub-Saharan Africa,893.6,6286617,47.95
+Somalia,Sub-Saharan Africa,943.04,9379907,50.09
+South Africa,Sub-Saharan Africa,9141.27,43786115,51.72
+Sudan,Sub-Saharan Africa,2778.61,43354411,58.5
+Swaziland,Sub-Saharan Africa,4728.18,1128814,46.36
+Tanzania,Sub-Saharan Africa,1220.25,38858276,56.35
+Togo,Sub-Saharan Africa,888.01,5858673,62.93
+Uganda,Sub-Saharan Africa,1202.53,30214531,53.47
+Zambia,Sub-Saharan Africa,1442.06,11993403,46.4
+Zimbabwe,Sub-Saharan Africa,443.74,12382920,45.72
+Afghanistan,South Asia,1216.68,32738376,44.3
+Bangladesh,South Asia,1492.0,153546901,66.56
+Bhutan,South Asia,5053.83,2376680,66.42
+India,South Asia,2731.0,1125368288,64.01
+Maldives,South Asia,5081.79,379174,71.94
+Nepal,South Asia,1224.73,29519114,67.12
+Pakistan,South Asia,2603.0,172730891,66.84
+Sri Lanka,South Asia,4254.13,20532150,74.24
+Algeria,Middle East & North Africa,6207.17,33739635,72.67
+Bahrain,Middle East & North Africa,24226.51,718306,75.88
+Djibouti,Middle East & North Africa,2176.79,506221,55.78
+Iraq,Middle East & North Africa,3518.18,28221181,68.1
+Israel,Middle East & North Africa,25463.69,6500389,81.0
+Jordan,Middle East & North Africa,5109.39,6198677,72.88
+Kuwait,Middle East & North Africa,42443.53,2596799,77.79
+Lebanon,Middle East & North Africa,12766.21,3967467,72.26
+Libya,Middle East & North Africa,12051.62,6173579,74.28
+Morocco,Middle East & North Africa,4162.93,34272968,71.58
+Oman,Middle East & North Africa,22804.85,3309440,75.94
+Qatar,Middle East & North Africa,74138.28,928635,75.81
+Saudi Arabia,Middle East & North Africa,21138.18,28161417,73.1
+Tunisia,Middle East & North Africa,7499.61,10378140,74.15
+United Arab Emirates,Middle East & North Africa,33734.94,2682747,77.58
+West Bank and Gaza,Middle East & North Africa,3084.56,4149173,73.74
+"Yemen, Rep.",Middle East & North Africa,2313.16,22993911,63.39
+Argentina,America,13498.04,40677348,75.52
+Aruba,America,25351.09,72480,74.92
+Barbados,America,15846.77,281968,77.51
+Belize,America,6998.08,301022,76.6
+Bolivia,America,4007.16,9247816,66.01
+Brazil,America,9569.78,191908598,72.68
+Canada,America,34569.63,33679263,80.89
+Chile,America,13087.38,16432536,78.67
+Colombia,America,7090.69,44858264,73.19
+Costa Rica,America,9551.56,4191948,78.98
+Cuba,America,9277.96,11449006,78.84
+Ecuador,America,7035.45,13927650,75.26
+El Salvador,America,5646.85,7057131,71.74
+French Guiana,America,8202.74,206941,76.16
+Grenada,America,8826.9,90303,75.62
+Guadeloupe,America,7788.25,460486,79.28
+Guatemala,America,5163.22,12851647,70.55
+Guyana,America,3776.95,770794,67.43
+Haiti,America,1198.05,8704413,61.48
+Honduras,America,3473.46,7639327,72.41
+Jamaica,America,7023.74,2801544,72.11
+Martinique,America,14627.13,442119,79.77
+Mexico,America,11250.37,109955400,76.47
+Netherlands Antilles,America,23178.37,225168,76.38
+Nicaragua,America,2591.39,5780586,73.44
+Panama,America,10796.68,3292693,75.81
+Paraguay,America,4054.3,6829969,72.07
+Peru,America,7858.97,29041593,73.47
+Puerto Rico,America,18970.51,3957169,78.95
+Suriname,America,8199.03,440486,69.16
+Trinidad and Tobago,America,17826.05,1047366,69.7
+United States,America,41256.08,303824646,79.43
+Uruguay,America,11461.03,3462531,76.5
+Albania,Europe & Central Asia,6546.27,3619778,76.74
+Armenia,Europe & Central Asia,4523.44,2968586,74.03
+Austria,Europe & Central Asia,35636.42,8205533,80.23
+Azerbaijan,Europe & Central Asia,9088.42,8079043,70.6
+Belarus,Europe & Central Asia,11574.43,10287955,69.4
+Belgium,Europe & Central Asia,32256.64,10403951,80.05
+Bosnia and Herzegovina,Europe & Central Asia,7341.98,4590310,75.34
+Bulgaria,Europe & Central Asia,10840.26,7262675,73.53
+Croatia,Europe & Central Asia,14110.46,4491543,76.49
+Cyprus,Europe & Central Asia,25643.45,792604,79.85
+Denmark,Europe & Central Asia,32670.06,5484723,78.57
+Estonia,Europe & Central Asia,16349.13,1307605,73.5
+Finland,Europe & Central Asia,30602.73,5244749,79.9
+France,Europe & Central Asia,29774.85,61279972,81.47
+Georgia,Europe & Central Asia,4168.7,4630841,71.86
+Germany,Europe & Central Asia,31191.15,82369548,80.08
+Greece,Europe & Central Asia,27626.11,10722816,79.5
+Hungary,Europe & Central Asia,16982.8,9930915,73.67
+Iceland,Europe & Central Asia,34989.73,304367,81.95
+Ireland,Europe & Central Asia,35692.95,4156119,80.16
+Italy,Europe & Central Asia,26160.59,58145321,81.34
+Kazakhstan,Europe & Central Asia,10612.29,15340533,65.18
+Latvia,Europe & Central Asia,13021.94,2245423,72.77
+Lithuania,Europe & Central Asia,14928.78,3565205,71.93
+Luxembourg,Europe & Central Asia,70857.46,486006,79.75
+"Macedonia, FYR",Europe & Central Asia,8364.79,2061315,74.4
+Malta,Europe & Central Asia,21327.85,403532,79.91
+Moldova,Europe & Central Asia,2593.42,4496774,68.72
+Montenegro,Europe & Central Asia,12257.79,672180,74.34
+Netherlands,Europe & Central Asia,36074.53,16645313,80.19
+Norway,Europe & Central Asia,47915.0,4644457,80.85
+Poland,Europe & Central Asia,16465.8,38500696,75.84
+Portugal,Europe & Central Asia,19898.43,10676910,78.94
+Romania,Europe & Central Asia,10868.12,22246862,72.99
+Serbia,Europe & Central Asia,10005.22,10166507,74.23
+Slovak Republic,Europe & Central Asia,19186.01,5455407,74.94
+Slovenia,Europe & Central Asia,24778.21,2007711,78.63
+Spain,Europe & Central Asia,26811.93,40491051,81.11
+Sweden,Europe & Central Asia,32021.0,9045389,81.12
+Switzerland,Europe & Central Asia,38003.92,7581520,82.06
+Tajikistan,Europe & Central Asia,1775.38,7653394,67.07
+Turkey,Europe & Central Asia,8040.78,71892807,72.06
+Turkmenistan,Europe & Central Asia,5702.66,5232077,65.06
+Ukraine,Europe & Central Asia,5730.86,46170273,68.45
+United Kingdom,Europe & Central Asia,31042.47,60943912,79.64
+Uzbekistan,Europe & Central Asia,2586.96,28268440,67.97
+Australia,East Asia & Pacific,34327.26,20600856,81.71
+Brunei,East Asia & Pacific,44738.99,393551,77.32
+Cambodia,East Asia & Pacific,1830.97,14387642,61.67
+China,East Asia & Pacific,7226.07,1326856173,73.28
+Fiji,East Asia & Pacific,4016.2,931545,69.05
+French Polynesia,East Asia & Pacific,26733.88,282645,74.59
+"Hong Kong, China",East Asia & Pacific,39086.39,7018636,82.4
+Indonesia,East Asia & Pacific,3818.08,226134000,71.17
+Japan,East Asia & Pacific,29680.68,127425722,82.98
+"Korea, Dem. Rep.",East Asia & Pacific,1635.0,23479089,67.53
+"Korea, Rep.",East Asia & Pacific,23875.0,49232844,79.65
+"Macao, China",East Asia & Pacific,57436.68,460823,80.95
+Malaysia,East Asia & Pacific,12387.67,25259428,74.54
+"Micronesia, Fed. Sts.",East Asia & Pacific,4994.56,107673,68.81
+Mongolia,East Asia & Pacific,3205.17,2916865,66.93
+Myanmar,East Asia & Pacific,1269.14,48133102,62.14
+New Caledonia,East Asia & Pacific,30959.74,224585,76.36
+New Zealand,East Asia & Pacific,24009.46,4154311,80.45
+Papua New Guinea,East Asia & Pacific,1947.16,5921144,61.29
+Philippines,East Asia & Pacific,3203.97,92681453,72.1
+Samoa,East Asia & Pacific,5003.61,176418,71.92
+Singapore,East Asia & Pacific,43526.04,4608167,80.58
+Solomon Islands,East Asia & Pacific,1903.69,581208,66.66
+Taiwan,East Asia & Pacific,28361.0,23308370,78.6
+Thailand,East Asia & Pacific,7376.17,65493298,69.08
+Timor-Leste,East Asia & Pacific,2475.68,1130120,61.6
+Tokelau,East Asia & Pacific,889.43,1401,69.0
+Tonga,East Asia & Pacific,5104.06,118993,71.96
+Vietnam,East Asia & Pacific,2679.34,86116559,74.7
+Vanuatu,East Asia & Pacific,3943.3,215053,70.5

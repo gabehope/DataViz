@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Data Analytics and Visualization"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: calendar/calendar.qmd
+        text: Calendar
+      - text: Syllabus
+        menu:
+          - href: syllabus/policies.qmd
+            text: Policies
+          - href: syllabus/rubric.qmd
+            text: Grading
+      - text: Resources
+        menu:
+          - href: resources/software.qmd
+            text: Software & tools
+          - href: resources/datasets.qmd
+            text: Datasets
+      - text: Links
+        menu:
+          - href: https://harveymuddcollege.instructure.com/courses/1728
+            text: Canvas
+          - href: https://www.gradescope.com/courses/839547
+            text: Gradescope
+
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - theme.scss
+    toc: true
