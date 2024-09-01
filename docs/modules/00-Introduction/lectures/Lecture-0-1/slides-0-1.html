@@ -410,10 +410,10 @@ Prof.&nbsp;Gabe Hope
 <section id="warmup-exercise" class="slide level2">
 <h2>Warmup exercise</h2>
 <p><em>What information is shown in this plot?</em></p>
-<div id="f1227ece" class="cell" data-execution_count="1">
+<div id="84813554" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 
-            <div id="6z6VZ1"></div>
+            <div id="2zRnAJ"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -437,16 +437,16 @@ Prof.&nbsp;Gabe Hope
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("6z6VZ1").appendChild(div);
+                        document.getElementById("2zRnAJ").appendChild(div);
                     };
-                    var e = document.getElementById("6z6VZ1");
+                    var e = document.getElementById("2zRnAJ");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
-<div class="cell-output cell-output-display" data-execution_count="30">
-   <div id="I3tr1l"></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+   <div id="TiD4Yd"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -500,7 +500,7 @@ Prof.&nbsp;Gabe Hope
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("I3tr1l");
+           var plotContainer = document.getElementById("TiD4Yd");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -644,11 +644,11 @@ Prof.&nbsp;Gabe Hope
 <p>The central data structure in Pandas is the <code>DataFrame</code></p>
 <div class="columns">
 <div class="column" style="font-size: 70%">
-<div id="210ece1a" class="cell" data-execution_count="2">
+<div id="5d5f174c" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="co"># A DataFrame object</span></span>
 <span id="cb1-2"><a></a>nations <span class="op">=</span> pd.read_csv(<span class="st">'data/nations.csv'</span>)</span>
 <span id="cb1-3"><a></a>nations.head() <span class="co"># Shows first 5 rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="31">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -737,11 +737,11 @@ Prof.&nbsp;Gabe Hope
 </ul>
 <div class="columns">
 <div class="column" style="font-size: 70%">
-<div id="de7b39b6" class="cell" data-execution_count="3">
+<div id="10fc1d1f" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co"># A DataFrame object</span></span>
 <span id="cb2-2"><a></a>nations <span class="op">=</span> pd.read_csv(<span class="st">'data/nations.csv'</span>)</span>
 <span id="cb2-3"><a></a>nations.head() <span class="co"># Shows first 5 rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="32">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -816,9 +816,9 @@ Prof.&nbsp;Gabe Hope
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="555110b5" class="cell" data-execution_count="4">
+<div id="5cd8d9b4" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>nations.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="33">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>Index(['name', 'region', 'income', 'population', 'lifeExpectancy'], dtype='object')</code></pre>
 </div>
 </div>
@@ -832,9 +832,9 @@ Prof.&nbsp;Gabe Hope
 <p>Each column in Pandas is a 1-dimensional array-like object called a <strong>series</strong></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="c50e3b61" class="cell" data-execution_count="5">
+<div id="68915c1a" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>nations[<span class="st">'population'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="34">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>0      12707546
 1       8294941
 2       1638393
@@ -850,9 +850,9 @@ Name: population, Length: 180, dtype: int64</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="db981774" class="cell" data-execution_count="6">
+<div id="844e0792" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>nations[<span class="st">'name'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="35">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>0            Angola
 1             Benin
 2          Botswana
@@ -895,56 +895,56 @@ Name: name, Length: 180, dtype: object</code></pre>
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">A</a></li><li><a href="#tabset-1-2">B</a></li><li><a href="#tabset-1-3">C</a></li><li><a href="#tabset-1-4">D</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<div id="162dbc7a" class="cell" data-execution_count="8">
-<div class="cell-output cell-output-display" data-execution_count="37">
+<div id="a9c7fda0" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <style type="text/css">
 </style>
 
-<table id="T_311dd" class="caption-top" data-quarto-postprocess="true">
+<table id="T_6afef" class="caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_311dd_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
-<th id="T_311dd_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">year</th>
-<th id="T_311dd_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">cases</th>
-<th id="T_311dd_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">population</th>
+<th id="T_6afef_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
+<th id="T_6afef_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">year</th>
+<th id="T_6afef_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">cases</th>
+<th id="T_6afef_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">population</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_311dd_row0_col0" class="data row0 col0">Afghanistan</td>
-<td id="T_311dd_row0_col1" class="data row0 col1">1999</td>
-<td id="T_311dd_row0_col2" class="data row0 col2">745</td>
-<td id="T_311dd_row0_col3" class="data row0 col3">19987071</td>
+<td id="T_6afef_row0_col0" class="data row0 col0">Afghanistan</td>
+<td id="T_6afef_row0_col1" class="data row0 col1">1999</td>
+<td id="T_6afef_row0_col2" class="data row0 col2">745</td>
+<td id="T_6afef_row0_col3" class="data row0 col3">19987071</td>
 </tr>
 <tr class="even">
-<td id="T_311dd_row1_col0" class="data row1 col0">Afghanistan</td>
-<td id="T_311dd_row1_col1" class="data row1 col1">2000</td>
-<td id="T_311dd_row1_col2" class="data row1 col2">2666</td>
-<td id="T_311dd_row1_col3" class="data row1 col3">20595360</td>
+<td id="T_6afef_row1_col0" class="data row1 col0">Afghanistan</td>
+<td id="T_6afef_row1_col1" class="data row1 col1">2000</td>
+<td id="T_6afef_row1_col2" class="data row1 col2">2666</td>
+<td id="T_6afef_row1_col3" class="data row1 col3">20595360</td>
 </tr>
 <tr class="odd">
-<td id="T_311dd_row2_col0" class="data row2 col0">Brazil</td>
-<td id="T_311dd_row2_col1" class="data row2 col1">1999</td>
-<td id="T_311dd_row2_col2" class="data row2 col2">37737</td>
-<td id="T_311dd_row2_col3" class="data row2 col3">172006362</td>
+<td id="T_6afef_row2_col0" class="data row2 col0">Brazil</td>
+<td id="T_6afef_row2_col1" class="data row2 col1">1999</td>
+<td id="T_6afef_row2_col2" class="data row2 col2">37737</td>
+<td id="T_6afef_row2_col3" class="data row2 col3">172006362</td>
 </tr>
 <tr class="even">
-<td id="T_311dd_row3_col0" class="data row3 col0">Brazil</td>
-<td id="T_311dd_row3_col1" class="data row3 col1">2000</td>
-<td id="T_311dd_row3_col2" class="data row3 col2">80488</td>
-<td id="T_311dd_row3_col3" class="data row3 col3">174504898</td>
+<td id="T_6afef_row3_col0" class="data row3 col0">Brazil</td>
+<td id="T_6afef_row3_col1" class="data row3 col1">2000</td>
+<td id="T_6afef_row3_col2" class="data row3 col2">80488</td>
+<td id="T_6afef_row3_col3" class="data row3 col3">174504898</td>
 </tr>
 <tr class="odd">
-<td id="T_311dd_row4_col0" class="data row4 col0">China</td>
-<td id="T_311dd_row4_col1" class="data row4 col1">1999</td>
-<td id="T_311dd_row4_col2" class="data row4 col2">212258</td>
-<td id="T_311dd_row4_col3" class="data row4 col3">1272915272</td>
+<td id="T_6afef_row4_col0" class="data row4 col0">China</td>
+<td id="T_6afef_row4_col1" class="data row4 col1">1999</td>
+<td id="T_6afef_row4_col2" class="data row4 col2">212258</td>
+<td id="T_6afef_row4_col3" class="data row4 col3">1272915272</td>
 </tr>
 <tr class="even">
-<td id="T_311dd_row5_col0" class="data row5 col0">China</td>
-<td id="T_311dd_row5_col1" class="data row5 col1">2000</td>
-<td id="T_311dd_row5_col2" class="data row5 col2">213766</td>
-<td id="T_311dd_row5_col3" class="data row5 col3">1280428583</td>
+<td id="T_6afef_row5_col0" class="data row5 col0">China</td>
+<td id="T_6afef_row5_col1" class="data row5 col1">2000</td>
+<td id="T_6afef_row5_col2" class="data row5 col2">213766</td>
+<td id="T_6afef_row5_col3" class="data row5 col3">1280428583</td>
 </tr>
 </tbody>
 </table>
@@ -952,92 +952,92 @@ Name: name, Length: 180, dtype: object</code></pre>
 </div>
 </div>
 <div id="tabset-1-2">
-<div id="a25d0909" class="cell" data-execution_count="9">
-<div class="cell-output cell-output-display" data-execution_count="38">
+<div id="4f0355b8" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <style type="text/css">
 </style>
 
-<table id="T_2559a" class="caption-top" data-quarto-postprocess="true">
+<table id="T_4e277" class="caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_2559a_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
-<th id="T_2559a_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">year</th>
-<th id="T_2559a_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">type</th>
-<th id="T_2559a_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">count</th>
+<th id="T_4e277_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
+<th id="T_4e277_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">year</th>
+<th id="T_4e277_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">type</th>
+<th id="T_4e277_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">count</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_2559a_row0_col0" class="data row0 col0">Afghanistan</td>
-<td id="T_2559a_row0_col1" class="data row0 col1">1999</td>
-<td id="T_2559a_row0_col2" class="data row0 col2">cases</td>
-<td id="T_2559a_row0_col3" class="data row0 col3">745</td>
+<td id="T_4e277_row0_col0" class="data row0 col0">Afghanistan</td>
+<td id="T_4e277_row0_col1" class="data row0 col1">1999</td>
+<td id="T_4e277_row0_col2" class="data row0 col2">cases</td>
+<td id="T_4e277_row0_col3" class="data row0 col3">745</td>
 </tr>
 <tr class="even">
-<td id="T_2559a_row1_col0" class="data row1 col0">Afghanistan</td>
-<td id="T_2559a_row1_col1" class="data row1 col1">1999</td>
-<td id="T_2559a_row1_col2" class="data row1 col2">population</td>
-<td id="T_2559a_row1_col3" class="data row1 col3">19987071</td>
+<td id="T_4e277_row1_col0" class="data row1 col0">Afghanistan</td>
+<td id="T_4e277_row1_col1" class="data row1 col1">1999</td>
+<td id="T_4e277_row1_col2" class="data row1 col2">population</td>
+<td id="T_4e277_row1_col3" class="data row1 col3">19987071</td>
 </tr>
 <tr class="odd">
-<td id="T_2559a_row2_col0" class="data row2 col0">Afghanistan</td>
-<td id="T_2559a_row2_col1" class="data row2 col1">2000</td>
-<td id="T_2559a_row2_col2" class="data row2 col2">cases</td>
-<td id="T_2559a_row2_col3" class="data row2 col3">2666</td>
+<td id="T_4e277_row2_col0" class="data row2 col0">Afghanistan</td>
+<td id="T_4e277_row2_col1" class="data row2 col1">2000</td>
+<td id="T_4e277_row2_col2" class="data row2 col2">cases</td>
+<td id="T_4e277_row2_col3" class="data row2 col3">2666</td>
 </tr>
 <tr class="even">
-<td id="T_2559a_row3_col0" class="data row3 col0">Afghanistan</td>
-<td id="T_2559a_row3_col1" class="data row3 col1">2000</td>
-<td id="T_2559a_row3_col2" class="data row3 col2">population</td>
-<td id="T_2559a_row3_col3" class="data row3 col3">20595360</td>
+<td id="T_4e277_row3_col0" class="data row3 col0">Afghanistan</td>
+<td id="T_4e277_row3_col1" class="data row3 col1">2000</td>
+<td id="T_4e277_row3_col2" class="data row3 col2">population</td>
+<td id="T_4e277_row3_col3" class="data row3 col3">20595360</td>
 </tr>
 <tr class="odd">
-<td id="T_2559a_row4_col0" class="data row4 col0">Brazil</td>
-<td id="T_2559a_row4_col1" class="data row4 col1">1999</td>
-<td id="T_2559a_row4_col2" class="data row4 col2">cases</td>
-<td id="T_2559a_row4_col3" class="data row4 col3">37737</td>
+<td id="T_4e277_row4_col0" class="data row4 col0">Brazil</td>
+<td id="T_4e277_row4_col1" class="data row4 col1">1999</td>
+<td id="T_4e277_row4_col2" class="data row4 col2">cases</td>
+<td id="T_4e277_row4_col3" class="data row4 col3">37737</td>
 </tr>
 <tr class="even">
-<td id="T_2559a_row5_col0" class="data row5 col0">Brazil</td>
-<td id="T_2559a_row5_col1" class="data row5 col1">1999</td>
-<td id="T_2559a_row5_col2" class="data row5 col2">population</td>
-<td id="T_2559a_row5_col3" class="data row5 col3">172006362</td>
+<td id="T_4e277_row5_col0" class="data row5 col0">Brazil</td>
+<td id="T_4e277_row5_col1" class="data row5 col1">1999</td>
+<td id="T_4e277_row5_col2" class="data row5 col2">population</td>
+<td id="T_4e277_row5_col3" class="data row5 col3">172006362</td>
 </tr>
 <tr class="odd">
-<td id="T_2559a_row6_col0" class="data row6 col0">Brazil</td>
-<td id="T_2559a_row6_col1" class="data row6 col1">2000</td>
-<td id="T_2559a_row6_col2" class="data row6 col2">cases</td>
-<td id="T_2559a_row6_col3" class="data row6 col3">80488</td>
+<td id="T_4e277_row6_col0" class="data row6 col0">Brazil</td>
+<td id="T_4e277_row6_col1" class="data row6 col1">2000</td>
+<td id="T_4e277_row6_col2" class="data row6 col2">cases</td>
+<td id="T_4e277_row6_col3" class="data row6 col3">80488</td>
 </tr>
 <tr class="even">
-<td id="T_2559a_row7_col0" class="data row7 col0">Brazil</td>
-<td id="T_2559a_row7_col1" class="data row7 col1">2000</td>
-<td id="T_2559a_row7_col2" class="data row7 col2">population</td>
-<td id="T_2559a_row7_col3" class="data row7 col3">174504898</td>
+<td id="T_4e277_row7_col0" class="data row7 col0">Brazil</td>
+<td id="T_4e277_row7_col1" class="data row7 col1">2000</td>
+<td id="T_4e277_row7_col2" class="data row7 col2">population</td>
+<td id="T_4e277_row7_col3" class="data row7 col3">174504898</td>
 </tr>
 <tr class="odd">
-<td id="T_2559a_row8_col0" class="data row8 col0">China</td>
-<td id="T_2559a_row8_col1" class="data row8 col1">1999</td>
-<td id="T_2559a_row8_col2" class="data row8 col2">cases</td>
-<td id="T_2559a_row8_col3" class="data row8 col3">212258</td>
+<td id="T_4e277_row8_col0" class="data row8 col0">China</td>
+<td id="T_4e277_row8_col1" class="data row8 col1">1999</td>
+<td id="T_4e277_row8_col2" class="data row8 col2">cases</td>
+<td id="T_4e277_row8_col3" class="data row8 col3">212258</td>
 </tr>
 <tr class="even">
-<td id="T_2559a_row9_col0" class="data row9 col0">China</td>
-<td id="T_2559a_row9_col1" class="data row9 col1">1999</td>
-<td id="T_2559a_row9_col2" class="data row9 col2">population</td>
-<td id="T_2559a_row9_col3" class="data row9 col3">1272915272</td>
+<td id="T_4e277_row9_col0" class="data row9 col0">China</td>
+<td id="T_4e277_row9_col1" class="data row9 col1">1999</td>
+<td id="T_4e277_row9_col2" class="data row9 col2">population</td>
+<td id="T_4e277_row9_col3" class="data row9 col3">1272915272</td>
 </tr>
 <tr class="odd">
-<td id="T_2559a_row10_col0" class="data row10 col0">China</td>
-<td id="T_2559a_row10_col1" class="data row10 col1">2000</td>
-<td id="T_2559a_row10_col2" class="data row10 col2">cases</td>
-<td id="T_2559a_row10_col3" class="data row10 col3">213766</td>
+<td id="T_4e277_row10_col0" class="data row10 col0">China</td>
+<td id="T_4e277_row10_col1" class="data row10 col1">2000</td>
+<td id="T_4e277_row10_col2" class="data row10 col2">cases</td>
+<td id="T_4e277_row10_col3" class="data row10 col3">213766</td>
 </tr>
 <tr class="even">
-<td id="T_2559a_row11_col0" class="data row11 col0">China</td>
-<td id="T_2559a_row11_col1" class="data row11 col1">2000</td>
-<td id="T_2559a_row11_col2" class="data row11 col2">population</td>
-<td id="T_2559a_row11_col3" class="data row11 col3">1280428583</td>
+<td id="T_4e277_row11_col0" class="data row11 col0">China</td>
+<td id="T_4e277_row11_col1" class="data row11 col1">2000</td>
+<td id="T_4e277_row11_col2" class="data row11 col2">population</td>
+<td id="T_4e277_row11_col3" class="data row11 col3">1280428583</td>
 </tr>
 </tbody>
 </table>
@@ -1045,49 +1045,49 @@ Name: name, Length: 180, dtype: object</code></pre>
 </div>
 </div>
 <div id="tabset-1-3">
-<div id="8f595666" class="cell" data-execution_count="10">
-<div class="cell-output cell-output-display" data-execution_count="39">
+<div id="63670eb2" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="10">
 <style type="text/css">
 </style>
 
-<table id="T_795f7" class="caption-top" data-quarto-postprocess="true">
+<table id="T_ef190" class="caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_795f7_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
-<th id="T_795f7_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">year</th>
-<th id="T_795f7_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">rate</th>
+<th id="T_ef190_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
+<th id="T_ef190_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">year</th>
+<th id="T_ef190_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">rate</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_795f7_row0_col0" class="data row0 col0">Afghanistan</td>
-<td id="T_795f7_row0_col1" class="data row0 col1">1999</td>
-<td id="T_795f7_row0_col2" class="data row0 col2">745/19987071</td>
+<td id="T_ef190_row0_col0" class="data row0 col0">Afghanistan</td>
+<td id="T_ef190_row0_col1" class="data row0 col1">1999</td>
+<td id="T_ef190_row0_col2" class="data row0 col2">745/19987071</td>
 </tr>
 <tr class="even">
-<td id="T_795f7_row1_col0" class="data row1 col0">Afghanistan</td>
-<td id="T_795f7_row1_col1" class="data row1 col1">2000</td>
-<td id="T_795f7_row1_col2" class="data row1 col2">2666/20595360</td>
+<td id="T_ef190_row1_col0" class="data row1 col0">Afghanistan</td>
+<td id="T_ef190_row1_col1" class="data row1 col1">2000</td>
+<td id="T_ef190_row1_col2" class="data row1 col2">2666/20595360</td>
 </tr>
 <tr class="odd">
-<td id="T_795f7_row2_col0" class="data row2 col0">Brazil</td>
-<td id="T_795f7_row2_col1" class="data row2 col1">1999</td>
-<td id="T_795f7_row2_col2" class="data row2 col2">37737/172006362</td>
+<td id="T_ef190_row2_col0" class="data row2 col0">Brazil</td>
+<td id="T_ef190_row2_col1" class="data row2 col1">1999</td>
+<td id="T_ef190_row2_col2" class="data row2 col2">37737/172006362</td>
 </tr>
 <tr class="even">
-<td id="T_795f7_row3_col0" class="data row3 col0">Brazil</td>
-<td id="T_795f7_row3_col1" class="data row3 col1">2000</td>
-<td id="T_795f7_row3_col2" class="data row3 col2">80488/174504898</td>
+<td id="T_ef190_row3_col0" class="data row3 col0">Brazil</td>
+<td id="T_ef190_row3_col1" class="data row3 col1">2000</td>
+<td id="T_ef190_row3_col2" class="data row3 col2">80488/174504898</td>
 </tr>
 <tr class="odd">
-<td id="T_795f7_row4_col0" class="data row4 col0">China</td>
-<td id="T_795f7_row4_col1" class="data row4 col1">1999</td>
-<td id="T_795f7_row4_col2" class="data row4 col2">212258/1272915272</td>
+<td id="T_ef190_row4_col0" class="data row4 col0">China</td>
+<td id="T_ef190_row4_col1" class="data row4 col1">1999</td>
+<td id="T_ef190_row4_col2" class="data row4 col2">212258/1272915272</td>
 </tr>
 <tr class="even">
-<td id="T_795f7_row5_col0" class="data row5 col0">China</td>
-<td id="T_795f7_row5_col1" class="data row5 col1">2000</td>
-<td id="T_795f7_row5_col2" class="data row5 col2">213766/1280428583</td>
+<td id="T_ef190_row5_col0" class="data row5 col0">China</td>
+<td id="T_ef190_row5_col1" class="data row5 col1">2000</td>
+<td id="T_ef190_row5_col2" class="data row5 col2">213766/1280428583</td>
 </tr>
 </tbody>
 </table>
@@ -1097,68 +1097,68 @@ Name: name, Length: 180, dtype: object</code></pre>
 <div id="tabset-1-4">
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="1a76ba57" class="cell" data-execution_count="11">
-<div class="cell-output cell-output-display" data-execution_count="40">
+<div id="d5485893" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="11">
 <style type="text/css">
 </style>
 
-<table id="T_13a91" class="caption-top" data-quarto-postprocess="true">
+<table id="T_75fd0" class="caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_13a91_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
-<th id="T_13a91_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">1999</th>
-<th id="T_13a91_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">2000</th>
+<th id="T_75fd0_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
+<th id="T_75fd0_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">1999</th>
+<th id="T_75fd0_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">2000</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_13a91_row0_col0" class="data row0 col0">Afghanistan</td>
-<td id="T_13a91_row0_col1" class="data row0 col1">745</td>
-<td id="T_13a91_row0_col2" class="data row0 col2">2666</td>
+<td id="T_75fd0_row0_col0" class="data row0 col0">Afghanistan</td>
+<td id="T_75fd0_row0_col1" class="data row0 col1">745</td>
+<td id="T_75fd0_row0_col2" class="data row0 col2">2666</td>
 </tr>
 <tr class="even">
-<td id="T_13a91_row1_col0" class="data row1 col0">Brazil</td>
-<td id="T_13a91_row1_col1" class="data row1 col1">37737</td>
-<td id="T_13a91_row1_col2" class="data row1 col2">80488</td>
+<td id="T_75fd0_row1_col0" class="data row1 col0">Brazil</td>
+<td id="T_75fd0_row1_col1" class="data row1 col1">37737</td>
+<td id="T_75fd0_row1_col2" class="data row1 col2">80488</td>
 </tr>
 <tr class="odd">
-<td id="T_13a91_row2_col0" class="data row2 col0">China</td>
-<td id="T_13a91_row2_col1" class="data row2 col1">212258</td>
-<td id="T_13a91_row2_col2" class="data row2 col2">213766</td>
+<td id="T_75fd0_row2_col0" class="data row2 col0">China</td>
+<td id="T_75fd0_row2_col1" class="data row2 col1">212258</td>
+<td id="T_75fd0_row2_col2" class="data row2 col2">213766</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="802942cb" class="cell" data-execution_count="12">
-<div class="cell-output cell-output-display" data-execution_count="41">
+<div id="8fc28b6f" class="cell" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="12">
 <style type="text/css">
 </style>
 
-<table id="T_b1fc5" class="caption-top" data-quarto-postprocess="true">
+<table id="T_64543" class="caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_b1fc5_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
-<th id="T_b1fc5_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">1999</th>
-<th id="T_b1fc5_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">2000</th>
+<th id="T_64543_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
+<th id="T_64543_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">1999</th>
+<th id="T_64543_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">2000</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_b1fc5_row0_col0" class="data row0 col0">Afghanistan</td>
-<td id="T_b1fc5_row0_col1" class="data row0 col1">19987071</td>
-<td id="T_b1fc5_row0_col2" class="data row0 col2">20595360</td>
+<td id="T_64543_row0_col0" class="data row0 col0">Afghanistan</td>
+<td id="T_64543_row0_col1" class="data row0 col1">19987071</td>
+<td id="T_64543_row0_col2" class="data row0 col2">20595360</td>
 </tr>
 <tr class="even">
-<td id="T_b1fc5_row1_col0" class="data row1 col0">Brazil</td>
-<td id="T_b1fc5_row1_col1" class="data row1 col1">172006362</td>
-<td id="T_b1fc5_row1_col2" class="data row1 col2">174504898</td>
+<td id="T_64543_row1_col0" class="data row1 col0">Brazil</td>
+<td id="T_64543_row1_col1" class="data row1 col1">172006362</td>
+<td id="T_64543_row1_col2" class="data row1 col2">174504898</td>
 </tr>
 <tr class="odd">
-<td id="T_b1fc5_row2_col0" class="data row2 col0">China</td>
-<td id="T_b1fc5_row2_col1" class="data row2 col1">1272915272</td>
-<td id="T_b1fc5_row2_col2" class="data row2 col2">1280428583</td>
+<td id="T_64543_row2_col0" class="data row2 col0">China</td>
+<td id="T_64543_row2_col1" class="data row2 col1">1272915272</td>
+<td id="T_64543_row2_col2" class="data row2 col2">1280428583</td>
 </tr>
 </tbody>
 </table>
@@ -1200,56 +1200,56 @@ Name: name, Length: 180, dtype: object</code></pre>
 <ul>
 <li>Tidy data</li>
 </ul>
-<div id="12f82ee0" class="cell" data-execution_count="13">
-<div class="cell-output cell-output-display" data-execution_count="42">
+<div id="76ff2938" class="cell" data-execution_count="13">
+<div class="cell-output cell-output-display" data-execution_count="13">
 <style type="text/css">
 </style>
 
-<table id="T_7b700" class="caption-top" data-quarto-postprocess="true">
+<table id="T_f6351" class="caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_7b700_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
-<th id="T_7b700_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">year</th>
-<th id="T_7b700_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">cases</th>
-<th id="T_7b700_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">population</th>
+<th id="T_f6351_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
+<th id="T_f6351_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">year</th>
+<th id="T_f6351_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">cases</th>
+<th id="T_f6351_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">population</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_7b700_row0_col0" class="data row0 col0">Afghanistan</td>
-<td id="T_7b700_row0_col1" class="data row0 col1">1999</td>
-<td id="T_7b700_row0_col2" class="data row0 col2">745</td>
-<td id="T_7b700_row0_col3" class="data row0 col3">19987071</td>
+<td id="T_f6351_row0_col0" class="data row0 col0">Afghanistan</td>
+<td id="T_f6351_row0_col1" class="data row0 col1">1999</td>
+<td id="T_f6351_row0_col2" class="data row0 col2">745</td>
+<td id="T_f6351_row0_col3" class="data row0 col3">19987071</td>
 </tr>
 <tr class="even">
-<td id="T_7b700_row1_col0" class="data row1 col0">Afghanistan</td>
-<td id="T_7b700_row1_col1" class="data row1 col1">2000</td>
-<td id="T_7b700_row1_col2" class="data row1 col2">2666</td>
-<td id="T_7b700_row1_col3" class="data row1 col3">20595360</td>
+<td id="T_f6351_row1_col0" class="data row1 col0">Afghanistan</td>
+<td id="T_f6351_row1_col1" class="data row1 col1">2000</td>
+<td id="T_f6351_row1_col2" class="data row1 col2">2666</td>
+<td id="T_f6351_row1_col3" class="data row1 col3">20595360</td>
 </tr>
 <tr class="odd">
-<td id="T_7b700_row2_col0" class="data row2 col0">Brazil</td>
-<td id="T_7b700_row2_col1" class="data row2 col1">1999</td>
-<td id="T_7b700_row2_col2" class="data row2 col2">37737</td>
-<td id="T_7b700_row2_col3" class="data row2 col3">172006362</td>
+<td id="T_f6351_row2_col0" class="data row2 col0">Brazil</td>
+<td id="T_f6351_row2_col1" class="data row2 col1">1999</td>
+<td id="T_f6351_row2_col2" class="data row2 col2">37737</td>
+<td id="T_f6351_row2_col3" class="data row2 col3">172006362</td>
 </tr>
 <tr class="even">
-<td id="T_7b700_row3_col0" class="data row3 col0">Brazil</td>
-<td id="T_7b700_row3_col1" class="data row3 col1">2000</td>
-<td id="T_7b700_row3_col2" class="data row3 col2">80488</td>
-<td id="T_7b700_row3_col3" class="data row3 col3">174504898</td>
+<td id="T_f6351_row3_col0" class="data row3 col0">Brazil</td>
+<td id="T_f6351_row3_col1" class="data row3 col1">2000</td>
+<td id="T_f6351_row3_col2" class="data row3 col2">80488</td>
+<td id="T_f6351_row3_col3" class="data row3 col3">174504898</td>
 </tr>
 <tr class="odd">
-<td id="T_7b700_row4_col0" class="data row4 col0">China</td>
-<td id="T_7b700_row4_col1" class="data row4 col1">1999</td>
-<td id="T_7b700_row4_col2" class="data row4 col2">212258</td>
-<td id="T_7b700_row4_col3" class="data row4 col3">1272915272</td>
+<td id="T_f6351_row4_col0" class="data row4 col0">China</td>
+<td id="T_f6351_row4_col1" class="data row4 col1">1999</td>
+<td id="T_f6351_row4_col2" class="data row4 col2">212258</td>
+<td id="T_f6351_row4_col3" class="data row4 col3">1272915272</td>
 </tr>
 <tr class="even">
-<td id="T_7b700_row5_col0" class="data row5 col0">China</td>
-<td id="T_7b700_row5_col1" class="data row5 col1">2000</td>
-<td id="T_7b700_row5_col2" class="data row5 col2">213766</td>
-<td id="T_7b700_row5_col3" class="data row5 col3">1280428583</td>
+<td id="T_f6351_row5_col0" class="data row5 col0">China</td>
+<td id="T_f6351_row5_col1" class="data row5 col1">2000</td>
+<td id="T_f6351_row5_col2" class="data row5 col2">213766</td>
+<td id="T_f6351_row5_col3" class="data row5 col3">1280428583</td>
 </tr>
 </tbody>
 </table>
@@ -1260,92 +1260,92 @@ Name: name, Length: 180, dtype: object</code></pre>
 <ul>
 <li>Multiple variables are stored in one column</li>
 </ul>
-<div id="5af7e766" class="cell" data-execution_count="14">
-<div class="cell-output cell-output-display" data-execution_count="43">
+<div id="a6995a50" class="cell" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="14">
 <style type="text/css">
 </style>
 
-<table id="T_21b33" class="caption-top" data-quarto-postprocess="true">
+<table id="T_9cae9" class="caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_21b33_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
-<th id="T_21b33_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">year</th>
-<th id="T_21b33_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">type</th>
-<th id="T_21b33_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">count</th>
+<th id="T_9cae9_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
+<th id="T_9cae9_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">year</th>
+<th id="T_9cae9_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">type</th>
+<th id="T_9cae9_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">count</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_21b33_row0_col0" class="data row0 col0">Afghanistan</td>
-<td id="T_21b33_row0_col1" class="data row0 col1">1999</td>
-<td id="T_21b33_row0_col2" class="data row0 col2">cases</td>
-<td id="T_21b33_row0_col3" class="data row0 col3">745</td>
+<td id="T_9cae9_row0_col0" class="data row0 col0">Afghanistan</td>
+<td id="T_9cae9_row0_col1" class="data row0 col1">1999</td>
+<td id="T_9cae9_row0_col2" class="data row0 col2">cases</td>
+<td id="T_9cae9_row0_col3" class="data row0 col3">745</td>
 </tr>
 <tr class="even">
-<td id="T_21b33_row1_col0" class="data row1 col0">Afghanistan</td>
-<td id="T_21b33_row1_col1" class="data row1 col1">1999</td>
-<td id="T_21b33_row1_col2" class="data row1 col2">population</td>
-<td id="T_21b33_row1_col3" class="data row1 col3">19987071</td>
+<td id="T_9cae9_row1_col0" class="data row1 col0">Afghanistan</td>
+<td id="T_9cae9_row1_col1" class="data row1 col1">1999</td>
+<td id="T_9cae9_row1_col2" class="data row1 col2">population</td>
+<td id="T_9cae9_row1_col3" class="data row1 col3">19987071</td>
 </tr>
 <tr class="odd">
-<td id="T_21b33_row2_col0" class="data row2 col0">Afghanistan</td>
-<td id="T_21b33_row2_col1" class="data row2 col1">2000</td>
-<td id="T_21b33_row2_col2" class="data row2 col2">cases</td>
-<td id="T_21b33_row2_col3" class="data row2 col3">2666</td>
+<td id="T_9cae9_row2_col0" class="data row2 col0">Afghanistan</td>
+<td id="T_9cae9_row2_col1" class="data row2 col1">2000</td>
+<td id="T_9cae9_row2_col2" class="data row2 col2">cases</td>
+<td id="T_9cae9_row2_col3" class="data row2 col3">2666</td>
 </tr>
 <tr class="even">
-<td id="T_21b33_row3_col0" class="data row3 col0">Afghanistan</td>
-<td id="T_21b33_row3_col1" class="data row3 col1">2000</td>
-<td id="T_21b33_row3_col2" class="data row3 col2">population</td>
-<td id="T_21b33_row3_col3" class="data row3 col3">20595360</td>
+<td id="T_9cae9_row3_col0" class="data row3 col0">Afghanistan</td>
+<td id="T_9cae9_row3_col1" class="data row3 col1">2000</td>
+<td id="T_9cae9_row3_col2" class="data row3 col2">population</td>
+<td id="T_9cae9_row3_col3" class="data row3 col3">20595360</td>
 </tr>
 <tr class="odd">
-<td id="T_21b33_row4_col0" class="data row4 col0">Brazil</td>
-<td id="T_21b33_row4_col1" class="data row4 col1">1999</td>
-<td id="T_21b33_row4_col2" class="data row4 col2">cases</td>
-<td id="T_21b33_row4_col3" class="data row4 col3">37737</td>
+<td id="T_9cae9_row4_col0" class="data row4 col0">Brazil</td>
+<td id="T_9cae9_row4_col1" class="data row4 col1">1999</td>
+<td id="T_9cae9_row4_col2" class="data row4 col2">cases</td>
+<td id="T_9cae9_row4_col3" class="data row4 col3">37737</td>
 </tr>
 <tr class="even">
-<td id="T_21b33_row5_col0" class="data row5 col0">Brazil</td>
-<td id="T_21b33_row5_col1" class="data row5 col1">1999</td>
-<td id="T_21b33_row5_col2" class="data row5 col2">population</td>
-<td id="T_21b33_row5_col3" class="data row5 col3">172006362</td>
+<td id="T_9cae9_row5_col0" class="data row5 col0">Brazil</td>
+<td id="T_9cae9_row5_col1" class="data row5 col1">1999</td>
+<td id="T_9cae9_row5_col2" class="data row5 col2">population</td>
+<td id="T_9cae9_row5_col3" class="data row5 col3">172006362</td>
 </tr>
 <tr class="odd">
-<td id="T_21b33_row6_col0" class="data row6 col0">Brazil</td>
-<td id="T_21b33_row6_col1" class="data row6 col1">2000</td>
-<td id="T_21b33_row6_col2" class="data row6 col2">cases</td>
-<td id="T_21b33_row6_col3" class="data row6 col3">80488</td>
+<td id="T_9cae9_row6_col0" class="data row6 col0">Brazil</td>
+<td id="T_9cae9_row6_col1" class="data row6 col1">2000</td>
+<td id="T_9cae9_row6_col2" class="data row6 col2">cases</td>
+<td id="T_9cae9_row6_col3" class="data row6 col3">80488</td>
 </tr>
 <tr class="even">
-<td id="T_21b33_row7_col0" class="data row7 col0">Brazil</td>
-<td id="T_21b33_row7_col1" class="data row7 col1">2000</td>
-<td id="T_21b33_row7_col2" class="data row7 col2">population</td>
-<td id="T_21b33_row7_col3" class="data row7 col3">174504898</td>
+<td id="T_9cae9_row7_col0" class="data row7 col0">Brazil</td>
+<td id="T_9cae9_row7_col1" class="data row7 col1">2000</td>
+<td id="T_9cae9_row7_col2" class="data row7 col2">population</td>
+<td id="T_9cae9_row7_col3" class="data row7 col3">174504898</td>
 </tr>
 <tr class="odd">
-<td id="T_21b33_row8_col0" class="data row8 col0">China</td>
-<td id="T_21b33_row8_col1" class="data row8 col1">1999</td>
-<td id="T_21b33_row8_col2" class="data row8 col2">cases</td>
-<td id="T_21b33_row8_col3" class="data row8 col3">212258</td>
+<td id="T_9cae9_row8_col0" class="data row8 col0">China</td>
+<td id="T_9cae9_row8_col1" class="data row8 col1">1999</td>
+<td id="T_9cae9_row8_col2" class="data row8 col2">cases</td>
+<td id="T_9cae9_row8_col3" class="data row8 col3">212258</td>
 </tr>
 <tr class="even">
-<td id="T_21b33_row9_col0" class="data row9 col0">China</td>
-<td id="T_21b33_row9_col1" class="data row9 col1">1999</td>
-<td id="T_21b33_row9_col2" class="data row9 col2">population</td>
-<td id="T_21b33_row9_col3" class="data row9 col3">1272915272</td>
+<td id="T_9cae9_row9_col0" class="data row9 col0">China</td>
+<td id="T_9cae9_row9_col1" class="data row9 col1">1999</td>
+<td id="T_9cae9_row9_col2" class="data row9 col2">population</td>
+<td id="T_9cae9_row9_col3" class="data row9 col3">1272915272</td>
 </tr>
 <tr class="odd">
-<td id="T_21b33_row10_col0" class="data row10 col0">China</td>
-<td id="T_21b33_row10_col1" class="data row10 col1">2000</td>
-<td id="T_21b33_row10_col2" class="data row10 col2">cases</td>
-<td id="T_21b33_row10_col3" class="data row10 col3">213766</td>
+<td id="T_9cae9_row10_col0" class="data row10 col0">China</td>
+<td id="T_9cae9_row10_col1" class="data row10 col1">2000</td>
+<td id="T_9cae9_row10_col2" class="data row10 col2">cases</td>
+<td id="T_9cae9_row10_col3" class="data row10 col3">213766</td>
 </tr>
 <tr class="even">
-<td id="T_21b33_row11_col0" class="data row11 col0">China</td>
-<td id="T_21b33_row11_col1" class="data row11 col1">2000</td>
-<td id="T_21b33_row11_col2" class="data row11 col2">population</td>
-<td id="T_21b33_row11_col3" class="data row11 col3">1280428583</td>
+<td id="T_9cae9_row11_col0" class="data row11 col0">China</td>
+<td id="T_9cae9_row11_col1" class="data row11 col1">2000</td>
+<td id="T_9cae9_row11_col2" class="data row11 col2">population</td>
+<td id="T_9cae9_row11_col3" class="data row11 col3">1280428583</td>
 </tr>
 </tbody>
 </table>
@@ -1356,49 +1356,49 @@ Name: name, Length: 180, dtype: object</code></pre>
 <ul>
 <li>Multiple values are stored in one cell</li>
 </ul>
-<div id="7d4dbd06" class="cell" data-execution_count="15">
-<div class="cell-output cell-output-display" data-execution_count="44">
+<div id="cb75354b" class="cell" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="15">
 <style type="text/css">
 </style>
 
-<table id="T_6eaed" class="caption-top" data-quarto-postprocess="true">
+<table id="T_96d10" class="caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_6eaed_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
-<th id="T_6eaed_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">year</th>
-<th id="T_6eaed_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">rate</th>
+<th id="T_96d10_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
+<th id="T_96d10_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">year</th>
+<th id="T_96d10_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">rate</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_6eaed_row0_col0" class="data row0 col0">Afghanistan</td>
-<td id="T_6eaed_row0_col1" class="data row0 col1">1999</td>
-<td id="T_6eaed_row0_col2" class="data row0 col2">745/19987071</td>
+<td id="T_96d10_row0_col0" class="data row0 col0">Afghanistan</td>
+<td id="T_96d10_row0_col1" class="data row0 col1">1999</td>
+<td id="T_96d10_row0_col2" class="data row0 col2">745/19987071</td>
 </tr>
 <tr class="even">
-<td id="T_6eaed_row1_col0" class="data row1 col0">Afghanistan</td>
-<td id="T_6eaed_row1_col1" class="data row1 col1">2000</td>
-<td id="T_6eaed_row1_col2" class="data row1 col2">2666/20595360</td>
+<td id="T_96d10_row1_col0" class="data row1 col0">Afghanistan</td>
+<td id="T_96d10_row1_col1" class="data row1 col1">2000</td>
+<td id="T_96d10_row1_col2" class="data row1 col2">2666/20595360</td>
 </tr>
 <tr class="odd">
-<td id="T_6eaed_row2_col0" class="data row2 col0">Brazil</td>
-<td id="T_6eaed_row2_col1" class="data row2 col1">1999</td>
-<td id="T_6eaed_row2_col2" class="data row2 col2">37737/172006362</td>
+<td id="T_96d10_row2_col0" class="data row2 col0">Brazil</td>
+<td id="T_96d10_row2_col1" class="data row2 col1">1999</td>
+<td id="T_96d10_row2_col2" class="data row2 col2">37737/172006362</td>
 </tr>
 <tr class="even">
-<td id="T_6eaed_row3_col0" class="data row3 col0">Brazil</td>
-<td id="T_6eaed_row3_col1" class="data row3 col1">2000</td>
-<td id="T_6eaed_row3_col2" class="data row3 col2">80488/174504898</td>
+<td id="T_96d10_row3_col0" class="data row3 col0">Brazil</td>
+<td id="T_96d10_row3_col1" class="data row3 col1">2000</td>
+<td id="T_96d10_row3_col2" class="data row3 col2">80488/174504898</td>
 </tr>
 <tr class="odd">
-<td id="T_6eaed_row4_col0" class="data row4 col0">China</td>
-<td id="T_6eaed_row4_col1" class="data row4 col1">1999</td>
-<td id="T_6eaed_row4_col2" class="data row4 col2">212258/1272915272</td>
+<td id="T_96d10_row4_col0" class="data row4 col0">China</td>
+<td id="T_96d10_row4_col1" class="data row4 col1">1999</td>
+<td id="T_96d10_row4_col2" class="data row4 col2">212258/1272915272</td>
 </tr>
 <tr class="even">
-<td id="T_6eaed_row5_col0" class="data row5 col0">China</td>
-<td id="T_6eaed_row5_col1" class="data row5 col1">2000</td>
-<td id="T_6eaed_row5_col2" class="data row5 col2">213766/1280428583</td>
+<td id="T_96d10_row5_col0" class="data row5 col0">China</td>
+<td id="T_96d10_row5_col1" class="data row5 col1">2000</td>
+<td id="T_96d10_row5_col2" class="data row5 col2">213766/1280428583</td>
 </tr>
 </tbody>
 </table>
@@ -1412,68 +1412,68 @@ Name: name, Length: 180, dtype: object</code></pre>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="e6ba8efc" class="cell" data-execution_count="16">
-<div class="cell-output cell-output-display" data-execution_count="45">
+<div id="f7641999" class="cell" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="16">
 <style type="text/css">
 </style>
 
-<table id="T_59af7" class="caption-top" data-quarto-postprocess="true">
+<table id="T_f1ada" class="caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_59af7_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
-<th id="T_59af7_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">1999</th>
-<th id="T_59af7_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">2000</th>
+<th id="T_f1ada_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
+<th id="T_f1ada_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">1999</th>
+<th id="T_f1ada_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">2000</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_59af7_row0_col0" class="data row0 col0">Afghanistan</td>
-<td id="T_59af7_row0_col1" class="data row0 col1">745</td>
-<td id="T_59af7_row0_col2" class="data row0 col2">2666</td>
+<td id="T_f1ada_row0_col0" class="data row0 col0">Afghanistan</td>
+<td id="T_f1ada_row0_col1" class="data row0 col1">745</td>
+<td id="T_f1ada_row0_col2" class="data row0 col2">2666</td>
 </tr>
 <tr class="even">
-<td id="T_59af7_row1_col0" class="data row1 col0">Brazil</td>
-<td id="T_59af7_row1_col1" class="data row1 col1">37737</td>
-<td id="T_59af7_row1_col2" class="data row1 col2">80488</td>
+<td id="T_f1ada_row1_col0" class="data row1 col0">Brazil</td>
+<td id="T_f1ada_row1_col1" class="data row1 col1">37737</td>
+<td id="T_f1ada_row1_col2" class="data row1 col2">80488</td>
 </tr>
 <tr class="odd">
-<td id="T_59af7_row2_col0" class="data row2 col0">China</td>
-<td id="T_59af7_row2_col1" class="data row2 col1">212258</td>
-<td id="T_59af7_row2_col2" class="data row2 col2">213766</td>
+<td id="T_f1ada_row2_col0" class="data row2 col0">China</td>
+<td id="T_f1ada_row2_col1" class="data row2 col1">212258</td>
+<td id="T_f1ada_row2_col2" class="data row2 col2">213766</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="020b40a7" class="cell" data-execution_count="17">
-<div class="cell-output cell-output-display" data-execution_count="46">
+<div id="f6f908d9" class="cell" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="17">
 <style type="text/css">
 </style>
 
-<table id="T_3b580" class="caption-top" data-quarto-postprocess="true">
+<table id="T_6ae7b" class="caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_3b580_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
-<th id="T_3b580_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">1999</th>
-<th id="T_3b580_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">2000</th>
+<th id="T_6ae7b_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">country</th>
+<th id="T_6ae7b_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">1999</th>
+<th id="T_6ae7b_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">2000</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_3b580_row0_col0" class="data row0 col0">Afghanistan</td>
-<td id="T_3b580_row0_col1" class="data row0 col1">19987071</td>
-<td id="T_3b580_row0_col2" class="data row0 col2">20595360</td>
+<td id="T_6ae7b_row0_col0" class="data row0 col0">Afghanistan</td>
+<td id="T_6ae7b_row0_col1" class="data row0 col1">19987071</td>
+<td id="T_6ae7b_row0_col2" class="data row0 col2">20595360</td>
 </tr>
 <tr class="even">
-<td id="T_3b580_row1_col0" class="data row1 col0">Brazil</td>
-<td id="T_3b580_row1_col1" class="data row1 col1">172006362</td>
-<td id="T_3b580_row1_col2" class="data row1 col2">174504898</td>
+<td id="T_6ae7b_row1_col0" class="data row1 col0">Brazil</td>
+<td id="T_6ae7b_row1_col1" class="data row1 col1">172006362</td>
+<td id="T_6ae7b_row1_col2" class="data row1 col2">174504898</td>
 </tr>
 <tr class="odd">
-<td id="T_3b580_row2_col0" class="data row2 col0">China</td>
-<td id="T_3b580_row2_col1" class="data row2 col1">1272915272</td>
-<td id="T_3b580_row2_col2" class="data row2 col2">1280428583</td>
+<td id="T_6ae7b_row2_col0" class="data row2 col0">China</td>
+<td id="T_6ae7b_row2_col1" class="data row2 col1">1272915272</td>
+<td id="T_6ae7b_row2_col2" class="data row2 col2">1280428583</td>
 </tr>
 </tbody>
 </table>
@@ -1496,9 +1496,9 @@ Name: name, Length: 180, dtype: object</code></pre>
 <li>Still have column = variable, row = observation</li>
 </ul>
 <p>We can extract a matrix by accessing the <em>values</em> property</p>
-<div id="1855c4b6" class="cell" data-execution_count="18">
+<div id="cb1c7f40" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>nations[[<span class="st">'population'</span>, <span class="st">'income'</span>, <span class="st">'lifeExpectancy'</span>]].values</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="47">
+<div class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>array([[1.27075460e+07, 5.05559000e+03, 4.75800000e+01],
        [8.29494100e+06, 1.45757000e+03, 6.18900000e+01],
        [1.63839300e+06, 1.22822800e+04, 5.51200000e+01],
@@ -1698,9 +1698,9 @@ Name: name, Length: 180, dtype: object</code></pre>
 <section id="variable-types" class="slide level2">
 <h2>Variable types</h2>
 <p>A defining characteristic of a variable is its <strong>type</strong></p>
-<div id="00136813" class="cell" data-execution_count="19">
+<div id="0e8f14d3" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>nations[<span class="st">'population'</span>].dtype</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="48">
+<div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>dtype('int64')</code></pre>
 </div>
 </div>
@@ -1833,7 +1833,7 @@ Name: name, Length: 180, dtype: object</code></pre>
 <ul>
 <li>In Pandas we can access this with <code>df.info</code></li>
 </ul>
-<div id="deb0a852" class="cell" data-execution_count="20">
+<div id="20235a9f" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>nations.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -1854,9 +1854,9 @@ memory usage: 7.2+ KB</code></pre>
 <section id="series-1" class="slide level2">
 <h2>Series</h2>
 <p>We can also convert the type of a series</p>
-<div id="295e88d8" class="cell" data-execution_count="21">
+<div id="3cddff79" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>nations[<span class="st">'population'</span>].astype(<span class="bu">float</span>).head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="50">
+<div class="cell-output cell-output-display" data-execution_count="21">
 <pre><code>0    12707546.0
 1     8294941.0
 2     1638393.0
@@ -1865,7 +1865,7 @@ memory usage: 7.2+ KB</code></pre>
 Name: population, dtype: float64</code></pre>
 </div>
 </div>
-<div id="43ec2ec5" class="cell" data-execution_count="22">
+<div id="e0cf28a6" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>nations[<span class="st">'population'</span>] <span class="op">=</span> nations[<span class="st">'population'</span>].astype(<span class="bu">float</span>)</span>
 <span id="cb17-2"><a></a>nations.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1890,7 +1890,7 @@ memory usage: 7.2+ KB</code></pre>
 <ul>
 <li>Therefore are treated as <em>arbitrary</em> nominal types</li>
 </ul>
-<div id="bf77eed8" class="cell" data-execution_count="23">
+<div id="ddc49910" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a>nations.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -1911,7 +1911,7 @@ memory usage: 7.2+ KB</code></pre>
 <section id="nominal-types-1" class="slide level2">
 <h2>Nominal types</h2>
 <p>If we want a nominal value to be <strong>categorical</strong> or <strong>ordinal</strong>, we can tell Pandas explicitly</p>
-<div id="1d9f24d6" class="cell" data-execution_count="24">
+<div id="c41ac0ee" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>nations[<span class="st">'region'</span>] <span class="op">=</span> nations[<span class="st">'region'</span>].astype(<span class="st">'category'</span>)</span>
 <span id="cb21-2"><a></a>nations.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1929,9 +1929,9 @@ dtypes: category(1), float64(3), object(1)
 memory usage: 6.1+ KB</code></pre>
 </div>
 </div>
-<div id="81493d23" class="cell" data-execution_count="25">
+<div id="2c8ecb9a" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a>nations[<span class="st">'region'</span>].dtype</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="54">
+<div class="cell-output cell-output-display" data-execution_count="25">
 <pre><code>CategoricalDtype(categories=['America', 'East Asia &amp; Pacific', 'Europe &amp; Central Asia',
                   'Middle East &amp; North Africa', 'South Asia',
                   'Sub-Saharan Africa'],
@@ -1946,9 +1946,9 @@ memory usage: 6.1+ KB</code></pre>
 <li>Mostly exists for performance reasons. Any column could be used as an index.</li>
 </ul>
 <p>By default the index is a new column that identifies each row with an integer</p>
-<div id="5a8828d5" class="cell" data-execution_count="26">
+<div id="0186aaed" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>nations.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="55">
+<div class="cell-output cell-output-display" data-execution_count="26">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2029,9 +2029,9 @@ memory usage: 6.1+ KB</code></pre>
 <ul>
 <li>Some operations will depend on what the index is</li>
 </ul>
-<div id="fc1dadb6" class="cell" data-execution_count="27">
+<div id="3e5414be" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a>nations.set_index(<span class="st">'name'</span>).head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="56">
+<div class="cell-output cell-output-display" data-execution_count="27">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2151,8 +2151,8 @@ memory usage: 6.1+ KB</code></pre>
 <p>Map each <em>data dimension</em> (variable) to a corresponding <em>visual dimension</em></p>
 <div class="columns">
 <div class="column" style="font-size: 50%">
-<div id="73da4f99" class="cell" data-execution_count="28">
-<div class="cell-output cell-output-display" data-execution_count="57">
+<div id="f7fd3619" class="cell" data-execution_count="28">
+<div class="cell-output cell-output-display" data-execution_count="28">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2227,10 +2227,10 @@ memory usage: 6.1+ KB</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="b0e57cbe" class="cell" data-execution_count="29">
+<div id="2d599b3a" class="cell" data-execution_count="29">
 <div class="cell-output cell-output-display">
 
-            <div id="h5pxJf"></div>
+            <div id="qTUSV9"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -2254,16 +2254,16 @@ memory usage: 6.1+ KB</code></pre>
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("h5pxJf").appendChild(div);
+                        document.getElementById("qTUSV9").appendChild(div);
                     };
-                    var e = document.getElementById("h5pxJf");
+                    var e = document.getElementById("qTUSV9");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
-<div class="cell-output cell-output-display" data-execution_count="58">
-   <div id="JERbzy"></div>
+<div class="cell-output cell-output-display" data-execution_count="29">
+   <div id="3kOx90"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2317,7 +2317,7 @@ memory usage: 6.1+ KB</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("JERbzy");
+           var plotContainer = document.getElementById("3kOx90");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
