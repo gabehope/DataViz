@@ -44,6 +44,11 @@ Map each *data dimension* (variable) to a corresponding *visual dimension*
 ::: {.column width="50%" style="font-size: 50%"}
 ```{python}
 #| echo: false
+import pandas as pd
+from lets_plot import *
+LetsPlot.setup_html()
+
+nations = pd.read_csv('data/nations.csv')
 nations.head()
 ```
 :::

@@ -2538,7 +2538,7 @@
     "href": "resources/references.html#papers",
     "title": "Useful references",
     "section": "Papers",
-    "text": "Papers\n\nVisualization and Perception\nChallenger Disaster (From Visual Explanations)\nCrowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design\nNarrative Visualization: Telling Stories with Data\nAutomating the Design of Graphical Presentations of Relational Information\nGraphical Perception and Graphical Methods for Analyzing Scientific Data\nA Layered Grammar of Graphics"
+    "text": "Papers\n\nVisualization and Perception\nChallenger Disaster (From Visual Explanations)\nCrowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design\nNarrative Visualization: Telling Stories with Data\nAutomating the Design of Graphical Presentations of Relational Information\nGraphical Perception and Graphical Methods for Analyzing Scientific Data\nA Layered Grammar of Graphics\nUseful Junk? The Effects of Visual Embellishment on Comprehension and Memorability of Charts\nBeyond Memorability: Visualization Recognition and Recall"
   },
   {
     "objectID": "resources/references.html#courses",
@@ -2811,7 +2811,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#conceptual-strategy",
     "title": "Data Analytics and Visualization",
     "section": "Conceptual strategy",
-    "text": "Conceptual strategy\nMap each data dimension (variable) to a corresponding visual dimension\n\n\n\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546.0\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941.0\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393.0\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339.0\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005.0\n50.95"
+    "text": "Conceptual strategy\nMap each data dimension (variable) to a corresponding visual dimension\n\n\n\n\n\n            \n            \n            \n\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005\n50.95"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visual-encoding-dimensions",
@@ -2889,5 +2889,12 @@
     "title": "Course Overview",
     "section": "",
     "text": "Please see the navigation bar above for information on the class schedule, course policies, grading, reference materials, software and more."
+  },
+  {
+    "objectID": "resources/references.html#people",
+    "href": "resources/references.html#people",
+    "title": "Useful references",
+    "section": "People",
+    "text": "People\nHadley Wickham Nigel Holmes Edward Tufte"
   }
 ]

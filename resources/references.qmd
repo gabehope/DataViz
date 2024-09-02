@@ -52,6 +52,11 @@ Turk to Assess Visualization Design](https://www.cs.kent.edu/~javed/class-P2P12F
 
 [A Layered Grammar of Graphics](https://vita.had.co.nz/papers/layered-grammar.pdf)
 
+[Useful Junk? The Effects of Visual Embellishment
+on Comprehension and Memorability of Charts](http://www.stat.columbia.edu/~gelman/communication/Bateman2010.pdf)
+
+[Beyond Memorability: Visualization Recognition and Recall](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7192646&casa_token=myzvkGwWUYQAAAAA:P6sFJFLm7fnphu99pYH6WZLSnx1W9JzbZRm-ixi3-WD90G9Vkx0t-O6ckFLFKJWwi6HHCKmMig)
+
 ## Courses
 
 ### Data Visualization
@@ -64,4 +69,9 @@ Turk to Assess Visualization Design](https://www.cs.kent.edu/~javed/class-P2P12F
 
 [Communicating with Data (Smith)](https://www.science.smith.edu/~jcrouser/SDS136/)
 
+## People
+
+[Hadley Wickham](https://hadley.nz/)
+[Nigel Holmes](https://nigelholmes.com/)
+[Edward Tufte](https://www.edwardtufte.com/)
 
