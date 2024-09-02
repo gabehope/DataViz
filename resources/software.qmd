@@ -10,7 +10,7 @@ format: html
 
 Assignments and projects in this course will be based on Python 3. We will be using the following packages throughout this course:
 
--   [**NumPy**](https://numpy.org/) and [**SciPy**](https://scipy.org/): The industry-standard Python libraries for working with vectors, matrices and general numerical computing.
+-   [**NumPy**](https://numpy.org/) and [**SciPy**](https://scipy.org/): The industry-standard Python libraries for working with vectors, matrices and general numerical computing. [My notes from neural networks](https://cs152.github.io/lecture1-background/notes.html) introduce numpy an review basic linear algebra. Note that while Numpy will be used, linear algebra is not a prerequisite for this class.
 
 -   [**Pandas**](https://pandas.pydata.org/docs/) The most widely used Python library for data frames and general data analysis. 
 

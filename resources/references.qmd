@@ -1,0 +1,67 @@
+---
+title: Useful references
+subtitle: Harvey Mudd College
+author: Prof. Gabe Hope
+date: August 2024
+format: html
+---
+
+
+## Textbooks
+
+### Statistics and Data Science
+
+[R for Data Science](https://r4ds.hadley.nz/) ([Python port](https://byuidatascience.github.io/python4ds/))
+
+[Modern Data Science with R](https://mdsr-book.github.io/mdsr3e/)
+
+[Python for Data Analysis](https://wesmckinney.com/book/)
+
+[Introduction to Modern Statistics](https://openintro-ims.netlify.app/)
+
+### Data Visualization
+
+[Data Visualization: A Practical Introduction](https://socviz.co/)
+
+[The Visual Display of Quantitative Information](https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/)
+
+[Visual Explanations](https://www.edwardtufte.com/tufte/books_visex)
+
+[Visual Analysis and Design](https://www.cs.ubc.ca/~tmm/vadbook/)
+
+[Information Visualization: Perception for Design](https://www.amazon.com/Information-Visualization-Perception-Interactive-Technologies-ebook/dp/B083K5LJSF/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=)
+
+[The Grammar of Graphics](https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448)
+
+[ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)
+
+## Papers
+
+### Visualization and Perception
+
+[Challenger Disaster](https://williamwolff.org/wp-content/uploads/2013/01/tufte-challenger-1997.pdf) (From Visual Explanations)
+
+[Crowdsourcing Graphical Perception: Using Mechanical
+Turk to Assess Visualization Design](https://www.cs.kent.edu/~javed/class-P2P12F/papers-2012/PAPER2012-2010-MTurk-CHI.pdf)
+
+[Narrative Visualization: Telling Stories with Data](https://hci.ucsd.edu/220/NarrativeVisualization.pdf)
+
+[Automating the Design of Graphical Presentations of Relational Information](https://dl.acm.org/doi/pdf/10.1145/22949.22950)
+
+[Graphical Perception and Graphical Methods for Analyzing Scientific Data](https://www.jstor.org/stable/pdf/1695272.pdf?casa_token=jrW4sMKukmsAAAAA:gcJStbo7jLxNX4GFvfXZjRsy1DvG7vOWOuNIICL54Fv6tvc2SVoGn8nB-Y-U3YiIXLkOhPW2OP2xa4t9wEMARHfIKevnc-rY454e1-20jj7sCrbGYFhF)
+
+[A Layered Grammar of Graphics](https://vita.had.co.nz/papers/layered-grammar.pdf)
+
+## Courses
+
+### Data Visualization
+
+[Data Visualization (UW)](https://courses.cs.washington.edu/courses/cse442/24wi/)
+
+[Advanced Data Visualization (Duke)](https://vizdata.org/)
+
+[Data Communication and Visualization (St Thomas)](https://ameliamn.github.io/STAT336/)
+
+[Communicating with Data (Smith)](https://www.science.smith.edu/~jcrouser/SDS136/)
+
+

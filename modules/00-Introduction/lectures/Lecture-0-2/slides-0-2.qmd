@@ -1,0 +1,140 @@
+---
+title: "Data Analytics and Visualization"
+subtitle: "0-1: Introduction to Data Representations and Visualization"
+author: "Prof. Gabe Hope"
+format: 
+    revealjs:
+        theme: ["../../../../theme.scss"]
+revealjs-plugins:
+  - tldraw
+---
+
+
+# Visualization
+
+Why create visualizations?
+
+## Visual language
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/bertin.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+Images perceived as a set of signs
+
+Sender encodes information in signs
+
+Receiver decodes information from signs
+
+- ***Jacques Bertin** - Sémiologie Graphique, 1967*
+
+:::
+:::::
+
+
+
+
+## Conceptual strategy
+
+Map each *data dimension* (variable) to a corresponding *visual dimension*
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+```{python}
+#| echo: false
+nations.head()
+```
+:::
+
+::: {.column width="50%"}
+```{python}
+#| echo: false
+import pandas as pd
+from lets_plot import *
+LetsPlot.setup_html()
+
+nations = pd.read_csv('data/nations.csv')
+
+ggplot(nations, aes(x='income', y='lifeExpectancy', size='population')) + geom_point(aes(fill='region'), tooltips=layer_tooltips(['name']), stroke=0.5, shape=21, alpha=0.7) + scale_size(trans='sqrt', range = (0.2,12)) + scale_x_continuous(trans='log2', breaks=[500, 700, 1000, 5000, 7000, 10000, 50000, 70000,]) + ggsize(800, 500) + ggtitle('The Wealth and Health of Nations')
+```
+
+:::
+:::::
+
+## Visual encoding dimensions
+
+![](pictures/encodings.png){fig-align="center"}
+
+
+## Example - William Playfair, 1786
+
+![](pictures/playfair.png){fig-align="center"}
+
+# Visualizations in code 
+
+ggplot + Let's Plot
+
+## Ggplot
+
+**ggplot** is a hugely influential visualizatation library.
+
+- Designed by Hadley Wickham
+- Only for the R language
+
+**Let's Plot** is a port for Python (and Kotlin)
+
+- We'll be using it in class
+
+# Example: Cars
+
+
+
+
+# File formats and loading data
+
+## CSV (and TSV) files
+"Simplest" and most common data file format. 
+
+- Plain text file
+- Each line is a row
+- Each column is separated by a *delimiter*: "," for CSV, `tab` for TSV.
+- First row (usually) specifies column labels
+
+## Loading CSV (and TSV) files
+
+Files can be loaded into Pandas with `pd.read_csv()`
+
+## CSV (and TSV) issues
+
+**No explicit schema!** We need to *guess* the type of each column
+
+- Pandas usally does a good job, but could get it wrong!
+
+## CSV (and TSV) issues
+
+**Ambiguity!** *What if a value contains a comma?*
+
+- Usually handled by *quoting* text
+- Leads to its own issues
+
+## CSV (and TSV) issues
+
+**Lack of standardization!** Many different ways of handling different data types
+
+- Leads to this:
+
+## Python
+
+We can load a DataFrame from Python structures a s well
+
+- Column format
+
+- Records format
+
+## JSON (**J**ava**S**cript **O**bject **N**otation)
+
+**JSON** is a plain text format that describes nested `list` and `dict` structures (`array` and `object` in JavaScript)
+
+- Pandas can read and write JSON using the columns or records format

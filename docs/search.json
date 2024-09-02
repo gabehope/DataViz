@@ -2,14 +2,14 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Course Syllabus",
+    "title": "Course Overview",
     "section": "",
-    "text": "This course will focus on developing the practical skills needed to be an effective data scientist. In particular, students will learn how to collect and clean data, apply methods from statistics and machine learning, and make effective visualizations with industry-standard tools. Through realistic case-studies, students will gain hands-on experience working with various types of data including: tabular, time-series, geo-spatial and network data. A strong emphasis will be placed on clear communication, model interpretability and social responsibility.\nCourse Slack: You can find the course slack channel here\n\n\n\n\n\n\n\n\n\n\nProf. Gabe Hope (he/him)\nEmail: ghope@g.hmc.edu\nOffice: MacGregor 311\nOffice hours (MCG 311):\n\nMondays 3-4pm\nThursdays 3:30-5pm\n\n\n\n\n\n\nWhat to call me: You can call me any combination of Prof./Professor/Dr. and Hope/Gabe. My full name is actually John Gabriel Hope.\nWhere I’m from: I grew up in New York City, but I’ve been living in southern California for the past 7 years.\nWhere I went to school: I earned my Ph.D. from the University of California, Irvine advised by Erik Sudderth. Before that I attended Brown University at the start of my Ph.D. and did my undergraduate studies at Washington University in St. Louis.\nMy research interests: My research focuses on using neural networks to find interpretable structures in data. I mainly focus on image data, though I have also worked on analyzing motion-capture, audio and climate data among other things!\n\n\n\n\n\n\nData visualization\nData wrangling and preprocessing\nModel-free data analysis\nStatistical data analysis\nTimeseries, geo-spatial and network data analysis\n\n\n\n\nR for Data Science (Python port)\nModern Data Science with R\nPython for Data Analysis"
+    "text": "This course will focus on developing the practical skills needed to be an effective data scientist. In particular, students will learn how to collect and clean data, apply methods from statistics and machine learning, and make effective visualizations with industry-standard tools. Through realistic case-studies, students will gain hands-on experience working with various types of data including: tabular, time-series, geo-spatial and network data. A strong emphasis will be placed on clear communication, model interpretability and social responsibility.\nCourse Slack: You can find the course slack channel here\n\n\n\n\n\n\n\n\n\n\nProf. Gabe Hope (he/him)\nEmail: ghope@g.hmc.edu\nOffice: MacGregor 311\nOffice hours (MCG 311):\n\nMondays 3-4pm\nThursdays 3:30-5pm\n\n\n\n\n\n\nWhat to call me: You can call me any combination of Prof./Professor/Dr. and Hope/Gabe. My full name is actually John Gabriel Hope.\nWhere I’m from: I grew up in New York City, but I’ve been living in southern California for the past 7 years.\nWhere I went to school: I earned my Ph.D. from the University of California, Irvine advised by Erik Sudderth. Before that I attended Brown University at the start of my Ph.D. and did my undergraduate studies at Washington University in St. Louis.\nMy research interests: My research focuses on using neural networks to find interpretable structures in data. I mainly focus on image data, though I have also worked on analyzing motion-capture, audio and climate data among other things!\n\n\n\n\n\n\nData visualization\nData wrangling and preprocessing\nModel-free data analysis\nStatistical data analysis\nTimeseries, geo-spatial and network data analysis\n\n\n\n\nPlease see the navigation bar above for information on the class schedule, course policies, grading, reference materials, software and more.\n\n\n\nR for Data Science (Python port)\nModern Data Science with R\nPython for Data Analysis\nData Visualization: A Practical Introduction\nIntroduction to Modern Statistics"
   },
   {
     "objectID": "index.html#instructor",
     "href": "index.html#instructor",
-    "title": "Course Syllabus",
+    "title": "Course Overview",
     "section": "",
     "text": "Prof. Gabe Hope (he/him)\nEmail: ghope@g.hmc.edu\nOffice: MacGregor 311\nOffice hours (MCG 311):\n\nMondays 3-4pm\nThursdays 3:30-5pm\n\n\n\n\n\n\nWhat to call me: You can call me any combination of Prof./Professor/Dr. and Hope/Gabe. My full name is actually John Gabriel Hope.\nWhere I’m from: I grew up in New York City, but I’ve been living in southern California for the past 7 years.\nWhere I went to school: I earned my Ph.D. from the University of California, Irvine advised by Erik Sudderth. Before that I attended Brown University at the start of my Ph.D. and did my undergraduate studies at Washington University in St. Louis.\nMy research interests: My research focuses on using neural networks to find interpretable structures in data. I mainly focus on image data, though I have also worked on analyzing motion-capture, audio and climate data among other things!"
   },
@@ -2440,7 +2440,7 @@
     "href": "calendar/calendar.html",
     "title": "Course Calendar",
     "section": "",
-    "text": "Lecture\nDate\nTopics\nReadings\nMaterials\nHomework\n\n\n\n\n1\n8/26\nCourse introduction\n538\nSlides\nHandout\n\n\n\n2\n8/28\nTidy data, data types\nMDSR 6.1\nSlides\nHandout\n\n\n\n\n9/2\n\n\n\n\n\n\n3\n9/4\nIntroduction to visualization\nMDSR 2.1-2.5\n\n\n\n\n4\n9/9\nSingle variable analysis and visualization\n\n\n\n\n\n5\n9/11\nProbabilsitic models with single variables\n\n\n\n\n\n6\n9/16\nMulti-variate analysis\n\n\n\n\n\n7\n9/18\nPrinciples for multivariate visualization\n\n\n\n\n\n8\n9/23\nData wrangling, joins\n\n\n\n\n\n9\n9/25\nTrendlines and regression\n\n\n\n\n\n10\n9/30\nClustering and latent variables\n\n\n\n\n\n11\n10/2\nDescision trees and tree visualizations\n\n\n\n\n\n12\n10/7\nData cleaning and missing values\n\n\n\n\n\n13\n10/9\n\n\n\n\n\n\n\n10/14\nUncertainty and estimation\n\n\n\n\n\n14\n10/16\nBootstrapping and simulation\n\n\n\n\n\n15\n10/21\nHigh-dimensional data, dimensionality reduction\n\n\n\n\n\n16\n10/23\nWorking with timeseries data\n\n\n\n\n\n17\n10/28\nTimeseries visualization\n\n\n\n\n\n18\n10/30\nTimeseries models and analysis\n\n\n\n\n\n19\n11/4\nSpatial data analysis and visualization\n\n\n\n\n\n20\n11/6\nGeographic data, projections and maps\n\n\n\n\n\n21\n11/11\nClimate data\n\n\n\n\n\n22\n11/13\nMoving to the web\n\n\n\n\n\n23\n11/18\nInteraction and animation pt. 1\n\n\n\n\n\n24\n11/20\nInteraction and animation pt. 2\n\n\n\n\n\n25\n11/25\nNetwork data, representations and visualizations\n\n\n\n\n\n\n11/27\n\n\n\n\n\n\n26\n12/2\nNetwork analysis and layout algorithms\n\n\n\n\n\n27\n12/4\nNetwork modeling\n\n\n\n\n\n\n12/9\n\n\n\nFinal Project Due (11:59pm)\n\n\n\n12/13\n\n\n\nFinal Reflections and Feedback Due (11:59pm)"
+    "text": "This is the tentative course calendar for Data Analytics and Visualization. This calendar is subject to change depending on the pace of the class and student interest.\n\n\n\nLecture\nDate\nTopics\nReadings\nMaterials\nHomework\n\n\n\n\n1\n8/26\nCourse introduction\n538\nSlides\nHandout\n\n\n\n2\n8/28\nTidy data, data types\nMDSR 6.1\nSlides\nHandout\n\n\n\n\n9/2\n\n\n\n\n\n\n3\n9/4\nIntroduction to visualization\nDV ch. 1\nMDSR 2.1-2.5\n\n\n\n\n4\n9/9\nSingle variable analysis and visualization\n\n\n\n\n\n5\n9/11\nProbabilsitic models with single variables\n\n\n\n\n\n6\n9/16\nMulti-variate analysis\n\n\n\n\n\n7\n9/18\nPrinciples for multivariate visualization\n\n\n\n\n\n8\n9/23\nData wrangling, joins\n\n\n\n\n\n9\n9/25\nTrendlines and regression\n\n\n\n\n\n10\n9/30\nClustering and latent variables\n\n\n\n\n\n11\n10/2\nDescision trees and tree visualizations\n\n\n\n\n\n12\n10/7\nData cleaning and missing values\n\n\n\n\n\n13\n10/9\n\n\n\n\n\n\n\n10/14\nUncertainty and estimation\n\n\n\n\n\n14\n10/16\nBootstrapping and simulation\n\n\n\n\n\n15\n10/21\nHigh-dimensional data, dimensionality reduction\n\n\n\n\n\n16\n10/23\nWorking with timeseries data\n\n\n\n\n\n17\n10/28\nTimeseries visualization\n\n\n\n\n\n18\n10/30\nTimeseries models and analysis\n\n\n\n\n\n19\n11/4\nSpatial data analysis and visualization\n\n\n\n\n\n20\n11/6\nGeographic data, projections and maps\n\n\n\n\n\n21\n11/11\nClimate data\n\n\n\n\n\n22\n11/13\nMoving to the web\n\n\n\n\n\n23\n11/18\nInteraction and animation pt. 1\n\n\n\n\n\n24\n11/20\nInteraction and animation pt. 2\n\n\n\n\n\n25\n11/25\nNetwork data, representations and visualizations\n\n\n\n\n\n\n11/27\n\n\n\n\n\n\n26\n12/2\nNetwork analysis and layout algorithms\n\n\n\n\n\n27\n12/4\nNetwork modeling\n\n\n\n\n\n\n12/9\n\n\n\nFinal Project Due (11:59pm)\n\n\n\n12/13\n\n\n\nFinal Reflections and Feedback Due (11:59pm)"
   },
   {
     "objectID": "calendar/calendar.html#week-0-826---830",
@@ -2454,14 +2454,14 @@
     "href": "resources/software.html",
     "title": "Software and tools",
     "section": "",
-    "text": "Assignments and projects in this course will be based on Python 3. We will be using the following packages throughout this course:\n\nNumPy and SciPy: The industry-standard Python libraries for working with vectors, matrices and general numerical computing.\nPandas The most widely used Python library for data frames and general data analysis.\nLets-Plot (or Plotnine): Python libraries for visualization that adapt the interface of the ggplot2 R library.\nSciKit-Learn: A popular library for basic machine learning and statistical modeling."
+    "text": "Assignments and projects in this course will be based on Python 3. We will be using the following packages throughout this course:\n\nNumPy and SciPy: The industry-standard Python libraries for working with vectors, matrices and general numerical computing. My notes from neural networks introduce numpy an review basic linear algebra. Note that while Numpy will be used, linear algebra is not a prerequisite for this class.\nPandas The most widely used Python library for data frames and general data analysis.\nLets-Plot (or Plotnine): Python libraries for visualization that adapt the interface of the ggplot2 R library.\nSciKit-Learn: A popular library for basic machine learning and statistical modeling."
   },
   {
     "objectID": "resources/software.html#python",
     "href": "resources/software.html#python",
     "title": "Software and tools",
     "section": "",
-    "text": "Assignments and projects in this course will be based on Python 3. We will be using the following packages throughout this course:\n\nNumPy and SciPy: The industry-standard Python libraries for working with vectors, matrices and general numerical computing.\nPandas The most widely used Python library for data frames and general data analysis.\nLets-Plot (or Plotnine): Python libraries for visualization that adapt the interface of the ggplot2 R library.\nSciKit-Learn: A popular library for basic machine learning and statistical modeling."
+    "text": "Assignments and projects in this course will be based on Python 3. We will be using the following packages throughout this course:\n\nNumPy and SciPy: The industry-standard Python libraries for working with vectors, matrices and general numerical computing. My notes from neural networks introduce numpy an review basic linear algebra. Note that while Numpy will be used, linear algebra is not a prerequisite for this class.\nPandas The most widely used Python library for data frames and general data analysis.\nLets-Plot (or Plotnine): Python libraries for visualization that adapt the interface of the ggplot2 R library.\nSciKit-Learn: A popular library for basic machine learning and statistical modeling."
   },
   {
     "objectID": "resources/software.html#jupyter",
@@ -2508,15 +2508,386 @@
   {
     "objectID": "index.html#recommended-textbooks",
     "href": "index.html#recommended-textbooks",
-    "title": "Course Syllabus",
+    "title": "Course Overview",
     "section": "",
-    "text": "R for Data Science (Python port)\nModern Data Science with R\nPython for Data Analysis"
+    "text": "R for Data Science (Python port)\nModern Data Science with R\nPython for Data Analysis\nData Visualization: A Practical Introduction\nIntroduction to Modern Statistics"
   },
   {
     "objectID": "index.html#topics-covered-tentative",
     "href": "index.html#topics-covered-tentative",
-    "title": "Course Syllabus",
+    "title": "Course Overview",
     "section": "",
     "text": "Data visualization\nData wrangling and preprocessing\nModel-free data analysis\nStatistical data analysis\nTimeseries, geo-spatial and network data analysis"
+  },
+  {
+    "objectID": "resources/references.html",
+    "href": "resources/references.html",
+    "title": "Useful references",
+    "section": "",
+    "text": "R for Data Science (Python port)\nModern Data Science with R\nPython for Data Analysis\nIntroduction to Modern Statistics\n\n\n\nData Visualization: A Practical Introduction\nThe Visual Display of Quantitative Information\nVisual Explanations\nVisual Analysis and Design\nInformation Visualization: Perception for Design\nThe Grammar of Graphics\nggplot2: Elegant Graphics for Data Analysis"
+  },
+  {
+    "objectID": "resources/references.html#textbooks",
+    "href": "resources/references.html#textbooks",
+    "title": "Useful references",
+    "section": "",
+    "text": "R for Data Science (Python port)\nModern Data Science with R\nPython for Data Analysis\nIntroduction to Modern Statistics\n\n\n\nData Visualization: A Practical Introduction\nThe Visual Display of Quantitative Information\nVisual Explanations\nVisual Analysis and Design\nInformation Visualization: Perception for Design\nThe Grammar of Graphics\nggplot2: Elegant Graphics for Data Analysis"
+  },
+  {
+    "objectID": "resources/references.html#papers",
+    "href": "resources/references.html#papers",
+    "title": "Useful references",
+    "section": "Papers",
+    "text": "Papers\n\nVisualization and Perception\nChallenger Disaster (From Visual Explanations)\nCrowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design\nNarrative Visualization: Telling Stories with Data\nAutomating the Design of Graphical Presentations of Relational Information\nGraphical Perception and Graphical Methods for Analyzing Scientific Data\nA Layered Grammar of Graphics"
+  },
+  {
+    "objectID": "resources/references.html#courses",
+    "href": "resources/references.html#courses",
+    "title": "Useful references",
+    "section": "Courses",
+    "text": "Courses\n\nData Visualization\nData Visualization (UW)\nAdvanced Data Visualization (Duke)\nData Communication and Visualization (St Thomas)\nCommunicating with Data (Smith)"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/handout-0-2.html",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/handout-0-2.html",
+    "title": "Name:",
+    "section": "",
+    "text": "Complete this worksheet during class and turn it in at the end. Please print your full name above to ensure participation credit."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/handout-0-2.html#in-class-questions",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/handout-0-2.html#in-class-questions",
+    "title": "Name:",
+    "section": "In-class questions",
+    "text": "In-class questions\n\nWhat information is contained in this plot?\n\n\n\n\n\n\n\n\n\n\nWhich data organization is most logical to you?\n\n\n\n\n\n\n\n\n\n\nWhat visual dimension is encoding each piece of information?\n\n\n\n\n\n\n\n\n\n\nWhich encoding scheme seems most valuable?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/handout-0-2.html#reflection-complete-at-the-end-of-class",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/handout-0-2.html#reflection-complete-at-the-end-of-class",
+    "title": "Name:",
+    "section": "Reflection (complete at the end of class)",
+    "text": "Reflection (complete at the end of class)\n\nDid these concepts seems obvious or obvious in hindsight?\n\n\n\n\n\n\n\n\n\n\nHave you used any of these libraries before?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html",
+    "title": "Data Analytics and Visualization",
+    "section": "",
+    "text": "What information is shown in this plot?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#warmup-exercise",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#warmup-exercise",
+    "title": "Data Analytics and Visualization",
+    "section": "",
+    "text": "What information is shown in this plot?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#information-shown",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#information-shown",
+    "title": "Data Analytics and Visualization",
+    "section": "Information shown",
+    "text": "Information shown\n\nCountries! (names)\nPopulations\nIncomes\nLife expectencies\nRegions"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#data-source-gapminder",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#data-source-gapminder",
+    "title": "Data Analytics and Visualization",
+    "section": "Data source: Gapminder",
+    "text": "Data source: Gapminder\n\n\n\n\n\n\n\n\n\n\n\n\n\nGapminder is a Swedish non-profit organization focused on global development\n\nFounded by Hans Rosling “Gapminder identifies systematic misconceptions about important global trends and proportions and uses reliable data to develop easy to understand teaching materials to rid people of their misconceptions.”"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#dataset",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#dataset",
+    "title": "Data Analytics and Visualization",
+    "section": "Dataset:",
+    "text": "Dataset:\nA collection of values that capture various aspects of the world (Typically for a specific domain)"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#variable",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#variable",
+    "title": "Data Analytics and Visualization",
+    "section": "Variable:",
+    "text": "Variable:\nA variable defines some measurement we can make about the world\n\nNations dataset\n\nA country’s name, population, income, life expectency, etc.\n\n\n\nColleges dataset\n\nA college’s name, tuition, enrollment, type (public vs. private), etc."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#observation",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#observation",
+    "title": "Data Analytics and Visualization",
+    "section": "Observation:",
+    "text": "Observation:\nAn observation is a collection of values corresponding to a single entity\n\n\n\n\n\n\n\n\nName: United States\nPopulation: 300M\nLife exp.: 76.3\nIncome: 47,000\n\n\n\n\n\n\n\n\nName: Chile\nPopulation: 20M\nLife exp.: 78.9\nIncome: 17,000"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#observation-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#observation-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Observation:",
+    "text": "Observation:\nAn observation is a collection of values corresponding to a single entity\n\n\n\nName: Harvey Mudd\nTuition: $68,262\nEnrollment: 915\nType: Private\n\n\n\nName: UC Irvine\nTuition: $17,105\nEnrollment: 29,503\nType: Public"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#one-way-to-think-of-this",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#one-way-to-think-of-this",
+    "title": "Data Analytics and Visualization",
+    "section": "One way to think of this:",
+    "text": "One way to think of this:\n\n\n\n\n\n\nCredit: R. Jordan Crouser, Smith College"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#another-way-to-think-of-this",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#another-way-to-think-of-this",
+    "title": "Data Analytics and Visualization",
+    "section": "Another way to think of this:",
+    "text": "Another way to think of this:\n\n\n\n\n\n\nCredit: R. Jordan Crouser, Smith College"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#yet-another-way-to-think-of-this",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#yet-another-way-to-think-of-this",
+    "title": "Data Analytics and Visualization",
+    "section": "Yet another way to think of this:",
+    "text": "Yet another way to think of this:\n\n\n\n\n\n\nCredit: R. Jordan Crouser, Smith College"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#the-pandas-library",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#the-pandas-library",
+    "title": "Data Analytics and Visualization",
+    "section": "The Pandas library",
+    "text": "The Pandas library\nPandas is the core library we’ll use for representing datasets in code\nThe central data structure in Pandas is the DataFrame\n\n\n\n# A DataFrame object\nnations = pd.read_csv('data/nations.csv')\nnations.head() # Shows first 5 rows\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005\n50.95\n\n\n\n\n\n\n\n\n\nA 2-dimensional “array” of values\nWe can view it as a table with rows and columns"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#the-pandas-library-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#the-pandas-library-1",
+    "title": "Data Analytics and Visualization",
+    "section": "The Pandas library",
+    "text": "The Pandas library\nEach column has a label, as shown.\n\nShould specify what the values in a column mean\n\n\n\n\n# A DataFrame object\nnations = pd.read_csv('data/nations.csv')\nnations.head() # Shows first 5 rows\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005\n50.95\n\n\n\n\n\n\n\n\n\nnations.columns\n\nIndex(['name', 'region', 'income', 'population', 'lifeExpectancy'], dtype='object')\n\n\n\nRows can (sort of) have labels too, we’ll get back to this!"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#series",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#series",
+    "title": "Data Analytics and Visualization",
+    "section": "Series",
+    "text": "Series\nEach column in Pandas is a 1-dimensional array-like object called a series\n\n\n\nnations['population']\n\n0      12707546\n1       8294941\n2       1638393\n3      14761339\n4       8691005\n         ...   \n175     1130120\n176        1401\n177      118993\n178    86116559\n179      215053\nName: population, Length: 180, dtype: int64\n\n\n\n\nnations['name']\n\n0            Angola\n1             Benin\n2          Botswana\n3      Burkina Faso\n4           Burundi\n           ...     \n175     Timor-Leste\n176         Tokelau\n177           Tonga\n178         Vietnam\n179         Vanuatu\nName: name, Length: 180, dtype: object"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#theres-more-than-one-way-to-represent-the-same-data",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#theres-more-than-one-way-to-represent-the-same-data",
+    "title": "Data Analytics and Visualization",
+    "section": "There’s more than one way to represent the same data",
+    "text": "There’s more than one way to represent the same data\nWhat makes sense to you?\n\nABCD\n\n\n\n\n\n\n\n\n\ncountry\nyear\ncases\npopulation\n\n\n\n\nAfghanistan\n1999\n745\n19987071\n\n\nAfghanistan\n2000\n2666\n20595360\n\n\nBrazil\n1999\n37737\n172006362\n\n\nBrazil\n2000\n80488\n174504898\n\n\nChina\n1999\n212258\n1272915272\n\n\nChina\n2000\n213766\n1280428583\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncountry\nyear\ntype\ncount\n\n\n\n\nAfghanistan\n1999\ncases\n745\n\n\nAfghanistan\n1999\npopulation\n19987071\n\n\nAfghanistan\n2000\ncases\n2666\n\n\nAfghanistan\n2000\npopulation\n20595360\n\n\nBrazil\n1999\ncases\n37737\n\n\nBrazil\n1999\npopulation\n172006362\n\n\nBrazil\n2000\ncases\n80488\n\n\nBrazil\n2000\npopulation\n174504898\n\n\nChina\n1999\ncases\n212258\n\n\nChina\n1999\npopulation\n1272915272\n\n\nChina\n2000\ncases\n213766\n\n\nChina\n2000\npopulation\n1280428583\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncountry\nyear\nrate\n\n\n\n\nAfghanistan\n1999\n745/19987071\n\n\nAfghanistan\n2000\n2666/20595360\n\n\nBrazil\n1999\n37737/172006362\n\n\nBrazil\n2000\n80488/174504898\n\n\nChina\n1999\n212258/1272915272\n\n\nChina\n2000\n213766/1280428583\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncountry\n1999\n2000\n\n\n\n\nAfghanistan\n745\n2666\n\n\nBrazil\n37737\n80488\n\n\nChina\n212258\n213766\n\n\n\n\n\n\n\n\n\n\n\n\n\ncountry\n1999\n2000\n\n\n\n\nAfghanistan\n19987071\n20595360\n\n\nBrazil\n172006362\n174504898\n\n\nChina\n1272915272\n1280428583"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#wickhams-tidy-data-principles",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#wickhams-tidy-data-principles",
+    "title": "Data Analytics and Visualization",
+    "section": "Wickham’s tidy data principles",
+    "text": "Wickham’s tidy data principles\n\n\n\n\n\n\nEach variable forms a column.\nEach observation forms a row.\nEach type of observational unit forms a table (DataFrame)\nEach value has its own cell."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#why-tidy-data",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#why-tidy-data",
+    "title": "Data Analytics and Visualization",
+    "section": "Why tidy data?",
+    "text": "Why tidy data?\nConsistency\n\nDifferent practitioners tools have a consistent format for data\nUseful for visualization in particular\n\nImplementation\n\nEasier and more efficient to implement"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#common-ways-data-might-be-messy",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#common-ways-data-might-be-messy",
+    "title": "Data Analytics and Visualization",
+    "section": "Common ways data might be messy",
+    "text": "Common ways data might be messy\n\nTidyToo longToo compactToo wideNot separated\n\n\n\nTidy data\n\n\n\n\n\n\n\n\ncountry\nyear\ncases\npopulation\n\n\n\n\nAfghanistan\n1999\n745\n19987071\n\n\nAfghanistan\n2000\n2666\n20595360\n\n\nBrazil\n1999\n37737\n172006362\n\n\nBrazil\n2000\n80488\n174504898\n\n\nChina\n1999\n212258\n1272915272\n\n\nChina\n2000\n213766\n1280428583\n\n\n\n\n\n\n\n\nMultiple variables are stored in one column\n\n\n\n\n\n\n\n\ncountry\nyear\ntype\ncount\n\n\n\n\nAfghanistan\n1999\ncases\n745\n\n\nAfghanistan\n1999\npopulation\n19987071\n\n\nAfghanistan\n2000\ncases\n2666\n\n\nAfghanistan\n2000\npopulation\n20595360\n\n\nBrazil\n1999\ncases\n37737\n\n\nBrazil\n1999\npopulation\n172006362\n\n\nBrazil\n2000\ncases\n80488\n\n\nBrazil\n2000\npopulation\n174504898\n\n\nChina\n1999\ncases\n212258\n\n\nChina\n1999\npopulation\n1272915272\n\n\nChina\n2000\ncases\n213766\n\n\nChina\n2000\npopulation\n1280428583\n\n\n\n\n\n\n\n\nMultiple values are stored in one cell\n\n\n\n\n\n\n\n\ncountry\nyear\nrate\n\n\n\n\nAfghanistan\n1999\n745/19987071\n\n\nAfghanistan\n2000\n2666/20595360\n\n\nBrazil\n1999\n37737/172006362\n\n\nBrazil\n2000\n80488/174504898\n\n\nChina\n1999\n212258/1272915272\n\n\nChina\n2000\n213766/1280428583\n\n\n\n\n\n\n\n\nVariables are stored in both rows and columns. (Wide form data)\nA single observational unit is stored in multiple tables\n\n\n\n\n\n\n\n\n\n\ncountry\n1999\n2000\n\n\n\n\nAfghanistan\n745\n2666\n\n\nBrazil\n37737\n80488\n\n\nChina\n212258\n213766\n\n\n\n\n\n\n\n\n\n\n\n\n\ncountry\n1999\n2000\n\n\n\n\nAfghanistan\n19987071\n20595360\n\n\nBrazil\n172006362\n174504898\n\n\nChina\n1272915272\n1280428583\n\n\n\n\n\n\n\n\n\n\nMultiple types of observational units are stored in the same table"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tidy-data-for-machine-learning",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tidy-data-for-machine-learning",
+    "title": "Data Analytics and Visualization",
+    "section": "Tidy data for machine learning",
+    "text": "Tidy data for machine learning\nData in machine learning typically uses the tidy format, but in matrix rather than table (DataFrame) form\n\nStill have column = variable, row = observation\n\nWe can extract a matrix by accessing the values property\n\nnations[['population', 'income', 'lifeExpectancy']].values\n\narray([[1.27075460e+07, 5.05559000e+03, 4.75800000e+01],\n       [8.29494100e+06, 1.45757000e+03, 6.18900000e+01],\n       [1.63839300e+06, 1.22822800e+04, 5.51200000e+01],\n       [1.47613390e+07, 1.23442000e+03, 5.33800000e+01],\n       [8.69100500e+06, 4.57070000e+02, 5.09500000e+01],\n       [1.80549290e+07, 1.99718000e+03, 5.13900000e+01],\n       [4.26113000e+05, 3.45614000e+03, 7.16800000e+01],\n       [1.05411560e+07, 1.55783000e+03, 4.89700000e+01],\n       [7.31281000e+05, 1.01642000e+03, 6.57700000e+01],\n       [6.66043140e+07, 3.58800000e+02, 4.78100000e+01],\n       [3.90331800e+06, 3.83467000e+03, 5.37500000e+01],\n       [1.83730600e+07, 1.52023000e+03, 5.78600000e+01],\n       [5.62339000e+05, 1.53422000e+04, 5.06400000e+01],\n       [5.02847500e+06, 5.48370000e+02, 6.00300000e+01],\n       [7.82540900e+07, 8.12160000e+02, 5.56900000e+01],\n       [1.48414900e+06, 1.27049900e+04, 6.08900000e+01],\n       [2.33366610e+07, 1.38295000e+03, 5.68300000e+01],\n       [1.02114370e+07, 9.08860000e+02, 5.83500000e+01],\n       [1.50244200e+06, 5.68940000e+02, 4.82000000e+01],\n       [3.65291550e+07, 1.49353000e+03, 5.49500000e+01],\n       [2.00274900e+06, 1.52140000e+03, 4.55600000e+01],\n       [3.33248300e+06, 4.74900000e+02, 5.87100000e+01],\n       [1.97575250e+07, 1.00690000e+03, 6.08100000e+01],\n       [1.36472730e+07, 8.66350000e+02, 5.38800000e+01],\n       [1.23603060e+07, 1.13617000e+03, 4.88400000e+01],\n       [3.36494000e+06, 1.77587000e+03, 5.69900000e+01],\n       [1.26078100e+06, 1.14115300e+04, 7.21000000e+01],\n       [2.16334000e+05, 9.61782000e+03, 7.59900000e+01],\n       [2.02031860e+07, 8.88650000e+02, 4.81300000e+01],\n       [2.06392700e+06, 4.95226000e+03, 6.17200000e+01],\n       [1.32726790e+07, 6.43390000e+02, 5.19500000e+01],\n       [1.38283240e+08, 2.15898000e+03, 4.81700000e+01],\n       [8.08506000e+05, 7.67012000e+03, 7.66400000e+01],\n       [9.07742500e+06, 9.95270000e+02, 5.06900000e+01],\n       [2.05901000e+05, 1.70343000e+03, 6.58600000e+01],\n       [1.25482430e+07, 1.70005000e+03, 5.59100000e+01],\n       [6.28661700e+06, 8.93600000e+02, 4.79500000e+01],\n       [9.37990700e+06, 9.43040000e+02, 5.00900000e+01],\n       [4.37861150e+07, 9.14127000e+03, 5.17200000e+01],\n       [4.33544110e+07, 2.77861000e+03, 5.85000000e+01],\n       [1.12881400e+06, 4.72818000e+03, 4.63600000e+01],\n       [3.88582760e+07, 1.22025000e+03, 5.63500000e+01],\n       [5.85867300e+06, 8.88010000e+02, 6.29300000e+01],\n       [3.02145310e+07, 1.20253000e+03, 5.34700000e+01],\n       [1.19934030e+07, 1.44206000e+03, 4.64000000e+01],\n       [1.23829200e+07, 4.43740000e+02, 4.57200000e+01],\n       [3.27383760e+07, 1.21668000e+03, 4.43000000e+01],\n       [1.53546901e+08, 1.49200000e+03, 6.65600000e+01],\n       [2.37668000e+06, 5.05383000e+03, 6.64200000e+01],\n       [1.12536829e+09, 2.73100000e+03, 6.40100000e+01],\n       [3.79174000e+05, 5.08179000e+03, 7.19400000e+01],\n       [2.95191140e+07, 1.22473000e+03, 6.71200000e+01],\n       [1.72730891e+08, 2.60300000e+03, 6.68400000e+01],\n       [2.05321500e+07, 4.25413000e+03, 7.42400000e+01],\n       [3.37396350e+07, 6.20717000e+03, 7.26700000e+01],\n       [7.18306000e+05, 2.42265100e+04, 7.58800000e+01],\n       [5.06221000e+05, 2.17679000e+03, 5.57800000e+01],\n       [2.82211810e+07, 3.51818000e+03, 6.81000000e+01],\n       [6.50038900e+06, 2.54636900e+04, 8.10000000e+01],\n       [6.19867700e+06, 5.10939000e+03, 7.28800000e+01],\n       [2.59679900e+06, 4.24435300e+04, 7.77900000e+01],\n       [3.96746700e+06, 1.27662100e+04, 7.22600000e+01],\n       [6.17357900e+06, 1.20516200e+04, 7.42800000e+01],\n       [3.42729680e+07, 4.16293000e+03, 7.15800000e+01],\n       [3.30944000e+06, 2.28048500e+04, 7.59400000e+01],\n       [9.28635000e+05, 7.41382800e+04, 7.58100000e+01],\n       [2.81614170e+07, 2.11381800e+04, 7.31000000e+01],\n       [1.03781400e+07, 7.49961000e+03, 7.41500000e+01],\n       [2.68274700e+06, 3.37349400e+04, 7.75800000e+01],\n       [4.14917300e+06, 3.08456000e+03, 7.37400000e+01],\n       [2.29939110e+07, 2.31316000e+03, 6.33900000e+01],\n       [4.06773480e+07, 1.34980400e+04, 7.55200000e+01],\n       [7.24800000e+04, 2.53510900e+04, 7.49200000e+01],\n       [2.81968000e+05, 1.58467700e+04, 7.75100000e+01],\n       [3.01022000e+05, 6.99808000e+03, 7.66000000e+01],\n       [9.24781600e+06, 4.00716000e+03, 6.60100000e+01],\n       [1.91908598e+08, 9.56978000e+03, 7.26800000e+01],\n       [3.36792630e+07, 3.45696300e+04, 8.08900000e+01],\n       [1.64325360e+07, 1.30873800e+04, 7.86700000e+01],\n       [4.48582640e+07, 7.09069000e+03, 7.31900000e+01],\n       [4.19194800e+06, 9.55156000e+03, 7.89800000e+01],\n       [1.14490060e+07, 9.27796000e+03, 7.88400000e+01],\n       [1.39276500e+07, 7.03545000e+03, 7.52600000e+01],\n       [7.05713100e+06, 5.64685000e+03, 7.17400000e+01],\n       [2.06941000e+05, 8.20274000e+03, 7.61600000e+01],\n       [9.03030000e+04, 8.82690000e+03, 7.56200000e+01],\n       [4.60486000e+05, 7.78825000e+03, 7.92800000e+01],\n       [1.28516470e+07, 5.16322000e+03, 7.05500000e+01],\n       [7.70794000e+05, 3.77695000e+03, 6.74300000e+01],\n       [8.70441300e+06, 1.19805000e+03, 6.14800000e+01],\n       [7.63932700e+06, 3.47346000e+03, 7.24100000e+01],\n       [2.80154400e+06, 7.02374000e+03, 7.21100000e+01],\n       [4.42119000e+05, 1.46271300e+04, 7.97700000e+01],\n       [1.09955400e+08, 1.12503700e+04, 7.64700000e+01],\n       [2.25168000e+05, 2.31783700e+04, 7.63800000e+01],\n       [5.78058600e+06, 2.59139000e+03, 7.34400000e+01],\n       [3.29269300e+06, 1.07966800e+04, 7.58100000e+01],\n       [6.82996900e+06, 4.05430000e+03, 7.20700000e+01],\n       [2.90415930e+07, 7.85897000e+03, 7.34700000e+01],\n       [3.95716900e+06, 1.89705100e+04, 7.89500000e+01],\n       [4.40486000e+05, 8.19903000e+03, 6.91600000e+01],\n       [1.04736600e+06, 1.78260500e+04, 6.97000000e+01],\n       [3.03824646e+08, 4.12560800e+04, 7.94300000e+01],\n       [3.46253100e+06, 1.14610300e+04, 7.65000000e+01],\n       [3.61977800e+06, 6.54627000e+03, 7.67400000e+01],\n       [2.96858600e+06, 4.52344000e+03, 7.40300000e+01],\n       [8.20553300e+06, 3.56364200e+04, 8.02300000e+01],\n       [8.07904300e+06, 9.08842000e+03, 7.06000000e+01],\n       [1.02879550e+07, 1.15744300e+04, 6.94000000e+01],\n       [1.04039510e+07, 3.22566400e+04, 8.00500000e+01],\n       [4.59031000e+06, 7.34198000e+03, 7.53400000e+01],\n       [7.26267500e+06, 1.08402600e+04, 7.35300000e+01],\n       [4.49154300e+06, 1.41104600e+04, 7.64900000e+01],\n       [7.92604000e+05, 2.56434500e+04, 7.98500000e+01],\n       [5.48472300e+06, 3.26700600e+04, 7.85700000e+01],\n       [1.30760500e+06, 1.63491300e+04, 7.35000000e+01],\n       [5.24474900e+06, 3.06027300e+04, 7.99000000e+01],\n       [6.12799720e+07, 2.97748500e+04, 8.14700000e+01],\n       [4.63084100e+06, 4.16870000e+03, 7.18600000e+01],\n       [8.23695480e+07, 3.11911500e+04, 8.00800000e+01],\n       [1.07228160e+07, 2.76261100e+04, 7.95000000e+01],\n       [9.93091500e+06, 1.69828000e+04, 7.36700000e+01],\n       [3.04367000e+05, 3.49897300e+04, 8.19500000e+01],\n       [4.15611900e+06, 3.56929500e+04, 8.01600000e+01],\n       [5.81453210e+07, 2.61605900e+04, 8.13400000e+01],\n       [1.53405330e+07, 1.06122900e+04, 6.51800000e+01],\n       [2.24542300e+06, 1.30219400e+04, 7.27700000e+01],\n       [3.56520500e+06, 1.49287800e+04, 7.19300000e+01],\n       [4.86006000e+05, 7.08574600e+04, 7.97500000e+01],\n       [2.06131500e+06, 8.36479000e+03, 7.44000000e+01],\n       [4.03532000e+05, 2.13278500e+04, 7.99100000e+01],\n       [4.49677400e+06, 2.59342000e+03, 6.87200000e+01],\n       [6.72180000e+05, 1.22577900e+04, 7.43400000e+01],\n       [1.66453130e+07, 3.60745300e+04, 8.01900000e+01],\n       [4.64445700e+06, 4.79150000e+04, 8.08500000e+01],\n       [3.85006960e+07, 1.64658000e+04, 7.58400000e+01],\n       [1.06769100e+07, 1.98984300e+04, 7.89400000e+01],\n       [2.22468620e+07, 1.08681200e+04, 7.29900000e+01],\n       [1.01665070e+07, 1.00052200e+04, 7.42300000e+01],\n       [5.45540700e+06, 1.91860100e+04, 7.49400000e+01],\n       [2.00771100e+06, 2.47782100e+04, 7.86300000e+01],\n       [4.04910510e+07, 2.68119300e+04, 8.11100000e+01],\n       [9.04538900e+06, 3.20210000e+04, 8.11200000e+01],\n       [7.58152000e+06, 3.80039200e+04, 8.20600000e+01],\n       [7.65339400e+06, 1.77538000e+03, 6.70700000e+01],\n       [7.18928070e+07, 8.04078000e+03, 7.20600000e+01],\n       [5.23207700e+06, 5.70266000e+03, 6.50600000e+01],\n       [4.61702730e+07, 5.73086000e+03, 6.84500000e+01],\n       [6.09439120e+07, 3.10424700e+04, 7.96400000e+01],\n       [2.82684400e+07, 2.58696000e+03, 6.79700000e+01],\n       [2.06008560e+07, 3.43272600e+04, 8.17100000e+01],\n       [3.93551000e+05, 4.47389900e+04, 7.73200000e+01],\n       [1.43876420e+07, 1.83097000e+03, 6.16700000e+01],\n       [1.32685617e+09, 7.22607000e+03, 7.32800000e+01],\n       [9.31545000e+05, 4.01620000e+03, 6.90500000e+01],\n       [2.82645000e+05, 2.67338800e+04, 7.45900000e+01],\n       [7.01863600e+06, 3.90863900e+04, 8.24000000e+01],\n       [2.26134000e+08, 3.81808000e+03, 7.11700000e+01],\n       [1.27425722e+08, 2.96806800e+04, 8.29800000e+01],\n       [2.34790890e+07, 1.63500000e+03, 6.75300000e+01],\n       [4.92328440e+07, 2.38750000e+04, 7.96500000e+01],\n       [4.60823000e+05, 5.74366800e+04, 8.09500000e+01],\n       [2.52594280e+07, 1.23876700e+04, 7.45400000e+01],\n       [1.07673000e+05, 4.99456000e+03, 6.88100000e+01],\n       [2.91686500e+06, 3.20517000e+03, 6.69300000e+01],\n       [4.81331020e+07, 1.26914000e+03, 6.21400000e+01],\n       [2.24585000e+05, 3.09597400e+04, 7.63600000e+01],\n       [4.15431100e+06, 2.40094600e+04, 8.04500000e+01],\n       [5.92114400e+06, 1.94716000e+03, 6.12900000e+01],\n       [9.26814530e+07, 3.20397000e+03, 7.21000000e+01],\n       [1.76418000e+05, 5.00361000e+03, 7.19200000e+01],\n       [4.60816700e+06, 4.35260400e+04, 8.05800000e+01],\n       [5.81208000e+05, 1.90369000e+03, 6.66600000e+01],\n       [2.33083700e+07, 2.83610000e+04, 7.86000000e+01],\n       [6.54932980e+07, 7.37617000e+03, 6.90800000e+01],\n       [1.13012000e+06, 2.47568000e+03, 6.16000000e+01],\n       [1.40100000e+03, 8.89430000e+02, 6.90000000e+01],\n       [1.18993000e+05, 5.10406000e+03, 7.19600000e+01],\n       [8.61165590e+07, 2.67934000e+03, 7.47000000e+01],\n       [2.15053000e+05, 3.94330000e+03, 7.05000000e+01]])"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#always-the-right-choice",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#always-the-right-choice",
+    "title": "Data Analytics and Visualization",
+    "section": "Always the right choice?",
+    "text": "Always the right choice?\nNo! In some cases untidy data can be preferred!\n\nOften for performance/memory reasons\nWe’ll cover this when we get to spatial data"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#variable-types",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#variable-types",
+    "title": "Data Analytics and Visualization",
+    "section": "Variable types",
+    "text": "Variable types\nA defining characteristic of a variable is its type\n\nnations['population'].dtype\n\ndtype('int64')\n\n\n\nThis should be familar to computer scientists!\n\nThe type of a variable determines what kinds of values it can take and how we should interpret them"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#variable-types-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#variable-types-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Variable types",
+    "text": "Variable types\n\n\n\nNominal\n\nCategorical\nArbitrary\n\nOrdinal\nQuantitative\n\nInterval\nRatio\n\n\n\n\nNominal variables\nAn unordered set of non-numeric values, representing labels or categories\n\nCategorical - Finite\nPossible values are finite and known\n\nColors: {red, green, blue}\nRegions: {South Asia, Europe & Central Asia, …}\n\n\n\nArbitrary - Infinite\nPossible values are unbounded\n\nAddresses: {“12 Main St. Boston MA”, “45 Wall St. New York NY”, …}\nNames: {“John Smith”, “Jane Doe”, …}"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#variable-types-2",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#variable-types-2",
+    "title": "Data Analytics and Visualization",
+    "section": "Variable types",
+    "text": "Variable types\n\n\n\nNominal\n\nCategorical\nArbitrary\n\nOrdinal\nQuantitative\n\nInterval\nRatio\n\n\n\n\nOrdinal variables\nAn ordered set of (usually) non-numeric values, representing levels\n\nGrades: {A, B, C, D, F}\nRatings: {G, PG, PG-13, R}"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#variable-types-3",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#variable-types-3",
+    "title": "Data Analytics and Visualization",
+    "section": "Variable types",
+    "text": "Variable types\n\n\n\nNominal\n\nCategorical\nArbitrary\n\nOrdinal\nQuantitative\n\nInterval\nRatio\n\n\n\n\nQuantitative variables\nNumeric data that we can perform mathematical operations on\n\nInterval\nLocation of 0 is arbitrary, only differences/intervals can be compared\n\nDate-Times: Jan, 19, 2006\n\n\n\nRatio\n0 is well-defined and meaningful. Can compare values as ratios\n\nHeight: {5’3”, 6’1”, 5’9”,…}\nPopulation: 23M, 350k, 1.4B, …"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#operations-by-type",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#operations-by-type",
+    "title": "Data Analytics and Visualization",
+    "section": "Operations by type",
+    "text": "Operations by type\n\n\nNominal (Labels or categories)\n\nConcrete types: str, bool, category\nOperations: =, ≠\n\n\n\nOrdinal (Ordered, non-numeric)\n\nConcrete types: str, int, category\nOperations: =, ≠, &lt;, &gt;\n\n\n\nInterval (Arbitrary 0)\n\nConcrete types: float, int, datetime\nOperations: =, ≠, &lt;, &gt;, -\n\n\n\nRatio (Well-defined 0)\n\nConcrete types: float, int, timedelta\nOperations: =, ≠, &lt;, &gt;, -, /"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#schema",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#schema",
+    "title": "Data Analytics and Visualization",
+    "section": "Schema",
+    "text": "Schema\nThe schema of a data frame is the specification of the set of variables and the type of each variable\n\nIn Pandas we can access this with df.info\n\n\nnations.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 180 entries, 0 to 179\nData columns (total 5 columns):\n #   Column          Non-Null Count  Dtype  \n---  ------          --------------  -----  \n 0   name            180 non-null    object \n 1   region          180 non-null    object \n 2   income          180 non-null    float64\n 3   population      180 non-null    int64  \n 4   lifeExpectancy  180 non-null    float64\ndtypes: float64(2), int64(1), object(2)\nmemory usage: 7.2+ KB"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#series-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#series-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Series",
+    "text": "Series\nWe can also convert the type of a series\n\nnations['population'].astype(float).head()\n\n0    12707546.0\n1     8294941.0\n2     1638393.0\n3    14761339.0\n4     8691005.0\nName: population, dtype: float64\n\n\n\nnations['population'] = nations['population'].astype(float)\nnations.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 180 entries, 0 to 179\nData columns (total 5 columns):\n #   Column          Non-Null Count  Dtype  \n---  ------          --------------  -----  \n 0   name            180 non-null    object \n 1   region          180 non-null    object \n 2   income          180 non-null    float64\n 3   population      180 non-null    float64\n 4   lifeExpectancy  180 non-null    float64\ndtypes: float64(3), object(2)\nmemory usage: 7.2+ KB"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#nominal-types",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#nominal-types",
+    "title": "Data Analytics and Visualization",
+    "section": "Nominal types",
+    "text": "Nominal types\nNon-numeric values use the object type by default\n\nTherefore are treated as arbitrary nominal types\n\n\nnations.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 180 entries, 0 to 179\nData columns (total 5 columns):\n #   Column          Non-Null Count  Dtype  \n---  ------          --------------  -----  \n 0   name            180 non-null    object \n 1   region          180 non-null    object \n 2   income          180 non-null    float64\n 3   population      180 non-null    float64\n 4   lifeExpectancy  180 non-null    float64\ndtypes: float64(3), object(2)\nmemory usage: 7.2+ KB"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#nominal-types-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#nominal-types-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Nominal types",
+    "text": "Nominal types\nIf we want a nominal value to be categorical or ordinal, we can tell Pandas explicitly\n\nnations['region'] = nations['region'].astype('category')\nnations.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 180 entries, 0 to 179\nData columns (total 5 columns):\n #   Column          Non-Null Count  Dtype   \n---  ------          --------------  -----   \n 0   name            180 non-null    object  \n 1   region          180 non-null    category\n 2   income          180 non-null    float64 \n 3   population      180 non-null    float64 \n 4   lifeExpectancy  180 non-null    float64 \ndtypes: category(1), float64(3), object(1)\nmemory usage: 6.1+ KB\n\n\n\nnations['region'].dtype\n\nCategoricalDtype(categories=['America', 'East Asia & Pacific', 'Europe & Central Asia',\n                  'Middle East & North Africa', 'South Asia',\n                  'Sub-Saharan Africa'],\n, ordered=False, categories_dtype=object)"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#index",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#index",
+    "title": "Data Analytics and Visualization",
+    "section": "Index",
+    "text": "Index\nThe index of a DataFrame in Pandas is a special column used to identify each row.\n\nMostly exists for performance reasons. Any column could be used as an index.\n\nBy default the index is a new column that identifies each row with an integer\n\nnations.head()\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546.0\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941.0\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393.0\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339.0\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005.0\n50.95"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#index-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#index-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Index",
+    "text": "Index\nBut we can set any column as the index\n\nSome operations will depend on what the index is\n\n\nnations.set_index('name').head()\n\n\n\n\n\n\n\n\nregion\nincome\npopulation\nlifeExpectancy\n\n\nname\n\n\n\n\n\n\n\n\nAngola\nSub-Saharan Africa\n5055.59\n12707546.0\n47.58\n\n\nBenin\nSub-Saharan Africa\n1457.57\n8294941.0\n61.89\n\n\nBotswana\nSub-Saharan Africa\n12282.28\n1638393.0\n55.12\n\n\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339.0\n53.38\n\n\nBurundi\nSub-Saharan Africa\n457.07\n8691005.0\n50.95"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#missing-data",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#missing-data",
+    "title": "Data Analytics and Visualization",
+    "section": "Missing data",
+    "text": "Missing data\nSometimes a value doesn’t exist!\n\nWhat if we don’t know the life expectency for a country?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#missing-data-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#missing-data-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Missing data",
+    "text": "Missing data\nPandas uses special values to denote missingness:\n\nnp.NaN (Not a number) for general numeric types and categorical types\nNaT (Not a time) for datetime types\nNone or pd.NA for other types"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visual-language",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visual-language",
+    "title": "Data Analytics and Visualization",
+    "section": "Visual language",
+    "text": "Visual language\n\n\n\n\n\n\n\n\nImages perceived as a set of signs\nSender encodes information in signs\nReceiver decodes information from signs\n\nJacques Bertin - Sémiologie Graphique, 1967"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#conceptual-strategy",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#conceptual-strategy",
+    "title": "Data Analytics and Visualization",
+    "section": "Conceptual strategy",
+    "text": "Conceptual strategy\nMap each data dimension (variable) to a corresponding visual dimension\n\n\n\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546.0\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941.0\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393.0\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339.0\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005.0\n50.95"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visual-encoding-dimensions",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visual-encoding-dimensions",
+    "title": "Data Analytics and Visualization",
+    "section": "Visual encoding dimensions",
+    "text": "Visual encoding dimensions"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#example---william-playfair-1786",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#example---william-playfair-1786",
+    "title": "Data Analytics and Visualization",
+    "section": "Example - William Playfair, 1786",
+    "text": "Example - William Playfair, 1786"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#ggplot",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#ggplot",
+    "title": "Data Analytics and Visualization",
+    "section": "Ggplot",
+    "text": "Ggplot\nggplot is a hugely influential visualizatation library.\n\nDesigned by Hadley Wickham\nOnly for the R language\n\nLet’s Plot is a port for Python (and Kotlin)\n\nWe’ll be using it in class"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#csv-and-tsv-files",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#csv-and-tsv-files",
+    "title": "Data Analytics and Visualization",
+    "section": "CSV (and TSV) files",
+    "text": "CSV (and TSV) files\n“Simplest” and most common data file format.\n\nPlain text file\nEach line is a row\nEach column is separated by a delimiter: “,” for CSV, tab for TSV.\nFirst row (usually) specifies column labels"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#loading-csv-and-tsv-files",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#loading-csv-and-tsv-files",
+    "title": "Data Analytics and Visualization",
+    "section": "Loading CSV (and TSV) files",
+    "text": "Loading CSV (and TSV) files\nFiles can be loaded into Pandas with pd.read_csv()"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#csv-and-tsv-issues",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#csv-and-tsv-issues",
+    "title": "Data Analytics and Visualization",
+    "section": "CSV (and TSV) issues",
+    "text": "CSV (and TSV) issues\nNo explicit schema! We need to guess the type of each column\n\nPandas usally does a good job, but could get it wrong!"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#csv-and-tsv-issues-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#csv-and-tsv-issues-1",
+    "title": "Data Analytics and Visualization",
+    "section": "CSV (and TSV) issues",
+    "text": "CSV (and TSV) issues\nAmbiguity! What if a value contains a comma?\n\nUsually handled by quoting text\nLeads to its own issues"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#csv-and-tsv-issues-2",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#csv-and-tsv-issues-2",
+    "title": "Data Analytics and Visualization",
+    "section": "CSV (and TSV) issues",
+    "text": "CSV (and TSV) issues\nLack of standardization! Many different ways of handling different data types\n\nLeads to this:"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#python",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#python",
+    "title": "Data Analytics and Visualization",
+    "section": "Python",
+    "text": "Python\nWe can load a DataFrame from Python structures a s well\n\nColumn format\nRecords format"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#json-javascript-object-notation",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#json-javascript-object-notation",
+    "title": "Data Analytics and Visualization",
+    "section": "JSON (JavaScript Object Notation)",
+    "text": "JSON (JavaScript Object Notation)\nJSON is a plain text format that describes nested list and dict structures (array and object in JavaScript)\n\nPandas can read and write JSON using the columns or records format"
+  },
+  {
+    "objectID": "index.html#syllabus-and-class-policies",
+    "href": "index.html#syllabus-and-class-policies",
+    "title": "Course Overview",
+    "section": "",
+    "text": "Please see the navigation bar above for information on the class schedule, course policies, grading, reference materials, software and more."
   }
 ]

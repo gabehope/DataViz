@@ -1,8 +1,8 @@
 ---
-title: "Course Syllabus"
+title: "Course Overview"
 ---
 
-# Course Description
+# Description
 
 This course will focus on developing the practical skills needed to be an effective data scientist. In particular, students will learn how to collect and clean data, apply methods from statistics and machine learning, and make effective visualizations with industry-standard tools. Through realistic case-studies, students will gain hands-on experience working with various types of data including: tabular, time-series, geo-spatial and network data. A strong emphasis will be placed on clear communication, model interpretability and social responsibility.
 
@@ -49,6 +49,10 @@ Prof. Gabe Hope (he/him)
 
 -   Timeseries, geo-spatial and network data analysis
 
+## Syllabus and Class Policies
+
+Please see the navigation bar above for information on the [class schedule](calendar/calendar.qmd), [course policies](syllabus/policies.qmd), [grading](syllabus/rubric.qmd), [reference materials](syllabus/references.qdm), [software](resources/software.qmd) and more.
+
 ## Recommended textbooks
 
 [R for Data Science](https://r4ds.hadley.nz/) ([Python port](https://byuidatascience.github.io/python4ds/))
@@ -56,3 +60,7 @@ Prof. Gabe Hope (he/him)
 [Modern Data Science with R](https://mdsr-book.github.io/mdsr3e/)
 
 [Python for Data Analysis](https://wesmckinney.com/book/)
+
+[Data Visualization: A Practical Introduction](https://socviz.co/)
+
+[Introduction to Modern Statistics](https://openintro-ims.netlify.app/)
