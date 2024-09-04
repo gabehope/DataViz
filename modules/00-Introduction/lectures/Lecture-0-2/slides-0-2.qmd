@@ -1,21 +1,248 @@
 ---
 title: "Data Analytics and Visualization"
-subtitle: "0-1: Introduction to Data Representations and Visualization"
+subtitle: "0-2: Introduction to Visualization"
 author: "Prof. Gabe Hope"
 format: 
     revealjs:
         theme: ["../../../../theme.scss"]
-revealjs-plugins:
-  - tldraw
 ---
 
+# Why is effective visualization important?
 
-# Visualization
+# January 26, 1986
 
-Why create visualizations?
+## Challenger Mission
+::::: columns
+::: {.column width="50%" }
+![](pictures/challenger/craft.png){fig-align="center" height=600}
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/challenger/crew.png){fig-align="center"}
+
+**Crew of 7:**  Dick Scobee, Michael Smith, Ellison Onizuka, Judith Resnik, Ronald McNair, Gregory Jarvis, and Chirsta McAuliffe.
+:::
+:::::
+
+## A cold launch day
+![](pictures/challenger/ice.png){fig-align="center"}
+
+## Engineering concerns
+
+![](pictures/challenger/diagram.png){fig-align="center"}
+
+## Last minute debate
+
+![](pictures/challenger/warning.png){fig-align="center"}
+
+## A predictable failure
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/challenger/plume.png){fig-align="center"}
+
+Plume indicating an O-ring failure at launch
+:::
+
+::: {.column width="50%"}
+![](pictures/challenger/plume2.png){fig-align="center" height=600}
+:::
+:::::
+
+## Tragedy
+
+![](pictures/challenger/explosion.png){fig-align="center"}
+
+# What went wrong?
+
+## Tufte's take
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+"*...there was a clear proximate cause: an inability to assess the link between cool temperature and O-ring damage on earlier flights...*" 
+
+"*...rocket engineers and managers needed a quick, smart **analysis** of evidence about the threat of cold to the O-rings, as well as an effective **presentation** of evidence in order to convince NASA offcials not to launch*"
+
+- Edward Tufte, Visual Explanations
+:::
+
+::: {.column width="50%"}
+![](pictures/challenger/tufte-portrait.jpg){fig-align="center"  height=600}
+:::
+:::::
+
+## Morton Thiokol Charts
+
+![](pictures/challenger/damage_table.png){fig-align="center" height=300}
+
+![](pictures/challenger/o-ring-history.png){fig-align="center"  height=250}
+
+## Tufte's version
+
+![](pictures/challenger/tufte.png){fig-align="center"}
+
+# Why create visualizations?
+
+## Make informed descisions
+
+The challenger disaster shows the importance of this
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/challenger/damage_table.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](pictures/challenger/tufte.png){fig-align="center"}
+:::
+:::::
+
+## Exploration - Understand data
+
+![](pictures/exploration/quartet-data.png){fig-align="center"}
+
+What are the differences between these 4 datasets?
+
+## Exploration - Understand data
+
+![](pictures/exploration/quartet-data.png){fig-align="center"}
+
+We could try using some basic tools from statistics to answer this question. *e.g. means, variances, corrleations, regression coefficients, etc.*
+
+## Exploration - Understand data
+
+![](pictures/exploration/quartet-stats.png){fig-align="center"}
+
+They're the same for every dataset?!?!
+
+- Can we conclude that the datasets are all the same?
+
+## Exploration - Anscombe's quartet
+
+![](pictures/exploration/quartet.png){fig-align="center"}
+
+Visualization shows there's much more going on!
+
+# Another story...
+
+Link to more entertaining retelling: [here](https://www.youtube.com/watch?v=Na9iO_HEe14)
+
+## 1854 Broad Street cholera outbreak
+
+
+::::: columns
+::: {.column width="50%" style="font-size: 90%"}
+Cholera was a **deadly** disease in 1850's London
+
+Thought to be caused by *miasma* or "bad air"
+
+An especially bad outbreak happend in Soho in 1854...
+:::
+
+::: {.column width="50%"}
+![](pictures/exploration/cartoon.png){fig-align="center"}
+:::
+:::::
+
+## Jon Snow
+
+![](pictures/exploration/got.png){fig-align="center"}
+
+## Jo**h**n Snow
+
+![](pictures/exploration/snow.png){fig-align="center"}
+
+## John Snow's map
+
+![](pictures/exploration/map.png){fig-align="center"}
+
+## John Snow's map
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/exploration/pump.jpg){fig-align="center" height=400}
+:::
+
+::: {.column width="50%"}
+![](pictures/exploration/map.png){fig-align="center" height=400}
+:::
+:::::
+
+**The source:** A pump with contaminated water
+
+## Validation
+
+::::: columns
+::: {.column width="50%" style="font-size: 100%"}
+Even if we *think* we know what's going on, we should visualize to check our understanding!
+
+- **1980:** Jackman shows the effect of earlier work is dominated by an outlier
+:::
+
+::: {.column width="50%"}
+![](pictures/validation/jackman.png){fig-align="center"}
+
+:::
+:::::
+
+# Communication, inspriation & activism
+
+Visualization is a **powerful** tool to share information with the world and inspire change
+
+## W. E. B. DuBois
+
+:::: columns
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/communication/slavery-dubois.png){fig-align="center"  height=500}
+
+
+Sociologist and civil rights activist W. E. B. Du Bois made many influential visualizations.
+:::
+
+::: {.column width="50%"}
+![](pictures/communication/dubois.png){fig-align="center"  height=500}
+:::
+:::::
+
+## Nigel Holmes
+
+:::: columns
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/communication/paychecks.png){fig-align="center"  height=500}
+
+
+Graphic designer Nigel Holmes is known for playful and informative visualizations.
+:::
+
+::: {.column width="50%"}
+![](pictures/communication/monstrous.png){fig-align="center"  height=400}
+![](pictures/communication/holmes.png){fig-align="center"  height=200}
+:::
+:::::
+
+## Mona Chalabi
+
+:::: columns
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/communication/bezos.png){fig-align="center"  height=400}
+
+Contemporary data journalist Mona Chalabi uses visualization to create impactful stories and inspire activism.
+:::
+
+::: {.column width="50%"}
+![](pictures/communication/gaza.png){fig-align="center"  height=400}
+![](pictures/communication/chalabi.png){fig-align="center"  height=200}
+:::
+:::::
+
+# How should we approach visualization?
 
 ## Visual language
 
+Like language, visualization is a **medium** for communication
+
+
+## Bertin: A Semiology of Graphics
 ::::: columns
 ::: {.column width="50%" style="font-size: 50%"}
 ![](pictures/bertin.png){fig-align="center"}
@@ -29,16 +256,10 @@ Sender encodes information in signs
 Receiver decodes information from signs
 
 - ***Jacques Bertin** - Sémiologie Graphique, 1967*
-
 :::
 :::::
 
-
-
-
-## Conceptual strategy
-
-Map each *data dimension* (variable) to a corresponding *visual dimension*
+## Visualization communicates information *efficiently*
 
 ::::: columns
 ::: {.column width="50%" style="font-size: 50%"}
@@ -49,7 +270,165 @@ from lets_plot import *
 LetsPlot.setup_html()
 
 nations = pd.read_csv('data/nations.csv')
-nations.head()
+nations.head(20)
+```
+:::
+
+::: {.column width="50%"}
+```{python}
+#| echo: false
+import pandas as pd
+from lets_plot import *
+LetsPlot.setup_html()
+
+nations = pd.read_csv('data/nations.csv')
+
+ggplot(nations, aes(x='income', y='lifeExpectancy', size='population')) + geom_point(aes(fill='region'), tooltips=layer_tooltips(['name']), stroke=0.5, shape=21, alpha=0.7) + scale_size(trans='sqrt', range = (0.2,12)) + scale_x_continuous(trans='log2', breaks=[500, 700, 1000, 5000, 7000, 10000, 50000, 70000,]) + ggsize(700, 500) + ggtitle('The Wealth and Health of Nations')
+```
+:::
+:::::
+
+::: {style="font-size: 90%"}
+We can process much more information from the visualization than the table.
+:::
+
+## Visual semantics
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/visual-language/semantics.png){fig-align="center"}
+
+*From Jeffery Heer*
+:::
+
+::: {.column width="50%"}
+What can we understand from this plot?
+
+
+:::
+:::::
+
+## Visual semantics
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/visual-language/semantics.png){fig-align="center"}
+
+*From Jeffery Heer*
+:::
+
+::: {.column width="50%"}
+What can we understand from this plot?
+
+- A, B, C are distinguishable
+- B is between A and C
+- BC is twice as long as AB
+:::
+:::::
+
+"*Resemblance, order and proportional are the
+three signfields in graphics.*” - Bertin
+
+# What tools do we have to communicate through visualization?
+
+What is our **vocabulary**?
+
+## Bertin's visual variables
+
+![](pictures/encodings.png){fig-align="center"}
+
+## Exercise!
+
+Sketch a visualization of this small dataset
+
+![](pictures/visual-language/wickham-data.png){fig-align="center"}
+
+# What was your strategy?
+
+# Grammar of Graphics
+
+A **framework** for building visualizations
+
+## Grammar of graphics
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+
+![](pictures/grammar-of-graphics/wilkinson.png){fig-align="center" height=200}
+![](pictures/grammar-of-graphics/cover.png){fig-align="center" height=300}
+
+Original grammar of graphics was introduced by Leland Wilkinson
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/grammar-of-graphics/hadley.jpg){fig-align="center" height=200}
+![](pictures/grammar-of-graphics/ggplot.png){fig-align="center" height=300}
+
+We'll focus on an updated version from Hadley Wickham that forms the basis for **ggplot2** and **Let's Plot**.
+:::
+:::::
+
+## Reminder: ggplot
+
+**ggplot2** is a hugely influential visualization library.
+
+- Designed by Hadley Wickham
+- Only for the R language
+
+**Let's Plot** is a port for Python (and Kotlin)
+
+- We'll be using it in this class
+
+## Components of the grammar of graphics
+
+**Stretching the metaphor:** The *parts of speech* for our visual language
+
+::::: columns
+::: {.column width="50%"}
+- Data
+- Aesthetic mappings
+- Geometries
+- Transforms
+:::
+
+::: {.column width="50%"}
+- Scales
+- Coordinate systems
+- Faceting systems
+- Annotations
+:::
+:::::
+
+# How to build a plot
+
+## Start with **tidy data**
+
+Clearly define the **observations** and **variables** in our dataset
+
+```{python}
+#| echo: false
+import pandas as pd
+from lets_plot import *
+LetsPlot.setup_html()
+
+nations = pd.read_csv('data/nations.csv')
+nations.head(15)
+```
+
+## Define an **aesthetic mapping**
+
+Our aesthetic mapping defines how we'll map each **data dimension** (variable) to a corresponding **visual dimension** (aesthetic)
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+```{python}
+#| echo: false
+import pandas as pd
+from lets_plot import *
+LetsPlot.setup_html()
+
+nations = pd.read_csv('data/nations.csv')
+nations.head(20)
 ```
 :::
 
@@ -64,37 +443,717 @@ nations = pd.read_csv('data/nations.csv')
 
 ggplot(nations, aes(x='income', y='lifeExpectancy', size='population')) + geom_point(aes(fill='region'), tooltips=layer_tooltips(['name']), stroke=0.5, shape=21, alpha=0.7) + scale_size(trans='sqrt', range = (0.2,12)) + scale_x_continuous(trans='log2', breaks=[500, 700, 1000, 5000, 7000, 10000, 50000, 70000,]) + ggsize(800, 500) + ggtitle('The Wealth and Health of Nations')
 ```
+:::
+:::::
+
+## Define an **aesthetic mapping**
+
+Our aesthetic mapping defines how we'll map each **data dimension** (variable) to a corresponding **visual dimension** (aesthetic)
+
+::::: columns
+::: {.column width="50%" style="font-size: 100%"}
+```{python}
+#| echo: false
+import pandas as pd
+from lets_plot import *
+LetsPlot.setup_html()
+
+nations = pd.read_csv('data/nations.csv')
+nations.head()
+```
+
+In our example:
+
+- Income -> x position
+- Life exp. -> y position
+- Population -> size
+- Region -> color
+:::
+
+::: {.column width="50%"}
+```{python}
+#| echo: false
+import pandas as pd
+from lets_plot import *
+LetsPlot.setup_html()
+
+nations = pd.read_csv('data/nations.csv')
+
+ggplot(nations, aes(x='income', y='lifeExpectancy', size='population')) + geom_point(aes(fill='region'), tooltips=layer_tooltips(['name']), stroke=0.5, shape=21, alpha=0.7) + scale_size(trans='sqrt', range = (0.2,12)) + scale_x_continuous(trans='log2', breaks=[500, 700, 1000, 5000, 7000, 10000, 50000, 70000,]) + ggsize(800, 500) + ggtitle('The Wealth and Health of Nations')
+```
+:::
+:::::
+
+## Examples of visual encoding dimensions
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/grammar-of-graphics/channels-1.png){fig-align="center" height=600}
+:::
+
+::: {.column width="50%"}
+![](pictures/grammar-of-graphics/channels-2.png){fig-align="center" height=600}
+:::
+:::::
+
+## The set of possible encodings depends on the **variable type**
+
+**Categorical** variables have a different space of possibilities
+
+![](pictures/grammar-of-graphics/categorical.png){fig-align="center"}
+
+## Choose a **geometry**
+
+How do we represent each observation?
+
+
+```{python}
+#| echo: false
+import pandas as pd
+from lets_plot import *
+LetsPlot.setup_html()
+
+nations = pd.read_csv('data/nations.csv')
+
+ggplot(nations, aes(x='income', y='lifeExpectancy', size='population')) + geom_point(aes(fill='region'), tooltips=layer_tooltips(['name']), stroke=0.5, shape=21, alpha=0.7) + scale_size(trans='sqrt', range = (0.2,12)) + scale_x_continuous(trans='log2', breaks=[500, 700, 1000, 5000, 7000, 10000, 50000, 70000,]) + ggsize(1000, 500) + ggtitle('The Wealth and Health of Nations')
+```
+
+
+Here we are representing each observation with a distinct **point** in 2-d space (a scatterplot).
+
+## Many different geometries
+
+![](pictures/grammar-of-graphics/geoms.png){fig-align="center"}
+
+## Geometries are abstract
+
+The same geometry might be rendered in different ways
+
+![](pictures/grammar-of-graphics/intervals.png){fig-align="center"}
+
+
+
+## Geometries are abstract
+
+Diffent geometries may have different requirements (and options) for aesthetics:
+
+::::: columns
+::: {.column width="50%" }
+**Point:** x and y coordinates
+
+**Line:** x and y coordinates, order
+
+**Bar:** x or y coordinate, length
+:::
+
+::: {.column width="50%"}
+**Text:** x and y coordinates, text
+
+**Interval:** x coordinate, min, max
+
+**Boxplot:** Median, quantiles
+:::
+:::::
+
+![](pictures/grammar-of-graphics/reqz.png){fig-align="center"}
+
+
+## Define a **scale** for each mapping
+
+A scale determines how we translate the **domain** of a variable to the **range** of a visual dimension
+
+![](pictures/grammar-of-graphics/scales.png){fig-align="center"}
+
+
+
+## Scales are (usually) invertable functions
+
+Most commonly a **linear** function
+
+![](pictures/grammar-of-graphics/linear.png){fig-align="center" height=200}
+
+
+But can be **non-linear**, e.g. logarithmic
+
+![](pictures/grammar-of-graphics/log.png){fig-align="center" height=200}
+
+
+## Show scales through axes and legends
+
+**Axes** show the scale for each *position* dimension.
+
+**Legends** show the scale for other dimensions (color, shape, size, etc.)
+
+```{python}
+#| echo: false
+import pandas as pd
+from lets_plot import *
+LetsPlot.setup_html()
+
+nations = pd.read_csv('data/nations.csv')
+
+ggplot(nations, aes(x='income', y='lifeExpectancy', size='population')) + geom_point(aes(fill='region'), tooltips=layer_tooltips(['name']), stroke=0.5, shape=21, alpha=0.7) + scale_size(trans='sqrt', range = (0.2,12)) + scale_x_continuous(trans='log2', breaks=[500, 700, 1000, 5000, 7000, 10000, 50000, 70000,]) + ggsize(1000, 500) + ggtitle('The Wealth and Health of Nations')
+```
+
+
+
+## Some scales are complicated!
+
+Color is especially tricky. 
+
+- Humans percieve color non-linearly
+- Not all humans percieve the same set of colors
+- One color can encode multiple channels
+
+We'll cover this in a later lecture!
+
+## (Optional) Define a **coordinate system**
+
+A **coordinate system** defines how the range of each scale is represented. Usually Cartesian coordinate system, but others are possible, such as *polar*
+
+![](pictures/grammar-of-graphics/coords.png){fig-align="center"}
+
+
+# A **Layered** Grammar of Graphics
+
+Hadley Wickham
+
+## A **layer** is a single view of the data
+
+Encompasses data + mapping + geometry. A plot may have more than one layer to show multiple properties of a dataset or multiple datasets.
+
+![](pictures/grammar-of-graphics/layers.png){fig-align="center"}
+
+
+## Scales are (generally) **shared** across layers
+
+![](pictures/grammar-of-graphics/layers.png){fig-align="center"}
+
+
+## Finally: add **annotations**
+
+**Annotations**, such as titles captions and highlights, give additional context and information to the viewer.
+
+![](pictures/grammar-of-graphics/annotations.png){fig-align="center"}
+
+
+# Translating the grammar of graphics to code: ggplot2
+Or **Let's Plot** in this class
+
+## Setup
+
+Import the relevant libraries and load a dataset in the tidy format
+
+```{python}
+#| echo: true
+import pandas as pd
+from lets_plot import *
+LetsPlot.setup_html()
+
+nations = pd.read_csv('data/nations.csv')
+```
+
+We'll use our Gapminder dataset from earlier
+
+```{python}
+#| echo: true
+nations
+```
+
+## Creating a plot
+
+The `ggplot()` function will create an empty plot object.
+
+```{python}
+#| echo: true
+
+ggplot()
+```
+::: {style="font-size: 75%"}
+*Here we get an error as we haven't defined our components!*
+:::
+
+
+## Adding a layer
+
+We can add a **layer** to our plot, specifying the data, mapping and geometry. Here we'll add a layer with a **point** geometry.
+
+::::: columns
+::: {.column width="60%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(data=nations, 
+  mapping=aes(x='income', y='lifeExpectancy')
+)
+```
+:::
+::: {.column style="font-size: 75%; width: 38%;"}
+`aes()` defines an aesthetic mapping, using the column names of our dataframe.
+
+`geom_point()` creates a point geometry layer.
+:::
+:::::
+
+## Equivalent syntax
+
+If we want default data and mappings to share across layers we can pass them to the `ggplot()` function.
+
+::::: columns
+::: {.column width="60%"}
+```{python}
+#| echo: true
+ggplot(
+  data=nations, 
+  mapping=aes(x='income', y='lifeExpectancy')
+) + geom_point() + geom_line()
+```
+:::
+::: {.column style="font-size: 75%; width: 38%;"}
+Here we'll add both point and line geometries
+:::
+:::::
+
+## Choosing scales
+
+We didn't need to specify scales, Let's plot has sensible defaults.
+
+::::: columns
+::: {.column width="60%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(data=nations, 
+  mapping=aes(x='income', y='lifeExpectancy')
+) + scale_x_continuous(trans='log2')
+```
+:::
+::: {.column style="font-size: 75%; width: 38%;"}
+we can change the scales by adding them to our specification.
+
+Here we'll set the x axis scale to be **logarithmic**
+:::
+:::::
+
+
+
+## Changing the coordinate system
+
+We can similarly change the default (Cartesean) coordinate system.
+
+::::: columns
+::: {.column width="60%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(data=nations, 
+  mapping=aes(x='income', y='lifeExpectancy')
+) + coord_polar(theta='y') + scale_x_continuous(trans='log2')
+```
+:::
+::: {.column style="font-size: 75%; width: 38%;"}
+Here we'll make a **polar** plot
+:::
+:::::
+
+    
+
+## Adding annotations
+
+We can also add annotations, such as a plot title. `ggtitle()` will add a title to our plot.
+
+::::: columns
+::: {.column width="60%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(data=nations, 
+  mapping=aes(x='income', y='lifeExpectancy')
+) +  ggtitle('Income vs. Life Exp.')
+```
+:::
+::: {.column style="font-size: 75%; width: 38%;"}
 
 :::
 :::::
 
-## Visual encoding dimensions
+## Configuration
 
-![](pictures/encodings.png){fig-align="center"}
+Outside of our grammar, we can configure the rendering of our plot. 
 
+::::: columns
+::: {.column width="60%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(data=nations, 
+  mapping=aes(x='income', y='lifeExpectancy')
+) +  ggsize(400, 400)
+```
+:::
+::: {.column style="font-size: 75%; width: 38%;"}
+`ggsize()` lets us set the size of the output.
 
-## Example - William Playfair, 1786
-
-![](pictures/playfair.png){fig-align="center"}
-
-# Visualizations in code 
-
-ggplot + Let's Plot
-
-## Ggplot
-
-**ggplot** is a hugely influential visualizatation library.
-
-- Designed by Hadley Wickham
-- Only for the R language
-
-**Let's Plot** is a port for Python (and Kotlin)
-
-- We'll be using it in class
-
-# Example: Cars
+`theme` lets us adjust many other aesthetic properties.
+:::
+:::::
 
 
+
+
+# How do we make good choices when making visualizations?
+
+# A *poetry* of graphics
+
+## Exercise: Aesthetic mappings
+
+Let's start with how we choose aesthetic mappings
+
+We'll replicate a famous experiment from Cleveland and McGill!
+
+Open this form: [https://forms.gle/RfNNwfRcPtEBRGZh7](https://forms.gle/RfNNwfRcPtEBRGZh7)
+
+# What did we find?
+
+![](pictures/perception/tasks.png){fig-align="center"}
+
+## Previous studies
+
+![](pictures/perception/heer.png){fig-align="center"}
+
+Some channels are **far** more effective at communicating values.
+
+## MacKinlay's Ranking
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/perception/ranking.png){fig-align="center"}
+
+Most effective representation may depend on the **type** of data
+:::
+
+::: {.column width="50%"}
+![](pictures/perception/aesthetics.png){fig-align="center" height=600}
+:::
+:::::
+
+# Some principles
+
+![](pictures/perception/jock.png){fig-align="center"}
+
+From Jock MacKinlay
+
+## A first principle: **importance ordering**
+
+"*Encode more important information more effectively*" 
+
+- A visualization is more **effective** than another
+visualization if the information conveyed by one
+visualization is more readily perceived than the
+information in the other visualization.
+
+## Another principle: **expressiveness**
+
+"*A set of facts is **expressible** in a* [visual] *language if it contains a sentence* [visualization] *that:*"
+
+- "*Encodes **all** the facts in the set*"
+- "*Encodes **only** the facts in the set*"
+
+**What does this mean?**
+
+## Express all the facts: **overplotting**
+
+Overlapping points can make it impossible to tell the number of observations
+
+![](pictures/perception/overplotting.png){fig-align="center"}
+
+*How many total cars are represented?*
+
+## Encode only the facts: **consistency**
+
+The properties of the image (visual variables) should match the properties of the data
+
+![](pictures/perception/cars.png){fig-align="center"}
+
+*Nations are not ordinal!*
+
+## Encode only the facts: **ordering**
+
+Visual orderings convey meaning, even when there is none!
+
+- "*Because we are almost never interested in seeing **Alabama first**, it is astonishing how often
+data displays use alphabetical order as the
+organizing principle of choice*" - Howard Wainer
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/perception/foods.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](pictures/perception/french-foods.png){fig-align="center"}
+:::
+:::::
+
+## Violations of these principles
+The following charts from Morton Thiokol documented O-ring damage on pre-challenger flights
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/challenger/mt-plot-1.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](pictures/challenger/mt-plot-2.png){fig-align="center"}
+:::
+:::::
+
+*What principle(s) are violated here?*
+
+## Tufte's fixes
+
+Temperature is more important than date!
+
+![](pictures/challenger/mt-plot-tufte.png){fig-align="center"}
+
+## Tufte's fixes
+
+Ordering alone doesn't effectively convey differences!
+
+![](pictures/challenger/mt-scatter.png){fig-align="center"}
+
+# *Above all else show the data*
+
+# More principles!
+
+![](pictures/challenger/tufte-portrait.jpg){fig-align="center"}
+
+From Edward Tufte
+
+## Tufte's philosophy: **minimalism**
+
+Five principles
+
+- Above all else show the data
+- Maximize the data-ink ratio
+- Erase non-data-ink
+- Erase redundant data-ink
+- Revise and edit
+
+## Data-ink ratio
+
+::::: columns
+::: {.column width="50%" style="font-size: 100%"}
+Heuristic for visual complexity
+
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+
+![](pictures/data-to-ink/ratio.png){fig-align="center" height=200}
+
+:::
+:::::
+
+::::: columns
+::: {.column width="50%" style="font-size: 60%"}
+Low data-ink ratio (*William Playfair 1785*):
+![](pictures/data-to-ink/playfair-messy.png){fig-align="center" height=300}
+
+
+:::
+
+::: {.column width="50%" style="font-size: 60%"}
+High data-ink ratio (*William Playfair 1786*):
+![](pictures/data-to-ink/playfair.png){fig-align="center" height=300}
+
+:::
+:::::
+
+
+## Maximal data-ink ratio: EEG
+
+Can't erase anything without losing information
+
+![](pictures/data-to-ink/eeg.png){fig-align="center"}
+
+## Data-ink ratio
+
+Can be used to guide visual design (*Revise and edit!*):
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/data-to-ink/bar-1.png){fig-align="center" height=200}
+
+A simple bar chart
+
+![](pictures/data-to-ink/bar-3.png){fig-align="center" height=200}
+
+and the axis rule
+
+
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/data-to-ink/bar-2.png){fig-align="center" height=200}
+
+We can remove the outline
+
+![](pictures/data-to-ink/bar-4.png){fig-align="center" height=200}
+
+even re-encode the axis with whitespace!
+:::
+
+:::::
+
+::: {style="font-size: 75%"}
+
+:::
+
+## Data-ink ratio
+
+
+
+::::: columns
+::: {.column width="50%" style="font-size: 100%"}
+
+Can convey more information.
+
+- Here the axes convey the extents of the data
+
+![](pictures/data-to-ink/extents.png){fig-align="center"}
+
+:::
+
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/data-to-ink/range-frame.png){fig-align="center"}
+
+:::
+
+:::::
+
+
+
+## Data-ink ratio
+
+Can be used to derive new forms
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/data-to-ink/tukey-boxplot.png){fig-align="center" height=400}
+
+John Tukey's box plot
+:::
+
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/data-to-ink/tufte-boxplot.png){fig-align="center" height=400}
+
+Tufte's simplification
+:::
+
+:::::
+
+## Data-ink ratio
+
+Sometimes Tufte went a little far...
+![](pictures/data-to-ink/boxplots.png){fig-align="center"  height=500}
+
+*Is this really better?*
+
+## Chart junk
+
+Distracting patterns and unnecessary artistic embelishment 
+
+![](pictures/chartjunk/junky.png){fig-align="center"}
+
+::: {style="font-size: 75%"}
+*A typical example*
+:::
+
+
+## Distracting patterns
+
+Patterns can introduce visual artifacts and distract from the data.
+
+![](pictures/chartjunk/patterns.png){fig-align="center"}
+
+## Unnecessary artistic embellishment
+
+Which conveys data more effectively?
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/challenger/mt-scatter.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](pictures/challenger/tufte.png){fig-align="center"}
+:::
+:::::
+
+## "This may be the worst graphic ever put into print"
+
+![](pictures/chartjunk/worst.png){fig-align="center"}
+
+# But is Tufte right?
+
+## Artistic embellishment
+
+Which plot is more clear? Which is more *memorable*?
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/data-to-ink/monstrous.png){fig-align="center" height=400}
+
+*Nigel Holmes' visual*
+:::
+
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/data-to-ink/non-monstrous.png){fig-align="center" height=400}
+
+*A simplified visual*
+:::
+:::::
+
+## A perceptual study
+
+*Bateman et. al.* put this to the test! 
+
+- Subjects compared several plots from Holmes to simplified charts.
+
+![](pictures/data-to-ink/storytelling.png){fig-align="center"}
+
+## The results
+
+::::: columns
+::: {.column width="50%" style="font-size: 100%"}
+Subject better remembered the charts with "junk"!
+
+- **Especially** in the long term
+:::
+
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/data-to-ink/recall.png){fig-align="center" height=600}
+:::
+
+:::::
+
+
+## The results
+
+They also preferred them
+
+![](pictures/data-to-ink/preferences.png){fig-align="center"}
+
+## Takeaway
+
+The appropriate level of "junk" is the subject of ongoing research and debate
+
+- Tufte's principles can make plots more **effective**
+- Embellishment can make plots more **memorable**
+
+# We'll cover more principles in future lectures!
+
+# **Epilogue:** The best graphic ever put into print?
+
+## **Tufte's answer:** Charles Minard's visualization of Napoleon's march
+
+![](pictures/data-to-ink/march.png){fig-align="center"}
 
 
 # File formats and loading data

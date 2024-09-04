@@ -29,12 +29,76 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../../../site_libs/revealjs/plugin/tldreveal/tldraw.css" rel="stylesheet">
   <link href="../../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -331,7 +395,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Data Analytics and Visualization</h1>
-  <p class="subtitle">0-1: Introduction to Data Representations and Visualization</p>
+  <p class="subtitle">0-2: Introduction to Visualization</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -342,13 +406,281 @@ Prof.&nbsp;Gabe Hope
 </div>
 
 </section>
+<section id="why-is-effective-visualization-important" class="title-slide slide level1 center">
+<h1>Why is effective visualization important?</h1>
+
+</section>
+
 <section>
-<section id="visualization" class="title-slide slide level1 center">
-<h1>Visualization</h1>
-<p>Why create visualizations?</p>
+<section id="january-26-1986" class="title-slide slide level1 center">
+<h1>January 26, 1986</h1>
+
+</section>
+<section id="challenger-mission" class="slide level2">
+<h2>Challenger Mission</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/challenger/craft.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div><div class="column" style="font-size: 75%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/challenger/crew.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<p><strong>Crew of 7:</strong> Dick Scobee, Michael Smith, Ellison Onizuka, Judith Resnik, Ronald McNair, Gregory Jarvis, and Chirsta McAuliffe.</p>
+</div></div>
+</section>
+<section id="a-cold-launch-day" class="slide level2">
+<h2>A cold launch day</h2>
+
+<img data-src="pictures/challenger/ice.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="engineering-concerns" class="slide level2">
+<h2>Engineering concerns</h2>
+
+<img data-src="pictures/challenger/diagram.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="last-minute-debate" class="slide level2">
+<h2>Last minute debate</h2>
+
+<img data-src="pictures/challenger/warning.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="a-predictable-failure" class="slide level2">
+<h2>A predictable failure</h2>
+<div class="columns">
+<div class="column" style="font-size: 75%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/challenger/plume.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<p>Plume indicating an O-ring failure at launch</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/challenger/plume2.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="tragedy" class="slide level2">
+<h2>Tragedy</h2>
+
+<img data-src="pictures/challenger/explosion.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<section>
+<section id="what-went-wrong" class="title-slide slide level1 center">
+<h1>What went wrong?</h1>
+
+</section>
+<section id="tuftes-take" class="slide level2">
+<h2>Tufte’s take</h2>
+<div class="columns">
+<div class="column" style="font-size: 75%">
+<p>“<em>…there was a clear proximate cause: an inability to assess the link between cool temperature and O-ring damage on earlier flights…</em>”</p>
+<p>“<em>…rocket engineers and managers needed a quick, smart <strong>analysis</strong> of evidence about the threat of cold to the O-rings, as well as an effective <strong>presentation</strong> of evidence in order to convince NASA offcials not to launch</em>”</p>
+<ul>
+<li>Edward Tufte, Visual Explanations</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/challenger/tufte-portrait.jpg" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="morton-thiokol-charts" class="slide level2">
+<h2>Morton Thiokol Charts</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/challenger/damage_table.png" class="quarto-figure quarto-figure-center" height="300"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/challenger/o-ring-history.png" class="quarto-figure quarto-figure-center" height="250"></p>
+</figure>
+</div>
+</section>
+<section id="tuftes-version" class="slide level2">
+<h2>Tufte’s version</h2>
+
+<img data-src="pictures/challenger/tufte.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<section>
+<section id="why-create-visualizations" class="title-slide slide level1 center">
+<h1>Why create visualizations?</h1>
+
+</section>
+<section id="make-informed-descisions" class="slide level2">
+<h2>Make informed descisions</h2>
+<p>The challenger disaster shows the importance of this</p>
+<div class="columns">
+<div class="column" style="font-size: 75%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/challenger/damage_table.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/challenger/tufte.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="exploration---understand-data" class="slide level2">
+<h2>Exploration - Understand data</h2>
+
+<img data-src="pictures/exploration/quartet-data.png" class="quarto-figure quarto-figure-center r-stretch"><p>What are the differences between these 4 datasets?</p>
+</section>
+<section id="exploration---understand-data-1" class="slide level2">
+<h2>Exploration - Understand data</h2>
+
+<img data-src="pictures/exploration/quartet-data.png" class="quarto-figure quarto-figure-center r-stretch"><p>We could try using some basic tools from statistics to answer this question. <em>e.g.&nbsp;means, variances, corrleations, regression coefficients, etc.</em></p>
+</section>
+<section id="exploration---understand-data-2" class="slide level2">
+<h2>Exploration - Understand data</h2>
+
+<img data-src="pictures/exploration/quartet-stats.png" class="quarto-figure quarto-figure-center r-stretch"><p>They’re the same for every dataset?!?!</p>
+<ul>
+<li>Can we conclude that the datasets are all the same?</li>
+</ul>
+</section>
+<section id="exploration---anscombes-quartet" class="slide level2">
+<h2>Exploration - Anscombe’s quartet</h2>
+
+<img data-src="pictures/exploration/quartet.png" class="quarto-figure quarto-figure-center r-stretch"><p>Visualization shows there’s much more going on!</p>
+</section></section>
+<section>
+<section id="another-story" class="title-slide slide level1 center">
+<h1>Another story…</h1>
+<p>Link to more entertaining retelling: <a href="https://www.youtube.com/watch?v=Na9iO_HEe14">here</a></p>
+</section>
+<section id="broad-street-cholera-outbreak" class="slide level2">
+<h2>1854 Broad Street cholera outbreak</h2>
+<div class="columns">
+<div class="column" style="font-size: 90%">
+<p>Cholera was a <strong>deadly</strong> disease in 1850’s London</p>
+<p>Thought to be caused by <em>miasma</em> or “bad air”</p>
+<p>An especially bad outbreak happend in Soho in 1854…</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/exploration/cartoon.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="jon-snow" class="slide level2">
+<h2>Jon Snow</h2>
+
+<img data-src="pictures/exploration/got.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="john-snow" class="slide level2">
+<h2>Jo<strong>h</strong>n Snow</h2>
+
+<img data-src="pictures/exploration/snow.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="john-snows-map" class="slide level2">
+<h2>John Snow’s map</h2>
+
+<img data-src="pictures/exploration/map.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="john-snows-map-1" class="slide level2">
+<h2>John Snow’s map</h2>
+<div class="columns">
+<div class="column" style="font-size: 75%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/exploration/pump.jpg" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/exploration/map.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</div></div>
+<p><strong>The source:</strong> A pump with contaminated water</p>
+</section>
+<section id="validation" class="slide level2">
+<h2>Validation</h2>
+<div class="columns">
+<div class="column" style="font-size: 100%">
+<p>Even if we <em>think</em> we know what’s going on, we should visualize to check our understanding!</p>
+<ul>
+<li><strong>1980:</strong> Jackman shows the effect of earlier work is dominated by an outlier</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/validation/jackman.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="communication-inspriation-activism" class="title-slide slide level1 center">
+<h1>Communication, inspriation &amp; activism</h1>
+<p>Visualization is a <strong>powerful</strong> tool to share information with the world and inspire change</p>
+</section>
+<section id="w.-e.-b.-dubois" class="slide level2">
+<h2>W. E. B. DuBois</h2>
+<div class="columns">
+<div class="column" style="font-size: 75%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/communication/slavery-dubois.png" class="quarto-figure quarto-figure-center" height="500"></p>
+</figure>
+</div>
+<p>Sociologist and civil rights activist W. E. B. Du Bois made many influential visualizations.</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/communication/dubois.png" class="quarto-figure quarto-figure-center" height="500"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="nigel-holmes" class="slide level2">
+<h2>Nigel Holmes</h2>
+<div class="columns">
+<div class="column" style="font-size: 75%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/communication/paychecks.png" class="quarto-figure quarto-figure-center" height="500"></p>
+</figure>
+</div>
+<p>Graphic designer Nigel Holmes is known for playful and informative visualizations.</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="pictures/communication/monstrous.png" class="quarto-figure quarto-figure-center" height="400"> <img data-src="pictures/communication/holmes.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</div></div>
+</section>
+<section id="mona-chalabi" class="slide level2">
+<h2>Mona Chalabi</h2>
+<div class="columns">
+<div class="column" style="font-size: 75%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/communication/bezos.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+<p>Contemporary data journalist Mona Chalabi uses visualization to create impactful stories and inspire activism.</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="pictures/communication/gaza.png" class="quarto-figure quarto-figure-center" height="400"> <img data-src="pictures/communication/chalabi.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</div></div>
+</section></section>
+<section>
+<section id="how-should-we-approach-visualization" class="title-slide slide level1 center">
+<h1>How should we approach visualization?</h1>
+
 </section>
 <section id="visual-language" class="slide level2">
 <h2>Visual language</h2>
+<p>Like language, visualization is a <strong>medium</strong> for communication</p>
+</section>
+<section id="bertin-a-semiology-of-graphics" class="slide level2">
+<h2>Bertin: A Semiology of Graphics</h2>
 <div class="columns">
 <div class="column" style="font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
@@ -365,15 +697,14 @@ Prof.&nbsp;Gabe Hope
 </ul>
 </div></div>
 </section>
-<section id="conceptual-strategy" class="slide level2">
-<h2>Conceptual strategy</h2>
-<p>Map each <em>data dimension</em> (variable) to a corresponding <em>visual dimension</em></p>
+<section id="visualization-communicates-information-efficiently" class="slide level2">
+<h2>Visualization communicates information <em>efficiently</em></h2>
 <div class="columns">
 <div class="column" style="font-size: 50%">
-<div id="0a5180e8" class="cell" data-execution_count="1">
+<div id="17b2e561" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 
-            <div id="cTaxmv"></div>
+            <div id="rMCLgc"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -397,9 +728,9 @@ Prof.&nbsp;Gabe Hope
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("cTaxmv").appendChild(div);
+                        document.getElementById("rMCLgc").appendChild(div);
                     };
-                    var e = document.getElementById("cTaxmv");
+                    var e = document.getElementById("rMCLgc");
                     e.appendChild(script);
                 })()
             </script>
@@ -473,6 +804,126 @@ Prof.&nbsp;Gabe Hope
 <td>8691005</td>
 <td>50.95</td>
 </tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>Cameroon</td>
+<td>Sub-Saharan Africa</td>
+<td>1997.18</td>
+<td>18054929</td>
+<td>51.39</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>Cape Verde</td>
+<td>Sub-Saharan Africa</td>
+<td>3456.14</td>
+<td>426113</td>
+<td>71.68</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>Chad</td>
+<td>Sub-Saharan Africa</td>
+<td>1557.83</td>
+<td>10541156</td>
+<td>48.97</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>Comoros</td>
+<td>Sub-Saharan Africa</td>
+<td>1016.42</td>
+<td>731281</td>
+<td>65.77</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>Congo, Dem. Rep.</td>
+<td>Sub-Saharan Africa</td>
+<td>358.80</td>
+<td>66604314</td>
+<td>47.81</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>Congo, Rep.</td>
+<td>Sub-Saharan Africa</td>
+<td>3834.67</td>
+<td>3903318</td>
+<td>53.75</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>Cote d'Ivoire</td>
+<td>Sub-Saharan Africa</td>
+<td>1520.23</td>
+<td>18373060</td>
+<td>57.86</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>Equatorial Guinea</td>
+<td>Sub-Saharan Africa</td>
+<td>15342.20</td>
+<td>562339</td>
+<td>50.64</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>Eritrea</td>
+<td>Sub-Saharan Africa</td>
+<td>548.37</td>
+<td>5028475</td>
+<td>60.03</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>Ethiopia</td>
+<td>Sub-Saharan Africa</td>
+<td>812.16</td>
+<td>78254090</td>
+<td>55.69</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>Gabon</td>
+<td>Sub-Saharan Africa</td>
+<td>12704.99</td>
+<td>1484149</td>
+<td>60.89</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">16</td>
+<td>Ghana</td>
+<td>Sub-Saharan Africa</td>
+<td>1382.95</td>
+<td>23336661</td>
+<td>56.83</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">17</td>
+<td>Guinea</td>
+<td>Sub-Saharan Africa</td>
+<td>908.86</td>
+<td>10211437</td>
+<td>58.35</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">18</td>
+<td>Guinea-Bissau</td>
+<td>Sub-Saharan Africa</td>
+<td>568.94</td>
+<td>1502442</td>
+<td>48.20</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">19</td>
+<td>Kenya</td>
+<td>Sub-Saharan Africa</td>
+<td>1493.53</td>
+<td>36529155</td>
+<td>54.95</td>
+</tr>
 </tbody>
 </table>
 
@@ -480,10 +931,10 @@ Prof.&nbsp;Gabe Hope
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="8c0e54aa" class="cell" data-execution_count="2">
+<div id="ec329655" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 
-            <div id="i81L1L"></div>
+            <div id="TaLp0T"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -507,16 +958,653 @@ Prof.&nbsp;Gabe Hope
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("i81L1L").appendChild(div);
+                        document.getElementById("TaLp0T").appendChild(div);
                     };
-                    var e = document.getElementById("i81L1L");
+                    var e = document.getElementById("TaLp0T");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 <div class="cell-output cell-output-display" data-execution_count="2">
-   <div id="5pIuMs"></div>
+   <div id="kSg1NM"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"data":{
+"name":["Angola","Benin","Botswana","Burkina Faso","Burundi","Cameroon","Cape Verde","Chad","Comoros","Congo, Dem. Rep.","Congo, Rep.","Cote d'Ivoire","Equatorial Guinea","Eritrea","Ethiopia","Gabon","Ghana","Guinea","Guinea-Bissau","Kenya","Lesotho","Liberia","Madagascar","Malawi","Mali","Mauritania","Mauritius","Mayotte","Mozambique","Namibia","Niger","Nigeria","Reunion","Rwanda","Sao Tome and Principe","Senegal","Sierra Leone","Somalia","South Africa","Sudan","Swaziland","Tanzania","Togo","Uganda","Zambia","Zimbabwe","Afghanistan","Bangladesh","Bhutan","India","Maldives","Nepal","Pakistan","Sri Lanka","Algeria","Bahrain","Djibouti","Iraq","Israel","Jordan","Kuwait","Lebanon","Libya","Morocco","Oman","Qatar","Saudi Arabia","Tunisia","United Arab Emirates","West Bank and Gaza","Yemen, Rep.","Argentina","Aruba","Barbados","Belize","Bolivia","Brazil","Canada","Chile","Colombia","Costa Rica","Cuba","Ecuador","El Salvador","French Guiana","Grenada","Guadeloupe","Guatemala","Guyana","Haiti","Honduras","Jamaica","Martinique","Mexico","Netherlands Antilles","Nicaragua","Panama","Paraguay","Peru","Puerto Rico","Suriname","Trinidad and Tobago","United States","Uruguay","Albania","Armenia","Austria","Azerbaijan","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Denmark","Estonia","Finland","France","Georgia","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kazakhstan","Latvia","Lithuania","Luxembourg","Macedonia, FYR","Malta","Moldova","Montenegro","Netherlands","Norway","Poland","Portugal","Romania","Serbia","Slovak Republic","Slovenia","Spain","Sweden","Switzerland","Tajikistan","Turkey","Turkmenistan","Ukraine","United Kingdom","Uzbekistan","Australia","Brunei","Cambodia","China","Fiji","French Polynesia","Hong Kong, China","Indonesia","Japan","Korea, Dem. Rep.","Korea, Rep.","Macao, China","Malaysia","Micronesia, Fed. Sts.","Mongolia","Myanmar","New Caledonia","New Zealand","Papua New Guinea","Philippines","Samoa","Singapore","Solomon Islands","Taiwan","Thailand","Timor-Leste","Tokelau","Tonga","Vietnam","Vanuatu"],
+"region":["Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","South Asia","South Asia","South Asia","South Asia","South Asia","South Asia","South Asia","South Asia","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific"],
+"income":[5055.59,1457.57,12282.28,1234.42,457.07,1997.18,3456.14,1557.83,1016.42,358.8,3834.67,1520.23,15342.2,548.37,812.16,12704.99,1382.95,908.86,568.94,1493.53,1521.4,474.9,1006.9,866.35,1136.17,1775.87,11411.53,9617.82,888.65,4952.26,643.39,2158.98,7670.12,995.27,1703.43,1700.05,893.6,943.04,9141.27,2778.61,4728.18,1220.25,888.01,1202.53,1442.06,443.74,1216.68,1492.0,5053.83,2731.0,5081.79,1224.73,2603.0,4254.13,6207.17,24226.51,2176.79,3518.18,25463.69,5109.39,42443.53,12766.21,12051.62,4162.93,22804.85,74138.28,21138.18,7499.61,33734.94,3084.56,2313.16,13498.04,25351.09,15846.77,6998.08,4007.16,9569.78,34569.63,13087.38,7090.69,9551.56,9277.96,7035.45,5646.85,8202.74,8826.9,7788.25,5163.22,3776.95,1198.05,3473.46,7023.74,14627.13,11250.37,23178.37,2591.39,10796.68,4054.3,7858.97,18970.51,8199.03,17826.05,41256.08,11461.03,6546.27,4523.44,35636.42,9088.42,11574.43,32256.64,7341.98,10840.26,14110.46,25643.45,32670.06,16349.13,30602.73,29774.85,4168.7,31191.15,27626.11,16982.8,34989.73,35692.95,26160.59,10612.29,13021.94,14928.78,70857.46,8364.79,21327.85,2593.42,12257.79,36074.53,47915.0,16465.8,19898.43,10868.12,10005.22,19186.01,24778.21,26811.93,32021.0,38003.92,1775.38,8040.78,5702.66,5730.86,31042.47,2586.96,34327.26,44738.99,1830.97,7226.07,4016.2,26733.88,39086.39,3818.08,29680.68,1635.0,23875.0,57436.68,12387.67,4994.56,3205.17,1269.14,30959.74,24009.46,1947.16,3203.97,5003.61,43526.04,1903.69,28361.0,7376.17,2475.68,889.43,5104.06,2679.34,3943.3],
+"population":[1.2707546E7,8294941.0,1638393.0,1.4761339E7,8691005.0,1.8054929E7,426113.0,1.0541156E7,731281.0,6.6604314E7,3903318.0,1.837306E7,562339.0,5028475.0,7.825409E7,1484149.0,2.3336661E7,1.0211437E7,1502442.0,3.6529155E7,2002749.0,3332483.0,1.9757525E7,1.3647273E7,1.2360306E7,3364940.0,1260781.0,216334.0,2.0203186E7,2063927.0,1.3272679E7,1.3828324E8,808506.0,9077425.0,205901.0,1.2548243E7,6286617.0,9379907.0,4.3786115E7,4.3354411E7,1128814.0,3.8858276E7,5858673.0,3.0214531E7,1.1993403E7,1.238292E7,3.2738376E7,1.53546901E8,2376680.0,1.125368288E9,379174.0,2.9519114E7,1.72730891E8,2.053215E7,3.3739635E7,718306.0,506221.0,2.8221181E7,6500389.0,6198677.0,2596799.0,3967467.0,6173579.0,3.4272968E7,3309440.0,928635.0,2.8161417E7,1.037814E7,2682747.0,4149173.0,2.2993911E7,4.0677348E7,72480.0,281968.0,301022.0,9247816.0,1.91908598E8,3.3679263E7,1.6432536E7,4.4858264E7,4191948.0,1.1449006E7,1.392765E7,7057131.0,206941.0,90303.0,460486.0,1.2851647E7,770794.0,8704413.0,7639327.0,2801544.0,442119.0,1.099554E8,225168.0,5780586.0,3292693.0,6829969.0,2.9041593E7,3957169.0,440486.0,1047366.0,3.03824646E8,3462531.0,3619778.0,2968586.0,8205533.0,8079043.0,1.0287955E7,1.0403951E7,4590310.0,7262675.0,4491543.0,792604.0,5484723.0,1307605.0,5244749.0,6.1279972E7,4630841.0,8.2369548E7,1.0722816E7,9930915.0,304367.0,4156119.0,5.8145321E7,1.5340533E7,2245423.0,3565205.0,486006.0,2061315.0,403532.0,4496774.0,672180.0,1.6645313E7,4644457.0,3.8500696E7,1.067691E7,2.2246862E7,1.0166507E7,5455407.0,2007711.0,4.0491051E7,9045389.0,7581520.0,7653394.0,7.1892807E7,5232077.0,4.6170273E7,6.0943912E7,2.826844E7,2.0600856E7,393551.0,1.4387642E7,1.326856173E9,931545.0,282645.0,7018636.0,2.26134E8,1.27425722E8,2.3479089E7,4.9232844E7,460823.0,2.5259428E7,107673.0,2916865.0,4.8133102E7,224585.0,4154311.0,5921144.0,9.2681453E7,176418.0,4608167.0,581208.0,2.330837E7,6.5493298E7,1130120.0,1401.0,118993.0,8.6116559E7,215053.0],
+"lifeExpectancy":[47.58,61.89,55.12,53.38,50.95,51.39,71.68,48.97,65.77,47.81,53.75,57.86,50.64,60.03,55.69,60.89,56.83,58.35,48.2,54.95,45.56,58.71,60.81,53.88,48.84,56.99,72.1,75.99,48.13,61.72,51.95,48.17,76.64,50.69,65.86,55.91,47.95,50.09,51.72,58.5,46.36,56.35,62.93,53.47,46.4,45.72,44.3,66.56,66.42,64.01,71.94,67.12,66.84,74.24,72.67,75.88,55.78,68.1,81.0,72.88,77.79,72.26,74.28,71.58,75.94,75.81,73.1,74.15,77.58,73.74,63.39,75.52,74.92,77.51,76.6,66.01,72.68,80.89,78.67,73.19,78.98,78.84,75.26,71.74,76.16,75.62,79.28,70.55,67.43,61.48,72.41,72.11,79.77,76.47,76.38,73.44,75.81,72.07,73.47,78.95,69.16,69.7,79.43,76.5,76.74,74.03,80.23,70.6,69.4,80.05,75.34,73.53,76.49,79.85,78.57,73.5,79.9,81.47,71.86,80.08,79.5,73.67,81.95,80.16,81.34,65.18,72.77,71.93,79.75,74.4,79.91,68.72,74.34,80.19,80.85,75.84,78.94,72.99,74.23,74.94,78.63,81.11,81.12,82.06,67.07,72.06,65.06,68.45,79.64,67.97,81.71,77.32,61.67,73.28,69.05,74.59,82.4,71.17,82.98,67.53,79.65,80.95,74.54,68.81,66.93,62.14,76.36,80.45,61.29,72.1,71.92,80.58,66.66,78.6,69.08,61.6,69.0,71.96,74.7,70.5]
+},
+"mapping":{
+"x":"income",
+"y":"lifeExpectancy",
+"size":"population"
+},
+"data_meta":{
+},
+"ggsize":{
+"width":700.0,
+"height":500.0
+},
+"ggtitle":{
+"text":"The Wealth and Health of Nations"
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"size",
+"trans":"sqrt",
+"range":[0.2,12.0]
+},{
+"aesthetic":"x",
+"breaks":[500.0,700.0,1000.0,5000.0,7000.0,10000.0,50000.0,70000.0],
+"trans":"log2"
+}],
+"layers":[{
+"geom":"point",
+"mapping":{
+"fill":"region"
+},
+"tooltips":{
+"formats":[],
+"variables":["name"]
+},
+"data_meta":{
+},
+"stroke":0.5,
+"shape":21.0,
+"alpha":0.7,
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("kSg1NM");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+</div></div>
+<div style="font-size: 90%">
+<p>We can process much more information from the visualization than the table.</p>
+</div>
+</section>
+<section id="visual-semantics" class="slide level2">
+<h2>Visual semantics</h2>
+<div class="columns">
+<div class="column" style="font-size: 50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/visual-language/semantics.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<p><em>From Jeffery Heer</em></p>
+</div><div class="column" style="width:50%;">
+<p>What can we understand from this plot?</p>
+</div></div>
+</section>
+<section id="visual-semantics-1" class="slide level2">
+<h2>Visual semantics</h2>
+<div class="columns">
+<div class="column" style="font-size: 50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/visual-language/semantics.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<p><em>From Jeffery Heer</em></p>
+</div><div class="column" style="width:50%;">
+<p>What can we understand from this plot?</p>
+<ul>
+<li>A, B, C are distinguishable</li>
+<li>B is between A and C</li>
+<li>BC is twice as long as AB</li>
+</ul>
+</div></div>
+<p>“<em>Resemblance, order and proportional are the three signfields in graphics.</em>” - Bertin</p>
+</section></section>
+<section>
+<section id="what-tools-do-we-have-to-communicate-through-visualization" class="title-slide slide level1 center">
+<h1>What tools do we have to communicate through visualization?</h1>
+<p>What is our <strong>vocabulary</strong>?</p>
+</section>
+<section id="bertins-visual-variables" class="slide level2">
+<h2>Bertin’s visual variables</h2>
+
+<img data-src="pictures/encodings.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="exercise" class="slide level2">
+<h2>Exercise!</h2>
+<p>Sketch a visualization of this small dataset</p>
+
+<img data-src="pictures/visual-language/wickham-data.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<section id="what-was-your-strategy" class="title-slide slide level1 center">
+<h1>What was your strategy?</h1>
+
+</section>
+
+<section>
+<section id="grammar-of-graphics" class="title-slide slide level1 center">
+<h1>Grammar of Graphics</h1>
+<p>A <strong>framework</strong> for building visualizations</p>
+</section>
+<section id="grammar-of-graphics-1" class="slide level2">
+<h2>Grammar of graphics</h2>
+<div class="columns">
+<div class="column" style="font-size: 75%">
+<p><img data-src="pictures/grammar-of-graphics/wilkinson.png" class="quarto-figure quarto-figure-center" height="200"> <img data-src="pictures/grammar-of-graphics/cover.png" class="quarto-figure quarto-figure-center" height="300"></p>
+<p>Original grammar of graphics was introduced by Leland Wilkinson</p>
+</div><div class="column" style="font-size: 75%">
+<p><img data-src="pictures/grammar-of-graphics/hadley.jpg" class="quarto-figure quarto-figure-center" height="200"> <img data-src="pictures/grammar-of-graphics/ggplot.png" class="quarto-figure quarto-figure-center" height="300"></p>
+<p>We’ll focus on an updated version from Hadley Wickham that forms the basis for <strong>ggplot2</strong> and <strong>Let’s Plot</strong>.</p>
+</div></div>
+</section>
+<section id="reminder-ggplot" class="slide level2">
+<h2>Reminder: ggplot</h2>
+<p><strong>ggplot2</strong> is a hugely influential visualization library.</p>
+<ul>
+<li>Designed by Hadley Wickham</li>
+<li>Only for the R language</li>
+</ul>
+<p><strong>Let’s Plot</strong> is a port for Python (and Kotlin)</p>
+<ul>
+<li>We’ll be using it in this class</li>
+</ul>
+</section>
+<section id="components-of-the-grammar-of-graphics" class="slide level2">
+<h2>Components of the grammar of graphics</h2>
+<p><strong>Stretching the metaphor:</strong> The <em>parts of speech</em> for our visual language</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Data</li>
+<li>Aesthetic mappings</li>
+<li>Geometries</li>
+<li>Transforms</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Scales</li>
+<li>Coordinate systems</li>
+<li>Faceting systems</li>
+<li>Annotations</li>
+</ul>
+</div></div>
+</section></section>
+<section>
+<section id="how-to-build-a-plot" class="title-slide slide level1 center">
+<h1>How to build a plot</h1>
+
+</section>
+<section id="start-with-tidy-data" class="slide level2">
+<h2>Start with <strong>tidy data</strong></h2>
+<p>Clearly define the <strong>observations</strong> and <strong>variables</strong> in our dataset</p>
+<div id="6c45c57e" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+
+            <div id="SQlIR4"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.3/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("SQlIR4").appendChild(div);
+                    };
+                    var e = document.getElementById("SQlIR4");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">region</th>
+<th data-quarto-table-cell-role="th">income</th>
+<th data-quarto-table-cell-role="th">population</th>
+<th data-quarto-table-cell-role="th">lifeExpectancy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Angola</td>
+<td>Sub-Saharan Africa</td>
+<td>5055.59</td>
+<td>12707546</td>
+<td>47.58</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Benin</td>
+<td>Sub-Saharan Africa</td>
+<td>1457.57</td>
+<td>8294941</td>
+<td>61.89</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Botswana</td>
+<td>Sub-Saharan Africa</td>
+<td>12282.28</td>
+<td>1638393</td>
+<td>55.12</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Burkina Faso</td>
+<td>Sub-Saharan Africa</td>
+<td>1234.42</td>
+<td>14761339</td>
+<td>53.38</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Burundi</td>
+<td>Sub-Saharan Africa</td>
+<td>457.07</td>
+<td>8691005</td>
+<td>50.95</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>Cameroon</td>
+<td>Sub-Saharan Africa</td>
+<td>1997.18</td>
+<td>18054929</td>
+<td>51.39</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>Cape Verde</td>
+<td>Sub-Saharan Africa</td>
+<td>3456.14</td>
+<td>426113</td>
+<td>71.68</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>Chad</td>
+<td>Sub-Saharan Africa</td>
+<td>1557.83</td>
+<td>10541156</td>
+<td>48.97</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>Comoros</td>
+<td>Sub-Saharan Africa</td>
+<td>1016.42</td>
+<td>731281</td>
+<td>65.77</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>Congo, Dem. Rep.</td>
+<td>Sub-Saharan Africa</td>
+<td>358.80</td>
+<td>66604314</td>
+<td>47.81</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>Congo, Rep.</td>
+<td>Sub-Saharan Africa</td>
+<td>3834.67</td>
+<td>3903318</td>
+<td>53.75</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>Cote d'Ivoire</td>
+<td>Sub-Saharan Africa</td>
+<td>1520.23</td>
+<td>18373060</td>
+<td>57.86</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>Equatorial Guinea</td>
+<td>Sub-Saharan Africa</td>
+<td>15342.20</td>
+<td>562339</td>
+<td>50.64</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>Eritrea</td>
+<td>Sub-Saharan Africa</td>
+<td>548.37</td>
+<td>5028475</td>
+<td>60.03</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>Ethiopia</td>
+<td>Sub-Saharan Africa</td>
+<td>812.16</td>
+<td>78254090</td>
+<td>55.69</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="define-an-aesthetic-mapping" class="slide level2">
+<h2>Define an <strong>aesthetic mapping</strong></h2>
+<p>Our aesthetic mapping defines how we’ll map each <strong>data dimension</strong> (variable) to a corresponding <strong>visual dimension</strong> (aesthetic)</p>
+<div class="columns">
+<div class="column" style="font-size: 50%">
+<div id="58e5c14a" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+
+            <div id="Q2fs0I"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.3/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("Q2fs0I").appendChild(div);
+                    };
+                    var e = document.getElementById("Q2fs0I");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">region</th>
+<th data-quarto-table-cell-role="th">income</th>
+<th data-quarto-table-cell-role="th">population</th>
+<th data-quarto-table-cell-role="th">lifeExpectancy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Angola</td>
+<td>Sub-Saharan Africa</td>
+<td>5055.59</td>
+<td>12707546</td>
+<td>47.58</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Benin</td>
+<td>Sub-Saharan Africa</td>
+<td>1457.57</td>
+<td>8294941</td>
+<td>61.89</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Botswana</td>
+<td>Sub-Saharan Africa</td>
+<td>12282.28</td>
+<td>1638393</td>
+<td>55.12</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Burkina Faso</td>
+<td>Sub-Saharan Africa</td>
+<td>1234.42</td>
+<td>14761339</td>
+<td>53.38</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Burundi</td>
+<td>Sub-Saharan Africa</td>
+<td>457.07</td>
+<td>8691005</td>
+<td>50.95</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>Cameroon</td>
+<td>Sub-Saharan Africa</td>
+<td>1997.18</td>
+<td>18054929</td>
+<td>51.39</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>Cape Verde</td>
+<td>Sub-Saharan Africa</td>
+<td>3456.14</td>
+<td>426113</td>
+<td>71.68</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>Chad</td>
+<td>Sub-Saharan Africa</td>
+<td>1557.83</td>
+<td>10541156</td>
+<td>48.97</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>Comoros</td>
+<td>Sub-Saharan Africa</td>
+<td>1016.42</td>
+<td>731281</td>
+<td>65.77</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>Congo, Dem. Rep.</td>
+<td>Sub-Saharan Africa</td>
+<td>358.80</td>
+<td>66604314</td>
+<td>47.81</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>Congo, Rep.</td>
+<td>Sub-Saharan Africa</td>
+<td>3834.67</td>
+<td>3903318</td>
+<td>53.75</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>Cote d'Ivoire</td>
+<td>Sub-Saharan Africa</td>
+<td>1520.23</td>
+<td>18373060</td>
+<td>57.86</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>Equatorial Guinea</td>
+<td>Sub-Saharan Africa</td>
+<td>15342.20</td>
+<td>562339</td>
+<td>50.64</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>Eritrea</td>
+<td>Sub-Saharan Africa</td>
+<td>548.37</td>
+<td>5028475</td>
+<td>60.03</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>Ethiopia</td>
+<td>Sub-Saharan Africa</td>
+<td>812.16</td>
+<td>78254090</td>
+<td>55.69</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>Gabon</td>
+<td>Sub-Saharan Africa</td>
+<td>12704.99</td>
+<td>1484149</td>
+<td>60.89</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">16</td>
+<td>Ghana</td>
+<td>Sub-Saharan Africa</td>
+<td>1382.95</td>
+<td>23336661</td>
+<td>56.83</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">17</td>
+<td>Guinea</td>
+<td>Sub-Saharan Africa</td>
+<td>908.86</td>
+<td>10211437</td>
+<td>58.35</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">18</td>
+<td>Guinea-Bissau</td>
+<td>Sub-Saharan Africa</td>
+<td>568.94</td>
+<td>1502442</td>
+<td>48.20</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">19</td>
+<td>Kenya</td>
+<td>Sub-Saharan Africa</td>
+<td>1493.53</td>
+<td>36529155</td>
+<td>54.95</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div id="d631aa0c" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+
+            <div id="gGrjgJ"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.3/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("gGrjgJ").appendChild(div);
+                    };
+                    var e = document.getElementById("gGrjgJ");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+   <div id="QxVR8P"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -570,7 +1658,7 @@ Prof.&nbsp;Gabe Hope
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("5pIuMs");
+           var plotContainer = document.getElementById("QxVR8P");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -580,36 +1668,1420 @@ Prof.&nbsp;Gabe Hope
 </div>
 </div></div>
 </section>
-<section id="visual-encoding-dimensions" class="slide level2">
-<h2>Visual encoding dimensions</h2>
+<section id="define-an-aesthetic-mapping-1" class="slide level2">
+<h2>Define an <strong>aesthetic mapping</strong></h2>
+<p>Our aesthetic mapping defines how we’ll map each <strong>data dimension</strong> (variable) to a corresponding <strong>visual dimension</strong> (aesthetic)</p>
+<div class="columns">
+<div class="column" style="font-size: 100%">
+<div id="c667d34d" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
 
-<img data-src="pictures/encodings.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="example---william-playfair-1786" class="slide level2">
-<h2>Example - William Playfair, 1786</h2>
+            <div id="tfkX9W"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.3/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("tfkX9W").appendChild(div);
+                    };
+                    var e = document.getElementById("tfkX9W");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<img data-src="pictures/playfair.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
-<section>
-<section id="visualizations-in-code" class="title-slide slide level1 center">
-<h1>Visualizations in code</h1>
-<p>ggplot + Let’s Plot</p>
-</section>
-<section id="ggplot" class="slide level2">
-<h2>Ggplot</h2>
-<p><strong>ggplot</strong> is a hugely influential visualizatation library.</p>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">region</th>
+<th data-quarto-table-cell-role="th">income</th>
+<th data-quarto-table-cell-role="th">population</th>
+<th data-quarto-table-cell-role="th">lifeExpectancy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Angola</td>
+<td>Sub-Saharan Africa</td>
+<td>5055.59</td>
+<td>12707546</td>
+<td>47.58</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Benin</td>
+<td>Sub-Saharan Africa</td>
+<td>1457.57</td>
+<td>8294941</td>
+<td>61.89</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Botswana</td>
+<td>Sub-Saharan Africa</td>
+<td>12282.28</td>
+<td>1638393</td>
+<td>55.12</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Burkina Faso</td>
+<td>Sub-Saharan Africa</td>
+<td>1234.42</td>
+<td>14761339</td>
+<td>53.38</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Burundi</td>
+<td>Sub-Saharan Africa</td>
+<td>457.07</td>
+<td>8691005</td>
+<td>50.95</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>In our example:</p>
 <ul>
-<li>Designed by Hadley Wickham</li>
-<li>Only for the R language</li>
+<li>Income -&gt; x position</li>
+<li>Life exp. -&gt; y position</li>
+<li>Population -&gt; size</li>
+<li>Region -&gt; color</li>
 </ul>
-<p><strong>Let’s Plot</strong> is a port for Python (and Kotlin)</p>
+</div><div class="column" style="width:50%;">
+<div id="65826acb" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+
+            <div id="7otvCa"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.3/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("7otvCa").appendChild(div);
+                    };
+                    var e = document.getElementById("7otvCa");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+   <div id="BeTJah"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"data":{
+"name":["Angola","Benin","Botswana","Burkina Faso","Burundi","Cameroon","Cape Verde","Chad","Comoros","Congo, Dem. Rep.","Congo, Rep.","Cote d'Ivoire","Equatorial Guinea","Eritrea","Ethiopia","Gabon","Ghana","Guinea","Guinea-Bissau","Kenya","Lesotho","Liberia","Madagascar","Malawi","Mali","Mauritania","Mauritius","Mayotte","Mozambique","Namibia","Niger","Nigeria","Reunion","Rwanda","Sao Tome and Principe","Senegal","Sierra Leone","Somalia","South Africa","Sudan","Swaziland","Tanzania","Togo","Uganda","Zambia","Zimbabwe","Afghanistan","Bangladesh","Bhutan","India","Maldives","Nepal","Pakistan","Sri Lanka","Algeria","Bahrain","Djibouti","Iraq","Israel","Jordan","Kuwait","Lebanon","Libya","Morocco","Oman","Qatar","Saudi Arabia","Tunisia","United Arab Emirates","West Bank and Gaza","Yemen, Rep.","Argentina","Aruba","Barbados","Belize","Bolivia","Brazil","Canada","Chile","Colombia","Costa Rica","Cuba","Ecuador","El Salvador","French Guiana","Grenada","Guadeloupe","Guatemala","Guyana","Haiti","Honduras","Jamaica","Martinique","Mexico","Netherlands Antilles","Nicaragua","Panama","Paraguay","Peru","Puerto Rico","Suriname","Trinidad and Tobago","United States","Uruguay","Albania","Armenia","Austria","Azerbaijan","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Denmark","Estonia","Finland","France","Georgia","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kazakhstan","Latvia","Lithuania","Luxembourg","Macedonia, FYR","Malta","Moldova","Montenegro","Netherlands","Norway","Poland","Portugal","Romania","Serbia","Slovak Republic","Slovenia","Spain","Sweden","Switzerland","Tajikistan","Turkey","Turkmenistan","Ukraine","United Kingdom","Uzbekistan","Australia","Brunei","Cambodia","China","Fiji","French Polynesia","Hong Kong, China","Indonesia","Japan","Korea, Dem. Rep.","Korea, Rep.","Macao, China","Malaysia","Micronesia, Fed. Sts.","Mongolia","Myanmar","New Caledonia","New Zealand","Papua New Guinea","Philippines","Samoa","Singapore","Solomon Islands","Taiwan","Thailand","Timor-Leste","Tokelau","Tonga","Vietnam","Vanuatu"],
+"region":["Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","South Asia","South Asia","South Asia","South Asia","South Asia","South Asia","South Asia","South Asia","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific"],
+"income":[5055.59,1457.57,12282.28,1234.42,457.07,1997.18,3456.14,1557.83,1016.42,358.8,3834.67,1520.23,15342.2,548.37,812.16,12704.99,1382.95,908.86,568.94,1493.53,1521.4,474.9,1006.9,866.35,1136.17,1775.87,11411.53,9617.82,888.65,4952.26,643.39,2158.98,7670.12,995.27,1703.43,1700.05,893.6,943.04,9141.27,2778.61,4728.18,1220.25,888.01,1202.53,1442.06,443.74,1216.68,1492.0,5053.83,2731.0,5081.79,1224.73,2603.0,4254.13,6207.17,24226.51,2176.79,3518.18,25463.69,5109.39,42443.53,12766.21,12051.62,4162.93,22804.85,74138.28,21138.18,7499.61,33734.94,3084.56,2313.16,13498.04,25351.09,15846.77,6998.08,4007.16,9569.78,34569.63,13087.38,7090.69,9551.56,9277.96,7035.45,5646.85,8202.74,8826.9,7788.25,5163.22,3776.95,1198.05,3473.46,7023.74,14627.13,11250.37,23178.37,2591.39,10796.68,4054.3,7858.97,18970.51,8199.03,17826.05,41256.08,11461.03,6546.27,4523.44,35636.42,9088.42,11574.43,32256.64,7341.98,10840.26,14110.46,25643.45,32670.06,16349.13,30602.73,29774.85,4168.7,31191.15,27626.11,16982.8,34989.73,35692.95,26160.59,10612.29,13021.94,14928.78,70857.46,8364.79,21327.85,2593.42,12257.79,36074.53,47915.0,16465.8,19898.43,10868.12,10005.22,19186.01,24778.21,26811.93,32021.0,38003.92,1775.38,8040.78,5702.66,5730.86,31042.47,2586.96,34327.26,44738.99,1830.97,7226.07,4016.2,26733.88,39086.39,3818.08,29680.68,1635.0,23875.0,57436.68,12387.67,4994.56,3205.17,1269.14,30959.74,24009.46,1947.16,3203.97,5003.61,43526.04,1903.69,28361.0,7376.17,2475.68,889.43,5104.06,2679.34,3943.3],
+"population":[1.2707546E7,8294941.0,1638393.0,1.4761339E7,8691005.0,1.8054929E7,426113.0,1.0541156E7,731281.0,6.6604314E7,3903318.0,1.837306E7,562339.0,5028475.0,7.825409E7,1484149.0,2.3336661E7,1.0211437E7,1502442.0,3.6529155E7,2002749.0,3332483.0,1.9757525E7,1.3647273E7,1.2360306E7,3364940.0,1260781.0,216334.0,2.0203186E7,2063927.0,1.3272679E7,1.3828324E8,808506.0,9077425.0,205901.0,1.2548243E7,6286617.0,9379907.0,4.3786115E7,4.3354411E7,1128814.0,3.8858276E7,5858673.0,3.0214531E7,1.1993403E7,1.238292E7,3.2738376E7,1.53546901E8,2376680.0,1.125368288E9,379174.0,2.9519114E7,1.72730891E8,2.053215E7,3.3739635E7,718306.0,506221.0,2.8221181E7,6500389.0,6198677.0,2596799.0,3967467.0,6173579.0,3.4272968E7,3309440.0,928635.0,2.8161417E7,1.037814E7,2682747.0,4149173.0,2.2993911E7,4.0677348E7,72480.0,281968.0,301022.0,9247816.0,1.91908598E8,3.3679263E7,1.6432536E7,4.4858264E7,4191948.0,1.1449006E7,1.392765E7,7057131.0,206941.0,90303.0,460486.0,1.2851647E7,770794.0,8704413.0,7639327.0,2801544.0,442119.0,1.099554E8,225168.0,5780586.0,3292693.0,6829969.0,2.9041593E7,3957169.0,440486.0,1047366.0,3.03824646E8,3462531.0,3619778.0,2968586.0,8205533.0,8079043.0,1.0287955E7,1.0403951E7,4590310.0,7262675.0,4491543.0,792604.0,5484723.0,1307605.0,5244749.0,6.1279972E7,4630841.0,8.2369548E7,1.0722816E7,9930915.0,304367.0,4156119.0,5.8145321E7,1.5340533E7,2245423.0,3565205.0,486006.0,2061315.0,403532.0,4496774.0,672180.0,1.6645313E7,4644457.0,3.8500696E7,1.067691E7,2.2246862E7,1.0166507E7,5455407.0,2007711.0,4.0491051E7,9045389.0,7581520.0,7653394.0,7.1892807E7,5232077.0,4.6170273E7,6.0943912E7,2.826844E7,2.0600856E7,393551.0,1.4387642E7,1.326856173E9,931545.0,282645.0,7018636.0,2.26134E8,1.27425722E8,2.3479089E7,4.9232844E7,460823.0,2.5259428E7,107673.0,2916865.0,4.8133102E7,224585.0,4154311.0,5921144.0,9.2681453E7,176418.0,4608167.0,581208.0,2.330837E7,6.5493298E7,1130120.0,1401.0,118993.0,8.6116559E7,215053.0],
+"lifeExpectancy":[47.58,61.89,55.12,53.38,50.95,51.39,71.68,48.97,65.77,47.81,53.75,57.86,50.64,60.03,55.69,60.89,56.83,58.35,48.2,54.95,45.56,58.71,60.81,53.88,48.84,56.99,72.1,75.99,48.13,61.72,51.95,48.17,76.64,50.69,65.86,55.91,47.95,50.09,51.72,58.5,46.36,56.35,62.93,53.47,46.4,45.72,44.3,66.56,66.42,64.01,71.94,67.12,66.84,74.24,72.67,75.88,55.78,68.1,81.0,72.88,77.79,72.26,74.28,71.58,75.94,75.81,73.1,74.15,77.58,73.74,63.39,75.52,74.92,77.51,76.6,66.01,72.68,80.89,78.67,73.19,78.98,78.84,75.26,71.74,76.16,75.62,79.28,70.55,67.43,61.48,72.41,72.11,79.77,76.47,76.38,73.44,75.81,72.07,73.47,78.95,69.16,69.7,79.43,76.5,76.74,74.03,80.23,70.6,69.4,80.05,75.34,73.53,76.49,79.85,78.57,73.5,79.9,81.47,71.86,80.08,79.5,73.67,81.95,80.16,81.34,65.18,72.77,71.93,79.75,74.4,79.91,68.72,74.34,80.19,80.85,75.84,78.94,72.99,74.23,74.94,78.63,81.11,81.12,82.06,67.07,72.06,65.06,68.45,79.64,67.97,81.71,77.32,61.67,73.28,69.05,74.59,82.4,71.17,82.98,67.53,79.65,80.95,74.54,68.81,66.93,62.14,76.36,80.45,61.29,72.1,71.92,80.58,66.66,78.6,69.08,61.6,69.0,71.96,74.7,70.5]
+},
+"mapping":{
+"x":"income",
+"y":"lifeExpectancy",
+"size":"population"
+},
+"data_meta":{
+},
+"ggsize":{
+"width":800.0,
+"height":500.0
+},
+"ggtitle":{
+"text":"The Wealth and Health of Nations"
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"size",
+"trans":"sqrt",
+"range":[0.2,12.0]
+},{
+"aesthetic":"x",
+"breaks":[500.0,700.0,1000.0,5000.0,7000.0,10000.0,50000.0,70000.0],
+"trans":"log2"
+}],
+"layers":[{
+"geom":"point",
+"mapping":{
+"fill":"region"
+},
+"tooltips":{
+"formats":[],
+"variables":["name"]
+},
+"data_meta":{
+},
+"stroke":0.5,
+"shape":21.0,
+"alpha":0.7,
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("BeTJah");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+</div></div>
+</section>
+<section id="examples-of-visual-encoding-dimensions" class="slide level2">
+<h2>Examples of visual encoding dimensions</h2>
+<div class="columns">
+<div class="column" style="font-size: 50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/grammar-of-graphics/channels-1.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/grammar-of-graphics/channels-2.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="the-set-of-possible-encodings-depends-on-the-variable-type" class="slide level2">
+<h2>The set of possible encodings depends on the <strong>variable type</strong></h2>
+<p><strong>Categorical</strong> variables have a different space of possibilities</p>
+
+<img data-src="pictures/grammar-of-graphics/categorical.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="choose-a-geometry" class="slide level2">
+<h2>Choose a <strong>geometry</strong></h2>
+<p>How do we represent each observation?</p>
+<div id="0e0722f2" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+
+            <div id="58w9do"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.3/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("58w9do").appendChild(div);
+                    };
+                    var e = document.getElementById("58w9do");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+   <div id="S6yexc"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"data":{
+"name":["Angola","Benin","Botswana","Burkina Faso","Burundi","Cameroon","Cape Verde","Chad","Comoros","Congo, Dem. Rep.","Congo, Rep.","Cote d'Ivoire","Equatorial Guinea","Eritrea","Ethiopia","Gabon","Ghana","Guinea","Guinea-Bissau","Kenya","Lesotho","Liberia","Madagascar","Malawi","Mali","Mauritania","Mauritius","Mayotte","Mozambique","Namibia","Niger","Nigeria","Reunion","Rwanda","Sao Tome and Principe","Senegal","Sierra Leone","Somalia","South Africa","Sudan","Swaziland","Tanzania","Togo","Uganda","Zambia","Zimbabwe","Afghanistan","Bangladesh","Bhutan","India","Maldives","Nepal","Pakistan","Sri Lanka","Algeria","Bahrain","Djibouti","Iraq","Israel","Jordan","Kuwait","Lebanon","Libya","Morocco","Oman","Qatar","Saudi Arabia","Tunisia","United Arab Emirates","West Bank and Gaza","Yemen, Rep.","Argentina","Aruba","Barbados","Belize","Bolivia","Brazil","Canada","Chile","Colombia","Costa Rica","Cuba","Ecuador","El Salvador","French Guiana","Grenada","Guadeloupe","Guatemala","Guyana","Haiti","Honduras","Jamaica","Martinique","Mexico","Netherlands Antilles","Nicaragua","Panama","Paraguay","Peru","Puerto Rico","Suriname","Trinidad and Tobago","United States","Uruguay","Albania","Armenia","Austria","Azerbaijan","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Denmark","Estonia","Finland","France","Georgia","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kazakhstan","Latvia","Lithuania","Luxembourg","Macedonia, FYR","Malta","Moldova","Montenegro","Netherlands","Norway","Poland","Portugal","Romania","Serbia","Slovak Republic","Slovenia","Spain","Sweden","Switzerland","Tajikistan","Turkey","Turkmenistan","Ukraine","United Kingdom","Uzbekistan","Australia","Brunei","Cambodia","China","Fiji","French Polynesia","Hong Kong, China","Indonesia","Japan","Korea, Dem. Rep.","Korea, Rep.","Macao, China","Malaysia","Micronesia, Fed. Sts.","Mongolia","Myanmar","New Caledonia","New Zealand","Papua New Guinea","Philippines","Samoa","Singapore","Solomon Islands","Taiwan","Thailand","Timor-Leste","Tokelau","Tonga","Vietnam","Vanuatu"],
+"region":["Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","South Asia","South Asia","South Asia","South Asia","South Asia","South Asia","South Asia","South Asia","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific"],
+"income":[5055.59,1457.57,12282.28,1234.42,457.07,1997.18,3456.14,1557.83,1016.42,358.8,3834.67,1520.23,15342.2,548.37,812.16,12704.99,1382.95,908.86,568.94,1493.53,1521.4,474.9,1006.9,866.35,1136.17,1775.87,11411.53,9617.82,888.65,4952.26,643.39,2158.98,7670.12,995.27,1703.43,1700.05,893.6,943.04,9141.27,2778.61,4728.18,1220.25,888.01,1202.53,1442.06,443.74,1216.68,1492.0,5053.83,2731.0,5081.79,1224.73,2603.0,4254.13,6207.17,24226.51,2176.79,3518.18,25463.69,5109.39,42443.53,12766.21,12051.62,4162.93,22804.85,74138.28,21138.18,7499.61,33734.94,3084.56,2313.16,13498.04,25351.09,15846.77,6998.08,4007.16,9569.78,34569.63,13087.38,7090.69,9551.56,9277.96,7035.45,5646.85,8202.74,8826.9,7788.25,5163.22,3776.95,1198.05,3473.46,7023.74,14627.13,11250.37,23178.37,2591.39,10796.68,4054.3,7858.97,18970.51,8199.03,17826.05,41256.08,11461.03,6546.27,4523.44,35636.42,9088.42,11574.43,32256.64,7341.98,10840.26,14110.46,25643.45,32670.06,16349.13,30602.73,29774.85,4168.7,31191.15,27626.11,16982.8,34989.73,35692.95,26160.59,10612.29,13021.94,14928.78,70857.46,8364.79,21327.85,2593.42,12257.79,36074.53,47915.0,16465.8,19898.43,10868.12,10005.22,19186.01,24778.21,26811.93,32021.0,38003.92,1775.38,8040.78,5702.66,5730.86,31042.47,2586.96,34327.26,44738.99,1830.97,7226.07,4016.2,26733.88,39086.39,3818.08,29680.68,1635.0,23875.0,57436.68,12387.67,4994.56,3205.17,1269.14,30959.74,24009.46,1947.16,3203.97,5003.61,43526.04,1903.69,28361.0,7376.17,2475.68,889.43,5104.06,2679.34,3943.3],
+"population":[1.2707546E7,8294941.0,1638393.0,1.4761339E7,8691005.0,1.8054929E7,426113.0,1.0541156E7,731281.0,6.6604314E7,3903318.0,1.837306E7,562339.0,5028475.0,7.825409E7,1484149.0,2.3336661E7,1.0211437E7,1502442.0,3.6529155E7,2002749.0,3332483.0,1.9757525E7,1.3647273E7,1.2360306E7,3364940.0,1260781.0,216334.0,2.0203186E7,2063927.0,1.3272679E7,1.3828324E8,808506.0,9077425.0,205901.0,1.2548243E7,6286617.0,9379907.0,4.3786115E7,4.3354411E7,1128814.0,3.8858276E7,5858673.0,3.0214531E7,1.1993403E7,1.238292E7,3.2738376E7,1.53546901E8,2376680.0,1.125368288E9,379174.0,2.9519114E7,1.72730891E8,2.053215E7,3.3739635E7,718306.0,506221.0,2.8221181E7,6500389.0,6198677.0,2596799.0,3967467.0,6173579.0,3.4272968E7,3309440.0,928635.0,2.8161417E7,1.037814E7,2682747.0,4149173.0,2.2993911E7,4.0677348E7,72480.0,281968.0,301022.0,9247816.0,1.91908598E8,3.3679263E7,1.6432536E7,4.4858264E7,4191948.0,1.1449006E7,1.392765E7,7057131.0,206941.0,90303.0,460486.0,1.2851647E7,770794.0,8704413.0,7639327.0,2801544.0,442119.0,1.099554E8,225168.0,5780586.0,3292693.0,6829969.0,2.9041593E7,3957169.0,440486.0,1047366.0,3.03824646E8,3462531.0,3619778.0,2968586.0,8205533.0,8079043.0,1.0287955E7,1.0403951E7,4590310.0,7262675.0,4491543.0,792604.0,5484723.0,1307605.0,5244749.0,6.1279972E7,4630841.0,8.2369548E7,1.0722816E7,9930915.0,304367.0,4156119.0,5.8145321E7,1.5340533E7,2245423.0,3565205.0,486006.0,2061315.0,403532.0,4496774.0,672180.0,1.6645313E7,4644457.0,3.8500696E7,1.067691E7,2.2246862E7,1.0166507E7,5455407.0,2007711.0,4.0491051E7,9045389.0,7581520.0,7653394.0,7.1892807E7,5232077.0,4.6170273E7,6.0943912E7,2.826844E7,2.0600856E7,393551.0,1.4387642E7,1.326856173E9,931545.0,282645.0,7018636.0,2.26134E8,1.27425722E8,2.3479089E7,4.9232844E7,460823.0,2.5259428E7,107673.0,2916865.0,4.8133102E7,224585.0,4154311.0,5921144.0,9.2681453E7,176418.0,4608167.0,581208.0,2.330837E7,6.5493298E7,1130120.0,1401.0,118993.0,8.6116559E7,215053.0],
+"lifeExpectancy":[47.58,61.89,55.12,53.38,50.95,51.39,71.68,48.97,65.77,47.81,53.75,57.86,50.64,60.03,55.69,60.89,56.83,58.35,48.2,54.95,45.56,58.71,60.81,53.88,48.84,56.99,72.1,75.99,48.13,61.72,51.95,48.17,76.64,50.69,65.86,55.91,47.95,50.09,51.72,58.5,46.36,56.35,62.93,53.47,46.4,45.72,44.3,66.56,66.42,64.01,71.94,67.12,66.84,74.24,72.67,75.88,55.78,68.1,81.0,72.88,77.79,72.26,74.28,71.58,75.94,75.81,73.1,74.15,77.58,73.74,63.39,75.52,74.92,77.51,76.6,66.01,72.68,80.89,78.67,73.19,78.98,78.84,75.26,71.74,76.16,75.62,79.28,70.55,67.43,61.48,72.41,72.11,79.77,76.47,76.38,73.44,75.81,72.07,73.47,78.95,69.16,69.7,79.43,76.5,76.74,74.03,80.23,70.6,69.4,80.05,75.34,73.53,76.49,79.85,78.57,73.5,79.9,81.47,71.86,80.08,79.5,73.67,81.95,80.16,81.34,65.18,72.77,71.93,79.75,74.4,79.91,68.72,74.34,80.19,80.85,75.84,78.94,72.99,74.23,74.94,78.63,81.11,81.12,82.06,67.07,72.06,65.06,68.45,79.64,67.97,81.71,77.32,61.67,73.28,69.05,74.59,82.4,71.17,82.98,67.53,79.65,80.95,74.54,68.81,66.93,62.14,76.36,80.45,61.29,72.1,71.92,80.58,66.66,78.6,69.08,61.6,69.0,71.96,74.7,70.5]
+},
+"mapping":{
+"x":"income",
+"y":"lifeExpectancy",
+"size":"population"
+},
+"data_meta":{
+},
+"ggsize":{
+"width":1000.0,
+"height":500.0
+},
+"ggtitle":{
+"text":"The Wealth and Health of Nations"
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"size",
+"trans":"sqrt",
+"range":[0.2,12.0]
+},{
+"aesthetic":"x",
+"breaks":[500.0,700.0,1000.0,5000.0,7000.0,10000.0,50000.0,70000.0],
+"trans":"log2"
+}],
+"layers":[{
+"geom":"point",
+"mapping":{
+"fill":"region"
+},
+"tooltips":{
+"formats":[],
+"variables":["name"]
+},
+"data_meta":{
+},
+"stroke":0.5,
+"shape":21.0,
+"alpha":0.7,
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("S6yexc");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+<p>Here we are representing each observation with a distinct <strong>point</strong> in 2-d space (a scatterplot).</p>
+</section>
+<section id="many-different-geometries" class="slide level2">
+<h2>Many different geometries</h2>
+
+<img data-src="pictures/grammar-of-graphics/geoms.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="geometries-are-abstract" class="slide level2">
+<h2>Geometries are abstract</h2>
+<p>The same geometry might be rendered in different ways</p>
+
+<img data-src="pictures/grammar-of-graphics/intervals.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="geometries-are-abstract-1" class="slide level2">
+<h2>Geometries are abstract</h2>
+<p>Diffent geometries may have different requirements (and options) for aesthetics:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Point:</strong> x and y coordinates</p>
+<p><strong>Line:</strong> x and y coordinates, order</p>
+<p><strong>Bar:</strong> x or y coordinate, length</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Text:</strong> x and y coordinates, text</p>
+<p><strong>Interval:</strong> x coordinate, min, max</p>
+<p><strong>Boxplot:</strong> Median, quantiles</p>
+</div></div>
+
+<img data-src="pictures/grammar-of-graphics/reqz.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="define-a-scale-for-each-mapping" class="slide level2">
+<h2>Define a <strong>scale</strong> for each mapping</h2>
+<p>A scale determines how we translate the <strong>domain</strong> of a variable to the <strong>range</strong> of a visual dimension</p>
+
+<img data-src="pictures/grammar-of-graphics/scales.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="scales-are-usually-invertable-functions" class="slide level2">
+<h2>Scales are (usually) invertable functions</h2>
+<p>Most commonly a <strong>linear</strong> function</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/grammar-of-graphics/linear.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
+<p>But can be <strong>non-linear</strong>, e.g.&nbsp;logarithmic</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/grammar-of-graphics/log.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
+</section>
+<section id="show-scales-through-axes-and-legends" class="slide level2">
+<h2>Show scales through axes and legends</h2>
+<p><strong>Axes</strong> show the scale for each <em>position</em> dimension.</p>
+<p><strong>Legends</strong> show the scale for other dimensions (color, shape, size, etc.)</p>
+<div id="2459d50f" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+
+            <div id="EAYBgn"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.3/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("EAYBgn").appendChild(div);
+                    };
+                    var e = document.getElementById("EAYBgn");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+   <div id="G7k1sE"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"data":{
+"name":["Angola","Benin","Botswana","Burkina Faso","Burundi","Cameroon","Cape Verde","Chad","Comoros","Congo, Dem. Rep.","Congo, Rep.","Cote d'Ivoire","Equatorial Guinea","Eritrea","Ethiopia","Gabon","Ghana","Guinea","Guinea-Bissau","Kenya","Lesotho","Liberia","Madagascar","Malawi","Mali","Mauritania","Mauritius","Mayotte","Mozambique","Namibia","Niger","Nigeria","Reunion","Rwanda","Sao Tome and Principe","Senegal","Sierra Leone","Somalia","South Africa","Sudan","Swaziland","Tanzania","Togo","Uganda","Zambia","Zimbabwe","Afghanistan","Bangladesh","Bhutan","India","Maldives","Nepal","Pakistan","Sri Lanka","Algeria","Bahrain","Djibouti","Iraq","Israel","Jordan","Kuwait","Lebanon","Libya","Morocco","Oman","Qatar","Saudi Arabia","Tunisia","United Arab Emirates","West Bank and Gaza","Yemen, Rep.","Argentina","Aruba","Barbados","Belize","Bolivia","Brazil","Canada","Chile","Colombia","Costa Rica","Cuba","Ecuador","El Salvador","French Guiana","Grenada","Guadeloupe","Guatemala","Guyana","Haiti","Honduras","Jamaica","Martinique","Mexico","Netherlands Antilles","Nicaragua","Panama","Paraguay","Peru","Puerto Rico","Suriname","Trinidad and Tobago","United States","Uruguay","Albania","Armenia","Austria","Azerbaijan","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Denmark","Estonia","Finland","France","Georgia","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kazakhstan","Latvia","Lithuania","Luxembourg","Macedonia, FYR","Malta","Moldova","Montenegro","Netherlands","Norway","Poland","Portugal","Romania","Serbia","Slovak Republic","Slovenia","Spain","Sweden","Switzerland","Tajikistan","Turkey","Turkmenistan","Ukraine","United Kingdom","Uzbekistan","Australia","Brunei","Cambodia","China","Fiji","French Polynesia","Hong Kong, China","Indonesia","Japan","Korea, Dem. Rep.","Korea, Rep.","Macao, China","Malaysia","Micronesia, Fed. Sts.","Mongolia","Myanmar","New Caledonia","New Zealand","Papua New Guinea","Philippines","Samoa","Singapore","Solomon Islands","Taiwan","Thailand","Timor-Leste","Tokelau","Tonga","Vietnam","Vanuatu"],
+"region":["Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","South Asia","South Asia","South Asia","South Asia","South Asia","South Asia","South Asia","South Asia","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","America","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific"],
+"income":[5055.59,1457.57,12282.28,1234.42,457.07,1997.18,3456.14,1557.83,1016.42,358.8,3834.67,1520.23,15342.2,548.37,812.16,12704.99,1382.95,908.86,568.94,1493.53,1521.4,474.9,1006.9,866.35,1136.17,1775.87,11411.53,9617.82,888.65,4952.26,643.39,2158.98,7670.12,995.27,1703.43,1700.05,893.6,943.04,9141.27,2778.61,4728.18,1220.25,888.01,1202.53,1442.06,443.74,1216.68,1492.0,5053.83,2731.0,5081.79,1224.73,2603.0,4254.13,6207.17,24226.51,2176.79,3518.18,25463.69,5109.39,42443.53,12766.21,12051.62,4162.93,22804.85,74138.28,21138.18,7499.61,33734.94,3084.56,2313.16,13498.04,25351.09,15846.77,6998.08,4007.16,9569.78,34569.63,13087.38,7090.69,9551.56,9277.96,7035.45,5646.85,8202.74,8826.9,7788.25,5163.22,3776.95,1198.05,3473.46,7023.74,14627.13,11250.37,23178.37,2591.39,10796.68,4054.3,7858.97,18970.51,8199.03,17826.05,41256.08,11461.03,6546.27,4523.44,35636.42,9088.42,11574.43,32256.64,7341.98,10840.26,14110.46,25643.45,32670.06,16349.13,30602.73,29774.85,4168.7,31191.15,27626.11,16982.8,34989.73,35692.95,26160.59,10612.29,13021.94,14928.78,70857.46,8364.79,21327.85,2593.42,12257.79,36074.53,47915.0,16465.8,19898.43,10868.12,10005.22,19186.01,24778.21,26811.93,32021.0,38003.92,1775.38,8040.78,5702.66,5730.86,31042.47,2586.96,34327.26,44738.99,1830.97,7226.07,4016.2,26733.88,39086.39,3818.08,29680.68,1635.0,23875.0,57436.68,12387.67,4994.56,3205.17,1269.14,30959.74,24009.46,1947.16,3203.97,5003.61,43526.04,1903.69,28361.0,7376.17,2475.68,889.43,5104.06,2679.34,3943.3],
+"population":[1.2707546E7,8294941.0,1638393.0,1.4761339E7,8691005.0,1.8054929E7,426113.0,1.0541156E7,731281.0,6.6604314E7,3903318.0,1.837306E7,562339.0,5028475.0,7.825409E7,1484149.0,2.3336661E7,1.0211437E7,1502442.0,3.6529155E7,2002749.0,3332483.0,1.9757525E7,1.3647273E7,1.2360306E7,3364940.0,1260781.0,216334.0,2.0203186E7,2063927.0,1.3272679E7,1.3828324E8,808506.0,9077425.0,205901.0,1.2548243E7,6286617.0,9379907.0,4.3786115E7,4.3354411E7,1128814.0,3.8858276E7,5858673.0,3.0214531E7,1.1993403E7,1.238292E7,3.2738376E7,1.53546901E8,2376680.0,1.125368288E9,379174.0,2.9519114E7,1.72730891E8,2.053215E7,3.3739635E7,718306.0,506221.0,2.8221181E7,6500389.0,6198677.0,2596799.0,3967467.0,6173579.0,3.4272968E7,3309440.0,928635.0,2.8161417E7,1.037814E7,2682747.0,4149173.0,2.2993911E7,4.0677348E7,72480.0,281968.0,301022.0,9247816.0,1.91908598E8,3.3679263E7,1.6432536E7,4.4858264E7,4191948.0,1.1449006E7,1.392765E7,7057131.0,206941.0,90303.0,460486.0,1.2851647E7,770794.0,8704413.0,7639327.0,2801544.0,442119.0,1.099554E8,225168.0,5780586.0,3292693.0,6829969.0,2.9041593E7,3957169.0,440486.0,1047366.0,3.03824646E8,3462531.0,3619778.0,2968586.0,8205533.0,8079043.0,1.0287955E7,1.0403951E7,4590310.0,7262675.0,4491543.0,792604.0,5484723.0,1307605.0,5244749.0,6.1279972E7,4630841.0,8.2369548E7,1.0722816E7,9930915.0,304367.0,4156119.0,5.8145321E7,1.5340533E7,2245423.0,3565205.0,486006.0,2061315.0,403532.0,4496774.0,672180.0,1.6645313E7,4644457.0,3.8500696E7,1.067691E7,2.2246862E7,1.0166507E7,5455407.0,2007711.0,4.0491051E7,9045389.0,7581520.0,7653394.0,7.1892807E7,5232077.0,4.6170273E7,6.0943912E7,2.826844E7,2.0600856E7,393551.0,1.4387642E7,1.326856173E9,931545.0,282645.0,7018636.0,2.26134E8,1.27425722E8,2.3479089E7,4.9232844E7,460823.0,2.5259428E7,107673.0,2916865.0,4.8133102E7,224585.0,4154311.0,5921144.0,9.2681453E7,176418.0,4608167.0,581208.0,2.330837E7,6.5493298E7,1130120.0,1401.0,118993.0,8.6116559E7,215053.0],
+"lifeExpectancy":[47.58,61.89,55.12,53.38,50.95,51.39,71.68,48.97,65.77,47.81,53.75,57.86,50.64,60.03,55.69,60.89,56.83,58.35,48.2,54.95,45.56,58.71,60.81,53.88,48.84,56.99,72.1,75.99,48.13,61.72,51.95,48.17,76.64,50.69,65.86,55.91,47.95,50.09,51.72,58.5,46.36,56.35,62.93,53.47,46.4,45.72,44.3,66.56,66.42,64.01,71.94,67.12,66.84,74.24,72.67,75.88,55.78,68.1,81.0,72.88,77.79,72.26,74.28,71.58,75.94,75.81,73.1,74.15,77.58,73.74,63.39,75.52,74.92,77.51,76.6,66.01,72.68,80.89,78.67,73.19,78.98,78.84,75.26,71.74,76.16,75.62,79.28,70.55,67.43,61.48,72.41,72.11,79.77,76.47,76.38,73.44,75.81,72.07,73.47,78.95,69.16,69.7,79.43,76.5,76.74,74.03,80.23,70.6,69.4,80.05,75.34,73.53,76.49,79.85,78.57,73.5,79.9,81.47,71.86,80.08,79.5,73.67,81.95,80.16,81.34,65.18,72.77,71.93,79.75,74.4,79.91,68.72,74.34,80.19,80.85,75.84,78.94,72.99,74.23,74.94,78.63,81.11,81.12,82.06,67.07,72.06,65.06,68.45,79.64,67.97,81.71,77.32,61.67,73.28,69.05,74.59,82.4,71.17,82.98,67.53,79.65,80.95,74.54,68.81,66.93,62.14,76.36,80.45,61.29,72.1,71.92,80.58,66.66,78.6,69.08,61.6,69.0,71.96,74.7,70.5]
+},
+"mapping":{
+"x":"income",
+"y":"lifeExpectancy",
+"size":"population"
+},
+"data_meta":{
+},
+"ggsize":{
+"width":1000.0,
+"height":500.0
+},
+"ggtitle":{
+"text":"The Wealth and Health of Nations"
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"size",
+"trans":"sqrt",
+"range":[0.2,12.0]
+},{
+"aesthetic":"x",
+"breaks":[500.0,700.0,1000.0,5000.0,7000.0,10000.0,50000.0,70000.0],
+"trans":"log2"
+}],
+"layers":[{
+"geom":"point",
+"mapping":{
+"fill":"region"
+},
+"tooltips":{
+"formats":[],
+"variables":["name"]
+},
+"data_meta":{
+},
+"stroke":0.5,
+"shape":21.0,
+"alpha":0.7,
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("G7k1sE");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+</section>
+<section id="some-scales-are-complicated" class="slide level2">
+<h2>Some scales are complicated!</h2>
+<p>Color is especially tricky.</p>
 <ul>
-<li>We’ll be using it in class</li>
+<li>Humans percieve color non-linearly</li>
+<li>Not all humans percieve the same set of colors</li>
+<li>One color can encode multiple channels</li>
+</ul>
+<p>We’ll cover this in a later lecture!</p>
+</section>
+<section id="optional-define-a-coordinate-system" class="slide level2">
+<h2>(Optional) Define a <strong>coordinate system</strong></h2>
+<p>A <strong>coordinate system</strong> defines how the range of each scale is represented. Usually Cartesian coordinate system, but others are possible, such as <em>polar</em></p>
+
+<img data-src="pictures/grammar-of-graphics/coords.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<section>
+<section id="a-layered-grammar-of-graphics" class="title-slide slide level1 center">
+<h1>A <strong>Layered</strong> Grammar of Graphics</h1>
+<p>Hadley Wickham</p>
+</section>
+<section id="a-layer-is-a-single-view-of-the-data" class="slide level2">
+<h2>A <strong>layer</strong> is a single view of the data</h2>
+<p>Encompasses data + mapping + geometry. A plot may have more than one layer to show multiple properties of a dataset or multiple datasets.</p>
+
+<img data-src="pictures/grammar-of-graphics/layers.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="scales-are-generally-shared-across-layers" class="slide level2">
+<h2>Scales are (generally) <strong>shared</strong> across layers</h2>
+
+<img data-src="pictures/grammar-of-graphics/layers.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="finally-add-annotations" class="slide level2">
+<h2>Finally: add <strong>annotations</strong></h2>
+<p><strong>Annotations</strong>, such as titles captions and highlights, give additional context and information to the viewer.</p>
+
+<img data-src="pictures/grammar-of-graphics/annotations.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<section>
+<section id="translating-the-grammar-of-graphics-to-code-ggplot2" class="title-slide slide level1 center">
+<h1>Translating the grammar of graphics to code: ggplot2</h1>
+<p>Or <strong>Let’s Plot</strong> in this class</p>
+</section>
+<section id="setup" class="slide level2">
+<h2>Setup</h2>
+<p>Import the relevant libraries and load a dataset in the tidy format</p>
+<div id="57d23c9a" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-3"><a></a>LetsPlot.setup_html()</span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a>nations <span class="op">=</span> pd.read_csv(<span class="st">'data/nations.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+            <div id="sTAEIR"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.3/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("sTAEIR").appendChild(div);
+                    };
+                    var e = document.getElementById("sTAEIR");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
+</div>
+<p>We’ll use our Gapminder dataset from earlier</p>
+<div id="0c5093ea" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>nations</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">region</th>
+<th data-quarto-table-cell-role="th">income</th>
+<th data-quarto-table-cell-role="th">population</th>
+<th data-quarto-table-cell-role="th">lifeExpectancy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Angola</td>
+<td>Sub-Saharan Africa</td>
+<td>5055.59</td>
+<td>12707546</td>
+<td>47.58</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Benin</td>
+<td>Sub-Saharan Africa</td>
+<td>1457.57</td>
+<td>8294941</td>
+<td>61.89</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Botswana</td>
+<td>Sub-Saharan Africa</td>
+<td>12282.28</td>
+<td>1638393</td>
+<td>55.12</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Burkina Faso</td>
+<td>Sub-Saharan Africa</td>
+<td>1234.42</td>
+<td>14761339</td>
+<td>53.38</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Burundi</td>
+<td>Sub-Saharan Africa</td>
+<td>457.07</td>
+<td>8691005</td>
+<td>50.95</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">175</td>
+<td>Timor-Leste</td>
+<td>East Asia &amp; Pacific</td>
+<td>2475.68</td>
+<td>1130120</td>
+<td>61.60</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">176</td>
+<td>Tokelau</td>
+<td>East Asia &amp; Pacific</td>
+<td>889.43</td>
+<td>1401</td>
+<td>69.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">177</td>
+<td>Tonga</td>
+<td>East Asia &amp; Pacific</td>
+<td>5104.06</td>
+<td>118993</td>
+<td>71.96</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">178</td>
+<td>Vietnam</td>
+<td>East Asia &amp; Pacific</td>
+<td>2679.34</td>
+<td>86116559</td>
+<td>74.70</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">179</td>
+<td>Vanuatu</td>
+<td>East Asia &amp; Pacific</td>
+<td>3943.30</td>
+<td>215053</td>
+<td>70.50</td>
+</tr>
+</tbody>
+</table>
+
+<p>180 rows × 5 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="creating-a-plot" class="slide level2">
+<h2>Creating a plot</h2>
+<p>The <code>ggplot()</code> function will create an empty plot object.</p>
+<div id="32cf7646" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>ggplot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+   <div id="sdp4J5"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"kind":"plot",
+"scales":[],
+"layers":[],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("sdp4J5");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+<div style="font-size: 75%">
+<p><em>Here we get an error as we haven’t defined our components!</em></p>
+</div>
+</section>
+<section id="adding-a-layer" class="slide level2">
+<h2>Adding a layer</h2>
+<p>We can add a <strong>layer</strong> to our plot, specifying the data, mapping and geometry. Here we’ll add a layer with a <strong>point</strong> geometry.</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div id="a2f03052" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>nations, </span>
+<span id="cb4-2"><a></a>  mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'income'</span>, y<span class="op">=</span><span class="st">'lifeExpectancy'</span>)</span>
+<span id="cb4-3"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+   <div id="xsC3rs"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"point",
+"data":{
+"income":[5055.59,1457.57,12282.28,1234.42,457.07,1997.18,3456.14,1557.83,1016.42,358.8,3834.67,1520.23,15342.2,548.37,812.16,12704.99,1382.95,908.86,568.94,1493.53,1521.4,474.9,1006.9,866.35,1136.17,1775.87,11411.53,9617.82,888.65,4952.26,643.39,2158.98,7670.12,995.27,1703.43,1700.05,893.6,943.04,9141.27,2778.61,4728.18,1220.25,888.01,1202.53,1442.06,443.74,1216.68,1492.0,5053.83,2731.0,5081.79,1224.73,2603.0,4254.13,6207.17,24226.51,2176.79,3518.18,25463.69,5109.39,42443.53,12766.21,12051.62,4162.93,22804.85,74138.28,21138.18,7499.61,33734.94,3084.56,2313.16,13498.04,25351.09,15846.77,6998.08,4007.16,9569.78,34569.63,13087.38,7090.69,9551.56,9277.96,7035.45,5646.85,8202.74,8826.9,7788.25,5163.22,3776.95,1198.05,3473.46,7023.74,14627.13,11250.37,23178.37,2591.39,10796.68,4054.3,7858.97,18970.51,8199.03,17826.05,41256.08,11461.03,6546.27,4523.44,35636.42,9088.42,11574.43,32256.64,7341.98,10840.26,14110.46,25643.45,32670.06,16349.13,30602.73,29774.85,4168.7,31191.15,27626.11,16982.8,34989.73,35692.95,26160.59,10612.29,13021.94,14928.78,70857.46,8364.79,21327.85,2593.42,12257.79,36074.53,47915.0,16465.8,19898.43,10868.12,10005.22,19186.01,24778.21,26811.93,32021.0,38003.92,1775.38,8040.78,5702.66,5730.86,31042.47,2586.96,34327.26,44738.99,1830.97,7226.07,4016.2,26733.88,39086.39,3818.08,29680.68,1635.0,23875.0,57436.68,12387.67,4994.56,3205.17,1269.14,30959.74,24009.46,1947.16,3203.97,5003.61,43526.04,1903.69,28361.0,7376.17,2475.68,889.43,5104.06,2679.34,3943.3],
+"lifeExpectancy":[47.58,61.89,55.12,53.38,50.95,51.39,71.68,48.97,65.77,47.81,53.75,57.86,50.64,60.03,55.69,60.89,56.83,58.35,48.2,54.95,45.56,58.71,60.81,53.88,48.84,56.99,72.1,75.99,48.13,61.72,51.95,48.17,76.64,50.69,65.86,55.91,47.95,50.09,51.72,58.5,46.36,56.35,62.93,53.47,46.4,45.72,44.3,66.56,66.42,64.01,71.94,67.12,66.84,74.24,72.67,75.88,55.78,68.1,81.0,72.88,77.79,72.26,74.28,71.58,75.94,75.81,73.1,74.15,77.58,73.74,63.39,75.52,74.92,77.51,76.6,66.01,72.68,80.89,78.67,73.19,78.98,78.84,75.26,71.74,76.16,75.62,79.28,70.55,67.43,61.48,72.41,72.11,79.77,76.47,76.38,73.44,75.81,72.07,73.47,78.95,69.16,69.7,79.43,76.5,76.74,74.03,80.23,70.6,69.4,80.05,75.34,73.53,76.49,79.85,78.57,73.5,79.9,81.47,71.86,80.08,79.5,73.67,81.95,80.16,81.34,65.18,72.77,71.93,79.75,74.4,79.91,68.72,74.34,80.19,80.85,75.84,78.94,72.99,74.23,74.94,78.63,81.11,81.12,82.06,67.07,72.06,65.06,68.45,79.64,67.97,81.71,77.32,61.67,73.28,69.05,74.59,82.4,71.17,82.98,67.53,79.65,80.95,74.54,68.81,66.93,62.14,76.36,80.45,61.29,72.1,71.92,80.58,66.66,78.6,69.08,61.6,69.0,71.96,74.7,70.5]
+},
+"mapping":{
+"x":"income",
+"y":"lifeExpectancy"
+},
+"data_meta":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("xsC3rs");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+</div><div class="column" style="font-size: 75%; width: 38%;">
+<p><code>aes()</code> defines an aesthetic mapping, using the column names of our dataframe.</p>
+<p><code>geom_point()</code> creates a point geometry layer.</p>
+</div></div>
+</section>
+<section id="equivalent-syntax" class="slide level2">
+<h2>Equivalent syntax</h2>
+<p>If we want default data and mappings to share across layers we can pass them to the <code>ggplot()</code> function.</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div id="b4ba3dfe" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>ggplot(</span>
+<span id="cb5-2"><a></a>  data<span class="op">=</span>nations, </span>
+<span id="cb5-3"><a></a>  mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'income'</span>, y<span class="op">=</span><span class="st">'lifeExpectancy'</span>)</span>
+<span id="cb5-4"><a></a>) <span class="op">+</span> geom_point() <span class="op">+</span> geom_line()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+   <div id="h89GDY"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"data":{
+"income":[5055.59,1457.57,12282.28,1234.42,457.07,1997.18,3456.14,1557.83,1016.42,358.8,3834.67,1520.23,15342.2,548.37,812.16,12704.99,1382.95,908.86,568.94,1493.53,1521.4,474.9,1006.9,866.35,1136.17,1775.87,11411.53,9617.82,888.65,4952.26,643.39,2158.98,7670.12,995.27,1703.43,1700.05,893.6,943.04,9141.27,2778.61,4728.18,1220.25,888.01,1202.53,1442.06,443.74,1216.68,1492.0,5053.83,2731.0,5081.79,1224.73,2603.0,4254.13,6207.17,24226.51,2176.79,3518.18,25463.69,5109.39,42443.53,12766.21,12051.62,4162.93,22804.85,74138.28,21138.18,7499.61,33734.94,3084.56,2313.16,13498.04,25351.09,15846.77,6998.08,4007.16,9569.78,34569.63,13087.38,7090.69,9551.56,9277.96,7035.45,5646.85,8202.74,8826.9,7788.25,5163.22,3776.95,1198.05,3473.46,7023.74,14627.13,11250.37,23178.37,2591.39,10796.68,4054.3,7858.97,18970.51,8199.03,17826.05,41256.08,11461.03,6546.27,4523.44,35636.42,9088.42,11574.43,32256.64,7341.98,10840.26,14110.46,25643.45,32670.06,16349.13,30602.73,29774.85,4168.7,31191.15,27626.11,16982.8,34989.73,35692.95,26160.59,10612.29,13021.94,14928.78,70857.46,8364.79,21327.85,2593.42,12257.79,36074.53,47915.0,16465.8,19898.43,10868.12,10005.22,19186.01,24778.21,26811.93,32021.0,38003.92,1775.38,8040.78,5702.66,5730.86,31042.47,2586.96,34327.26,44738.99,1830.97,7226.07,4016.2,26733.88,39086.39,3818.08,29680.68,1635.0,23875.0,57436.68,12387.67,4994.56,3205.17,1269.14,30959.74,24009.46,1947.16,3203.97,5003.61,43526.04,1903.69,28361.0,7376.17,2475.68,889.43,5104.06,2679.34,3943.3],
+"lifeExpectancy":[47.58,61.89,55.12,53.38,50.95,51.39,71.68,48.97,65.77,47.81,53.75,57.86,50.64,60.03,55.69,60.89,56.83,58.35,48.2,54.95,45.56,58.71,60.81,53.88,48.84,56.99,72.1,75.99,48.13,61.72,51.95,48.17,76.64,50.69,65.86,55.91,47.95,50.09,51.72,58.5,46.36,56.35,62.93,53.47,46.4,45.72,44.3,66.56,66.42,64.01,71.94,67.12,66.84,74.24,72.67,75.88,55.78,68.1,81.0,72.88,77.79,72.26,74.28,71.58,75.94,75.81,73.1,74.15,77.58,73.74,63.39,75.52,74.92,77.51,76.6,66.01,72.68,80.89,78.67,73.19,78.98,78.84,75.26,71.74,76.16,75.62,79.28,70.55,67.43,61.48,72.41,72.11,79.77,76.47,76.38,73.44,75.81,72.07,73.47,78.95,69.16,69.7,79.43,76.5,76.74,74.03,80.23,70.6,69.4,80.05,75.34,73.53,76.49,79.85,78.57,73.5,79.9,81.47,71.86,80.08,79.5,73.67,81.95,80.16,81.34,65.18,72.77,71.93,79.75,74.4,79.91,68.72,74.34,80.19,80.85,75.84,78.94,72.99,74.23,74.94,78.63,81.11,81.12,82.06,67.07,72.06,65.06,68.45,79.64,67.97,81.71,77.32,61.67,73.28,69.05,74.59,82.4,71.17,82.98,67.53,79.65,80.95,74.54,68.81,66.93,62.14,76.36,80.45,61.29,72.1,71.92,80.58,66.66,78.6,69.08,61.6,69.0,71.96,74.7,70.5]
+},
+"mapping":{
+"x":"income",
+"y":"lifeExpectancy"
+},
+"data_meta":{
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"point",
+"mapping":{
+},
+"data_meta":{
+},
+"data":{
+}
+},{
+"geom":"line",
+"mapping":{
+},
+"data_meta":{
+},
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("h89GDY");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+</div><div class="column" style="font-size: 75%; width: 38%;">
+<p>Here we’ll add both point and line geometries</p>
+</div></div>
+</section>
+<section id="choosing-scales" class="slide level2">
+<h2>Choosing scales</h2>
+<p>We didn’t need to specify scales, Let’s plot has sensible defaults.</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div id="8f86b208" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>nations, </span>
+<span id="cb6-2"><a></a>  mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'income'</span>, y<span class="op">=</span><span class="st">'lifeExpectancy'</span>)</span>
+<span id="cb6-3"><a></a>) <span class="op">+</span> scale_x_continuous(trans<span class="op">=</span><span class="st">'log2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+   <div id="nScvMW"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"x",
+"trans":"log2"
+}],
+"layers":[{
+"geom":"point",
+"data":{
+"income":[5055.59,1457.57,12282.28,1234.42,457.07,1997.18,3456.14,1557.83,1016.42,358.8,3834.67,1520.23,15342.2,548.37,812.16,12704.99,1382.95,908.86,568.94,1493.53,1521.4,474.9,1006.9,866.35,1136.17,1775.87,11411.53,9617.82,888.65,4952.26,643.39,2158.98,7670.12,995.27,1703.43,1700.05,893.6,943.04,9141.27,2778.61,4728.18,1220.25,888.01,1202.53,1442.06,443.74,1216.68,1492.0,5053.83,2731.0,5081.79,1224.73,2603.0,4254.13,6207.17,24226.51,2176.79,3518.18,25463.69,5109.39,42443.53,12766.21,12051.62,4162.93,22804.85,74138.28,21138.18,7499.61,33734.94,3084.56,2313.16,13498.04,25351.09,15846.77,6998.08,4007.16,9569.78,34569.63,13087.38,7090.69,9551.56,9277.96,7035.45,5646.85,8202.74,8826.9,7788.25,5163.22,3776.95,1198.05,3473.46,7023.74,14627.13,11250.37,23178.37,2591.39,10796.68,4054.3,7858.97,18970.51,8199.03,17826.05,41256.08,11461.03,6546.27,4523.44,35636.42,9088.42,11574.43,32256.64,7341.98,10840.26,14110.46,25643.45,32670.06,16349.13,30602.73,29774.85,4168.7,31191.15,27626.11,16982.8,34989.73,35692.95,26160.59,10612.29,13021.94,14928.78,70857.46,8364.79,21327.85,2593.42,12257.79,36074.53,47915.0,16465.8,19898.43,10868.12,10005.22,19186.01,24778.21,26811.93,32021.0,38003.92,1775.38,8040.78,5702.66,5730.86,31042.47,2586.96,34327.26,44738.99,1830.97,7226.07,4016.2,26733.88,39086.39,3818.08,29680.68,1635.0,23875.0,57436.68,12387.67,4994.56,3205.17,1269.14,30959.74,24009.46,1947.16,3203.97,5003.61,43526.04,1903.69,28361.0,7376.17,2475.68,889.43,5104.06,2679.34,3943.3],
+"lifeExpectancy":[47.58,61.89,55.12,53.38,50.95,51.39,71.68,48.97,65.77,47.81,53.75,57.86,50.64,60.03,55.69,60.89,56.83,58.35,48.2,54.95,45.56,58.71,60.81,53.88,48.84,56.99,72.1,75.99,48.13,61.72,51.95,48.17,76.64,50.69,65.86,55.91,47.95,50.09,51.72,58.5,46.36,56.35,62.93,53.47,46.4,45.72,44.3,66.56,66.42,64.01,71.94,67.12,66.84,74.24,72.67,75.88,55.78,68.1,81.0,72.88,77.79,72.26,74.28,71.58,75.94,75.81,73.1,74.15,77.58,73.74,63.39,75.52,74.92,77.51,76.6,66.01,72.68,80.89,78.67,73.19,78.98,78.84,75.26,71.74,76.16,75.62,79.28,70.55,67.43,61.48,72.41,72.11,79.77,76.47,76.38,73.44,75.81,72.07,73.47,78.95,69.16,69.7,79.43,76.5,76.74,74.03,80.23,70.6,69.4,80.05,75.34,73.53,76.49,79.85,78.57,73.5,79.9,81.47,71.86,80.08,79.5,73.67,81.95,80.16,81.34,65.18,72.77,71.93,79.75,74.4,79.91,68.72,74.34,80.19,80.85,75.84,78.94,72.99,74.23,74.94,78.63,81.11,81.12,82.06,67.07,72.06,65.06,68.45,79.64,67.97,81.71,77.32,61.67,73.28,69.05,74.59,82.4,71.17,82.98,67.53,79.65,80.95,74.54,68.81,66.93,62.14,76.36,80.45,61.29,72.1,71.92,80.58,66.66,78.6,69.08,61.6,69.0,71.96,74.7,70.5]
+},
+"mapping":{
+"x":"income",
+"y":"lifeExpectancy"
+},
+"data_meta":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("nScvMW");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+</div><div class="column" style="font-size: 75%; width: 38%;">
+<p>we can change the scales by adding them to our specification.</p>
+<p>Here we’ll set the x axis scale to be <strong>logarithmic</strong></p>
+</div></div>
+</section>
+<section id="changing-the-coordinate-system" class="slide level2">
+<h2>Changing the coordinate system</h2>
+<p>We can similarly change the default (Cartesean) coordinate system.</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div id="871d4f0c" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>nations, </span>
+<span id="cb7-2"><a></a>  mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'income'</span>, y<span class="op">=</span><span class="st">'lifeExpectancy'</span>)</span>
+<span id="cb7-3"><a></a>) <span class="op">+</span> coord_polar(theta<span class="op">=</span><span class="st">'y'</span>) <span class="op">+</span> scale_x_continuous(trans<span class="op">=</span><span class="st">'log2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+   <div id="ahfwG1"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"coord":{
+"name":"polar",
+"theta":"y"
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"x",
+"trans":"log2"
+}],
+"layers":[{
+"geom":"point",
+"data":{
+"income":[5055.59,1457.57,12282.28,1234.42,457.07,1997.18,3456.14,1557.83,1016.42,358.8,3834.67,1520.23,15342.2,548.37,812.16,12704.99,1382.95,908.86,568.94,1493.53,1521.4,474.9,1006.9,866.35,1136.17,1775.87,11411.53,9617.82,888.65,4952.26,643.39,2158.98,7670.12,995.27,1703.43,1700.05,893.6,943.04,9141.27,2778.61,4728.18,1220.25,888.01,1202.53,1442.06,443.74,1216.68,1492.0,5053.83,2731.0,5081.79,1224.73,2603.0,4254.13,6207.17,24226.51,2176.79,3518.18,25463.69,5109.39,42443.53,12766.21,12051.62,4162.93,22804.85,74138.28,21138.18,7499.61,33734.94,3084.56,2313.16,13498.04,25351.09,15846.77,6998.08,4007.16,9569.78,34569.63,13087.38,7090.69,9551.56,9277.96,7035.45,5646.85,8202.74,8826.9,7788.25,5163.22,3776.95,1198.05,3473.46,7023.74,14627.13,11250.37,23178.37,2591.39,10796.68,4054.3,7858.97,18970.51,8199.03,17826.05,41256.08,11461.03,6546.27,4523.44,35636.42,9088.42,11574.43,32256.64,7341.98,10840.26,14110.46,25643.45,32670.06,16349.13,30602.73,29774.85,4168.7,31191.15,27626.11,16982.8,34989.73,35692.95,26160.59,10612.29,13021.94,14928.78,70857.46,8364.79,21327.85,2593.42,12257.79,36074.53,47915.0,16465.8,19898.43,10868.12,10005.22,19186.01,24778.21,26811.93,32021.0,38003.92,1775.38,8040.78,5702.66,5730.86,31042.47,2586.96,34327.26,44738.99,1830.97,7226.07,4016.2,26733.88,39086.39,3818.08,29680.68,1635.0,23875.0,57436.68,12387.67,4994.56,3205.17,1269.14,30959.74,24009.46,1947.16,3203.97,5003.61,43526.04,1903.69,28361.0,7376.17,2475.68,889.43,5104.06,2679.34,3943.3],
+"lifeExpectancy":[47.58,61.89,55.12,53.38,50.95,51.39,71.68,48.97,65.77,47.81,53.75,57.86,50.64,60.03,55.69,60.89,56.83,58.35,48.2,54.95,45.56,58.71,60.81,53.88,48.84,56.99,72.1,75.99,48.13,61.72,51.95,48.17,76.64,50.69,65.86,55.91,47.95,50.09,51.72,58.5,46.36,56.35,62.93,53.47,46.4,45.72,44.3,66.56,66.42,64.01,71.94,67.12,66.84,74.24,72.67,75.88,55.78,68.1,81.0,72.88,77.79,72.26,74.28,71.58,75.94,75.81,73.1,74.15,77.58,73.74,63.39,75.52,74.92,77.51,76.6,66.01,72.68,80.89,78.67,73.19,78.98,78.84,75.26,71.74,76.16,75.62,79.28,70.55,67.43,61.48,72.41,72.11,79.77,76.47,76.38,73.44,75.81,72.07,73.47,78.95,69.16,69.7,79.43,76.5,76.74,74.03,80.23,70.6,69.4,80.05,75.34,73.53,76.49,79.85,78.57,73.5,79.9,81.47,71.86,80.08,79.5,73.67,81.95,80.16,81.34,65.18,72.77,71.93,79.75,74.4,79.91,68.72,74.34,80.19,80.85,75.84,78.94,72.99,74.23,74.94,78.63,81.11,81.12,82.06,67.07,72.06,65.06,68.45,79.64,67.97,81.71,77.32,61.67,73.28,69.05,74.59,82.4,71.17,82.98,67.53,79.65,80.95,74.54,68.81,66.93,62.14,76.36,80.45,61.29,72.1,71.92,80.58,66.66,78.6,69.08,61.6,69.0,71.96,74.7,70.5]
+},
+"mapping":{
+"x":"income",
+"y":"lifeExpectancy"
+},
+"data_meta":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("ahfwG1");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+</div><div class="column" style="font-size: 75%; width: 38%;">
+<p>Here we’ll make a <strong>polar</strong> plot</p>
+</div></div>
+</section>
+<section id="adding-annotations" class="slide level2">
+<h2>Adding annotations</h2>
+<p>We can also add annotations, such as a plot title. <code>ggtitle()</code> will add a title to our plot.</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div id="d90090f7" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>nations, </span>
+<span id="cb8-2"><a></a>  mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'income'</span>, y<span class="op">=</span><span class="st">'lifeExpectancy'</span>)</span>
+<span id="cb8-3"><a></a>) <span class="op">+</span>  ggtitle(<span class="st">'Income vs. Life Exp.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+   <div id="K7EAxD"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"ggtitle":{
+"text":"Income vs. Life Exp."
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"point",
+"data":{
+"income":[5055.59,1457.57,12282.28,1234.42,457.07,1997.18,3456.14,1557.83,1016.42,358.8,3834.67,1520.23,15342.2,548.37,812.16,12704.99,1382.95,908.86,568.94,1493.53,1521.4,474.9,1006.9,866.35,1136.17,1775.87,11411.53,9617.82,888.65,4952.26,643.39,2158.98,7670.12,995.27,1703.43,1700.05,893.6,943.04,9141.27,2778.61,4728.18,1220.25,888.01,1202.53,1442.06,443.74,1216.68,1492.0,5053.83,2731.0,5081.79,1224.73,2603.0,4254.13,6207.17,24226.51,2176.79,3518.18,25463.69,5109.39,42443.53,12766.21,12051.62,4162.93,22804.85,74138.28,21138.18,7499.61,33734.94,3084.56,2313.16,13498.04,25351.09,15846.77,6998.08,4007.16,9569.78,34569.63,13087.38,7090.69,9551.56,9277.96,7035.45,5646.85,8202.74,8826.9,7788.25,5163.22,3776.95,1198.05,3473.46,7023.74,14627.13,11250.37,23178.37,2591.39,10796.68,4054.3,7858.97,18970.51,8199.03,17826.05,41256.08,11461.03,6546.27,4523.44,35636.42,9088.42,11574.43,32256.64,7341.98,10840.26,14110.46,25643.45,32670.06,16349.13,30602.73,29774.85,4168.7,31191.15,27626.11,16982.8,34989.73,35692.95,26160.59,10612.29,13021.94,14928.78,70857.46,8364.79,21327.85,2593.42,12257.79,36074.53,47915.0,16465.8,19898.43,10868.12,10005.22,19186.01,24778.21,26811.93,32021.0,38003.92,1775.38,8040.78,5702.66,5730.86,31042.47,2586.96,34327.26,44738.99,1830.97,7226.07,4016.2,26733.88,39086.39,3818.08,29680.68,1635.0,23875.0,57436.68,12387.67,4994.56,3205.17,1269.14,30959.74,24009.46,1947.16,3203.97,5003.61,43526.04,1903.69,28361.0,7376.17,2475.68,889.43,5104.06,2679.34,3943.3],
+"lifeExpectancy":[47.58,61.89,55.12,53.38,50.95,51.39,71.68,48.97,65.77,47.81,53.75,57.86,50.64,60.03,55.69,60.89,56.83,58.35,48.2,54.95,45.56,58.71,60.81,53.88,48.84,56.99,72.1,75.99,48.13,61.72,51.95,48.17,76.64,50.69,65.86,55.91,47.95,50.09,51.72,58.5,46.36,56.35,62.93,53.47,46.4,45.72,44.3,66.56,66.42,64.01,71.94,67.12,66.84,74.24,72.67,75.88,55.78,68.1,81.0,72.88,77.79,72.26,74.28,71.58,75.94,75.81,73.1,74.15,77.58,73.74,63.39,75.52,74.92,77.51,76.6,66.01,72.68,80.89,78.67,73.19,78.98,78.84,75.26,71.74,76.16,75.62,79.28,70.55,67.43,61.48,72.41,72.11,79.77,76.47,76.38,73.44,75.81,72.07,73.47,78.95,69.16,69.7,79.43,76.5,76.74,74.03,80.23,70.6,69.4,80.05,75.34,73.53,76.49,79.85,78.57,73.5,79.9,81.47,71.86,80.08,79.5,73.67,81.95,80.16,81.34,65.18,72.77,71.93,79.75,74.4,79.91,68.72,74.34,80.19,80.85,75.84,78.94,72.99,74.23,74.94,78.63,81.11,81.12,82.06,67.07,72.06,65.06,68.45,79.64,67.97,81.71,77.32,61.67,73.28,69.05,74.59,82.4,71.17,82.98,67.53,79.65,80.95,74.54,68.81,66.93,62.14,76.36,80.45,61.29,72.1,71.92,80.58,66.66,78.6,69.08,61.6,69.0,71.96,74.7,70.5]
+},
+"mapping":{
+"x":"income",
+"y":"lifeExpectancy"
+},
+"data_meta":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("K7EAxD");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+</div><div class="column" style="font-size: 75%; width: 38%;">
+
+</div></div>
+</section>
+<section id="configuration" class="slide level2">
+<h2>Configuration</h2>
+<p>Outside of our grammar, we can configure the rendering of our plot.</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div id="883e974b" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>nations, </span>
+<span id="cb9-2"><a></a>  mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'income'</span>, y<span class="op">=</span><span class="st">'lifeExpectancy'</span>)</span>
+<span id="cb9-3"><a></a>) <span class="op">+</span>  ggsize(<span class="dv">400</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+   <div id="ZNIGpM"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"ggsize":{
+"width":400.0,
+"height":400.0
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"point",
+"data":{
+"income":[5055.59,1457.57,12282.28,1234.42,457.07,1997.18,3456.14,1557.83,1016.42,358.8,3834.67,1520.23,15342.2,548.37,812.16,12704.99,1382.95,908.86,568.94,1493.53,1521.4,474.9,1006.9,866.35,1136.17,1775.87,11411.53,9617.82,888.65,4952.26,643.39,2158.98,7670.12,995.27,1703.43,1700.05,893.6,943.04,9141.27,2778.61,4728.18,1220.25,888.01,1202.53,1442.06,443.74,1216.68,1492.0,5053.83,2731.0,5081.79,1224.73,2603.0,4254.13,6207.17,24226.51,2176.79,3518.18,25463.69,5109.39,42443.53,12766.21,12051.62,4162.93,22804.85,74138.28,21138.18,7499.61,33734.94,3084.56,2313.16,13498.04,25351.09,15846.77,6998.08,4007.16,9569.78,34569.63,13087.38,7090.69,9551.56,9277.96,7035.45,5646.85,8202.74,8826.9,7788.25,5163.22,3776.95,1198.05,3473.46,7023.74,14627.13,11250.37,23178.37,2591.39,10796.68,4054.3,7858.97,18970.51,8199.03,17826.05,41256.08,11461.03,6546.27,4523.44,35636.42,9088.42,11574.43,32256.64,7341.98,10840.26,14110.46,25643.45,32670.06,16349.13,30602.73,29774.85,4168.7,31191.15,27626.11,16982.8,34989.73,35692.95,26160.59,10612.29,13021.94,14928.78,70857.46,8364.79,21327.85,2593.42,12257.79,36074.53,47915.0,16465.8,19898.43,10868.12,10005.22,19186.01,24778.21,26811.93,32021.0,38003.92,1775.38,8040.78,5702.66,5730.86,31042.47,2586.96,34327.26,44738.99,1830.97,7226.07,4016.2,26733.88,39086.39,3818.08,29680.68,1635.0,23875.0,57436.68,12387.67,4994.56,3205.17,1269.14,30959.74,24009.46,1947.16,3203.97,5003.61,43526.04,1903.69,28361.0,7376.17,2475.68,889.43,5104.06,2679.34,3943.3],
+"lifeExpectancy":[47.58,61.89,55.12,53.38,50.95,51.39,71.68,48.97,65.77,47.81,53.75,57.86,50.64,60.03,55.69,60.89,56.83,58.35,48.2,54.95,45.56,58.71,60.81,53.88,48.84,56.99,72.1,75.99,48.13,61.72,51.95,48.17,76.64,50.69,65.86,55.91,47.95,50.09,51.72,58.5,46.36,56.35,62.93,53.47,46.4,45.72,44.3,66.56,66.42,64.01,71.94,67.12,66.84,74.24,72.67,75.88,55.78,68.1,81.0,72.88,77.79,72.26,74.28,71.58,75.94,75.81,73.1,74.15,77.58,73.74,63.39,75.52,74.92,77.51,76.6,66.01,72.68,80.89,78.67,73.19,78.98,78.84,75.26,71.74,76.16,75.62,79.28,70.55,67.43,61.48,72.41,72.11,79.77,76.47,76.38,73.44,75.81,72.07,73.47,78.95,69.16,69.7,79.43,76.5,76.74,74.03,80.23,70.6,69.4,80.05,75.34,73.53,76.49,79.85,78.57,73.5,79.9,81.47,71.86,80.08,79.5,73.67,81.95,80.16,81.34,65.18,72.77,71.93,79.75,74.4,79.91,68.72,74.34,80.19,80.85,75.84,78.94,72.99,74.23,74.94,78.63,81.11,81.12,82.06,67.07,72.06,65.06,68.45,79.64,67.97,81.71,77.32,61.67,73.28,69.05,74.59,82.4,71.17,82.98,67.53,79.65,80.95,74.54,68.81,66.93,62.14,76.36,80.45,61.29,72.1,71.92,80.58,66.66,78.6,69.08,61.6,69.0,71.96,74.7,70.5]
+},
+"mapping":{
+"x":"income",
+"y":"lifeExpectancy"
+},
+"data_meta":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("ZNIGpM");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+</div><div class="column" style="font-size: 75%; width: 38%;">
+<p><code>ggsize()</code> lets us set the size of the output.</p>
+<p><code>theme</code> lets us adjust many other aesthetic properties.</p>
+</div></div>
+</section></section>
+<section id="how-do-we-make-good-choices-when-making-visualizations" class="title-slide slide level1 center">
+<h1>How do we make good choices when making visualizations?</h1>
+
+</section>
+
+<section>
+<section id="a-poetry-of-graphics" class="title-slide slide level1 center">
+<h1>A <em>poetry</em> of graphics</h1>
+
+</section>
+<section id="exercise-aesthetic-mappings" class="slide level2">
+<h2>Exercise: Aesthetic mappings</h2>
+<p>Let’s start with how we choose aesthetic mappings</p>
+<p>We’ll replicate a famous experiment from Cleveland and McGill!</p>
+<p>Open this form: <a href="https://forms.gle/RfNNwfRcPtEBRGZh7">https://forms.gle/RfNNwfRcPtEBRGZh7</a></p>
+</section></section>
+<section>
+<section id="what-did-we-find" class="title-slide slide level1 center">
+<h1>What did we find?</h1>
+
+<img data-src="pictures/perception/tasks.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="previous-studies" class="slide level2">
+<h2>Previous studies</h2>
+
+<img data-src="pictures/perception/heer.png" class="quarto-figure quarto-figure-center r-stretch"><p>Some channels are <strong>far</strong> more effective at communicating values.</p>
+</section>
+<section id="mackinlays-ranking" class="slide level2">
+<h2>MacKinlay’s Ranking</h2>
+<div class="columns">
+<div class="column" style="font-size: 75%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/perception/ranking.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<p>Most effective representation may depend on the <strong>type</strong> of data</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/perception/aesthetics.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="some-principles" class="title-slide slide level1 center">
+<h1>Some principles</h1>
+
+<img data-src="pictures/perception/jock.png" class="quarto-figure quarto-figure-center r-stretch"><p>From Jock MacKinlay</p>
+</section>
+<section id="a-first-principle-importance-ordering" class="slide level2">
+<h2>A first principle: <strong>importance ordering</strong></h2>
+<p>“<em>Encode more important information more effectively</em>”</p>
+<ul>
+<li>A visualization is more <strong>effective</strong> than another visualization if the information conveyed by one visualization is more readily perceived than the information in the other visualization.</li>
+</ul>
+</section>
+<section id="another-principle-expressiveness" class="slide level2">
+<h2>Another principle: <strong>expressiveness</strong></h2>
+<p>“<em>A set of facts is <strong>expressible</strong> in a</em> [visual] <em>language if it contains a sentence</em> [visualization] <em>that:</em>”</p>
+<ul>
+<li>“<em>Encodes <strong>all</strong> the facts in the set</em>”</li>
+<li>“<em>Encodes <strong>only</strong> the facts in the set</em>”</li>
+</ul>
+<p><strong>What does this mean?</strong></p>
+</section>
+<section id="express-all-the-facts-overplotting" class="slide level2">
+<h2>Express all the facts: <strong>overplotting</strong></h2>
+<p>Overlapping points can make it impossible to tell the number of observations</p>
+
+<img data-src="pictures/perception/overplotting.png" class="quarto-figure quarto-figure-center r-stretch"><p><em>How many total cars are represented?</em></p>
+</section>
+<section id="encode-only-the-facts-consistency" class="slide level2">
+<h2>Encode only the facts: <strong>consistency</strong></h2>
+<p>The properties of the image (visual variables) should match the properties of the data</p>
+
+<img data-src="pictures/perception/cars.png" class="quarto-figure quarto-figure-center r-stretch"><p><em>Nations are not ordinal!</em></p>
+</section>
+<section id="encode-only-the-facts-ordering" class="slide level2">
+<h2>Encode only the facts: <strong>ordering</strong></h2>
+<p>Visual orderings convey meaning, even when there is none!</p>
+<ul>
+<li>“<em>Because we are almost never interested in seeing <strong>Alabama first</strong>, it is astonishing how often data displays use alphabetical order as the organizing principle of choice</em>” - Howard Wainer</li>
+</ul>
+<div class="columns">
+<div class="column" style="font-size: 50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/perception/foods.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/perception/french-foods.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="violations-of-these-principles" class="slide level2">
+<h2>Violations of these principles</h2>
+<p>The following charts from Morton Thiokol documented O-ring damage on pre-challenger flights</p>
+<div class="columns">
+<div class="column" style="font-size: 50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/challenger/mt-plot-1.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/challenger/mt-plot-2.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+<p><em>What principle(s) are violated here?</em></p>
+</section>
+<section id="tuftes-fixes" class="slide level2">
+<h2>Tufte’s fixes</h2>
+<p>Temperature is more important than date!</p>
+
+<img data-src="pictures/challenger/mt-plot-tufte.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="tuftes-fixes-1" class="slide level2">
+<h2>Tufte’s fixes</h2>
+<p>Ordering alone doesn’t effectively convey differences!</p>
+
+<img data-src="pictures/challenger/mt-scatter.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<section id="above-all-else-show-the-data" class="title-slide slide level1 center">
+<h1><em>Above all else show the data</em></h1>
+
+</section>
+
+<section>
+<section id="more-principles" class="title-slide slide level1 center">
+<h1>More principles!</h1>
+
+<img data-src="pictures/challenger/tufte-portrait.jpg" class="quarto-figure quarto-figure-center r-stretch"><p>From Edward Tufte</p>
+</section>
+<section id="tuftes-philosophy-minimalism" class="slide level2">
+<h2>Tufte’s philosophy: <strong>minimalism</strong></h2>
+<p>Five principles</p>
+<ul>
+<li>Above all else show the data</li>
+<li>Maximize the data-ink ratio</li>
+<li>Erase non-data-ink</li>
+<li>Erase redundant data-ink</li>
+<li>Revise and edit</li>
+</ul>
+</section>
+<section id="data-ink-ratio" class="slide level2">
+<h2>Data-ink ratio</h2>
+<div class="columns">
+<div class="column" style="font-size: 100%">
+<p>Heuristic for visual complexity</p>
+</div><div class="column" style="font-size: 75%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/data-to-ink/ratio.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
+</div></div>
+<div class="columns">
+<div class="column" style="font-size: 60%">
+<p>Low data-ink ratio (<em>William Playfair 1785</em>): <img data-src="pictures/data-to-ink/playfair-messy.png" class="quarto-figure quarto-figure-center" height="300"></p>
+</div><div class="column" style="font-size: 60%">
+<p>High data-ink ratio (<em>William Playfair 1786</em>): <img data-src="pictures/data-to-ink/playfair.png" class="quarto-figure quarto-figure-center" height="300"></p>
+</div></div>
+</section>
+<section id="maximal-data-ink-ratio-eeg" class="slide level2">
+<h2>Maximal data-ink ratio: EEG</h2>
+<p>Can’t erase anything without losing information</p>
+
+<img data-src="pictures/data-to-ink/eeg.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="data-ink-ratio-1" class="slide level2">
+<h2>Data-ink ratio</h2>
+<p>Can be used to guide visual design (<em>Revise and edit!</em>):</p>
+<div class="columns">
+<div class="column" style="font-size: 75%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/data-to-ink/bar-1.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
+<p>A simple bar chart</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/data-to-ink/bar-3.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
+<p>and the axis rule</p>
+</div><div class="column" style="font-size: 75%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/data-to-ink/bar-2.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
+<p>We can remove the outline</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/data-to-ink/bar-4.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
+<p>even re-encode the axis with whitespace!</p>
+</div></div>
+<div style="font-size: 75%">
+
+</div>
+</section>
+<section id="data-ink-ratio-2" class="slide level2">
+<h2>Data-ink ratio</h2>
+<div class="columns">
+<div class="column" style="font-size: 100%">
+<p>Can convey more information.</p>
+<ul>
+<li>Here the axes convey the extents of the data</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/data-to-ink/extents.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="font-size: 50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/data-to-ink/range-frame.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="data-ink-ratio-3" class="slide level2">
+<h2>Data-ink ratio</h2>
+<p>Can be used to derive new forms</p>
+<div class="columns">
+<div class="column" style="font-size: 50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/data-to-ink/tukey-boxplot.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+<p>John Tukey’s box plot</p>
+</div><div class="column" style="font-size: 50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/data-to-ink/tufte-boxplot.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+<p>Tufte’s simplification</p>
+</div></div>
+</section>
+<section id="data-ink-ratio-4" class="slide level2">
+<h2>Data-ink ratio</h2>
+<p>Sometimes Tufte went a little far… <img data-src="pictures/data-to-ink/boxplots.png" class="quarto-figure quarto-figure-center" height="500"></p>
+<p><em>Is this really better?</em></p>
+</section>
+<section id="chart-junk" class="slide level2">
+<h2>Chart junk</h2>
+<p>Distracting patterns and unnecessary artistic embelishment</p>
+
+<img data-src="pictures/chartjunk/junky.png" class="quarto-figure quarto-figure-center r-stretch"><div style="font-size: 75%">
+<p><em>A typical example</em></p>
+</div>
+</section>
+<section id="distracting-patterns" class="slide level2">
+<h2>Distracting patterns</h2>
+<p>Patterns can introduce visual artifacts and distract from the data.</p>
+
+<img data-src="pictures/chartjunk/patterns.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="unnecessary-artistic-embellishment" class="slide level2">
+<h2>Unnecessary artistic embellishment</h2>
+<p>Which conveys data more effectively?</p>
+<div class="columns">
+<div class="column" style="font-size: 50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/challenger/mt-scatter.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/challenger/tufte.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="this-may-be-the-worst-graphic-ever-put-into-print" class="slide level2">
+<h2>“This may be the worst graphic ever put into print”</h2>
+
+<img data-src="pictures/chartjunk/worst.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<section>
+<section id="but-is-tufte-right" class="title-slide slide level1 center">
+<h1>But is Tufte right?</h1>
+
+</section>
+<section id="artistic-embellishment" class="slide level2">
+<h2>Artistic embellishment</h2>
+<p>Which plot is more clear? Which is more <em>memorable</em>?</p>
+<div class="columns">
+<div class="column" style="font-size: 50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/data-to-ink/monstrous.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+<p><em>Nigel Holmes’ visual</em></p>
+</div><div class="column" style="font-size: 50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/data-to-ink/non-monstrous.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+<p><em>A simplified visual</em></p>
+</div></div>
+</section>
+<section id="a-perceptual-study" class="slide level2">
+<h2>A perceptual study</h2>
+<p><em>Bateman et. al.</em> put this to the test!</p>
+<ul>
+<li>Subjects compared several plots from Holmes to simplified charts.</li>
+</ul>
+
+<img data-src="pictures/data-to-ink/storytelling.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="the-results" class="slide level2">
+<h2>The results</h2>
+<div class="columns">
+<div class="column" style="font-size: 100%">
+<p>Subject better remembered the charts with “junk”!</p>
+<ul>
+<li><strong>Especially</strong> in the long term</li>
+</ul>
+</div><div class="column" style="font-size: 50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="pictures/data-to-ink/recall.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="the-results-1" class="slide level2">
+<h2>The results</h2>
+<p>They also preferred them</p>
+
+<img data-src="pictures/data-to-ink/preferences.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="takeaway" class="slide level2">
+<h2>Takeaway</h2>
+<p>The appropriate level of “junk” is the subject of ongoing research and debate</p>
+<ul>
+<li>Tufte’s principles can make plots more <strong>effective</strong></li>
+<li>Embellishment can make plots more <strong>memorable</strong></li>
 </ul>
 </section></section>
-<section id="example-cars" class="title-slide slide level1 center">
-<h1>Example: Cars</h1>
+<section id="well-cover-more-principles-in-future-lectures" class="title-slide slide level1 center">
+<h1>We’ll cover more principles in future lectures!</h1>
 
 </section>
 
+<section>
+<section id="epilogue-the-best-graphic-ever-put-into-print" class="title-slide slide level1 center">
+<h1><strong>Epilogue:</strong> The best graphic ever put into print?</h1>
+
+</section>
+<section id="tuftes-answer-charles-minards-visualization-of-napoleons-march" class="slide level2">
+<h2><strong>Tufte’s answer:</strong> Charles Minard’s visualization of Napoleon’s march</h2>
+
+<img data-src="pictures/data-to-ink/march.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
 <section>
 <section id="file-formats-and-loading-data" class="title-slide slide level1 center">
 <h1>File formats and loading data</h1>
@@ -682,7 +3154,6 @@ Prof.&nbsp;Gabe Hope
   <script src="../../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../../../site_libs/revealjs/plugin/tldreveal/tldraw.js"></script>
   <script src="../../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -874,7 +3345,7 @@ Prof.&nbsp;Gabe Hope
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Tldreveal, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,

@@ -1690,36 +1690,36 @@
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#about-me",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#about-me",
     "title": "Data Analytics and Visualization",
-    "section": "About me",
-    "text": "About me\n\n\n\n\n\n\n\n\nProf. Gabe Hope (he/him)\nEmail: ghope@g.hmc.edu\nOffice: MacGregor 322\nOffice hours: TBA"
+    "section": "",
+    "text": "Prof. Gabe Hope (he/him)\nEmail: ghope@g.hmc.edu\nOffice: MacGregor 322\nOffice hours: TBA"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#my-background",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#my-background",
     "title": "Data Analytics and Visualization",
-    "section": "My background",
-    "text": "My background\n\n\n\n\n\n\n\n\nProf. Gabe Hope (he/him)\n\nWhere I’m from: New York City, but I’ve been living in southern California for the past 7 years.\nWhere I went to school: University of California, Irvine advised by Erik Sudderth."
+    "section": "",
+    "text": "Prof. Gabe Hope (he/him)\n\nWhere I’m from: New York City, but I’ve been living in southern California for the past 7 years.\nWhere I went to school: University of California, Irvine advised by Erik Sudderth."
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#my-research",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#my-research",
     "title": "Data Analytics and Visualization",
-    "section": "My research",
-    "text": "My research\n\nMy research focuses on using neural networks to find interpretable structures in data.\nI mainly focus on image data, though I have also worked on analyzing motion-capture, audio and climate data!\n\n\n\nImage in-painting \n\nMotion-capture analysis"
+    "section": "",
+    "text": "My research focuses on using neural networks to find interpretable structures in data.\nI mainly focus on image data, though I have also worked on analyzing motion-capture, audio and climate data!\n\n\n\nImage in-painting \n\nMotion-capture analysis"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#about-you",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#about-you",
     "title": "Data Analytics and Visualization",
-    "section": "About you!",
-    "text": "About you!\n\nYour name & preferred pronouns\nYour year and major\nWhat interested you about this class?\n\nDo you want to work with a particular kind of data?\nDid you just think it sounded cool? 😎"
+    "section": "",
+    "text": "Your name & preferred pronouns\nYour year and major\nWhat interested you about this class?\n\nDo you want to work with a particular kind of data?\nDid you just think it sounded cool? 😎"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#what-are-the-goals-of-this-class",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#what-are-the-goals-of-this-class",
     "title": "Data Analytics and Visualization",
     "section": "What are the goals of this class?",
-    "text": "What are the goals of this class?\nExercise!\n\nGo to this webpage: https://projects.fivethirtyeight.com/2024-election-forecast/\nFollow the instructions on the handout"
+    "text": "What are the goals of this class?\n\nExercise!\n\nGo to this webpage: https://projects.fivethirtyeight.com/2024-election-forecast/\nFollow the instructions on the handout"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#what-information-is-this-page-trying-to-present",
@@ -1831,14 +1831,14 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#feedback",
     "title": "Data Analytics and Visualization",
     "section": "Feedback",
-    "text": "Feedback\nThis is a new course that is under active development!\n\nSome aspects will be experimental\nThere may be (a lot) of rough edges\n\nYour feedback is valuable!\n\nFeel free to raise issues with me directly\nYou can also give anonymous feedback at any time here"
+    "text": "Feedback\n\nThis is a new course that is under active development!\n\nSome aspects will be experimental\nThere may be (a lot) of rough edges\n\n\n\nYour feedback is valuable!\n\nFeel free to raise issues with me directly\nYou can also give anonymous feedback at any time here"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#class-structures",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#class-structures",
     "title": "Data Analytics and Visualization",
     "section": "Class structures",
-    "text": "Class structures\nFive main components in this class\n\nLectures\nDiscussions\nQuizzes\nHomeworks\nProject"
+    "text": "Class structures\n\nFive main components in this class\n\nLectures\nDiscussions\nQuizzes\nHomeworks\nProject"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#lectures",
@@ -1971,21 +1971,21 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#breakdown---graded-on-effort",
     "title": "Data Analytics and Visualization",
     "section": "Breakdown - Graded on effort",
-    "text": "Breakdown - Graded on effort\n10% - Participation\nExpected time commitment: 0-30 minutes per week\n\nOccasional prep for in-class discussions.\n\n10% - Reflections and feedback\nExpected time commitment: 15-20 minutes per week\n\nShort reflections (~5 minutes)\nPeer reviews (10-20 minutes for a satisfactory grade)"
+    "text": "Breakdown - Graded on effort\n\n10% - Participation\nExpected time commitment: 0-30 minutes per week\n\nOccasional prep for in-class discussions.\n\n\n\n10% - Reflections and feedback\nExpected time commitment: 15-20 minutes per week\n\nShort reflections (~5 minutes)\nPeer reviews (10-20 minutes for a satisfactory grade)"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#breakdown---graded-on-correctness",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#breakdown---graded-on-correctness",
     "title": "Data Analytics and Visualization",
     "section": "Breakdown - Graded on correctness",
-    "text": "Breakdown - Graded on correctness\n20% - Quizzes\nExpected time commitment: 30-90 minutes per week"
+    "text": "Breakdown - Graded on correctness\n\n20% - Quizzes\nExpected time commitment: 30-90 minutes per week"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#breakdown---graded-on-qualitative-assessment",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#breakdown---graded-on-qualitative-assessment",
     "title": "Data Analytics and Visualization",
     "section": "Breakdown - Graded on qualitative assessment",
-    "text": "Breakdown - Graded on qualitative assessment\n30% - Homeworks\nExpected time commitment: 2-4 hours per week\n\nNot concurrent with final project\n\n30% - Final Project\nExpected time commitment: 2-4 hours per week\n\nNot concurrent with homeworks"
+    "text": "Breakdown - Graded on qualitative assessment\n\n30% - Homeworks\nExpected time commitment: 2-4 hours per week\n\nNot concurrent with final project\n\n\n\n30% - Final Project\nExpected time commitment: 2-4 hours per week\n\nNot concurrent with homeworks"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#python",
@@ -2013,7 +2013,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#alternative-tools",
     "title": "Data Analytics and Visualization",
     "section": "Alternative tools",
-    "text": "Alternative tools\nWhile course materials will use the Python/Pandas/Lets-Plot stack, you’re free to use alternative tools for homeworks, quizzes and projects.\n\n\n\n\n\n\nTip\n\n\nIf you are interested in learning to use these alternatives and would like to be involved in helping to translate course materials, let me know!"
+    "text": "Alternative tools\nWhile course materials will use the Python/Pandas/Lets-Plot stack, you’re free to use alternative tools for homeworks, quizzes and projects.\n\n\n\n\n\n\nTip\n\n\n\nIf you are interested in learning to use these alternatives and would like to be involved in helping to translate course materials, let me know!"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#python-alternatives",
@@ -2047,8 +2047,8 @@
     "objectID": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#warmup-exercise",
     "href": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#warmup-exercise",
     "title": "Data Analytics and Visualization",
-    "section": "Warmup exercise",
-    "text": "Warmup exercise\nWhat information is shown in this plot?"
+    "section": "",
+    "text": "What information is shown in this plot?"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#data-source-gapminder",
@@ -2083,7 +2083,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#variable",
     "title": "Data Analytics and Visualization",
     "section": "Variable:",
-    "text": "Variable:\nA variable defines some measurement we can make about the world\nNations dataset\n\nA country’s name, population, income, life expectency, etc.\n\nColleges dataset\n\nA college’s name, tuition, enrollment, type (public vs. private), etc."
+    "text": "Variable:\nA variable defines some measurement we can make about the world\n\nNations dataset\n\nA country’s name, population, income, life expectency, etc.\n\n\n\nColleges dataset\n\nA college’s name, tuition, enrollment, type (public vs. private), etc."
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#observation",
@@ -2104,21 +2104,21 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#one-way-to-think-of-this",
     "title": "Data Analytics and Visualization",
     "section": "One way to think of this:",
-    "text": "One way to think of this:\n\n\nCredit: R. Jordan Crouser, Smith College"
+    "text": "One way to think of this:\n\n\n\n\n\n\nCredit: R. Jordan Crouser, Smith College"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#another-way-to-think-of-this",
     "href": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#another-way-to-think-of-this",
     "title": "Data Analytics and Visualization",
     "section": "Another way to think of this:",
-    "text": "Another way to think of this:\n\n\nCredit: R. Jordan Crouser, Smith College"
+    "text": "Another way to think of this:\n\n\n\n\n\n\nCredit: R. Jordan Crouser, Smith College"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#yet-another-way-to-think-of-this",
     "href": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#yet-another-way-to-think-of-this",
     "title": "Data Analytics and Visualization",
     "section": "Yet another way to think of this:",
-    "text": "Yet another way to think of this:\n\n\nCredit: R. Jordan Crouser, Smith College"
+    "text": "Yet another way to think of this:\n\n\n\n\n\n\nCredit: R. Jordan Crouser, Smith College"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#the-pandas-library",
@@ -2160,7 +2160,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#wickhams-tidy-data-principles",
     "title": "Data Analytics and Visualization",
     "section": "Wickham’s tidy data principles",
-    "text": "Wickham’s tidy data principles\n\n\nEach variable forms a column.\nEach observation forms a row.\nEach type of observational unit forms a table (DataFrame)\nEach value has its own cell."
+    "text": "Wickham’s tidy data principles\n\n\n\n\n\n\nEach variable forms a column.\nEach observation forms a row.\nEach type of observational unit forms a table (DataFrame)\nEach value has its own cell."
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#why-tidy-data",
@@ -2174,7 +2174,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#common-ways-data-might-be-messy",
     "title": "Data Analytics and Visualization",
     "section": "Common ways data might be messy",
-    "text": "Common ways data might be messy\n\nTidyToo longToo compactToo wideNot separated\n\n\n\nTidy data\n\n\n\n\n\n\n\n\ncountry\nyear\ncases\npopulation\n\n\n\n\nAfghanistan\n1999\n745\n19987071\n\n\nAfghanistan\n2000\n2666\n20595360\n\n\nBrazil\n1999\n37737\n172006362\n\n\nBrazil\n2000\n80488\n174504898\n\n\nChina\n1999\n212258\n1272915272\n\n\nChina\n2000\n213766\n1280428583\n\n\n\n\n\n\n\n\nMultiple variables are stored in one column\n\n\n\n\n\n\n\n\ncountry\nyear\ntype\ncount\n\n\n\n\nAfghanistan\n1999\ncases\n745\n\n\nAfghanistan\n1999\npopulation\n19987071\n\n\nAfghanistan\n2000\ncases\n2666\n\n\nAfghanistan\n2000\npopulation\n20595360\n\n\nBrazil\n1999\ncases\n37737\n\n\nBrazil\n1999\npopulation\n172006362\n\n\nBrazil\n2000\ncases\n80488\n\n\nBrazil\n2000\npopulation\n174504898\n\n\nChina\n1999\ncases\n212258\n\n\nChina\n1999\npopulation\n1272915272\n\n\nChina\n2000\ncases\n213766\n\n\nChina\n2000\npopulation\n1280428583\n\n\n\n\n\n\n\n\nMultiple values are stored in one cell\n\n\n\n\n\n\n\n\ncountry\nyear\nrate\n\n\n\n\nAfghanistan\n1999\n745/19987071\n\n\nAfghanistan\n2000\n2666/20595360\n\n\nBrazil\n1999\n37737/172006362\n\n\nBrazil\n2000\n80488/174504898\n\n\nChina\n1999\n212258/1272915272\n\n\nChina\n2000\n213766/1280428583\n\n\n\n\n\n\n\n\nVariables are stored in both rows and columns. (Wide form data)\nA single observational unit is stored in multiple tables\n\n\n\n\n\n\n\n\n\n\ncountry\n1999\n2000\n\n\n\n\nAfghanistan\n745\n2666\n\n\nBrazil\n37737\n80488\n\n\nChina\n212258\n213766\n\n\n\n\n\n\n\n\n\n\n\n\n\ncountry\n1999\n2000\n\n\n\n\nAfghanistan\n19987071\n20595360\n\n\nBrazil\n172006362\n174504898\n\n\nChina\n1272915272\n1280428583\n\n\n\n\n\n\n\n\n\nMultiple types of observational units are stored in the same table"
+    "text": "Common ways data might be messy\n\nTidyToo longToo compactToo wideNot separated\n\n\n\nTidy data\n\n\n\n\n\n\n\n\ncountry\nyear\ncases\npopulation\n\n\n\n\nAfghanistan\n1999\n745\n19987071\n\n\nAfghanistan\n2000\n2666\n20595360\n\n\nBrazil\n1999\n37737\n172006362\n\n\nBrazil\n2000\n80488\n174504898\n\n\nChina\n1999\n212258\n1272915272\n\n\nChina\n2000\n213766\n1280428583\n\n\n\n\n\n\n\n\nMultiple variables are stored in one column\n\n\n\n\n\n\n\n\ncountry\nyear\ntype\ncount\n\n\n\n\nAfghanistan\n1999\ncases\n745\n\n\nAfghanistan\n1999\npopulation\n19987071\n\n\nAfghanistan\n2000\ncases\n2666\n\n\nAfghanistan\n2000\npopulation\n20595360\n\n\nBrazil\n1999\ncases\n37737\n\n\nBrazil\n1999\npopulation\n172006362\n\n\nBrazil\n2000\ncases\n80488\n\n\nBrazil\n2000\npopulation\n174504898\n\n\nChina\n1999\ncases\n212258\n\n\nChina\n1999\npopulation\n1272915272\n\n\nChina\n2000\ncases\n213766\n\n\nChina\n2000\npopulation\n1280428583\n\n\n\n\n\n\n\n\nMultiple values are stored in one cell\n\n\n\n\n\n\n\n\ncountry\nyear\nrate\n\n\n\n\nAfghanistan\n1999\n745/19987071\n\n\nAfghanistan\n2000\n2666/20595360\n\n\nBrazil\n1999\n37737/172006362\n\n\nBrazil\n2000\n80488/174504898\n\n\nChina\n1999\n212258/1272915272\n\n\nChina\n2000\n213766/1280428583\n\n\n\n\n\n\n\n\nVariables are stored in both rows and columns. (Wide form data)\nA single observational unit is stored in multiple tables\n\n\n\n\n\n\n\n\n\n\ncountry\n1999\n2000\n\n\n\n\nAfghanistan\n745\n2666\n\n\nBrazil\n37737\n80488\n\n\nChina\n212258\n213766\n\n\n\n\n\n\n\n\n\n\n\n\n\ncountry\n1999\n2000\n\n\n\n\nAfghanistan\n19987071\n20595360\n\n\nBrazil\n172006362\n174504898\n\n\nChina\n1272915272\n1280428583\n\n\n\n\n\n\n\n\n\n\nMultiple types of observational units are stored in the same table"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#tidy-data-for-machine-learning",
@@ -2202,28 +2202,28 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#variable-types-1",
     "title": "Data Analytics and Visualization",
     "section": "Variable types",
-    "text": "Variable types\n\n\n\nNominal\n\nCategorical\nArbitrary\n\nOrdinal\nQuantitative\n\nInterval\nRatio\n\n\n\nNominal variables\nAn unordered set of non-numeric values, representing labels or categories\nCategorical - Finite\nPossible values are finite and known\n\nColors: {red, green, blue}\nRegions: {South Asia, Europe & Central Asia, …}\n\nArbitrary - Infinite\nPossible values are unbounded\n\nAddresses: {“12 Main St. Boston MA”, “45 Wall St. New York NY”, …}\nNames: {“John Smith”, “Jane Doe”, …}"
+    "text": "Variable types\n\n\n\nNominal\n\nCategorical\nArbitrary\n\nOrdinal\nQuantitative\n\nInterval\nRatio\n\n\n\n\nNominal variables\nAn unordered set of non-numeric values, representing labels or categories\n\nCategorical - Finite\nPossible values are finite and known\n\nColors: {red, green, blue}\nRegions: {South Asia, Europe & Central Asia, …}\n\n\n\nArbitrary - Infinite\nPossible values are unbounded\n\nAddresses: {“12 Main St. Boston MA”, “45 Wall St. New York NY”, …}\nNames: {“John Smith”, “Jane Doe”, …}"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#variable-types-2",
     "href": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#variable-types-2",
     "title": "Data Analytics and Visualization",
     "section": "Variable types",
-    "text": "Variable types\n\n\n\nNominal\n\nCategorical\nArbitrary\n\nOrdinal\nQuantitative\n\nInterval\nRatio\n\n\n\nOrdinal variables\nAn ordered set of (usually) non-numeric values, representing levels\n\nGrades: {A, B, C, D, F}\nRatings: {G, PG, PG-13, R}"
+    "text": "Variable types\n\n\n\nNominal\n\nCategorical\nArbitrary\n\nOrdinal\nQuantitative\n\nInterval\nRatio\n\n\n\n\nOrdinal variables\nAn ordered set of (usually) non-numeric values, representing levels\n\nGrades: {A, B, C, D, F}\nRatings: {G, PG, PG-13, R}"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#variable-types-3",
     "href": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#variable-types-3",
     "title": "Data Analytics and Visualization",
     "section": "Variable types",
-    "text": "Variable types\n\n\n\nNominal\n\nCategorical\nArbitrary\n\nOrdinal\nQuantitative\n\nInterval\nRatio\n\n\n\nQuantitative variables\nNumeric data that we can perform mathematical operations on\nInterval\nLocation of 0 is arbitrary, only differences/intervals can be compared\n\nDate-Times: Jan, 19, 2006\n\nRatio\n0 is well-defined and meaningful. Can compare values as ratios\n\nHeight: {5’3”, 6’1”, 5’9”,…}\nPopulation: 23M, 350k, 1.4B, …"
+    "text": "Variable types\n\n\n\nNominal\n\nCategorical\nArbitrary\n\nOrdinal\nQuantitative\n\nInterval\nRatio\n\n\n\n\nQuantitative variables\nNumeric data that we can perform mathematical operations on\n\nInterval\nLocation of 0 is arbitrary, only differences/intervals can be compared\n\nDate-Times: Jan, 19, 2006\n\n\n\nRatio\n0 is well-defined and meaningful. Can compare values as ratios\n\nHeight: {5’3”, 6’1”, 5’9”,…}\nPopulation: 23M, 350k, 1.4B, …"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#operations-by-type",
     "href": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#operations-by-type",
     "title": "Data Analytics and Visualization",
     "section": "Operations by type",
-    "text": "Operations by type\n\nNominal (Labels or categories)\n\nConcrete types: str, bool, category\nOperations: =, ≠\n\nOrdinal (Ordered, non-numeric)\n\nConcrete types: str, int, category\nOperations: =, ≠, &lt;, &gt;\n\nInterval (Arbitrary 0)\n\nConcrete types: float, int, datetime\nOperations: =, ≠, &lt;, &gt;, -\n\nRatio (Well-defined 0)\n\nConcrete types: float, int, timedelta\nOperations: =, ≠, &lt;, &gt;, -, /"
+    "text": "Operations by type\n\n\nNominal (Labels or categories)\n\nConcrete types: str, bool, category\nOperations: =, ≠\n\n\n\nOrdinal (Ordered, non-numeric)\n\nConcrete types: str, int, category\nOperations: =, ≠, &lt;, &gt;\n\n\n\nInterval (Arbitrary 0)\n\nConcrete types: float, int, datetime\nOperations: =, ≠, &lt;, &gt;, -\n\n\n\nRatio (Well-defined 0)\n\nConcrete types: float, int, timedelta\nOperations: =, ≠, &lt;, &gt;, -, /"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html#schema",
@@ -2363,7 +2363,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-1/lecture-0-1.html",
     "title": "Data Analytics and Visualization",
     "section": "",
-    "text": "import pandas as pd\nfrom lets_plot import *\nLetsPlot.setup_html()\n\nimport vega_datasets\ncars = vega_datasets.data.cars()\n\n\n            \n            \n            \n\n\n\nggplot(cars, aes(x='Weight_in_lbs', y='Miles_per_Gallon', color='Year', size='Cylinders')) + geom_point(tooltips=layer_tooltips(['Name']))\n\n   \n   \n\n\n\npd.read_csv('data/nations.csv')\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005\n50.95\n\n\n...\n...\n...\n...\n...\n...\n\n\n175\nTimor-Leste\nEast Asia & Pacific\n2475.68\n1130120\n61.60\n\n\n176\nTokelau\nEast Asia & Pacific\n889.43\n1401\n69.00\n\n\n177\nTonga\nEast Asia & Pacific\n5104.06\n118993\n71.96\n\n\n178\nVietnam\nEast Asia & Pacific\n2679.34\n86116559\n74.70\n\n\n179\nVanuatu\nEast Asia & Pacific\n3943.30\n215053\n70.50\n\n\n\n\n180 rows × 5 columns"
+    "text": "import pandas as pd\nimport numpy as np\nfrom lets_plot import *\nLetsPlot.setup_html()\n\nimport vega_datasets\ncars = vega_datasets.data.cars()\n\n\n            \n            \n            \n\n\n\nnums = (np.random.random(10) * 100).astype(int)\ncats = ['a'] * 5 + ['b'] * 5\nind = list(np.arange(5)) + list(np.arange(5)) \ndata = pd.DataFrame(dict(count=nums, cat=cats, ind=ind))\n\nggplot() + geom_bar(aes(x='ind', y='count'), data=data, \\\n        stat='identity', show_legend=False, fill='white', color='black', stroke=2) + \\\n        scale_fill_discrete() + facet_grid(x='cat') + ggsize(400, 400)\n\n   \n   \n\n\n\nnums = (np.random.random(10) * 100).astype(int)\ncats = ['a'] * 5 + ['b'] * 5\nind = list(np.arange(5)) + list(np.arange(5)) \ndata = pd.DataFrame(dict(count=nums, cat=cats, ind=ind))\n\nggplot() + geom_bar(aes(x='cat', y='count', group='ind'), data=data, \\\n        stat='identity', position=\"stack\", fill='white', show_legend=False, color='black', stroke=2) + \\\n        scale_fill_discrete() + ggsize(400, 400)\n\n   \n   \n\n\n\nnums = (np.random.random(10) * 100).astype(int)\ncats = ['a'] * 5 + ['b'] * 5\nind = list(np.arange(5)) + list(np.arange(5)) \ndata = pd.DataFrame(dict(count=nums, cat=cats, ind=ind))\n\nggplot() + geom_pie(aes(slice='count'), size=25, spacer_width=2, spacer_color='black', stroke_side='both', fill='white', color='black', stroke=2, stat='identity', data=data[data['cat'] == 'a'], \\\n          )   + ggsize(400, 400)\n\n   \n   \n\n\n\nggplot() + geom_bar(aes(x='ind', y='count'), data=data, \\\n        stat='identity', show_legend=False, fill='white', color='black', stroke=2) + \\\n        scale_fill_discrete() + facet_grid(x='cat')  + ggsize(400, 400)\n\n   \n   \n\n\n\nnums = (np.random.random(10) * 100).astype(int)\ncats = ['a'] * 5 + ['b'] * 5\nind = list(np.arange(5)) + list(np.arange(5)) \ndata = pd.DataFrame(dict(count=nums, cat=cats, ind=ind, x=np.random.random(10) * 0, y=0 * np.random.random(10)))\n\nggplot() + geom_point(aes(x='x', y='y', size='count'), position=position_jitter(width=20, height=50), data=data, \\\n        stat='identity', show_legend=False, fill='white', alpha=1., color='black') + \\\n        ggsize(400, 400) + scale_size(range=[10, 50])\n\n   \n   \n\n\n\nggplot(cars, aes(x='Weight_in_lbs', y='Miles_per_Gallon', color='Year', size='Cylinders')) + geom_point(tooltips=layer_tooltips(['Name']))\n\n   \n   \n\n\n\npd.read_csv('data/nations.csv')\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005\n50.95\n\n\n...\n...\n...\n...\n...\n...\n\n\n175\nTimor-Leste\nEast Asia & Pacific\n2475.68\n1130120\n61.60\n\n\n176\nTokelau\nEast Asia & Pacific\n889.43\n1401\n69.00\n\n\n177\nTonga\nEast Asia & Pacific\n5104.06\n118993\n71.96\n\n\n178\nVietnam\nEast Asia & Pacific\n2679.34\n86116559\n74.70\n\n\n179\nVanuatu\nEast Asia & Pacific\n3943.30\n215053\n70.50\n\n\n\n\n180 rows × 5 columns"
   },
   {
     "objectID": "modules/05-Uncertainty/quiz5-uncertainty.html#q1-appropriateness-of-a-sample",
@@ -2440,7 +2440,7 @@
     "href": "calendar/calendar.html",
     "title": "Course Calendar",
     "section": "",
-    "text": "This is the tentative course calendar for Data Analytics and Visualization. This calendar is subject to change depending on the pace of the class and student interest.\n\n\n\nLecture\nDate\nTopics\nReadings\nMaterials\nHomework\n\n\n\n\n1\n8/26\nCourse introduction\n538\nSlides\nHandout\n\n\n\n2\n8/28\nTidy data, data types\nMDSR 6.1\nSlides\nHandout\n\n\n\n\n9/2\n\n\n\n\n\n\n3\n9/4\nIntroduction to visualization\nDV ch. 1\nMDSR 2.1-2.5\n\n\n\n\n4\n9/9\nSingle variable analysis and visualization\n\n\n\n\n\n5\n9/11\nProbabilsitic models with single variables\n\n\n\n\n\n6\n9/16\nMulti-variate analysis\n\n\n\n\n\n7\n9/18\nPrinciples for multivariate visualization\n\n\n\n\n\n8\n9/23\nData wrangling, joins\n\n\n\n\n\n9\n9/25\nTrendlines and regression\n\n\n\n\n\n10\n9/30\nClustering and latent variables\n\n\n\n\n\n11\n10/2\nDescision trees and tree visualizations\n\n\n\n\n\n12\n10/7\nData cleaning and missing values\n\n\n\n\n\n13\n10/9\n\n\n\n\n\n\n\n10/14\nUncertainty and estimation\n\n\n\n\n\n14\n10/16\nBootstrapping and simulation\n\n\n\n\n\n15\n10/21\nHigh-dimensional data, dimensionality reduction\n\n\n\n\n\n16\n10/23\nWorking with timeseries data\n\n\n\n\n\n17\n10/28\nTimeseries visualization\n\n\n\n\n\n18\n10/30\nTimeseries models and analysis\n\n\n\n\n\n19\n11/4\nSpatial data analysis and visualization\n\n\n\n\n\n20\n11/6\nGeographic data, projections and maps\n\n\n\n\n\n21\n11/11\nClimate data\n\n\n\n\n\n22\n11/13\nMoving to the web\n\n\n\n\n\n23\n11/18\nInteraction and animation pt. 1\n\n\n\n\n\n24\n11/20\nInteraction and animation pt. 2\n\n\n\n\n\n25\n11/25\nNetwork data, representations and visualizations\n\n\n\n\n\n\n11/27\n\n\n\n\n\n\n26\n12/2\nNetwork analysis and layout algorithms\n\n\n\n\n\n27\n12/4\nNetwork modeling\n\n\n\n\n\n\n12/9\n\n\n\nFinal Project Due (11:59pm)\n\n\n\n12/13\n\n\n\nFinal Reflections and Feedback Due (11:59pm)"
+    "text": "This is the tentative course calendar for Data Analytics and Visualization. This calendar is subject to change depending on the pace of the class and student interest.\n\n\n\nLecture\nDate\nTopics\nReadings\nMaterials\nHomework\n\n\n\n\n1\n8/26\nCourse introduction\n538\nSlides\nHandout\n\n\n\n2\n8/28\nTidy data, data types\nMDSR 6.1\nSlides\nHandout\n\n\n\n\n9/2\n\n\n\n\n\n\n3\n9/4\nIntroduction to visualization\nDV ch. 1\nMDSR 2.1-2.5\nSlides\nHandout\n\n\n\n4\n9/9\nSingle variable analysis and visualization\n\n\n\n\n\n5\n9/11\nProbabilsitic models with single variables\n\n\n\n\n\n6\n9/16\nMulti-variate analysis\n\n\n\n\n\n7\n9/18\nPrinciples for multivariate visualization\n\n\n\n\n\n8\n9/23\nData wrangling, joins\n\n\n\n\n\n9\n9/25\nTrendlines and regression\n\n\n\n\n\n10\n9/30\nClustering and latent variables\n\n\n\n\n\n11\n10/2\nDescision trees and tree visualizations\n\n\n\n\n\n12\n10/7\nData cleaning and missing values\n\n\n\n\n\n13\n10/9\n\n\n\n\n\n\n\n10/14\nUncertainty and estimation\n\n\n\n\n\n14\n10/16\nBootstrapping and simulation\n\n\n\n\n\n15\n10/21\nHigh-dimensional data, dimensionality reduction\n\n\n\n\n\n16\n10/23\nWorking with timeseries data\n\n\n\n\n\n17\n10/28\nTimeseries visualization\n\n\n\n\n\n18\n10/30\nTimeseries models and analysis\n\n\n\n\n\n19\n11/4\nSpatial data analysis and visualization\n\n\n\n\n\n20\n11/6\nGeographic data, projections and maps\n\n\n\n\n\n21\n11/11\nClimate data\n\n\n\n\n\n22\n11/13\nMoving to the web\n\n\n\n\n\n23\n11/18\nInteraction and animation pt. 1\n\n\n\n\n\n24\n11/20\nInteraction and animation pt. 2\n\n\n\n\n\n25\n11/25\nNetwork data, representations and visualizations\n\n\n\n\n\n\n11/27\n\n\n\n\n\n\n26\n12/2\nNetwork analysis and layout algorithms\n\n\n\n\n\n27\n12/4\nNetwork modeling\n\n\n\n\n\n\n12/9\n\n\n\nFinal Project Due (11:59pm)\n\n\n\n12/13\n\n\n\nFinal Reflections and Feedback Due (11:59pm)"
   },
   {
     "objectID": "calendar/calendar.html#week-0-826---830",
@@ -2804,7 +2804,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visual-language",
     "title": "Data Analytics and Visualization",
     "section": "Visual language",
-    "text": "Visual language\n\n\n\n\n\n\n\n\nImages perceived as a set of signs\nSender encodes information in signs\nReceiver decodes information from signs\n\nJacques Bertin - Sémiologie Graphique, 1967"
+    "text": "Visual language\nLike language, visualization is a medium for communication"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#conceptual-strategy",
@@ -2895,6 +2895,650 @@
     "href": "resources/references.html#people",
     "title": "Useful references",
     "section": "People",
-    "text": "People\nHadley Wickham Nigel Holmes Edward Tufte"
+    "text": "People\nHadley Wickham\nNigel Holmes\nEdward Tufte\nMona Chalabi"
+  },
+  {
+    "objectID": "resources/references.html#links",
+    "href": "resources/references.html#links",
+    "title": "Useful references",
+    "section": "Links",
+    "text": "Links\nChartmaker guide\nFlowing data\nMalofiej awards"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#january-26-1986",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#january-26-1986",
+    "title": "Data Analytics and Visualization",
+    "section": "January 26, 1986",
+    "text": "January 26, 1986"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#challenger-mission",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#challenger-mission",
+    "title": "Data Analytics and Visualization",
+    "section": "Challenger Mission",
+    "text": "Challenger Mission\n\n\n\n\n\n\n\n\n\n\n\n\n\nCrew of 7: Dick Scobee, Michael Smith, Ellison Onizuka, Judith Resnik, Ronald McNair, Gregory Jarvis, and Chirsta McAuliffe."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#a-cold-launch-day",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#a-cold-launch-day",
+    "title": "Data Analytics and Visualization",
+    "section": "A cold launch day",
+    "text": "A cold launch day"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#engineering-concerns",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#engineering-concerns",
+    "title": "Data Analytics and Visualization",
+    "section": "Engineering concerns",
+    "text": "Engineering concerns"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#last-minute-debate",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#last-minute-debate",
+    "title": "Data Analytics and Visualization",
+    "section": "Last minute debate",
+    "text": "Last minute debate"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tragedy",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tragedy",
+    "title": "Data Analytics and Visualization",
+    "section": "Tragedy",
+    "text": "Tragedy"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tragedy-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tragedy-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Tragedy",
+    "text": "Tragedy"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tuftes-take",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tuftes-take",
+    "title": "Data Analytics and Visualization",
+    "section": "Tufte’s take",
+    "text": "Tufte’s take\n\n\n“…there was a clear proximate cause: an inability to assess the link between cool temperature and O-ring damage on earlier flights…”\n“…rocket engineers and managers needed a quick, smart analysis of evidence about the threat of cold to the O-rings, as well as an effective presentation of evidence in order to convince NASA offcials not to launch”\n\nEdward Tufte, Visual Explanations"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#morton-thiokol-charts",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#morton-thiokol-charts",
+    "title": "Data Analytics and Visualization",
+    "section": "Morton Thiokol Charts",
+    "text": "Morton Thiokol Charts"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tuftes-version",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tuftes-version",
+    "title": "Data Analytics and Visualization",
+    "section": "Tufte’s version",
+    "text": "Tufte’s version"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#make-informed-descisions",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#make-informed-descisions",
+    "title": "Data Analytics and Visualization",
+    "section": "Make informed descisions",
+    "text": "Make informed descisions\nThe challenger disaster shows the importance of this"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---understand-data",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---understand-data",
+    "title": "Data Analytics and Visualization",
+    "section": "Exploration - Understand data",
+    "text": "Exploration - Understand data\n\nWhat are the differences between these 4 datasets?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---understand-data-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---understand-data-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Exploration - Understand data",
+    "text": "Exploration - Understand data\n\nWe could try using some basic tools from statistics to answer this question. e.g. means, variances, corrleations, regression coefficients, etc."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---understand-data-2",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---understand-data-2",
+    "title": "Data Analytics and Visualization",
+    "section": "Exploration - Understand data",
+    "text": "Exploration - Understand data\n\nThey’re the same for every dataset?!?!\n\nCan we conclude that the datasets are all the same?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---anscombes-quartet",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---anscombes-quartet",
+    "title": "Data Analytics and Visualization",
+    "section": "Exploration - Anscombe’s quartet",
+    "text": "Exploration - Anscombe’s quartet\n\nVisualization shows there’s much more going on!"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#jon-snow",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#jon-snow",
+    "title": "Data Analytics and Visualization",
+    "section": "Jon Snow",
+    "text": "Jon Snow"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#john-snow",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#john-snow",
+    "title": "Data Analytics and Visualization",
+    "section": "John Snow",
+    "text": "John Snow"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#broad-street-cholera-outbreak",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#broad-street-cholera-outbreak",
+    "title": "Data Analytics and Visualization",
+    "section": "1854 Broad Street cholera outbreak",
+    "text": "1854 Broad Street cholera outbreak\n\n\nCholera was a deadly disease in 1850’s London\nThought to be caused by miasma or “bad air”\nAn especially bad outbreak happend in Soho in 1854…"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#john-snows-map",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#john-snows-map",
+    "title": "Data Analytics and Visualization",
+    "section": "John Snow’s map",
+    "text": "John Snow’s map"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#john-snows-map-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#john-snows-map-1",
+    "title": "Data Analytics and Visualization",
+    "section": "John Snow’s map",
+    "text": "John Snow’s map\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe source: A pump with contaminated water"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#validation",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#validation",
+    "title": "Data Analytics and Visualization",
+    "section": "Validation",
+    "text": "Validation\n\n\nEven if we think we know what’s going on, we should visualize to check our understanding!\n\n1980: Jackman shows the effect of earlier work is dominated by an outlier"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#w.-e.-b.-dubois",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#w.-e.-b.-dubois",
+    "title": "Data Analytics and Visualization",
+    "section": "W. E. B. DuBois",
+    "text": "W. E. B. DuBois\n\n\n\n\n\n\n\nSociologist and civil rights activist W. E. B. Du Bois made many influential visualizations."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#nigel-holmes",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#nigel-holmes",
+    "title": "Data Analytics and Visualization",
+    "section": "Nigel Holmes",
+    "text": "Nigel Holmes\n\n\n\n\n\n\n\nGraphic designer Nigel Holmes is known for playful and informative visualizations."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#mona-chalabi",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#mona-chalabi",
+    "title": "Data Analytics and Visualization",
+    "section": "Mona Chalabi",
+    "text": "Mona Chalabi\n\n\n\n\n\n\n\nContemporary data journalist Mona Chalabi uses visualization to create impactful stories and inspire activism."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#bertin-a-semiology-of-graphics",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#bertin-a-semiology-of-graphics",
+    "title": "Data Analytics and Visualization",
+    "section": "Bertin: A Semiology of Graphics",
+    "text": "Bertin: A Semiology of Graphics\n\n\n\n\n\n\n\n\nImages perceived as a set of signs\nSender encodes information in signs\nReceiver decodes information from signs\n\nJacques Bertin - Sémiologie Graphique, 1967"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#good-communicates-information-efficiently",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#good-communicates-information-efficiently",
+    "title": "Data Analytics and Visualization",
+    "section": "Good communicates information efficiently",
+    "text": "Good communicates information efficiently\n\n\n\n\n\n            \n            \n            \n\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005\n50.95"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visualization-communicates-information-efficiently",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visualization-communicates-information-efficiently",
+    "title": "Data Analytics and Visualization",
+    "section": "Visualization communicates information efficiently",
+    "text": "Visualization communicates information efficiently\n\n\n\n\n\n            \n            \n            \n\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005\n50.95\n\n\n5\nCameroon\nSub-Saharan Africa\n1997.18\n18054929\n51.39\n\n\n6\nCape Verde\nSub-Saharan Africa\n3456.14\n426113\n71.68\n\n\n7\nChad\nSub-Saharan Africa\n1557.83\n10541156\n48.97\n\n\n8\nComoros\nSub-Saharan Africa\n1016.42\n731281\n65.77\n\n\n9\nCongo, Dem. Rep.\nSub-Saharan Africa\n358.80\n66604314\n47.81\n\n\n10\nCongo, Rep.\nSub-Saharan Africa\n3834.67\n3903318\n53.75\n\n\n11\nCote d'Ivoire\nSub-Saharan Africa\n1520.23\n18373060\n57.86\n\n\n12\nEquatorial Guinea\nSub-Saharan Africa\n15342.20\n562339\n50.64\n\n\n13\nEritrea\nSub-Saharan Africa\n548.37\n5028475\n60.03\n\n\n14\nEthiopia\nSub-Saharan Africa\n812.16\n78254090\n55.69\n\n\n15\nGabon\nSub-Saharan Africa\n12704.99\n1484149\n60.89\n\n\n16\nGhana\nSub-Saharan Africa\n1382.95\n23336661\n56.83\n\n\n17\nGuinea\nSub-Saharan Africa\n908.86\n10211437\n58.35\n\n\n18\nGuinea-Bissau\nSub-Saharan Africa\n568.94\n1502442\n48.20\n\n\n19\nKenya\nSub-Saharan Africa\n1493.53\n36529155\n54.95\n\n\n\n\n\n\n\n\n\n\n\n            \n            \n            \n\n\n   \n   \n\n\n\n\nWe can process much more information from the visualization than the table."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visual-semantics",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visual-semantics",
+    "title": "Data Analytics and Visualization",
+    "section": "Visual semantics",
+    "text": "Visual semantics\n\n\n\n\n\n\n\nFrom Jeffery Heer\n\nWhat can we understand from this plot?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#bertins-visual-variables",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#bertins-visual-variables",
+    "title": "Data Analytics and Visualization",
+    "section": "Bertin’s visual variables",
+    "text": "Bertin’s visual variables"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exercise",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exercise",
+    "title": "Data Analytics and Visualization",
+    "section": "Exercise!",
+    "text": "Exercise!\nSketch a visualization of this small dataset"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#grammar-of-graphics-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#grammar-of-graphics-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Grammar of graphics",
+    "text": "Grammar of graphics\n\n\n \nOriginal grammar of graphics was introduced by Leland Wilkinson\n\n \nWe’ll focus on an updated version from Hadley Wickham that forms the basis for ggplot2 and Let’s Plot."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#reminder-ggplot",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#reminder-ggplot",
+    "title": "Data Analytics and Visualization",
+    "section": "Reminder: ggplot",
+    "text": "Reminder: ggplot\nggplot2 is a hugely influential visualization library.\n\nDesigned by Hadley Wickham\nOnly for the R language\n\nLet’s Plot is a port for Python (and Kotlin)\n\nWe’ll be using it in this class"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#components-of-the-grammar-of-graphics",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#components-of-the-grammar-of-graphics",
+    "title": "Data Analytics and Visualization",
+    "section": "Components of the grammar of graphics",
+    "text": "Components of the grammar of graphics\nStretching the metaphor: The parts of speech for our visual language\n\n\n\nData\nAesthetic mappings\nGeometries\nTransforms\n\n\n\nScales\nCoordinate systems\nFaceting systems\nAnnotations"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#start-with-tidy-data",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#start-with-tidy-data",
+    "title": "Data Analytics and Visualization",
+    "section": "Start with tidy data",
+    "text": "Start with tidy data\nClearly define the observations and variables in our dataset\n\n\n\n            \n            \n            \n\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005\n50.95\n\n\n5\nCameroon\nSub-Saharan Africa\n1997.18\n18054929\n51.39\n\n\n6\nCape Verde\nSub-Saharan Africa\n3456.14\n426113\n71.68\n\n\n7\nChad\nSub-Saharan Africa\n1557.83\n10541156\n48.97\n\n\n8\nComoros\nSub-Saharan Africa\n1016.42\n731281\n65.77\n\n\n9\nCongo, Dem. Rep.\nSub-Saharan Africa\n358.80\n66604314\n47.81\n\n\n10\nCongo, Rep.\nSub-Saharan Africa\n3834.67\n3903318\n53.75\n\n\n11\nCote d'Ivoire\nSub-Saharan Africa\n1520.23\n18373060\n57.86\n\n\n12\nEquatorial Guinea\nSub-Saharan Africa\n15342.20\n562339\n50.64\n\n\n13\nEritrea\nSub-Saharan Africa\n548.37\n5028475\n60.03\n\n\n14\nEthiopia\nSub-Saharan Africa\n812.16\n78254090\n55.69"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#define-an-aesthetic-mapping",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#define-an-aesthetic-mapping",
+    "title": "Data Analytics and Visualization",
+    "section": "Define an aesthetic mapping",
+    "text": "Define an aesthetic mapping\nOur aesthetic mapping defines how we’ll map each data dimension (variable) to a corresponding visual dimension (aesthetic)\n\n\n\n\n\n            \n            \n            \n\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005\n50.95\n\n\n5\nCameroon\nSub-Saharan Africa\n1997.18\n18054929\n51.39\n\n\n6\nCape Verde\nSub-Saharan Africa\n3456.14\n426113\n71.68\n\n\n7\nChad\nSub-Saharan Africa\n1557.83\n10541156\n48.97\n\n\n8\nComoros\nSub-Saharan Africa\n1016.42\n731281\n65.77\n\n\n9\nCongo, Dem. Rep.\nSub-Saharan Africa\n358.80\n66604314\n47.81\n\n\n10\nCongo, Rep.\nSub-Saharan Africa\n3834.67\n3903318\n53.75\n\n\n11\nCote d'Ivoire\nSub-Saharan Africa\n1520.23\n18373060\n57.86\n\n\n12\nEquatorial Guinea\nSub-Saharan Africa\n15342.20\n562339\n50.64\n\n\n13\nEritrea\nSub-Saharan Africa\n548.37\n5028475\n60.03\n\n\n14\nEthiopia\nSub-Saharan Africa\n812.16\n78254090\n55.69\n\n\n15\nGabon\nSub-Saharan Africa\n12704.99\n1484149\n60.89\n\n\n16\nGhana\nSub-Saharan Africa\n1382.95\n23336661\n56.83\n\n\n17\nGuinea\nSub-Saharan Africa\n908.86\n10211437\n58.35\n\n\n18\nGuinea-Bissau\nSub-Saharan Africa\n568.94\n1502442\n48.20\n\n\n19\nKenya\nSub-Saharan Africa\n1493.53\n36529155\n54.95"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#define-an-aesthetic-mapping-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#define-an-aesthetic-mapping-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Define an aesthetic mapping",
+    "text": "Define an aesthetic mapping\nOur aesthetic mapping defines how we’ll map each data dimension (variable) to a corresponding visual dimension (aesthetic)\n\n\n\n\n\n            \n            \n            \n\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005\n50.95\n\n\n\n\n\n\n\nIn our example:\n\nIncome -&gt; x position\nLife exp. -&gt; y position\nPopulation -&gt; size\nRegion -&gt; color"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#examples-of-visual-encoding-dimensions",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#examples-of-visual-encoding-dimensions",
+    "title": "Data Analytics and Visualization",
+    "section": "Examples of visual encoding dimensions",
+    "text": "Examples of visual encoding dimensions"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#the-set-of-possible-encodings-depends-on-the-variable-type",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#the-set-of-possible-encodings-depends-on-the-variable-type",
+    "title": "Data Analytics and Visualization",
+    "section": "The set of possible encodings depends on the variable type",
+    "text": "The set of possible encodings depends on the variable type\nCategorical variables have a different space of possibilities"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#choose-a-geometry",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#choose-a-geometry",
+    "title": "Data Analytics and Visualization",
+    "section": "Choose a geometry",
+    "text": "Choose a geometry\nHow do we represent each observation?\n\n\n\n            \n            \n            \n\n\n   \n   \n\n\nHere we are representing each observation with a distinct point in 2-d space (a scatterplot)."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#many-different-geometries",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#many-different-geometries",
+    "title": "Data Analytics and Visualization",
+    "section": "Many different geometries",
+    "text": "Many different geometries"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#geometries-are-abstract",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#geometries-are-abstract",
+    "title": "Data Analytics and Visualization",
+    "section": "Geometries are abstract",
+    "text": "Geometries are abstract\nThe same geometry might be rendered in different ways"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#geometries-are-abstract-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#geometries-are-abstract-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Geometries are abstract",
+    "text": "Geometries are abstract\nDiffent geometries may have different requirements (and options) for aesthetics:\n\n\nPoint: x and y coordinates\nLine: x and y coordinates, order\nBar: x or y coordinate, length\n\nText: x and y coordinates, text\nInterval: x coordinate, min, max\nBoxplot: Median, quantiles"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#define-a-scale-for-each-mapping",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#define-a-scale-for-each-mapping",
+    "title": "Data Analytics and Visualization",
+    "section": "Define a scale for each mapping",
+    "text": "Define a scale for each mapping\nA scale determines how we translate the domain of a variable to the range of a visual dimension"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#scales-are-usually-invertable-functions",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#scales-are-usually-invertable-functions",
+    "title": "Data Analytics and Visualization",
+    "section": "Scales are (usually) invertable functions",
+    "text": "Scales are (usually) invertable functions\nMost commonly a linear function\n\n\n\n\n\nBut can be non-linear, e.g. logarithmic"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#show-scales-through-axes-and-legends",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#show-scales-through-axes-and-legends",
+    "title": "Data Analytics and Visualization",
+    "section": "Show scales through axes and legends",
+    "text": "Show scales through axes and legends\nAxes show the scale for each position dimension.\nLegends show the scale for other dimensions (color, shape, size, etc.)"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#optional-define-a-coordinate-system",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#optional-define-a-coordinate-system",
+    "title": "Data Analytics and Visualization",
+    "section": "(Optional) Define a coordinate system",
+    "text": "(Optional) Define a coordinate system\nA coordinate system defines how the range of each scale is represented. Usually Cartesian coordinate system, but others are possible, such as polar"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#a-layer-is-a-single-view-of-the-data",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#a-layer-is-a-single-view-of-the-data",
+    "title": "Data Analytics and Visualization",
+    "section": "A layer is a single view of the data",
+    "text": "A layer is a single view of the data\nEncompasses data + mapping + geometry. A plot may have more than one layer to show multiple properties of a dataset or multiple datasets."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#scales-are-generally-shared-across-layers",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#scales-are-generally-shared-across-layers",
+    "title": "Data Analytics and Visualization",
+    "section": "Scales are (generally) shared across layers",
+    "text": "Scales are (generally) shared across layers"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#finally-add-annotations",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#finally-add-annotations",
+    "title": "Data Analytics and Visualization",
+    "section": "Finally: add annotations",
+    "text": "Finally: add annotations\nAnnotations, such as titles captions and highlights, give additional context and information to the viewer."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#setup",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#setup",
+    "title": "Data Analytics and Visualization",
+    "section": "Setup",
+    "text": "Setup\nImport the relevant libraries and load a dataset in the tidy format\n\nimport pandas as pd\nfrom lets_plot import *\nLetsPlot.setup_html()\n\nnations = pd.read_csv('data/nations.csv')\n\n\n            \n            \n            \n\n\nWe’ll use our Gapminder dataset from earlier\n\nnations\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005\n50.95\n\n\n...\n...\n...\n...\n...\n...\n\n\n175\nTimor-Leste\nEast Asia & Pacific\n2475.68\n1130120\n61.60\n\n\n176\nTokelau\nEast Asia & Pacific\n889.43\n1401\n69.00\n\n\n177\nTonga\nEast Asia & Pacific\n5104.06\n118993\n71.96\n\n\n178\nVietnam\nEast Asia & Pacific\n2679.34\n86116559\n74.70\n\n\n179\nVanuatu\nEast Asia & Pacific\n3943.30\n215053\n70.50\n\n\n\n\n180 rows × 5 columns"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#creating-a-plot",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#creating-a-plot",
+    "title": "Data Analytics and Visualization",
+    "section": "Creating a plot",
+    "text": "Creating a plot\nThe ggplot() function will create an empty plot object.\n\nggplot()\n\n   \n   \n\n\n\nHere we get an error as we haven’t defined our components!"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#adding-a-layer",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#adding-a-layer",
+    "title": "Data Analytics and Visualization",
+    "section": "Adding a layer",
+    "text": "Adding a layer\nWe can add a layer to our plot, specifying the data, mapping and geometry. Here we’ll add a layer with a point geometry.\n\n\n\nggplot() + geom_point(data=nations, \n  mapping=aes(x='income', y='lifeExpectancy')\n)\n\n   \n   \n\n\n\naes() defines an aesthetic mapping, using the column names of our dataframe.\ngeom_point() creates a point geometry layer."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#equivalent-syntax",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#equivalent-syntax",
+    "title": "Data Analytics and Visualization",
+    "section": "Equivalent syntax",
+    "text": "Equivalent syntax\nIf we want default data and mappings to share across layers we can pass them to the ggplot() function.\n\n\n\nggplot(\n  data=nations, \n  mapping=aes(x='income', y='lifeExpectancy')\n) + geom_point() + geom_line()\n\n   \n   \n\n\n\nHere we’ll add both point and line geometries"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#choosing-scales",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#choosing-scales",
+    "title": "Data Analytics and Visualization",
+    "section": "Choosing scales",
+    "text": "Choosing scales\nWe didn’t need to specify scales, Let’s plot has sensible defaults.\n\n\n\nggplot() + geom_point(data=nations, \n  mapping=aes(x='income', y='lifeExpectancy')\n) + scale_x_continuous(trans='log2')\n\n   \n   \n\n\n\nwe can change the scales by adding them to our specification.\nHere we’ll set the x axis scale to be logarithmic"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#changing-the-coordinate-system",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#changing-the-coordinate-system",
+    "title": "Data Analytics and Visualization",
+    "section": "Changing the coordinate system",
+    "text": "Changing the coordinate system\nWe can similarly change the default (Cartesean) coordinate system.\n\n\n\nggplot() + geom_point(data=nations, \n  mapping=aes(x='income', y='lifeExpectancy')\n) + coord_polar(theta='y') + scale_x_continuous(trans='log2')\n\n   \n   \n\n\n\nHere we’ll make a polar plot"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#adding-annotations",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#adding-annotations",
+    "title": "Data Analytics and Visualization",
+    "section": "Adding annotations",
+    "text": "Adding annotations\nWe can also add annotations, such as a plot title. ggtitle() will add a title to our plot.\n\n\n\nggplot() + geom_point(data=nations, \n  mapping=aes(x='income', y='lifeExpectancy')\n) +  ggtitle('Income vs. Life Exp.')"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#configuration",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#configuration",
+    "title": "Data Analytics and Visualization",
+    "section": "Configuration",
+    "text": "Configuration\nOutside of our grammar, we can configure the rendering of our plot.\n\n\n\nggplot() + geom_point(data=nations, \n  mapping=aes(x='income', y='lifeExpectancy')\n) +  ggsize(400, 400)\n\n   \n   \n\n\n\nggsize() lets us set the size of the output.\ntheme lets us adjust many other aesthetic properties."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exercise-aesthetic-mappings",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exercise-aesthetic-mappings",
+    "title": "Data Analytics and Visualization",
+    "section": "Exercise: Aesthetic mappings",
+    "text": "Exercise: Aesthetic mappings\nLet’s start with how we choose aesthetic mappings\nWe’ll replicate a famous experiment from Cleveland and McGill!\nOpen this form: https://forms.gle/RfNNwfRcPtEBRGZh7"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#previous-studies",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#previous-studies",
+    "title": "Data Analytics and Visualization",
+    "section": "Previous studies",
+    "text": "Previous studies\n\nSome channels are far more effective at communicating values."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#mackinlays-ranking",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#mackinlays-ranking",
+    "title": "Data Analytics and Visualization",
+    "section": "MacKinlay’s Ranking",
+    "text": "MacKinlay’s Ranking\n\n\n\n\n\n\n\nMost effective representation may depend on the type of data"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#some-scales-are-complicated",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#some-scales-are-complicated",
+    "title": "Data Analytics and Visualization",
+    "section": "Some scales are complicated!",
+    "text": "Some scales are complicated!\nColor is especially tricky.\n\nHumans percieve color non-linearly\nNot all humans percieve the same set of colors\nOne color can encode multiple channels\n\nWe’ll cover this in a later lecture!"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#a-first-principle-importance-ordering",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#a-first-principle-importance-ordering",
+    "title": "Data Analytics and Visualization",
+    "section": "A first principle: importance ordering",
+    "text": "A first principle: importance ordering\n“Encode more important information more effectively”\n\nA visualization is more effective than another visualization if the information conveyed by one visualization is more readily perceived than the information in the other visualization."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#another-principle-expressiveness",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#another-principle-expressiveness",
+    "title": "Data Analytics and Visualization",
+    "section": "Another principle: expressiveness",
+    "text": "Another principle: expressiveness\n“A set of facts is expressible in a [visual] language if it contains a sentence [visualization] that:”\n\n“Encodes all the facts in the set”\n“Encodes only the facts in the set”\n\nWhat does this mean?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#a-hopefully-obvious-principle-consistency",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#a-hopefully-obvious-principle-consistency",
+    "title": "Data Analytics and Visualization",
+    "section": "A (hopefully obvious) principle: consistency",
+    "text": "A (hopefully obvious) principle: consistency\nThe properties of the image (visual variables) should match the properties of the data\n\nDon’t encode a length variable with color or a position variable with size"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#express-all-the-facts-overplotting",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#express-all-the-facts-overplotting",
+    "title": "Data Analytics and Visualization",
+    "section": "Express all the facts: overplotting",
+    "text": "Express all the facts: overplotting\nOverlapping points can make it impossible to tell the number of observations\n\nHow many total cars are represented?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#encode-only-the-facts-consistency",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#encode-only-the-facts-consistency",
+    "title": "Data Analytics and Visualization",
+    "section": "Encode only the facts: consistency",
+    "text": "Encode only the facts: consistency\nThe properties of the image (visual variables) should match the properties of the data\n\nNations are not ordinal!"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#encode-only-the-facts-ordering",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#encode-only-the-facts-ordering",
+    "title": "Data Analytics and Visualization",
+    "section": "Encode only the facts: ordering",
+    "text": "Encode only the facts: ordering\nVisual orderings convey meaning, even when there is none!\n\n“Because we are almost never interested in seeing Alabama first, it is astonishing how often data displays use alphabetical order as the organizing principle of choice” - Howard Wainer"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tuftes-philosophy-minimalism",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tuftes-philosophy-minimalism",
+    "title": "Data Analytics and Visualization",
+    "section": "Tufte’s philosophy: minimalism",
+    "text": "Tufte’s philosophy: minimalism\nFive principles\n\nAbove all else show the data\nMaximize the data-ink ratio\nErase non-data-ink\nErase redundant data-ink\nRevise and edit"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#data-ink-ratio",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#data-ink-ratio",
+    "title": "Data Analytics and Visualization",
+    "section": "Data-ink ratio",
+    "text": "Data-ink ratio\n\n\nHeuristic for visual complexity\n\n\n\n\n\n\n\n\n\nLow data-ink ratio (William Playfair 1785): \n\nHigh data-ink ratio (William Playfair 1786):"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#maximal-data-ink-ratio-eeg",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#maximal-data-ink-ratio-eeg",
+    "title": "Data Analytics and Visualization",
+    "section": "Maximal data-ink ratio: EEG",
+    "text": "Maximal data-ink ratio: EEG\nCan’t erase anything without losing information"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#data-ink-ratio-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#data-ink-ratio-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Data-ink ratio",
+    "text": "Data-ink ratio\nCan be used to guide visual design (Revise and edit!):\n\n\n\n\n\n\n\nA simple bar chart\n\n\n\n\n\nand the axis rule\n\n\n\n\n\n\nWe can remove the outline\n\n\n\n\n\neven re-encode the axis with whitespace!"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#data-ink-ratio-2",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#data-ink-ratio-2",
+    "title": "Data Analytics and Visualization",
+    "section": "Data-ink ratio",
+    "text": "Data-ink ratio\n\n\nCan convey more information.\n\nHere the axes convey the extents of the data"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#data-ink-ratio-3",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#data-ink-ratio-3",
+    "title": "Data Analytics and Visualization",
+    "section": "Data-ink ratio",
+    "text": "Data-ink ratio\nCan be used to derive new forms\n\n\n\n\n\n\n\nJohn Tukey’s box plot\n\n\n\n\n\n\nTufte’s simplification"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#violations-of-these-principles",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#violations-of-these-principles",
+    "title": "Data Analytics and Visualization",
+    "section": "Violations of these principles",
+    "text": "Violations of these principles\nThe following charts from Morton Thiokol documented O-ring damage on pre-challenger flights\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat principle(s) are violated here?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tuftes-fixes",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tuftes-fixes",
+    "title": "Data Analytics and Visualization",
+    "section": "Tufte’s fixes",
+    "text": "Tufte’s fixes\nTemperature is more important than date!"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#data-ink-ratio-4",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#data-ink-ratio-4",
+    "title": "Data Analytics and Visualization",
+    "section": "Data-ink ratio",
+    "text": "Data-ink ratio\nSometimes Tufte went a little far… \nIs this really better?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#chart-junk",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#chart-junk",
+    "title": "Data Analytics and Visualization",
+    "section": "Chart junk",
+    "text": "Chart junk\nDistracting patterns and unnecessary artistic embelishment\n\n\nA typical example"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#distracting-patterns",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#distracting-patterns",
+    "title": "Data Analytics and Visualization",
+    "section": "Distracting patterns",
+    "text": "Distracting patterns\nPatterns can introduce visual artifacts and distract from the data."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#unnecessary-artistic-embellishment",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#unnecessary-artistic-embellishment",
+    "title": "Data Analytics and Visualization",
+    "section": "Unnecessary artistic embellishment",
+    "text": "Unnecessary artistic embellishment\nWhich conveys data more effectively?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#this-may-be-the-worst-graphic-ever-put-into-print",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#this-may-be-the-worst-graphic-ever-put-into-print",
+    "title": "Data Analytics and Visualization",
+    "section": "“This may be the worst graphic ever put into print”",
+    "text": "“This may be the worst graphic ever put into print”"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#artistic-embellishment",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#artistic-embellishment",
+    "title": "Data Analytics and Visualization",
+    "section": "Artistic embellishment",
+    "text": "Artistic embellishment\nWhich plot is more clear? Which is more memorable?\n\n\n\n\n\n\n\nNigel Holmes’ visual\n\n\n\n\n\n\nA simplified visual"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#a-perceptual-study",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#a-perceptual-study",
+    "title": "Data Analytics and Visualization",
+    "section": "A perceptual study",
+    "text": "A perceptual study\nBateman et. al. put this to the test!\n\nSubjects compared several plots from Holmes to simplified charts."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#the-results",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#the-results",
+    "title": "Data Analytics and Visualization",
+    "section": "The results",
+    "text": "The results\n\n\nSubject better remembered the charts with “junk”!\n\nEspecially in the long term"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#the-results-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#the-results-1",
+    "title": "Data Analytics and Visualization",
+    "section": "The results",
+    "text": "The results\nThey also preferred them"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#takeaway",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#takeaway",
+    "title": "Data Analytics and Visualization",
+    "section": "Takeaway",
+    "text": "Takeaway\nThe appropriate level of “junk” is the subject of ongoing research and debate\n\nTufte’s principles can make plots more effective\nEmbellishment can make plots more memorable"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tuftes-answer-charles-minards-visualization-of-napoleons-march",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tuftes-answer-charles-minards-visualization-of-napoleons-march",
+    "title": "Data Analytics and Visualization",
+    "section": "Tufte’s answer: Charles Minard’s visualization of Napoleon’s march",
+    "text": "Tufte’s answer: Charles Minard’s visualization of Napoleon’s march"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html",
+    "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html",
+    "title": "Data Analytics and Visualization",
+    "section": "",
+    "text": "Prof. Gabe Hope (he/him)\nEmail: ghope@g.hmc.edu\nOffice: MacGregor 322\nOffice hours: TBA\n\n\n\n\n\n\n\n\n\n\n\n\n\nProf. Gabe Hope (he/him)\n\nWhere I’m from: New York City, but I’ve been living in southern California for the past 7 years.\nWhere I went to school: University of California, Irvine advised by Erik Sudderth.\n\n\n\n\n\n\n\nMy research focuses on using neural networks to find interpretable structures in data.\nI mainly focus on image data, though I have also worked on analyzing motion-capture, audio and climate data!\n\n\n\nImage in-painting \n\nMotion-capture analysis \n\n\n\n\n\n\nYour name & preferred pronouns\nYour year and major\nWhat interested you about this class?\n\nDo you want to work with a particular kind of data?\nDid you just think it sounded cool? 😎"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html",
+    "href": "modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.html",
+    "title": "Data Analytics and Visualization",
+    "section": "",
+    "text": "What information is shown in this plot?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#a-predictable-failure",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#a-predictable-failure",
+    "title": "Data Analytics and Visualization",
+    "section": "A predictable failure",
+    "text": "A predictable failure\n\n\n\n\n\n\n\nPlume indicating an O-ring failure at launch"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tuftes-fixes-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tuftes-fixes-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Tufte’s fixes",
+    "text": "Tufte’s fixes\nOrdering alone doesn’t effectively convey differences!"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visual-semantics-1",
+    "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visual-semantics-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Visual semantics",
+    "text": "Visual semantics\n\n\n\n\n\n\n\nFrom Jeffery Heer\n\nWhat can we understand from this plot?\n\nA, B, C are distinguishable\nB is between A and C\nBC is twice as long as AB\n\n\n“Resemblance, order and proportional are the three signfields in graphics.” - Bertin"
   }
 ]

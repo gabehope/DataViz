@@ -72,6 +72,17 @@ on Comprehension and Memorability of Charts](http://www.stat.columbia.edu/~gelma
 ## People
 
 [Hadley Wickham](https://hadley.nz/)
+
 [Nigel Holmes](https://nigelholmes.com/)
+
 [Edward Tufte](https://www.edwardtufte.com/)
 
+[Mona Chalabi](https://monachalabi.com)
+
+## Links
+
+[Chartmaker guide](https://chartmaker.visualisingdata.com/)
+
+[Flowing data](https://flowingdata.com/)
+
+[Malofiej awards](https://www.malofiejgraphics.com/historia-y-ediciones-anteriores)

@@ -10,11 +10,11 @@ format:
 
 *Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
 
-# Data Analytics and Visualization: Week 1 - Thinking about data
+# Data Analytics and Visualization: Week 2 - Visualization
 
 ## In-class questions
 
-#### What information is contained in this plot? 
+#### What can we understand from this plot?
 
 
 |
@@ -26,7 +26,7 @@ format:
 |
 |
 
-####  Which data organization is most logical to you? 
+####  Sketch a visualization!
 
 |
 |
@@ -38,7 +38,7 @@ format:
 |
 
 
-#### What *visual dimension* is encoding each piece of information? 
+#### What dimensions did you find most effective?
 
 
 |
@@ -51,7 +51,7 @@ format:
 |
 
 
-#### Which encoding scheme seems most valuable?
+#### Which plot did you find more effective/memorable?
 
 
 |
@@ -65,7 +65,7 @@ format:
 
 ## Reflection (*complete at the end of class*)
 
-#### Did these concepts seems obvious or obvious in *hindsight*?
+#### What are your thoughts on the principles we discussed?
 
 |
 |
@@ -75,4 +75,4 @@ format:
 |
 |
 |
-#### Have you used any of these libraries before?
+#### Do you find the real-world examples helpful/interesting?

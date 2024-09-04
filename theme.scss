@@ -10,7 +10,7 @@ $vassarColor: #F26241;
 
 $mainFontSize: 35px;
 $backgroundColor: #ffffff;
-$mainColor: $dukeColor;
+$mainColor: black;
 
 // Links and actions
 $linkColor: $vassarColor;
@@ -39,7 +39,7 @@ $header-bgcolor: darkorange;
 }
 
 .reveal table {
-  font-size: 14pt;
+  font-size: 10pt;
 }
 
 //.slide-background:first-child {
@@ -109,9 +109,6 @@ $header-bgcolor: darkorange;
     line-height: 3;
 }
 
-* {
-  color:#000000;
-}
 
 // Uncomment to move slide number to bottom right
 //.slide-number, .reveal.has-logo .slide-number {
