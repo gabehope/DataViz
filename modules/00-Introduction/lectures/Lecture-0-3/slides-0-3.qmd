@@ -1,0 +1,1326 @@
+---
+title: "Data Analytics and Visualization"
+subtitle: "0-3: Principles for Visualization"
+author: "Prof. Gabe Hope"
+format: 
+    revealjs:
+        theme: ["../../../../theme.scss"]
+---
+
+# History: **Florence Nightingale**
+
+![](pictures/nightingale/portrait.png){fig-align="center"}
+
+## 1854-1856: Crimean war
+![](pictures/nightingale/war.png){fig-align="center"}
+
+## Appalling conditions for soldiers
+![](pictures/nightingale/conditions.png){fig-align="center"}
+
+## Tracking mortality
+
+![](pictures/nightingale/mortality-rates.png){fig-align="center"}
+
+## Tracking Causes
+
+![](pictures/nightingale/causes.png){fig-align="center"}
+
+## Implementing solutions
+
+![](pictures/nightingale/solution.png){fig-align="center"}
+
+## Legacy
+
+![](pictures/nightingale/portrait.png){fig-align="center"}
+
+
+
+# How do we make good choices when making visualizations?
+
+# A *poetry* of graphics
+
+## Space of visualizations
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/perception/space.png){fig-align="center"}
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/perception/space-2.png){fig-align="center"}
+
+:::
+:::::
+
+Large number of possible visualizations for any given dataset:
+
+$$\text{variables} \times \text{aesthetics} \times \text{geoms} \times \text{scales}...$$
+
+
+
+## Can we **automate** the process of creating good visualizations?
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+To answer this question we first need to determine:
+
+- How can we efficiently search the space of possible visualizations?
+- What criteria do we use?
+
+In the 1980s **Jock MacKinlay** was one of the first to tackle these questions.
+:::
+
+::: {.column width="50%"}
+![](pictures/perception/jock.png){fig-align="center"}
+
+:::
+:::::
+
+## MacKinlay's Criteria
+
+*"**Expressiveness** criteria identify graphical languages
+that express the desired information."*
+
+*"**Effectiveness** criteria identify which of these
+graphical languages, in a given situation, is the most effective at exploiting the
+capabilities of the output medium and the human visual system."*
+
+## What do these mean?
+Let's see how to use these criteria to derive priciples for choosing aesthetic mappings, geometries, scales, etc.
+
+# Expressiveness
+
+## Our first criteria: **expressiveness**
+
+"*A set of facts is **expressible** in a* [visual] *language if it contains a sentence* [visualization] *that:*"
+
+- "*Encodes **all** the facts in the set*"
+- "*Encodes **only** the facts in the set*"
+
+**Tell the whole truth and nothing but the truth**
+
+## Express all the facts: **overplotting**
+
+Overlapping points can make it impossible to tell the number of observations
+
+![](pictures/perception/overplotting.png){fig-align="center"}
+
+*How many total cars are represented?*
+
+## Express all the facts: **overplotting**
+
+A 2-D example:
+```{python}
+import pandas as pd
+import numpy as np
+from lets_plot import *
+LetsPlot.setup_html()
+
+import vega_datasets
+all_cars = vega_datasets.data.cars()
+cars = all_cars
+ggplot() + geom_point(data=cars, mapping=aes(x='Weight_in_lbs', y='Miles_per_Gallon', color='Origin'), size=10)
+```
+
+
+## Encode only the facts: **ordering**
+
+Visual orderings convey meaning, even when there is none!
+
+- "*Because we are almost never interested in seeing **Alabama first**, it is astonishing how often
+data displays use alphabetical order as the
+organizing principle of choice*" - Howard Wainer
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/perception/foods.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](pictures/perception/french-foods.png){fig-align="center"}
+:::
+:::::
+
+## Encode only the facts: **consistency**
+
+The properties of the image (visual variables) should match the properties of the data
+
+::::: columns
+::: {.column width="50%"}
+![](pictures/perception/cars.png){fig-align="center"}
+*Bar plots imply quantitative values!*
+:::
+::: {.column width="50%"}
+![](pictures/perception/foods.png){fig-align="center"}
+*Line plots imply trends!*
+:::
+:::::
+
+## Encode only the facts: **consistency**
+
+The properties of the image (visual variables) should match the properties of the data
+
+::::: columns
+::: {.column width="50%"}
+![](pictures/perception/cars.png){fig-align="center"}
+*Bar plots imply quantitative values!*
+:::
+::: {.column width="50%"}
+![](pictures/perception/foods.png){fig-align="center"}
+*Line plots imply trends!*
+:::
+:::::
+
+## Encode only the facts: **consistency**
+
+An improvement:
+
+::::: columns
+::: {.column width="50%"}
+![](pictures/perception/cars.png){fig-align="center"}
+:::
+::: {.column width="50%"}
+![](pictures/perception/cars-scatter.png){fig-align="center"}
+:::
+:::::
+
+*Is this the best way to show this relationship?*
+
+
+## Encode only the facts: **consistency**
+
+Different geometries are interpreted differently.
+
+- Bar charts encode ratios
+- Pie charts encode proportions of a whole
+- Line charts encode trends
+
+# Effectiveness
+
+## Effectiveness: **Aesthetic mappings**
+
+How we choose good aesthetic mappings?
+
+![](pictures/perception/tasks-cleveland.png){fig-align="center"}
+
+## Exercise: Aesthetic mappings
+
+We'll replicate a famous experiment from Cleveland and McGill!
+
+Open this form: [https://forms.gle/RfNNwfRcPtEBRGZh7](https://forms.gle/RfNNwfRcPtEBRGZh7)
+
+## What did we find?
+
+![](pictures/perception/questions.png){fig-align="center"}
+
+
+## What did we find?
+
+
+```{python}
+from lets_plot import *
+LetsPlot.setup_html()
+results = pd.read_csv('data/results.csv')
+results.melt()
+
+truth = pd.DataFrame({'value': [.2, .44, .4, .31, .39, .37], 'variable': ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6']})
+
+ggplot() + geom_histogram(data=results.melt(), mapping=aes(x='value'), bins=12) + geom_vline(data=truth, mapping=aes(xintercept='value'), color='red')+ facet_wrap('variable')
+```
+
+![](pictures/perception/questions.png){fig-align="center"}
+
+
+
+
+## Previous studies
+
+![](pictures/perception/heer.png){fig-align="center"}
+
+Some channels are **far** more effective at communicating values.
+
+
+## A first principle: **importance ordering**
+
+"*Encode more important information more effectively*" 
+
+- A visualization is more **effective** than another
+visualization if the information conveyed by one
+visualization is more readily perceived than the
+information in the other visualization.
+
+## MacKinlay's Ranking
+
+![](pictures/perception/ranking.png){fig-align="center"}
+
+Most effective representation may depend on the **type** of data
+
+## A classic dataset
+
+Fuel efficiency of cars from the 80's and 90's.
+
+```{python}
+import pandas as pd
+import numpy as np
+from lets_plot import *
+LetsPlot.setup_html()
+
+import vega_datasets
+all_cars = vega_datasets.data.cars()
+cars = all_cars.iloc[:12]
+cars
+```
+
+## Encoding a single variable
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+
+Position on y-axis
+```{python}
+#| echo: true
+#| 
+ggplot() + geom_bar(
+  data=cars, 
+  mapping=aes(x='Name', y='Horsepower'), 
+  stat='identity' # Map y directly to heights
+)\
++ scale_x_discrete(lablim=20) # Format labels
+```
+:::
+
+::: {.column  style="font-size: 75%; width: 50%"}
+Size (area)
+```{python}
+#| echo: true
+#| 
+ggplot()\
++ geom_point(
+  data=cars, 
+  mapping=aes(x='Name', size='Horsepower'), 
+)\
++ scale_x_discrete(lablim=20) # Format labels
+ 
+```
+:::
+:::::
+
+## Encoding a single variable
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+
+Position on y-axis
+```{python}
+#| echo: true
+#| 
+ggplot() + geom_bar(
+  data=cars, 
+  mapping=aes(x='Name', y='Horsepower'), 
+  stat='identity' # Map y directly to heights
+)\
++ scale_x_discrete(lablim=20) # Format labels
+```
+:::
+
+::: {.column  style="font-size: 75%; width: 50%"}
+Color (lightness)
+```{python}
+#| echo: true
+#| 
+ggplot()\
++ geom_point(
+  data=cars, 
+  mapping=aes(x='Name', color='Horsepower'), 
+size=10)\
++ scale_x_discrete(lablim=20) # Format labels
+ 
+```
+:::
+:::::
+
+## Encoding multiple variables
+
+```{python}
+cars = all_cars
+```
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+
+
+```{python}
+#| echo: true
+#| 
+ggplot() + geom_point(
+  data=cars, 
+  mapping=aes(x='Weight_in_lbs', 
+    y='Miles_per_Gallon', color='Origin')
+)
+```
+:::
+
+::: {.column  style="font-size: 75%; width: 50%"}
+```{python}
+#| echo: true
+#| 
+ggplot() + geom_point(
+  data=cars, 
+  mapping=aes(x='Origin', y='Miles_per_Gallon', 
+    color='Weight_in_lbs')
+)
+```
+:::
+:::::
+
+## Encoding multiple variables
+
+```{python}
+cars = all_cars
+```
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+
+
+```{python}
+#| echo: true
+#| 
+ggplot() + geom_point(
+  data=cars, 
+  mapping=aes(x='Weight_in_lbs', y='Miles_per_Gallon', 
+    color='Cylinders')
+)
+```
+:::
+
+::: {.column  style="font-size: 75%; width: 50%"}
+```{python}
+#| echo: true
+#| 
+ggplot() + geom_point(
+  data=cars, 
+  mapping=aes(x='Cylinders', y='Miles_per_Gallon', 
+    color='Weight_in_lbs')
+)
+```
+:::
+:::::
+
+
+## A debate: Angle vs. Length
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+
+
+```{python}
+#| echo: true
+from lets_plot.mapping import as_discrete
+ggplot() + geom_pie(
+  data=cars, 
+  mapping=aes(fill=as_discrete('Origin', order_by='..count..')),
+   size=25
+)
+
+```
+:::
+
+::: {.column  style="font-size: 75%; width: 50%"}
+```{python}
+#| echo: true
+from lets_plot.mapping import as_discrete
+
+ggplot() + geom_bar(
+  data=cars, 
+  mapping=aes(fill='Origin'),
+)
+
+```
+:::
+:::::
+
+
+Perceptual studies lean in favor of pie charts
+
+## A solution: Angle vs. Position
+
+::::: columns
+::: {.column width="50%"}
+![](pictures/perception/pie-chart.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](pictures/perception/dot-chart.png){fig-align="center"}
+:::
+:::::
+
+Position along the x-axis is **much** easier to compare than angle!
+
+## A caveat: pie charts aren't actually read by angle!
+
+::::: columns
+::: {.column width="50%"}
+![](pictures/perception/pie.png){fig-align="center"}
+
+Area (or even arc-length) are more relevant to perception.
+:::
+
+::: {.column width="50%"}
+![](pictures/perception/donut.png){fig-align="center"}
+
+Thus donut charts can be just as effective!
+:::
+:::::
+
+## Nightingale's polar area plot
+
+![](pictures/nightingale/causes.png){fig-align="center"}
+
+
+
+## A historical example: **William Playfair**
+
+![](pictures/perception/playfair.png){fig-align="center"}
+
+What visual encoding represents the *deficit/surplus*?
+
+## Encoding the value of interest
+
+::::: columns
+::: {.column width="50%"}
+![](pictures/perception/playfair.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](pictures/perception/playfair-differences.png){fig-align="center"}
+:::
+:::::
+
+## Curve differences
+
+![](pictures/perception/curve-differences.png){fig-align="center"}
+
+## Curve differences with ggplot!
+```{python}
+trade = pd.read_csv('data/imports-exports.csv')
+trade['Year'] = np.linspace(1999, 2024, len(trade))
+```
+
+::::: columns
+::: {.column style="font-size: 50%; width: 50%"}
+```{python}
+#| echo: true
+ggplot() + geom_ribbon(
+  data=trade[trade['Balance'] > 0], 
+  mapping=aes(x='Year', ymin='Imports', ymax='Exports'), 
+  size=0, fill='blue', alpha=0.25)\
+ + geom_ribbon(
+  data=trade[trade['Balance'] < 0], 
+  mapping=aes(x='Year', ymin='Imports', ymax='Exports'), 
+  fill='red', alpha=0.25)\
+ + geom_line(data=trade, mapping=aes(x='Year', y='Imports')) \
+ + geom_line(data=trade, mapping=aes(x='Year', y='Exports'))\
+ + ggtitle('US Imports and Exports with South America') \
+ + scale_y_continuous(name='Value ($)') + scale_x_continuous(format='d')
+
+```
+:::
+
+::: {.column  style="font-size: 85%; width: 50%"}
+```{python}
+#| echo: true
+#| 
+
+ggplot() + geom_line(
+  data=trade, 
+  mapping=aes(x='Year', y='Balance'))\
+ + ggtitle('US Imports and Exports with\
+   South America') \
+ + scale_y_continuous(name='Balance ($)')\
+ + scale_x_continuous(format='d')
+```
+:::
+:::::
+
+
+
+
+## Violations of these principles
+The following charts from Morton Thiokol documented O-ring damage on pre-challenger flights
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/challenger/mt-plot-1.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](pictures/challenger/mt-plot-2.png){fig-align="center"}
+:::
+:::::
+
+*What principle(s) are violated here?*
+
+## Tufte's fixes
+
+Temperature is more important than date!
+
+![](pictures/challenger/mt-plot-tufte.png){fig-align="center"}
+
+## Tufte's fixes
+
+Ordering alone doesn't effectively convey differences!
+
+![](pictures/challenger/mt-scatter.png){fig-align="center"}
+
+
+# Scales and axes
+
+## Last time: A simple formula for (positional) scales
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+$$\text{position} = \frac{\text{value} - \min}{\max - \min} \cdot \text{visual range}$$
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+#| 
+ggplot() + geom_point(
+  data=cars, 
+  mapping=aes(x='Weight_in_lbs', 
+    y='Miles_per_Gallon', color='Origin')
+)
+```
+:::
+:::::
+
+
+
+
+
+## Should axes start at 0?
+
+![](pictures/scales/lying.png){fig-align="center"}
+
+*From How to Lie with Statistics*
+
+## 0 may not be an appropriate minimum!
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+co2 = pd.read_csv('data/co2.csv')
+ggplot() + geom_line(
+  data=co2, 
+  mapping=aes(x='Date', y='Co2')
+)\
+  + scale_x_continuous(
+    format='d' # Specify number format as int
+) 
+```
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+co2 = pd.read_csv('data/co2.csv')
+ggplot() + geom_line(
+  data=co2, 
+  mapping=aes(x='Date', y='Co2')
+)\
+  + scale_x_continuous(format='d') \
+  + scale_y_continuous(
+    limits=[0, 425]) # Specify range
+
+```
+:::
+:::::
+
+*Global CO2 concentration was never 0!*
+
+## Cleveland saw this in the 80s!
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/scales/cleveland_scaled.png){fig-align="center"}
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/scales/cleveland_co2.png){fig-align="center"}
+:::
+:::::
+
+*Global CO2 concentration was never 0!*
+
+## Should axes start at 0? - consistency
+
+Bar charts imply **ratio** variables. So 0 is important!
+```{python}
+cars = all_cars.iloc[:15]
+```
+
+
+```{python}
+#| echo: true
+ggplot() + geom_bar(
+  data=cars, mapping=aes(y='Name', x='Weight_in_lbs'), stat='identity') \
++ scale_x_continuous(limits=[3000, 4500]) + scale_y_discrete(lablim=20)
+```
+*A Chevelle is not 10x the weight of a Citroen DS!*
+
+## Should axes start at 0? - consistency
+
+Point geoms can highlight a relvant range without violating consistency.
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+ggplot() + geom_bar(
+  data=cars.sort_values('Weight_in_lbs'), 
+  mapping=aes(y='Name', x='Weight_in_lbs'), 
+  stat='identity') \
++ ggsize(600, 400) + scale_y_discrete(lablim=20)
+```
+
+Compare ratios
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(
+  data=cars.sort_values('Weight_in_lbs'), 
+  mapping=aes(y='Name', x='Weight_in_lbs'), 
+  color='blue', shape=1) \
++ scale_y_discrete(lablim=20)
+```
+
+Compare position
+:::
+:::::
+
+## Axis tick marks
+
+Tick marks are our positional legend -- they show how to map visual position back to values.
+
+```{python}
+cars = all_cars
+ggplot() + geom_point(data=cars, mapping=aes(x='Horsepower', y='Miles_per_Gallon', color='Origin')) \
+ + scale_x_continuous() \
+ + scale_y_continuous()
+```
+## Axis tick marks
+Simple, evenly-spaced numbers are preferred (multiples of 10/5/2)
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(
+  data=cars, 
+  mapping=aes(x='Horsepower', 
+    y='Miles_per_Gallon', 
+    color='Origin')
+  ) \
+ + scale_x_continuous() \
+ + scale_y_continuous()
+```
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(
+  data=cars, 
+  mapping=aes(x='Horsepower', 
+    y='Miles_per_Gallon', 
+    color='Origin')
+  ) \
++ scale_x_continuous(breaks=[53,88,111,162,205])
+# `breaks` argument determines tick locations
+```
+:::
+:::::
+
+## Axis tick marks
+Should show the range of data
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(
+  data=cars, 
+  mapping=aes(x='Horsepower', 
+    y='Miles_per_Gallon', 
+    color='Origin')
+  ) \
+ + scale_x_continuous() \
+ + scale_y_continuous()
+```
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(
+  data=cars,
+  mapping=aes(x='Horsepower', 
+  y='Miles_per_Gallon', 
+  color='Origin')
+  ) \
+ + scale_x_continuous(breaks=[100]) \
+ + scale_y_continuous(breaks=[15, 25, 35])
+```
+:::
+:::::
+
+## Axis tick marks
+Should be easily readable - not too dense or too small!
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(
+  data=cars, 
+  mapping=aes(x='Horsepower', 
+    y='Miles_per_Gallon', 
+    color='Origin')
+  ) \
+ + scale_x_continuous() \
+ + scale_y_continuous()
+```
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(
+  data=cars, 
+  mapping=aes(x='Horsepower', 
+  y='Miles_per_Gallon', 
+  color='Origin')
+) \
+ + scale_x_continuous(breaks=np.arange(40, 250))\
+ + scale_y_continuous(breaks=np.arange(10, 50))
+```
+:::
+:::::
+
+## Outliers
+
+Outlying observations can make a scale ineffective
+
+```{python}
+nations = pd.read_csv('data/nations.csv')
+s_asia = nations[nations['region'] == 'South Asia']
+
+ggplot() + geom_point(data=s_asia, mapping=aes(color='name', x='population', y='income'), size=5)
+```
+
+## Clipping
+
+**Clipping** removes outliers (but loses information!)
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+
+```{python}
+#| echo: true
+ggplot() + geom_point(
+  data=s_asia, 
+  mapping=aes(color='name', 
+  x='population', y='income'), 
+size=5)
+```
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(
+  data=s_asia[s_asia['population'] < 1e9], 
+  mapping=aes(color='name', 
+  x='population', y='income'), 
+  size=5)
+```
+:::
+:::::
+
+## Axis breaks
+
+Axis **breaks** are another common solution
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+
+![](pictures/scales/bad-break.png){fig-align="center" height=400}
+
+But they can violate **consistency**!
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/scales/good-break.png){fig-align="center" height=400}
+
+A well-implemented break can be clear.
+:::
+:::::
+
+## Axis breaks
+
+In general breaks are not recommended; much more cognitive work for the reader!
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+
+![](pictures/scales/cleveland-log.png){fig-align="center" height=400}
+
+Log scales show all the data directly.
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/scales/good-break.png){fig-align="center" height=400}
+
+Breaks require separate parsing of two (or more) sections.
+:::
+:::::
+
+*Not implemented in (base) ggplot!*
+
+## Log scales
+
+Log scales can address outliers, but also overall data *skew*. 
+```{python}
+nations = pd.read_csv('data/nations.csv')
+```
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(
+  data=nations, 
+  mapping=aes(
+    x='income', y='lifeExpectancy')
+  ) + scale_x_continuous()\
+  + ggsize(400,400)
+```
+
+Skewed data, makes it hard to distinguish the majority of observations.
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(
+  data=nations, 
+  mapping=aes(
+    x='income', y='lifeExpectancy')
+  ) + scale_x_continuous(trans='log10')\
+  + ggsize(400,400)
+```
+
+A log-scale spreads out observations across orders of magnitude.
+:::
+:::::
+
+
+## Log scales
+Consider log-scales when:
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+
+
+- Data has significant outliers that dominate an axis.
+- Data spans several orders of magnitude.
+- Want to emphasize percentage changes.
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(
+  data=nations, 
+  mapping=aes(
+    x='income', y='lifeExpectancy')
+  ) + scale_x_continuous(trans='log10')\
+  + ggsize(400,400)
+```
+:::
+:::::
+
+## Log scales
+Consider log-scales when:
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+
+
+- Data has significant outliers that dominate an axis.
+- Data spans several orders of magnitude.
+- **Want to emphasize percentage changes.**
+
+Remember that **logs** turn multiplications into additions.
+
+$$\log(xy) = log(x) + log(y)$$
+
+Equal steps on log axis correspond to equal **multiplicative** changes.
+
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(
+  data=nations, 
+  mapping=aes(
+    x='income', y='lifeExpectancy')
+  ) + scale_x_continuous(trans='log10')\
+  + ggsize(400,400)
+```
+:::
+:::::
+
+## Log scales
+
+![](pictures/scales/nytimes-coronavirus.png){fig-align="center"}
+
+On the log scale, a slope of 1 corresponds to **exponential growth**.
+
+
+
+# *Above all else show the data*
+
+# Design principles!
+
+![](pictures/challenger/tufte-portrait.jpg){fig-align="center"}
+
+From Edward Tufte
+
+## Tufte's philosophy: **minimalism**
+
+Five principles
+
+- Above all else show the data
+- Maximize the data-ink ratio
+- Erase non-data-ink
+- Erase redundant data-ink
+- Revise and edit
+
+## Data-ink ratio
+
+::::: columns
+::: {.column width="50%" style="font-size: 100%"}
+Heuristic for visual complexity
+
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+
+![](pictures/data-to-ink/ratio.png){fig-align="center" height=200}
+
+:::
+:::::
+
+::::: columns
+::: {.column width="50%" style="font-size: 60%"}
+Low data-ink ratio (*William Playfair 1785*):
+![](pictures/data-to-ink/playfair-messy.png){fig-align="center" height=300}
+
+
+:::
+
+::: {.column width="50%" style="font-size: 60%"}
+High data-ink ratio (*William Playfair 1786*):
+![](pictures/data-to-ink/playfair.png){fig-align="center" height=300}
+
+:::
+:::::
+
+
+## Maximal data-ink ratio: EEG
+
+Can't erase anything without losing information
+
+![](pictures/data-to-ink/eeg.png){fig-align="center"}
+
+## Data-ink ratio
+
+Can be used to guide visual design (*Revise and edit!*):
+
+::::: columns
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/data-to-ink/bar-1.png){fig-align="center" height=200}
+
+A simple bar chart
+
+![](pictures/data-to-ink/bar-3.png){fig-align="center" height=200}
+
+and the axis rule
+
+
+:::
+
+::: {.column width="50%" style="font-size: 75%"}
+![](pictures/data-to-ink/bar-2.png){fig-align="center" height=200}
+
+We can remove the outline
+
+![](pictures/data-to-ink/bar-4.png){fig-align="center" height=200}
+
+even re-encode the axis with whitespace!
+:::
+
+:::::
+
+::: {style="font-size: 75%"}
+
+:::
+
+## Data-ink ratio
+
+
+
+::::: columns
+::: {.column width="50%" style="font-size: 100%"}
+
+Can convey more information.
+
+- Here the axes convey the extents of the data
+
+![](pictures/data-to-ink/extents.png){fig-align="center"}
+
+:::
+
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/data-to-ink/range-frame.png){fig-align="center"}
+
+:::
+
+:::::
+
+
+## Data-ink ratio
+
+Can be used to derive new forms
+
+![](pictures/data-to-ink/tukey-boxplot.png){fig-align="center" height=400}
+
+**Exercise:** Can you simplify the box and whisker plot? Try to convey the same information with less ink. 
+
+## Data-ink ratio
+
+Can be used to derive new forms
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/data-to-ink/tukey-boxplot.png){fig-align="center" height=400}
+
+John Tukey's box plot
+:::
+
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/data-to-ink/tufte-boxplot.png){fig-align="center" height=400}
+
+Tufte's simplification
+:::
+
+:::::
+
+## Data-ink ratio
+
+Sometimes Tufte went a little far...
+![](pictures/data-to-ink/boxplots.png){fig-align="center"  height=500}
+
+*Is this really better?*
+
+## Chart junk
+
+Distracting patterns and unnecessary artistic embelishment 
+
+![](pictures/chartjunk/junky.png){fig-align="center"}
+
+::: {style="font-size: 75%"}
+*A typical example*
+:::
+
+
+## Distracting patterns
+
+Patterns can introduce visual artifacts and distract from the data.
+
+![](pictures/chartjunk/patterns.png){fig-align="center"}
+
+## Unnecessary artistic embellishment
+
+Which conveys data more effectively?
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/challenger/mt-scatter.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](pictures/challenger/tufte.png){fig-align="center"}
+:::
+:::::
+
+## "This may be the worst graphic ever put into print"
+
+![](pictures/chartjunk/worst.png){fig-align="center"}
+
+# But is Tufte right?
+
+## Artistic embellishment
+
+Which plot is more clear? Which is more *memorable*?
+
+::::: columns
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/data-to-ink/monstrous.png){fig-align="center" height=400}
+
+*Nigel Holmes' visual*
+:::
+
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/data-to-ink/non-monstrous.png){fig-align="center" height=400}
+
+*A simplified visual*
+:::
+:::::
+
+## A perceptual study
+
+*Bateman et. al.* put this to the test! 
+
+- Subjects compared several plots from Holmes to simplified charts.
+
+![](pictures/data-to-ink/storytelling.png){fig-align="center"}
+
+## The results
+
+::::: columns
+::: {.column width="50%" style="font-size: 100%"}
+Subject better remembered the charts with "junk"!
+
+- **Especially** in the long term
+:::
+
+::: {.column width="50%" style="font-size: 50%"}
+![](pictures/data-to-ink/recall.png){fig-align="center" height=600}
+:::
+
+:::::
+
+
+## The results
+
+They also preferred them
+
+![](pictures/data-to-ink/preferences.png){fig-align="center"}
+
+## Another perceptual study
+
+*Haroz et. al.* used a more controlled study comparing *pictographs* to basic shapes.
+
+![](pictures/chartjunk/pictograms.png){fig-align="center"}
+
+## Another perceptual study
+
+::::: columns
+::: {.column width="50%"}
+![](pictures/chartjunk/pictograph-error.png){fig-align="center"}
+
+Pictographs had similar error
+:::
+
+::: {.column width="50%"}
+![](pictures/chartjunk/pictograph-recall.png){fig-align="center"}
+but better recall!
+:::
+:::::
+
+## Distracting pictographs
+
+Pictographs *not* used to show the data led to worse performance
+
+::::: columns
+::: {.column width="50%"}
+![](pictures/chartjunk/bad-pictograms.png){fig-align="center"}
+
+:::
+
+::: {.column width="50%"}
+![](pictures/chartjunk/background.png){fig-align="center"}
+
+:::
+:::::
+
+## Takeaway
+
+The appropriate level of "junk" is the subject of ongoing research and debate
+
+- Tufte's principles can make plots more **effective**
+- Embellishment can make plots more **memorable**
+
+# We'll cover more principles in future lectures!
+
+# **Epilogue:** The best graphic ever put into print?
+
+## **Tufte's answer:** Charles Minard's visualization of Napoleon's march
+
+![](pictures/data-to-ink/march.png){fig-align="center"}
+
+
+# File formats and loading data
+
+## CSV (and TSV) files
+"Simplest" and most common data file format. 
+
+- Plain text file
+- Each line is a row
+- Each column is separated by a *delimiter*: "," for CSV, `tab` for TSV.
+- First row (usually) specifies column labels
+
+## Loading CSV (and TSV) files
+
+Files can be loaded into Pandas with `pd.read_csv()`
+
+## CSV (and TSV) issues
+
+**No explicit schema!** We need to *guess* the type of each column
+
+- Pandas usally does a good job, but could get it wrong!
+
+## CSV (and TSV) issues
+
+**Ambiguity!** *What if a value contains a comma?*
+
+- Usually handled by *quoting* text
+- Leads to its own issues
+
+## CSV (and TSV) issues
+
+**Lack of standardization!** Many different ways of handling different data types
+
+- Leads to this:
+
+## Python
+
+We can load a DataFrame from Python structures a s well
+
+- Column format
+
+- Records format
+
+## JSON (**J**ava**S**cript **O**bject **N**otation)
+
+**JSON** is a plain text format that describes nested `list` and `dict` structures (`array` and `object` in JavaScript)
+
+- Pandas can read and write JSON using the columns or records format

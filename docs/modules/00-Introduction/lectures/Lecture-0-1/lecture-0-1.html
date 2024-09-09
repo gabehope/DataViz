@@ -211,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>cars <span class="op">=</span> vega_datasets.data.cars()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
-            <div id="ka13bV"></div>
+            <div id="0MFAJI"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -235,16 +235,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("ka13bV").appendChild(div);
+                        document.getElementById("0MFAJI").appendChild(div);
                     };
-                    var e = document.getElementById("ka13bV");
+                    var e = document.getElementById("0MFAJI");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 </div>
-<div id="cell-1" class="cell" data-execution_count="59">
+<div id="cell-1" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> (np.random.random(<span class="dv">10</span>) <span class="op">*</span> <span class="dv">100</span>).astype(<span class="bu">int</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>cats <span class="op">=</span> [<span class="st">'a'</span>] <span class="op">*</span> <span class="dv">5</span> <span class="op">+</span> [<span class="st">'b'</span>] <span class="op">*</span> <span class="dv">5</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>ind <span class="op">=</span> <span class="bu">list</span>(np.arange(<span class="dv">5</span>)) <span class="op">+</span> <span class="bu">list</span>(np.arange(<span class="dv">5</span>)) </span>
@@ -253,8 +253,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(aes(x<span class="op">=</span><span class="st">'ind'</span>, y<span class="op">=</span><span class="st">'count'</span>), data<span class="op">=</span>data, <span class="op">\</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        stat<span class="op">=</span><span class="st">'identity'</span>, show_legend<span class="op">=</span><span class="va">False</span>, fill<span class="op">=</span><span class="st">'white'</span>, color<span class="op">=</span><span class="st">'black'</span>, stroke<span class="op">=</span><span class="dv">2</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        scale_fill_discrete() <span class="op">+</span> facet_grid(x<span class="op">=</span><span class="st">'cat'</span>) <span class="op">+</span> ggsize(<span class="dv">400</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="59">
-   <div id="vuowQT"></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+   <div id="hnARz5"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -281,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 "geom":"bar",
 "stat":"identity",
 "data":{
-"count":[39.0,62.0,65.0,40.0,40.0,37.0,23.0,91.0,24.0,96.0],
+"count":[65.0,6.0,90.0,70.0,11.0,68.0,80.0,15.0,33.0,5.0],
 "cat":["a","a","a","a","a","b","b","b","b","b"],
 "ind":[0.0,1.0,2.0,3.0,4.0,0.0,1.0,2.0,3.0,4.0]
 },
@@ -299,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("vuowQT");
+           var plotContainer = document.getElementById("hnARz5");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -307,7 +307,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-2" class="cell" data-execution_count="60">
+<div id="cell-2" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> (np.random.random(<span class="dv">10</span>) <span class="op">*</span> <span class="dv">100</span>).astype(<span class="bu">int</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>cats <span class="op">=</span> [<span class="st">'a'</span>] <span class="op">*</span> <span class="dv">5</span> <span class="op">+</span> [<span class="st">'b'</span>] <span class="op">*</span> <span class="dv">5</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>ind <span class="op">=</span> <span class="bu">list</span>(np.arange(<span class="dv">5</span>)) <span class="op">+</span> <span class="bu">list</span>(np.arange(<span class="dv">5</span>)) </span>
@@ -316,8 +316,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(aes(x<span class="op">=</span><span class="st">'cat'</span>, y<span class="op">=</span><span class="st">'count'</span>, group<span class="op">=</span><span class="st">'ind'</span>), data<span class="op">=</span>data, <span class="op">\</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        stat<span class="op">=</span><span class="st">'identity'</span>, position<span class="op">=</span><span class="st">"stack"</span>, fill<span class="op">=</span><span class="st">'white'</span>, show_legend<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span><span class="st">'black'</span>, stroke<span class="op">=</span><span class="dv">2</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        scale_fill_discrete() <span class="op">+</span> ggsize(<span class="dv">400</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="60">
-   <div id="3bAasP"></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+   <div id="evYCQ2"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -338,7 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 "geom":"bar",
 "stat":"identity",
 "data":{
-"count":[93.0,78.0,34.0,1.0,1.0,99.0,4.0,50.0,97.0,86.0],
+"count":[32.0,10.0,47.0,98.0,61.0,23.0,2.0,59.0,25.0,82.0],
 "cat":["a","a","a","a","a","b","b","b","b","b"],
 "ind":[0.0,1.0,2.0,3.0,4.0,0.0,1.0,2.0,3.0,4.0]
 },
@@ -357,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("3bAasP");
+           var plotContainer = document.getElementById("evYCQ2");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -365,16 +365,74 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-3" class="cell" data-execution_count="61">
+<div id="cell-3" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> (np.random.random(<span class="dv">10</span>) <span class="op">*</span> <span class="dv">100</span>).astype(<span class="bu">int</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>cats <span class="op">=</span> [<span class="st">'a'</span>] <span class="op">*</span> <span class="dv">5</span> <span class="op">+</span> [<span class="st">'b'</span>] <span class="op">*</span> <span class="dv">5</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>ind <span class="op">=</span> <span class="bu">list</span>(np.arange(<span class="dv">5</span>)) <span class="op">+</span> <span class="bu">list</span>(np.arange(<span class="dv">5</span>)) </span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(count<span class="op">=</span>nums, cat<span class="op">=</span>cats, ind<span class="op">=</span>ind))</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_pie(aes(<span class="bu">slice</span><span class="op">=</span><span class="st">'count'</span>), size<span class="op">=</span><span class="dv">25</span>, spacer_width<span class="op">=</span><span class="dv">2</span>, spacer_color<span class="op">=</span><span class="st">'black'</span>, stroke_side<span class="op">=</span><span class="st">'both'</span>, fill<span class="op">=</span><span class="st">'white'</span>, color<span class="op">=</span><span class="st">'black'</span>, stroke<span class="op">=</span><span class="dv">2</span>, stat<span class="op">=</span><span class="st">'identity'</span>, data<span class="op">=</span>data[data[<span class="st">'cat'</span>] <span class="op">==</span> <span class="st">'a'</span>], <span class="op">\</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>          )   <span class="op">+</span> ggsize(<span class="dv">400</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="61">
-   <div id="DVcJh4"></div>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(aes(x<span class="op">=</span><span class="st">'cat'</span>, y<span class="op">=</span><span class="st">'count'</span>, group<span class="op">=</span><span class="st">'ind'</span>), data<span class="op">=</span>data, <span class="op">\</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        stat<span class="op">=</span><span class="st">'identity'</span>, position<span class="op">=</span><span class="st">"stack"</span>, fill<span class="op">=</span><span class="st">'white'</span>, show_legend<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span><span class="st">'black'</span>, stroke<span class="op">=</span><span class="dv">2</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        scale_fill_discrete() <span class="op">+</span> ggsize(<span class="dv">400</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+   <div id="2U9Bja"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"ggsize":{
+"width":400.0,
+"height":400.0
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"fill",
+"discrete":true
+}],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"data":{
+"count":[27.0,49.0,10.0,78.0,98.0,1.0,41.0,91.0,3.0,40.0],
+"cat":["a","a","a","a","a","b","b","b","b","b"],
+"ind":[0.0,1.0,2.0,3.0,4.0,0.0,1.0,2.0,3.0,4.0]
+},
+"mapping":{
+"x":"cat",
+"y":"count",
+"group":"ind"
+},
+"position":"stack",
+"show_legend":false,
+"data_meta":{
+},
+"fill":"white",
+"color":"black",
+"stroke":2.0
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("2U9Bja");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+<div id="cell-4" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> (np.random.random(<span class="dv">10</span>) <span class="op">*</span> <span class="dv">100</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>cats <span class="op">=</span> [<span class="st">'a'</span>] <span class="op">*</span> <span class="dv">5</span> <span class="op">+</span> [<span class="st">'b'</span>] <span class="op">*</span> <span class="dv">5</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>ind <span class="op">=</span> <span class="bu">list</span>(np.arange(<span class="dv">5</span>)) <span class="op">+</span> <span class="bu">list</span>(np.arange(<span class="dv">5</span>)) </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(count<span class="op">=</span>nums, cat<span class="op">=</span>cats, ind<span class="op">=</span>ind))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_pie(aes(<span class="bu">slice</span><span class="op">=</span><span class="st">'count'</span>), size<span class="op">=</span><span class="dv">25</span>, spacer_width<span class="op">=</span><span class="dv">2</span>, spacer_color<span class="op">=</span><span class="st">'black'</span>, stroke_side<span class="op">=</span><span class="st">'both'</span>, fill<span class="op">=</span><span class="st">'white'</span>, color<span class="op">=</span><span class="st">'black'</span>, stroke<span class="op">=</span><span class="dv">2</span>, stat<span class="op">=</span><span class="st">'identity'</span>, data<span class="op">=</span>data[data[<span class="st">'cat'</span>] <span class="op">==</span> <span class="st">'a'</span>], <span class="op">\</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>          )   <span class="op">+</span> ggsize(<span class="dv">400</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+   <div id="KhA7js"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -392,7 +450,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 "geom":"pie",
 "stat":"identity",
 "data":{
-"count":[63.0,1.0,60.0,15.0,93.0]
+"count":[97.0,71.0,28.0,47.0,0.0]
 },
 "mapping":{
 "slice":"count"
@@ -409,7 +467,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("DVcJh4");
+           var plotContainer = document.getElementById("KhA7js");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -417,12 +475,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-4" class="cell" data-execution_count="62">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(aes(x<span class="op">=</span><span class="st">'ind'</span>, y<span class="op">=</span><span class="st">'count'</span>), data<span class="op">=</span>data, <span class="op">\</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        stat<span class="op">=</span><span class="st">'identity'</span>, show_legend<span class="op">=</span><span class="va">False</span>, fill<span class="op">=</span><span class="st">'white'</span>, color<span class="op">=</span><span class="st">'black'</span>, stroke<span class="op">=</span><span class="dv">2</span>) <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        scale_fill_discrete() <span class="op">+</span> facet_grid(x<span class="op">=</span><span class="st">'cat'</span>)  <span class="op">+</span> ggsize(<span class="dv">400</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="62">
-   <div id="F38zES"></div>
+<div id="cell-5" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(aes(x<span class="op">=</span><span class="st">'ind'</span>, y<span class="op">=</span><span class="st">'count'</span>), data<span class="op">=</span>data, <span class="op">\</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        stat<span class="op">=</span><span class="st">'identity'</span>, show_legend<span class="op">=</span><span class="va">False</span>, fill<span class="op">=</span><span class="st">'white'</span>, color<span class="op">=</span><span class="st">'black'</span>, stroke<span class="op">=</span><span class="dv">2</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        scale_fill_discrete() <span class="op">+</span> facet_grid(x<span class="op">=</span><span class="st">'cat'</span>)  <span class="op">+</span> ggsize(<span class="dv">400</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+   <div id="bfVflf"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -449,7 +507,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 "geom":"bar",
 "stat":"identity",
 "data":{
-"count":[63.0,1.0,60.0,15.0,93.0,20.0,12.0,90.0,2.0,17.0],
+"count":[97.0,71.0,28.0,47.0,0.0,53.0,72.0,94.0,52.0,33.0],
 "cat":["a","a","a","a","a","b","b","b","b","b"],
 "ind":[0.0,1.0,2.0,3.0,4.0,0.0,1.0,2.0,3.0,4.0]
 },
@@ -467,7 +525,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("F38zES");
+           var plotContainer = document.getElementById("bfVflf");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -475,17 +533,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-6" class="cell" data-execution_count="115">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> (np.random.random(<span class="dv">10</span>) <span class="op">*</span> <span class="dv">100</span>).astype(<span class="bu">int</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>cats <span class="op">=</span> [<span class="st">'a'</span>] <span class="op">*</span> <span class="dv">5</span> <span class="op">+</span> [<span class="st">'b'</span>] <span class="op">*</span> <span class="dv">5</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>ind <span class="op">=</span> <span class="bu">list</span>(np.arange(<span class="dv">5</span>)) <span class="op">+</span> <span class="bu">list</span>(np.arange(<span class="dv">5</span>)) </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(count<span class="op">=</span>nums, cat<span class="op">=</span>cats, ind<span class="op">=</span>ind, x<span class="op">=</span>np.random.random(<span class="dv">10</span>) <span class="op">*</span> <span class="dv">0</span>, y<span class="op">=</span><span class="dv">0</span> <span class="op">*</span> np.random.random(<span class="dv">10</span>)))</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(aes(x<span class="op">=</span><span class="st">'x'</span>, y<span class="op">=</span><span class="st">'y'</span>, size<span class="op">=</span><span class="st">'count'</span>), position<span class="op">=</span>position_jitter(width<span class="op">=</span><span class="dv">20</span>, height<span class="op">=</span><span class="dv">50</span>), data<span class="op">=</span>data, <span class="op">\</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        stat<span class="op">=</span><span class="st">'identity'</span>, show_legend<span class="op">=</span><span class="va">False</span>, fill<span class="op">=</span><span class="st">'white'</span>, alpha<span class="op">=</span><span class="fl">1.</span>, color<span class="op">=</span><span class="st">'black'</span>) <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        ggsize(<span class="dv">400</span>, <span class="dv">400</span>) <span class="op">+</span> scale_size(<span class="bu">range</span><span class="op">=</span>[<span class="dv">10</span>, <span class="dv">50</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="115">
-   <div id="8dztOH"></div>
+<div id="cell-7" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> (np.random.random(<span class="dv">10</span>) <span class="op">*</span> <span class="dv">100</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>cats <span class="op">=</span> [<span class="st">'a'</span>] <span class="op">*</span> <span class="dv">5</span> <span class="op">+</span> [<span class="st">'b'</span>] <span class="op">*</span> <span class="dv">5</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>ind <span class="op">=</span> <span class="bu">list</span>(np.arange(<span class="dv">5</span>)) <span class="op">+</span> <span class="bu">list</span>(np.arange(<span class="dv">5</span>)) </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(count<span class="op">=</span>nums, cat<span class="op">=</span>cats, ind<span class="op">=</span>ind, x<span class="op">=</span>np.random.random(<span class="dv">10</span>) <span class="op">*</span> <span class="dv">0</span>, y<span class="op">=</span><span class="dv">0</span> <span class="op">*</span> np.random.random(<span class="dv">10</span>)))</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(aes(x<span class="op">=</span><span class="st">'x'</span>, y<span class="op">=</span><span class="st">'y'</span>, size<span class="op">=</span><span class="st">'count'</span>), position<span class="op">=</span>position_jitter(width<span class="op">=</span><span class="dv">20</span>, height<span class="op">=</span><span class="dv">50</span>), data<span class="op">=</span>data, <span class="op">\</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        stat<span class="op">=</span><span class="st">'identity'</span>, show_legend<span class="op">=</span><span class="va">False</span>, fill<span class="op">=</span><span class="st">'white'</span>, alpha<span class="op">=</span><span class="fl">1.</span>, color<span class="op">=</span><span class="st">'black'</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        ggsize(<span class="dv">400</span>, <span class="dv">400</span>) <span class="op">+</span> scale_size(<span class="bu">range</span><span class="op">=</span>[<span class="dv">10</span>, <span class="dv">50</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+   <div id="83m1g2"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -506,7 +564,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 "geom":"point",
 "stat":"identity",
 "data":{
-"count":[43.0,93.0,22.0,31.0,99.0,63.0,70.0,57.0,69.0,91.0],
+"count":[7.0,44.0,98.0,6.0,96.0,56.0,43.0,23.0,35.0,23.0],
 "x":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
 "y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
 },
@@ -529,7 +587,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("8dztOH");
+           var plotContainer = document.getElementById("83m1g2");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -537,10 +595,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-7" class="cell" data-execution_count="114">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ggplot(cars, aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>, y<span class="op">=</span><span class="st">'Miles_per_Gallon'</span>, color<span class="op">=</span><span class="st">'Year'</span>, size<span class="op">=</span><span class="st">'Cylinders'</span>)) <span class="op">+</span> geom_point(tooltips<span class="op">=</span>layer_tooltips([<span class="st">'Name'</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="114">
-   <div id="0cx2N6"></div>
+<div id="cell-8" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ggplot(cars, aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>, y<span class="op">=</span><span class="st">'Miles_per_Gallon'</span>, color<span class="op">=</span><span class="st">'Year'</span>, size<span class="op">=</span><span class="st">'Cylinders'</span>)) <span class="op">+</span> geom_point(tooltips<span class="op">=</span>layer_tooltips([<span class="st">'Name'</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+   <div id="YVfHsO"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -580,7 +638,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("0cx2N6");
+           var plotContainer = document.getElementById("YVfHsO");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -588,8 +646,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-8" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>pd.read_csv(<span class="st">'data/nations.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-9" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pd.read_csv(<span class="st">'data/nations.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <div>
 

@@ -57,6 +57,12 @@ on Comprehension and Memorability of Charts](http://www.stat.columbia.edu/~gelma
 
 [Beyond Memorability: Visualization Recognition and Recall](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7192646&casa_token=myzvkGwWUYQAAAAA:P6sFJFLm7fnphu99pYH6WZLSnx1W9JzbZRm-ixi3-WD90G9Vkx0t-O6ckFLFKJWwi6HHCKmMig)
 
+[Somewhere Over the Rainbow: An Empirical Assessment
+of Quantitative Colormaps](https://idl.cs.washington.edu/files/2018-QuantitativeColor-CHI.pdf)
+
+[ISOTYPE Visualization – Working Memory, Performance,
+and Engagement with Pictographs](https://dl.acm.org/doi/pdf/10.1145/2702123.2702275?casa_token=3V9iiKwQjTgAAAAA:ogYFSNliqmfchUX3_-LTZCDGvuz863Bar9c4fxOopVndHJ4TkEcYbmoqDFLx1OeMEz-xHLClKhhFZA)
+
 ## Courses
 
 ### Data Visualization
@@ -79,10 +85,15 @@ on Comprehension and Memorability of Charts](http://www.stat.columbia.edu/~gelma
 
 [Mona Chalabi](https://monachalabi.com)
 
+[Robert Kosara](https://eagereyes.org/)
+
 ## Links
+
+[39 studies about human perception in 30 minutes](https://medium.com/@kennelliott/39-studies-about-human-perception-in-30-minutes-4728f9e31a73)
 
 [Chartmaker guide](https://chartmaker.visualisingdata.com/)
 
 [Flowing data](https://flowingdata.com/)
 
 [Malofiej awards](https://www.malofiejgraphics.com/historia-y-ediciones-anteriores)
+

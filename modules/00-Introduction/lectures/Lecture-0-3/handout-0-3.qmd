@@ -1,0 +1,78 @@
+---
+format: 
+    pdf:
+        include-in-header: 
+            text: '\pagenumbering{gobble}'
+---
+
+
+# Name:
+
+*Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
+
+# Data Analytics and Visualization: Week 3 - Principles
+
+## In-class questions
+
+#### Which encodings did you find most effective?
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  What principles do Morton Thiokol's plots violate?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+#### Simplify the box-and-whisker plot
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+#### What variables are shown by Minards visualizaiton?
+
+
+|
+|
+|
+|
+|
+|
+|
+
+
+## Reflection (*complete at the end of class*)
+
+#### What are your thoughts on the principles we discussed?
+
+|
+|
+|
+|
+|
+|
+|
+|
+#### Do you have any others?
