@@ -5,6 +5,8 @@ author: "Prof. Gabe Hope"
 format: 
     revealjs:
         theme: ["../../../../theme.scss"]
+revealjs-plugins:
+  - tldraw
 ---
 
 # Narrowing our focus
@@ -694,20 +696,21 @@ ggplot() + geom_histogram(
 tf = require('@tensorflow/tfjs@4.11.0')
 data = FileAttachment("data/mpg.csv").csv({typed: true})
 weights = tf.tensor(data.map(d => d['Weight_in_lbs']))
-edges = {
+domain = [weights.min().arraySync(), weights.max().arraySync()];
+edges = tf.tidy(() => {
   let e = tf.linspace(weights.min().arraySync(), weights.max().arraySync(), bins+1);
   e = e.add(offset).arraySync();
   e.push(10000);
   e.push(0, 0)
   return e;
-}
+});
 viewof offset = Inputs.range([-100, 100], {value: 0, step: 1, label: "Offset", width: 800})
 viewof bins = Inputs.range([3, 250], {step: 1, value: 20, label: "Bins", width: 800})
 
 Plot.plot({
   height: 300,
   width: 1000,
-  x: {domain: [weights.min().arraySync(), weights.max().arraySync()]},
+  x: {domain: domain},
   marks: [
     Plot.ruleY([0]),
     Plot.rectY(data, Plot.binX({y: "sum"}, {x: "Weight_in_lbs", thresholds: edges}))
@@ -717,7 +720,7 @@ Plot.plot({
 Plot.plot({
   height: 160,
   width: 1000,
-  x: {domain: [weights.min().arraySync(), weights.max().arraySync()]},
+  x: {domain: domain},
   marks: [
     Plot.dot(data, Plot.dodgeY({x: "Weight_in_lbs"})),
     Plot.ruleX(edges, {stroke: 'red'})
@@ -817,7 +820,7 @@ viewof bins2 = Inputs.range([3, 250], {step: 1, label: "Bins", width: 800})
 Plot.plot({
   height: 400,
   width: 1000,
-  x: {domain: [weights.min().arraySync(), weights.max().arraySync()]},
+  x: {domain: domain},
   marks: [
     Plot.ruleY([0]),
     Plot.rectY(data, Plot.binX({y: "sum"}, {x: "Weight_in_lbs", thresholds: bins2}))
@@ -830,7 +833,7 @@ Plot.plot({
 Plot.plot({
   height: 400,
   width: 1000,
-  x: {domain: [weights.min().arraySync(), weights.max().arraySync()]},
+  x: {domain: domain},
   marks: [
     Plot.ruleY([0]),
     Plot.rectY(data, Plot.binX({y: "sum"}, {x: "Weight_in_lbs", thresholds: bins2, cumulative: true}))
