@@ -1,0 +1,78 @@
+---
+format: 
+    pdf:
+        include-in-header: 
+            text: '\pagenumbering{gobble}'
+---
+
+
+# Name:
+
+*Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
+
+# Data Analytics and Visualization: Week 3 - Single variable analysis
+
+## In-class questions
+
+#### Simplify the box-and-whisker plot
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  Which plot do you prefer?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+#### Which plot do you prefer?
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+#### What is the ideal bin size?
+
+
+|
+|
+|
+|
+|
+|
+|
+
+
+## Reflection (*complete at the end of class*)
+
+#### What are your thoughts on the principles we discussed?
+
+|
+|
+|
+|
+|
+|
+|
+|
+#### What would you like to cover in statistics?

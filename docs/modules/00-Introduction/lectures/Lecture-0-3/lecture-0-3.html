@@ -2023,12 +2023,107 @@ Cell <span class="ansi-green-fg">In[167], line 1</span>
    </script>
 </div>
 </div>
-<div id="cell-39" class="cell" data-execution_count="198">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> pd.read_csv(<span class="st">'data/results.csv'</span>)</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>results.melt()</span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_hist(results, aes(x<span class="op">=</span><span class="st">'value'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="198">
+<div id="cell-39" class="cell" data-execution_count="216">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> pd.read_csv(<span class="st">'data/results.csv'</span>)</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>results.melt()</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>truth <span class="op">=</span> pd.DataFrame({<span class="st">'value'</span>: [<span class="fl">.2</span>, <span class="fl">.44</span>, <span class="fl">.4</span>, <span class="fl">.31</span>, <span class="fl">.39</span>, <span class="fl">.37</span>], <span class="st">'variable'</span>: [<span class="st">'Q1'</span>, <span class="st">'Q2'</span>, <span class="st">'Q3'</span>, <span class="st">'Q4'</span>, <span class="st">'Q5'</span>, <span class="st">'Q6'</span>]})</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>results.melt(), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'value'</span>), bins<span class="op">=</span><span class="dv">12</span>) <span class="op">+</span> geom_vline(data<span class="op">=</span>truth, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'value'</span>), color<span class="op">=</span><span class="st">'red'</span>)<span class="op">+</span> facet_wrap(<span class="st">'variable'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+            <div id="D9PLLt"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.3/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("D9PLLt").appendChild(div);
+                    };
+                    var e = document.getElementById("D9PLLt");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
+<div class="cell-output cell-output-display" data-execution_count="216">
+   <div id="lc66pK"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"facet":{
+"name":"wrap",
+"facets":"variable",
+"order":1.0,
+"dir":"h"
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"histogram",
+"data":{
+"..count..":[1.0,17.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,2.0,4.0,6.0,9.0,1.0,0.0,0.0,0.0,0.0,0.0,3.0,2.0,4.0,7.0,1.0,5.0,0.0,0.0,0.0,1.0,0.0,6.0,4.0,5.0,5.0,2.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3.0,4.0,11.0,4.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,9.0,8.0,1.0,3.0,0.0,0.0,0.0,0.0],
+"value":[0.1125625,0.1711875,0.2298125,0.2884375,0.3470625,0.40568750000000003,0.4643125,0.5229375,0.5815625,0.6401875,0.6988125000000001,0.7574375000000001,0.1125625,0.1711875,0.2298125,0.2884375,0.3470625,0.40568750000000003,0.4643125,0.5229375,0.5815625,0.6401875,0.6988125000000001,0.7574375000000001,0.1125625,0.1711875,0.2298125,0.2884375,0.3470625,0.40568750000000003,0.4643125,0.5229375,0.5815625,0.6401875,0.6988125000000001,0.7574375000000001,0.1125625,0.1711875,0.2298125,0.2884375,0.3470625,0.40568750000000003,0.4643125,0.5229375,0.5815625,0.6401875,0.6988125000000001,0.7574375000000001,0.1125625,0.1711875,0.2298125,0.2884375,0.3470625,0.40568750000000003,0.4643125,0.5229375,0.5815625,0.6401875,0.6988125000000001,0.7574375000000001,0.1125625,0.1711875,0.2298125,0.2884375,0.3470625,0.40568750000000003,0.4643125,0.5229375,0.5815625,0.6401875,0.6988125000000001,0.7574375000000001],
+"variable":["Q1","Q1","Q1","Q1","Q1","Q1","Q1","Q1","Q1","Q1","Q1","Q1","Q2","Q2","Q2","Q2","Q2","Q2","Q2","Q2","Q2","Q2","Q2","Q2","Q3","Q3","Q3","Q3","Q3","Q3","Q3","Q3","Q3","Q3","Q3","Q3","Q4","Q4","Q4","Q4","Q4","Q4","Q4","Q4","Q4","Q4","Q4","Q4","Q5","Q5","Q5","Q5","Q5","Q5","Q5","Q5","Q5","Q5","Q5","Q5","Q6","Q6","Q6","Q6","Q6","Q6","Q6","Q6","Q6","Q6","Q6","Q6"]
+},
+"mapping":{
+"x":"value"
+},
+"data_meta":{
+"series_annotations":[]
+},
+"bins":12.0
+},{
+"geom":"vline",
+"data":{
+"value":[0.2,0.44,0.4,0.31,0.39,0.37],
+"variable":["Q1","Q2","Q3","Q4","Q5","Q6"]
+},
+"mapping":{
+"xintercept":"value"
+},
+"data_meta":{
+"series_annotations":[]
+},
+"color":"red"
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("lc66pK");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+<div id="cell-40" class="cell" data-execution_count="205">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>results.melt()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="205">
 <div>
 
 

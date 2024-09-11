@@ -1,0 +1,1482 @@
+---
+title: "Data Analytics and Visualization"
+subtitle: "1-0: Analyzing a Single Variable"
+author: "Prof. Gabe Hope"
+format: 
+    revealjs:
+        theme: ["../../../../theme.scss"]
+---
+
+# Narrowing our focus
+
+## So far: DataFrames
+
+What can we do with just **one** of these columns?
+
+```{python}
+import numpy as np
+import pandas as pd
+
+from lets_plot import *
+LetsPlot.setup_html()
+
+import vega_datasets
+all_cars = vega_datasets.data.cars()
+cars = all_cars
+cars
+```
+
+## Recall: 3 variable types
+
+::::: columns
+::: {.column style="width: 25%"}
+- Nomial
+- Ordinal
+- Quantitative
+:::
+
+::: {.column style="font-size: 75%; width: 75%"}
+```{python}
+cars.head(15)
+```
+:::
+:::::
+
+# Nominal variables
+
+## Recall: 3 variable types
+
+::::: columns
+::: {.column style="width: 25%"}
+- **Nomial**
+- Ordinal
+- Quantitative
+:::
+
+::: {.column style="font-size: 75%; width: 35%"}
+```{python}
+#| echo: true
+origin_data = cars[['Origin']]
+origin_data
+```
+:::
+:::::
+
+## Analyzing a single **nominal** variable
+
+::::: columns
+::: {.column style="width: 25%"}
+
+```{python}
+origin_data.head(20)
+```
+:::
+
+::: {.column style="font-size: 75%; width: 75%"}
+What questions could we ask about this data?
+:::
+:::::
+
+## What **values** does our variable take?
+
+*Assuming it's a **categorical** variable with a finite set of possible values.*
+
+::::: columns
+::: {.column style="width: 25%"}
+
+```{python}
+origin_data.head(20)
+```
+:::
+
+::: {.column style="font-size: 75%; width: 75%"}
+In Pandas, get the **unique** values in a `series` object with `unique()`
+
+```{python}
+#| echo: true
+origin_series = origin_data['Origin']
+origin_series.unique() 
+```
+
+Explicitly set the type of the column to `category`
+
+```{python}
+#| echo: true
+origin_data['Origin'] = origin_data['Origin'].astype('category')
+origin_data['Origin'] # View the column
+```
+:::
+:::
+:::::
+
+## What about visualization?
+
+We only have **1** variable to encode...
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+#| echo: true
+ggplot() + geom_point(
+    data=origin_data,
+    mapping=aes(x='Origin'),
+)
+```
+
+Not helpful
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot() + geom_point(
+    data=origin_data,
+    mapping=aes(color='Origin'),
+)
+```
+
+Very not helpful
+:::
+:::::
+
+## How many times does each value occur?
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+We need to **count** them!
+```{python}
+#| echo: true
+counts = origin_data.value_counts()
+counts
+```
+
+This gives a `series`, we can convert back to a `DataFrame` with:
+
+```{python}
+#| echo: true
+counts = counts.reset_index()
+counts
+```
+
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+Now we can plot `Origin` vs. `count`!
+```{python}
+#| echo: true
+ggplot() + geom_point(
+    data=counts,
+    mapping=aes(x='Origin', y='count'),
+) + scale_y_continuous(limits=[0, None])
+```
+
+:::
+:::::
+
+## Computing **statistics**
+
+A count is our first example of a **statistic**: *a value of interest computed from our data!*
+
+::::: columns
+::: {.column width="50%"}
+```{python}
+#| echo: true
+
+# Our original data
+origin_data.head()
+```
+:::
+
+::: {.column width="50%"}
+```{python}
+#| echo: true
+counts = origin_data.value_counts().reset_index()
+counts
+```
+:::
+:::::
+
+Here we **transformed** our data, representing it in terms of its count statistics
+
+## Components of our Grammar of Graphics
+
+This is one of the missing pieces of our visualization grammar!
+
+::::: columns
+::: {.column width="50%"}
+- Data
+- Aesthetic mappings
+- Geometries
+- (Statistical) **Transforms**
+:::
+
+::: {.column width="50%"}
+- Scales
+- Coordinate systems
+- Faceting systems
+- Annotations
+:::
+:::::
+
+## `stat` in ggplot/lets-plot
+Statistical transforms are built-in to `ggplot`, through the `stat` option!
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+**New**
+```{python}
+#| echo: true
+ggplot() + geom_point(
+    data=origin_data, stat='count',
+    mapping=aes(x='Origin', y='..count..'),
+) + scale_y_continuous(limits=[0, None])
+```
+
+Computed statistics are given names of the form `..stat..`
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+Old
+```{python}
+#| echo: true
+ggplot() + geom_point(
+    data=counts,
+    mapping=aes(x='Origin', y='count'),
+) + scale_y_continuous(limits=[0, None])
+```
+:::
+:::::
+
+## Bar plots
+Bar geometries use the `count` stat by default.
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+#| echo: true
+ggplot() + geom_bar(
+    data=origin_data,
+    mapping=aes(x='Origin'),
+)
+```
+
+
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+#| echo: true
+ggplot() + geom_bar(
+    data=counts, stat='identity',
+    mapping=aes(x='Origin', y='count'),
+) + scale_y_continuous(limits=[0, None])
+```
+
+Specify `stat='identity'` to avoid the `count` transform
+:::
+:::::
+
+## Bar plots
+Specifying the `fill` mapping creates a **stacked bar plot** showing proportions of a whole.
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+#| echo: true
+ggplot() + geom_bar(
+    data=origin_data,
+    mapping=aes(x='Origin'),
+)
+```
+
+
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+#| echo: true
+ggplot() + geom_bar(
+    data=origin_data,
+    mapping=aes(fill='Origin'),
+)
+```
+
+:::
+:::::
+
+## Pie & donut charts
+**Pie & donut charts** work similarly
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+#| echo: true
+ggplot() + geom_bar(
+    data=origin_data,
+    mapping=aes(fill='Origin'),
+)
+```
+
+
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+#| echo: true
+ggplot() + geom_pie(
+    data=origin_data, size=25, hole=0.3,
+    mapping=aes(fill='Origin'),
+)
+```
+`size` specifies the radius of the pie, `hole` the fraction of the center removed.
+:::
+:::::
+
+## Ordering
+NYC subway rides for July 2024, by station
+
+```{python}
+rides = pd.read_csv('data/rides.csv')
+rides = rides.rename(columns=dict(ridership='count')).sort_values('station_complex')
+rides
+```
+## Ordering
+
+How to order all **428** stations?
+
+```{python}
+#| echo: true
+ggplot() + geom_bar(
+    data=rides,
+    mapping=aes(x='station_complex', y='count'),
+    stat='identity', width=1,
+) + scale_x_discrete(lablim=12) + ggsize(3000, 400)
+```
+
+*Do we even want to see that many?*
+
+## Ordering
+
+Order by count!
+
+```{python}
+#| echo: true
+
+sorted_rides = rides.sort_values('count', ascending=False) 
+
+ggplot() + geom_bar(
+    data=sorted_rides.head(25), # Take first 20 rows
+    mapping=aes(x='station_complex', y='count'),
+    stat='identity', width=1,
+) + scale_x_discrete(lablim=12) + ggsize(1000, 400)
+```
+
+## Another statistic: **mode**
+
+The **mode** is the most frequent value in a dataset
+
+```{python}
+sorted_rides = rides.sort_values('count', ascending=False) 
+
+ggplot() + geom_bar(
+    data=sorted_rides.head(25), # Take first 20 rows
+    mapping=aes(x='station_complex', y='count'),
+    stat='identity', width=1,
+) + geom_bar(
+    data=sorted_rides.head(1), # Take first 20 rows
+    mapping=aes(x='station_complex', y='count'),
+    stat='identity', width=1, fill='red',
+)+ scale_x_discrete(lablim=12) + ggsize(1000, 400)
+```
+
+Computing in Pandas:
+```{python}
+#| echo: true
+rides.sort_values('count', ascending=False).head(1)
+```
+
+# Ordinal Variables
+
+## Recall: 3 variable types
+
+::::: columns
+::: {.column style="width: 25%"}
+- Nomial
+- **Ordinal**
+- Quantitative
+:::
+
+::: {.column style="font-size: 75%; width: 75%"}
+```{python}
+#| echo: true
+cyl_data = cars[['Cylinders']]
+cyl_data.head(5)
+```
+
+Creating an ordinal type
+```{python}
+#| echo: true
+
+cylinder_type = pd.CategoricalDtype([3, 4, 5, 6, 8], ordered=True)
+cyl_data['Cylinders'] = cyl_data['Cylinders'].astype(cylinder_type)
+cyl_data.head(5)
+```
+:::
+:::::
+
+## Ordinal variables
+Maintain the correct order!
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+#| echo: true
+ggplot() + geom_bar(
+    data=cyl_data,
+    mapping=aes(x='Cylinders')
+)
+```
+:::
+
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot() + geom_bar(
+    data=cars,
+    mapping=aes(x='Cylinders')
+) + scale_x_discrete()
+```
+:::
+:::::
+
+# Quantitative Variables
+
+## Recall: 3 variable types
+
+::::: columns
+::: {.column style="width: 25%"}
+- Nomial
+- Ordinal
+- **Quantitative**
+:::
+
+::: {.column style="font-size: 75%; width: 35%"}
+```{python}
+#| echo: true
+weight_data = cars[['Weight_in_lbs']]
+weight_data
+```
+:::
+:::::
+
+## Analyzing a single **quantitative** variable
+
+::::: columns
+::: {.column style="width: 25%"}
+
+```{python}
+weight_data.head(20)
+```
+:::
+
+::: {.column style="font-size: 75%; width: 75%"}
+What questions could we ask about this data?
+:::
+:::::
+
+## Visualizing a single quantitative variable
+
+```{python}
+#| echo: true
+ggplot() + geom_point(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + ggsize(1000, 200)
+```
+
+## Visualizing a single quantitative variable
+
+```{python}
+ggplot() + geom_point(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + ggsize(1000, 200)
+```
+
+Using a different shape
+```{python}
+#| echo: true
+ggplot() + geom_point(
+    data=weight_data, shape=3,
+    mapping=aes(x='Weight_in_lbs')
+) + ggsize(1000, 200)
+```
+
+## Rule plots
+
+```{python}
+#| echo: true
+ggplot() + geom_vline(
+    data=weight_data, 
+    mapping=aes(xintercept='Weight_in_lbs')
+) + ggsize(1000, 200)
+```
+
+Using a different thickness
+```{python}
+#| echo: true
+ggplot() + geom_vline(
+    data=weight_data, size=0.1,
+    mapping=aes(xintercept='Weight_in_lbs')
+) + ggsize(1000, 200)
+```
+
+## Visualizing a single quantitative variable
+
+```{python}
+ggplot() + geom_point(
+    data=weight_data, size=5,
+    mapping=aes(x='Weight_in_lbs')
+) + ggsize(1000, 200)
+```
+
+Using a different `alpha` (opacity)
+```{python}
+#| echo: true
+ggplot() + geom_point(
+    data=weight_data, size=5, alpha=0.1, 
+    mapping=aes(x='Weight_in_lbs')
+) + ggsize(1000, 200)
+```
+
+## Visualizing a single quantitative variable
+Why not use the y-axis?
+```{python}
+ggplot() + geom_point(
+    data=weight_data, size=5,
+    mapping=aes(x='Weight_in_lbs')
+) + ggsize(1000, 100)
+```
+
+Set it to something random...
+```{python}
+#| echo: true
+jittered_weights = pd.DataFrame(dict(
+    Weight_in_lbs = weight_data['Weight_in_lbs'],
+    jitter = np.random.random(len(weight_data))))
+
+ggplot() + geom_point(
+    data=jittered_weights, 
+    mapping=aes(x='Weight_in_lbs', y='jitter')
+) + ggsize(1000, 200)
+```
+
+## Jitter plots
+
+Tell `ggplot` what to do when points overlap with `position`
+```{python}
+#| echo: true
+ggplot() + geom_point(
+    data=weight_data, position='jitter',
+    mapping=aes(x='Weight_in_lbs')) + ggsize(1000, 150)
+```
+
+Or use `geom_jitter`
+```{python}
+#| echo: true
+ggplot() + geom_jitter(
+    data=weight_data,
+    mapping=aes(x='Weight_in_lbs')) + ggsize(1000, 150)
+```
+
+## Opinions?
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+ggplot() + geom_point(
+    data=weight_data, size=5, shape=3,
+    mapping=aes(x='Weight_in_lbs')
+) + ggsize(500, 200)
+```
+
+```{python}
+ggplot() + geom_point(
+    data=weight_data, size=5, alpha=0.1,
+    mapping=aes(x='Weight_in_lbs')) + ggsize(500, 200)
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+ggplot() + geom_vline(
+    data=weight_data, size=0.1,
+    mapping=aes(xintercept='Weight_in_lbs')
+) + ggsize(500, 200)
+```
+
+```{python}
+ggplot() + geom_jitter(
+    data=weight_data,
+    mapping=aes(x='Weight_in_lbs')) + ggsize(500, 200)
+```
+:::
+:::::
+
+## Dot plots
+
+```{python}
+#| echo: true
+ggplot() + geom_dotplot(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs'), 
+    stackratio=1., binwidth=50, fill='black',
+) + ggsize(1000, 300)
+```
+## We've seen this before!
+
+![](pictures/538.png){fig-align="center" height=600}
+
+## Dot plots
+```{python}
+counts, edges = np.histogram(weight_data['Weight_in_lbs'], bins=75)
+hist = pd.DataFrame(dict(edges=edges))
+ggplot() + geom_point(data=weight_data, mapping=aes(x='Weight_in_lbs'), position='jitter') + geom_vline(data=hist, mapping=aes(xintercept='edges'), color='red', size=0.5) + ggsize(1000, 200)
+```
+
+```{python}
+ggplot() + geom_dotplot(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs'), 
+    stackratio=1., binwidth=50, fill='black',
+) + ggsize(1000, 300)
+```
+
+
+
+## Histogram transform (bin transform)
+
+```{python}
+#| echo: true
+counts, edges = np.histogram(weight_data['Weight_in_lbs'], bins=75)
+```
+
+```{python}
+hist = pd.DataFrame(dict(edges=edges))
+ggplot() + geom_point(data=weight_data, mapping=aes(x='Weight_in_lbs'), position='jitter') + geom_vline(data=hist, mapping=aes(xintercept='edges'), color='red', size=0.5) + ggsize(1000, 200)
+```
+
+```{python}
+#| echo: true
+ggplot() + geom_histogram(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs'), bins=75) + ggsize(1000, 300)
+```
+
+## Number of bins
+
+```{python}
+#| echo: true
+counts, edges = np.histogram(weight_data['Weight_in_lbs'], bins=10)
+```
+```{python}
+hist = pd.DataFrame(dict(edges=edges))
+ggplot() + geom_point(data=weight_data, mapping=aes(x='Weight_in_lbs'), position='jitter') + geom_vline(data=hist, mapping=aes(xintercept='edges'), color='red', size=0.5) + ggsize(1000, 200)
+```
+
+```{python}
+#| echo: true
+ggplot() + geom_histogram(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs'), bins=10) + ggsize(1000, 300)
+```
+
+## Number of bins
+
+
+```{ojs}
+tf = require('@tensorflow/tfjs@4.11.0')
+data = FileAttachment("data/mpg.csv").csv({typed: true})
+weights = tf.tensor(data.map(d => d['Weight_in_lbs']))
+edges = {
+  let e = tf.linspace(weights.min().arraySync(), weights.max().arraySync(), bins+1);
+  e = e.add(offset).arraySync();
+  e.push(10000);
+  e.push(0, 0)
+  return e;
+}
+viewof offset = Inputs.range([-100, 100], {value: 0, step: 1, label: "Offset", width: 800})
+viewof bins = Inputs.range([3, 250], {step: 1, value: 20, label: "Bins", width: 800})
+
+Plot.plot({
+  height: 300,
+  width: 1000,
+  x: {domain: [weights.min().arraySync(), weights.max().arraySync()]},
+  marks: [
+    Plot.ruleY([0]),
+    Plot.rectY(data, Plot.binX({y: "sum"}, {x: "Weight_in_lbs", thresholds: edges}))
+  ]
+})
+
+Plot.plot({
+  height: 160,
+  width: 1000,
+  x: {domain: [weights.min().arraySync(), weights.max().arraySync()]},
+  marks: [
+    Plot.dot(data, Plot.dodgeY({x: "Weight_in_lbs"})),
+    Plot.ruleX(edges, {stroke: 'red'})
+  ]
+})
+```
+
+## Histogram transform (bin transform)
+
+What questions are *easy* to answer with a histogram? What questions are **hard**?
+```{python}
+ggplot() + geom_histogram(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs'), bins=75) + ggsize(1000, 300)
+```
+*How could we make them easier?*
+
+## **Cumulative** histograms
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+ggplot() + geom_histogram(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs'), bins=10) + ggsize(500, 300)
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+counts, edges = np.histogram(weight_data['Weight_in_lbs'], bins=10)
+centers = (edges[1:] + edges[:-1]) / 2.
+ccounts = np.cumsum(counts)
+
+hist = pd.DataFrame(dict(centers=centers, 
+    edges=edges[1:], ccounts=ccounts))
+
+ggplot() + geom_bar(
+    data=hist, mapping=aes(x='centers', y='ccounts'), stat='identity', width=1)  + ggsize(500, 300)
+```
+:::
+:::::
+
+
+
+```{python}
+#| echo: true
+#| eval: false
+counts, edges = np.histogram(weight_data['Weight_in_lbs'], bins=10)
+centers = (edges[1:] + edges[:-1]) / 2.
+ccounts = np.cumsum(counts)
+
+hist = pd.DataFrame(dict(centers=centers, 
+    edges=edges[1:], ccounts=ccounts))
+
+ggplot() + geom_bar(
+    data=hist, 
+    mapping=aes(x='centers', y='ccounts'), 
+    stat='identity', width=1)  + ggsize(500, 300)
+```
+
+## **Cumulative** histograms
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+ggplot() + geom_histogram(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs'), bins=20) + ggsize(500, 300)
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+counts, edges = np.histogram(weight_data['Weight_in_lbs'], bins=20)
+centers = (edges[1:] + edges[:-1]) / 2.
+ccounts = np.cumsum(counts)
+
+hist = pd.DataFrame(dict(centers=centers, 
+    edges=edges[1:], ccounts=ccounts))
+
+ggplot() + geom_bar(
+    data=hist, mapping=aes(x='centers', y='ccounts'), stat='identity', width=1)  + ggsize(500, 300)
+```
+:::
+:::::
+
+The **height** difference between 2 bars tells us the number of observations between them.
+
+## **Cumulative** histograms: bins
+
+```{ojs}
+viewof bins2 = Inputs.range([3, 250], {step: 1, label: "Bins", width: 800})
+```
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+```{ojs}
+Plot.plot({
+  height: 400,
+  width: 1000,
+  x: {domain: [weights.min().arraySync(), weights.max().arraySync()]},
+  marks: [
+    Plot.ruleY([0]),
+    Plot.rectY(data, Plot.binX({y: "sum"}, {x: "Weight_in_lbs", thresholds: bins2}))
+  ]
+})
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+```{ojs}
+Plot.plot({
+  height: 400,
+  width: 1000,
+  x: {domain: [weights.min().arraySync(), weights.max().arraySync()]},
+  marks: [
+    Plot.ruleY([0]),
+    Plot.rectY(data, Plot.binX({y: "sum"}, {x: "Weight_in_lbs", thresholds: bins2, cumulative: true}))
+  ]
+})
+```
+:::
+:::::
+
+Cumulative histograms are less sensitive to the number of bins. *Why?*
+
+## **Cumulative** histograms: bins
+
+Taken to the extreme: one bin for every observation.
+
+```{python}
+#| echo: true
+counts, edges = np.histogram(weight_data['Weight_in_lbs'], bins=1000)
+
+centers = (edges[1:] + edges[:-1]) / 2.
+ccounts = np.cumsum(counts)
+
+hist = pd.DataFrame(dict(centers=centers, edges=edges[1:], ccount=ccounts))
+ggplot() + geom_line(
+    data=hist, 
+    mapping=aes(x='centers', y='ccount'), 
+    stat='identity',) + ylab('Cumulative count') + ggsize(1000, 300)
+```
+
+## Empirical CDF Plot
+If we divide by the total number of observations we get the **fraction** of data up to a point.
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+counts, edges = np.histogram(weight_data['Weight_in_lbs'], bins=1000)
+
+centers = (edges[1:] + edges[:-1]) / 2.
+ccounts = np.cumsum(counts)
+
+hist = pd.DataFrame(dict(centers=centers, edges=edges[1:], ccount=ccounts))
+ggplot() + geom_line(
+    data=hist, 
+    mapping=aes(x='centers', y='ccount'), 
+    stat='identity',) + ylab('Cumulative count')
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+ggplot() + stat_ecdf(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + scale_y_continuous(breaks=[0, .25, .5, .75, 1.]) + ylab('Quantile')
+```
+
+```{python}
+#| echo: true
+#| eval: false
+ggplot() + stat_ecdf(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + scale_y_continuous(breaks=[0, .25, .5, .75, 1.]) + ylab('Quantile')
+```
+:::
+:::::
+
+## Empirical CDF Plot
+If we divide by the total number of observations we get the **fraction** of data up to a point.
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+This is an **empirical CDF plot** (percentile/quantile plot)
+
+An **x percentile** is the observation that **x%** of observations are less than.
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+ggplot() + stat_ecdf(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + scale_y_continuous(breaks=[0, .25, .5, .75, 1.]) + ylab('Quantile')
+```
+
+```{python}
+#| echo: true
+#| eval: false
+ggplot() + stat_ecdf(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + scale_y_continuous(breaks=[0, .25, .5, .75, 1.]) + ylab('Quantile')
+```
+:::
+:::::
+
+## Statistics: **median**
+Percentiles define various useful summary statistics
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+The **median** is the point such that 50% of observations are smaller.
+
+```{python}
+ggplot() + geom_point(data=weight_data, mapping=aes(x='Weight_in_lbs'), position='jitter') + geom_vline(xintercept=weight_data['Weight_in_lbs'].median(), color='red') + ggsize(500, 200)
+```
+
+In Pandas:
+```{python}
+#| echo: true
+weight_data['Weight_in_lbs'].median()
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+ggplot()  + geom_hline(yintercept=0.5, color='red')\
+ + stat_ecdf(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + scale_y_continuous(breaks=[0, .25, .5, .75, 1.]) + ylab('Quantile')
+```
+
+```{python}
+#| echo: true
+#| eval: false
+ggplot()  + stat_ecdf(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + scale_y_continuous(breaks=[0, .25, .5, .75, 1.]) + ylab('Quantile')
+```
+:::
+:::::
+
+## Statistics: **min/max**
+Percentiles define various useful summary statistics
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+The **min/max** are self-explanatory, but are also the 0% and 100% percentiles of the data.
+
+```{python}
+ggplot() + geom_point(data=weight_data, mapping=aes(x='Weight_in_lbs'), position='jitter') + geom_vline(xintercept=weight_data['Weight_in_lbs'].max(), color='red') + geom_vline(xintercept=weight_data['Weight_in_lbs'].min(), color='red') + ggsize(500, 200)
+```
+
+In Pandas:
+```{python}
+#| echo: true
+weight_data['Weight_in_lbs'].min()
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+ggplot() + geom_hline(yintercept=0., color='red')\
+    + geom_hline(yintercept=1.0, color='red') \
+ + stat_ecdf(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + scale_y_continuous(breaks=[0, .25, .5, .75, 1.]) + ylab('Quantile')
+```
+
+```{python}
+#| echo: true
+#| eval: false
+ggplot()  + stat_ecdf(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + scale_y_continuous(breaks=[0, .25, .5, .75, 1.]) + ylab('Quantile')
+```
+:::
+:::::
+
+## Statistics: **quartiles**
+Percentiles define various useful summary statistics
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+The **quartiles** are the **25%**, **50%** (median) and **75%** percentiles of the data.
+
+```{python}
+ggplot() + geom_point(data=weight_data, mapping=aes(x='Weight_in_lbs'), position='jitter') + geom_vline(xintercept=weight_data['Weight_in_lbs'].median(), color='red') + geom_vline(xintercept=weight_data['Weight_in_lbs'].quantile(0.25), color='red') + geom_vline(xintercept=weight_data['Weight_in_lbs'].quantile(0.75), color='red') + ggsize(500, 200)
+```
+
+In Pandas:
+```{python}
+#| echo: true
+weight_data['Weight_in_lbs'].quantile(0.25)
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+ggplot() + geom_hline(yintercept=.25, color='red')\
+    + geom_hline(yintercept=.5, color='red')  + geom_hline(yintercept=.75, color='red') \
+ + stat_ecdf(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + scale_y_continuous(breaks=[0, .25, .5, .75, 1.]) + ylab('Quantile')
+```
+
+```{python}
+#| echo: true
+#| eval: false
+ggplot() + stat_ecdf(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + scale_y_continuous(breaks=[0, .25, .5, .75, 1.]) + ylab('Quantile')
+```
+:::
+:::::
+
+## Box-and-Whisker plots
+Common to visualize **just** these statistics.
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+This is called a **box-and-whisker plot**, which plots 5 statistics of the data. Typically:
+
+- Min & max
+- Median
+- 25% and 75% percentiles
+
+```{python}
+ggplot() + geom_point(data=weight_data, mapping=aes(x='Weight_in_lbs'), position='jitter') + geom_vline(xintercept=weight_data['Weight_in_lbs'].median(), color='red') + geom_vline(xintercept=weight_data['Weight_in_lbs'].quantile(0.25), color='red') + geom_vline(xintercept=weight_data['Weight_in_lbs'].quantile(0.75), color='red') + geom_vline(xintercept=weight_data['Weight_in_lbs'].quantile(1.), color='red') + geom_vline(xintercept=weight_data['Weight_in_lbs'].quantile(0.), color='red') + ggsize(500, 200)
+```
+
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+#| echo: true
+ggplot() + geom_boxplot(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs'), orientation='y'
+) + scale_y_continuous(limits=[-1.5, 1.5]) 
+```
+:::
+:::::
+
+## Box-and-Whisker plots
+Common to visualize **just** these statistics.
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+This is called a **box-and-whisker plot**, which plots 5 statistics of the data. Typically:
+
+- Min & max
+- Median
+- 25% and 75% percentiles
+
+```{python}
+ggplot() + geom_point(data=weight_data, mapping=aes(x='Weight_in_lbs'), position='jitter') + geom_vline(xintercept=weight_data['Weight_in_lbs'].median(), color='red') + geom_vline(xintercept=weight_data['Weight_in_lbs'].quantile(0.25), color='red') + geom_vline(xintercept=weight_data['Weight_in_lbs'].quantile(0.75), color='red') + geom_vline(xintercept=weight_data['Weight_in_lbs'].quantile(1.), color='red') + geom_vline(xintercept=weight_data['Weight_in_lbs'].quantile(0.), color='red') + ggsize(500, 200)
+```
+
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+```{python}
+#| echo: true
+#| eval: false
+ggplot() + geom_boxplot(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs'), orientation='y'
+) + scale_y_continuous(limits=[-1.5, 1.5]) 
+```
+
+```{python}
+ggplot() + geom_boxplot(data=weight_data, mapping=aes(x='Weight_in_lbs'), orientation='y', width=0.5, y=0.5) + scale_y_continuous() + stat_ecdf(data=weight_data, mapping=aes(x='Weight_in_lbs'), color='blue')  + scale_y_continuous(breaks=[0, .25, .5, .75, 1.])
+```
+:::
+:::::
+
+
+## Box-and-Whisker plots
+Whiskers often limited by **inter-quartile range** (IQR)
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+
+The IQR is the distance from the 25% to 75% points. 
+
+- Commonly limit whisker distance from median to 1.5 * IQR.
+- Further observations shown as points
+
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+![](pictures/box.png){fig-align="center"}
+:::
+:::::
+
+## Box-and-Whisker plots
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+Position by origin
+```{python}
+#| echo: true
+ggplot() + geom_boxplot(
+    data=cars, 
+    mapping=aes(y='Weight_in_lbs', x='Origin'), 
+    orientation='x'
+)
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+Scale box width by number of observations
+```{python}
+#| echo: true
+ggplot() + geom_boxplot(
+    data=cars, varwidth=True,
+    mapping=aes(y='Weight_in_lbs', x='Origin'), 
+    orientation='x'
+)
+```
+:::
+:::::
+
+# Kernel density plots
+
+## Histogram sensitivity
+
+```{ojs}
+edges3 = {
+  let e = tf.linspace(weights.min().arraySync(), weights.max().arraySync(), bins3+1);
+  e = e.add(offset3).arraySync();
+  e.push(10000);
+  e.push(0, 0)
+  return e;
+}
+viewof offset3 = Inputs.range([-100, 100], {value: 0, step: 1, label: "Offset", width: 800})
+viewof bins3 = Inputs.range([3, 250], {step: 1, value: 20, label: "Bins", width: 800})
+
+Plot.plot({
+  height: 300,
+  width: 1000,
+  x: {domain: [weights.min().arraySync(), weights.max().arraySync()]},
+  marks: [
+    Plot.ruleY([0]),
+    Plot.rectY(data, Plot.binX({y: "sum"}, {x: "Weight_in_lbs", thresholds: edges3}))
+  ]
+})
+
+Plot.plot({
+  height: 160,
+  width: 1000,
+  x: {domain: [weights.min().arraySync(), weights.max().arraySync()]},
+  marks: [
+    Plot.dot(data, Plot.dodgeY({x: "Weight_in_lbs"})),
+    Plot.ruleX(edges3, {stroke: 'red'})
+  ]
+})
+```
+
+## Bars **at** observations
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+One observation
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:1], 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=50) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+Two observations
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:2], 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=50) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+:::::
+
+## Bars **at** observations
+**Add** bars where they overlap!
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+Two observations
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:2], 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=50) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+Three observations
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:3], 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=50) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+:::::
+
+## Bars **at** observations
+**Add** bars where they overlap!
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+Three observations
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:3], 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=50) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+Five observations
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:5], 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=50) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+:::::
+
+## Bars **at** observations
+
+**All** observations
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=50) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])\
+        + ggsize(1000, 400)
+```
+
+## Bars **at** observations
+Varying the bar width
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+Three observations
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=20) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+Five observations
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=200) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+:::::
+
+## Bars **at** observations
+Sharp drop-off not ideal.
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:1], 
+    mapping=aes(x='Weight_in_lbs')
+) + geom_density(kernel='gaussian', bw=50) \
+  + geom_point(size=10) + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:1], 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=50) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+:::::
+
+## Bars **at** observations
+Sharp drop-off not ideal.
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:2], 
+    mapping=aes(x='Weight_in_lbs')
+) + geom_density(kernel='gaussian', bw=50) \
+  + geom_point(size=10) + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:2], 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=50) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+:::::
+
+## Bars **at** observations
+Sharp drop-off not ideal.
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:3], 
+    mapping=aes(x='Weight_in_lbs')
+) + geom_density(kernel='gaussian', bw=50) \
+  + geom_point(size=10) + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:3], 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=50) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+:::::
+
+## Bars **at** observations
+Sharp drop-off not ideal.
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:5], 
+    mapping=aes(x='Weight_in_lbs')
+) + geom_density(kernel='gaussian', bw=50) \
+  + geom_point(size=10) + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:5], 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=50) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+:::::
+
+## Bars **at** observations
+Sharp drop-off not ideal.
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + geom_density(kernel='gaussian', bw=50) \
+  + geom_point(size=10) + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=50) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+:::::
+
+
+## Bars **at** observations
+Can also vary bin width!
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')
+) + geom_density(kernel='gaussian', bw=20) \
+  + geom_point(size=10) + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data, 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='gaussian', bw=200) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+:::::
+
