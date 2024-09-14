@@ -1,0 +1,358 @@
+State,age,count
+AL,Under 5 Years,310504
+AK,Under 5 Years,52083
+AZ,Under 5 Years,515910
+AR,Under 5 Years,202070
+CA,Under 5 Years,2704659
+CO,Under 5 Years,358280
+CT,Under 5 Years,211637
+DE,Under 5 Years,59319
+DC,Under 5 Years,36352
+FL,Under 5 Years,1140516
+GA,Under 5 Years,740521
+HI,Under 5 Years,87207
+ID,Under 5 Years,121746
+IL,Under 5 Years,894368
+IN,Under 5 Years,443089
+IA,Under 5 Years,201321
+KS,Under 5 Years,202529
+KY,Under 5 Years,284601
+LA,Under 5 Years,310716
+ME,Under 5 Years,71459
+MD,Under 5 Years,371787
+MA,Under 5 Years,383568
+MI,Under 5 Years,625526
+MN,Under 5 Years,358471
+MS,Under 5 Years,220813
+MO,Under 5 Years,399450
+MT,Under 5 Years,61114
+NE,Under 5 Years,132092
+NV,Under 5 Years,199175
+NH,Under 5 Years,75297
+NJ,Under 5 Years,557421
+NM,Under 5 Years,148323
+NY,Under 5 Years,1208495
+NC,Under 5 Years,652823
+ND,Under 5 Years,41896
+OH,Under 5 Years,743750
+OK,Under 5 Years,266547
+OR,Under 5 Years,243483
+PA,Under 5 Years,737462
+RI,Under 5 Years,60934
+SC,Under 5 Years,303024
+SD,Under 5 Years,58566
+TN,Under 5 Years,416334
+TX,Under 5 Years,2027307
+UT,Under 5 Years,268916
+VT,Under 5 Years,32635
+VA,Under 5 Years,522672
+WA,Under 5 Years,433119
+WV,Under 5 Years,105435
+WI,Under 5 Years,362277
+WY,Under 5 Years,38253
+AL,5 to 13 Years,552339
+AK,5 to 13 Years,85640
+AZ,5 to 13 Years,828669
+AR,5 to 13 Years,343207
+CA,5 to 13 Years,4499890
+CO,5 to 13 Years,587154
+CT,5 to 13 Years,403658
+DE,5 to 13 Years,99496
+DC,5 to 13 Years,50439
+FL,5 to 13 Years,1938695
+GA,5 to 13 Years,1250460
+HI,5 to 13 Years,134025
+ID,5 to 13 Years,201192
+IL,5 to 13 Years,1558919
+IN,5 to 13 Years,780199
+IA,5 to 13 Years,345409
+KS,5 to 13 Years,342134
+KY,5 to 13 Years,493536
+LA,5 to 13 Years,542341
+ME,5 to 13 Years,133656
+MD,5 to 13 Years,651923
+MA,5 to 13 Years,701752
+MI,5 to 13 Years,1179503
+MN,5 to 13 Years,606802
+MS,5 to 13 Years,371502
+MO,5 to 13 Years,690476
+MT,5 to 13 Years,106088
+NE,5 to 13 Years,215265
+NV,5 to 13 Years,325650
+NH,5 to 13 Years,144235
+NJ,5 to 13 Years,1011656
+NM,5 to 13 Years,241326
+NY,5 to 13 Years,2141490
+NC,5 to 13 Years,1097890
+ND,5 to 13 Years,67358
+OH,5 to 13 Years,1340492
+OK,5 to 13 Years,438926
+OR,5 to 13 Years,424167
+PA,5 to 13 Years,1345341
+RI,5 to 13 Years,111408
+SC,5 to 13 Years,517803
+SD,5 to 13 Years,94438
+TN,5 to 13 Years,725948
+TX,5 to 13 Years,3277946
+UT,5 to 13 Years,413034
+VT,5 to 13 Years,62538
+VA,5 to 13 Years,887525
+WA,5 to 13 Years,750274
+WV,5 to 13 Years,189649
+WI,5 to 13 Years,640286
+WY,5 to 13 Years,60890
+AL,14 to 17 Years,259034
+AK,14 to 17 Years,42153
+AZ,14 to 17 Years,362642
+AR,14 to 17 Years,157204
+CA,14 to 17 Years,2159981
+CO,14 to 17 Years,261701
+CT,14 to 17 Years,196918
+DE,14 to 17 Years,47414
+DC,14 to 17 Years,25225
+FL,14 to 17 Years,925060
+GA,14 to 17 Years,557860
+HI,14 to 17 Years,64011
+ID,14 to 17 Years,89702
+IL,14 to 17 Years,725973
+IN,14 to 17 Years,361393
+IA,14 to 17 Years,165883
+KS,14 to 17 Years,155822
+KY,14 to 17 Years,229927
+LA,14 to 17 Years,254916
+ME,14 to 17 Years,69752
+MD,14 to 17 Years,316873
+MA,14 to 17 Years,341713
+MI,14 to 17 Years,585169
+MN,14 to 17 Years,289371
+MS,14 to 17 Years,174405
+MO,14 to 17 Years,331543
+MT,14 to 17 Years,53156
+NE,14 to 17 Years,99638
+NV,14 to 17 Years,142976
+NH,14 to 17 Years,73826
+NJ,14 to 17 Years,478505
+NM,14 to 17 Years,112801
+NY,14 to 17 Years,1058031
+NC,14 to 17 Years,492964
+ND,14 to 17 Years,33794
+OH,14 to 17 Years,646135
+OK,14 to 17 Years,200562
+OR,14 to 17 Years,199925
+PA,14 to 17 Years,679201
+RI,14 to 17 Years,56198
+SC,14 to 17 Years,245400
+SD,14 to 17 Years,45305
+TN,14 to 17 Years,336312
+TX,14 to 17 Years,1420518
+UT,14 to 17 Years,167685
+VT,14 to 17 Years,33757
+VA,14 to 17 Years,413004
+WA,14 to 17 Years,357782
+WV,14 to 17 Years,91074
+WI,14 to 17 Years,311849
+WY,14 to 17 Years,29314
+AL,18 to 24 Years,450818
+AK,18 to 24 Years,74257
+AZ,18 to 24 Years,601943
+AR,18 to 24 Years,264160
+CA,18 to 24 Years,3853788
+CO,18 to 24 Years,466194
+CT,18 to 24 Years,325110
+DE,18 to 24 Years,84464
+DC,18 to 24 Years,75569
+FL,18 to 24 Years,1607297
+GA,18 to 24 Years,919876
+HI,18 to 24 Years,124834
+ID,18 to 24 Years,147606
+IL,18 to 24 Years,1311479
+IN,18 to 24 Years,605863
+IA,18 to 24 Years,306398
+KS,18 to 24 Years,293114
+KY,18 to 24 Years,381394
+LA,18 to 24 Years,471275
+ME,18 to 24 Years,112682
+MD,18 to 24 Years,543470
+MA,18 to 24 Years,665879
+MI,18 to 24 Years,974480
+MN,18 to 24 Years,507289
+MS,18 to 24 Years,305964
+MO,18 to 24 Years,560463
+MT,18 to 24 Years,95232
+NE,18 to 24 Years,186657
+NV,18 to 24 Years,212379
+NH,18 to 24 Years,119114
+NJ,18 to 24 Years,769321
+NM,18 to 24 Years,203097
+NY,18 to 24 Years,1999120
+NC,18 to 24 Years,883397
+ND,18 to 24 Years,82629
+OH,18 to 24 Years,1081734
+OK,18 to 24 Years,369916
+OR,18 to 24 Years,338162
+PA,18 to 24 Years,1203944
+RI,18 to 24 Years,114502
+SC,18 to 24 Years,438147
+SD,18 to 24 Years,82869
+TN,18 to 24 Years,550612
+TX,18 to 24 Years,2454721
+UT,18 to 24 Years,329585
+VT,18 to 24 Years,61679
+VA,18 to 24 Years,768475
+WA,18 to 24 Years,610378
+WV,18 to 24 Years,157989
+WI,18 to 24 Years,553914
+WY,18 to 24 Years,53980
+AL,25 to 44 Years,1231572
+AK,25 to 44 Years,198724
+AZ,25 to 44 Years,1804762
+AR,25 to 44 Years,754420
+CA,25 to 44 Years,10604510
+CO,25 to 44 Years,1464939
+CT,25 to 44 Years,916955
+DE,25 to 44 Years,230183
+DC,25 to 44 Years,193557
+FL,25 to 44 Years,4782119
+GA,25 to 44 Years,2846985
+HI,25 to 44 Years,356237
+ID,25 to 44 Years,406247
+IL,25 to 44 Years,3596343
+IN,25 to 44 Years,1724528
+IA,25 to 44 Years,750505
+KS,25 to 44 Years,728166
+KY,25 to 44 Years,1179637
+LA,25 to 44 Years,1162463
+ME,25 to 44 Years,331809
+MD,25 to 44 Years,1556225
+MA,25 to 44 Years,1782449
+MI,25 to 44 Years,2628322
+MN,25 to 44 Years,1416063
+MS,25 to 44 Years,764203
+MO,25 to 44 Years,1569626
+MT,25 to 44 Years,236297
+NE,25 to 44 Years,457177
+NV,25 to 44 Years,769913
+NH,25 to 44 Years,345109
+NJ,25 to 44 Years,2379649
+NM,25 to 44 Years,517154
+NY,25 to 44 Years,5355235
+NC,25 to 44 Years,2575603
+ND,25 to 44 Years,154913
+OH,25 to 44 Years,3019147
+OK,25 to 44 Years,957085
+OR,25 to 44 Years,1044056
+PA,25 to 44 Years,3157759
+RI,25 to 44 Years,277779
+SC,25 to 44 Years,1193112
+SD,25 to 44 Years,196738
+TN,25 to 44 Years,1719433
+TX,25 to 44 Years,7017731
+UT,25 to 44 Years,772024
+VT,25 to 44 Years,155419
+VA,25 to 44 Years,2203286
+WA,25 to 44 Years,1850983
+WV,25 to 44 Years,470749
+WI,25 to 44 Years,1487457
+WY,25 to 44 Years,137338
+AL,45 to 64 Years,1215966
+AK,45 to 64 Years,183159
+AZ,45 to 64 Years,1523681
+AR,45 to 64 Years,727124
+CA,45 to 64 Years,8819342
+CO,45 to 64 Years,1290094
+CT,45 to 64 Years,968967
+DE,45 to 64 Years,230528
+DC,45 to 64 Years,140043
+FL,45 to 64 Years,4746856
+GA,45 to 64 Years,2389018
+HI,45 to 64 Years,331817
+ID,45 to 64 Years,375173
+IL,45 to 64 Years,3239173
+IN,45 to 64 Years,1647881
+IA,45 to 64 Years,788485
+KS,45 to 64 Years,713663
+KY,45 to 64 Years,1134283
+LA,45 to 64 Years,1128771
+ME,45 to 64 Years,397911
+MD,45 to 64 Years,1513754
+MA,45 to 64 Years,1751508
+MI,45 to 64 Years,2706100
+MN,45 to 64 Years,1391878
+MS,45 to 64 Years,730133
+MO,45 to 64 Years,1554812
+MT,45 to 64 Years,278241
+NE,45 to 64 Years,451756
+NV,45 to 64 Years,653357
+NH,45 to 64 Years,388250
+NJ,45 to 64 Years,2335168
+NM,45 to 64 Years,501604
+NY,45 to 64 Years,5120254
+NC,45 to 64 Years,2380685
+ND,45 to 64 Years,166615
+OH,45 to 64 Years,3083815
+OK,45 to 64 Years,918688
+OR,45 to 64 Years,1036269
+PA,45 to 64 Years,3414001
+RI,45 to 64 Years,282321
+SC,45 to 64 Years,1186019
+SD,45 to 64 Years,210178
+TN,45 to 64 Years,1646623
+TX,45 to 64 Years,5656528
+UT,45 to 64 Years,538978
+VT,45 to 64 Years,188593
+VA,45 to 64 Years,2033550
+WA,45 to 64 Years,1762811
+WV,45 to 64 Years,514505
+WI,45 to 64 Years,1522038
+WY,45 to 64 Years,147279
+AL,65 Years and Over,641667
+AK,65 Years and Over,50277
+AZ,65 Years and Over,862573
+AR,65 Years and Over,407205
+CA,65 Years and Over,4114496
+CO,65 Years and Over,511094
+CT,65 Years and Over,478007
+DE,65 Years and Over,121688
+DC,65 Years and Over,70648
+FL,65 Years and Over,3187797
+GA,65 Years and Over,981024
+HI,65 Years and Over,190067
+ID,65 Years and Over,182150
+IL,65 Years and Over,1575308
+IN,65 Years and Over,813839
+IA,65 Years and Over,444554
+KS,65 Years and Over,366706
+KY,65 Years and Over,565867
+LA,65 Years and Over,540314
+ME,65 Years and Over,199187
+MD,65 Years and Over,679565
+MA,65 Years and Over,871098
+MI,65 Years and Over,1304322
+MN,65 Years and Over,650519
+MS,65 Years and Over,371598
+MO,65 Years and Over,805235
+MT,65 Years and Over,137312
+NE,65 Years and Over,240847
+NV,65 Years and Over,296717
+NH,65 Years and Over,169978
+NJ,65 Years and Over,1150941
+NM,65 Years and Over,260051
+NY,65 Years and Over,2607672
+NC,65 Years and Over,1139052
+ND,65 Years and Over,94276
+OH,65 Years and Over,1570837
+OK,65 Years and Over,490637
+OR,65 Years and Over,503998
+PA,65 Years and Over,1910571
+RI,65 Years and Over,147646
+SC,65 Years and Over,596295
+SD,65 Years and Over,116100
+TN,65 Years and Over,819626
+TX,65 Years and Over,2472223
+UT,65 Years and Over,246202
+VT,65 Years and Over,86649
+VA,65 Years and Over,940577
+WA,65 Years and Over,783877
+WV,65 Years and Over,285067
+WI,65 Years and Over,750146
+WY,65 Years and Over,65614

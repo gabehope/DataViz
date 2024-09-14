@@ -578,42 +578,42 @@
     "href": "modules/01-Single-variable/assignments/quiz1-single-variable.html",
     "title": "Quiz 1",
     "section": "",
-    "text": "import numpy as np\nimport pandas as pd\nfrom vega_datasets import data\nfrom lets_plot import *\nLetsPlot.setup_html()"
+    "text": "# Run if using Colab\n!pip install lets-plot\nimport numpy as np\nimport pandas as pd\nfrom vega_datasets import data\nfrom lets_plot import *\nLetsPlot.setup_html()"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q1-interpreting-a-dataset",
     "href": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q1-interpreting-a-dataset",
     "title": "Quiz 1",
     "section": "Q1: Interpreting a dataset",
-    "text": "Q1: Interpreting a dataset\nTake a look at the given dataset. What does one row of this dataset represent?\n\nAnswer:\nEach row represent a single day of weather data (for Seattle), including the temperature, precipitation and wind."
+    "text": "Q1: Interpreting a dataset\nTake a look at the given dataset. What does one row of this dataset represent?"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q2-nominal-variables",
     "href": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q2-nominal-variables",
     "title": "Quiz 1",
     "section": "Q2: Nominal Variables",
-    "text": "Q2: Nominal Variables\nHow many nominal variables are present in this dataset? How many unique values does each nominal variable have?\n\nAnswer\nWe can see that there is 1 nominal variable (weather). This variable has 5 unique values.\n\ndf.head()\n\n\n\n\n\n\n\n\ndate\nprecipitation\ntemp_max\ntemp_min\nwind\nweather\n\n\n\n\n0\n2012-01-01\n0.0\n12.8\n5.0\n4.7\ndrizzle\n\n\n1\n2012-01-02\n10.9\n10.6\n2.8\n4.5\nrain\n\n\n2\n2012-01-03\n0.8\n11.7\n7.2\n2.3\nrain\n\n\n3\n2012-01-04\n20.3\n12.2\n5.6\n4.7\nrain\n\n\n4\n2012-01-05\n1.3\n8.9\n2.8\n6.1\nrain\n\n\n\n\n\n\n\n\ndf['weather'].unique()\n\narray(['drizzle', 'rain', 'sun', 'snow', 'fog'], dtype=object)"
+    "text": "Q2: Nominal Variables\nHow many nominal variables are present in this dataset? How many unique values does each nominal variable have?"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q3-summary-statistics",
     "href": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q3-summary-statistics",
     "title": "Quiz 1",
     "section": "Q3: Summary statistics",
-    "text": "Q3: Summary statistics\nCompute the mean, median, maximum and 75th percentile of the variable: temp_max using Pandas.\n\nAnswer:\n\nMean: 16.43\nMedian: 7.35\nMaximum: 35.6\n75%: 22.2\n\n\ndf[\"temp_max\"].describe()\n\ncount    1461.000000\nmean       16.439083\nstd         7.349758\nmin        -1.600000\n25%        10.600000\n50%        15.600000\n75%        22.200000\nmax        35.600000\nName: temp_max, dtype: float64"
+    "text": "Q3: Summary statistics\nCompute the mean, median, maximum and 75th percentile of the variable: temp_max using Pandas."
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q4-histograms",
     "href": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q4-histograms",
     "title": "Quiz 1",
     "section": "Q4: Histograms",
-    "text": "Q4: Histograms\nTrue or false: A histogram is used to visualize nominal data?\n\nAnswer:\nFalse, a histogram is used to visualize the distribution of continuous (or ordinal) data."
+    "text": "Q4: Histograms\nTrue or false: A histogram is used to visualize nominal data?"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q5-density-plots",
     "href": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q5-density-plots",
     "title": "Quiz 1",
     "section": "Q5: Density plots",
-    "text": "Q5: Density plots\nGiven the dataset below, plot the variable HLY-TEMP-NORMAL using a kernel density estimate plot.\nUsing the default settings, how many modes does the resulting density estimate have?\nIf you decrease the bandwidth parameter, would you expect the number of modes to increase or decrease?\nWhat is (approximately) the minimum bandwidth such that the resulting plot shows a single mode?\n\ndf = data.climate()\ndf.head()\n\n\n\n\n\n\n\n\nSTATION\nSTATION_NAME\nELEVATION\nLATITUDE\nLONGITUDE\nDATE\nHLY-TEMP-NORMAL\nHLY-PRES-NORMAL\nHLY-DEWP-NORMAL\n\n\n\n\n0\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 00:00:00\n349\n10205\n289\n\n\n1\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 01:00:00\n344\n10202\n287\n\n\n2\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 02:00:00\n339\n10200\n284\n\n\n3\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 03:00:00\n334\n10202\n283\n\n\n4\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 04:00:00\n331\n10202\n280\n\n\n\n\n\n\n\n\nAnswer:\nThe default settings show 2 modes.\nDecreasing the bandwidth would lead to an increase in the number of modes.\nSomewhere between 25 and 30\n\nggplot(df, aes(x=\"HLY-TEMP-NORMAL\")) + geom_density()\n\n   \n   \n\n\n\nggplot(df, aes(x=\"HLY-TEMP-NORMAL\")) + geom_density(bw=25)"
+    "text": "Q5: Density plots\nGiven the dataset below, plot the variable HLY-TEMP-NORMAL using a kernel density estimate plot.\nUsing the default settings, how many modes does the resulting density estimate have?\nIf you decrease the bandwidth parameter, would you expect the number of modes to increase or decrease?\nWhat is (approximately) the minimum bandwidth such that the resulting plot shows a single mode?\n\ndf = data.climate()\ndf.head()\n\n\n\n\n\n\n\n\nSTATION\nSTATION_NAME\nELEVATION\nLATITUDE\nLONGITUDE\nDATE\nHLY-TEMP-NORMAL\nHLY-PRES-NORMAL\nHLY-DEWP-NORMAL\n\n\n\n\n0\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 00:00:00\n349\n10205\n289\n\n\n1\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 01:00:00\n344\n10202\n287\n\n\n2\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 02:00:00\n339\n10200\n284\n\n\n3\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 03:00:00\n334\n10202\n283\n\n\n4\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 04:00:00\n331\n10202\n280"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q6-choosing-an-appropriate-model",
@@ -627,28 +627,28 @@
     "href": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q7-discrete-parameter-estimation",
     "title": "Quiz 1",
     "section": "Q7: Discrete parameter estimation",
-    "text": "Q7: Discrete parameter estimation\nAssume that you choose to model the variable C using a Poisson distribution. What is the rate parameter for the Poisson distribution that best fits the observations of the variable C? (Under the maximum likelihood principle)\n\nAnswer:\nThe optimal rate parameter is simply the observed sample mean: 26.97\n\ndf['C'].mean()\n\nnp.float64(26.976190476190474)"
+    "text": "Q7: Discrete parameter estimation\nAssume that you choose to model the variable C using a Poisson distribution. What is the rate parameter for the Poisson distribution that best fits the observations of the variable C? (Under the maximum likelihood principle)"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q8-predicting-future-events",
     "href": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q8-predicting-future-events",
     "title": "Quiz 1",
     "section": "Q8: Predicting future events",
-    "text": "Q8: Predicting future events\nAssume you decide to model C using a Poisson distribution with a rate of \\(\\lambda = 30\\). What would you estimate as the probability that a new measurement of C will be \\(&gt; 32\\)?\nNote: You can use scipy.stats.poisson to perform the relevant calculation\n\nAnswer:\nRecall that the cdf of a distribution gives us the probability of an observation being \\(\\leq k\\) for some threshold \\(k\\). Therefore we can compute the probability of \\(x &gt; k\\) as \\(1 - cdf(k)\\):\n\nfrom scipy.stats import poisson\n1 - poisson.cdf(k=32, mu=30)\n\nnp.float64(0.31545875028785453)"
+    "text": "Q8: Predicting future events\nAssume you decide to model C using a Poisson distribution with a rate of \\(\\lambda = 30\\). What would you estimate as the probability that a new measurement of C will be \\(&gt; 32\\)?\nNote: You can use scipy.stats.poisson to perform the relevant calculation"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q9-continuous-parameter-estimation",
     "href": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q9-continuous-parameter-estimation",
     "title": "Quiz 1",
     "section": "Q9: Continuous parameter estimation",
-    "text": "Q9: Continuous parameter estimation\nAgain using the maximum likelihood principle, find the mean (\\(\\mu\\)) and standard deviation (\\(\\sigma\\)) parameters for a Normal distribution that best fits the variable C. What are these optimal parameters?\n\nAnswer:\nAs with the Poisson model, the optimal mean is simply the sample mean: 26.97. The optimal standard deviation is the sample standard deviation 7.47 or the square root of the (unadjusted) sample variance.\n\ndf['C'].mean(), df['C'].std()\n\n(np.float64(26.976190476190474), np.float64(7.467525446306832))"
+    "text": "Q9: Continuous parameter estimation\nAgain using the maximum likelihood principle, find the mean (\\(\\mu\\)) and standard deviation (\\(\\sigma\\)) parameters for a Normal distribution that best fits the variable C. What are these optimal parameters?"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q10-rethinking-our-assumptions",
     "href": "modules/01-Single-variable/assignments/quiz1-single-variable.html#q10-rethinking-our-assumptions",
     "title": "Quiz 1",
     "section": "Q10: Rethinking our assumptions",
-    "text": "Q10: Rethinking our assumptions\nIt turns out that this dataset is actually per-game statistics for Lebron James over the last 5 NBA seasons. Column C is the number of points scored in each game. Given this new knowledge, why might we not want to use the Poisson distribution you fit above to predict Lebron’s points scored in the first game of the 2024-2025 season?\n\nThe Poisson distribution models continuous data, not discrete counts.\nThe true rate parameter may be changing over time.\nMaximum likelihood is not a good way to estimate the parameters of a distribution.\nLebron James is retiring and won’t play this season.\n\n\nAnswer:\nThe best answer is B. As players age or get injured the distribution of points scored per game will likely change."
+    "text": "Q10: Rethinking our assumptions\nIt turns out that this dataset is actually per-game statistics for Lebron James over the last 5 NBA seasons. Column C is the number of points scored in each game. Given this new knowledge, why might we not want to use the Poisson distribution you fit above to predict Lebron’s points scored in the first game of the 2024-2025 season?\n\nThe Poisson distribution models continuous data, not discrete counts.\nThe true rate parameter may be changing over time.\nMaximum likelihood is not a good way to estimate the parameters of a distribution.\nLebron James is retiring and won’t play this season."
   },
   {
     "objectID": "syllabus/rubric.html#introduction",
@@ -725,21 +725,21 @@
     "href": "modules/01-Single-variable/assignments/hw1-single-variable.html#timeline",
     "title": "Homework 1: Analyzing a single variable",
     "section": "Timeline",
-    "text": "Timeline\n\nFriday, September XX 11:59pm Create a gradescope submission for your assignment with all group members.\nThursday, September XX 11:59pm Submit your final assignment on Gradescope\nFriday, September XX 11:59pm Submit your reflections on Gradescope.\nThursday, September XX 11:59pm Submit your peer feedback on Gradescope."
+    "text": "Timeline\n\nFriday, September 20 11:59pm Create a gradescope submission for your assignment with all group members.\nThursday, September 26 11:59pm Submit your final assignment on Gradescope\nFriday, September 27 11:59pm Submit your reflections on Gradescope.\nTuesday, October 1 11:59pm Submit your peer feedback on Gradescope."
   },
   {
     "objectID": "modules/01-Single-variable/assignments/hw1-single-variable.html#groups",
     "href": "modules/01-Single-variable/assignments/hw1-single-variable.html#groups",
     "title": "Homework 1: Analyzing a single variable",
     "section": "Groups",
-    "text": "Groups\nThis assignment must be completed in groups of 2-3 students. The instructor reserves the right to add students to a group as needed.\nOnce you have chosen your group, please create a submission on Gradescope with all group memebers by Friday, September XX."
+    "text": "Groups\nThis assignment must be completed in groups of 2-3 students. The instructor reserves the right to add students to a group as needed.\nOnce you have chosen your group, please create a submission on Gradescope with all group members by Friday, September 20."
   },
   {
     "objectID": "modules/01-Single-variable/assignments/hw1-single-variable.html#requirements-checklist",
     "href": "modules/01-Single-variable/assignments/hw1-single-variable.html#requirements-checklist",
     "title": "Homework 1: Analyzing a single variable",
     "section": "Requirements checklist",
-    "text": "Requirements checklist\n\nChoose a public dataset to focus on. In your report motivate why you find this dataset interesting.\nChoose a variable for each team member to analyze. (Team members may choose the same variable). In your report motivate why each variable is worth analyzing.\nCreate 1 visualization for each team member. Every chosen variable should have a visualization that shows its distribution.\nPerform some kind of single-variable analysis for each team member. In your report discuss the asumptions used in each analysis and the conclusion.\nSubmit a report that: introduces and motivates the chosen dataset, shows and discusses your visualizations, and discuses your analysis."
+    "text": "Requirements checklist\n\nChoose a public dataset to focus on. In your report motivate why you find this dataset interesting.\nChoose a variable for each team member to analyze. (Team members may choose the same variable). In your report motivate why each variable is worth analyzing.\nCreate 1 visualization for each team member. Every chosen variable should have a visualization that shows its distribution.\nPerform some kind of single-variable analysis In your report discuss the asumptions used in each analysis and the conclusion.\nSubmit a report that: introduces and motivates the chosen dataset, shows and discusses your visualizations, and discuses your analysis."
   },
   {
     "objectID": "modules/01-Single-variable/assignments/hw1-single-variable.html#format-and-submission",
@@ -795,7 +795,7 @@
     "href": "modules/01-Single-variable/assignments/hw1-single-variable.html#part-3-analysis",
     "title": "Homework 1: Analyzing a single variable",
     "section": "Part 3: Analysis",
-    "text": "Part 3: Analysis\nNow that we understand our data a bit better having visualized it, let’s see if we can use it to help us make useful decisions. To do this we’ll first need to determine a specific piece of knowledge that we want to get from our data.\nPose a question. Consider continuous/ordinal variable that you visualized in the previous part. Determine a question that you could answer using a model of this variable. In this case we’ll restrict it to asking about the likelihood of some future outcome.\n\n\n\n\n\n\nTip\n\n\n\nFor example: if your variable is the number of points Lebron James scores in each game, you could attempt to answer the question: how likely is it that Lebron will score more than 50 points?\n\n\nFit a distribution. Choose the most appropriate distribution out of those discussed in class to model your continuous/ordinal variable. (This could be a Normal, Exponential, Binomial, Negative Binomial or Poisson). Estimate the parameters of this distribution that best fits your data using the maximum likelihood principle.\nAs you complete this section, consider the assumptions that you are relying on. For example: Is your chosen distribution a good fit to the data? Is it reasonable to assume your observations are independent?\nAnswer the question. Use your model to attempt to answer this question (e.g. under our model, Lebron has an 8% chance of scoring more than 50 points)\n\n\n\n\n\n\nTip\n\n\n\nFor example: if your variable is the number of points Lebron James scores in each game, you could attempt to answer the question: how likely is it that Lebron will score more than 50 points?\n\n\nMake sure each group member performs some analysis of this form."
+    "text": "Part 3: Analysis\nNow that we understand our data a bit better having visualized it, let’s see if we can use it to help us make useful decisions. To do this we’ll first need to determine a specific piece of knowledge that we want to get from our data.\nPose a question. Consider a continuous/ordinal variable that you visualized in the previous part. Determine a question that you could answer using a model of this variable. In this case we’ll restrict it to asking about the likelihood of some future outcome.\n\n\n\n\n\n\nTip\n\n\n\nFor example: if your variable is the number of points Lebron James scores in each game, you could attempt to answer the question: how likely is it that Lebron will score more than 50 points?\n\n\nFit a distribution. Choose the most appropriate distribution out of those discussed in class to model your continuous/ordinal variable. (This could be a Normal, Exponential, Binomial, Negative Binomial or Poisson). Estimate the parameters of this distribution that best fits your data using the maximum likelihood principle.\nAs you complete this section, consider the assumptions that you are relying on. For example: Is your chosen distribution a good fit to the data? Is it reasonable to assume your observations are independent?\nAnswer the question. Use your model to attempt to answer this question (e.g. under our model, Lebron has an 8% chance of scoring more than 50 points)\n\n\n\n\n\n\nTip\n\n\n\nFor example: if your variable is the number of points Lebron James scores in each game, you could attempt to answer the question: how likely is it that Lebron will score more than 50 points?"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/hw1-single-variable.html#part-4-writing-up",
@@ -1690,36 +1690,36 @@
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#about-me",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#about-me",
     "title": "Data Analytics and Visualization",
-    "section": "",
-    "text": "Prof. Gabe Hope (he/him)\nEmail: ghope@g.hmc.edu\nOffice: MacGregor 322\nOffice hours: TBA"
+    "section": "About me",
+    "text": "About me\n\n\n\n\n\n\n\n\nProf. Gabe Hope (he/him)\nEmail: ghope@g.hmc.edu\nOffice: MacGregor 322\nOffice hours: TBA"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#my-background",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#my-background",
     "title": "Data Analytics and Visualization",
-    "section": "",
-    "text": "Prof. Gabe Hope (he/him)\n\nWhere I’m from: New York City, but I’ve been living in southern California for the past 7 years.\nWhere I went to school: University of California, Irvine advised by Erik Sudderth."
+    "section": "My background",
+    "text": "My background\n\n\n\n\n\n\n\n\nProf. Gabe Hope (he/him)\n\nWhere I’m from: New York City, but I’ve been living in southern California for the past 7 years.\nWhere I went to school: University of California, Irvine advised by Erik Sudderth."
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#my-research",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#my-research",
     "title": "Data Analytics and Visualization",
-    "section": "",
-    "text": "My research focuses on using neural networks to find interpretable structures in data.\nI mainly focus on image data, though I have also worked on analyzing motion-capture, audio and climate data!\n\n\n\nImage in-painting \n\nMotion-capture analysis"
+    "section": "My research",
+    "text": "My research\n\nMy research focuses on using neural networks to find interpretable structures in data.\nI mainly focus on image data, though I have also worked on analyzing motion-capture, audio and climate data!\n\n\n\nImage in-painting \n\nMotion-capture analysis"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#about-you",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#about-you",
     "title": "Data Analytics and Visualization",
-    "section": "",
-    "text": "Your name & preferred pronouns\nYour year and major\nWhat interested you about this class?\n\nDo you want to work with a particular kind of data?\nDid you just think it sounded cool? 😎"
+    "section": "About you!",
+    "text": "About you!\n\nYour name & preferred pronouns\nYour year and major\nWhat interested you about this class?\n\nDo you want to work with a particular kind of data?\nDid you just think it sounded cool? 😎"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#what-are-the-goals-of-this-class",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#what-are-the-goals-of-this-class",
     "title": "Data Analytics and Visualization",
     "section": "What are the goals of this class?",
-    "text": "What are the goals of this class?\n\nExercise!\n\nGo to this webpage: https://projects.fivethirtyeight.com/2024-election-forecast/\nFollow the instructions on the handout"
+    "text": "What are the goals of this class?\nExercise!\n\nGo to this webpage: https://projects.fivethirtyeight.com/2024-election-forecast/\nFollow the instructions on the handout"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#what-information-is-this-page-trying-to-present",
@@ -1831,14 +1831,14 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#feedback",
     "title": "Data Analytics and Visualization",
     "section": "Feedback",
-    "text": "Feedback\n\nThis is a new course that is under active development!\n\nSome aspects will be experimental\nThere may be (a lot) of rough edges\n\n\n\nYour feedback is valuable!\n\nFeel free to raise issues with me directly\nYou can also give anonymous feedback at any time here"
+    "text": "Feedback\nThis is a new course that is under active development!\n\nSome aspects will be experimental\nThere may be (a lot) of rough edges\n\nYour feedback is valuable!\n\nFeel free to raise issues with me directly\nYou can also give anonymous feedback at any time here"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#class-structures",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#class-structures",
     "title": "Data Analytics and Visualization",
     "section": "Class structures",
-    "text": "Class structures\n\nFive main components in this class\n\nLectures\nDiscussions\nQuizzes\nHomeworks\nProject"
+    "text": "Class structures\nFive main components in this class\n\nLectures\nDiscussions\nQuizzes\nHomeworks\nProject"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#lectures",
@@ -1971,21 +1971,21 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#breakdown---graded-on-effort",
     "title": "Data Analytics and Visualization",
     "section": "Breakdown - Graded on effort",
-    "text": "Breakdown - Graded on effort\n\n10% - Participation\nExpected time commitment: 0-30 minutes per week\n\nOccasional prep for in-class discussions.\n\n\n\n10% - Reflections and feedback\nExpected time commitment: 15-20 minutes per week\n\nShort reflections (~5 minutes)\nPeer reviews (10-20 minutes for a satisfactory grade)"
+    "text": "Breakdown - Graded on effort\n10% - Participation\nExpected time commitment: 0-30 minutes per week\n\nOccasional prep for in-class discussions.\n\n10% - Reflections and feedback\nExpected time commitment: 15-20 minutes per week\n\nShort reflections (~5 minutes)\nPeer reviews (10-20 minutes for a satisfactory grade)"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#breakdown---graded-on-correctness",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#breakdown---graded-on-correctness",
     "title": "Data Analytics and Visualization",
     "section": "Breakdown - Graded on correctness",
-    "text": "Breakdown - Graded on correctness\n\n20% - Quizzes\nExpected time commitment: 30-90 minutes per week"
+    "text": "Breakdown - Graded on correctness\n20% - Quizzes\nExpected time commitment: 30-90 minutes per week"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#breakdown---graded-on-qualitative-assessment",
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#breakdown---graded-on-qualitative-assessment",
     "title": "Data Analytics and Visualization",
     "section": "Breakdown - Graded on qualitative assessment",
-    "text": "Breakdown - Graded on qualitative assessment\n\n30% - Homeworks\nExpected time commitment: 2-4 hours per week\n\nNot concurrent with final project\n\n\n\n30% - Final Project\nExpected time commitment: 2-4 hours per week\n\nNot concurrent with homeworks"
+    "text": "Breakdown - Graded on qualitative assessment\n30% - Homeworks\nExpected time commitment: 2-4 hours per week\n\nNot concurrent with final project\n\n30% - Final Project\nExpected time commitment: 2-4 hours per week\n\nNot concurrent with homeworks"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#python",
@@ -2013,7 +2013,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#alternative-tools",
     "title": "Data Analytics and Visualization",
     "section": "Alternative tools",
-    "text": "Alternative tools\nWhile course materials will use the Python/Pandas/Lets-Plot stack, you’re free to use alternative tools for homeworks, quizzes and projects.\n\n\n\n\n\n\nTip\n\n\n\nIf you are interested in learning to use these alternatives and would like to be involved in helping to translate course materials, let me know!"
+    "text": "Alternative tools\nWhile course materials will use the Python/Pandas/Lets-Plot stack, you’re free to use alternative tools for homeworks, quizzes and projects.\n\n\n\n\n\n\nTip\n\n\nIf you are interested in learning to use these alternatives and would like to be involved in helping to translate course materials, let me know!"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.html#python-alternatives",
@@ -2440,7 +2440,7 @@
     "href": "calendar/calendar.html",
     "title": "Course Calendar",
     "section": "",
-    "text": "This is the tentative course calendar for Data Analytics and Visualization. This calendar is subject to change depending on the pace of the class and student interest.\n\n\n\nLecture\nDate\nTopics\nReadings\nMaterials\nHomework\n\n\n\n\n1\n8/26\nCourse introduction\n538\nSlides\nHandout\n\n\n\n2\n8/28\nTidy data, data types\nMDSR 6.1\nSlides\nHandout\n\n\n\n\n9/2\n\n\n\n\n\n\n3\n9/4\nIntroduction to visualization\nDV ch. 1\nMDSR 2.1-2.5\nSlides\nHandout\n\n\n\n4\n9/9\nPrinciples for effective visualization\n\nSlides\nHandout\n\n\n\n5\n9/11\nSingle variable analysis & visualization\n\nSlides\nHandout\n\n\n\n6\n9/16\nMulti-variate analysis\n\n\n\n\n\n7\n9/18\nPrinciples for multivariate visualization\n\n\n\n\n\n8\n9/23\nData wrangling, joins\n\n\n\n\n\n9\n9/25\nTrendlines and regression\n\n\n\n\n\n10\n9/30\nClustering and latent variables\n\n\n\n\n\n11\n10/2\nDescision trees and tree visualizations\n\n\n\n\n\n12\n10/7\nData cleaning and missing values\n\n\n\n\n\n13\n10/9\n\n\n\n\n\n\n\n10/14\nUncertainty and estimation\n\n\n\n\n\n14\n10/16\nBootstrapping and simulation\n\n\n\n\n\n15\n10/21\nHigh-dimensional data, dimensionality reduction\n\n\n\n\n\n16\n10/23\nWorking with timeseries data\n\n\n\n\n\n17\n10/28\nTimeseries visualization\n\n\n\n\n\n18\n10/30\nTimeseries models and analysis\n\n\n\n\n\n19\n11/4\nSpatial data analysis and visualization\n\n\n\n\n\n20\n11/6\nGeographic data, projections and maps\n\n\n\n\n\n21\n11/11\nClimate data\n\n\n\n\n\n22\n11/13\nMoving to the web\n\n\n\n\n\n23\n11/18\nInteraction and animation pt. 1\n\n\n\n\n\n24\n11/20\nInteraction and animation pt. 2\n\n\n\n\n\n25\n11/25\nNetwork data, representations and visualizations\n\n\n\n\n\n\n11/27\n\n\n\n\n\n\n26\n12/2\nNetwork analysis and layout algorithms\n\n\n\n\n\n27\n12/4\nNetwork modeling\n\n\n\n\n\n\n12/9\n\n\n\nFinal Project Due (11:59pm)\n\n\n\n12/13\n\n\n\nFinal Reflections and Feedback Due (11:59pm)"
+    "text": "This is the tentative course calendar for Data Analytics and Visualization. This calendar is subject to change depending on the pace of the class and student interest.\n\n\n\n\n\n\n\n\nDate\nEvent\nTopics\nReadings\nMaterials\n\n\n\n\nWeek 1\n\n\nAug 26, 2024\nLecture 0\nCourse introduction\n538\nSlides Handout\n\n\nAug 28, 2024\nLecture 1\nTidy data, data types\nMDSR 6.1\nSlides Handout\n\n\nWeek 2\n\n\nSep 2, 2024\nLabor day\n\n\n\n\n\nSep 4, 2024\nLecture 2\nIntroduction to visualization\nDV ch. 1 MDSR 2.1-2.5\nSlides Handout\n\n\nWeek 3\n\n\nSep 9, 2024\nLecture 3\nPrinciples for effective visualization\n\nSlides Handout\n\n\nSep 11, 2024\nLecture 4\nSingle variable analysis & visualization\n\nSlides Handout\n\n\nWeek 4\n\n\nSep 16, 2024\nLecture 5\nMulti-variate analysis\n\n\n\n\nSep 18, 2024\nLecture 6\nPrinciples for multivariate visualization\n\n\n\n\nSep 19, 2024\nQuiz 0 Due\nVisualization\n\nNotebook Gradescope\n\n\nWeek 5\n\n\nSep 23, 2024\nLecture 7\nData wrangling, Joins\n\n\n\n\nSep 24, 2024\nQuiz 1 Due\nSingle variable analysis & visualization\n\nNotebook Gradescope\n\n\nSep 25, 2024\nLecture 8\nTrendlines and regression\n\n\n\n\nSep 26, 2024\nHomework 1 Due\nSingle variable analysis & visualization\n\nAssignment Gradescope\n\n\nWeek 6\n\n\nSep 30, 2024\nLecture 9\nClustering and latent variables\n\n\n\n\nOct 2, 2024\nLecture 10\nDescision trees and tree visualizations\n\n\n\n\nWeek 7\n\n\nOct 7, 2024\nLecture 11\nData cleaning and missing values\n\n\n\n\nOct 9, 2024\nFall break\n\n\n\n\n\nWeek 8\n\n\nOct 14, 2024\nLecture 12\nUncertainty and estimation\n\n\n\n\nOct 16, 2024\nLecture 13\nBootstrapping and simulation\n\n\n\n\nWeek 9\n\n\nOct 21, 2024\nLecture 14\nHigh dimensional data, dimensionality reduction\n\n\n\n\nOct 23, 2024\nLecture 15\nWorking with timeseries\n\n\n\n\nWeek 10\n\n\nOct 28, 2024\nLecture 16\nTimeseries data\n\n\n\n\nOct 30, 2024\nLecture 17\nTimeseries models and analysis\n\n\n\n\nWeek 11\n\n\nNov 4, 2024\nLecture 18\nSpatial analysis and visualization\n\n\n\n\nNov 6, 2024\nLecture 19\nGeographic data, projections and maps\n\n\n\n\nWeek 12\n\n\nNov 11, 2024\nLecture 20\nClimate data\n\n\n\n\nNov 13, 2024\nLecture 21\nMoving to the web\n\n\n\n\nWeek 13\n\n\nNov 18, 2024\nLecture 22\nInteraction and animation\n\n\n\n\nNov 20, 2024\nLecture 23\nInteraction and animation\n\n\n\n\nWeek 14\n\n\nNov 25, 2024\nLecture 24\nNetwork data\n\n\n\n\nNov 27, 2024\nThanksgiving\n\n\n\n\n\nWeek 15\n\n\nDec 2, 2024\nLecture 26\nNetwork visualization\n\n\n\n\nDec 4, 2024\nLecture 27\nNetwork modeling\n\n\n\n\nFinals\n\n\nDec 9, 2024\nFinal project due\n\n\n\n\n\nDec 13, 2024\nFinal project feedback due"
   },
   {
     "objectID": "calendar/calendar.html#week-0-826---830",
@@ -4729,7 +4729,7 @@
     "href": "modules/00-Introduction/assignments/quiz0-introduction.html",
     "title": "Quiz 0",
     "section": "",
-    "text": "import numpy as np\nimport pandas as pd\nfrom vega_datasets import data\nfrom lets_plot import *\nLetsPlot.setup_html()"
+    "text": "# Run if using Colab\n!pip install lets-plot\nimport numpy as np\nimport pandas as pd\nfrom vega_datasets import data\nfrom lets_plot import *\nLetsPlot.setup_html()\nFor this assignment we’re going to focus on the visualization below from the D3 gallery. (We’ll talk about D3 later in the semester!)."
   },
   {
     "objectID": "modules/00-Introduction/assignments/quiz0-introduction.html#q1-interpreting-a-dataset",
@@ -4751,5 +4751,222 @@
     "title": "Data Analytics and Visualization",
     "section": "",
     "text": "import polars as pl\n\ndf = pl.scan_csv('/Users/gabe/Downloads/MTA_Subway_Hourly_Ridership__Beginning_February_2022.csv').head().collect()\n\n\nfrom lets_plot import *\nLetsPlot.setup_html()\n\n\n            \n            \n            \n\n\n\ndf = pl.scan_csv('/Users/gabe/Downloads/MTA_Subway_Hourly_Ridership__Beginning_February_2022.csv').select(['transit_timestamp', 'station_complex', 'ridership']).with_columns(pl.col(\"transit_timestamp\").str.to_datetime('%m/%d/%Y %I:%M:%S %p'))\ndf = df.cast({\"station_complex\": pl.Categorical}).filter((pl.col('transit_timestamp') &lt; end) & (pl.col('transit_timestamp') &gt;= start)).select(['station_complex', 'ridership']).group_by('station_complex').sum()\n\n\nrides = df.collect()\n\n/var/folders/t9/fjsr8h1x7c7cg4vqw_xhjq2w0000gn/T/ipykernel_73823/2853576136.py:1: CategoricalRemappingWarning: Local categoricals have different encodings, expensive re-encoding is done to perform this merge operation. Consider using a StringCache or an Enum type if the categories are known in advance\n  rides = df.collect()\n\n\n\nrides.write_csv('data/rides.csv')\n\n\nrides.group_by('station_complex').sum().write_csv()\n\n\nshape: (426, 2)\n\n\n\nstation_complex\nridership\n\n\ncat\ni64\n\n\n\n\n\"Seneca Av (M)\"\n260\n\n\n\"Jay St-MetroTech (A,C,F,R)\"\n1138\n\n\n\"Myrtle-Wyckoff Avs (L,M)\"\n1602\n\n\n\"St Lawrence Av (6)\"\n196\n\n\n\"Church Av (B,Q)\"\n1301\n\n\n…\n…\n\n\n\"Knickerbocker Av (M)\"\n329\n\n\n\"Bowery (J,Z)\"\n90\n\n\n\"157 St (1)\"\n726\n\n\n\"103 St (6)\"\n608\n\n\n\"Church Av (F,G)\"\n679\n\n\n\n\n\n\n\nrides.write_csv('data/rides.csv')\n\n\nggplot() + geom_bar(\n    data=rides,\n    mapping=aes(x='station_complex')\n) + ggsize(1600, 800)\n\n   \n   \n\n\n\nstart = pl.datetime(2024, 7, 1)\nend = pl.datetime(2024, 8, 1)\n\n#df.filter((pl.col('transit_timestamp') &lt; end) & (pl.col('transit_timestamp') &gt;= start))"
+  },
+  {
+    "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html",
+    "href": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html",
+    "title": "Quiz 1",
+    "section": "",
+    "text": "import numpy as np\nimport pandas as pd\nfrom vega_datasets import data\nfrom lets_plot import *\nLetsPlot.setup_html()"
+  },
+  {
+    "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q1-interpreting-a-dataset",
+    "href": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q1-interpreting-a-dataset",
+    "title": "Quiz 1",
+    "section": "Q1: Interpreting a dataset",
+    "text": "Q1: Interpreting a dataset\nTake a look at the given dataset. What does one row of this dataset represent?\n\nAnswer:\nEach row represent a single day of weather data (for Seattle), including the temperature, precipitation and wind."
+  },
+  {
+    "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q2-nominal-variables",
+    "href": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q2-nominal-variables",
+    "title": "Quiz 1",
+    "section": "Q2: Nominal Variables",
+    "text": "Q2: Nominal Variables\nHow many nominal variables are present in this dataset? How many unique values does each nominal variable have?\n\nAnswer\nWe can see that there is 1 nominal variable (weather). This variable has 5 unique values.\n\ndf.head()\n\n\n\n\n\n\n\n\ndate\nprecipitation\ntemp_max\ntemp_min\nwind\nweather\n\n\n\n\n0\n2012-01-01\n0.0\n12.8\n5.0\n4.7\ndrizzle\n\n\n1\n2012-01-02\n10.9\n10.6\n2.8\n4.5\nrain\n\n\n2\n2012-01-03\n0.8\n11.7\n7.2\n2.3\nrain\n\n\n3\n2012-01-04\n20.3\n12.2\n5.6\n4.7\nrain\n\n\n4\n2012-01-05\n1.3\n8.9\n2.8\n6.1\nrain\n\n\n\n\n\n\n\n\ndf['weather'].unique()\n\narray(['drizzle', 'rain', 'sun', 'snow', 'fog'], dtype=object)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q3-summary-statistics",
+    "href": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q3-summary-statistics",
+    "title": "Quiz 1",
+    "section": "Q3: Summary statistics",
+    "text": "Q3: Summary statistics\nCompute the mean, median, maximum and 75th percentile of the variable: temp_max using Pandas.\n\nAnswer:\n\nMean: 16.43\nMedian: 7.35\nMaximum: 35.6\n75%: 22.2\n\n\ndf[\"temp_max\"].describe()\n\ncount    1461.000000\nmean       16.439083\nstd         7.349758\nmin        -1.600000\n25%        10.600000\n50%        15.600000\n75%        22.200000\nmax        35.600000\nName: temp_max, dtype: float64"
+  },
+  {
+    "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q4-histograms",
+    "href": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q4-histograms",
+    "title": "Quiz 1",
+    "section": "Q4: Histograms",
+    "text": "Q4: Histograms\nTrue or false: A histogram is used to visualize nominal data?\n\nAnswer:\nFalse, a histogram is used to visualize the distribution of continuous (or ordinal) data."
+  },
+  {
+    "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q5-density-plots",
+    "href": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q5-density-plots",
+    "title": "Quiz 1",
+    "section": "Q5: Density plots",
+    "text": "Q5: Density plots\nGiven the dataset below, plot the variable HLY-TEMP-NORMAL using a kernel density estimate plot.\nUsing the default settings, how many modes does the resulting density estimate have?\nIf you decrease the bandwidth parameter, would you expect the number of modes to increase or decrease?\nWhat is (approximately) the minimum bandwidth such that the resulting plot shows a single mode?\n\ndf = data.climate()\ndf.head()\n\n\n\n\n\n\n\n\nSTATION\nSTATION_NAME\nELEVATION\nLATITUDE\nLONGITUDE\nDATE\nHLY-TEMP-NORMAL\nHLY-PRES-NORMAL\nHLY-DEWP-NORMAL\n\n\n\n\n0\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 00:00:00\n349\n10205\n289\n\n\n1\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 01:00:00\n344\n10202\n287\n\n\n2\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 02:00:00\n339\n10200\n284\n\n\n3\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 03:00:00\n334\n10202\n283\n\n\n4\nGHCND:USW00003812\nASHEVILLE REGIONAL AIRPORT NC US\n645.3\n35.43194\n-82.5375\n2010-01-01 04:00:00\n331\n10202\n280\n\n\n\n\n\n\n\n\nAnswer:\nThe default settings show 2 modes.\nDecreasing the bandwidth would lead to an increase in the number of modes.\nSomewhere between 25 and 30\n\nggplot(df, aes(x=\"HLY-TEMP-NORMAL\")) + geom_density()\n\n   \n   \n\n\n\nggplot(df, aes(x=\"HLY-TEMP-NORMAL\")) + geom_density(bw=25)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q6-choosing-an-appropriate-model",
+    "href": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q6-choosing-an-appropriate-model",
+    "title": "Quiz 1",
+    "section": "Q6: Choosing an appropriate model",
+    "text": "Q6: Choosing an appropriate model\nAssume that you are told that each observation represents a class at Harvey Mudd, and the variable C represents the number of students who registered for that class during pre-registration. Which of the following distributions would be most appropriate for modeling the distribution of C (the number of students registered):\n\nExponential distribution\nNormal distribution\nPoisson distribution\nCategorical distribution\n\nAlternatively, assume that you are told that each observation represents hourly weather measurements at the summit of Mt. Baldy, with the variable C representing the temperature. In this case, which of the following distributions would be most appropriate for modeling the distribution of C (temperature):\n\nExponential distribution\nNormal distribution\nPoisson distribution\nCategorical distribution"
+  },
+  {
+    "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q7-discrete-parameter-estimation",
+    "href": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q7-discrete-parameter-estimation",
+    "title": "Quiz 1",
+    "section": "Q7: Discrete parameter estimation",
+    "text": "Q7: Discrete parameter estimation\nAssume that you choose to model the variable C using a Poisson distribution. What is the rate parameter for the Poisson distribution that best fits the observations of the variable C? (Under the maximum likelihood principle)\n\nAnswer:\nThe optimal rate parameter is simply the observed sample mean: 26.97\n\ndf['C'].mean()\n\nnp.float64(26.976190476190474)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q8-predicting-future-events",
+    "href": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q8-predicting-future-events",
+    "title": "Quiz 1",
+    "section": "Q8: Predicting future events",
+    "text": "Q8: Predicting future events\nAssume you decide to model C using a Poisson distribution with a rate of \\(\\lambda = 30\\). What would you estimate as the probability that a new measurement of C will be \\(&gt; 32\\)?\nNote: You can use scipy.stats.poisson to perform the relevant calculation\n\nAnswer:\nRecall that the cdf of a distribution gives us the probability of an observation being \\(\\leq k\\) for some threshold \\(k\\). Therefore we can compute the probability of \\(x &gt; k\\) as \\(1 - cdf(k)\\):\n\nfrom scipy.stats import poisson\n1 - poisson.cdf(k=32, mu=30)\n\nnp.float64(0.31545875028785453)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q9-continuous-parameter-estimation",
+    "href": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q9-continuous-parameter-estimation",
+    "title": "Quiz 1",
+    "section": "Q9: Continuous parameter estimation",
+    "text": "Q9: Continuous parameter estimation\nAgain using the maximum likelihood principle, find the mean (\\(\\mu\\)) and standard deviation (\\(\\sigma\\)) parameters for a Normal distribution that best fits the variable C. What are these optimal parameters?\n\nAnswer:\nAs with the Poisson model, the optimal mean is simply the sample mean: 26.97. The optimal standard deviation is the sample standard deviation 7.47 or the square root of the (unadjusted) sample variance.\n\ndf['C'].mean(), df['C'].std()\n\n(np.float64(26.976190476190474), np.float64(7.467525446306832))"
+  },
+  {
+    "objectID": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q10-rethinking-our-assumptions",
+    "href": "modules/01-Single-variable/assignments/quiz1-single-variable-solutions.html#q10-rethinking-our-assumptions",
+    "title": "Quiz 1",
+    "section": "Q10: Rethinking our assumptions",
+    "text": "Q10: Rethinking our assumptions\nIt turns out that this dataset is actually per-game statistics for Lebron James over the last 5 NBA seasons. Column C is the number of points scored in each game. Given this new knowledge, why might we not want to use the Poisson distribution you fit above to predict Lebron’s points scored in the first game of the 2024-2025 season?\n\nThe Poisson distribution models continuous data, not discrete counts.\nThe true rate parameter may be changing over time.\nMaximum likelihood is not a good way to estimate the parameters of a distribution.\nLebron James is retiring and won’t play this season.\n\n\nAnswer:\nThe best answer is B. As players age or get injured the distribution of points scored per game will likely change."
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html",
+    "title": "Quiz 0",
+    "section": "",
+    "text": "# Run if using Colab\n!pip install lets-plot\n\nRequirement already satisfied: lets-plot in /Users/gabe/Documents/Courses/DataAnalyticsAndViz/DataViz/.venv/lib/python3.12/site-packages (4.3.3)\nRequirement already satisfied: pypng in /Users/gabe/Documents/Courses/DataAnalyticsAndViz/DataViz/.venv/lib/python3.12/site-packages (from lets-plot) (0.20220715.0)\nRequirement already satisfied: palettable in /Users/gabe/Documents/Courses/DataAnalyticsAndViz/DataViz/.venv/lib/python3.12/site-packages (from lets-plot) (3.3.3)\n\n[notice] A new release of pip is available: 24.1.2 -&gt; 24.2\n[notice] To update, run: pip install --upgrade pip\nimport numpy as np\nimport pandas as pd\nfrom vega_datasets import data\nfrom lets_plot import *\nLetsPlot.setup_html()\nFor this assignment we’re going to focus on the visualization below from the D3 gallery. (We’ll talk about D3 later in the semester!)."
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q1-tidy-data",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q1-tidy-data",
+    "title": "Quiz 0",
+    "section": "Q1: Tidy data",
+    "text": "Q1: Tidy data\nThe code below loads 2 different versions of the dataset used to create the visualization above: statesA and statesB. Which of them is in the tidy data form?\n\nstatesA = pd.read_csv('https://gist.githubusercontent.com/gabehope/cc4ea068f7d4f9de7469444beedcc9aa/raw/41335d3e24f8d18d24757685915fd7cb089f2d4b/statesA.csv')\nstatesA.head()\n\n\n\n\n\n\n\n\nState\nUnder 5 Years\n5 to 13 Years\n14 to 17 Years\n18 to 24 Years\n25 to 44 Years\n45 to 64 Years\n65 Years and Over\n\n\n\n\n0\nAL\n310504\n552339\n259034\n450818\n1231572\n1215966\n641667\n\n\n1\nAK\n52083\n85640\n42153\n74257\n198724\n183159\n50277\n\n\n2\nAZ\n515910\n828669\n362642\n601943\n1804762\n1523681\n862573\n\n\n3\nAR\n202070\n343207\n157204\n264160\n754420\n727124\n407205\n\n\n4\nCA\n2704659\n4499890\n2159981\n3853788\n10604510\n8819342\n4114496\n\n\n\n\n\n\n\n\nstatesB = pd.read_csv('https://gist.githubusercontent.com/gabehope/464d3f28d8a7f83eace3c8a9982c0033/raw/19c32b16899556b0d0e20004ce93c7a518574255/statesB.csv')\nstatesB\n\n\n\n\n\n\n\n\nState\nage\ncount\n\n\n\n\n0\nAL\nUnder 5 Years\n310504\n\n\n1\nAK\nUnder 5 Years\n52083\n\n\n2\nAZ\nUnder 5 Years\n515910\n\n\n3\nAR\nUnder 5 Years\n202070\n\n\n4\nCA\nUnder 5 Years\n2704659\n\n\n...\n...\n...\n...\n\n\n352\nVA\n65 Years and Over\n940577\n\n\n353\nWA\n65 Years and Over\n783877\n\n\n354\nWV\n65 Years and Over\n285067\n\n\n355\nWI\n65 Years and Over\n750146\n\n\n356\nWY\n65 Years and Over\n65614\n\n\n\n\n357 rows × 3 columns"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q2-variable-types",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q2-variable-types",
+    "title": "Quiz 0",
+    "section": "Q2: Variable types",
+    "text": "Q2: Variable types\nWe’ll focus on statesB from here on out (renamed states below). What is the most appropriate type to consider for the age variable?\n\nNominal\nOrdinal\nQuantitative\n\n\nstates = statesB\nstatesB\n\n\n\n\n\n\n\n\nState\nage\ncount\n\n\n\n\n0\nAL\nUnder 5 Years\n310504\n\n\n1\nAK\nUnder 5 Years\n52083\n\n\n2\nAZ\nUnder 5 Years\n515910\n\n\n3\nAR\nUnder 5 Years\n202070\n\n\n4\nCA\nUnder 5 Years\n2704659\n\n\n...\n...\n...\n...\n\n\n352\nVA\n65 Years and Over\n940577\n\n\n353\nWA\n65 Years and Over\n783877\n\n\n354\nWV\n65 Years and Over\n285067\n\n\n355\nWI\n65 Years and Over\n750146\n\n\n356\nWY\n65 Years and Over\n65614\n\n\n\n\n357 rows × 3 columns"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q3-converting-types",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q3-converting-types",
+    "title": "Quiz 0",
+    "section": "Q3: Converting types",
+    "text": "Q3: Converting types\nBased on your answer to Q2 complete the code below to convert the age column to an appropriate type.\n\n# Copy the contents of this cell into Gradescope\nage_type =  pd.CategoricalDtype(states['age'].unique(), ordered=True)\nstates['age'] = states['age'].astype(age_type)"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q4-aesthetic-mappings",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q4-aesthetic-mappings",
+    "title": "Quiz 0",
+    "section": "Q4: Aesthetic mappings",
+    "text": "Q4: Aesthetic mappings\nLet’s start creating our plot by specifying the data and aesthetic mappings. In this case will pass them directly to the ggplot function so they can be shared by all layers.\nIn the cell below add the correct aesthetic mapping to the plot specification to replicate the above visualization.\nHint: you can use x and y for the positional mappings, a later component will be responsible for wrapping around a circle\n\n# Copy the contents of this cell into Gradescope\nplot = ggplot(\n    data=states,\n    mapping=aes(\n        x= 'State',\n        y= 'count',\n        # Other mappings here\n        fill='age'\n    )\n) + ggsize(1000, 1000)"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q5-geometries",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q5-geometries",
+    "title": "Quiz 0",
+    "section": "Q5: Geometries",
+    "text": "Q5: Geometries\nNow we’ll add a layer with an appropriate geometry to our specification. Complete the following code to add a geometry to the specification.\nHint: Consider if you need to specify a statistical transform for your geometry. Also, passing size=0 to the geometry will help better replicate the original plot’s aesthetics\n\n# Copy the contents of this cell into Gradescope\nplot = plot + geom_bar(size=0, stat='identity')\n\nAt this point we can visualize what we have so far.\n\nplot"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q6-coordinate-systems",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q6-coordinate-systems",
+    "title": "Quiz 0",
+    "section": "Q6: Coordinate systems",
+    "text": "Q6: Coordinate systems\nNow specify a coordinate system to match the original plot.\nHint: check the slides or the Lets-Plot documentation to see what to specify to make sure the coordinate system works correctly\n\n# Copy the contents of this cell into Gradescope\nplot = plot + coord_polar(theta='x')\nplot"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q7-scales",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q7-scales",
+    "title": "Quiz 0",
+    "section": "Q7: Scales",
+    "text": "Q7: Scales\nAt this point you should notice that the y-scale (which should map to radius in our coordinate system), doesn’t quite map the way we want. Add a scale specification to our plot to create a empty central circle.\n\n# Copy the contents of this cell into Gradescope\nplot = plot + scale_y_continuous(limits=[-10000000, None])\nplot"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q9-effectiveness",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q9-effectiveness",
+    "title": "Quiz 0",
+    "section": "Q9: Effectiveness",
+    "text": "Q9: Effectiveness\nModify the plot you created with at least one change to improve the effectiveness of comparison. Upload the resulting image to Gradescope.\n\nplot = ggplot() + geom_bar(data=states, size=0, mapping=aes(x='State', y='count', fill='age'), stat='identity') + ggsize(1000, 600)\n# ggsave(plot, 'plot-effectiveness.png')\nplot"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q10-expressiveness-consistency",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction-solutions.html#q10-expressiveness-consistency",
+    "title": "Quiz 0",
+    "section": "Q10: Expressiveness (consistency)",
+    "text": "Q10: Expressiveness (consistency)\nModify the plot you created with at least one change to improve the expressiveness or consistency of the presentation. Upload the resulting image to Gradescope.\n\nplot = ggplot() + geom_bar(data=states.sort_values('count', ascending=False), size=0, mapping=aes(x='State', y='count', fill='age'), stat='identity') + ggsize(1000, 600)\nplot"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction.html#q1-tidy-data",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction.html#q1-tidy-data",
+    "title": "Quiz 0",
+    "section": "Q1: Tidy data",
+    "text": "Q1: Tidy data\nThe code below loads 2 different versions of the dataset used to create the visualization above. Which one (A or B) is in the tidy data form?\n\nstatesA = pd.read_csv('https://gist.githubusercontent.com/gabehope/cc4ea068f7d4f9de7469444beedcc9aa/raw/41335d3e24f8d18d24757685915fd7cb089f2d4b/statesA.csv')\nstatesA.head()\n\n\nstatesB = pd.read_csv('https://gist.githubusercontent.com/gabehope/464d3f28d8a7f83eace3c8a9982c0033/raw/19c32b16899556b0d0e20004ce93c7a518574255/statesB.csv')\nstatesB"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction.html#q2-variable-types",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction.html#q2-variable-types",
+    "title": "Quiz 0",
+    "section": "Q2: Variable types",
+    "text": "Q2: Variable types\nWe’ll focus on statesB from here on out (an rename it states below). What is the most appropriate type to consider for the age variable?\n\nNominal\nOrdinal\nQuantitative\n\n\nstates = statesB\nstatesB"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction.html#q3-converting-types",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction.html#q3-converting-types",
+    "title": "Quiz 0",
+    "section": "Q3: Converting types",
+    "text": "Q3: Converting types\nBased on your answer to Q2 complete the code below to convert the age column to an appropriate type.\n\n# Copy the contents of this cell into Gradescope\nage_type =  \nstates['age'] = states['age'].astype(age_type)"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction.html#q4-aesthetic-mappings",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction.html#q4-aesthetic-mappings",
+    "title": "Quiz 0",
+    "section": "Q4: Aesthetic mappings",
+    "text": "Q4: Aesthetic mappings\nLet’s start creating our plot by specifying the data and aesthetic mappings. In this case will pass them directly to the ggplot function so they can be shared by all layers.\nIn the cell below add the correct aesthetic mapping to the plot specification to replicate the above visualization.\nHint: you can use x and y for the positional mappings, a later component will be responsible for wrapping around a circle\n\n# Copy the contents of this cell into Gradescope\nplot = ggplot(\n    data=states,\n    mapping=aes(\n        x= ,\n        y= ,\n        # Other mappings here\n    )\n) + ggsize(1000, 1000)"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction.html#q5-geometries",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction.html#q5-geometries",
+    "title": "Quiz 0",
+    "section": "Q5: Geometries",
+    "text": "Q5: Geometries\nNow we’ll add a layer with an appropriate geometry to our specification. Complete the following code to add a geometry to the specification.\nHint: Consider if you need to specify a statistical transform for your geometry. Also, passing size=0 to the geometry will help better replicate the original plot’s aesthetics\n\n# Copy the contents of this cell into Gradescope\nplot = plot + \n\nAt this point we can visualize what we have so far.\n\nplot"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction.html#q6-coordinate-systems",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction.html#q6-coordinate-systems",
+    "title": "Quiz 0",
+    "section": "Q6: Coordinate systems",
+    "text": "Q6: Coordinate systems\nNow specify a coordinate system to match the original plot.\nHint: check the slides or the Lets-Plot documentation to see what to specify to make sure the coordinate system works correctly\n\n# Copy the contents of this cell into Gradescope\nplot = plot + \nplot"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction.html#q7-scales",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction.html#q7-scales",
+    "title": "Quiz 0",
+    "section": "Q7: Scales",
+    "text": "Q7: Scales\nAt this point you should notice that the y-scale (which should map to radius in our coordinate system), doesn’t quite map the way we want. Add a scale specification to our plot to create a empty central circle.\n\n# Copy the contents of this cell into Gradescope\nplot = plot + \nplot"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction.html#q9-effectiveness",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction.html#q9-effectiveness",
+    "title": "Quiz 0",
+    "section": "Q9: Effectiveness",
+    "text": "Q9: Effectiveness\nModify the plot you created with at least one change to improve the effectiveness of comparison. Upload the resulting image to Gradescope.\n\nplot = \nggsave(plot, 'plot-effectiveness.png')"
+  },
+  {
+    "objectID": "modules/00-Introduction/assignments/quiz0-introduction.html#q10-expressiveness-consistency",
+    "href": "modules/00-Introduction/assignments/quiz0-introduction.html#q10-expressiveness-consistency",
+    "title": "Quiz 0",
+    "section": "Q10: Expressiveness (consistency)",
+    "text": "Q10: Expressiveness (consistency)\nModify the plot you created with at least one change to improve the expressiveness or consistency of the presentation. Upload the resulting image to Gradescope.\n\nplot = \nggsave(plot, 'plot-expresiveness.png')"
+  },
+  {
+    "objectID": "calendar/calendar-old.html",
+    "href": "calendar/calendar-old.html",
+    "title": "Course Calendar",
+    "section": "",
+    "text": "Date\nTopics\nReadings\nMaterials\nEvent\n\n\n\n\nWeek 1\n\n\n2024-08-26\nCourse introduction\n538\n[Slides](../modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.qmd) [Handout](../modules/00-Introduction/lectures/Lecture-0-0/handout-0-0.qmd)\n[Lecture 0](../modules/00-Introduction/lectures/Lecture-0-0/slides-0-0.qmd)\n\n\n2024-08-28\nTidy data, data types\nMDSR 6.1\n[Slides](../modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.qmd) [Handout](../modules/00-Introduction/lectures/Lecture-0-1/handout-0-1.qmd)\n[Lecture 1](../modules/00-Introduction/lectures/Lecture-0-1/slides-0-1.qmd)\n\n\nWeek 2\n\n\n2024-09-02\n\n\n\nLabor day\n\n\n2024-09-04\nIntroduction to visualization\nDV ch. 1 MDSR 2.1-2.5\n[Slides](../modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.qmd) [Handout](../modules/00-Introduction/lectures/Lecture-0-2/handout-0-2.qmd)\n[Lecture 2](../modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.qmd)\n\n\nWeek 3\n\n\n2024-09-09\nPrinciples for effective visualization\n\n[Slides](../modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.qmd) [Handout](../modules/00-Introduction/lectures/Lecture-0-3/handout-0-3.qmd)\n[Lecture 3](../modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.qmd)\n\n\n2024-09-11\nSingle variable analysis & visualization\n\n[Slides](../modules/01-Single-variable/lectures/Lecture-1-0/slides-1-0.qmd) [Handout](../modules/01-Single-variable/lectures/Lecture-1-0/handout-1-0.qmd)\n[Lecture 4](../modules/01-Single-variable/lectures/Lecture-1-0/slides-1-0.qmd)\n\n\nWeek 4\n\n\n2024-09-16\nMulti-variate analysis\n\n\nLecture 5\n\n\n2024-09-18\n\n\n\nLecture 6\n\n\n2024-09-19\nVisualization\n\n[Notebook](https://colab.research.google.com/drive/1zrFq4FJwIe5ZJYndIa5bm0YNZ60hjU_v) [Gradescope](https://www.gradescope.com/courses/842824/assignments/4960920)\nQuiz 0 Due\n\n\nWeek 5\n\n\n2024-09-23\n\n\n\nLecture 7\n\n\n2024-09-24\nSingle variable analysis & visualization\n\n[Notebook](https://drive.google.com/file/d/1o9U6DYQAs9DRt1ZX9YmHCZzXEtGrlbIm/view?usp=sharing) [Gradescope](https://www.gradescope.com/courses/842824/assignments/4960995)\nQuiz 1 Due\n\n\n2024-09-25\n\n\n\nLecture 8\n\n\n2024-09-26\nSingle variable analysis & visualization\n\n[Assignment](../modules/01-Single-variable/assignments/hw1-single-variable.qmd) [Gradescope](https://www.gradescope.com/courses/842824/assignments/4960995)\nHomework 1 Due\n\n\nWeek 6\n\n\n2024-10-02\n\n\n\nLecture 9\n\n\n\n\n\n\n        \n\n\nThis is the tentative course calendar for Data Analytics and Visualization. This calendar is subject to change depending on the pace of the class and student interest.\n\n\n\nLecture\n1\nDate\n8/26\nTopics\nCourse introduction\nReadings\n538\nMaterials\nSlides\nHandout\nHomework\n\n\n\n\n\n\n\n\n\n\n\n\n2\n8/28\nTidy data, data types\nMDSR 6.1\nSlides\nHandout\n\n\n\n\n\n9/2\n\n\n\n\n\n\n\n3\n9/4\nIntroduction to visualization\nDV ch. 1\nMDSR 2.1-2.5\nSlides\nHandout\n\n\n\n\n4\n9/9\nPrinciples for effective visualization\n\nSlides\nHandout\n\n\n\n\n5\n9/11\nSingle variable analysis & visualization\n\nSlides\nHandout\n\n\n\n\n6\n9/16\nMulti-variate analysis\n\n\n\n\n\n\n7\n9/18\nPrinciples for multivariate visualization\n\n\n\n\n\n\n\n9/19\n\n\n\nQuiz 0 due\n\n\n\n8\n9/23\nData wrangling, joins\n\n\n\n\n\n\n\n9/24\n\n\n\nNotebook due\n\n\n\n9\n9/25\nTrendlines and regression\n\n\n\n\n\n\n\n9/26\n\n\n\nHomework 1 due\n\n\n\n10\n9/30\nClustering and latent variables\n\n\n\n\n\n\n11\n10/2\nDescision trees and tree visualizations\n\n\n\n\n\n\n12\n10/7\nData cleaning and missing values\n\n\n\n\n\n\n\n10/9\n\n\n\n\n\n\n\n13\n10/14\nUncertainty and estimation\n\n\n\n\n\n\n14\n10/16\nBootstrapping and simulation\n\n\n\n\n\n\n15\n10/21\nHigh-dimensional data, dimensionality reduction\n\n\n\n\n\n\n16\n10/23\nWorking with timeseries data\n\n\n\n\n\n\n17\n10/28\nTimeseries visualization\n\n\n\n\n\n\n18\n10/30\nTimeseries models and analysis\n\n\n\n\n\n\n19\n11/4\nSpatial data analysis and visualization\n\n\n\n\n\n\n20\n11/6\nGeographic data, projections and maps\n\n\n\n\n\n\n21\n11/11\nClimate data\n\n\n\n\n\n\n22\n11/13\nMoving to the web\n\n\n\n\n\n\n23\n11/18\nInteraction and animation pt. 1\n\n\n\n\n\n\n24\n11/20\nInteraction and animation pt. 2\n\n\n\n\n\n\n25\n11/25\nNetwork data, representations and visualizations\n\n\n\n\n\n\n\n11/27\n\n\n\n\n\n\n\n26\n12/2\nNetwork analysis and layout algorithms\n\n\n\n\n\n\n27\n12/4\nNetwork modeling\n\n\n\n\n\n\n\n12/9\n\n\n\nFinal Project Due (11:59pm)\n\n\n\n\n12/13\n\n\n\nFinal Reflections and Feedback Due (11:59pm)"
   }
 ]

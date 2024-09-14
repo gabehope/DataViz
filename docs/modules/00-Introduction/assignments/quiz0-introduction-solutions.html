@@ -57,7 +57,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -100,6 +100,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -238,16 +241,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="cell-2" class="cell">
+<div id="cell-2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run if using Colab</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install lets<span class="op">-</span>plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Requirement already satisfied: lets-plot in /Users/gabe/Documents/Courses/DataAnalyticsAndViz/DataViz/.venv/lib/python3.12/site-packages (4.3.3)
+Requirement already satisfied: pypng in /Users/gabe/Documents/Courses/DataAnalyticsAndViz/DataViz/.venv/lib/python3.12/site-packages (from lets-plot) (0.20220715.0)
+Requirement already satisfied: palettable in /Users/gabe/Documents/Courses/DataAnalyticsAndViz/DataViz/.venv/lib/python3.12/site-packages (from lets-plot) (3.3.3)
+
+[notice] A new release of pip is available: 24.1.2 -&gt; 24.2
+[notice] To update, run: pip install --upgrade pip</code></pre>
 </div>
-<div id="cell-3" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> vega_datasets <span class="im">import</span> data</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-3" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> vega_datasets <span class="im">import</span> data</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+            <div id="5QST7S"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.3/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("5QST7S").appendChild(div);
+                    };
+                    var e = document.getElementById("5QST7S");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
 </div>
 <p>For this assignment we’re going to focus on the visualization below from the <a href="https://d3js.org/">D3</a> gallery. (We’ll talk about D3 later in the semester!).</p>
 <svg width="928" height="928" viewbox="-464,-464,928,928" style="width: 100%; height: auto; font: 10px sans-serif;" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
@@ -1838,36 +1883,287 @@ WY 65 Years and Over 65,614
 <h1>Part 1: Data and variables</h1>
 <section id="q1-tidy-data" class="level2">
 <h2 class="anchored" data-anchor-id="q1-tidy-data">Q1: Tidy data</h2>
-<p>The code below loads 2 different versions of the dataset used to create the visualization above. Which one (A or B) is in the <strong>tidy data</strong> form?</p>
-<div id="cell-8" class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>statesA <span class="op">=</span> pd.read_csv(<span class="st">'https://gist.githubusercontent.com/gabehope/cc4ea068f7d4f9de7469444beedcc9aa/raw/41335d3e24f8d18d24757685915fd7cb089f2d4b/statesA.csv'</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>statesA.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The code below loads 2 different versions of the dataset used to create the visualization above: <code>statesA</code> and <code>statesB</code>. Which of them is in the <strong>tidy data</strong> form?</p>
+<div id="cell-8" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>statesA <span class="op">=</span> pd.read_csv(<span class="st">'https://gist.githubusercontent.com/gabehope/cc4ea068f7d4f9de7469444beedcc9aa/raw/41335d3e24f8d18d24757685915fd7cb089f2d4b/statesA.csv'</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>statesA.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">State</th>
+<th data-quarto-table-cell-role="th">Under 5 Years</th>
+<th data-quarto-table-cell-role="th">5 to 13 Years</th>
+<th data-quarto-table-cell-role="th">14 to 17 Years</th>
+<th data-quarto-table-cell-role="th">18 to 24 Years</th>
+<th data-quarto-table-cell-role="th">25 to 44 Years</th>
+<th data-quarto-table-cell-role="th">45 to 64 Years</th>
+<th data-quarto-table-cell-role="th">65 Years and Over</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>AL</td>
+<td>310504</td>
+<td>552339</td>
+<td>259034</td>
+<td>450818</td>
+<td>1231572</td>
+<td>1215966</td>
+<td>641667</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>AK</td>
+<td>52083</td>
+<td>85640</td>
+<td>42153</td>
+<td>74257</td>
+<td>198724</td>
+<td>183159</td>
+<td>50277</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>AZ</td>
+<td>515910</td>
+<td>828669</td>
+<td>362642</td>
+<td>601943</td>
+<td>1804762</td>
+<td>1523681</td>
+<td>862573</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>AR</td>
+<td>202070</td>
+<td>343207</td>
+<td>157204</td>
+<td>264160</td>
+<td>754420</td>
+<td>727124</td>
+<td>407205</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>CA</td>
+<td>2704659</td>
+<td>4499890</td>
+<td>2159981</td>
+<td>3853788</td>
+<td>10604510</td>
+<td>8819342</td>
+<td>4114496</td>
+</tr>
+</tbody>
+</table>
+
 </div>
-<div id="cell-9" class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>statesB <span class="op">=</span> pd.read_csv(<span class="st">'https://gist.githubusercontent.com/gabehope/464d3f28d8a7f83eace3c8a9982c0033/raw/19c32b16899556b0d0e20004ce93c7a518574255/statesB.csv'</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>statesB</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="cell-9" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>statesB <span class="op">=</span> pd.read_csv(<span class="st">'https://gist.githubusercontent.com/gabehope/464d3f28d8a7f83eace3c8a9982c0033/raw/19c32b16899556b0d0e20004ce93c7a518574255/statesB.csv'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>statesB</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">State</th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>AL</td>
+<td>Under 5 Years</td>
+<td>310504</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>AK</td>
+<td>Under 5 Years</td>
+<td>52083</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>AZ</td>
+<td>Under 5 Years</td>
+<td>515910</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>AR</td>
+<td>Under 5 Years</td>
+<td>202070</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>CA</td>
+<td>Under 5 Years</td>
+<td>2704659</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">352</td>
+<td>VA</td>
+<td>65 Years and Over</td>
+<td>940577</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">353</td>
+<td>WA</td>
+<td>65 Years and Over</td>
+<td>783877</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">354</td>
+<td>WV</td>
+<td>65 Years and Over</td>
+<td>285067</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">355</td>
+<td>WI</td>
+<td>65 Years and Over</td>
+<td>750146</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">356</td>
+<td>WY</td>
+<td>65 Years and Over</td>
+<td>65614</td>
+</tr>
+</tbody>
+</table>
+
+<p>357 rows × 3 columns</p>
+</div>
+</div>
 </div>
 </section>
 <section id="q2-variable-types" class="level2">
 <h2 class="anchored" data-anchor-id="q2-variable-types">Q2: Variable types</h2>
-<p>We’ll focus on <code>statesB</code> from here on out (an rename it <code>states</code> below). What is the <em>most appropriate</em> type to consider for the <code>age</code> variable?</p>
+<p>We’ll focus on <code>statesB</code> from here on out (renamed <code>states</code> below). What is the <em>most appropriate</em> type to consider for the <code>age</code> variable?</p>
 <ul>
 <li>Nominal</li>
 <li>Ordinal</li>
 <li>Quantitative</li>
 </ul>
-<div id="cell-11" class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>states <span class="op">=</span> statesB</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>statesB</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-11" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>states <span class="op">=</span> statesB</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>statesB</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">State</th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>AL</td>
+<td>Under 5 Years</td>
+<td>310504</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>AK</td>
+<td>Under 5 Years</td>
+<td>52083</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>AZ</td>
+<td>Under 5 Years</td>
+<td>515910</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>AR</td>
+<td>Under 5 Years</td>
+<td>202070</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>CA</td>
+<td>Under 5 Years</td>
+<td>2704659</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">352</td>
+<td>VA</td>
+<td>65 Years and Over</td>
+<td>940577</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">353</td>
+<td>WA</td>
+<td>65 Years and Over</td>
+<td>783877</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">354</td>
+<td>WV</td>
+<td>65 Years and Over</td>
+<td>285067</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">355</td>
+<td>WI</td>
+<td>65 Years and Over</td>
+<td>750146</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">356</td>
+<td>WY</td>
+<td>65 Years and Over</td>
+<td>65614</td>
+</tr>
+</tbody>
+</table>
+
+<p>357 rows × 3 columns</p>
+</div>
+</div>
 </div>
 </section>
 <section id="q3-converting-types" class="level2">
 <h2 class="anchored" data-anchor-id="q3-converting-types">Q3: Converting types</h2>
 <p>Based on your answer to <code>Q2</code> complete the code below to convert the <code>age</code> column to an appropriate type.</p>
-<div id="cell-13" class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the contents of this cell into Gradescope</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>age_type <span class="op">=</span>  </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>states[<span class="st">'age'</span>] <span class="op">=</span> states[<span class="st">'age'</span>].astype(age_type)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-13" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the contents of this cell into Gradescope</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>age_type <span class="op">=</span>  pd.CategoricalDtype(states[<span class="st">'age'</span>].unique(), ordered<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>states[<span class="st">'age'</span>] <span class="op">=</span> states[<span class="st">'age'</span>].astype(age_type)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -1880,48 +2176,213 @@ WY 65 Years and Over 65,614
 <p>Let’s start creating our plot by specifying the data and aesthetic mappings. In this case will pass them directly to the <code>ggplot</code> function so they can be shared by all layers.</p>
 <p>In the cell below add the correct <strong>aesthetic mapping</strong> to the plot specification to replicate the above visualization.</p>
 <p><em>Hint: you can use <code>x</code> and <code>y</code> for the positional mappings, a later component will be responsible for wrapping around a circle</em></p>
-<div id="cell-17" class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the contents of this cell into Gradescope</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> ggplot(</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>states,</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span> ,</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span> ,</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Other mappings here</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-17" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the contents of this cell into Gradescope</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> ggplot(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>states,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span> <span class="st">'State'</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span> <span class="st">'count'</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Other mappings here</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        fill<span class="op">=</span><span class="st">'age'</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="q5-geometries" class="level2">
 <h2 class="anchored" data-anchor-id="q5-geometries">Q5: Geometries</h2>
 <p>Now we’ll add a layer with an appropriate geometry to our specification. Complete the following code to add a geometry to the specification.</p>
 <p><em>Hint: Consider if you need to specify a <strong>statistical transform</strong> for your geometry. Also, passing <code>size=0</code> to the geometry will help better replicate the original plot’s aesthetics</em></p>
-<div id="cell-19" class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the contents of this cell into Gradescope</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> plot <span class="op">+</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-19" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the contents of this cell into Gradescope</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> plot <span class="op">+</span> geom_bar(size<span class="op">=</span><span class="dv">0</span>, stat<span class="op">=</span><span class="st">'identity'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>At this point we can visualize what we have so far.</p>
-<div id="cell-21" class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-21" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+   <div id="mEjAd3"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"data":{
+"State":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],
+"age":["Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over"],
+"count":[310504.0,52083.0,515910.0,202070.0,2704659.0,358280.0,211637.0,59319.0,36352.0,1140516.0,740521.0,87207.0,121746.0,894368.0,443089.0,201321.0,202529.0,284601.0,310716.0,71459.0,371787.0,383568.0,625526.0,358471.0,220813.0,399450.0,61114.0,132092.0,199175.0,75297.0,557421.0,148323.0,1208495.0,652823.0,41896.0,743750.0,266547.0,243483.0,737462.0,60934.0,303024.0,58566.0,416334.0,2027307.0,268916.0,32635.0,522672.0,433119.0,105435.0,362277.0,38253.0,552339.0,85640.0,828669.0,343207.0,4499890.0,587154.0,403658.0,99496.0,50439.0,1938695.0,1250460.0,134025.0,201192.0,1558919.0,780199.0,345409.0,342134.0,493536.0,542341.0,133656.0,651923.0,701752.0,1179503.0,606802.0,371502.0,690476.0,106088.0,215265.0,325650.0,144235.0,1011656.0,241326.0,2141490.0,1097890.0,67358.0,1340492.0,438926.0,424167.0,1345341.0,111408.0,517803.0,94438.0,725948.0,3277946.0,413034.0,62538.0,887525.0,750274.0,189649.0,640286.0,60890.0,259034.0,42153.0,362642.0,157204.0,2159981.0,261701.0,196918.0,47414.0,25225.0,925060.0,557860.0,64011.0,89702.0,725973.0,361393.0,165883.0,155822.0,229927.0,254916.0,69752.0,316873.0,341713.0,585169.0,289371.0,174405.0,331543.0,53156.0,99638.0,142976.0,73826.0,478505.0,112801.0,1058031.0,492964.0,33794.0,646135.0,200562.0,199925.0,679201.0,56198.0,245400.0,45305.0,336312.0,1420518.0,167685.0,33757.0,413004.0,357782.0,91074.0,311849.0,29314.0,450818.0,74257.0,601943.0,264160.0,3853788.0,466194.0,325110.0,84464.0,75569.0,1607297.0,919876.0,124834.0,147606.0,1311479.0,605863.0,306398.0,293114.0,381394.0,471275.0,112682.0,543470.0,665879.0,974480.0,507289.0,305964.0,560463.0,95232.0,186657.0,212379.0,119114.0,769321.0,203097.0,1999120.0,883397.0,82629.0,1081734.0,369916.0,338162.0,1203944.0,114502.0,438147.0,82869.0,550612.0,2454721.0,329585.0,61679.0,768475.0,610378.0,157989.0,553914.0,53980.0,1231572.0,198724.0,1804762.0,754420.0,1.060451E7,1464939.0,916955.0,230183.0,193557.0,4782119.0,2846985.0,356237.0,406247.0,3596343.0,1724528.0,750505.0,728166.0,1179637.0,1162463.0,331809.0,1556225.0,1782449.0,2628322.0,1416063.0,764203.0,1569626.0,236297.0,457177.0,769913.0,345109.0,2379649.0,517154.0,5355235.0,2575603.0,154913.0,3019147.0,957085.0,1044056.0,3157759.0,277779.0,1193112.0,196738.0,1719433.0,7017731.0,772024.0,155419.0,2203286.0,1850983.0,470749.0,1487457.0,137338.0,1215966.0,183159.0,1523681.0,727124.0,8819342.0,1290094.0,968967.0,230528.0,140043.0,4746856.0,2389018.0,331817.0,375173.0,3239173.0,1647881.0,788485.0,713663.0,1134283.0,1128771.0,397911.0,1513754.0,1751508.0,2706100.0,1391878.0,730133.0,1554812.0,278241.0,451756.0,653357.0,388250.0,2335168.0,501604.0,5120254.0,2380685.0,166615.0,3083815.0,918688.0,1036269.0,3414001.0,282321.0,1186019.0,210178.0,1646623.0,5656528.0,538978.0,188593.0,2033550.0,1762811.0,514505.0,1522038.0,147279.0,641667.0,50277.0,862573.0,407205.0,4114496.0,511094.0,478007.0,121688.0,70648.0,3187797.0,981024.0,190067.0,182150.0,1575308.0,813839.0,444554.0,366706.0,565867.0,540314.0,199187.0,679565.0,871098.0,1304322.0,650519.0,371598.0,805235.0,137312.0,240847.0,296717.0,169978.0,1150941.0,260051.0,2607672.0,1139052.0,94276.0,1570837.0,490637.0,503998.0,1910571.0,147646.0,596295.0,116100.0,819626.0,2472223.0,246202.0,86649.0,940577.0,783877.0,285067.0,750146.0,65614.0]
+},
+"mapping":{
+"x":"State",
+"y":"count",
+"fill":"age"
+},
+"data_meta":{
+"series_annotations":[{
+"column":"age",
+"factor_levels":["Under 5 Years","5 to 13 Years","14 to 17 Years","18 to 24 Years","25 to 44 Years","45 to 64 Years","65 Years and Over"]
+}]
+},
+"ggsize":{
+"width":1000.0,
+"height":1000.0
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"mapping":{
+},
+"data_meta":{
+"series_annotations":[{
+"column":"age",
+"factor_levels":["Under 5 Years","5 to 13 Years","14 to 17 Years","18 to 24 Years","25 to 44 Years","45 to 64 Years","65 Years and Over"]
+}]
+},
+"size":0.0,
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("mEjAd3");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
 </div>
 </section>
 <section id="q6-coordinate-systems" class="level2">
 <h2 class="anchored" data-anchor-id="q6-coordinate-systems">Q6: Coordinate systems</h2>
 <p>Now specify a <strong>coordinate</strong> system to match the original plot.</p>
 <p><em>Hint: check the slides or the <a href="https://lets-plot.org/python/pages/api.html">Lets-Plot documentation</a> to see what to specify to make sure the coordinate system works correctly</em></p>
-<div id="cell-23" class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the contents of this cell into Gradescope</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> plot <span class="op">+</span> </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-23" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the contents of this cell into Gradescope</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> plot <span class="op">+</span> coord_polar(theta<span class="op">=</span><span class="st">'x'</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+   <div id="Nkf7W7"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"data":{
+"State":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],
+"age":["Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over"],
+"count":[310504.0,52083.0,515910.0,202070.0,2704659.0,358280.0,211637.0,59319.0,36352.0,1140516.0,740521.0,87207.0,121746.0,894368.0,443089.0,201321.0,202529.0,284601.0,310716.0,71459.0,371787.0,383568.0,625526.0,358471.0,220813.0,399450.0,61114.0,132092.0,199175.0,75297.0,557421.0,148323.0,1208495.0,652823.0,41896.0,743750.0,266547.0,243483.0,737462.0,60934.0,303024.0,58566.0,416334.0,2027307.0,268916.0,32635.0,522672.0,433119.0,105435.0,362277.0,38253.0,552339.0,85640.0,828669.0,343207.0,4499890.0,587154.0,403658.0,99496.0,50439.0,1938695.0,1250460.0,134025.0,201192.0,1558919.0,780199.0,345409.0,342134.0,493536.0,542341.0,133656.0,651923.0,701752.0,1179503.0,606802.0,371502.0,690476.0,106088.0,215265.0,325650.0,144235.0,1011656.0,241326.0,2141490.0,1097890.0,67358.0,1340492.0,438926.0,424167.0,1345341.0,111408.0,517803.0,94438.0,725948.0,3277946.0,413034.0,62538.0,887525.0,750274.0,189649.0,640286.0,60890.0,259034.0,42153.0,362642.0,157204.0,2159981.0,261701.0,196918.0,47414.0,25225.0,925060.0,557860.0,64011.0,89702.0,725973.0,361393.0,165883.0,155822.0,229927.0,254916.0,69752.0,316873.0,341713.0,585169.0,289371.0,174405.0,331543.0,53156.0,99638.0,142976.0,73826.0,478505.0,112801.0,1058031.0,492964.0,33794.0,646135.0,200562.0,199925.0,679201.0,56198.0,245400.0,45305.0,336312.0,1420518.0,167685.0,33757.0,413004.0,357782.0,91074.0,311849.0,29314.0,450818.0,74257.0,601943.0,264160.0,3853788.0,466194.0,325110.0,84464.0,75569.0,1607297.0,919876.0,124834.0,147606.0,1311479.0,605863.0,306398.0,293114.0,381394.0,471275.0,112682.0,543470.0,665879.0,974480.0,507289.0,305964.0,560463.0,95232.0,186657.0,212379.0,119114.0,769321.0,203097.0,1999120.0,883397.0,82629.0,1081734.0,369916.0,338162.0,1203944.0,114502.0,438147.0,82869.0,550612.0,2454721.0,329585.0,61679.0,768475.0,610378.0,157989.0,553914.0,53980.0,1231572.0,198724.0,1804762.0,754420.0,1.060451E7,1464939.0,916955.0,230183.0,193557.0,4782119.0,2846985.0,356237.0,406247.0,3596343.0,1724528.0,750505.0,728166.0,1179637.0,1162463.0,331809.0,1556225.0,1782449.0,2628322.0,1416063.0,764203.0,1569626.0,236297.0,457177.0,769913.0,345109.0,2379649.0,517154.0,5355235.0,2575603.0,154913.0,3019147.0,957085.0,1044056.0,3157759.0,277779.0,1193112.0,196738.0,1719433.0,7017731.0,772024.0,155419.0,2203286.0,1850983.0,470749.0,1487457.0,137338.0,1215966.0,183159.0,1523681.0,727124.0,8819342.0,1290094.0,968967.0,230528.0,140043.0,4746856.0,2389018.0,331817.0,375173.0,3239173.0,1647881.0,788485.0,713663.0,1134283.0,1128771.0,397911.0,1513754.0,1751508.0,2706100.0,1391878.0,730133.0,1554812.0,278241.0,451756.0,653357.0,388250.0,2335168.0,501604.0,5120254.0,2380685.0,166615.0,3083815.0,918688.0,1036269.0,3414001.0,282321.0,1186019.0,210178.0,1646623.0,5656528.0,538978.0,188593.0,2033550.0,1762811.0,514505.0,1522038.0,147279.0,641667.0,50277.0,862573.0,407205.0,4114496.0,511094.0,478007.0,121688.0,70648.0,3187797.0,981024.0,190067.0,182150.0,1575308.0,813839.0,444554.0,366706.0,565867.0,540314.0,199187.0,679565.0,871098.0,1304322.0,650519.0,371598.0,805235.0,137312.0,240847.0,296717.0,169978.0,1150941.0,260051.0,2607672.0,1139052.0,94276.0,1570837.0,490637.0,503998.0,1910571.0,147646.0,596295.0,116100.0,819626.0,2472223.0,246202.0,86649.0,940577.0,783877.0,285067.0,750146.0,65614.0]
+},
+"mapping":{
+"x":"State",
+"y":"count",
+"fill":"age"
+},
+"data_meta":{
+"series_annotations":[{
+"column":"age",
+"factor_levels":["Under 5 Years","5 to 13 Years","14 to 17 Years","18 to 24 Years","25 to 44 Years","45 to 64 Years","65 Years and Over"]
+}]
+},
+"ggsize":{
+"width":1000.0,
+"height":1000.0
+},
+"coord":{
+"name":"polar",
+"theta":"x"
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"mapping":{
+},
+"data_meta":{
+"series_annotations":[{
+"column":"age",
+"factor_levels":["Under 5 Years","5 to 13 Years","14 to 17 Years","18 to 24 Years","25 to 44 Years","45 to 64 Years","65 Years and Over"]
+}]
+},
+"size":0.0,
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("Nkf7W7");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
 </div>
 </section>
 <section id="q7-scales" class="level2">
 <h2 class="anchored" data-anchor-id="q7-scales">Q7: Scales</h2>
 <p>At this point you should notice that the <strong>y-scale</strong> (which should map to radius in our coordinate system), doesn’t quite map the way we want. Add a scale specification to our plot to create a empty central circle.</p>
-<div id="cell-25" class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the contents of this cell into Gradescope</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> plot <span class="op">+</span> </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-25" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the contents of this cell into Gradescope</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> plot <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="op">-</span><span class="dv">10000000</span>, <span class="va">None</span>])</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+   <div id="t2t6za"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"data":{
+"State":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],
+"age":["Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over"],
+"count":[310504.0,52083.0,515910.0,202070.0,2704659.0,358280.0,211637.0,59319.0,36352.0,1140516.0,740521.0,87207.0,121746.0,894368.0,443089.0,201321.0,202529.0,284601.0,310716.0,71459.0,371787.0,383568.0,625526.0,358471.0,220813.0,399450.0,61114.0,132092.0,199175.0,75297.0,557421.0,148323.0,1208495.0,652823.0,41896.0,743750.0,266547.0,243483.0,737462.0,60934.0,303024.0,58566.0,416334.0,2027307.0,268916.0,32635.0,522672.0,433119.0,105435.0,362277.0,38253.0,552339.0,85640.0,828669.0,343207.0,4499890.0,587154.0,403658.0,99496.0,50439.0,1938695.0,1250460.0,134025.0,201192.0,1558919.0,780199.0,345409.0,342134.0,493536.0,542341.0,133656.0,651923.0,701752.0,1179503.0,606802.0,371502.0,690476.0,106088.0,215265.0,325650.0,144235.0,1011656.0,241326.0,2141490.0,1097890.0,67358.0,1340492.0,438926.0,424167.0,1345341.0,111408.0,517803.0,94438.0,725948.0,3277946.0,413034.0,62538.0,887525.0,750274.0,189649.0,640286.0,60890.0,259034.0,42153.0,362642.0,157204.0,2159981.0,261701.0,196918.0,47414.0,25225.0,925060.0,557860.0,64011.0,89702.0,725973.0,361393.0,165883.0,155822.0,229927.0,254916.0,69752.0,316873.0,341713.0,585169.0,289371.0,174405.0,331543.0,53156.0,99638.0,142976.0,73826.0,478505.0,112801.0,1058031.0,492964.0,33794.0,646135.0,200562.0,199925.0,679201.0,56198.0,245400.0,45305.0,336312.0,1420518.0,167685.0,33757.0,413004.0,357782.0,91074.0,311849.0,29314.0,450818.0,74257.0,601943.0,264160.0,3853788.0,466194.0,325110.0,84464.0,75569.0,1607297.0,919876.0,124834.0,147606.0,1311479.0,605863.0,306398.0,293114.0,381394.0,471275.0,112682.0,543470.0,665879.0,974480.0,507289.0,305964.0,560463.0,95232.0,186657.0,212379.0,119114.0,769321.0,203097.0,1999120.0,883397.0,82629.0,1081734.0,369916.0,338162.0,1203944.0,114502.0,438147.0,82869.0,550612.0,2454721.0,329585.0,61679.0,768475.0,610378.0,157989.0,553914.0,53980.0,1231572.0,198724.0,1804762.0,754420.0,1.060451E7,1464939.0,916955.0,230183.0,193557.0,4782119.0,2846985.0,356237.0,406247.0,3596343.0,1724528.0,750505.0,728166.0,1179637.0,1162463.0,331809.0,1556225.0,1782449.0,2628322.0,1416063.0,764203.0,1569626.0,236297.0,457177.0,769913.0,345109.0,2379649.0,517154.0,5355235.0,2575603.0,154913.0,3019147.0,957085.0,1044056.0,3157759.0,277779.0,1193112.0,196738.0,1719433.0,7017731.0,772024.0,155419.0,2203286.0,1850983.0,470749.0,1487457.0,137338.0,1215966.0,183159.0,1523681.0,727124.0,8819342.0,1290094.0,968967.0,230528.0,140043.0,4746856.0,2389018.0,331817.0,375173.0,3239173.0,1647881.0,788485.0,713663.0,1134283.0,1128771.0,397911.0,1513754.0,1751508.0,2706100.0,1391878.0,730133.0,1554812.0,278241.0,451756.0,653357.0,388250.0,2335168.0,501604.0,5120254.0,2380685.0,166615.0,3083815.0,918688.0,1036269.0,3414001.0,282321.0,1186019.0,210178.0,1646623.0,5656528.0,538978.0,188593.0,2033550.0,1762811.0,514505.0,1522038.0,147279.0,641667.0,50277.0,862573.0,407205.0,4114496.0,511094.0,478007.0,121688.0,70648.0,3187797.0,981024.0,190067.0,182150.0,1575308.0,813839.0,444554.0,366706.0,565867.0,540314.0,199187.0,679565.0,871098.0,1304322.0,650519.0,371598.0,805235.0,137312.0,240847.0,296717.0,169978.0,1150941.0,260051.0,2607672.0,1139052.0,94276.0,1570837.0,490637.0,503998.0,1910571.0,147646.0,596295.0,116100.0,819626.0,2472223.0,246202.0,86649.0,940577.0,783877.0,285067.0,750146.0,65614.0]
+},
+"mapping":{
+"x":"State",
+"y":"count",
+"fill":"age"
+},
+"data_meta":{
+"series_annotations":[{
+"column":"age",
+"factor_levels":["Under 5 Years","5 to 13 Years","14 to 17 Years","18 to 24 Years","25 to 44 Years","45 to 64 Years","65 Years and Over"]
+}]
+},
+"ggsize":{
+"width":1000.0,
+"height":1000.0
+},
+"coord":{
+"name":"polar",
+"theta":"x"
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"y",
+"limits":[-1.0E7,null]
+}],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"mapping":{
+},
+"data_meta":{
+"series_annotations":[{
+"column":"age",
+"factor_levels":["Under 5 Years","5 to 13 Years","14 to 17 Years","18 to 24 Years","25 to 44 Years","45 to 64 Years","65 Years and Over"]
+}]
+},
+"size":0.0,
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("t2t6za");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
 </div>
 </section>
 </section>
@@ -1929,7 +2390,7 @@ WY 65 Years and Over 65,614
 <h1>Q8: Exporting</h1>
 <p>At this point we should have something similar to our original plot! We can save it use the <code>ggsave</code> function. Upload the saved image to gradescope.</p>
 <div id="cell-27" class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ggsave(plot, <span class="st">'plot.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ggsave(plot, <span class="st">'plot.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="part-3-improving-visualizations" class="level1">
@@ -1937,17 +2398,114 @@ WY 65 Years and Over 65,614
 <section id="q9-effectiveness" class="level2">
 <h2 class="anchored" data-anchor-id="q9-effectiveness">Q9: Effectiveness</h2>
 <p>Modify the plot you created with at least one change to improve the <strong>effectiveness</strong> of comparison. Upload the resulting image to Gradescope.</p>
-<div id="cell-30" class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>ggsave(plot, <span class="st">'plot-effectiveness.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-30" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>states, size<span class="op">=</span><span class="dv">0</span>, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'State'</span>, y<span class="op">=</span><span class="st">'count'</span>, fill<span class="op">=</span><span class="st">'age'</span>), stat<span class="op">=</span><span class="st">'identity'</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">600</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(plot, 'plot-effectiveness.png')</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="23">
+   <div id="9PQ0pD"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"ggsize":{
+"width":1000.0,
+"height":600.0
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"data":{
+"State":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],
+"age":["Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","Under 5 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","5 to 13 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","14 to 17 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over","65 Years and Over"],
+"count":[310504.0,52083.0,515910.0,202070.0,2704659.0,358280.0,211637.0,59319.0,36352.0,1140516.0,740521.0,87207.0,121746.0,894368.0,443089.0,201321.0,202529.0,284601.0,310716.0,71459.0,371787.0,383568.0,625526.0,358471.0,220813.0,399450.0,61114.0,132092.0,199175.0,75297.0,557421.0,148323.0,1208495.0,652823.0,41896.0,743750.0,266547.0,243483.0,737462.0,60934.0,303024.0,58566.0,416334.0,2027307.0,268916.0,32635.0,522672.0,433119.0,105435.0,362277.0,38253.0,552339.0,85640.0,828669.0,343207.0,4499890.0,587154.0,403658.0,99496.0,50439.0,1938695.0,1250460.0,134025.0,201192.0,1558919.0,780199.0,345409.0,342134.0,493536.0,542341.0,133656.0,651923.0,701752.0,1179503.0,606802.0,371502.0,690476.0,106088.0,215265.0,325650.0,144235.0,1011656.0,241326.0,2141490.0,1097890.0,67358.0,1340492.0,438926.0,424167.0,1345341.0,111408.0,517803.0,94438.0,725948.0,3277946.0,413034.0,62538.0,887525.0,750274.0,189649.0,640286.0,60890.0,259034.0,42153.0,362642.0,157204.0,2159981.0,261701.0,196918.0,47414.0,25225.0,925060.0,557860.0,64011.0,89702.0,725973.0,361393.0,165883.0,155822.0,229927.0,254916.0,69752.0,316873.0,341713.0,585169.0,289371.0,174405.0,331543.0,53156.0,99638.0,142976.0,73826.0,478505.0,112801.0,1058031.0,492964.0,33794.0,646135.0,200562.0,199925.0,679201.0,56198.0,245400.0,45305.0,336312.0,1420518.0,167685.0,33757.0,413004.0,357782.0,91074.0,311849.0,29314.0,450818.0,74257.0,601943.0,264160.0,3853788.0,466194.0,325110.0,84464.0,75569.0,1607297.0,919876.0,124834.0,147606.0,1311479.0,605863.0,306398.0,293114.0,381394.0,471275.0,112682.0,543470.0,665879.0,974480.0,507289.0,305964.0,560463.0,95232.0,186657.0,212379.0,119114.0,769321.0,203097.0,1999120.0,883397.0,82629.0,1081734.0,369916.0,338162.0,1203944.0,114502.0,438147.0,82869.0,550612.0,2454721.0,329585.0,61679.0,768475.0,610378.0,157989.0,553914.0,53980.0,1231572.0,198724.0,1804762.0,754420.0,1.060451E7,1464939.0,916955.0,230183.0,193557.0,4782119.0,2846985.0,356237.0,406247.0,3596343.0,1724528.0,750505.0,728166.0,1179637.0,1162463.0,331809.0,1556225.0,1782449.0,2628322.0,1416063.0,764203.0,1569626.0,236297.0,457177.0,769913.0,345109.0,2379649.0,517154.0,5355235.0,2575603.0,154913.0,3019147.0,957085.0,1044056.0,3157759.0,277779.0,1193112.0,196738.0,1719433.0,7017731.0,772024.0,155419.0,2203286.0,1850983.0,470749.0,1487457.0,137338.0,1215966.0,183159.0,1523681.0,727124.0,8819342.0,1290094.0,968967.0,230528.0,140043.0,4746856.0,2389018.0,331817.0,375173.0,3239173.0,1647881.0,788485.0,713663.0,1134283.0,1128771.0,397911.0,1513754.0,1751508.0,2706100.0,1391878.0,730133.0,1554812.0,278241.0,451756.0,653357.0,388250.0,2335168.0,501604.0,5120254.0,2380685.0,166615.0,3083815.0,918688.0,1036269.0,3414001.0,282321.0,1186019.0,210178.0,1646623.0,5656528.0,538978.0,188593.0,2033550.0,1762811.0,514505.0,1522038.0,147279.0,641667.0,50277.0,862573.0,407205.0,4114496.0,511094.0,478007.0,121688.0,70648.0,3187797.0,981024.0,190067.0,182150.0,1575308.0,813839.0,444554.0,366706.0,565867.0,540314.0,199187.0,679565.0,871098.0,1304322.0,650519.0,371598.0,805235.0,137312.0,240847.0,296717.0,169978.0,1150941.0,260051.0,2607672.0,1139052.0,94276.0,1570837.0,490637.0,503998.0,1910571.0,147646.0,596295.0,116100.0,819626.0,2472223.0,246202.0,86649.0,940577.0,783877.0,285067.0,750146.0,65614.0]
+},
+"mapping":{
+"x":"State",
+"y":"count",
+"fill":"age"
+},
+"data_meta":{
+"series_annotations":[{
+"column":"age",
+"factor_levels":["Under 5 Years","5 to 13 Years","14 to 17 Years","18 to 24 Years","25 to 44 Years","45 to 64 Years","65 Years and Over"]
+},{
+"column":"State",
+"factor_levels":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"]
+}]
+},
+"size":0.0
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("9PQ0pD");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
 </div>
 </section>
 <section id="q10-expressiveness-consistency" class="level2">
 <h2 class="anchored" data-anchor-id="q10-expressiveness-consistency">Q10: Expressiveness (consistency)</h2>
 <p>Modify the plot you created with at least one change to improve the <strong>expressiveness</strong> or <strong>consistency</strong> of the presentation. Upload the resulting image to Gradescope.</p>
-<div id="cell-32" class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>ggsave(plot, <span class="st">'plot-expresiveness.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-32" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>states.sort_values(<span class="st">'count'</span>, ascending<span class="op">=</span><span class="va">False</span>), size<span class="op">=</span><span class="dv">0</span>, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'State'</span>, y<span class="op">=</span><span class="st">'count'</span>, fill<span class="op">=</span><span class="st">'age'</span>), stat<span class="op">=</span><span class="st">'identity'</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">600</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="24">
+   <div id="bMqRVe"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"ggsize":{
+"width":1000.0,
+"height":600.0
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"data":{
+"State":["CA","CA","TX","TX","NY","NY","FL","FL","CA","CA","CA","IL","PA","TX","IL","FL","PA","OH","OH","GA","MI","CA","MI","NY","NC","TX","TX","GA","NC","NJ","NJ","VA","CA","NY","VA","TX","NY","FL","PA","WA","AZ","MA","WA","MA","IN","TN","IN","TN","FL","IL","OH","MO","IL","MD","MO","AZ","WI","MD","WI","CO","TX","MN","MN","PA","OH","IL","MI","CO","GA","AL","AL","NY","PA","SC","SC","KY","MI","LA","NJ","FL","NC","KY","LA","NC","OH","NY","OR","OR","NJ","GA","MI","CT","OK","VA","FL","GA","OK","CT","IL","VA","NC","MA","AZ","AZ","TN","IN","MO","IA","WA","IN","UT","NV","NJ","VA","MS","AR","IA","WA","WI","OH","GA","PA","MS","KS","AR","IL","TN","KS","MA","MO","MD","PA","MA","NV","NC","MD","MN","OH","AL","WI","MI","WA","MN","IN","AZ","SC","CO","MI","KY","MO","GA","NJ","WI","AL","TN","MD","LA","LA","UT","VA","SC","NM","AZ","WV","CO","MN","OR","NM","KY","NC","OK","NJ","CT","LA","WV","CO","NE","NE","AL","IA","IN","OK","SC","WA","OR","TN","UT","VA","AR","ID","CT","MO","ME","NH","MA","KY","ID","MD","MS","MS","OK","KS","AZ","WI","IN","MN","CO","WA","HI","IA","NH","AR","KS","MA","OR","TN","HI","ME","MO","UT","NV","CT","MD","WI","LA","AL","IA","MS","SC","NV","KS","MN","WV","KY","RI","MT","RI","UT","OK","AR","CO","NM","AL","LA","UT","SC","OR","NM","NE","MT","DE","DE","KY","MS","NE","NV","CT","SD","NM","KS","AR","IA","ID","OK","OR","ME","NV","AK","CT","SD","DC","HI","WV","VT","NE","AK","ID","MS","NH","UT","ND","IA","WV","AR","KS","VT","ND","NM","RI","ID","WY","NH","NV","DC","WY","MT","HI","ME","NE","HI","ID","DE","NH","SD","RI","NM","ME","RI","MT","WV","NE","DE","MT","SD","ND","WV","ID","HI","VT","AK","DE","SD","ND","DC","NH","AK","NH","ME","DC","ME","ND","WY","HI","VT","VT","MT","RI","WY","DE","SD","RI","WY","MT","AK","DC","AK","DE","SD","AK","ND","WY","DC","ND","VT","VT","WY","DC"],
+"age":["25 to 44 Years","45 to 64 Years","25 to 44 Years","45 to 64 Years","25 to 44 Years","45 to 64 Years","25 to 44 Years","45 to 64 Years","5 to 13 Years","65 Years and Over","18 to 24 Years","25 to 44 Years","45 to 64 Years","5 to 13 Years","45 to 64 Years","65 Years and Over","25 to 44 Years","45 to 64 Years","25 to 44 Years","25 to 44 Years","45 to 64 Years","Under 5 Years","25 to 44 Years","65 Years and Over","25 to 44 Years","65 Years and Over","18 to 24 Years","45 to 64 Years","45 to 64 Years","25 to 44 Years","45 to 64 Years","25 to 44 Years","14 to 17 Years","5 to 13 Years","45 to 64 Years","Under 5 Years","18 to 24 Years","5 to 13 Years","65 Years and Over","25 to 44 Years","25 to 44 Years","25 to 44 Years","45 to 64 Years","45 to 64 Years","25 to 44 Years","25 to 44 Years","45 to 64 Years","45 to 64 Years","18 to 24 Years","65 Years and Over","65 Years and Over","25 to 44 Years","5 to 13 Years","25 to 44 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","45 to 64 Years","25 to 44 Years","25 to 44 Years","14 to 17 Years","25 to 44 Years","45 to 64 Years","5 to 13 Years","5 to 13 Years","18 to 24 Years","65 Years and Over","45 to 64 Years","5 to 13 Years","25 to 44 Years","45 to 64 Years","Under 5 Years","18 to 24 Years","25 to 44 Years","45 to 64 Years","25 to 44 Years","5 to 13 Years","25 to 44 Years","65 Years and Over","Under 5 Years","65 Years and Over","45 to 64 Years","45 to 64 Years","5 to 13 Years","18 to 24 Years","14 to 17 Years","25 to 44 Years","45 to 64 Years","5 to 13 Years","65 Years and Over","18 to 24 Years","45 to 64 Years","25 to 44 Years","65 Years and Over","14 to 17 Years","18 to 24 Years","45 to 64 Years","25 to 44 Years","Under 5 Years","5 to 13 Years","18 to 24 Years","65 Years and Over","65 Years and Over","5 to 13 Years","65 Years and Over","65 Years and Over","65 Years and Over","45 to 64 Years","65 Years and Over","5 to 13 Years","25 to 44 Years","25 to 44 Years","18 to 24 Years","18 to 24 Years","25 to 44 Years","25 to 44 Years","25 to 44 Years","5 to 13 Years","65 Years and Over","Under 5 Years","Under 5 Years","Under 5 Years","45 to 64 Years","25 to 44 Years","45 to 64 Years","14 to 17 Years","5 to 13 Years","45 to 64 Years","5 to 13 Years","5 to 13 Years","65 Years and Over","14 to 17 Years","18 to 24 Years","45 to 64 Years","Under 5 Years","5 to 13 Years","65 Years and Over","14 to 17 Years","65 Years and Over","5 to 13 Years","Under 5 Years","18 to 24 Years","5 to 13 Years","18 to 24 Years","18 to 24 Years","65 Years and Over","5 to 13 Years","14 to 17 Years","65 Years and Over","18 to 24 Years","14 to 17 Years","Under 5 Years","18 to 24 Years","5 to 13 Years","18 to 24 Years","18 to 24 Years","5 to 13 Years","65 Years and Over","45 to 64 Years","Under 5 Years","5 to 13 Years","25 to 44 Years","Under 5 Years","45 to 64 Years","65 Years and Over","18 to 24 Years","65 Years and Over","45 to 64 Years","5 to 13 Years","14 to 17 Years","65 Years and Over","14 to 17 Years","65 Years and Over","18 to 24 Years","25 to 44 Years","18 to 24 Years","25 to 44 Years","45 to 64 Years","18 to 24 Years","65 Years and Over","Under 5 Years","5 to 13 Years","18 to 24 Years","Under 5 Years","5 to 13 Years","Under 5 Years","5 to 13 Years","14 to 17 Years","65 Years and Over","25 to 44 Years","5 to 13 Years","Under 5 Years","45 to 64 Years","45 to 64 Years","Under 5 Years","18 to 24 Years","45 to 64 Years","Under 5 Years","65 Years and Over","5 to 13 Years","18 to 24 Years","65 Years and Over","14 to 17 Years","Under 5 Years","14 to 17 Years","Under 5 Years","Under 5 Years","14 to 17 Years","25 to 44 Years","5 to 13 Years","25 to 44 Years","5 to 13 Years","5 to 13 Years","14 to 17 Years","18 to 24 Years","14 to 17 Years","45 to 64 Years","25 to 44 Years","14 to 17 Years","18 to 24 Years","5 to 13 Years","18 to 24 Years","14 to 17 Years","14 to 17 Years","Under 5 Years","Under 5 Years","18 to 24 Years","18 to 24 Years","Under 5 Years","65 Years and Over","18 to 24 Years","14 to 17 Years","65 Years and Over","Under 5 Years","45 to 64 Years","45 to 64 Years","25 to 44 Years","Under 5 Years","Under 5 Years","18 to 24 Years","14 to 17 Years","65 Years and Over","14 to 17 Years","14 to 17 Years","65 Years and Over","14 to 17 Years","Under 5 Years","5 to 13 Years","65 Years and Over","25 to 44 Years","45 to 64 Years","25 to 44 Years","14 to 17 Years","Under 5 Years","5 to 13 Years","18 to 24 Years","Under 5 Years","45 to 64 Years","18 to 24 Years","Under 5 Years","Under 5 Years","Under 5 Years","5 to 13 Years","14 to 17 Years","14 to 17 Years","65 Years and Over","Under 5 Years","25 to 44 Years","14 to 17 Years","25 to 44 Years","25 to 44 Years","65 Years and Over","5 to 13 Years","45 to 64 Years","18 to 24 Years","45 to 64 Years","65 Years and Over","14 to 17 Years","65 Years and Over","14 to 17 Years","45 to 64 Years","14 to 17 Years","18 to 24 Years","14 to 17 Years","14 to 17 Years","25 to 44 Years","25 to 44 Years","Under 5 Years","65 Years and Over","18 to 24 Years","45 to 64 Years","5 to 13 Years","14 to 17 Years","45 to 64 Years","25 to 44 Years","65 Years and Over","5 to 13 Years","5 to 13 Years","Under 5 Years","18 to 24 Years","Under 5 Years","65 Years and Over","18 to 24 Years","65 Years and Over","18 to 24 Years","14 to 17 Years","18 to 24 Years","5 to 13 Years","5 to 13 Years","Under 5 Years","14 to 17 Years","5 to 13 Years","18 to 24 Years","5 to 13 Years","65 Years and Over","14 to 17 Years","14 to 17 Years","Under 5 Years","65 Years and Over","5 to 13 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","18 to 24 Years","Under 5 Years","18 to 24 Years","14 to 17 Years","Under 5 Years","65 Years and Over","14 to 17 Years","5 to 13 Years","65 Years and Over","14 to 17 Years","5 to 13 Years","18 to 24 Years","Under 5 Years","Under 5 Years","5 to 13 Years","Under 5 Years","Under 5 Years","14 to 17 Years","18 to 24 Years","14 to 17 Years","Under 5 Years","5 to 13 Years","65 Years and Over","14 to 17 Years","14 to 17 Years","14 to 17 Years","Under 5 Years","Under 5 Years","Under 5 Years","14 to 17 Years","14 to 17 Years","Under 5 Years","14 to 17 Years","14 to 17 Years"],
+"count":[1.060451E7,8819342.0,7017731.0,5656528.0,5355235.0,5120254.0,4782119.0,4746856.0,4499890.0,4114496.0,3853788.0,3596343.0,3414001.0,3277946.0,3239173.0,3187797.0,3157759.0,3083815.0,3019147.0,2846985.0,2706100.0,2704659.0,2628322.0,2607672.0,2575603.0,2472223.0,2454721.0,2389018.0,2380685.0,2379649.0,2335168.0,2203286.0,2159981.0,2141490.0,2033550.0,2027307.0,1999120.0,1938695.0,1910571.0,1850983.0,1804762.0,1782449.0,1762811.0,1751508.0,1724528.0,1719433.0,1647881.0,1646623.0,1607297.0,1575308.0,1570837.0,1569626.0,1558919.0,1556225.0,1554812.0,1523681.0,1522038.0,1513754.0,1487457.0,1464939.0,1420518.0,1416063.0,1391878.0,1345341.0,1340492.0,1311479.0,1304322.0,1290094.0,1250460.0,1231572.0,1215966.0,1208495.0,1203944.0,1193112.0,1186019.0,1179637.0,1179503.0,1162463.0,1150941.0,1140516.0,1139052.0,1134283.0,1128771.0,1097890.0,1081734.0,1058031.0,1044056.0,1036269.0,1011656.0,981024.0,974480.0,968967.0,957085.0,940577.0,925060.0,919876.0,918688.0,916955.0,894368.0,887525.0,883397.0,871098.0,862573.0,828669.0,819626.0,813839.0,805235.0,788485.0,783877.0,780199.0,772024.0,769913.0,769321.0,768475.0,764203.0,754420.0,750505.0,750274.0,750146.0,743750.0,740521.0,737462.0,730133.0,728166.0,727124.0,725973.0,725948.0,713663.0,701752.0,690476.0,679565.0,679201.0,665879.0,653357.0,652823.0,651923.0,650519.0,646135.0,641667.0,640286.0,625526.0,610378.0,606802.0,605863.0,601943.0,596295.0,587154.0,585169.0,565867.0,560463.0,557860.0,557421.0,553914.0,552339.0,550612.0,543470.0,542341.0,540314.0,538978.0,522672.0,517803.0,517154.0,515910.0,514505.0,511094.0,507289.0,503998.0,501604.0,493536.0,492964.0,490637.0,478505.0,478007.0,471275.0,470749.0,466194.0,457177.0,451756.0,450818.0,444554.0,443089.0,438926.0,438147.0,433119.0,424167.0,416334.0,413034.0,413004.0,407205.0,406247.0,403658.0,399450.0,397911.0,388250.0,383568.0,381394.0,375173.0,371787.0,371598.0,371502.0,369916.0,366706.0,362642.0,362277.0,361393.0,358471.0,358280.0,357782.0,356237.0,345409.0,345109.0,343207.0,342134.0,341713.0,338162.0,336312.0,331817.0,331809.0,331543.0,329585.0,325650.0,325110.0,316873.0,311849.0,310716.0,310504.0,306398.0,305964.0,303024.0,296717.0,293114.0,289371.0,285067.0,284601.0,282321.0,278241.0,277779.0,268916.0,266547.0,264160.0,261701.0,260051.0,259034.0,254916.0,246202.0,245400.0,243483.0,241326.0,240847.0,236297.0,230528.0,230183.0,229927.0,220813.0,215265.0,212379.0,211637.0,210178.0,203097.0,202529.0,202070.0,201321.0,201192.0,200562.0,199925.0,199187.0,199175.0,198724.0,196918.0,196738.0,193557.0,190067.0,189649.0,188593.0,186657.0,183159.0,182150.0,174405.0,169978.0,167685.0,166615.0,165883.0,157989.0,157204.0,155822.0,155419.0,154913.0,148323.0,147646.0,147606.0,147279.0,144235.0,142976.0,140043.0,137338.0,137312.0,134025.0,133656.0,132092.0,124834.0,121746.0,121688.0,119114.0,116100.0,114502.0,112801.0,112682.0,111408.0,106088.0,105435.0,99638.0,99496.0,95232.0,94438.0,94276.0,91074.0,89702.0,87207.0,86649.0,85640.0,84464.0,82869.0,82629.0,75569.0,75297.0,74257.0,73826.0,71459.0,70648.0,69752.0,67358.0,65614.0,64011.0,62538.0,61679.0,61114.0,60934.0,60890.0,59319.0,58566.0,56198.0,53980.0,53156.0,52083.0,50439.0,50277.0,47414.0,45305.0,42153.0,41896.0,38253.0,36352.0,33794.0,33757.0,32635.0,29314.0,25225.0]
+},
+"mapping":{
+"x":"State",
+"y":"count",
+"fill":"age"
+},
+"data_meta":{
+"series_annotations":[{
+"column":"age",
+"factor_levels":["Under 5 Years","5 to 13 Years","14 to 17 Years","18 to 24 Years","25 to 44 Years","45 to 64 Years","65 Years and Over"]
+},{
+"column":"State",
+"factor_levels":["CA","TX","NY","FL","IL","PA","OH","GA","MI","NC","NJ","VA","WA","AZ","MA","IN","TN","MO","MD","WI","CO","MN","AL","SC","KY","LA","OR","CT","OK","IA","UT","NV","MS","AR","KS","NM","WV","NE","ID","ME","NH","HI","RI","MT","DE","SD","AK","DC","VT","ND","WY"]
+}]
+},
+"size":0.0
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("bMqRVe");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
 </div>
 
 

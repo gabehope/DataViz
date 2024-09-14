@@ -109,6 +109,10 @@ $header-bgcolor: darkorange;
     line-height: 3;
 }
 
+.table {
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.0) !important;
+}
+
 
 // Uncomment to move slide number to bottom right
 //.slide-number, .reveal.has-logo .slide-number {

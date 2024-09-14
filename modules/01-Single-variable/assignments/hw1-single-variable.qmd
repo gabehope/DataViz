@@ -18,15 +18,15 @@ format: html
 # Logistics
 
 ## Timeline
-- **Friday, September XX 11:59pm** Create a gradescope submission for your assignment with all group members.
-- **Thursday, September XX 11:59pm** Submit your final assignment on Gradescope
-- **Friday, September XX 11:59pm** Submit your reflections on Gradescope.
-- **Thursday, September XX 11:59pm** Submit your peer feedback on Gradescope.
+- **Friday, September 20 11:59pm** Create a gradescope submission for your assignment with all group members.
+- **Thursday, September 26 11:59pm** Submit your final assignment on Gradescope
+- **Friday, September 27 11:59pm** Submit your reflections on Gradescope.
+- **Tuesday, October 1 11:59pm** Submit your peer feedback on Gradescope.
 
 ## Groups
 This assignment **must** be completed in groups of 2-3 students. The instructor reserves the right to add students to a group as needed.
 
-Once you have chosen your group, please create a submission on Gradescope with all group memebers by **Friday, September XX**. 
+Once you have chosen your group, please create a submission on Gradescope with all group members by **Friday, September 20**. 
 
 # Assignment
 
@@ -36,7 +36,7 @@ To this end, you will create example visualizations of your dataset and perform 
 
 **Each member** of your team should choose a varible in the dataset that they think may show something interesting. For each of these variables, create a visualization that shows the distribution of that variable. The exact type of visualization is up to you, but it should provide a *clear* and *accurate* picture of the data. A reader should also understand either from the visualization and/or from text, what some of the relevant descriptive statistics of the variable are (e.g. mean, median, min, max, mode etc., depending on what you think is most important to show).
 
-**For each variable** perform either a predictive or inferential analysis that illustrates something that we can conclude from that variable. For example, this could mean estimating the likelihood of some future value or testing a hypothesis about the population mean of that variable.
+**For at least one variable** perform either a predictive or inferential analysis that illustrates something that we can conclude from that variable. For example, this could mean estimating the likelihood of some future value or testing a hypothesis about the population mean of that variable.
 
 **Submit a 1-3 page (including figures) report** about you dataset that includes your visualizations and the results of your analysis. Your report should be written for a general audience who you think should be interested in this data. This could be researchers, policy-makers or the general public; anyone whose descisions may be influenced by your findings. This means you should first motivate *why* your chosen dataset is interesting/exciting/important. Then explain what your visualizations show about the data. Finally discuss what your analysis shows and why it is exciting, intuitive or surprising. You do *not* need to include the details of your calculations, but it should be clear what assumptions are being made for each model and how reasonable these assumptions are.
 
@@ -49,7 +49,7 @@ Depending on the dataset, you may decide to have multiple team members choose th
 - [ ] Choose a public dataset to focus on. In your report motivate *why* you find this dataset interesting.
 - [ ] Choose a variable for **each team member** to analyze. (Team members *may* choose the same variable). In your report motivate why each variable is worth analyzing.
 - [ ] Create 1 visualization for **each team member**. Every chosen variable should have a visualization that shows its distribution. 
-- [ ] Perform some kind of **single-variable analysis** for **each team member**. In your report discuss the asumptions used in each analysis and the conclusion.
+- [ ] Perform some kind of **single-variable analysis** In your report discuss the asumptions used in each analysis and the conclusion.
 - [ ] Submit a report that: **introduces and motivates the chosen dataset**, **shows and discusses your visualizations**, and **discuses your analysis**.
 
 ## Format and submission
@@ -137,7 +137,7 @@ You should also compute key summary statistics for the variable. At minimum, the
 ## Part 3: Analysis
 Now that we understand our data a bit better having visualized it, let's see if we can use it to help us make useful decisions. To do this we'll first need to determine a specific piece of knowledge that we want to get from our data. 
 
-**Pose a question.** Consider continuous/ordinal variable that you visualized in the previous part. Determine a question that you could answer using a model of this variable. In this case we'll restrict it to asking about the likelihood of some future outcome.
+**Pose a question.** Consider a continuous/ordinal variable that you visualized in the previous part. Determine a question that you could answer using a model of this variable. In this case we'll restrict it to asking about the likelihood of some future outcome.
 
 :::{.callout-tip}
 **For example:** if your variable is the number of points Lebron James scores in each game, you could attempt to answer the question: *how likely is it that Lebron will score more than 50 points?*
@@ -154,7 +154,6 @@ Use your model to attempt to answer this question (e.g. *under our model, Lebron
 **For example:** if your variable is the number of points Lebron James scores in each game, you could attempt to answer the question: *how likely is it that Lebron will score more than 50 points?*
 :::
 
-Make sure each group member performs some analysis of this form.
 
 ## Part 4: Writing up!
 
