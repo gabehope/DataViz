@@ -5,6 +5,7 @@ author: "Prof. Gabe Hope"
 format: 
     revealjs:
         theme: ["../../../../theme.scss"]
+        html-math-method: katex
 revealjs-plugins:
   - tldraw
 ---
@@ -694,6 +695,7 @@ ggplot() + geom_histogram(
 
 
 ```{ojs}
+Plot = require('@observablehq/plot@0.6.16')
 tf = require('@tensorflow/tfjs@4.11.0')
 data = FileAttachment("data/mpg.csv").csv({typed: true})
 weights = tf.tensor(data.map(d => d['Weight_in_lbs']))
@@ -728,6 +730,7 @@ Plot.plot({
   ]
 })
 ```
+# An aside: cumulative histograms
 
 ## Histogram transform (bin transform)
 
@@ -1146,6 +1149,283 @@ ggplot() + geom_boxplot(
 :::
 :::::
 
+# Returning to number of bins
+
+## Number of bins
+
+Some notation:
+
+- Sampled dataset of $N$ (scalar) observations: $\{ x_1, ... , x_N \}$.
+- Divided into $K$ bins $\{ b_1, ... , b_K \}$, with **equal** width $h$.
+- Let $c_k$ be the number of observations in bin $k$.
+
+```{python}
+
+counts, edges = np.histogram(weight_data['Weight_in_lbs'], bins=20)
+hist = pd.DataFrame(dict(edges=edges))
+ggplot() + geom_point(data=weight_data, mapping=aes(x='Weight_in_lbs'), position='jitter') + geom_vline(data=hist, mapping=aes(xintercept='edges'), color='red', size=0.5) + ggsize(1000, 200)
+```
+
+## Number of bins
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+The **proportion** ($p_k$) of observations assigned to bin $k$ is:
+
+$$p_k = \frac{c_k}{N}$$
+
+Note that:
+$$p_k \geq 0, \quad \sum_{1}^{K} p_k = 1$$
+
+Therefore $\{p_1,...,p_K\}$ form a **probability mass function** (PMF) over bins.
+
+:::
+::: {.column style="font-size: 50%; width: 50%"}
+```{python}
+#| echo: true
+ggplot() + geom_histogram(
+    data=weight_data, stat='bin',
+    mapping=aes(x='Weight_in_lbs', y='..count..'), 
+    bins=75) + ggsize(400, 200)
+```
+
+```{python}
+#| echo: true
+ggplot() + geom_histogram(
+    data=weight_data, stat='bin',
+    mapping=aes(x='Weight_in_lbs', y='..density..'), 
+    bins=75) + ggsize(400, 200)
+```
+:::
+:::::
+
+
+
+## Number of bins
+
+Our underlying data is *continuous* not *discrete*, can we estimate a **probability density function** ($\hat{p}(x)$) instead?
+
+
+
+```{python}
+#| echo: false
+counts, edges = np.histogram(weight_data['Weight_in_lbs'], bins=75, density=True)
+hist = pd.DataFrame(dict(edges=edges[:-1], density=counts))
+ggplot()   + geom_step(data=hist, mapping=aes(x='edges', y='density')) + ggsize(1000, 200)
+
+```
+
+Let the value of $b_k$ be the *left edge* of bin k (so $b_k + h = b_{k+1}$).
+
+## Number of bins
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+The integral of the density function over a bin should equal the bin's proportion.
+$$\int_{b_k}^{b_k+h} \hat{p}(x) dx = p_k = \frac{c_k}{N}$$
+
+
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+Therefore our density function should be:
+$$\hat{p}(x)= \frac{p_k}{h}=\frac{c_k}{N\cdot h}$$
+$$\text{for } x \in [b_k, b_k+h)$$
+:::
+:::::
+```{python}
+#| echo: false
+counts, edges = np.histogram(weight_data['Weight_in_lbs'], bins=75, density=True)
+hist = pd.DataFrame(dict(edges=edges[:-1], density=counts))
+ggplot()   + geom_step(data=hist, mapping=aes(x='edges', y='density')) + ggsize(1000, 200)
+
+```
+
+::: {style="font-size: 50%"}
+
+$$\hat{p}(x)= 0, \quad \text{for } x \notin [b_1, b_K+h)$$
+
+:::
+
+
+## Number of bins
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+Assume our data comes from a plausible **reference distribution** ($p(x)$) e.g.
+
+$$p(x) = \frac{1}{\sigma \sqrt{2 \pi}} \exp\left(-\frac{(x - \mu)^2}{2 \sigma^2} \right)$$
+
+Where we can estimate the parameters using the *sample mean* and *sample standard deviation*:
+
+$$\mu = \bar{x}, \quad \sigma = s$$
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+Estimated normal distribution
+
+```{ojs}
+normalPlot = tf.tidy(()=> {
+  let x = tf.linspace(-5, 5, 1000);
+  let normalizer = 1 / Math.sqrt(2 * Math.PI);
+  let px = x.square().mul(-0.5).exp().mul(normalizer);
+  return tf.stack([x, px]).transpose().arraySync();
+});
+
+exdata = tf.randomNormal([700, 1]).arraySync();
+Plot.plot({
+  x: {label: "x", domain: [-5, 5]},
+  y: {label: "pdf(x)"},
+  marks: [
+    Plot.ruleY([0]),
+    Plot.lineY(normalPlot, {x: "0", y: "1", stroke: "black", strokeWidth: 3}),
+    Plot.dot(exdata, Plot.dodgeY({x: "0"})),
+  ]
+})
+```
+
+:::
+:::::
+
+
+
+## Number of bins
+Compare our histogram estimated pdf, $\hat{p}(x)$, to our reference pdf $p(x)$.
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+**Squared error** at $x$:
+$$SE = (p(x) - \hat{p}(x))^2$$
+
+**Integrated squared error:**
+
+$$ISE = \int_{-\infty}^{\infty} (p(x) - \hat{p}(x))^2 dx$$
+
+
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+Estimated distributions
+
+
+```{ojs}
+distributionReducerEx = function(input, bins) {
+  let sum = input.length;
+  let total = exdata.length;
+  let width = bins.x2 - bins.x1;
+  return sum / (total * width);
+}
+
+Plot.plot({
+  x: {label: "x", domain: [-5, 5]},
+  y: {label: "pdf(x)"},
+  marks: [
+    Plot.ruleY([0]),
+    Plot.lineY(normalPlot, {x: "0", y: "1", stroke: "black", strokeWidth: 3}),
+    Plot.lineY(exdata, Plot.binX({y: distributionReducerEx}, {x: "0", thresholds: 'scott', curve: "step", stroke: "red", strokeWidth: 3})),
+    Plot.dot(exdata, Plot.dodgeY({x: "0"})),
+  ]
+})
+```
+
+:::
+:::::
+
+::: {style="font-size: 50%;"}
+$$\hat{p}(x)= \frac{p_k}{h}=\frac{c_k}{N\cdot h}, \quad \text{for } x \in [b_k, b_k+h)$$
+:::
+
+## Number of bins
+
+Compare our histogram estimated pdf, $\hat{p}(x)$, to our reference pdf $p(x)$.
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+**Mean integrated  squared error:**
+
+$$MISE =  E\left[ \int (p(x) - \hat{p}(x))^2 dx \right] $$
+
+Expectation over samples of $N$ observations from our *reference distribution*
+
+
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+Estimated distributions
+
+
+```{ojs}
+Plot.plot({
+  x: {label: "x", domain: [-5, 5]},
+  y: {label: "pdf(x)"},
+  marks: [
+    Plot.ruleY([0]),
+    Plot.lineY(normalPlot, {x: "0", y: "1", stroke: "black", strokeWidth: 3}),
+    Plot.lineY(exdata, Plot.binX({y: distributionReducerEx}, {x: "0", thresholds: 'scott', curve: "step", stroke: "red", strokeWidth: 3})),
+    Plot.dot(exdata, Plot.dodgeY({x: "0"})),
+  ]
+})
+```
+
+:::
+:::::
+
+::: {style="font-size: 50%;"}
+$$\hat{p}(x)= \frac{p_k}{h}=\frac{c_k}{N\cdot h}, \quad \text{for } x \in [b_k, b_k+h)$$
+:::
+
+## Number of bins
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+**Scott's rule:** Optimal bin width ($h$) by minimizing $MISE$:
+
+$$h^* =  \underset{h}{\text{argmin}} MISE \approx 3.5 s \cdot N^{-\frac{1}{3}}$$
+
+The **Freedman-Diaconis rull** replaces the sample standard deviation ($s$) with the **interquartile range** ($IQR$).
+
+$$h^* =   2 IQR\cdot N^{-\frac{1}{3}}$$
+
+*More robust to outliers*
+:::
+::: {.column style="font-size: 50%; width: 50%"}
+
+```{ojs}
+viewof nobs = Inputs.range([1, 1000], {label: "Observations", value: 100, step: 1})
+viewof nbins = Inputs.range([0, 100], {label: "Number of bins", value: 20, step: 1})
+
+ndataall = tf.randomNormal([1000, 1]);
+ndata = ndataall.slice([0], [nobs])
+nedges = tf.tidy(() => {
+  let e = tf.linspace(ndata.min().arraySync(), ndata.max().arraySync(), nbins+1);
+  e = e.arraySync();
+  e.push(5);
+  e.unshift(-5)
+  return e;
+})
+
+distributionReducer = function(input, bins) {
+  let sum = input.length;
+  let total = bins.data.length;
+  let width = bins.x2 - bins.x1;
+  return sum / (total * width);
+}
+
+Plot.plot({
+  x: {label: "x", domain: [-5, 5]},
+  y: {label: "pdf(x)"},
+  marks: [
+    Plot.dot(ndata.arraySync(), Plot.dodgeY({x: "0", stroke: 'lightgrey'})),
+    Plot.ruleY([0]),
+    Plot.lineY(ndata.arraySync(), Plot.binX({y: distributionReducer}, {x: "0", thresholds: 'scott', curve: "step", stroke: "blue", strokeWidth: 3})),
+    Plot.lineY(ndata.arraySync(), Plot.binX({y: distributionReducer}, {x: "0", thresholds: nedges, curve: "step", strokeWidth: 3, stroke: "red"})),
+    Plot.lineY(normalPlot, {x: "0", y: "1", stroke: "black", strokeWidth: 3}), 
+    
+  ]
+})
+```
+
+:::
+:::::
+
+
+
 # Kernel density plots
 
 ## Histogram sensitivity
@@ -1212,6 +1492,37 @@ ggplot(
 :::::
 
 ## Bars **at** observations
+
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
+One observation
+
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:1], 
+    mapping=aes(x='Weight_in_lbs')) + \
+    geom_density(kernel='rectangular', bw=50) + \
+    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+
+**Indicator function**
+$$I(\text{predicate}) = \begin{cases} 
+1 \text{ if predicate is true} \\
+0 \text{ otherwise} \\
+\end{cases}$$
+
+Our function:
+$$\hat{p}(x) = \frac{1}{2h} I\left(\frac{|x - x_1|}{h} \leq 1\right)$$
+
+$h$ is the width of the bar or **bandwidth**
+:::
+:::::
+
+
+## Bars **at** observations
 **Add** bars where they overlap!
 
 ::::: columns
@@ -1273,6 +1584,8 @@ ggplot(
 
 ## Bars **at** observations
 
+::::: columns
+::: {.column style="font-size: 75%; width: 50%"}
 **All** observations
 
 ```{python}
@@ -1284,6 +1597,17 @@ ggplot(
     geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])\
         + ggsize(1000, 400)
 ```
+:::
+::: {.column style="font-size: 75%; width: 50%"}
+With $N$ observations:
+
+$$\hat{p}(x) = \frac{1}{2Nh} \sum_{i=1}^N I\left(\frac{|x - x_i|}{h} \leq 1\right)$$
+
+
+:::
+:::::
+
+
 
 ## Bars **at** observations
 Varying the bar width
@@ -1316,21 +1640,11 @@ ggplot(
 :::::
 
 ## Bars **at** observations
-Sharp drop-off not ideal.
+
 
 ::::: columns
 ::: {.column style="font-size: 75%; width: 50%"}
-
-```{python}
-#| echo: true
-ggplot(
-    data=weight_data[:1], 
-    mapping=aes(x='Weight_in_lbs')
-) + geom_density(kernel='gaussian', bw=50) \
-  + geom_point(size=10) + scale_x_continuous(limits=[3000, 4000])
-```
-:::
-::: {.column style="font-size: 75%; width: 50%"}
+Sharp drop-off not ideal.
 
 ```{python}
 #| echo: true
@@ -1341,16 +1655,29 @@ ggplot(
     geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
 ```
 :::
+::: {.column style="font-size: 75%; width: 50%"}
+Replace indicator with a *smooth* function
+```{python}
+#| echo: true
+ggplot(
+    data=weight_data[:1], 
+    mapping=aes(x='Weight_in_lbs')
+) + geom_density(kernel='gaussian', bw=50) \
+  + geom_point(size=10) + scale_x_continuous(limits=[3000, 4000])
+```
+:::
 :::::
 
-## Bars **at** observations
-Sharp drop-off not ideal.
+## Gaussian kernel
+Smooth drop-off:
+
+$$\hat{p}(x) = \frac{1}{2Nh} \sum_{i=1}^N \phi\left(\frac{x - x_i}{h}\right), \quad \phi(u) = \frac{1}{\sqrt{2 \pi}} \exp\left(-\frac{u^2}{2} \right)$$
 
 ::::: columns
 ::: {.column style="font-size: 75%; width: 50%"}
 
 ```{python}
-#| echo: true
+#| echo: false
 ggplot(
     data=weight_data[:2], 
     mapping=aes(x='Weight_in_lbs')
@@ -1361,7 +1688,7 @@ ggplot(
 ::: {.column style="font-size: 75%; width: 50%"}
 
 ```{python}
-#| echo: true
+#| echo: false
 ggplot(
     data=weight_data[:2], 
     mapping=aes(x='Weight_in_lbs')) + \
@@ -1372,11 +1699,10 @@ ggplot(
 :::::
 
 ## Bars **at** observations
-Sharp drop-off not ideal.
 
 ::::: columns
 ::: {.column style="font-size: 75%; width: 50%"}
-
+Gaussian
 ```{python}
 #| echo: true
 ggplot(
@@ -1387,7 +1713,7 @@ ggplot(
 ```
 :::
 ::: {.column style="font-size: 75%; width: 50%"}
-
+Uniform
 ```{python}
 #| echo: true
 ggplot(
@@ -1400,11 +1726,10 @@ ggplot(
 :::::
 
 ## Bars **at** observations
-Sharp drop-off not ideal.
 
 ::::: columns
 ::: {.column style="font-size: 75%; width: 50%"}
-
+Gaussian
 ```{python}
 #| echo: true
 ggplot(
@@ -1415,7 +1740,7 @@ ggplot(
 ```
 :::
 ::: {.column style="font-size: 75%; width: 50%"}
-
+Uniform
 ```{python}
 #| echo: true
 ggplot(
@@ -1428,11 +1753,10 @@ ggplot(
 :::::
 
 ## Bars **at** observations
-Sharp drop-off not ideal.
 
 ::::: columns
 ::: {.column style="font-size: 75%; width: 50%"}
-
+Gaussian
 ```{python}
 #| echo: true
 ggplot(
@@ -1443,7 +1767,7 @@ ggplot(
 ```
 :::
 ::: {.column style="font-size: 75%; width: 50%"}
-
+Uniform
 ```{python}
 #| echo: true
 ggplot(
@@ -1455,32 +1779,285 @@ ggplot(
 :::
 :::::
 
+## Kernel functions
 
-## Bars **at** observations
-Can also vary bin width!
+In general, we can use any **kernel function** $k(\cdot)$
+$$\hat{p}(x) = \frac{1}{2Nh} \sum_{i=1}^N k\left(\frac{x - x_i}{h}\right)$$
+
+If $\int_{-\infty}^{\infty} k(u)du = 1$ and $k(u) \geq 0, \forall u$, then $\hat{p}(x)$ is a valid probability density function!
+
+$h$ is the **bandwidth**, which controls the smoothness
+
+## Choosing bandwidth and kernel
+::::: columns
+::: {.column style="font-size: 50%; width: 33%"}
+
+```{ojs}
+viewof kdeobs = Inputs.range([1, 1000], {label: "Observations", value: 100, step: 1})
+```
+:::
+::: {.column style="font-size: 50%; width: 33%"}
+```{ojs}
+viewof bw = Inputs.range([0.01, 2], {label: "Bandwidth", step: 0.01})
+```
+:::
+::: {.column style="font-size: 50%; width: 33%"}
+```{ojs}
+
+viewof kernel = Inputs.select(new Map([["Square", uniform], ["Triangle", triangle], ["Gaussian", gaussian], ["Epanechnikov", epanechnikov]]), {label: "Kernel"})
+```
+:::
+:::::
+
+```{ojs}
+
+
+
+kdedata = kdedataall.slice([0], [kdeobs])
+kdedataall = tf.randomNormal([1000, 1])
+
+kdeLine = tf.tidy(() => {
+  let x = tf.linspace(-5, 5, 1000).reshape([-1]).arraySync();
+  return kde(kernel(bw), x)(kdedata.reshape([-1]).arraySync());
+});
+
+//https://bl.ocks.org/mbostock/4341954#faithful.json
+kde = (kernel, thds) => V => thds.map(t => [t, d3.mean(V, d => kernel(t - d))])
+
+//https://bl.ocks.org/mbostock/4341954#faithful.json
+epanechnikov = bandwidth => x =>
+  Math.abs((x /= bandwidth)) <= 1 ? (0.75 * (1 - x * x)) / bandwidth : 0
+
+//https://bl.ocks.org/mbostock/4341954#faithful.json
+uniform = bandwidth => x =>
+  Math.abs((x / bandwidth)) <= 1 ? 1 : 0
+
+gaussian = bandwidth => x =>
+  Math.exp(- 0.5 * (x / bandwidth) * (x / bandwidth))
+
+triangle = bandwidth => x =>
+  Math.max(1 - (Math.abs(x) / bandwidth), 0)
+
+Plot.plot({
+  height: 400,
+  width: 1000,
+  x: {label: "x", domain: [-5, 5]},
+  y: {label: "Density"},
+  marks: [
+    Plot.dot(kdedata.arraySync(), Plot.dodgeY({x: "0"})),
+    Plot.lineY(kdeLine, {x: "0", y: "1"}),
+  ]
+})
+```
+
+## Choosing bandwidth
+
+Consider a plausible **reference distribution** ($p(x)$) e.g.
+
+$$p(x) = \frac{1}{\sigma \sqrt{2 \pi}} \exp\left(-\frac{(x - \mu)^2}{2 \sigma^2} \right)$$
+
+Where we can estimate the parameters using the *sample mean* and *sample standard deviation*:
+
+$$\mu = \bar{x}, \quad \sigma = s$$
+
+## Choosing bandwidth
+
+Minimize **mean integrated squared error**
+
+$$MISE = \int E\left[ (p(x) - \hat{p}(x))^2 \right] dx$$
+
+$$h^* = \underset{h}{\text{argmin}} MISE$$
+Lots of painful math! But if kernel is Gaussian (normal) and underlying distribution is Normal then:
+
+$$h^* \approx 1.06 s \cdot N^{-\frac{1}{5}}$$
+
+# Quick tour of other single variable visualizations
+
+## Waffle plots
+
+Show individual observations within categorical bars.
+
+:::: columns
+::: {.column style="width: 50%; font-size: 75%"}
+Simple example
+```{ojs}
+Plot.waffleY([212, 207, 315, 11], {x: ["apples", "bananas", "oranges", "pears"]}).plot({height: 420})
+```
+:::
+::: {.column style="width: 50%; font-size: 75%"}
+Survey of Syrian teeagers from the Economist
+
+```{ojs}
+survey = [
+  {question: "don’t go out after dark", yes: 96},
+  {question: "do no activities other than school", yes: 89},
+  {question: "engage in political discussion and social movements, including online", yes: 10},
+  {question: "would like to do activities but are prevented by safety concerns", yes: 73}
+]
+
+Plot.plot({
+  axis: null,
+  label: null,
+  height: 420,
+  marginTop: 20,
+  marginBottom: 70,
+  marks: [
+    Plot.axisFx({lineWidth: 10, anchor: "bottom", dy: 20}),
+    Plot.waffleY({length: 1}, {y: 120, fillOpacity: 0.4, rx: "100%"}),
+    Plot.waffleY(survey, {fx: "question", y: "yes", rx: "100%", fill: "orange"}),
+    Plot.text(survey, {fx: "question", text: (d) => (d.yes / 120).toLocaleString("en-US", {style: "percent"}), frameAnchor: "bottom", lineAnchor: "top", dy: 6, fill: "orange", fontSize: 24, fontWeight: "bold"})
+  ]
+})
+```
+:::
+:::::
+
+::: {style="font-size: 75%"}
+*Not yet implemented in Lets-Plot.*
+:::
+
+
+## Swarm plots
+Similar to a dotplot, but don't align observations into bins. 
+
+:::: columns
+::: {.column style="width: 50%; font-size: 75%"}
+For each **new** observation, increase it's y-coordinate until it no longer intersects with any other points.
+```{ojs}
+Plot.plot({
+  height: 160,
+  marks: [
+    Plot.dotX(cars, Plot.dodgeY({x: "weight (lb)", title: "name", fill: "currentColor"}))
+  ]
+})
+```
+Can also spread from center.
+
+```{ojs}
+Plot.plot({
+  height: 180,
+  marks: [
+    Plot.dot(cars, Plot.dodgeY("middle", {x: "weight (lb)", fill: "currentColor"}))
+  ]
+})
+```
+
+:::
+::: {.column style="width: 50%; font-size: 75%"}
+*Sensitive to the order points are added!*
+
+**Sorted points**
+
+```{ojs}
+Plot.plot({
+  height: 180,
+  marks: [
+    Plot.dotX(cars, Plot.dodgeY({x: "weight (lb)", title: "name", fill: "currentColor", sort: "weight (lb)"}))
+  ]
+})
+```
+
+**Reverse-sorted points**
+
+```{ojs}
+Plot.plot({
+  height: 180,
+  marks: [
+    Plot.dotX(cars, Plot.dodgeY({x: "weight (lb)", title: "name", fill: "currentColor", sort: "weight (lb)", reverse: true}))
+  ]
+})
+```
+
+
+:::
+:::::
+
+::: {style="font-size: 75%"}
+*Sadly, Lets-Plot implementation seems broken for now.*
+:::
+
+## Violin plots
+Symmetric kernel density estimate.
+
+```{python}
+#| echo: false
+n = 100
+np.random.seed(42)
+x = np.random.choice(["a", "b", "c", "d"], size=n)
+y1 = np.random.normal(size=n)
+y2 = np.random.normal(size=n)
+```
+
+```{python}
+#| echo: true
+ggplot({'x': x, 'y1': y1, 'y2': y2}) + \
+    geom_violin(aes('x', 'y1'), trim=False, fill='red')
+```
+
+## Percentogram
+
+Similar to a histogram, but instead of each bin having a fixed *width* each bin has a fixed number of observations or **percentile**
 
 ::::: columns
 ::: {.column style="font-size: 75%; width: 50%"}
+```{ojs}
+function percentiles(numbers) {
+  const sorted = d3.sort(numbers);
+  return d3.range(0, 101).map((q) => d3.quantileSorted(sorted, q / 100));
+}
 
-```{python}
-#| echo: true
-ggplot(
-    data=weight_data, 
-    mapping=aes(x='Weight_in_lbs')
-) + geom_density(kernel='gaussian', bw=20) \
-  + geom_point(size=10) + scale_x_continuous(limits=[3000, 4000])
+numbers = Float64Array.from({length: 10000}, d3.randomNormal.source(d3.randomLcg(3))())
+
+Plot.plot({
+  color: {
+    legend: true,
+    type: "quantize",
+    scheme: "spectral",
+    n: 10,
+    label: "percentile"
+  },
+  y: {label: "density"},
+  marks: [
+    Plot.rectY(numbers, {
+      fill: (d, i) => i,
+      ...Plot.binX({
+        y: (bin, {x1, x2}) => 1 / (x2 - x1),
+        thresholds: percentiles
+      })
+    }),
+    Plot.ruleY([0])
+  ]
+})
 ```
+*Percentogram of a normal distribution*
 :::
 ::: {.column style="font-size: 75%; width: 50%"}
 
-```{python}
-#| echo: true
-ggplot(
-    data=weight_data, 
-    mapping=aes(x='Weight_in_lbs')) + \
-    geom_density(kernel='gaussian', bw=200) + \
-    geom_point(size=10)  + scale_x_continuous(limits=[3000, 4000])
+```{ojs}
+car_weights = cars.map((d) => d["weight (lb)"])
+
+Plot.plot({
+  color: {
+    legend: true,
+    type: "quantize",
+    scheme: "spectral",
+    n: 10,
+    label: "percentile"
+  },
+  y: {label: "density"},
+  marks: [
+    Plot.rectY(car_weights, {
+      fill: (d, i) => i,
+      ...Plot.binX({
+        y: (bin, {x1, x2}) => 1 / (x2 - x1),
+        thresholds: percentiles
+      })
+    }),
+    Plot.ruleY([0])
+  ]
+})
 ```
+*Percentogram of a car weights*
 :::
 :::::
 

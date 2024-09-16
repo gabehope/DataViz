@@ -1,0 +1,52 @@
+---
+format: 
+    pdf:
+        include-in-header: 
+            text: '\pagenumbering{gobble}'
+---
+
+
+# Name:
+
+*Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
+
+# Data Analytics and Visualization: Week 4 - Single variable analysis
+
+## In-class questions
+
+#### How would you choose the ideal number of histogram bins?
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  Which single-variable plot do you prefer?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+## Reflection (*complete at the end of class*)
+
+#### How was the pace of this class?
+
+|
+|
+|
+|
+|
+|
+|
+|

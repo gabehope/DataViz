@@ -217,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="cell-1" class="cell" data-execution_count="133">
+<div id="cell-1" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> io <span class="im">import</span> BytesIO</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -235,7 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>all_cars <span class="op">=</span> vega_datasets.data.cars()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
-            <div id="lyVyNY"></div>
+            <div id="Tjs8Jj"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -259,19 +259,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("lyVyNY").appendChild(div);
+                        document.getElementById("Tjs8Jj").appendChild(div);
                     };
-                    var e = document.getElementById("lyVyNY");
+                    var e = document.getElementById("Tjs8Jj");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 </div>
-<div id="cell-2" class="cell" data-execution_count="22">
+<div id="cell-2" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>origin <span class="op">=</span> all_cars[<span class="st">'Origin'</span>]</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>origin</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="22">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>0         USA
 1         USA
 2         USA
@@ -286,16 +286,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Name: Origin, Length: 406, dtype: object</code></pre>
 </div>
 </div>
-<div id="cell-3" class="cell" data-execution_count="23">
+<div id="cell-3" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>origin.unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="23">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>array(['USA', 'Europe', 'Japan'], dtype=object)</code></pre>
 </div>
 </div>
-<div id="cell-4" class="cell" data-execution_count="24">
+<div id="cell-4" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>origin <span class="op">=</span> origin.astype(<span class="st">'category'</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>origin</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="24">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>0         USA
 1         USA
 2         USA
@@ -311,16 +311,16 @@ Name: Origin, Length: 406, dtype: category
 Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
-<div id="cell-5" class="cell">
+<div id="cell-5" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>origin <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(origin<span class="op">=</span>origin))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-6" class="cell" data-execution_count="41">
+<div id="cell-6" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>origin,</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'origin'</span>),</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="41">
-   <div id="BoqNtM"></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+   <div id="eO2r6b"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -343,7 +343,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("BoqNtM");
+           var plotContainer = document.getElementById("eO2r6b");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -351,48 +351,22 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
    </script>
 </div>
 </div>
-<div id="cell-7" class="cell" data-execution_count="43">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> origin.value_counts().reset_index()</span>
+<div id="cell-7" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> origin.value_counts()</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>counts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="43">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">origin</th>
-<th data-quarto-table-cell-role="th">count</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>USA</td>
-<td>254</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>Japan</td>
-<td>79</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>Europe</td>
-<td>73</td>
-</tr>
-</tbody>
-</table>
-
-</div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>origin
+USA       254
+Japan      79
+Europe     73
+Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <div id="cell-9" class="cell" data-execution_count="44">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>counts,</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'origin'</span>, y<span class="op">=</span><span class="st">'count'</span>),</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>counts,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'origin'</span>, y<span class="op">=</span><span class="st">'count'</span>),</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="44">
    <div id="NW4mgO"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -428,10 +402,10 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-10" class="cell" data-execution_count="56">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>counts,</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'origin'</span>, y<span class="op">=</span><span class="st">'count'</span>),</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="dv">0</span>, <span class="va">None</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>counts,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'origin'</span>, y<span class="op">=</span><span class="st">'count'</span>),</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="dv">0</span>, <span class="va">None</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="56">
    <div id="z9dbTK"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -470,10 +444,10 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-11" class="cell" data-execution_count="68">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>origin,</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'origin'</span>)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>origin,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'origin'</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="68">
    <div id="PeFUiR"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -508,10 +482,10 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-12" class="cell" data-execution_count="69">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>origin,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(fill<span class="op">=</span><span class="st">'origin'</span>)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>origin,</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(fill<span class="op">=</span><span class="st">'origin'</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="69">
    <div id="fPrUa6"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -547,11 +521,11 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-13" class="cell" data-execution_count="74">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>counts,</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'origin'</span>, y<span class="op">=</span><span class="st">'count'</span>),</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    stat<span class="op">=</span><span class="st">'identity'</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>counts,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'origin'</span>, y<span class="op">=</span><span class="st">'count'</span>),</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    stat<span class="op">=</span><span class="st">'identity'</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="74">
    <div id="e1kEnQ"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -588,11 +562,11 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-14" class="cell" data-execution_count="85">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_pie(</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>origin,</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(fill<span class="op">=</span><span class="st">'origin'</span>),</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    size<span class="op">=</span><span class="dv">25</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_pie(</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>origin,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(fill<span class="op">=</span><span class="st">'origin'</span>),</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    size<span class="op">=</span><span class="dv">25</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="85">
    <div id="ga4M9Q"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -630,11 +604,11 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-15" class="cell" data-execution_count="87">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_pie(</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>counts,</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(fill<span class="op">=</span><span class="st">'origin'</span>, weight<span class="op">=</span><span class="st">'count'</span>),</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    size<span class="op">=</span><span class="dv">25</span>, hole<span class="op">=</span><span class="fl">0.5</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_pie(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>counts,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(fill<span class="op">=</span><span class="st">'origin'</span>, weight<span class="op">=</span><span class="st">'count'</span>),</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    size<span class="op">=</span><span class="dv">25</span>, hole<span class="op">=</span><span class="fl">0.5</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="87">
    <div id="k7nVcx"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -674,10 +648,10 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-16" class="cell" data-execution_count="295">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>all_cars,</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Cylinders'</span>)</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>all_cars,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Cylinders'</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="295">
    <div id="DvxYmM"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -715,17 +689,18 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
    </script>
 </div>
 </div>
-<div id="cell-17" class="cell" data-execution_count="279">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>rides <span class="op">=</span> pd.read_csv(<span class="st">'data/rides.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-17" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>rides <span class="op">=</span> pd.read_csv(<span class="st">'data/rides.csv'</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>rides <span class="op">=</span> rides.rename(columns<span class="op">=</span><span class="bu">dict</span>(ridership<span class="op">=</span><span class="st">'count'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-18" class="cell" data-execution_count="299">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>rides.sort_values(<span class="st">'ridership'</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>rides.head(<span class="dv">20</span>),</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'station_complex'</span>, y<span class="op">=</span><span class="st">'ridership'</span>),</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    stat<span class="op">=</span><span class="st">'identity'</span></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>) <span class="op">+</span> scale_x_discrete(lablim<span class="op">=</span><span class="dv">12</span>) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>rides.sort_values(<span class="st">'ridership'</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>rides.head(<span class="dv">20</span>),</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'station_complex'</span>, y<span class="op">=</span><span class="st">'ridership'</span>),</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    stat<span class="op">=</span><span class="st">'identity'</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>) <span class="op">+</span> scale_x_discrete(lablim<span class="op">=</span><span class="dv">12</span>) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="299">
    <div id="34LpJx"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -771,13 +746,13 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-19" class="cell" data-execution_count="298">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>rides.sort_values(<span class="st">'ridership'</span>)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>rides.sort_values(<span class="st">'ridership'</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">20</span>),</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'station_complex'</span>, y<span class="op">=</span><span class="st">'ridership'</span>),</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    stat<span class="op">=</span><span class="st">'identity'</span></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>) <span class="op">+</span> scale_x_discrete(lablim<span class="op">=</span><span class="dv">12</span>) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>rides.sort_values(<span class="st">'ridership'</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>rides.sort_values(<span class="st">'ridership'</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">20</span>),</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'station_complex'</span>, y<span class="op">=</span><span class="st">'ridership'</span>),</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    stat<span class="op">=</span><span class="st">'identity'</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>) <span class="op">+</span> scale_x_discrete(lablim<span class="op">=</span><span class="dv">12</span>) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="298">
    <div id="t01Nrm"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -823,10 +798,10 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-20" class="cell" data-execution_count="90">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>weights <span class="op">=</span> all_cars[[<span class="st">'Weight_in_lbs'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>weights <span class="op">=</span> all_cars[[<span class="st">'Weight_in_lbs'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-21" class="cell" data-execution_count="99">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="99">
    <div id="jArN38"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -864,7 +839,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-22" class="cell" data-execution_count="108">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), shape<span class="op">=</span><span class="dv">3</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), shape<span class="op">=</span><span class="dv">3</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="108">
    <div id="p3PSEK"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -903,7 +878,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-23" class="cell" data-execution_count="113">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), alpha<span class="op">=</span><span class="fl">0.1</span>, size<span class="op">=</span><span class="dv">5</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), alpha<span class="op">=</span><span class="fl">0.1</span>, size<span class="op">=</span><span class="dv">5</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="113">
    <div id="sneVDp"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -943,7 +918,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-24" class="cell" data-execution_count="109">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_vline(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_vline(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="109">
    <div id="rht699"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -981,7 +956,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-25" class="cell" data-execution_count="106">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_vline(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), size<span class="op">=</span><span class="fl">0.1</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_vline(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), size<span class="op">=</span><span class="fl">0.1</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="106">
    <div id="yleHRF"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1020,9 +995,9 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-26" class="cell" data-execution_count="300">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>jittered_weights <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(Weight_in_lbs<span class="op">=</span>weights[<span class="st">'Weight_in_lbs'</span>], jitter<span class="op">=</span>np.random.random(<span class="bu">len</span>(weights))))</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>jittered_weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>, y<span class="op">=</span><span class="st">'jitter'</span>)) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>jittered_weights <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(Weight_in_lbs<span class="op">=</span>weights[<span class="st">'Weight_in_lbs'</span>], jitter<span class="op">=</span>np.random.random(<span class="bu">len</span>(weights))))</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>jittered_weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>, y<span class="op">=</span><span class="st">'jitter'</span>)) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="300">
    <div id="0Dd0AU"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1062,7 +1037,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-27" class="cell" data-execution_count="151">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), position<span class="op">=</span><span class="st">'jitter'</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), position<span class="op">=</span><span class="st">'jitter'</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="151">
    <div id="ZqAA96"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1101,7 +1076,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-28" class="cell" data-execution_count="301">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_jitter(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_jitter(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="301">
    <div id="judQrb"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1139,7 +1114,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-30" class="cell" data-execution_count="168">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_dotplot(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), stackratio<span class="op">=</span><span class="fl">1.</span>, binwidth<span class="op">=</span><span class="dv">75</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_dotplot(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), stackratio<span class="op">=</span><span class="fl">1.</span>, binwidth<span class="op">=</span><span class="dv">75</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="168">
    <div id="bqLnEi"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1181,9 +1156,9 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-31" class="cell" data-execution_count="182">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>counts, edges <span class="op">=</span> np.histogram(weights[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>hist <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(edges<span class="op">=</span>edges))</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), position<span class="op">=</span><span class="st">'jitter'</span>) <span class="op">+</span> geom_vline(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'edges'</span>), color<span class="op">=</span><span class="st">'red'</span>, size<span class="op">=</span><span class="fl">0.5</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>counts, edges <span class="op">=</span> np.histogram(weights[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>hist <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(edges<span class="op">=</span>edges))</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), position<span class="op">=</span><span class="st">'jitter'</span>) <span class="op">+</span> geom_vline(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'edges'</span>), color<span class="op">=</span><span class="st">'red'</span>, size<span class="op">=</span><span class="fl">0.5</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="182">
    <div id="kyqow4"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1234,7 +1209,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-32" class="cell" data-execution_count="183">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), bins<span class="op">=</span><span class="dv">30</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), bins<span class="op">=</span><span class="dv">30</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="183">
    <div id="r9JAGm"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1274,7 +1249,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-33" class="cell" data-execution_count="278">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), position<span class="op">=</span><span class="st">'jitter'</span>) <span class="op">+</span> geom_vline(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'edges'</span>), color<span class="op">=</span><span class="st">'red'</span>, size<span class="op">=</span><span class="fl">0.5</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), position<span class="op">=</span><span class="st">'jitter'</span>) <span class="op">+</span> geom_vline(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'edges'</span>), color<span class="op">=</span><span class="st">'red'</span>, size<span class="op">=</span><span class="fl">0.5</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="278">
    <div id="R7erZx"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1325,9 +1300,9 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-34" class="cell" data-execution_count="184">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>counts, edges <span class="op">=</span> np.histogram(weights[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>hist <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(edges<span class="op">=</span>edges))</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), position<span class="op">=</span><span class="st">'jitter'</span>) <span class="op">+</span> geom_vline(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'edges'</span>), color<span class="op">=</span><span class="st">'red'</span>, size<span class="op">=</span><span class="fl">0.5</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>counts, edges <span class="op">=</span> np.histogram(weights[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>hist <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(edges<span class="op">=</span>edges))</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), position<span class="op">=</span><span class="st">'jitter'</span>) <span class="op">+</span> geom_vline(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'edges'</span>), color<span class="op">=</span><span class="st">'red'</span>, size<span class="op">=</span><span class="fl">0.5</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="184">
    <div id="UcR3ZL"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1378,7 +1353,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-35" class="cell" data-execution_count="185">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), bins<span class="op">=</span><span class="dv">10</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), bins<span class="op">=</span><span class="dv">10</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="185">
    <div id="YzWoCK"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1418,9 +1393,9 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-36" class="cell" data-execution_count="186">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>counts, edges <span class="op">=</span> np.histogram(weights[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">100</span>)</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>hist <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(edges<span class="op">=</span>edges))</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), position<span class="op">=</span><span class="st">'jitter'</span>) <span class="op">+</span> geom_vline(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'edges'</span>), color<span class="op">=</span><span class="st">'red'</span>, size<span class="op">=</span><span class="fl">0.5</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>counts, edges <span class="op">=</span> np.histogram(weights[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>hist <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(edges<span class="op">=</span>edges))</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), position<span class="op">=</span><span class="st">'jitter'</span>) <span class="op">+</span> geom_vline(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'edges'</span>), color<span class="op">=</span><span class="st">'red'</span>, size<span class="op">=</span><span class="fl">0.5</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="186">
    <div id="khYmyH"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1471,7 +1446,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-37" class="cell" data-execution_count="173">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), bins<span class="op">=</span><span class="dv">100</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), bins<span class="op">=</span><span class="dv">100</span>) <span class="op">+</span> ggsize(<span class="dv">600</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="173">
    <div id="MXxKB6"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1511,11 +1486,11 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-38" class="cell" data-execution_count="230">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>counts, edges <span class="op">=</span> np.histogram(weights[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>centers <span class="op">=</span> (edges[<span class="dv">1</span>:] <span class="op">+</span> edges[:<span class="op">-</span><span class="dv">1</span>]) <span class="op">/</span> <span class="fl">2.</span></span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>cumcounts <span class="op">=</span> np.cumsum(counts)</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>hist <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(centers<span class="op">=</span>centers, edges<span class="op">=</span>edges[<span class="dv">1</span>:], cumcounts<span class="op">=</span>cumcounts))</span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'centers'</span>, y<span class="op">=</span><span class="st">'cumcounts'</span>), stat<span class="op">=</span><span class="st">'identity'</span>,) <span class="op">+</span> geom_vline(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'edges'</span>), color<span class="op">=</span><span class="st">'red'</span>, size<span class="op">=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>counts, edges <span class="op">=</span> np.histogram(weights[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>centers <span class="op">=</span> (edges[<span class="dv">1</span>:] <span class="op">+</span> edges[:<span class="op">-</span><span class="dv">1</span>]) <span class="op">/</span> <span class="fl">2.</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>cumcounts <span class="op">=</span> np.cumsum(counts)</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>hist <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(centers<span class="op">=</span>centers, edges<span class="op">=</span>edges[<span class="dv">1</span>:], cumcounts<span class="op">=</span>cumcounts))</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'centers'</span>, y<span class="op">=</span><span class="st">'cumcounts'</span>), stat<span class="op">=</span><span class="st">'identity'</span>,) <span class="op">+</span> geom_vline(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'edges'</span>), color<span class="op">=</span><span class="st">'red'</span>, size<span class="op">=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="230">
    <div id="cjgRhe"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1564,11 +1539,11 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-39" class="cell" data-execution_count="233">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>counts, edges <span class="op">=</span> np.histogram(weights[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>centers <span class="op">=</span> (edges[<span class="dv">1</span>:] <span class="op">+</span> edges[:<span class="op">-</span><span class="dv">1</span>]) <span class="op">/</span> <span class="fl">2.</span></span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>cumcounts <span class="op">=</span> np.cumsum(counts)</span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>hist <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(centers<span class="op">=</span>centers, edges<span class="op">=</span>edges[<span class="dv">1</span>:], cumcounts<span class="op">=</span>cumcounts))</span>
-<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'centers'</span>, y<span class="op">=</span><span class="st">'cumcounts'</span>), stat<span class="op">=</span><span class="st">'identity'</span>,) <span class="op">+</span> geom_vline(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'edges'</span>), color<span class="op">=</span><span class="st">'red'</span>, size<span class="op">=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>counts, edges <span class="op">=</span> np.histogram(weights[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>centers <span class="op">=</span> (edges[<span class="dv">1</span>:] <span class="op">+</span> edges[:<span class="op">-</span><span class="dv">1</span>]) <span class="op">/</span> <span class="fl">2.</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>cumcounts <span class="op">=</span> np.cumsum(counts)</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>hist <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(centers<span class="op">=</span>centers, edges<span class="op">=</span>edges[<span class="dv">1</span>:], cumcounts<span class="op">=</span>cumcounts))</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'centers'</span>, y<span class="op">=</span><span class="st">'cumcounts'</span>), stat<span class="op">=</span><span class="st">'identity'</span>,) <span class="op">+</span> geom_vline(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'edges'</span>), color<span class="op">=</span><span class="st">'red'</span>, size<span class="op">=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="233">
    <div id="WkEo7s"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1617,11 +1592,11 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-40" class="cell" data-execution_count="232">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>counts, edges <span class="op">=</span> np.histogram(weights[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>centers <span class="op">=</span> (edges[<span class="dv">1</span>:] <span class="op">+</span> edges[:<span class="op">-</span><span class="dv">1</span>]) <span class="op">/</span> <span class="fl">2.</span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>cumcounts <span class="op">=</span> np.cumsum(counts)</span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>hist <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(centers<span class="op">=</span>centers, edges<span class="op">=</span>edges[<span class="dv">1</span>:], cumcounts<span class="op">=</span>cumcounts))</span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'centers'</span>, y<span class="op">=</span><span class="st">'cumcounts'</span>), stat<span class="op">=</span><span class="st">'identity'</span>,)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>counts, edges <span class="op">=</span> np.histogram(weights[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>centers <span class="op">=</span> (edges[<span class="dv">1</span>:] <span class="op">+</span> edges[:<span class="op">-</span><span class="dv">1</span>]) <span class="op">/</span> <span class="fl">2.</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>cumcounts <span class="op">=</span> np.cumsum(counts)</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>hist <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(centers<span class="op">=</span>centers, edges<span class="op">=</span>edges[<span class="dv">1</span>:], cumcounts<span class="op">=</span>cumcounts))</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(data<span class="op">=</span>hist, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'centers'</span>, y<span class="op">=</span><span class="st">'cumcounts'</span>), stat<span class="op">=</span><span class="st">'identity'</span>,)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="232">
    <div id="Jf298h"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1658,7 +1633,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-41" class="cell" data-execution_count="215">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> stat_ecdf(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> scale_y_continuous(breaks<span class="op">=</span>[<span class="dv">0</span>, <span class="fl">.25</span>, <span class="fl">.5</span>, <span class="fl">.75</span>, <span class="fl">1.</span>]) <span class="op">+</span> ylab(<span class="st">'Quantile'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> stat_ecdf(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> scale_y_continuous(breaks<span class="op">=</span>[<span class="dv">0</span>, <span class="fl">.25</span>, <span class="fl">.5</span>, <span class="fl">.75</span>, <span class="fl">1.</span>]) <span class="op">+</span> ylab(<span class="st">'Quantile'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="215">
    <div id="jRmjiC"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1701,7 +1676,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-42" class="cell" data-execution_count="207">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_boxplot(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), orientation<span class="op">=</span><span class="st">'y'</span>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="op">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>]) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_boxplot(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), orientation<span class="op">=</span><span class="st">'y'</span>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="op">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>]) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="207">
    <div id="ZbfDSg"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1763,7 +1738,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-43" class="cell" data-execution_count="212">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_boxplot(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), orientation<span class="op">=</span><span class="st">'y'</span>, width<span class="op">=</span><span class="fl">0.5</span>, y<span class="op">=</span><span class="fl">0.5</span>) <span class="op">+</span> scale_y_continuous() <span class="op">+</span> stat_ecdf(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>))  <span class="op">+</span> scale_y_continuous(breaks<span class="op">=</span>[<span class="dv">0</span>, <span class="fl">.25</span>, <span class="fl">.5</span>, <span class="fl">.75</span>, <span class="fl">1.</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_boxplot(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), orientation<span class="op">=</span><span class="st">'y'</span>, width<span class="op">=</span><span class="fl">0.5</span>, y<span class="op">=</span><span class="fl">0.5</span>) <span class="op">+</span> scale_y_continuous() <span class="op">+</span> stat_ecdf(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>))  <span class="op">+</span> scale_y_continuous(breaks<span class="op">=</span>[<span class="dv">0</span>, <span class="fl">.25</span>, <span class="fl">.5</span>, <span class="fl">.75</span>, <span class="fl">1.</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="212">
    <div id="ddaUtP"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1842,7 +1817,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-44" class="cell" data-execution_count="264">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">1</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'gaussian'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>) <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">1</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'gaussian'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>) <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="264">
    <div id="88G0AX"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1895,7 +1870,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-45" class="cell" data-execution_count="277">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">2</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'gaussian'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>) <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">2</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'gaussian'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>) <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="277">
    <div id="7S22sG"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1948,7 +1923,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-46" class="cell" data-execution_count="263">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">3</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'gaussian'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>) <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">3</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'gaussian'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>) <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="263">
    <div id="xbJHLx"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2001,7 +1976,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-47" class="cell" data-execution_count="250">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_density(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), kernel<span class="op">=</span><span class="st">'gaussian'</span>, bw<span class="op">=</span><span class="dv">50</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_density(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), kernel<span class="op">=</span><span class="st">'gaussian'</span>, bw<span class="op">=</span><span class="dv">50</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="250">
    <div id="VYnnMv"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2039,7 +2014,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-48" class="cell" data-execution_count="265">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">1</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>)<span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">1</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>)<span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="265">
    <div id="RRSJom"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2092,7 +2067,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-49" class="cell" data-execution_count="269">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">2</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>)<span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">2</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>)<span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="269">
    <div id="uDzSeD"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2145,8 +2120,8 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-50" class="cell" data-execution_count="268">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">3</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>) <span class="op">\</span></span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a> <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">3</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>) <span class="op">\</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a> <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="268">
    <div id="YEF6zw"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2212,7 +2187,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-51" class="cell" data-execution_count="270">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">5</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>)<span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights[:<span class="dv">5</span>], mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>)<span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="270">
    <div id="sgvWFv"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2265,7 +2240,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-52" class="cell" data-execution_count="272">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>)<span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>)<span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="272">
    <div id="93RgNv"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2315,7 +2290,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-53" class="cell" data-execution_count="276">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">20</span>)<span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">20</span>)<span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="276">
    <div id="6qEdsY"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2365,7 +2340,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-54" class="cell" data-execution_count="274">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">200</span>)<span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>ggplot(data<span class="op">=</span>weights, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">200</span>)<span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="274">
    <div id="ObBtYs"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2415,11 +2390,11 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-55" class="cell" data-execution_count="63">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(</span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>origin,</span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'origin'</span>),</span>
-<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>    position<span class="op">=</span><span class="st">'jitterdodge'</span></span>
-<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>origin,</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'origin'</span>),</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>    position<span class="op">=</span><span class="st">'jitterdodge'</span></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="63">
    <div id="9Iu6nn"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2454,11 +2429,11 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-56" class="cell" data-execution_count="55">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(</span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>origin,</span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'origin'</span>, y<span class="op">=</span><span class="st">'..count..'</span>),</span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>    stat<span class="op">=</span><span class="st">'count'</span>,</span>
-<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="dv">0</span>, <span class="va">None</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>origin,</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'origin'</span>, y<span class="op">=</span><span class="st">'..count..'</span>),</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>    stat<span class="op">=</span><span class="st">'count'</span>,</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="dv">0</span>, <span class="va">None</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="55">
    <div id="puD8Kq"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2498,13 +2473,13 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 </div>
 <div id="cell-57" class="cell" data-execution_count="235">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>all_cars.to_csv(<span class="st">'data/mpg.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>all_cars.to_csv(<span class="st">'data/mpg.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-58" class="cell" data-execution_count="30">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_pie(</span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>origin,</span>
-<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(<span class="bu">slice</span><span class="op">=</span><span class="st">'origin'</span>),</span>
-<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_pie(</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>origin,</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>    mapping<span class="op">=</span>aes(<span class="bu">slice</span><span class="op">=</span><span class="st">'origin'</span>),</span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
    <div id="tspcvj"></div>
    <script type="text/javascript" data-lets-plot-script="plot">

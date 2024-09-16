@@ -1,0 +1,795 @@
+---
+title: "Data Analytics and Visualization"
+subtitle: "1-1: Simulation-based inference"
+author: "Prof. Gabe Hope"
+format: 
+    revealjs:
+        theme: ["../../../../theme.scss"]
+        html-math-method: katex
+revealjs-plugins:
+  - tldraw
+---
+
+# Statistics for computer scientists
+
+## A new dataset: Wind vectors
+
+::::: columns
+::: {.column style="width: 50%"}
+
+```{ojs}
+tf = require('@tensorflow/tfjs@4.11.0')
+d3Fetch = require("d3-fetch@1.1.2")
+
+wind = FileAttachment("data/wind.csv").csv({typed: true})
+land = topojson.feature(europe, europe.objects.europe)
+europe = d3Fetch.json("https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson")
+circle = d3.geoCircle().center([0, 52]).radius(5.5).precision(2)()
+
+Plot.plot({
+  width: 500,
+  height: 500,
+  inset:  10,
+  aspectRatio: 1,
+  color: {
+    label: "Speed (m/s)",
+    zero: true,
+    legend: true
+  },
+  projection: {
+    type: "azimuthal-equal-area",
+    //rotate: [-9, -34],
+    domain: circle,
+    inset: 10
+  },
+  marks: [
+    Plot.graticule(),
+    Plot.geo(land, {fill: "currentColor", stroke: 'black', fill: 'white'}),
+    Plot.vector(wind, {
+      x: "longitude",
+      y: "latitude",
+      rotate: ({u, v}) => Math.atan2(u, v) * 180 / Math.PI,
+      length: ({u, v}) => Math.hypot(u, v),
+      stroke: ({u, v}) => Math.hypot(u, v)
+    }),    
+  ]
+})
+```
+:::
+::: {.column style="width: 50%; font-size: 75%"}
+
+We'll focus on just the `speed` variable.
+```{ojs}
+
+data2 = d3Fetch.csv("https://raw.githubusercontent.com/vega/vega-datasets/master/data/windvectors.csv");
+population = tf.tensor(data2.map(d => parseFloat(d['speed']))).reshape([-1, 1]);
+
+Plot.plot({
+  height: 500,
+  width: 500,
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(population.arraySync(), Plot.dodgeY({x: "0", r:1.5, fill: '0'})),
+  ]
+})
+```
+:::
+:::::
+
+## Samples and populations
+
+Typically, datasets we collect do not contain the entire universe. They are a **sample** from a much larger **population**.
+
+```{ojs}
+Plot.plot({
+  height: 250,
+  width: 1000,
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(population.arraySync(), Plot.dodgeY({x: "0", r:1})),
+    Plot.tip(["All possible wind speeds"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+
+```{ojs}
+viewof sample = Inputs.range([1, 1000], {label: "Sample", value: 200, step: 1})
+resample = function(x, size) {
+  return tf.tidy(() => {
+    
+    let inds;
+    let counts;
+    if (size) {
+      inds = tf.randomUniformInt([size], 0, x.shape[0]);
+      return x.gather(inds).reshape([-1, 1]);
+    } else {
+      inds = tf.randomUniformInt([x.shape[0]], 0, x.shape[0]);
+      counts = tf.bincount(inds, [], x.shape[0]).reshape(x.shape);
+      return tf.concat([x.gather(inds), x, counts], 1);
+    }
+  });
+}
+
+weights = resample(population, sample);
+Plot.plot({
+  height: 200,
+  width: 1000,
+  x: {label: "Wind speed (km/h)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'black'})),
+    Plot.tip(["The dataset we've collected"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+
+## Statistics and parameters
+
+We can compute a **statistic** of interest using our sample.
+
+::::: columns
+::: {.column style="width: 50%; font-size: 50%;"}
+```{ojs}
+viewof statistic = Inputs.select(["Mean", "Median", "Percentile", "Variance", "StdDev"], {label: "Statistic"});
+```
+:::
+::: {.column style="width: 50%; font-size: 50%;"}
+```{ojs}
+viewof percentile =  Inputs.range([0, 100], {label: (statistic == "Percentile") ? "Percentile" : "", step: 1});
+```
+:::
+:::::
+
+```{ojs}
+
+quantile = {
+  const asc = arr => arr.sort((a, b) => a - b);
+  const sum = arr => arr.reduce((a, b) => a + b, 0);
+  const mean = arr => sum(arr) / arr.length;
+  
+  // sample standard deviation
+  const std = (arr) => {
+      const mu = mean(arr);
+      const diffArr = arr.map(a => (a - mu) ** 2);
+      return Math.sqrt(sum(diffArr) / (arr.length - 1));
+  };
+  
+  const quantile = (arr, q) => {
+      const sorted = asc(arr);
+      const pos = (sorted.length - 1) * q;
+      const base = Math.floor(pos);
+      const rest = pos - base;
+      if (sorted[base + 1] !== undefined) {
+          return sorted[base] + rest * (sorted[base + 1] - sorted[base]);
+      } else {
+          return sorted[base];
+      }
+  };
+  return quantile;
+}
+
+std = {
+  const asc = arr => arr.sort((a, b) => a - b);
+  const sum = arr => arr.reduce((a, b) => a + b, 0);
+  const mean = arr => sum(arr) / arr.length;
+  
+  // sample standard deviation
+  const std = (arr) => {
+      const mu = mean(arr);
+      const diffArr = arr.map(a => (a - mu) ** 2);
+      return Math.sqrt(sum(diffArr) / (arr.length - 1));
+  };
+
+  return std;
+}
+
+computeStat = (x) => {
+  let est = tf.tidy(() => {
+    let values = x.slice([0, 0], [-1, 1]).reshape([-1]);
+    if (statistic == 'Mean') {
+      return values.mean().arraySync();
+    } else if (statistic == 'Median') {
+      return quantile(values.arraySync(), 0.5);
+    } else if (statistic == 'Percentile') {
+      return quantile(values.arraySync(), percentile / 100);
+    } else if (statistic == 'Variance') {
+      return Math.pow(std(values.arraySync()), 2);
+    } else if (statistic == 'StdDev') {
+      return std(values.arraySync());
+    }
+  });
+  return est;
+}
+
+estimate = computeStat(weights)
+Plot.plot({
+  height: 200,
+  width: 1000,
+  x: {label: "Wind speed (km/h)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'black'})),
+    Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),
+    Plot.tip(["Sample statistic"], {x: estimate, dy: -50, anchor: "left", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+
+*Here our **`{ojs} statistic`** wind speed is `{ojs} estimate.toFixed(2)`*
+
+#### We could also ask questions such as: 
+
+- What is the *90th percentile* of wind speeds?
+- What is the *probability* that the wind speed is greater than 10 m/s?
+
+## Statistics and parameters
+
+What we're really interested in is the value for the population, which we call the corresponding **parameter**.
+
+::: {style="font-size: 60%;"}
+- *What is the **true** mean wind speed?*
+- *What is the **true** probability that the wind speed is greater than 10 m/s?*
+:::
+
+```{ojs}
+Plot.plot({
+  height: 300,
+  width: 1000,
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(population.arraySync(), Plot.dodgeY({x: "0", r:1})),
+    Plot.ruleX([5.4], {stroke: 'blue', strokeWidth: 2}),
+    Plot.tip(["Population parameter"], {x: 5.4, dy: -50, anchor: "left", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+
+We can't know for sure, but we can try to quantify our **uncertainty**.
+
+## Point estimates
+
+Our sample statistic is a **point estimate** of the population parameter.
+
+- A single value
+- Hopefully close to the parameter, but might be far if we're unlucky
+
+```{ojs}
+Plot.plot({
+  height: 200,
+  width: 1000,
+  x: {label: "Wind speed (km/h)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'black'})),
+    Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),
+    Plot.tip(["Sample statistic"], {x: estimate, dy: -50, anchor: "left", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+In order to understand where our population parameter might be, we would like an estimate of the **uncertainty** of our sample statistic.
+
+
+
+## Confidence intervals
+
+A **95% confidence interval** for a statistic is a range computed from a sample such that: 
+
+- *for 95% of samples the true parameter will fall in the range*. 
+
+
+```{ojs}
+Plot.plot({
+  height: 200,
+  width: 1000,
+  x: {label: "Wind speed (km/h)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'black'})),
+    Plot.ruleX([1.5, 8.3], {stroke: 'red', strokeWidth: 2}),
+    Plot.tip(["Lower interval edge"], {x: 1.5, dy: -50, anchor: "left", stroke: 'red', fontColor:'red', fontWeight: 'bold', fontSize: 12, pathFilter: false}),
+    Plot.tip(["Upper interval edge"], {x:8.3, dy: -50, anchor: "right", stroke: 'red', fontColor:'red', fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+
+This gives us a sense of the uncertainty of our statistic across samples.
+
+## Classic (parametric) approach
+
+Derive a **model** for the distribution of the statistic of interest.
+
+![](pictures/ci.png){fig-align="left" width="300"}
+
+Calculate a confidence interval from this distribution.
+
+## Classic (parametric) approach
+
+**Example:** Confidence interval on the population *mean* ($\mu$). 
+
+Assuming:
+
+::: {style="font-size: 80%;"}
+
+- Observations are **independently** sampled.
+- The population distribution is **normal**
+:::
+
+Then the statistic:
+
+::::: columns
+::: {.column style="width: 50%; font-size: 80%;"}
+$$T = \frac{\bar{x} - \mu}{\frac{s}{\sqrt{N}}}$$
+
+Has a **Student's T** distribution with $N-1$ degrees of freedom
+:::
+::: {.column style="width: 50%; font-size: 90%;"}
+![](pictures/t-distribution.png){fig-align="left" width="500"}
+:::
+:::::
+
+## Classic (parametric) approach
+
+**Example:** Confidence interval on the population *mean* ($\mu$). 
+
+
+::::: columns
+::: {.column style="width: 50%; font-size: 80%;"}
+$$T = \frac{\bar{x} - \mu}{\frac{s}{\sqrt{N}}}$$
+
+Has a **Student's T** distribution with $N-1$ degrees of freedom. 
+
+Under this distribution define $q_{2.5}$ as:
+
+$$P(T \leq q_{2.5}) = 0.025$$
+
+![](pictures/ci_25.png){fig-align="left" width="400"}
+:::
+::: {.column style="width: 50%; font-size: 80%;"}
+Lower edge of CI $\theta_{l}$
+
+$$q_{2.5} = \frac{\bar{x} - \theta_{l}}{\frac{s}{\sqrt{N}}}$$
+Therefore
+$$\theta_{l} = \bar{x} - q_{2.5} \frac{s}{\sqrt{N}}$$
+
+Upper edge of CI $\theta_{u}$ is symmetric
+$$\theta_{u} = \bar{x} + q_{97.5} \frac{s}{\sqrt{N}}$$
+
+:::
+:::::
+
+
+
+
+## Classic (parametric) approach
+
+**Disadvantages:**
+
+- Requires possibly unrealistic assumptions about population
+- Requires complex new derivation for every new statistic
+- This derivation might be unknown/impossible!
+
+## So, what if we **don't know** the distribution of our data?
+
+For the mean:
+
+- the central limit theorem kicks in if our sample is large enough.
+
+*But what about for other statistics?*
+
+# In an ideal world...
+
+## Sampling our statistic many times
+
+Ideally we could draw many samples from our population and compute our statistic each time. 
+
+::::: columns
+
+::: {.column style="width: 25%; font-size: 50%;"}
+Statistic: `{ojs} statistic`
+:::
+::: {.column style="width: 25%; font-size: 50%;"}
+```{ojs}
+viewof resampleToggle = Inputs.range();
+
+```
+:::
+::: {.column style="width: 25%; font-size: 50%;"}
+```{ojs}
+viewof step = Inputs.button("Resample")
+
+```
+:::
+::: {.column style="width: 25%; font-size: 50%;"}
+```{ojs}
+viewof reset = Inputs.button("Reset")
+
+```
+:::
+:::::
+
+```{ojs}
+
+playing = {
+  resampleToggle;
+  return !this;
+}
+
+resampleButton = {
+  while(playing) {
+    yield true;
+  }
+  step;
+  return false;
+}
+
+popestimates = {
+  statistic
+  reset
+  percentile
+  return [];
+}
+
+popci = {
+  popresampled
+  let flat_estimates = popestimates.flat();
+  return [[quantile(flat_estimates, 0.05)], [quantile(flat_estimates, 0.95)]];
+}
+
+parameter = computeStat(population);
+
+popresampled = {
+  resampleButton
+  let x = resample(population, sample);
+  let est = computeStat(x);
+  popestimates.push([est]);
+  let output = x.arraySync();
+  x.dispose()
+  return output;
+}
+
+Plot.plot({
+  height: 200,
+  width: 1000,
+  color: {
+    scheme: "Reds"
+  },
+  x: {label: "Wind speed (km/h)",domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(popresampled, Plot.dodgeY({x: "0"})),
+    Plot.ruleX(popestimates[popestimates.length - 1], {stroke: 'blue', strokeWidth: 2}),
+    Plot.tip(["Sample from population"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+This would show us the **distribution of our statistic**.
+```{ojs}
+{
+  popresampled
+  if (popestimates.length < 500) {
+    return Plot.plot({
+      height: 200,
+      width: 1000,
+      color: {
+        scheme: "Reds"
+      },
+      x: {label: "Wind speed (km/h)"},
+      marks: [
+        Plot.dot(popestimates, Plot.dodgeY({x: "0"})),
+        Plot.ruleX(popci, {stroke: 'red'}),
+        Plot.ruleX(parameter, {stroke: 'blue', strokeWidth: 3}),
+    Plot.tip(["Distribution of statistic"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+      ]
+    })
+  } else {
+    return Plot.plot({
+      height: 200,
+      width: 1000,
+      x: {label: "Wind speed (km/h)"},
+      marks: [
+        Plot.ruleY([0]),
+        Plot.rectY(popestimates, Plot.binX({y: "count"}, {x: "0", thresholds: 'scott'})),
+        Plot.ruleX(popci, {stroke: 'red'}),
+        Plot.ruleX([parameter], {stroke: 'blue', strokeWidth: 3}),
+    Plot.tip(["Distribution of statistic"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+      ]
+    })
+  }
+}
+```
+
+## Sampling our statistic many times
+
+But going out and collecting new samples isn't generally feasible!
+
+- And if it was, we might as well just combine them into one big sample.
+
+So we're stuck with the sample (and estimate) we have...
+
+```{ojs}
+Plot.plot({
+  height: 200,
+  width: 1000,
+  x: {label: "Wind speed (km/h)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'black'})),
+    Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),
+  ]
+})
+```
+
+# Bootstrapping
+
+## What if we can **fake** new samples from the population?
+
+This is the idea behind **bootstrapping**. Rather than collecting new samples, we'll *resample* our existing data.
+
+
+
+## Bootstrapping
+
+With $N$ observations we will generate a **bootstrap sample** by:  
+
+- Drawing $N$ values from our sample **with replacement** 
+
+```{python}
+#| echo: true
+#| eval: false
+
+def bootstrap_sample(data):
+    N = len(data)                      # Number of obsevations
+    inds = np.random.randint(0, N, N)  # Resample from {1,...,N}, N times
+    return data[inds]                  # Return the new sample
+
+```
+
+
+## Bootstrapping
+
+This means that:
+
+- Every observation is added  with probability $\frac{1}{N}$
+- The same observation can be added multiple times!
+
+We can use these bootstrap samples to estimate the distribution of our statistic!
+
+```{python}
+#| echo: true
+#| eval: false
+
+def bootstrap_distribution(data, statistic_fun, nsamples):
+    estimates = []                       # Distribution of statistic estimates
+    for i in range(nsamples):            # Resample many times
+        sample = bootstrap_sample(data)  # Get a new bootstrapped sample
+        stat = statistic_fun(sample)     # Compute our statistic
+        estimates.append(stat)           # add it to the distribution
+    return estimates
+
+```
+
+## What does this look like?
+
+::::: columns
+::: {.column style="width: 25%; font-size: 50%;"}
+Statistic: `{ojs} statistic`
+:::
+::: {.column style="width: 25%; font-size: 50%;"}
+```{ojs}
+viewof resampleToggle2 = Inputs.range();
+
+```
+:::
+::: {.column style="width: 25%; font-size: 50%;"}
+```{ojs}
+viewof step2 = Inputs.button("Resample")
+
+```
+:::
+::: {.column style="width: 25%; font-size: 50%;"}
+```{ojs}
+viewof reset2 = Inputs.button("Reset")
+
+```
+:::
+:::::
+
+```{ojs}
+estimates = {
+  statistic
+  reset2
+  percentile
+  return [];
+}
+
+ci = {
+  resampled
+  let flat_estimates = estimates.flat();
+  return [[quantile(flat_estimates, 0.05)], [quantile(flat_estimates, 0.95)]];
+}
+
+resampled = {
+  resampleToggle2
+  let x = resample(weights);
+  let est = computeStat(x);
+  estimates.push([est]);
+  let output = x.arraySync();
+  x.dispose()
+  return output;
+}
+
+Plot.plot({
+  height: 180,
+  width: 1000,
+  color: {
+    scheme: "Reds",
+    legend: true,
+    label: "Occurences in bootstrap sample",
+    domain: [0, 5]
+  },
+  x: {label: "Wind speed (km/h)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(resampled, Plot.dodgeY({x: "1", fill: "2", stroke: 'black'})),
+    Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),
+    Plot.tip(["Original sample"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+
+```{ojs}
+Plot.plot({
+  height: 180,
+  width: 1000,
+  color: {
+    scheme: "Reds"
+  },
+  x: {label: "Wind speed (km/h)",domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(resampled, Plot.dodgeY({x: "0"})),
+    Plot.ruleX(estimates[estimates.length - 1], {stroke: 'blue', strokeWidth: 2}),
+    Plot.tip(["Bootstrap sample"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+
+```{ojs}
+{
+  resampled
+  if (estimates.length < 500) {
+    return Plot.plot({
+      height: 180,
+      width: 1000,
+      stroke: {
+        legend: true,
+      },
+      x: {label: "Wind speed (km/h)"},
+      marks: [
+        Plot.dot(estimates, Plot.dodgeY({x: "0"})),
+        Plot.ruleX(ci, {stroke: 'red'}),
+        Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),
+        Plot.tip(["Estimated statistic distribution"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+      ]
+    })
+  } else {
+    return Plot.plot({
+      height: 200,
+    width: 1000,
+      marks: [
+        Plot.ruleY([0]),
+        Plot.rectY(estimates, Plot.binX({y: "count"}, {x: "0", thresholds: 'scott'})),
+        Plot.ruleX(ci, {stroke: 'red'}),
+        Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),
+        Plot.tip(["Estimated statistic distribution"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+      ]
+    })
+  }
+}
+```
+
+## Bootstrap CI: a **simple** approach
+
+Computing a 95% confidence interval with bootstrapping is simple! 
+
+- Just take the 2.5% percentile and 97.5% percentile of our bootstraped samples.
+
+::::: columns
+::: {.column style="width: 50%; font-size: 50%;"}
+```{python}
+#| echo: true
+#| eval: false
+
+def simple_bootstrap_ci(data, statistic_fun, nsamples, confidence=0.95):
+    # Distribution of statistic estimates
+    estimates = bootstrap_distribution(data, statistic_fun, nsamples)
+    margin = (1 - confidence) / 2
+    lower = estimates[ceil(nsamples * margin)]
+    upper = estimates[ceil(nsamples * (1 - margin))] 
+    return lower, upper
+
+```
+
+Here we sort the data and take indices $0.025N$ and $0.975N$
+
+![](pictures/autos.png){fig-align="left" width="500"}
+:::
+::: {.column style="width: 50%; font-size: 50%;"}
+```{ojs}
+{
+  resampled
+  if (estimates.length < 500) {
+    return Plot.plot({
+      height: 200,
+      width: 1000,
+      stroke: {
+        legend: true,
+      },
+      x: {label: "Wind speed (km/h)"},
+      marks: [
+        Plot.dot(estimates, Plot.dodgeY({x: "0"})),
+        Plot.ruleX(ci, {stroke: 'red'}),
+        Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),
+        Plot.tip(["Estimated statistic distribution"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+      ]
+    })
+  } else {
+    return Plot.plot({
+      height: 200,
+    width: 400,
+      marks: [
+        Plot.ruleY([0]),
+        Plot.rectY(estimates, Plot.binX({y: "count"}, {x: "0", thresholds: 'scott'})),
+        Plot.ruleX(ci, {stroke: 'red'}),
+        Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),
+        Plot.tip(["Estimated statistic distribution"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+      ]
+    })
+  }
+}
+```
+
+Example bootstrapped percentiles
+![](pictures/bs-ci.png){fig-align="left" width="500"}
+::: 
+:::::
+
+
+## When is bootstrapping useful?
+
+Particularly useful when we don't know (and can't reasonably guess) the distribution of our population!
+
+**Caveats**
+
+- We're still assuming that the observations in our sample are **independent and identically distributed** (i.i.d.).
+- Our sample needs to be *representative* of the population.
+    - This means the sample size needs to be large enough
+- Requires computational power
+
+## Why does bootstrapping work?
+
+Complicated theory beyond the scope of this class!
+
+- Intuitively the bootstrap distribution should vary around the sample estimate in the same way sample estimates vary around the population parameter
+- Leverages the fact that full sample provides more information about the population than a single statistic
+
+
+## Point vs. uncertainty estimates grid
+
+::::: columns
+::: {.column style="width: 50%; font-size: 75%;"}
+#### Model-based inference
+
+**Point-estimate**
+
+- Calculate value from observed sample
+
+**Uncertainty-estimate**
+
+- Derive a model of our statistic's distribution
+:::
+::: {.column style="width: 50%; font-size: 75%;"}
+#### Simulation-based inference
+
+**Point-estimate**
+
+- Calculate value from observed sample
+
+**Uncertainty-estimate**
+
+- Resample the data many times
+
+:::
+:::::
