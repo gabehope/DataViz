@@ -597,7 +597,7 @@ Prof.&nbsp;Gabe Hope
 <span id="cb4-114"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
 <span id="cb4-115"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
 <span id="cb4-116"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb4-117"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (km/h)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb4-117"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
 <span id="cb4-118"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
 <span id="cb4-119"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(weights<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">'black'</span>}))<span class="op">,</span></span>
 <span id="cb4-120"><a></a>    Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"The dataset we've collected"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
@@ -720,7 +720,7 @@ Prof.&nbsp;Gabe Hope
 <span id="cb7-204"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
 <span id="cb7-205"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
 <span id="cb7-206"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb7-207"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (km/h)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb7-207"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
 <span id="cb7-208"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
 <span id="cb7-209"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(weights<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">'black'</span>}))<span class="op">,</span></span>
 <span id="cb7-210"><a></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([estimate]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
@@ -809,7 +809,7 @@ Prof.&nbsp;Gabe Hope
 <div class="sourceCode cell-code hidden" id="cb9" data-startfrom="254" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 253;"><span id="cb9-254"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
 <span id="cb9-255"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
 <span id="cb9-256"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb9-257"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (km/h)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb9-257"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
 <span id="cb9-258"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
 <span id="cb9-259"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(weights<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">'black'</span>}))<span class="op">,</span></span>
 <span id="cb9-260"><a></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([estimate]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
@@ -834,7 +834,7 @@ Prof.&nbsp;Gabe Hope
 <div class="sourceCode cell-code hidden" id="cb10" data-startfrom="277" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 276;"><span id="cb10-277"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
 <span id="cb10-278"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
 <span id="cb10-279"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb10-280"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (km/h)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb10-280"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
 <span id="cb10-281"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
 <span id="cb10-282"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(weights<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">'black'</span>}))<span class="op">,</span></span>
 <span id="cb10-283"><a></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="fl">1.5</span><span class="op">,</span> <span class="fl">8.3</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
@@ -908,6 +908,17 @@ Prof.&nbsp;Gabe Hope
 <li>This derivation might be unknown/impossible!</li>
 </ul>
 </section>
+<section id="classic-parametric-approach-4" class="slide level2">
+<h2>Classic (parametric) approach</h2>
+<h3 id="model-based-inference">Model-based inference</h3>
+<p><strong>Assumptions we make</strong></p>
+<ul>
+<li>Observations in our sample are i.i.d.</li>
+<li>Our sample is <em>representative</em> of the population</li>
+<li>We know the form of the population distribution.</li>
+<li>We can analytically derive a confidence interval for our statistic</li>
+</ul>
+</section>
 <section id="so-what-if-we-dont-know-the-distribution-of-our-data" class="slide level2">
 <h2>So, what if we <strong>don’t know</strong> the distribution of our data?</h2>
 <p>For the mean:</p>
@@ -929,7 +940,7 @@ Prof.&nbsp;Gabe Hope
 <p>Statistic: <span><span id="ojs-element-id-3"></span></span></p>
 </div><div class="column" style="width: 25%; font-size: 50%;">
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb11" data-startfrom="387" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 386;"><span id="cb11-387"><a></a>viewof resampleToggle <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb11" data-startfrom="399" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 398;"><span id="cb11-399"><a></a>viewof resampleToggle <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-11" data-nodetype="declaration">
 
@@ -938,7 +949,7 @@ Prof.&nbsp;Gabe Hope
 </div>
 </div><div class="column" style="width: 25%; font-size: 50%;">
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb12" data-startfrom="393" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 392;"><span id="cb12-393"><a></a>viewof step <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Resample"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb12" data-startfrom="405" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 404;"><span id="cb12-405"><a></a>viewof step <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Resample"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-12" data-nodetype="declaration">
 
@@ -947,7 +958,7 @@ Prof.&nbsp;Gabe Hope
 </div>
 </div><div class="column" style="width: 25%; font-size: 50%;">
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb13" data-startfrom="399" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 398;"><span id="cb13-399"><a></a>viewof reset <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Reset"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb13" data-startfrom="411" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 410;"><span id="cb13-411"><a></a>viewof reset <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Reset"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-13" data-nodetype="declaration">
 
@@ -956,57 +967,57 @@ Prof.&nbsp;Gabe Hope
 </div>
 </div></div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb14" data-startfrom="408" data-source-offset="-1"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 407;"><span id="cb14-408"><a></a>playing <span class="op">=</span> {</span>
-<span id="cb14-409"><a></a>  resampleToggle<span class="op">;</span></span>
-<span id="cb14-410"><a></a>  <span class="cf">return</span> <span class="op">!</span><span class="kw">this</span><span class="op">;</span></span>
-<span id="cb14-411"><a></a>}</span>
-<span id="cb14-412"><a></a></span>
-<span id="cb14-413"><a></a>resampleButton <span class="op">=</span> {</span>
-<span id="cb14-414"><a></a>  <span class="cf">while</span>(playing) {</span>
-<span id="cb14-415"><a></a>    <span class="kw">yield</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb14-416"><a></a>  }</span>
-<span id="cb14-417"><a></a>  step<span class="op">;</span></span>
-<span id="cb14-418"><a></a>  <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
-<span id="cb14-419"><a></a>}</span>
-<span id="cb14-420"><a></a></span>
-<span id="cb14-421"><a></a>popestimates <span class="op">=</span> {</span>
-<span id="cb14-422"><a></a>  statistic</span>
-<span id="cb14-423"><a></a>  reset</span>
-<span id="cb14-424"><a></a>  percentile</span>
-<span id="cb14-425"><a></a>  <span class="cf">return</span> []<span class="op">;</span></span>
-<span id="cb14-426"><a></a>}</span>
-<span id="cb14-427"><a></a></span>
-<span id="cb14-428"><a></a>popci <span class="op">=</span> {</span>
-<span id="cb14-429"><a></a>  popresampled</span>
-<span id="cb14-430"><a></a>  <span class="kw">let</span> flat_estimates <span class="op">=</span> popestimates<span class="op">.</span><span class="fu">flat</span>()<span class="op">;</span></span>
-<span id="cb14-431"><a></a>  <span class="cf">return</span> [[<span class="fu">quantile</span>(flat_estimates<span class="op">,</span> <span class="fl">0.05</span>)]<span class="op">,</span> [<span class="fu">quantile</span>(flat_estimates<span class="op">,</span> <span class="fl">0.95</span>)]]<span class="op">;</span></span>
-<span id="cb14-432"><a></a>}</span>
-<span id="cb14-433"><a></a></span>
-<span id="cb14-434"><a></a>parameter <span class="op">=</span> <span class="fu">computeStat</span>(population)<span class="op">;</span></span>
-<span id="cb14-435"><a></a></span>
-<span id="cb14-436"><a></a>popresampled <span class="op">=</span> {</span>
-<span id="cb14-437"><a></a>  resampleButton</span>
-<span id="cb14-438"><a></a>  <span class="kw">let</span> x <span class="op">=</span> <span class="fu">resample</span>(population<span class="op">,</span> sample)<span class="op">;</span></span>
-<span id="cb14-439"><a></a>  <span class="kw">let</span> est <span class="op">=</span> <span class="fu">computeStat</span>(x)<span class="op">;</span></span>
-<span id="cb14-440"><a></a>  popestimates<span class="op">.</span><span class="fu">push</span>([est])<span class="op">;</span></span>
-<span id="cb14-441"><a></a>  <span class="kw">let</span> output <span class="op">=</span> x<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">;</span></span>
-<span id="cb14-442"><a></a>  x<span class="op">.</span><span class="fu">dispose</span>()</span>
-<span id="cb14-443"><a></a>  <span class="cf">return</span> output<span class="op">;</span></span>
+<div class="sourceCode cell-code hidden" id="cb14" data-startfrom="420" data-source-offset="-1"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 419;"><span id="cb14-420"><a></a>playing <span class="op">=</span> {</span>
+<span id="cb14-421"><a></a>  resampleToggle<span class="op">;</span></span>
+<span id="cb14-422"><a></a>  <span class="cf">return</span> <span class="op">!</span><span class="kw">this</span><span class="op">;</span></span>
+<span id="cb14-423"><a></a>}</span>
+<span id="cb14-424"><a></a></span>
+<span id="cb14-425"><a></a>resampleButton <span class="op">=</span> {</span>
+<span id="cb14-426"><a></a>  <span class="cf">while</span>(playing) {</span>
+<span id="cb14-427"><a></a>    <span class="kw">yield</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb14-428"><a></a>  }</span>
+<span id="cb14-429"><a></a>  step<span class="op">;</span></span>
+<span id="cb14-430"><a></a>  <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb14-431"><a></a>}</span>
+<span id="cb14-432"><a></a></span>
+<span id="cb14-433"><a></a>popestimates <span class="op">=</span> {</span>
+<span id="cb14-434"><a></a>  statistic</span>
+<span id="cb14-435"><a></a>  reset</span>
+<span id="cb14-436"><a></a>  percentile</span>
+<span id="cb14-437"><a></a>  <span class="cf">return</span> []<span class="op">;</span></span>
+<span id="cb14-438"><a></a>}</span>
+<span id="cb14-439"><a></a></span>
+<span id="cb14-440"><a></a>popci <span class="op">=</span> {</span>
+<span id="cb14-441"><a></a>  popresampled</span>
+<span id="cb14-442"><a></a>  <span class="kw">let</span> flat_estimates <span class="op">=</span> popestimates<span class="op">.</span><span class="fu">flat</span>()<span class="op">;</span></span>
+<span id="cb14-443"><a></a>  <span class="cf">return</span> [[<span class="fu">quantile</span>(flat_estimates<span class="op">,</span> <span class="fl">0.05</span>)]<span class="op">,</span> [<span class="fu">quantile</span>(flat_estimates<span class="op">,</span> <span class="fl">0.95</span>)]]<span class="op">;</span></span>
 <span id="cb14-444"><a></a>}</span>
 <span id="cb14-445"><a></a></span>
-<span id="cb14-446"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb14-447"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb14-448"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb14-449"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
-<span id="cb14-450"><a></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Reds"</span></span>
-<span id="cb14-451"><a></a>  }<span class="op">,</span></span>
-<span id="cb14-452"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (km/h)"</span><span class="op">,</span><span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
-<span id="cb14-453"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb14-454"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(popresampled<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span>}))<span class="op">,</span></span>
-<span id="cb14-455"><a></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>(popestimates[popestimates<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
-<span id="cb14-456"><a></a>    Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Sample from population"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
-<span id="cb14-457"><a></a>  ]</span>
-<span id="cb14-458"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-446"><a></a>parameter <span class="op">=</span> <span class="fu">computeStat</span>(population)<span class="op">;</span></span>
+<span id="cb14-447"><a></a></span>
+<span id="cb14-448"><a></a>popresampled <span class="op">=</span> {</span>
+<span id="cb14-449"><a></a>  resampleButton</span>
+<span id="cb14-450"><a></a>  <span class="kw">let</span> x <span class="op">=</span> <span class="fu">resample</span>(population<span class="op">,</span> sample)<span class="op">;</span></span>
+<span id="cb14-451"><a></a>  <span class="kw">let</span> est <span class="op">=</span> <span class="fu">computeStat</span>(x)<span class="op">;</span></span>
+<span id="cb14-452"><a></a>  popestimates<span class="op">.</span><span class="fu">push</span>([est])<span class="op">;</span></span>
+<span id="cb14-453"><a></a>  <span class="kw">let</span> output <span class="op">=</span> x<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">;</span></span>
+<span id="cb14-454"><a></a>  x<span class="op">.</span><span class="fu">dispose</span>()</span>
+<span id="cb14-455"><a></a>  <span class="cf">return</span> output<span class="op">;</span></span>
+<span id="cb14-456"><a></a>}</span>
+<span id="cb14-457"><a></a></span>
+<span id="cb14-458"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb14-459"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb14-460"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb14-461"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb14-462"><a></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Reds"</span></span>
+<span id="cb14-463"><a></a>  }<span class="op">,</span></span>
+<span id="cb14-464"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span><span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb14-465"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb14-466"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(popresampled<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span>}))<span class="op">,</span></span>
+<span id="cb14-467"><a></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>(popestimates[popestimates<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
+<span id="cb14-468"><a></a>    Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Sample from population"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
+<span id="cb14-469"><a></a>  ]</span>
+<span id="cb14-470"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-14-1" data-nodetype="declaration">
@@ -1059,44 +1070,143 @@ Prof.&nbsp;Gabe Hope
 </div>
 <p>This would show us the <strong>distribution of our statistic</strong>.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb15" data-startfrom="461" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 460;"><span id="cb15-461"><a></a>{</span>
-<span id="cb15-462"><a></a>  popresampled</span>
-<span id="cb15-463"><a></a>  <span class="cf">if</span> (popestimates<span class="op">.</span><span class="at">length</span> <span class="op">&lt;</span> <span class="dv">500</span>) {</span>
-<span id="cb15-464"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb15-465"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb15-466"><a></a>      <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb15-467"><a></a>      <span class="dt">color</span><span class="op">:</span> {</span>
-<span id="cb15-468"><a></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Reds"</span></span>
-<span id="cb15-469"><a></a>      }<span class="op">,</span></span>
-<span id="cb15-470"><a></a>      <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (km/h)"</span>}<span class="op">,</span></span>
-<span id="cb15-471"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb15-472"><a></a>        Plot<span class="op">.</span><span class="fu">dot</span>(popestimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span>}))<span class="op">,</span></span>
-<span id="cb15-473"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(popci<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span>})<span class="op">,</span></span>
-<span id="cb15-474"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(parameter<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
-<span id="cb15-475"><a></a>    Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Distribution of statistic"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
-<span id="cb15-476"><a></a>      ]</span>
-<span id="cb15-477"><a></a>    })</span>
-<span id="cb15-478"><a></a>  } <span class="cf">else</span> {</span>
-<span id="cb15-479"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb15-480"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb15-481"><a></a>      <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb15-482"><a></a>      <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (km/h)"</span>}<span class="op">,</span></span>
-<span id="cb15-483"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb15-484"><a></a>        Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])<span class="op">,</span></span>
-<span id="cb15-485"><a></a>        Plot<span class="op">.</span><span class="fu">rectY</span>(popestimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="st">'scott'</span>}))<span class="op">,</span></span>
+<div class="sourceCode cell-code hidden" id="cb15" data-startfrom="473" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 472;"><span id="cb15-473"><a></a>{</span>
+<span id="cb15-474"><a></a>  popresampled</span>
+<span id="cb15-475"><a></a>  <span class="cf">if</span> (popestimates<span class="op">.</span><span class="at">length</span> <span class="op">&lt;</span> <span class="dv">500</span>) {</span>
+<span id="cb15-476"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb15-477"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb15-478"><a></a>      <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb15-479"><a></a>      <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb15-480"><a></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Reds"</span></span>
+<span id="cb15-481"><a></a>      }<span class="op">,</span></span>
+<span id="cb15-482"><a></a>      <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span>}<span class="op">,</span></span>
+<span id="cb15-483"><a></a>      <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span> <span class="dt">ticks</span><span class="op">:</span> <span class="dv">0</span>}<span class="op">,</span></span>
+<span id="cb15-484"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb15-485"><a></a>        Plot<span class="op">.</span><span class="fu">dot</span>(popestimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span>}))<span class="op">,</span></span>
 <span id="cb15-486"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(popci<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span>})<span class="op">,</span></span>
-<span id="cb15-487"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>([parameter]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
-<span id="cb15-488"><a></a>    Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Distribution of statistic"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
-<span id="cb15-489"><a></a>      ]</span>
-<span id="cb15-490"><a></a>    })</span>
-<span id="cb15-491"><a></a>  }</span>
-<span id="cb15-492"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-487"><a></a>        Plot<span class="op">.</span><span class="fu">areaY</span>([[popci[<span class="dv">0</span>]<span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> [popci[<span class="dv">1</span>]<span class="op">,</span> <span class="dv">1</span>]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"1"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"red"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.05</span>})<span class="op">,</span></span>
+<span id="cb15-488"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(parameter<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
+<span id="cb15-489"><a></a>    Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Distribution of statistic"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
+<span id="cb15-490"><a></a>      ]</span>
+<span id="cb15-491"><a></a>    })</span>
+<span id="cb15-492"><a></a>  } <span class="cf">else</span> {</span>
+<span id="cb15-493"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb15-494"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb15-495"><a></a>      <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb15-496"><a></a>      <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span>}<span class="op">,</span></span>
+<span id="cb15-497"><a></a>      <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span> <span class="dt">ticks</span><span class="op">:</span> <span class="dv">0</span>}<span class="op">,</span></span>
+<span id="cb15-498"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb15-499"><a></a>        Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])<span class="op">,</span></span>
+<span id="cb15-500"><a></a>        Plot<span class="op">.</span><span class="fu">rectY</span>(popestimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="st">'scott'</span>}))<span class="op">,</span></span>
+<span id="cb15-501"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(popci<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
+<span id="cb15-502"><a></a>        Plot<span class="op">.</span><span class="fu">areaY</span>([[popci[<span class="dv">0</span>]<span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> [popci[<span class="dv">1</span>]<span class="op">,</span> <span class="dv">1</span>]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"1"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"red"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.05</span>})<span class="op">,</span></span>
+<span id="cb15-503"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>([parameter]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
+<span id="cb15-504"><a></a>    Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Distribution of statistic"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
+<span id="cb15-505"><a></a>      ]</span>
+<span id="cb15-506"><a></a>    })</span>
+<span id="cb15-507"><a></a>  }</span>
+<span id="cb15-508"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-15" data-nodetype="expression">
 
 </div>
 </div>
 </div>
+</section>
+<section id="simulation-ci-a-simple-approach" class="slide level2">
+<h2>Simulation CI: a <strong>simple</strong> approach</h2>
+<p>Computing a 95% confidence interval with resampling is simple!</p>
+<ul>
+<li>Just take the 2.5% percentile and 97.5% percentile of our bootstrapped statistics.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width: 50%; font-size: 50%;">
+<div id="0532472a" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">def</span> simple_simulation_ci(data, statistic_fun, nsamples, confidence<span class="op">=</span><span class="fl">0.95</span>):</span>
+<span id="cb16-2"><a></a>    <span class="co"># Distribution of statistic estimates</span></span>
+<span id="cb16-3"><a></a>    estimates <span class="op">=</span> simulate_samples(data, statistic_fun, nsamples)</span>
+<span id="cb16-4"><a></a>    margin <span class="op">=</span> (<span class="dv">1</span> <span class="op">-</span> confidence) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb16-5"><a></a>    lower <span class="op">=</span> estimates[ceil(nsamples <span class="op">*</span> margin)]</span>
+<span id="cb16-6"><a></a>    upper <span class="op">=</span> estimates[ceil(nsamples <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> margin))] </span>
+<span id="cb16-7"><a></a>    <span class="cf">return</span> lower, upper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Here we sort the data and take indices <span class="math inline">0.025N</span> and <span class="math inline">0.975N</span></p>
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="pictures/autos.png" class="quarto-figure quarto-figure-left" width="500"></p>
+</figure>
+</div>
+</div><div class="column" style="width: 50%; font-size: 50%;">
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb17" data-startfrom="539" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 538;"><span id="cb17-539"><a></a>{</span>
+<span id="cb17-540"><a></a>  popresampled</span>
+<span id="cb17-541"><a></a>  <span class="cf">if</span> (popestimates<span class="op">.</span><span class="at">length</span> <span class="op">&lt;</span> <span class="dv">500</span>) {</span>
+<span id="cb17-542"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb17-543"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb17-544"><a></a>      <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb17-545"><a></a>      <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb17-546"><a></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Reds"</span></span>
+<span id="cb17-547"><a></a>      }<span class="op">,</span></span>
+<span id="cb17-548"><a></a>      <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span>}<span class="op">,</span></span>
+<span id="cb17-549"><a></a>      <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span> <span class="dt">ticks</span><span class="op">:</span> <span class="dv">0</span>}<span class="op">,</span></span>
+<span id="cb17-550"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb17-551"><a></a>        Plot<span class="op">.</span><span class="fu">dot</span>(popestimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span>}))<span class="op">,</span></span>
+<span id="cb17-552"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(popci<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span>})<span class="op">,</span></span>
+<span id="cb17-553"><a></a>        Plot<span class="op">.</span><span class="fu">areaY</span>([[popci[<span class="dv">0</span>]<span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> [popci[<span class="dv">1</span>]<span class="op">,</span> <span class="dv">1</span>]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"1"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"red"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.05</span>})<span class="op">,</span></span>
+<span id="cb17-554"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(parameter<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
+<span id="cb17-555"><a></a>    Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Distribution of statistic"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
+<span id="cb17-556"><a></a>      ]</span>
+<span id="cb17-557"><a></a>    })</span>
+<span id="cb17-558"><a></a>  } <span class="cf">else</span> {</span>
+<span id="cb17-559"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb17-560"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb17-561"><a></a>      <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb17-562"><a></a>      <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span>}<span class="op">,</span></span>
+<span id="cb17-563"><a></a>      <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span> <span class="dt">ticks</span><span class="op">:</span> <span class="dv">0</span>}<span class="op">,</span></span>
+<span id="cb17-564"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb17-565"><a></a>        Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])<span class="op">,</span></span>
+<span id="cb17-566"><a></a>        Plot<span class="op">.</span><span class="fu">rectY</span>(popestimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="st">'scott'</span>}))<span class="op">,</span></span>
+<span id="cb17-567"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(popci<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
+<span id="cb17-568"><a></a>        Plot<span class="op">.</span><span class="fu">areaY</span>([[popci[<span class="dv">0</span>]<span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> [popci[<span class="dv">1</span>]<span class="op">,</span> <span class="dv">1</span>]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"1"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"red"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.05</span>})<span class="op">,</span></span>
+<span id="cb17-569"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>([parameter]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
+<span id="cb17-570"><a></a>    Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Distribution of statistic"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
+<span id="cb17-571"><a></a>      ]</span>
+<span id="cb17-572"><a></a>    })</span>
+<span id="cb17-573"><a></a>  }</span>
+<span id="cb17-574"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-16" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<p>Example resampled percentiles <img data-src="pictures/bs-ci.png" class="quarto-figure quarto-figure-left" width="500"></p>
+</div></div>
+</section>
+<section id="point-vs.-uncertainty-estimates-grid" class="slide level2">
+<h2>Point vs.&nbsp;uncertainty estimates grid</h2>
+<div class="columns">
+<div class="column" style="width: 50%; font-size: 75%;">
+<h4 id="model-based-inference-1">Model-based inference</h4>
+<p><strong>Point-estimate</strong></p>
+<ul>
+<li>Calculate value from observed sample</li>
+</ul>
+<p><strong>Uncertainty-estimate</strong></p>
+<ul>
+<li>Derive a model of our statistic’s distribution</li>
+</ul>
+</div><div class="column" style="width: 50%; font-size: 75%;">
+<h4 id="simulation-based-inference">Simulation-based inference</h4>
+<p><strong>Point-estimate</strong></p>
+<ul>
+<li>Calculate value from observed sample</li>
+</ul>
+<p><strong>Uncertainty-estimate</strong></p>
+<ul>
+<li>Resample the data many times</li>
+</ul>
+</div></div>
 </section>
 <section id="sampling-our-statistic-many-times-1" class="slide level2">
 <h2>Sampling our statistic many times</h2>
@@ -1106,17 +1216,17 @@ Prof.&nbsp;Gabe Hope
 </ul>
 <p>So we’re stuck with the sample (and estimate) we have…</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb16" data-startfrom="504" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 503;"><span id="cb16-504"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb16-505"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb16-506"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb16-507"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (km/h)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
-<span id="cb16-508"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb16-509"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(weights<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">'black'</span>}))<span class="op">,</span></span>
-<span id="cb16-510"><a></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([estimate]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
-<span id="cb16-511"><a></a>  ]</span>
-<span id="cb16-512"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb18" data-startfrom="619" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 618;"><span id="cb18-619"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb18-620"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb18-621"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb18-622"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb18-623"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb18-624"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(weights<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">'black'</span>}))<span class="op">,</span></span>
+<span id="cb18-625"><a></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([estimate]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
+<span id="cb18-626"><a></a>  ]</span>
+<span id="cb18-627"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-16" data-nodetype="expression">
+<div id="ojs-cell-17" data-nodetype="expression">
 
 </div>
 </div>
@@ -1131,36 +1241,195 @@ Prof.&nbsp;Gabe Hope
 <h2>What if we can <strong>fake</strong> new samples from the population?</h2>
 <p>This is the idea behind <strong>bootstrapping</strong>. Rather than collecting new samples, we’ll <em>resample</em> our existing data.</p>
 </section>
+<section id="what-if-we-can-fake-new-samples-from-the-population-1" class="slide level2">
+<h2>What if we can <strong>fake</strong> new samples from the population?</h2>
+<p>This is the idea behind <strong>bootstrapping</strong>. Rather than collecting new samples, we’ll <em>resample</em> our existing data.</p>
+<h3 id="well-use-the-empirical-distribution-of-our-data">We’ll use the <strong>empirical</strong> distribution of our data</h3>
+<ul>
+<li>Sample: <span class="math inline">\{x_1,...,x_N\}</span></li>
+<li>New (bootstrapped) sample: <span class="math inline">\{\hat{x}_1,...,\hat{x}_N\} \sim \hat{p}(x)</span></li>
+</ul>
+<p>Empirical distribution <span class="math display">\hat{p}(x) = \frac{1}{N} \sum_{i=1}^{N} I(x=x_i)</span></p>
+</section>
+<section id="one-way-to-frame-this" class="slide level2">
+<h2>One way to frame this</h2>
+<p>Rather than using our sample statistic to estimate our population parameter, <em>we’ll use our sample to estimate our population</em>.</p>
+<div style="font-size: 80%">
+<ul>
+<li>Assume our much larger population follows the same distribution as our sample.</li>
+<li>Our estimated population is the limit as we repeat each observation in our sample <em>infinitely</em> many times.</li>
+</ul>
+</div>
+<div class="columns">
+<div class="column" style="width: 50%; font-size: 50%">
+<p>Population</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb19" data-startfrom="663" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 662;"><span id="cb19-663"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb19-664"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb19-665"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb19-666"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb19-667"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb19-668"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(population<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">r</span><span class="op">:</span><span class="dv">1</span>}))<span class="op">,</span></span>
+<span id="cb19-669"><a></a>  ]</span>
+<span id="cb19-670"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-18" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div><div class="column" style="width: 50%; font-size: 50%">
+<p>Population <strong>estimate</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb20" data-startfrom="677" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 676;"><span id="cb20-677"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb20-678"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb20-679"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb20-680"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb20-681"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb20-682"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> tf<span class="op">.</span><span class="fu">tile</span>(weights<span class="op">,</span> [repeats<span class="op">,</span> <span class="dv">1</span>])<span class="op">.</span><span class="fu">arraySync</span>())<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">5</span> <span class="op">/</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(repeats)}))<span class="op">,</span></span>
+<span id="cb20-683"><a></a>  ]</span>
+<span id="cb20-684"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-19" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb21" data-startfrom="688" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 687;"><span id="cb21-688"><a></a>viewof repeats <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">1</span><span class="op">,</span> <span class="dv">20</span>]<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Repeats"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-20" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div></div>
+<p>Then we can do the sampling process we just described with our <em>estimated</em> population!</p>
+</section>
 <section id="bootstrapping-1" class="slide level2">
 <h2>Bootstrapping</h2>
 <p>With <span class="math inline">N</span> observations we will generate a <strong>bootstrap sample</strong> by:</p>
 <ul>
 <li>Drawing <span class="math inline">N</span> values from our sample <strong>with replacement</strong></li>
 </ul>
-<div id="cd33b08f" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="kw">def</span> bootstrap_sample(data):</span>
-<span id="cb17-2"><a></a>    N <span class="op">=</span> <span class="bu">len</span>(data)                      <span class="co"># Number of obsevations</span></span>
-<span id="cb17-3"><a></a>    inds <span class="op">=</span> np.random.randint(<span class="dv">0</span>, N, N)  <span class="co"># Resample from {1,...,N}, N times</span></span>
-<span id="cb17-4"><a></a>    <span class="cf">return</span> data[inds]                  <span class="co"># Return the new sample</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="3c5558ed" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a><span class="kw">def</span> bootstrap_sample(data):</span>
+<span id="cb22-2"><a></a>    N <span class="op">=</span> <span class="bu">len</span>(data)                      <span class="co"># Number of obsevations</span></span>
+<span id="cb22-3"><a></a>    inds <span class="op">=</span> np.random.randint(<span class="dv">0</span>, N, N)  <span class="co"># Resample from {1,...,N}, N times</span></span>
+<span id="cb22-4"><a></a>    <span class="cf">return</span> data[inds]                  <span class="co"># Return the new sample</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="columns">
+<div class="column" style="width: 50%; font-size: 50%">
+<p>Original sample</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb23" data-startfrom="715" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 714;"><span id="cb23-715"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb23-716"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">180</span><span class="op">,</span></span>
+<span id="cb23-717"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
+<span id="cb23-718"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb23-719"><a></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Reds"</span><span class="op">,</span></span>
+<span id="cb23-720"><a></a>    <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb23-721"><a></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Occurences in bootstrap sample"</span><span class="op">,</span></span>
+<span id="cb23-722"><a></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">5</span>]</span>
+<span id="cb23-723"><a></a>  }<span class="op">,</span></span>
+<span id="cb23-724"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb23-725"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb23-726"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(resampled<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"1"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"2"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">'black'</span>}))<span class="op">,</span></span>
+<span id="cb23-727"><a></a>  ]</span>
+<span id="cb23-728"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-21" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div><div class="column" style="width: 50%; font-size: 50%">
+<p>Bootstrap sample</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb24" data-startfrom="734" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 733;"><span id="cb24-734"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb24-735"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">225</span><span class="op">,</span></span>
+<span id="cb24-736"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
+<span id="cb24-737"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb24-738"><a></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Reds"</span></span>
+<span id="cb24-739"><a></a>  }<span class="op">,</span></span>
+<span id="cb24-740"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span><span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb24-741"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb24-742"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(resampled<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span>}))<span class="op">,</span></span>
+<span id="cb24-743"><a></a>  ]</span>
+<span id="cb24-744"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-22" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div></div>
+<div style="font-size: 80%">
+<p>Equivalent to sampling from our infinite population estimate!</p>
 </div>
 </section>
 <section id="bootstrapping-2" class="slide level2">
 <h2>Bootstrapping</h2>
-<p>This means that:</p>
+<div style="font-size: 80%">
 <ul>
 <li>Every observation is added with probability <span class="math inline">\frac{1}{N}</span></li>
 <li>The same observation can be added multiple times!</li>
 </ul>
 <p>We can use these bootstrap samples to estimate the distribution of our statistic!</p>
-<div id="d23c1fd1" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> bootstrap_distribution(data, statistic_fun, nsamples):</span>
-<span id="cb18-2"><a></a>    estimates <span class="op">=</span> []                       <span class="co"># Distribution of statistic estimates</span></span>
-<span id="cb18-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(nsamples):            <span class="co"># Resample many times</span></span>
-<span id="cb18-4"><a></a>        sample <span class="op">=</span> bootstrap_sample(data)  <span class="co"># Get a new bootstrapped sample</span></span>
-<span id="cb18-5"><a></a>        stat <span class="op">=</span> statistic_fun(sample)     <span class="co"># Compute our statistic</span></span>
-<span id="cb18-6"><a></a>        estimates.append(stat)           <span class="co"># add it to the distribution</span></span>
-<span id="cb18-7"><a></a>    <span class="cf">return</span> estimates</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div id="269bd380" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a><span class="kw">def</span> bootstrap_distribution(data, statistic_fun, nsamples):</span>
+<span id="cb25-2"><a></a>    estimates <span class="op">=</span> []                       <span class="co"># Distribution of statistic estimates</span></span>
+<span id="cb25-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(nsamples):            <span class="co"># Resample many times</span></span>
+<span id="cb25-4"><a></a>        sample <span class="op">=</span> bootstrap_sample(data)  <span class="co"># Get a new bootstrapped sample</span></span>
+<span id="cb25-5"><a></a>        stat <span class="op">=</span> statistic_fun(sample)     <span class="co"># Compute our statistic</span></span>
+<span id="cb25-6"><a></a>        estimates.append(stat)           <span class="co"># add it to the distribution</span></span>
+<span id="cb25-7"><a></a>    <span class="cf">return</span> estimates</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="columns">
+<div class="column" style="width: 50%; font-size: 50%">
+<p>Original sample</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb26" data-startfrom="781" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 780;"><span id="cb26-781"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb26-782"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">180</span><span class="op">,</span></span>
+<span id="cb26-783"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
+<span id="cb26-784"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb26-785"><a></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Reds"</span><span class="op">,</span></span>
+<span id="cb26-786"><a></a>    <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb26-787"><a></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Occurences in bootstrap sample"</span><span class="op">,</span></span>
+<span id="cb26-788"><a></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">5</span>]</span>
+<span id="cb26-789"><a></a>  }<span class="op">,</span></span>
+<span id="cb26-790"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb26-791"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb26-792"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(resampled<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"1"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"2"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">'black'</span>}))<span class="op">,</span></span>
+<span id="cb26-793"><a></a>  ]</span>
+<span id="cb26-794"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-23" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div><div class="column" style="width: 50%; font-size: 50%">
+<p>Bootstrap sample</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb27" data-startfrom="800" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 799;"><span id="cb27-800"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb27-801"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">225</span><span class="op">,</span></span>
+<span id="cb27-802"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
+<span id="cb27-803"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb27-804"><a></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Reds"</span></span>
+<span id="cb27-805"><a></a>  }<span class="op">,</span></span>
+<span id="cb27-806"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span><span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb27-807"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb27-808"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(resampled<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span>}))<span class="op">,</span></span>
+<span id="cb27-809"><a></a>  ]</span>
+<span id="cb27-810"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-24" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div></div>
 </section>
 <section id="what-does-this-look-like" class="slide level2">
 <h2>What does this look like?</h2>
@@ -1169,155 +1438,174 @@ Prof.&nbsp;Gabe Hope
 <p>Statistic: <span><span id="ojs-element-id-4"></span></span></p>
 </div><div class="column" style="width: 25%; font-size: 50%;">
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb19" data-startfrom="572" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 571;"><span id="cb19-572"><a></a>viewof resampleToggle2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb28" data-startfrom="824" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 823;"><span id="cb28-824"><a></a>viewof replay <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Play"</span>)<span class="op">;</span></span>
+<span id="cb28-825"><a></a>resampleToggle2 <span class="op">=</span> {</span>
+<span id="cb28-826"><a></a>  <span class="kw">let</span> count <span class="op">=</span> replay <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="dv">100</span> <span class="op">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb28-827"><a></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> count<span class="op">;</span> <span class="op">++</span>i) {</span>
+<span id="cb28-828"><a></a>    <span class="kw">yield</span> i<span class="op">;</span></span>
+<span id="cb28-829"><a></a>  }</span>
+<span id="cb28-830"><a></a>}<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-17" data-nodetype="declaration">
+<div>
+<div id="ojs-cell-25-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-25-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width: 25%; font-size: 50%;">
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb29" data-startfrom="835" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 834;"><span id="cb29-835"><a></a>viewof step2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Resample"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-26" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 </div><div class="column" style="width: 25%; font-size: 50%;">
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb20" data-startfrom="578" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 577;"><span id="cb20-578"><a></a>viewof step2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Resample"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb30" data-startfrom="841" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 840;"><span id="cb30-841"><a></a>viewof reset2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Reset"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-18" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-</div><div class="column" style="width: 25%; font-size: 50%;">
-<div class="cell">
-<div class="sourceCode cell-code hidden" id="cb21" data-startfrom="584" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 583;"><span id="cb21-584"><a></a>viewof reset2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Reset"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div id="ojs-cell-19" data-nodetype="declaration">
+<div id="ojs-cell-27" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 </div></div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb22" data-startfrom="592" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 591;"><span id="cb22-592"><a></a>estimates <span class="op">=</span> {</span>
-<span id="cb22-593"><a></a>  statistic</span>
-<span id="cb22-594"><a></a>  reset2</span>
-<span id="cb22-595"><a></a>  percentile</span>
-<span id="cb22-596"><a></a>  <span class="cf">return</span> []<span class="op">;</span></span>
-<span id="cb22-597"><a></a>}</span>
-<span id="cb22-598"><a></a></span>
-<span id="cb22-599"><a></a>ci <span class="op">=</span> {</span>
-<span id="cb22-600"><a></a>  resampled</span>
-<span id="cb22-601"><a></a>  <span class="kw">let</span> flat_estimates <span class="op">=</span> estimates<span class="op">.</span><span class="fu">flat</span>()<span class="op">;</span></span>
-<span id="cb22-602"><a></a>  <span class="cf">return</span> [[<span class="fu">quantile</span>(flat_estimates<span class="op">,</span> <span class="fl">0.05</span>)]<span class="op">,</span> [<span class="fu">quantile</span>(flat_estimates<span class="op">,</span> <span class="fl">0.95</span>)]]<span class="op">;</span></span>
-<span id="cb22-603"><a></a>}</span>
-<span id="cb22-604"><a></a></span>
-<span id="cb22-605"><a></a>resampled <span class="op">=</span> {</span>
-<span id="cb22-606"><a></a>  resampleToggle2</span>
-<span id="cb22-607"><a></a>  <span class="kw">let</span> x <span class="op">=</span> <span class="fu">resample</span>(weights)<span class="op">;</span></span>
-<span id="cb22-608"><a></a>  <span class="kw">let</span> est <span class="op">=</span> <span class="fu">computeStat</span>(x)<span class="op">;</span></span>
-<span id="cb22-609"><a></a>  estimates<span class="op">.</span><span class="fu">push</span>([est])<span class="op">;</span></span>
-<span id="cb22-610"><a></a>  <span class="kw">let</span> output <span class="op">=</span> x<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">;</span></span>
-<span id="cb22-611"><a></a>  x<span class="op">.</span><span class="fu">dispose</span>()</span>
-<span id="cb22-612"><a></a>  <span class="cf">return</span> output<span class="op">;</span></span>
-<span id="cb22-613"><a></a>}</span>
-<span id="cb22-614"><a></a></span>
-<span id="cb22-615"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb22-616"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">180</span><span class="op">,</span></span>
-<span id="cb22-617"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb22-618"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
-<span id="cb22-619"><a></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Reds"</span><span class="op">,</span></span>
-<span id="cb22-620"><a></a>    <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb22-621"><a></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Occurences in bootstrap sample"</span><span class="op">,</span></span>
-<span id="cb22-622"><a></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">5</span>]</span>
-<span id="cb22-623"><a></a>  }<span class="op">,</span></span>
-<span id="cb22-624"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (km/h)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
-<span id="cb22-625"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb22-626"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(resampled<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"1"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"2"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">'black'</span>}))<span class="op">,</span></span>
-<span id="cb22-627"><a></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([estimate]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
-<span id="cb22-628"><a></a>    Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Original sample"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
-<span id="cb22-629"><a></a>  ]</span>
-<span id="cb22-630"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb31" data-startfrom="849" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 848;"><span id="cb31-849"><a></a>estimates <span class="op">=</span> {</span>
+<span id="cb31-850"><a></a>  statistic</span>
+<span id="cb31-851"><a></a>  reset2</span>
+<span id="cb31-852"><a></a>  step2</span>
+<span id="cb31-853"><a></a>  percentile</span>
+<span id="cb31-854"><a></a>  <span class="cf">return</span> []<span class="op">;</span></span>
+<span id="cb31-855"><a></a>}</span>
+<span id="cb31-856"><a></a></span>
+<span id="cb31-857"><a></a>ci <span class="op">=</span> {</span>
+<span id="cb31-858"><a></a>  resampled</span>
+<span id="cb31-859"><a></a>  <span class="kw">let</span> flat_estimates <span class="op">=</span> estimates<span class="op">.</span><span class="fu">flat</span>()<span class="op">;</span></span>
+<span id="cb31-860"><a></a>  <span class="cf">return</span> [[<span class="fu">quantile</span>(flat_estimates<span class="op">,</span> <span class="fl">0.025</span>)]<span class="op">,</span> [<span class="fu">quantile</span>(flat_estimates<span class="op">,</span> <span class="fl">0.975</span>)]]<span class="op">;</span></span>
+<span id="cb31-861"><a></a>}</span>
+<span id="cb31-862"><a></a></span>
+<span id="cb31-863"><a></a>resampled <span class="op">=</span> {</span>
+<span id="cb31-864"><a></a>  resampleToggle2</span>
+<span id="cb31-865"><a></a>  <span class="kw">let</span> x <span class="op">=</span> <span class="fu">resample</span>(weights)<span class="op">;</span></span>
+<span id="cb31-866"><a></a>  <span class="kw">let</span> est <span class="op">=</span> <span class="fu">computeStat</span>(x)<span class="op">;</span></span>
+<span id="cb31-867"><a></a>  estimates<span class="op">.</span><span class="fu">push</span>([est])<span class="op">;</span></span>
+<span id="cb31-868"><a></a>  <span class="kw">let</span> output <span class="op">=</span> x<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">;</span></span>
+<span id="cb31-869"><a></a>  x<span class="op">.</span><span class="fu">dispose</span>()</span>
+<span id="cb31-870"><a></a>  <span class="cf">return</span> output<span class="op">;</span></span>
+<span id="cb31-871"><a></a>}</span>
+<span id="cb31-872"><a></a></span>
+<span id="cb31-873"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb31-874"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">180</span><span class="op">,</span></span>
+<span id="cb31-875"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb31-876"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb31-877"><a></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Reds"</span><span class="op">,</span></span>
+<span id="cb31-878"><a></a>    <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb31-879"><a></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Occurences in bootstrap sample"</span><span class="op">,</span></span>
+<span id="cb31-880"><a></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">5</span>]</span>
+<span id="cb31-881"><a></a>  }<span class="op">,</span></span>
+<span id="cb31-882"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb31-883"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb31-884"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(resampled<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"1"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"2"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">'black'</span>}))<span class="op">,</span></span>
+<span id="cb31-885"><a></a>    Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Original sample"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
+<span id="cb31-886"><a></a>  ]</span>
+<span id="cb31-887"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-20-1" data-nodetype="declaration">
+<div id="ojs-cell-28-1" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-20-2" data-nodetype="declaration">
+<div id="ojs-cell-28-2" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-20-3" data-nodetype="declaration">
+<div id="ojs-cell-28-3" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-20-4" data-nodetype="expression">
+<div id="ojs-cell-28-4" data-nodetype="expression">
 
 </div>
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb23" data-startfrom="633" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 632;"><span id="cb23-633"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb23-634"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">180</span><span class="op">,</span></span>
-<span id="cb23-635"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb23-636"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
-<span id="cb23-637"><a></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Reds"</span></span>
-<span id="cb23-638"><a></a>  }<span class="op">,</span></span>
-<span id="cb23-639"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (km/h)"</span><span class="op">,</span><span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
-<span id="cb23-640"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb23-641"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(resampled<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span>}))<span class="op">,</span></span>
-<span id="cb23-642"><a></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>(estimates[estimates<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
-<span id="cb23-643"><a></a>    Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Bootstrap sample"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
-<span id="cb23-644"><a></a>  ]</span>
-<span id="cb23-645"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb32" data-startfrom="890" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 889;"><span id="cb32-890"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb32-891"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">180</span><span class="op">,</span></span>
+<span id="cb32-892"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb32-893"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb32-894"><a></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Reds"</span></span>
+<span id="cb32-895"><a></a>  }<span class="op">,</span></span>
+<span id="cb32-896"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span><span class="op">,</span><span class="dt">domain</span><span class="op">:</span> tf<span class="op">.</span><span class="fu">tidy</span>(() <span class="kw">=&gt;</span> {<span class="cf">return</span> [population<span class="op">.</span><span class="fu">min</span>()<span class="op">.</span><span class="fu">arraySync</span>()<span class="op">,</span> population<span class="op">.</span><span class="fu">max</span>()<span class="op">.</span><span class="fu">arraySync</span>()]})}<span class="op">,</span></span>
+<span id="cb32-897"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb32-898"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(resampled<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span>}))<span class="op">,</span></span>
+<span id="cb32-899"><a></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>(estimates[estimates<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
+<span id="cb32-900"><a></a>    Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Bootstrap sample"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
+<span id="cb32-901"><a></a>  ]</span>
+<span id="cb32-902"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-21" data-nodetype="expression">
+<div id="ojs-cell-29" data-nodetype="expression">
 
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb24" data-startfrom="649" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 648;"><span id="cb24-649"><a></a>{</span>
-<span id="cb24-650"><a></a>  resampled</span>
-<span id="cb24-651"><a></a>  <span class="cf">if</span> (estimates<span class="op">.</span><span class="at">length</span> <span class="op">&lt;</span> <span class="dv">500</span>) {</span>
-<span id="cb24-652"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb24-653"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">180</span><span class="op">,</span></span>
-<span id="cb24-654"><a></a>      <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb24-655"><a></a>      <span class="dt">stroke</span><span class="op">:</span> {</span>
-<span id="cb24-656"><a></a>        <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb24-657"><a></a>      }<span class="op">,</span></span>
-<span id="cb24-658"><a></a>      <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (km/h)"</span>}<span class="op">,</span></span>
-<span id="cb24-659"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb24-660"><a></a>        Plot<span class="op">.</span><span class="fu">dot</span>(estimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span>}))<span class="op">,</span></span>
-<span id="cb24-661"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(ci<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span>})<span class="op">,</span></span>
-<span id="cb24-662"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(estimate<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
-<span id="cb24-663"><a></a>        Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Estimated statistic distribution"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
-<span id="cb24-664"><a></a>      ]</span>
-<span id="cb24-665"><a></a>    })</span>
-<span id="cb24-666"><a></a>  } <span class="cf">else</span> {</span>
-<span id="cb24-667"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb24-668"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb24-669"><a></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb24-670"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb24-671"><a></a>        Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])<span class="op">,</span></span>
-<span id="cb24-672"><a></a>        Plot<span class="op">.</span><span class="fu">rectY</span>(estimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="st">'scott'</span>}))<span class="op">,</span></span>
-<span id="cb24-673"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(ci<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span>})<span class="op">,</span></span>
-<span id="cb24-674"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>([estimate]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
-<span id="cb24-675"><a></a>        Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Estimated statistic distribution"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
-<span id="cb24-676"><a></a>      ]</span>
-<span id="cb24-677"><a></a>    })</span>
-<span id="cb24-678"><a></a>  }</span>
-<span id="cb24-679"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb33" data-startfrom="906" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 905;"><span id="cb33-906"><a></a>{</span>
+<span id="cb33-907"><a></a>  resampled</span>
+<span id="cb33-908"><a></a>  <span class="cf">if</span> (estimates<span class="op">.</span><span class="at">length</span> <span class="op">&lt;</span> <span class="dv">500</span>) {</span>
+<span id="cb33-909"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb33-910"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">180</span><span class="op">,</span></span>
+<span id="cb33-911"><a></a>      <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb33-912"><a></a>      <span class="dt">stroke</span><span class="op">:</span> {</span>
+<span id="cb33-913"><a></a>        <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb33-914"><a></a>      }<span class="op">,</span></span>
+<span id="cb33-915"><a></a>      <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span>}<span class="op">,</span></span>
+<span id="cb33-916"><a></a>      <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span> <span class="dt">ticks</span><span class="op">:</span> <span class="dv">0</span>}<span class="op">,</span></span>
+<span id="cb33-917"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb33-918"><a></a>        Plot<span class="op">.</span><span class="fu">dot</span>(estimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"blue"</span>}))<span class="op">,</span></span>
+<span id="cb33-919"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(ci<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span>})<span class="op">,</span></span>
+<span id="cb33-920"><a></a>        Plot<span class="op">.</span><span class="fu">areaY</span>([[ci[<span class="dv">0</span>]<span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> [ci[<span class="dv">1</span>]<span class="op">,</span> <span class="dv">1</span>]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"1"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"red"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.05</span>})<span class="op">,</span></span>
+<span id="cb33-921"><a></a>        <span class="co">//Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),</span></span>
+<span id="cb33-922"><a></a>        Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Estimated statistic distribution"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
+<span id="cb33-923"><a></a>      ]</span>
+<span id="cb33-924"><a></a>    })</span>
+<span id="cb33-925"><a></a>  } <span class="cf">else</span> {</span>
+<span id="cb33-926"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb33-927"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb33-928"><a></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb33-929"><a></a>    <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span> <span class="dt">ticks</span><span class="op">:</span> <span class="dv">0</span>}<span class="op">,</span></span>
+<span id="cb33-930"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb33-931"><a></a>        Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])<span class="op">,</span></span>
+<span id="cb33-932"><a></a>        Plot<span class="op">.</span><span class="fu">rectY</span>(estimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="st">'scott'</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"blue"</span>}))<span class="op">,</span></span>
+<span id="cb33-933"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(ci<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
+<span id="cb33-934"><a></a>        Plot<span class="op">.</span><span class="fu">areaY</span>([[ci[<span class="dv">0</span>]<span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> [ci[<span class="dv">1</span>]<span class="op">,</span> <span class="dv">1</span>]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"1"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"red"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.05</span>})<span class="op">,</span></span>
+<span id="cb33-935"><a></a>        <span class="co">//Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),</span></span>
+<span id="cb33-936"><a></a>        Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Estimated statistic distribution"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
+<span id="cb33-937"><a></a>      ]</span>
+<span id="cb33-938"><a></a>    })</span>
+<span id="cb33-939"><a></a>  }</span>
+<span id="cb33-940"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-22" data-nodetype="expression">
+<div id="ojs-cell-30" data-nodetype="expression">
 
 </div>
 </div>
@@ -1327,18 +1615,18 @@ Prof.&nbsp;Gabe Hope
 <h2>Bootstrap CI: a <strong>simple</strong> approach</h2>
 <p>Computing a 95% confidence interval with bootstrapping is simple!</p>
 <ul>
-<li>Just take the 2.5% percentile and 97.5% percentile of our bootstraped samples.</li>
+<li>Just take the 2.5% percentile and 97.5% percentile of our bootstrapped statistics.</li>
 </ul>
 <div class="columns">
 <div class="column" style="width: 50%; font-size: 50%;">
-<div id="75a12ec8" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a><span class="kw">def</span> simple_bootstrap_ci(data, statistic_fun, nsamples, confidence<span class="op">=</span><span class="fl">0.95</span>):</span>
-<span id="cb25-2"><a></a>    <span class="co"># Distribution of statistic estimates</span></span>
-<span id="cb25-3"><a></a>    estimates <span class="op">=</span> bootstrap_distribution(data, statistic_fun, nsamples)</span>
-<span id="cb25-4"><a></a>    margin <span class="op">=</span> (<span class="dv">1</span> <span class="op">-</span> confidence) <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb25-5"><a></a>    lower <span class="op">=</span> estimates[ceil(nsamples <span class="op">*</span> margin)]</span>
-<span id="cb25-6"><a></a>    upper <span class="op">=</span> estimates[ceil(nsamples <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> margin))] </span>
-<span id="cb25-7"><a></a>    <span class="cf">return</span> lower, upper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="19add0f7" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a><span class="kw">def</span> simple_bootstrap_ci(data, statistic_fun, nsamples, confidence<span class="op">=</span><span class="fl">0.95</span>):</span>
+<span id="cb34-2"><a></a>    <span class="co"># Distribution of statistic estimates</span></span>
+<span id="cb34-3"><a></a>    estimates <span class="op">=</span> bootstrap_distribution(data, statistic_fun, nsamples)</span>
+<span id="cb34-4"><a></a>    margin <span class="op">=</span> (<span class="dv">1</span> <span class="op">-</span> confidence) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb34-5"><a></a>    lower <span class="op">=</span> estimates[ceil(nsamples <span class="op">*</span> margin)]</span>
+<span id="cb34-6"><a></a>    upper <span class="op">=</span> estimates[ceil(nsamples <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> margin))] </span>
+<span id="cb34-7"><a></a>    <span class="cf">return</span> lower, upper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Here we sort the data and take indices <span class="math inline">0.025N</span> and <span class="math inline">0.975N</span></p>
 <div class="quarto-figure quarto-figure-left">
@@ -1348,39 +1636,43 @@ Prof.&nbsp;Gabe Hope
 </div>
 </div><div class="column" style="width: 50%; font-size: 50%;">
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb26" data-startfrom="710" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 709;"><span id="cb26-710"><a></a>{</span>
-<span id="cb26-711"><a></a>  resampled</span>
-<span id="cb26-712"><a></a>  <span class="cf">if</span> (estimates<span class="op">.</span><span class="at">length</span> <span class="op">&lt;</span> <span class="dv">500</span>) {</span>
-<span id="cb26-713"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb26-714"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb26-715"><a></a>      <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb26-716"><a></a>      <span class="dt">stroke</span><span class="op">:</span> {</span>
-<span id="cb26-717"><a></a>        <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb26-718"><a></a>      }<span class="op">,</span></span>
-<span id="cb26-719"><a></a>      <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (km/h)"</span>}<span class="op">,</span></span>
-<span id="cb26-720"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb26-721"><a></a>        Plot<span class="op">.</span><span class="fu">dot</span>(estimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span>}))<span class="op">,</span></span>
-<span id="cb26-722"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(ci<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span>})<span class="op">,</span></span>
-<span id="cb26-723"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(estimate<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
-<span id="cb26-724"><a></a>        Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Estimated statistic distribution"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
-<span id="cb26-725"><a></a>      ]</span>
-<span id="cb26-726"><a></a>    })</span>
-<span id="cb26-727"><a></a>  } <span class="cf">else</span> {</span>
-<span id="cb26-728"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb26-729"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb26-730"><a></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">400</span><span class="op">,</span></span>
-<span id="cb26-731"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb26-732"><a></a>        Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])<span class="op">,</span></span>
-<span id="cb26-733"><a></a>        Plot<span class="op">.</span><span class="fu">rectY</span>(estimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="st">'scott'</span>}))<span class="op">,</span></span>
-<span id="cb26-734"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(ci<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span>})<span class="op">,</span></span>
-<span id="cb26-735"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>([estimate]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'blue'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
-<span id="cb26-736"><a></a>        Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Estimated statistic distribution"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
-<span id="cb26-737"><a></a>      ]</span>
-<span id="cb26-738"><a></a>    })</span>
-<span id="cb26-739"><a></a>  }</span>
-<span id="cb26-740"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb35" data-startfrom="971" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 970;"><span id="cb35-971"><a></a>{</span>
+<span id="cb35-972"><a></a>  resampled</span>
+<span id="cb35-973"><a></a>  <span class="cf">if</span> (estimates<span class="op">.</span><span class="at">length</span> <span class="op">&lt;</span> <span class="dv">500</span>) {</span>
+<span id="cb35-974"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb35-975"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb35-976"><a></a>      <span class="dt">width</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
+<span id="cb35-977"><a></a>      <span class="dt">stroke</span><span class="op">:</span> {</span>
+<span id="cb35-978"><a></a>        <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb35-979"><a></a>      }<span class="op">,</span></span>
+<span id="cb35-980"><a></a>      <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Wind speed (m/s)"</span>}<span class="op">,</span></span>
+<span id="cb35-981"><a></a>      <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span> <span class="dt">ticks</span><span class="op">:</span> <span class="dv">0</span>}<span class="op">,</span></span>
+<span id="cb35-982"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb35-983"><a></a>        Plot<span class="op">.</span><span class="fu">dot</span>(estimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span>}))<span class="op">,</span></span>
+<span id="cb35-984"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(ci<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span>})<span class="op">,</span></span>
+<span id="cb35-985"><a></a>        Plot<span class="op">.</span><span class="fu">areaY</span>([[ci[<span class="dv">0</span>]<span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> [ci[<span class="dv">1</span>]<span class="op">,</span> <span class="dv">1</span>]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"1"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"red"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.05</span>})<span class="op">,</span></span>
+<span id="cb35-986"><a></a>        <span class="co">//Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),</span></span>
+<span id="cb35-987"><a></a>        Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Estimated statistic distribution"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
+<span id="cb35-988"><a></a>      ]</span>
+<span id="cb35-989"><a></a>    })</span>
+<span id="cb35-990"><a></a>  } <span class="cf">else</span> {</span>
+<span id="cb35-991"><a></a>    <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb35-992"><a></a>      <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb35-993"><a></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">400</span><span class="op">,</span></span>
+<span id="cb35-994"><a></a>    <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span> <span class="dt">ticks</span><span class="op">:</span> <span class="dv">0</span>}<span class="op">,</span></span>
+<span id="cb35-995"><a></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb35-996"><a></a>        Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])<span class="op">,</span></span>
+<span id="cb35-997"><a></a>        Plot<span class="op">.</span><span class="fu">rectY</span>(estimates<span class="op">,</span> Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="st">'scott'</span>}))<span class="op">,</span></span>
+<span id="cb35-998"><a></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>(ci<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">'red'</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
+<span id="cb35-999"><a></a>        Plot<span class="op">.</span><span class="fu">areaY</span>([[ci[<span class="dv">0</span>]<span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> [ci[<span class="dv">1</span>]<span class="op">,</span> <span class="dv">1</span>]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"1"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"red"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.05</span>})<span class="op">,</span></span>
+<span id="cb35-1000"><a></a>        <span class="co">//Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),</span></span>
+<span id="cb35-1001"><a></a>        Plot<span class="op">.</span><span class="fu">tip</span>([<span class="st">"Estimated statistic distribution"</span>]<span class="op">,</span> {<span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">fontWeight</span><span class="op">:</span> <span class="st">'bold'</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">pathFilter</span><span class="op">:</span> <span class="kw">false</span>})</span>
+<span id="cb35-1002"><a></a>      ]</span>
+<span id="cb35-1003"><a></a>    })</span>
+<span id="cb35-1004"><a></a>  }</span>
+<span id="cb35-1005"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-23" data-nodetype="expression">
+<div id="ojs-cell-31" data-nodetype="expression">
 
 </div>
 </div>
@@ -1408,31 +1700,6 @@ Prof.&nbsp;Gabe Hope
 <li>Intuitively the bootstrap distribution should vary around the sample estimate in the same way sample estimates vary around the population parameter</li>
 <li>Leverages the fact that full sample provides more information about the population than a single statistic</li>
 </ul>
-</section>
-<section id="point-vs.-uncertainty-estimates-grid" class="slide level2">
-<h2>Point vs.&nbsp;uncertainty estimates grid</h2>
-<div class="columns">
-<div class="column" style="width: 50%; font-size: 75%;">
-<h4 id="model-based-inference">Model-based inference</h4>
-<p><strong>Point-estimate</strong></p>
-<ul>
-<li>Calculate value from observed sample</li>
-</ul>
-<p><strong>Uncertainty-estimate</strong></p>
-<ul>
-<li>Derive a model of our statistic’s distribution</li>
-</ul>
-</div><div class="column" style="width: 50%; font-size: 75%;">
-<h4 id="simulation-based-inference">Simulation-based inference</h4>
-<p><strong>Point-estimate</strong></p>
-<ul>
-<li>Calculate value from observed sample</li>
-</ul>
-<p><strong>Uncertainty-estimate</strong></p>
-<ul>
-<li>Resample the data many times</li>
-</ul>
-</div></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -1638,7 +1905,7 @@ eyJjb250ZW50cyI6WyAgeyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiaW5saW5lIjoidHJ1ZSIsInNv
       });
     </script>
     <script type="ojs-module-contents">
-    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRmID0gcmVxdWlyZSgnQHRlbnNvcmZsb3cvdGZqc0A0LjExLjAnKVxuZDNGZXRjaCA9IHJlcXVpcmUoXCJkMy1mZXRjaEAxLjEuMlwiKVxuXG53aW5kID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhL3dpbmQuY3N2XCIpLmNzdih7dHlwZWQ6IHRydWV9KVxubGFuZCA9IHRvcG9qc29uLmZlYXR1cmUoZXVyb3BlLCBldXJvcGUub2JqZWN0cy5ldXJvcGUpXG5ldXJvcGUgPSBkM0ZldGNoLmpzb24oXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vbGVha3lNaXJyb3IvbWFwLW9mLWV1cm9wZS9tYXN0ZXIvVG9wb0pTT04vZXVyb3BlLnRvcG9qc29uXCIpXG5jaXJjbGUgPSBkMy5nZW9DaXJjbGUoKS5jZW50ZXIoWzAsIDUyXSkucmFkaXVzKDUuNSkucHJlY2lzaW9uKDIpKClcblxuUGxvdC5wbG90KHtcbiAgd2lkdGg6IDUwMCxcbiAgaGVpZ2h0OiA1MDAsXG4gIGluc2V0OiAgMTAsXG4gIGFzcGVjdFJhdGlvOiAxLFxuICBjb2xvcjoge1xuICAgIGxhYmVsOiBcIlNwZWVkIChtL3MpXCIsXG4gICAgemVybzogdHJ1ZSxcbiAgICBsZWdlbmQ6IHRydWVcbiAgfSxcbiAgcHJvamVjdGlvbjoge1xuICAgIHR5cGU6IFwiYXppbXV0aGFsLWVxdWFsLWFyZWFcIixcbiAgICAvL3JvdGF0ZTogWy05LCAtMzRdLFxuICAgIGRvbWFpbjogY2lyY2xlLFxuICAgIGluc2V0OiAxMFxuICB9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZ3JhdGljdWxlKCksXG4gICAgUGxvdC5nZW8obGFuZCwge2ZpbGw6IFwiY3VycmVudENvbG9yXCIsIHN0cm9rZTogJ2JsYWNrJywgZmlsbDogJ3doaXRlJ30pLFxuICAgIFBsb3QudmVjdG9yKHdpbmQsIHtcbiAgICAgIHg6IFwibG9uZ2l0dWRlXCIsXG4gICAgICB5OiBcImxhdGl0dWRlXCIsXG4gICAgICByb3RhdGU6ICh7dSwgdn0pID0+IE1hdGguYXRhbjIodSwgdikgKiAxODAgLyBNYXRoLlBJLFxuICAgICAgbGVuZ3RoOiAoe3UsIHZ9KSA9PiBNYXRoLmh5cG90KHUsIHYpLFxuICAgICAgc3Ryb2tlOiAoe3UsIHZ9KSA9PiBNYXRoLmh5cG90KHUsIHYpXG4gICAgfSksICAgIFxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5kYXRhMiA9IGQzRmV0Y2guY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3ZlZ2EvdmVnYS1kYXRhc2V0cy9tYXN0ZXIvZGF0YS93aW5kdmVjdG9ycy5jc3ZcIik7XG5wb3B1bGF0aW9uID0gdGYudGVuc29yKGRhdGEyLm1hcChkID0+IHBhcnNlRmxvYXQoZFsnc3BlZWQnXSkpKS5yZXNoYXBlKFstMSwgMV0pO1xuXG5QbG90LnBsb3Qoe1xuICBoZWlnaHQ6IDUwMCxcbiAgd2lkdGg6IDUwMCxcbiAgeDoge2xhYmVsOiBcIldpbmQgc3BlZWQgKG0vcylcIiwgZG9tYWluOiB0Zi50aWR5KCgpID0+IHtyZXR1cm4gW3BvcHVsYXRpb24ubWluKCkuYXJyYXlTeW5jKCksIHBvcHVsYXRpb24ubWF4KCkuYXJyYXlTeW5jKCldfSl9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZG90KHBvcHVsYXRpb24uYXJyYXlTeW5jKCksIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIiwgcjoxLjUsIGZpbGw6ICcwJ30pKSxcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIGhlaWdodDogMjUwLFxuICB3aWR0aDogMTAwMCxcbiAgeDoge2xhYmVsOiBcIldpbmQgc3BlZWQgKG0vcylcIiwgZG9tYWluOiB0Zi50aWR5KCgpID0+IHtyZXR1cm4gW3BvcHVsYXRpb24ubWluKCkuYXJyYXlTeW5jKCksIHBvcHVsYXRpb24ubWF4KCkuYXJyYXlTeW5jKCldfSl9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZG90KHBvcHVsYXRpb24uYXJyYXlTeW5jKCksIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIiwgcjoxfSkpLFxuICAgIFBsb3QudGlwKFtcIkFsbCBwb3NzaWJsZSB3aW5kIHNwZWVkc1wiXSwge2ZyYW1lQW5jaG9yOiBcInRvcC1yaWdodFwiLCBzdHJva2VXaWR0aDogMCwgZm9udFdlaWdodDogJ2JvbGQnLCBmb250U2l6ZTogMTIsIHBhdGhGaWx0ZXI6IGZhbHNlfSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBzYW1wbGUgPSBJbnB1dHMucmFuZ2UoWzEsIDEwMDBdLCB7bGFiZWw6IFwiU2FtcGxlXCIsIHZhbHVlOiAyMDAsIHN0ZXA6IDF9KVxucmVzYW1wbGUgPSBmdW5jdGlvbih4LCBzaXplKSB7XG4gIHJldHVybiB0Zi50aWR5KCgpID0+IHtcbiAgICBcbiAgICBsZXQgaW5kcztcbiAgICBsZXQgY291bnRzO1xuICAgIGlmIChzaXplKSB7XG4gICAgICBpbmRzID0gdGYucmFuZG9tVW5pZm9ybUludChbc2l6ZV0sIDAsIHguc2hhcGVbMF0pO1xuICAgICAgcmV0dXJuIHguZ2F0aGVyKGluZHMpLnJlc2hhcGUoWy0xLCAxXSk7XG4gICAgfSBlbHNlIHtcbiAgICAgIGluZHMgPSB0Zi5yYW5kb21Vbmlmb3JtSW50KFt4LnNoYXBlWzBdXSwgMCwgeC5zaGFwZVswXSk7XG4gICAgICBjb3VudHMgPSB0Zi5iaW5jb3VudChpbmRzLCBbXSwgeC5zaGFwZVswXSkucmVzaGFwZSh4LnNoYXBlKTtcbiAgICAgIHJldHVybiB0Zi5jb25jYXQoW3guZ2F0aGVyKGluZHMpLCB4LCBjb3VudHNdLCAxKTtcbiAgICB9XG4gIH0pO1xufVxuXG53ZWlnaHRzID0gcmVzYW1wbGUocG9wdWxhdGlvbiwgc2FtcGxlKTtcblBsb3QucGxvdCh7XG4gIGhlaWdodDogMjAwLFxuICB3aWR0aDogMTAwMCxcbiAgeDoge2xhYmVsOiBcIldpbmQgc3BlZWQgKGttL2gpXCIsIGRvbWFpbjogdGYudGlkeSgoKSA9PiB7cmV0dXJuIFtwb3B1bGF0aW9uLm1pbigpLmFycmF5U3luYygpLCBwb3B1bGF0aW9uLm1heCgpLmFycmF5U3luYygpXX0pfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmRvdCh3ZWlnaHRzLmFycmF5U3luYygpLCBQbG90LmRvZGdlWSh7eDogXCIwXCIsIHN0cm9rZTogJ2JsYWNrJ30pKSxcbiAgICBQbG90LnRpcChbXCJUaGUgZGF0YXNldCB3ZSd2ZSBjb2xsZWN0ZWRcIl0sIHtmcmFtZUFuY2hvcjogXCJ0b3AtcmlnaHRcIiwgc3Ryb2tlV2lkdGg6IDAsIGZvbnRXZWlnaHQ6ICdib2xkJywgZm9udFNpemU6IDEyLCBwYXRoRmlsdGVyOiBmYWxzZX0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2Ygc3RhdGlzdGljID0gSW5wdXRzLnNlbGVjdChbXCJNZWFuXCIsIFwiTWVkaWFuXCIsIFwiUGVyY2VudGlsZVwiLCBcIlZhcmlhbmNlXCIsIFwiU3RkRGV2XCJdLCB7bGFiZWw6IFwiU3RhdGlzdGljXCJ9KTtcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBwZXJjZW50aWxlID0gIElucHV0cy5yYW5nZShbMCwgMTAwXSwge2xhYmVsOiAoc3RhdGlzdGljID09IFwiUGVyY2VudGlsZVwiKSA/IFwiUGVyY2VudGlsZVwiIDogXCJcIiwgc3RlcDogMX0pO1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC03IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5xdWFudGlsZSA9IHtcbiAgY29uc3QgYXNjID0gYXJyID0+IGFyci5zb3J0KChhLCBiKSA9PiBhIC0gYik7XG4gIGNvbnN0IHN1bSA9IGFyciA9PiBhcnIucmVkdWNlKChhLCBiKSA9PiBhICsgYiwgMCk7XG4gIGNvbnN0IG1lYW4gPSBhcnIgPT4gc3VtKGFycikgLyBhcnIubGVuZ3RoO1xuICBcbiAgLy8gc2FtcGxlIHN0YW5kYXJkIGRldmlhdGlvblxuICBjb25zdCBzdGQgPSAoYXJyKSA9PiB7XG4gICAgICBjb25zdCBtdSA9IG1lYW4oYXJyKTtcbiAgICAgIGNvbnN0IGRpZmZBcnIgPSBhcnIubWFwKGEgPT4gKGEgLSBtdSkgKiogMik7XG4gICAgICByZXR1cm4gTWF0aC5zcXJ0KHN1bShkaWZmQXJyKSAvIChhcnIubGVuZ3RoIC0gMSkpO1xuICB9O1xuICBcbiAgY29uc3QgcXVhbnRpbGUgPSAoYXJyLCBxKSA9PiB7XG4gICAgICBjb25zdCBzb3J0ZWQgPSBhc2MoYXJyKTtcbiAgICAgIGNvbnN0IHBvcyA9IChzb3J0ZWQubGVuZ3RoIC0gMSkgKiBxO1xuICAgICAgY29uc3QgYmFzZSA9IE1hdGguZmxvb3IocG9zKTtcbiAgICAgIGNvbnN0IHJlc3QgPSBwb3MgLSBiYXNlO1xuICAgICAgaWYgKHNvcnRlZFtiYXNlICsgMV0gIT09IHVuZGVmaW5lZCkge1xuICAgICAgICAgIHJldHVybiBzb3J0ZWRbYmFzZV0gKyByZXN0ICogKHNvcnRlZFtiYXNlICsgMV0gLSBzb3J0ZWRbYmFzZV0pO1xuICAgICAgfSBlbHNlIHtcbiAgICAgICAgICByZXR1cm4gc29ydGVkW2Jhc2VdO1xuICAgICAgfVxuICB9O1xuICByZXR1cm4gcXVhbnRpbGU7XG59XG5cbnN0ZCA9IHtcbiAgY29uc3QgYXNjID0gYXJyID0+IGFyci5zb3J0KChhLCBiKSA9PiBhIC0gYik7XG4gIGNvbnN0IHN1bSA9IGFyciA9PiBhcnIucmVkdWNlKChhLCBiKSA9PiBhICsgYiwgMCk7XG4gIGNvbnN0IG1lYW4gPSBhcnIgPT4gc3VtKGFycikgLyBhcnIubGVuZ3RoO1xuICBcbiAgLy8gc2FtcGxlIHN0YW5kYXJkIGRldmlhdGlvblxuICBjb25zdCBzdGQgPSAoYXJyKSA9PiB7XG4gICAgICBjb25zdCBtdSA9IG1lYW4oYXJyKTtcbiAgICAgIGNvbnN0IGRpZmZBcnIgPSBhcnIubWFwKGEgPT4gKGEgLSBtdSkgKiogMik7XG4gICAgICByZXR1cm4gTWF0aC5zcXJ0KHN1bShkaWZmQXJyKSAvIChhcnIubGVuZ3RoIC0gMSkpO1xuICB9O1xuXG4gIHJldHVybiBzdGQ7XG59XG5cbmNvbXB1dGVTdGF0ID0gKHgpID0+IHtcbiAgbGV0IGVzdCA9IHRmLnRpZHkoKCkgPT4ge1xuICAgIGxldCB2YWx1ZXMgPSB4LnNsaWNlKFswLCAwXSwgWy0xLCAxXSkucmVzaGFwZShbLTFdKTtcbiAgICBpZiAoc3RhdGlzdGljID09ICdNZWFuJykge1xuICAgICAgcmV0dXJuIHZhbHVlcy5tZWFuKCkuYXJyYXlTeW5jKCk7XG4gICAgfSBlbHNlIGlmIChzdGF0aXN0aWMgPT0gJ01lZGlhbicpIHtcbiAgICAgIHJldHVybiBxdWFudGlsZSh2YWx1ZXMuYXJyYXlTeW5jKCksIDAuNSk7XG4gICAgfSBlbHNlIGlmIChzdGF0aXN0aWMgPT0gJ1BlcmNlbnRpbGUnKSB7XG4gICAgICByZXR1cm4gcXVhbnRpbGUodmFsdWVzLmFycmF5U3luYygpLCBwZXJjZW50aWxlIC8gMTAwKTtcbiAgICB9IGVsc2UgaWYgKHN0YXRpc3RpYyA9PSAnVmFyaWFuY2UnKSB7XG4gICAgICByZXR1cm4gTWF0aC5wb3coc3RkKHZhbHVlcy5hcnJheVN5bmMoKSksIDIpO1xuICAgIH0gZWxzZSBpZiAoc3RhdGlzdGljID09ICdTdGREZXYnKSB7XG4gICAgICByZXR1cm4gc3RkKHZhbHVlcy5hcnJheVN5bmMoKSk7XG4gICAgfVxuICB9KTtcbiAgcmV0dXJuIGVzdDtcbn1cblxuZXN0aW1hdGUgPSBjb21wdXRlU3RhdCh3ZWlnaHRzKVxuUGxvdC5wbG90KHtcbiAgaGVpZ2h0OiAyMDAsXG4gIHdpZHRoOiAxMDAwLFxuICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAoa20vaClcIiwgZG9tYWluOiB0Zi50aWR5KCgpID0+IHtyZXR1cm4gW3BvcHVsYXRpb24ubWluKCkuYXJyYXlTeW5jKCksIHBvcHVsYXRpb24ubWF4KCkuYXJyYXlTeW5jKCldfSl9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZG90KHdlaWdodHMuYXJyYXlTeW5jKCksIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIiwgc3Ryb2tlOiAnYmxhY2snfSkpLFxuICAgIFBsb3QucnVsZVgoW2VzdGltYXRlXSwge3N0cm9rZTogJ2JsdWUnLCBzdHJva2VXaWR0aDogMn0pLFxuICAgIFBsb3QudGlwKFtcIlNhbXBsZSBzdGF0aXN0aWNcIl0sIHt4OiBlc3RpbWF0ZSwgZHk6IC01MCwgYW5jaG9yOiBcImxlZnRcIiwgc3Ryb2tlOiAnYmx1ZScsIGZvbnRDb2xvcjonYmx1ZScsIGZvbnRXZWlnaHQ6ICdib2xkJywgZm9udFNpemU6IDEyLCBwYXRoRmlsdGVyOiBmYWxzZX0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTgiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xuICBoZWlnaHQ6IDMwMCxcbiAgd2lkdGg6IDEwMDAsXG4gIHg6IHtsYWJlbDogXCJXaW5kIHNwZWVkIChtL3MpXCIsIGRvbWFpbjogdGYudGlkeSgoKSA9PiB7cmV0dXJuIFtwb3B1bGF0aW9uLm1pbigpLmFycmF5U3luYygpLCBwb3B1bGF0aW9uLm1heCgpLmFycmF5U3luYygpXX0pfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmRvdChwb3B1bGF0aW9uLmFycmF5U3luYygpLCBQbG90LmRvZGdlWSh7eDogXCIwXCIsIHI6MX0pKSxcbiAgICBQbG90LnJ1bGVYKFs1LjRdLCB7c3Ryb2tlOiAnYmx1ZScsIHN0cm9rZVdpZHRoOiAyfSksXG4gICAgUGxvdC50aXAoW1wiUG9wdWxhdGlvbiBwYXJhbWV0ZXJcIl0sIHt4OiA1LjQsIGR5OiAtNTAsIGFuY2hvcjogXCJsZWZ0XCIsIHN0cm9rZTogJ2JsdWUnLCBmb250Q29sb3I6J2JsdWUnLCBmb250V2VpZ2h0OiAnYm9sZCcsIGZvbnRTaXplOiAxMiwgcGF0aEZpbHRlcjogZmFsc2V9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC05IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgaGVpZ2h0OiAyMDAsXG4gIHdpZHRoOiAxMDAwLFxuICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAoa20vaClcIiwgZG9tYWluOiB0Zi50aWR5KCgpID0+IHtyZXR1cm4gW3BvcHVsYXRpb24ubWluKCkuYXJyYXlTeW5jKCksIHBvcHVsYXRpb24ubWF4KCkuYXJyYXlTeW5jKCldfSl9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZG90KHdlaWdodHMuYXJyYXlTeW5jKCksIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIiwgc3Ryb2tlOiAnYmxhY2snfSkpLFxuICAgIFBsb3QucnVsZVgoW2VzdGltYXRlXSwge3N0cm9rZTogJ2JsdWUnLCBzdHJva2VXaWR0aDogMn0pLFxuICAgIFBsb3QudGlwKFtcIlNhbXBsZSBzdGF0aXN0aWNcIl0sIHt4OiBlc3RpbWF0ZSwgZHk6IC01MCwgYW5jaG9yOiBcImxlZnRcIiwgc3Ryb2tlOiAnYmx1ZScsIGZvbnRDb2xvcjonYmx1ZScsIGZvbnRXZWlnaHQ6ICdib2xkJywgZm9udFNpemU6IDEyLCBwYXRoRmlsdGVyOiBmYWxzZX0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEwIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgaGVpZ2h0OiAyMDAsXG4gIHdpZHRoOiAxMDAwLFxuICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAoa20vaClcIiwgZG9tYWluOiB0Zi50aWR5KCgpID0+IHtyZXR1cm4gW3BvcHVsYXRpb24ubWluKCkuYXJyYXlTeW5jKCksIHBvcHVsYXRpb24ubWF4KCkuYXJyYXlTeW5jKCldfSl9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZG90KHdlaWdodHMuYXJyYXlTeW5jKCksIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIiwgc3Ryb2tlOiAnYmxhY2snfSkpLFxuICAgIFBsb3QucnVsZVgoWzEuNSwgOC4zXSwge3N0cm9rZTogJ3JlZCcsIHN0cm9rZVdpZHRoOiAyfSksXG4gICAgUGxvdC50aXAoW1wiTG93ZXIgaW50ZXJ2YWwgZWRnZVwiXSwge3g6IDEuNSwgZHk6IC01MCwgYW5jaG9yOiBcImxlZnRcIiwgc3Ryb2tlOiAncmVkJywgZm9udENvbG9yOidyZWQnLCBmb250V2VpZ2h0OiAnYm9sZCcsIGZvbnRTaXplOiAxMiwgcGF0aEZpbHRlcjogZmFsc2V9KSxcbiAgICBQbG90LnRpcChbXCJVcHBlciBpbnRlcnZhbCBlZGdlXCJdLCB7eDo4LjMsIGR5OiAtNTAsIGFuY2hvcjogXCJyaWdodFwiLCBzdHJva2U6ICdyZWQnLCBmb250Q29sb3I6J3JlZCcsIGZvbnRXZWlnaHQ6ICdib2xkJywgZm9udFNpemU6IDEyLCBwYXRoRmlsdGVyOiBmYWxzZX0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTExIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIHJlc2FtcGxlVG9nZ2xlID0gSW5wdXRzLnJhbmdlKCk7XG5cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2Ygc3RlcCA9IElucHV0cy5idXR0b24oXCJSZXNhbXBsZVwiKVxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEzIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIHJlc2V0ID0gSW5wdXRzLmJ1dHRvbihcIlJlc2V0XCIpXG5cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbnBsYXlpbmcgPSB7XG4gIHJlc2FtcGxlVG9nZ2xlO1xuICByZXR1cm4gIXRoaXM7XG59XG5cbnJlc2FtcGxlQnV0dG9uID0ge1xuICB3aGlsZShwbGF5aW5nKSB7XG4gICAgeWllbGQgdHJ1ZTtcbiAgfVxuICBzdGVwO1xuICByZXR1cm4gZmFsc2U7XG59XG5cbnBvcGVzdGltYXRlcyA9IHtcbiAgc3RhdGlzdGljXG4gIHJlc2V0XG4gIHBlcmNlbnRpbGVcbiAgcmV0dXJuIFtdO1xufVxuXG5wb3BjaSA9IHtcbiAgcG9wcmVzYW1wbGVkXG4gIGxldCBmbGF0X2VzdGltYXRlcyA9IHBvcGVzdGltYXRlcy5mbGF0KCk7XG4gIHJldHVybiBbW3F1YW50aWxlKGZsYXRfZXN0aW1hdGVzLCAwLjA1KV0sIFtxdWFudGlsZShmbGF0X2VzdGltYXRlcywgMC45NSldXTtcbn1cblxucGFyYW1ldGVyID0gY29tcHV0ZVN0YXQocG9wdWxhdGlvbik7XG5cbnBvcHJlc2FtcGxlZCA9IHtcbiAgcmVzYW1wbGVCdXR0b25cbiAgbGV0IHggPSByZXNhbXBsZShwb3B1bGF0aW9uLCBzYW1wbGUpO1xuICBsZXQgZXN0ID0gY29tcHV0ZVN0YXQoeCk7XG4gIHBvcGVzdGltYXRlcy5wdXNoKFtlc3RdKTtcbiAgbGV0IG91dHB1dCA9IHguYXJyYXlTeW5jKCk7XG4gIHguZGlzcG9zZSgpXG4gIHJldHVybiBvdXRwdXQ7XG59XG5cblBsb3QucGxvdCh7XG4gIGhlaWdodDogMjAwLFxuICB3aWR0aDogMTAwMCxcbiAgY29sb3I6IHtcbiAgICBzY2hlbWU6IFwiUmVkc1wiXG4gIH0sXG4gIHg6IHtsYWJlbDogXCJXaW5kIHNwZWVkIChrbS9oKVwiLGRvbWFpbjogdGYudGlkeSgoKSA9PiB7cmV0dXJuIFtwb3B1bGF0aW9uLm1pbigpLmFycmF5U3luYygpLCBwb3B1bGF0aW9uLm1heCgpLmFycmF5U3luYygpXX0pfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmRvdChwb3ByZXNhbXBsZWQsIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIn0pKSxcbiAgICBQbG90LnJ1bGVYKHBvcGVzdGltYXRlc1twb3Blc3RpbWF0ZXMubGVuZ3RoIC0gMV0sIHtzdHJva2U6ICdibHVlJywgc3Ryb2tlV2lkdGg6IDJ9KSxcbiAgICBQbG90LnRpcChbXCJTYW1wbGUgZnJvbSBwb3B1bGF0aW9uXCJdLCB7ZnJhbWVBbmNob3I6IFwidG9wLXJpZ2h0XCIsIHN0cm9rZVdpZHRoOiAwLCBmb250V2VpZ2h0OiAnYm9sZCcsIGZvbnRTaXplOiAxMiwgcGF0aEZpbHRlcjogZmFsc2V9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgcG9wcmVzYW1wbGVkXG4gIGlmIChwb3Blc3RpbWF0ZXMubGVuZ3RoIDwgNTAwKSB7XG4gICAgcmV0dXJuIFBsb3QucGxvdCh7XG4gICAgICBoZWlnaHQ6IDIwMCxcbiAgICAgIHdpZHRoOiAxMDAwLFxuICAgICAgY29sb3I6IHtcbiAgICAgICAgc2NoZW1lOiBcIlJlZHNcIlxuICAgICAgfSxcbiAgICAgIHg6IHtsYWJlbDogXCJXaW5kIHNwZWVkIChrbS9oKVwifSxcbiAgICAgIG1hcmtzOiBbXG4gICAgICAgIFBsb3QuZG90KHBvcGVzdGltYXRlcywgUGxvdC5kb2RnZVkoe3g6IFwiMFwifSkpLFxuICAgICAgICBQbG90LnJ1bGVYKHBvcGNpLCB7c3Ryb2tlOiAncmVkJ30pLFxuICAgICAgICBQbG90LnJ1bGVYKHBhcmFtZXRlciwge3N0cm9rZTogJ2JsdWUnLCBzdHJva2VXaWR0aDogM30pLFxuICAgIFBsb3QudGlwKFtcIkRpc3RyaWJ1dGlvbiBvZiBzdGF0aXN0aWNcIl0sIHtmcmFtZUFuY2hvcjogXCJ0b3AtcmlnaHRcIiwgc3Ryb2tlV2lkdGg6IDAsIGZvbnRXZWlnaHQ6ICdib2xkJywgZm9udFNpemU6IDEyLCBwYXRoRmlsdGVyOiBmYWxzZX0pXG4gICAgICBdXG4gICAgfSlcbiAgfSBlbHNlIHtcbiAgICByZXR1cm4gUGxvdC5wbG90KHtcbiAgICAgIGhlaWdodDogMjAwLFxuICAgICAgd2lkdGg6IDEwMDAsXG4gICAgICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAoa20vaClcIn0sXG4gICAgICBtYXJrczogW1xuICAgICAgICBQbG90LnJ1bGVZKFswXSksXG4gICAgICAgIFBsb3QucmVjdFkocG9wZXN0aW1hdGVzLCBQbG90LmJpblgoe3k6IFwiY291bnRcIn0sIHt4OiBcIjBcIiwgdGhyZXNob2xkczogJ3Njb3R0J30pKSxcbiAgICAgICAgUGxvdC5ydWxlWChwb3BjaSwge3N0cm9rZTogJ3JlZCd9KSxcbiAgICAgICAgUGxvdC5ydWxlWChbcGFyYW1ldGVyXSwge3N0cm9rZTogJ2JsdWUnLCBzdHJva2VXaWR0aDogM30pLFxuICAgIFBsb3QudGlwKFtcIkRpc3RyaWJ1dGlvbiBvZiBzdGF0aXN0aWNcIl0sIHtmcmFtZUFuY2hvcjogXCJ0b3AtcmlnaHRcIiwgc3Ryb2tlV2lkdGg6IDAsIGZvbnRXZWlnaHQ6ICdib2xkJywgZm9udFNpemU6IDEyLCBwYXRoRmlsdGVyOiBmYWxzZX0pXG4gICAgICBdXG4gICAgfSlcbiAgfVxufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIGhlaWdodDogMjAwLFxuICB3aWR0aDogMTAwMCxcbiAgeDoge2xhYmVsOiBcIldpbmQgc3BlZWQgKGttL2gpXCIsIGRvbWFpbjogdGYudGlkeSgoKSA9PiB7cmV0dXJuIFtwb3B1bGF0aW9uLm1pbigpLmFycmF5U3luYygpLCBwb3B1bGF0aW9uLm1heCgpLmFycmF5U3luYygpXX0pfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmRvdCh3ZWlnaHRzLmFycmF5U3luYygpLCBQbG90LmRvZGdlWSh7eDogXCIwXCIsIHN0cm9rZTogJ2JsYWNrJ30pKSxcbiAgICBQbG90LnJ1bGVYKFtlc3RpbWF0ZV0sIHtzdHJva2U6ICdibHVlJywgc3Ryb2tlV2lkdGg6IDJ9KSxcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgcmVzYW1wbGVUb2dnbGUyID0gSW5wdXRzLnJhbmdlKCk7XG5cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTgiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2Ygc3RlcDIgPSBJbnB1dHMuYnV0dG9uKFwiUmVzYW1wbGVcIilcblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiByZXNldDIgPSBJbnB1dHMuYnV0dG9uKFwiUmVzZXRcIilcblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImVzdGltYXRlcyA9IHtcbiAgc3RhdGlzdGljXG4gIHJlc2V0MlxuICBwZXJjZW50aWxlXG4gIHJldHVybiBbXTtcbn1cblxuY2kgPSB7XG4gIHJlc2FtcGxlZFxuICBsZXQgZmxhdF9lc3RpbWF0ZXMgPSBlc3RpbWF0ZXMuZmxhdCgpO1xuICByZXR1cm4gW1txdWFudGlsZShmbGF0X2VzdGltYXRlcywgMC4wNSldLCBbcXVhbnRpbGUoZmxhdF9lc3RpbWF0ZXMsIDAuOTUpXV07XG59XG5cbnJlc2FtcGxlZCA9IHtcbiAgcmVzYW1wbGVUb2dnbGUyXG4gIGxldCB4ID0gcmVzYW1wbGUod2VpZ2h0cyk7XG4gIGxldCBlc3QgPSBjb21wdXRlU3RhdCh4KTtcbiAgZXN0aW1hdGVzLnB1c2goW2VzdF0pO1xuICBsZXQgb3V0cHV0ID0geC5hcnJheVN5bmMoKTtcbiAgeC5kaXNwb3NlKClcbiAgcmV0dXJuIG91dHB1dDtcbn1cblxuUGxvdC5wbG90KHtcbiAgaGVpZ2h0OiAxODAsXG4gIHdpZHRoOiAxMDAwLFxuICBjb2xvcjoge1xuICAgIHNjaGVtZTogXCJSZWRzXCIsXG4gICAgbGVnZW5kOiB0cnVlLFxuICAgIGxhYmVsOiBcIk9jY3VyZW5jZXMgaW4gYm9vdHN0cmFwIHNhbXBsZVwiLFxuICAgIGRvbWFpbjogWzAsIDVdXG4gIH0sXG4gIHg6IHtsYWJlbDogXCJXaW5kIHNwZWVkIChrbS9oKVwiLCBkb21haW46IHRmLnRpZHkoKCkgPT4ge3JldHVybiBbcG9wdWxhdGlvbi5taW4oKS5hcnJheVN5bmMoKSwgcG9wdWxhdGlvbi5tYXgoKS5hcnJheVN5bmMoKV19KX0sXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5kb3QocmVzYW1wbGVkLCBQbG90LmRvZGdlWSh7eDogXCIxXCIsIGZpbGw6IFwiMlwiLCBzdHJva2U6ICdibGFjayd9KSksXG4gICAgUGxvdC5ydWxlWChbZXN0aW1hdGVdLCB7c3Ryb2tlOiAnYmx1ZScsIHN0cm9rZVdpZHRoOiAyfSksXG4gICAgUGxvdC50aXAoW1wiT3JpZ2luYWwgc2FtcGxlXCJdLCB7ZnJhbWVBbmNob3I6IFwidG9wLXJpZ2h0XCIsIHN0cm9rZVdpZHRoOiAwLCBmb250V2VpZ2h0OiAnYm9sZCcsIGZvbnRTaXplOiAxMiwgcGF0aEZpbHRlcjogZmFsc2V9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIGhlaWdodDogMTgwLFxuICB3aWR0aDogMTAwMCxcbiAgY29sb3I6IHtcbiAgICBzY2hlbWU6IFwiUmVkc1wiXG4gIH0sXG4gIHg6IHtsYWJlbDogXCJXaW5kIHNwZWVkIChrbS9oKVwiLGRvbWFpbjogdGYudGlkeSgoKSA9PiB7cmV0dXJuIFtwb3B1bGF0aW9uLm1pbigpLmFycmF5U3luYygpLCBwb3B1bGF0aW9uLm1heCgpLmFycmF5U3luYygpXX0pfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmRvdChyZXNhbXBsZWQsIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIn0pKSxcbiAgICBQbG90LnJ1bGVYKGVzdGltYXRlc1tlc3RpbWF0ZXMubGVuZ3RoIC0gMV0sIHtzdHJva2U6ICdibHVlJywgc3Ryb2tlV2lkdGg6IDJ9KSxcbiAgICBQbG90LnRpcChbXCJCb290c3RyYXAgc2FtcGxlXCJdLCB7ZnJhbWVBbmNob3I6IFwidG9wLXJpZ2h0XCIsIHN0cm9rZVdpZHRoOiAwLCBmb250V2VpZ2h0OiAnYm9sZCcsIGZvbnRTaXplOiAxMiwgcGF0aEZpbHRlcjogZmFsc2V9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgcmVzYW1wbGVkXG4gIGlmIChlc3RpbWF0ZXMubGVuZ3RoIDwgNTAwKSB7XG4gICAgcmV0dXJuIFBsb3QucGxvdCh7XG4gICAgICBoZWlnaHQ6IDE4MCxcbiAgICAgIHdpZHRoOiAxMDAwLFxuICAgICAgc3Ryb2tlOiB7XG4gICAgICAgIGxlZ2VuZDogdHJ1ZSxcbiAgICAgIH0sXG4gICAgICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAoa20vaClcIn0sXG4gICAgICBtYXJrczogW1xuICAgICAgICBQbG90LmRvdChlc3RpbWF0ZXMsIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIn0pKSxcbiAgICAgICAgUGxvdC5ydWxlWChjaSwge3N0cm9rZTogJ3JlZCd9KSxcbiAgICAgICAgUGxvdC5ydWxlWChlc3RpbWF0ZSwge3N0cm9rZTogJ2JsdWUnLCBzdHJva2VXaWR0aDogM30pLFxuICAgICAgICBQbG90LnRpcChbXCJFc3RpbWF0ZWQgc3RhdGlzdGljIGRpc3RyaWJ1dGlvblwiXSwge2ZyYW1lQW5jaG9yOiBcInRvcC1yaWdodFwiLCBzdHJva2VXaWR0aDogMCwgZm9udFdlaWdodDogJ2JvbGQnLCBmb250U2l6ZTogMTIsIHBhdGhGaWx0ZXI6IGZhbHNlfSlcbiAgICAgIF1cbiAgICB9KVxuICB9IGVsc2Uge1xuICAgIHJldHVybiBQbG90LnBsb3Qoe1xuICAgICAgaGVpZ2h0OiAyMDAsXG4gICAgd2lkdGg6IDEwMDAsXG4gICAgICBtYXJrczogW1xuICAgICAgICBQbG90LnJ1bGVZKFswXSksXG4gICAgICAgIFBsb3QucmVjdFkoZXN0aW1hdGVzLCBQbG90LmJpblgoe3k6IFwiY291bnRcIn0sIHt4OiBcIjBcIiwgdGhyZXNob2xkczogJ3Njb3R0J30pKSxcbiAgICAgICAgUGxvdC5ydWxlWChjaSwge3N0cm9rZTogJ3JlZCd9KSxcbiAgICAgICAgUGxvdC5ydWxlWChbZXN0aW1hdGVdLCB7c3Ryb2tlOiAnYmx1ZScsIHN0cm9rZVdpZHRoOiAzfSksXG4gICAgICAgIFBsb3QudGlwKFtcIkVzdGltYXRlZCBzdGF0aXN0aWMgZGlzdHJpYnV0aW9uXCJdLCB7ZnJhbWVBbmNob3I6IFwidG9wLXJpZ2h0XCIsIHN0cm9rZVdpZHRoOiAwLCBmb250V2VpZ2h0OiAnYm9sZCcsIGZvbnRTaXplOiAxMiwgcGF0aEZpbHRlcjogZmFsc2V9KVxuICAgICAgXVxuICAgIH0pXG4gIH1cbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIHJlc2FtcGxlZFxuICBpZiAoZXN0aW1hdGVzLmxlbmd0aCA8IDUwMCkge1xuICAgIHJldHVybiBQbG90LnBsb3Qoe1xuICAgICAgaGVpZ2h0OiAyMDAsXG4gICAgICB3aWR0aDogMTAwMCxcbiAgICAgIHN0cm9rZToge1xuICAgICAgICBsZWdlbmQ6IHRydWUsXG4gICAgICB9LFxuICAgICAgeDoge2xhYmVsOiBcIldpbmQgc3BlZWQgKGttL2gpXCJ9LFxuICAgICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5kb3QoZXN0aW1hdGVzLCBQbG90LmRvZGdlWSh7eDogXCIwXCJ9KSksXG4gICAgICAgIFBsb3QucnVsZVgoY2ksIHtzdHJva2U6ICdyZWQnfSksXG4gICAgICAgIFBsb3QucnVsZVgoZXN0aW1hdGUsIHtzdHJva2U6ICdibHVlJywgc3Ryb2tlV2lkdGg6IDN9KSxcbiAgICAgICAgUGxvdC50aXAoW1wiRXN0aW1hdGVkIHN0YXRpc3RpYyBkaXN0cmlidXRpb25cIl0sIHtmcmFtZUFuY2hvcjogXCJ0b3AtcmlnaHRcIiwgc3Ryb2tlV2lkdGg6IDAsIGZvbnRXZWlnaHQ6ICdib2xkJywgZm9udFNpemU6IDEyLCBwYXRoRmlsdGVyOiBmYWxzZX0pXG4gICAgICBdXG4gICAgfSlcbiAgfSBlbHNlIHtcbiAgICByZXR1cm4gUGxvdC5wbG90KHtcbiAgICAgIGhlaWdodDogMjAwLFxuICAgIHdpZHRoOiA0MDAsXG4gICAgICBtYXJrczogW1xuICAgICAgICBQbG90LnJ1bGVZKFswXSksXG4gICAgICAgIFBsb3QucmVjdFkoZXN0aW1hdGVzLCBQbG90LmJpblgoe3k6IFwiY291bnRcIn0sIHt4OiBcIjBcIiwgdGhyZXNob2xkczogJ3Njb3R0J30pKSxcbiAgICAgICAgUGxvdC5ydWxlWChjaSwge3N0cm9rZTogJ3JlZCd9KSxcbiAgICAgICAgUGxvdC5ydWxlWChbZXN0aW1hdGVdLCB7c3Ryb2tlOiAnYmx1ZScsIHN0cm9rZVdpZHRoOiAzfSksXG4gICAgICAgIFBsb3QudGlwKFtcIkVzdGltYXRlZCBzdGF0aXN0aWMgZGlzdHJpYnV0aW9uXCJdLCB7ZnJhbWVBbmNob3I6IFwidG9wLXJpZ2h0XCIsIHN0cm9rZVdpZHRoOiAwLCBmb250V2VpZ2h0OiAnYm9sZCcsIGZvbnRTaXplOiAxMiwgcGF0aEZpbHRlcjogZmFsc2V9KVxuICAgICAgXVxuICAgIH0pXG4gIH1cbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnc2FtcGxlJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3N0YXRpc3RpYycpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdwZXJjZW50aWxlJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3Jlc2FtcGxlVG9nZ2xlJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3N0ZXAnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncmVzZXQnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncmVzYW1wbGVUb2dnbGUyJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3N0ZXAyJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3Jlc2V0MicpIn1dfQ==
+    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRmID0gcmVxdWlyZSgnQHRlbnNvcmZsb3cvdGZqc0A0LjExLjAnKVxuZDNGZXRjaCA9IHJlcXVpcmUoXCJkMy1mZXRjaEAxLjEuMlwiKVxuXG53aW5kID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhL3dpbmQuY3N2XCIpLmNzdih7dHlwZWQ6IHRydWV9KVxubGFuZCA9IHRvcG9qc29uLmZlYXR1cmUoZXVyb3BlLCBldXJvcGUub2JqZWN0cy5ldXJvcGUpXG5ldXJvcGUgPSBkM0ZldGNoLmpzb24oXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vbGVha3lNaXJyb3IvbWFwLW9mLWV1cm9wZS9tYXN0ZXIvVG9wb0pTT04vZXVyb3BlLnRvcG9qc29uXCIpXG5jaXJjbGUgPSBkMy5nZW9DaXJjbGUoKS5jZW50ZXIoWzAsIDUyXSkucmFkaXVzKDUuNSkucHJlY2lzaW9uKDIpKClcblxuUGxvdC5wbG90KHtcbiAgd2lkdGg6IDUwMCxcbiAgaGVpZ2h0OiA1MDAsXG4gIGluc2V0OiAgMTAsXG4gIGFzcGVjdFJhdGlvOiAxLFxuICBjb2xvcjoge1xuICAgIGxhYmVsOiBcIlNwZWVkIChtL3MpXCIsXG4gICAgemVybzogdHJ1ZSxcbiAgICBsZWdlbmQ6IHRydWVcbiAgfSxcbiAgcHJvamVjdGlvbjoge1xuICAgIHR5cGU6IFwiYXppbXV0aGFsLWVxdWFsLWFyZWFcIixcbiAgICAvL3JvdGF0ZTogWy05LCAtMzRdLFxuICAgIGRvbWFpbjogY2lyY2xlLFxuICAgIGluc2V0OiAxMFxuICB9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZ3JhdGljdWxlKCksXG4gICAgUGxvdC5nZW8obGFuZCwge2ZpbGw6IFwiY3VycmVudENvbG9yXCIsIHN0cm9rZTogJ2JsYWNrJywgZmlsbDogJ3doaXRlJ30pLFxuICAgIFBsb3QudmVjdG9yKHdpbmQsIHtcbiAgICAgIHg6IFwibG9uZ2l0dWRlXCIsXG4gICAgICB5OiBcImxhdGl0dWRlXCIsXG4gICAgICByb3RhdGU6ICh7dSwgdn0pID0+IE1hdGguYXRhbjIodSwgdikgKiAxODAgLyBNYXRoLlBJLFxuICAgICAgbGVuZ3RoOiAoe3UsIHZ9KSA9PiBNYXRoLmh5cG90KHUsIHYpLFxuICAgICAgc3Ryb2tlOiAoe3UsIHZ9KSA9PiBNYXRoLmh5cG90KHUsIHYpXG4gICAgfSksICAgIFxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5kYXRhMiA9IGQzRmV0Y2guY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3ZlZ2EvdmVnYS1kYXRhc2V0cy9tYXN0ZXIvZGF0YS93aW5kdmVjdG9ycy5jc3ZcIik7XG5wb3B1bGF0aW9uID0gdGYudGVuc29yKGRhdGEyLm1hcChkID0+IHBhcnNlRmxvYXQoZFsnc3BlZWQnXSkpKS5yZXNoYXBlKFstMSwgMV0pO1xuXG5QbG90LnBsb3Qoe1xuICBoZWlnaHQ6IDUwMCxcbiAgd2lkdGg6IDUwMCxcbiAgeDoge2xhYmVsOiBcIldpbmQgc3BlZWQgKG0vcylcIiwgZG9tYWluOiB0Zi50aWR5KCgpID0+IHtyZXR1cm4gW3BvcHVsYXRpb24ubWluKCkuYXJyYXlTeW5jKCksIHBvcHVsYXRpb24ubWF4KCkuYXJyYXlTeW5jKCldfSl9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZG90KHBvcHVsYXRpb24uYXJyYXlTeW5jKCksIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIiwgcjoxLjUsIGZpbGw6ICcwJ30pKSxcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIGhlaWdodDogMjUwLFxuICB3aWR0aDogMTAwMCxcbiAgeDoge2xhYmVsOiBcIldpbmQgc3BlZWQgKG0vcylcIiwgZG9tYWluOiB0Zi50aWR5KCgpID0+IHtyZXR1cm4gW3BvcHVsYXRpb24ubWluKCkuYXJyYXlTeW5jKCksIHBvcHVsYXRpb24ubWF4KCkuYXJyYXlTeW5jKCldfSl9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZG90KHBvcHVsYXRpb24uYXJyYXlTeW5jKCksIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIiwgcjoxfSkpLFxuICAgIFBsb3QudGlwKFtcIkFsbCBwb3NzaWJsZSB3aW5kIHNwZWVkc1wiXSwge2ZyYW1lQW5jaG9yOiBcInRvcC1yaWdodFwiLCBzdHJva2VXaWR0aDogMCwgZm9udFdlaWdodDogJ2JvbGQnLCBmb250U2l6ZTogMTIsIHBhdGhGaWx0ZXI6IGZhbHNlfSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBzYW1wbGUgPSBJbnB1dHMucmFuZ2UoWzEsIDEwMDBdLCB7bGFiZWw6IFwiU2FtcGxlXCIsIHZhbHVlOiAyMDAsIHN0ZXA6IDF9KVxucmVzYW1wbGUgPSBmdW5jdGlvbih4LCBzaXplKSB7XG4gIHJldHVybiB0Zi50aWR5KCgpID0+IHtcbiAgICBcbiAgICBsZXQgaW5kcztcbiAgICBsZXQgY291bnRzO1xuICAgIGlmIChzaXplKSB7XG4gICAgICBpbmRzID0gdGYucmFuZG9tVW5pZm9ybUludChbc2l6ZV0sIDAsIHguc2hhcGVbMF0pO1xuICAgICAgcmV0dXJuIHguZ2F0aGVyKGluZHMpLnJlc2hhcGUoWy0xLCAxXSk7XG4gICAgfSBlbHNlIHtcbiAgICAgIGluZHMgPSB0Zi5yYW5kb21Vbmlmb3JtSW50KFt4LnNoYXBlWzBdXSwgMCwgeC5zaGFwZVswXSk7XG4gICAgICBjb3VudHMgPSB0Zi5iaW5jb3VudChpbmRzLCBbXSwgeC5zaGFwZVswXSkucmVzaGFwZSh4LnNoYXBlKTtcbiAgICAgIHJldHVybiB0Zi5jb25jYXQoW3guZ2F0aGVyKGluZHMpLCB4LCBjb3VudHNdLCAxKTtcbiAgICB9XG4gIH0pO1xufVxuXG53ZWlnaHRzID0gcmVzYW1wbGUocG9wdWxhdGlvbiwgc2FtcGxlKTtcblBsb3QucGxvdCh7XG4gIGhlaWdodDogMjAwLFxuICB3aWR0aDogMTAwMCxcbiAgeDoge2xhYmVsOiBcIldpbmQgc3BlZWQgKG0vcylcIiwgZG9tYWluOiB0Zi50aWR5KCgpID0+IHtyZXR1cm4gW3BvcHVsYXRpb24ubWluKCkuYXJyYXlTeW5jKCksIHBvcHVsYXRpb24ubWF4KCkuYXJyYXlTeW5jKCldfSl9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZG90KHdlaWdodHMuYXJyYXlTeW5jKCksIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIiwgc3Ryb2tlOiAnYmxhY2snfSkpLFxuICAgIFBsb3QudGlwKFtcIlRoZSBkYXRhc2V0IHdlJ3ZlIGNvbGxlY3RlZFwiXSwge2ZyYW1lQW5jaG9yOiBcInRvcC1yaWdodFwiLCBzdHJva2VXaWR0aDogMCwgZm9udFdlaWdodDogJ2JvbGQnLCBmb250U2l6ZTogMTIsIHBhdGhGaWx0ZXI6IGZhbHNlfSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBzdGF0aXN0aWMgPSBJbnB1dHMuc2VsZWN0KFtcIk1lYW5cIiwgXCJNZWRpYW5cIiwgXCJQZXJjZW50aWxlXCIsIFwiVmFyaWFuY2VcIiwgXCJTdGREZXZcIl0sIHtsYWJlbDogXCJTdGF0aXN0aWNcIn0pO1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC02IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIHBlcmNlbnRpbGUgPSAgSW5wdXRzLnJhbmdlKFswLCAxMDBdLCB7bGFiZWw6IChzdGF0aXN0aWMgPT0gXCJQZXJjZW50aWxlXCIpID8gXCJQZXJjZW50aWxlXCIgOiBcIlwiLCBzdGVwOiAxfSk7XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbnF1YW50aWxlID0ge1xuICBjb25zdCBhc2MgPSBhcnIgPT4gYXJyLnNvcnQoKGEsIGIpID0+IGEgLSBiKTtcbiAgY29uc3Qgc3VtID0gYXJyID0+IGFyci5yZWR1Y2UoKGEsIGIpID0+IGEgKyBiLCAwKTtcbiAgY29uc3QgbWVhbiA9IGFyciA9PiBzdW0oYXJyKSAvIGFyci5sZW5ndGg7XG4gIFxuICAvLyBzYW1wbGUgc3RhbmRhcmQgZGV2aWF0aW9uXG4gIGNvbnN0IHN0ZCA9IChhcnIpID0+IHtcbiAgICAgIGNvbnN0IG11ID0gbWVhbihhcnIpO1xuICAgICAgY29uc3QgZGlmZkFyciA9IGFyci5tYXAoYSA9PiAoYSAtIG11KSAqKiAyKTtcbiAgICAgIHJldHVybiBNYXRoLnNxcnQoc3VtKGRpZmZBcnIpIC8gKGFyci5sZW5ndGggLSAxKSk7XG4gIH07XG4gIFxuICBjb25zdCBxdWFudGlsZSA9IChhcnIsIHEpID0+IHtcbiAgICAgIGNvbnN0IHNvcnRlZCA9IGFzYyhhcnIpO1xuICAgICAgY29uc3QgcG9zID0gKHNvcnRlZC5sZW5ndGggLSAxKSAqIHE7XG4gICAgICBjb25zdCBiYXNlID0gTWF0aC5mbG9vcihwb3MpO1xuICAgICAgY29uc3QgcmVzdCA9IHBvcyAtIGJhc2U7XG4gICAgICBpZiAoc29ydGVkW2Jhc2UgKyAxXSAhPT0gdW5kZWZpbmVkKSB7XG4gICAgICAgICAgcmV0dXJuIHNvcnRlZFtiYXNlXSArIHJlc3QgKiAoc29ydGVkW2Jhc2UgKyAxXSAtIHNvcnRlZFtiYXNlXSk7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICAgIHJldHVybiBzb3J0ZWRbYmFzZV07XG4gICAgICB9XG4gIH07XG4gIHJldHVybiBxdWFudGlsZTtcbn1cblxuc3RkID0ge1xuICBjb25zdCBhc2MgPSBhcnIgPT4gYXJyLnNvcnQoKGEsIGIpID0+IGEgLSBiKTtcbiAgY29uc3Qgc3VtID0gYXJyID0+IGFyci5yZWR1Y2UoKGEsIGIpID0+IGEgKyBiLCAwKTtcbiAgY29uc3QgbWVhbiA9IGFyciA9PiBzdW0oYXJyKSAvIGFyci5sZW5ndGg7XG4gIFxuICAvLyBzYW1wbGUgc3RhbmRhcmQgZGV2aWF0aW9uXG4gIGNvbnN0IHN0ZCA9IChhcnIpID0+IHtcbiAgICAgIGNvbnN0IG11ID0gbWVhbihhcnIpO1xuICAgICAgY29uc3QgZGlmZkFyciA9IGFyci5tYXAoYSA9PiAoYSAtIG11KSAqKiAyKTtcbiAgICAgIHJldHVybiBNYXRoLnNxcnQoc3VtKGRpZmZBcnIpIC8gKGFyci5sZW5ndGggLSAxKSk7XG4gIH07XG5cbiAgcmV0dXJuIHN0ZDtcbn1cblxuY29tcHV0ZVN0YXQgPSAoeCkgPT4ge1xuICBsZXQgZXN0ID0gdGYudGlkeSgoKSA9PiB7XG4gICAgbGV0IHZhbHVlcyA9IHguc2xpY2UoWzAsIDBdLCBbLTEsIDFdKS5yZXNoYXBlKFstMV0pO1xuICAgIGlmIChzdGF0aXN0aWMgPT0gJ01lYW4nKSB7XG4gICAgICByZXR1cm4gdmFsdWVzLm1lYW4oKS5hcnJheVN5bmMoKTtcbiAgICB9IGVsc2UgaWYgKHN0YXRpc3RpYyA9PSAnTWVkaWFuJykge1xuICAgICAgcmV0dXJuIHF1YW50aWxlKHZhbHVlcy5hcnJheVN5bmMoKSwgMC41KTtcbiAgICB9IGVsc2UgaWYgKHN0YXRpc3RpYyA9PSAnUGVyY2VudGlsZScpIHtcbiAgICAgIHJldHVybiBxdWFudGlsZSh2YWx1ZXMuYXJyYXlTeW5jKCksIHBlcmNlbnRpbGUgLyAxMDApO1xuICAgIH0gZWxzZSBpZiAoc3RhdGlzdGljID09ICdWYXJpYW5jZScpIHtcbiAgICAgIHJldHVybiBNYXRoLnBvdyhzdGQodmFsdWVzLmFycmF5U3luYygpKSwgMik7XG4gICAgfSBlbHNlIGlmIChzdGF0aXN0aWMgPT0gJ1N0ZERldicpIHtcbiAgICAgIHJldHVybiBzdGQodmFsdWVzLmFycmF5U3luYygpKTtcbiAgICB9XG4gIH0pO1xuICByZXR1cm4gZXN0O1xufVxuXG5lc3RpbWF0ZSA9IGNvbXB1dGVTdGF0KHdlaWdodHMpXG5QbG90LnBsb3Qoe1xuICBoZWlnaHQ6IDIwMCxcbiAgd2lkdGg6IDEwMDAsXG4gIHg6IHtsYWJlbDogXCJXaW5kIHNwZWVkIChtL3MpXCIsIGRvbWFpbjogdGYudGlkeSgoKSA9PiB7cmV0dXJuIFtwb3B1bGF0aW9uLm1pbigpLmFycmF5U3luYygpLCBwb3B1bGF0aW9uLm1heCgpLmFycmF5U3luYygpXX0pfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmRvdCh3ZWlnaHRzLmFycmF5U3luYygpLCBQbG90LmRvZGdlWSh7eDogXCIwXCIsIHN0cm9rZTogJ2JsYWNrJ30pKSxcbiAgICBQbG90LnJ1bGVYKFtlc3RpbWF0ZV0sIHtzdHJva2U6ICdibHVlJywgc3Ryb2tlV2lkdGg6IDJ9KSxcbiAgICBQbG90LnRpcChbXCJTYW1wbGUgc3RhdGlzdGljXCJdLCB7eDogZXN0aW1hdGUsIGR5OiAtNTAsIGFuY2hvcjogXCJsZWZ0XCIsIHN0cm9rZTogJ2JsdWUnLCBmb250Q29sb3I6J2JsdWUnLCBmb250V2VpZ2h0OiAnYm9sZCcsIGZvbnRTaXplOiAxMiwgcGF0aEZpbHRlcjogZmFsc2V9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgaGVpZ2h0OiAzMDAsXG4gIHdpZHRoOiAxMDAwLFxuICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAobS9zKVwiLCBkb21haW46IHRmLnRpZHkoKCkgPT4ge3JldHVybiBbcG9wdWxhdGlvbi5taW4oKS5hcnJheVN5bmMoKSwgcG9wdWxhdGlvbi5tYXgoKS5hcnJheVN5bmMoKV19KX0sXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5kb3QocG9wdWxhdGlvbi5hcnJheVN5bmMoKSwgUGxvdC5kb2RnZVkoe3g6IFwiMFwiLCByOjF9KSksXG4gICAgUGxvdC5ydWxlWChbNS40XSwge3N0cm9rZTogJ2JsdWUnLCBzdHJva2VXaWR0aDogMn0pLFxuICAgIFBsb3QudGlwKFtcIlBvcHVsYXRpb24gcGFyYW1ldGVyXCJdLCB7eDogNS40LCBkeTogLTUwLCBhbmNob3I6IFwibGVmdFwiLCBzdHJva2U6ICdibHVlJywgZm9udENvbG9yOidibHVlJywgZm9udFdlaWdodDogJ2JvbGQnLCBmb250U2l6ZTogMTIsIHBhdGhGaWx0ZXI6IGZhbHNlfSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIGhlaWdodDogMjAwLFxuICB3aWR0aDogMTAwMCxcbiAgeDoge2xhYmVsOiBcIldpbmQgc3BlZWQgKG0vcylcIiwgZG9tYWluOiB0Zi50aWR5KCgpID0+IHtyZXR1cm4gW3BvcHVsYXRpb24ubWluKCkuYXJyYXlTeW5jKCksIHBvcHVsYXRpb24ubWF4KCkuYXJyYXlTeW5jKCldfSl9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZG90KHdlaWdodHMuYXJyYXlTeW5jKCksIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIiwgc3Ryb2tlOiAnYmxhY2snfSkpLFxuICAgIFBsb3QucnVsZVgoW2VzdGltYXRlXSwge3N0cm9rZTogJ2JsdWUnLCBzdHJva2VXaWR0aDogMn0pLFxuICAgIFBsb3QudGlwKFtcIlNhbXBsZSBzdGF0aXN0aWNcIl0sIHt4OiBlc3RpbWF0ZSwgZHk6IC01MCwgYW5jaG9yOiBcImxlZnRcIiwgc3Ryb2tlOiAnYmx1ZScsIGZvbnRDb2xvcjonYmx1ZScsIGZvbnRXZWlnaHQ6ICdib2xkJywgZm9udFNpemU6IDEyLCBwYXRoRmlsdGVyOiBmYWxzZX0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEwIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgaGVpZ2h0OiAyMDAsXG4gIHdpZHRoOiAxMDAwLFxuICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAobS9zKVwiLCBkb21haW46IHRmLnRpZHkoKCkgPT4ge3JldHVybiBbcG9wdWxhdGlvbi5taW4oKS5hcnJheVN5bmMoKSwgcG9wdWxhdGlvbi5tYXgoKS5hcnJheVN5bmMoKV19KX0sXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5kb3Qod2VpZ2h0cy5hcnJheVN5bmMoKSwgUGxvdC5kb2RnZVkoe3g6IFwiMFwiLCBzdHJva2U6ICdibGFjayd9KSksXG4gICAgUGxvdC5ydWxlWChbMS41LCA4LjNdLCB7c3Ryb2tlOiAncmVkJywgc3Ryb2tlV2lkdGg6IDJ9KSxcbiAgICBQbG90LnRpcChbXCJMb3dlciBpbnRlcnZhbCBlZGdlXCJdLCB7eDogMS41LCBkeTogLTUwLCBhbmNob3I6IFwibGVmdFwiLCBzdHJva2U6ICdyZWQnLCBmb250Q29sb3I6J3JlZCcsIGZvbnRXZWlnaHQ6ICdib2xkJywgZm9udFNpemU6IDEyLCBwYXRoRmlsdGVyOiBmYWxzZX0pLFxuICAgIFBsb3QudGlwKFtcIlVwcGVyIGludGVydmFsIGVkZ2VcIl0sIHt4OjguMywgZHk6IC01MCwgYW5jaG9yOiBcInJpZ2h0XCIsIHN0cm9rZTogJ3JlZCcsIGZvbnRDb2xvcjoncmVkJywgZm9udFdlaWdodDogJ2JvbGQnLCBmb250U2l6ZTogMTIsIHBhdGhGaWx0ZXI6IGZhbHNlfSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTEiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgcmVzYW1wbGVUb2dnbGUgPSBJbnB1dHMucmFuZ2UoKTtcblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBzdGVwID0gSW5wdXRzLmJ1dHRvbihcIlJlc2FtcGxlXCIpXG5cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgcmVzZXQgPSBJbnB1dHMuYnV0dG9uKFwiUmVzZXRcIilcblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxucGxheWluZyA9IHtcbiAgcmVzYW1wbGVUb2dnbGU7XG4gIHJldHVybiAhdGhpcztcbn1cblxucmVzYW1wbGVCdXR0b24gPSB7XG4gIHdoaWxlKHBsYXlpbmcpIHtcbiAgICB5aWVsZCB0cnVlO1xuICB9XG4gIHN0ZXA7XG4gIHJldHVybiBmYWxzZTtcbn1cblxucG9wZXN0aW1hdGVzID0ge1xuICBzdGF0aXN0aWNcbiAgcmVzZXRcbiAgcGVyY2VudGlsZVxuICByZXR1cm4gW107XG59XG5cbnBvcGNpID0ge1xuICBwb3ByZXNhbXBsZWRcbiAgbGV0IGZsYXRfZXN0aW1hdGVzID0gcG9wZXN0aW1hdGVzLmZsYXQoKTtcbiAgcmV0dXJuIFtbcXVhbnRpbGUoZmxhdF9lc3RpbWF0ZXMsIDAuMDUpXSwgW3F1YW50aWxlKGZsYXRfZXN0aW1hdGVzLCAwLjk1KV1dO1xufVxuXG5wYXJhbWV0ZXIgPSBjb21wdXRlU3RhdChwb3B1bGF0aW9uKTtcblxucG9wcmVzYW1wbGVkID0ge1xuICByZXNhbXBsZUJ1dHRvblxuICBsZXQgeCA9IHJlc2FtcGxlKHBvcHVsYXRpb24sIHNhbXBsZSk7XG4gIGxldCBlc3QgPSBjb21wdXRlU3RhdCh4KTtcbiAgcG9wZXN0aW1hdGVzLnB1c2goW2VzdF0pO1xuICBsZXQgb3V0cHV0ID0geC5hcnJheVN5bmMoKTtcbiAgeC5kaXNwb3NlKClcbiAgcmV0dXJuIG91dHB1dDtcbn1cblxuUGxvdC5wbG90KHtcbiAgaGVpZ2h0OiAyMDAsXG4gIHdpZHRoOiAxMDAwLFxuICBjb2xvcjoge1xuICAgIHNjaGVtZTogXCJSZWRzXCJcbiAgfSxcbiAgeDoge2xhYmVsOiBcIldpbmQgc3BlZWQgKG0vcylcIixkb21haW46IHRmLnRpZHkoKCkgPT4ge3JldHVybiBbcG9wdWxhdGlvbi5taW4oKS5hcnJheVN5bmMoKSwgcG9wdWxhdGlvbi5tYXgoKS5hcnJheVN5bmMoKV19KX0sXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5kb3QocG9wcmVzYW1wbGVkLCBQbG90LmRvZGdlWSh7eDogXCIwXCJ9KSksXG4gICAgUGxvdC5ydWxlWChwb3Blc3RpbWF0ZXNbcG9wZXN0aW1hdGVzLmxlbmd0aCAtIDFdLCB7c3Ryb2tlOiAnYmx1ZScsIHN0cm9rZVdpZHRoOiAyfSksXG4gICAgUGxvdC50aXAoW1wiU2FtcGxlIGZyb20gcG9wdWxhdGlvblwiXSwge2ZyYW1lQW5jaG9yOiBcInRvcC1yaWdodFwiLCBzdHJva2VXaWR0aDogMCwgZm9udFdlaWdodDogJ2JvbGQnLCBmb250U2l6ZTogMTIsIHBhdGhGaWx0ZXI6IGZhbHNlfSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIHBvcHJlc2FtcGxlZFxuICBpZiAocG9wZXN0aW1hdGVzLmxlbmd0aCA8IDUwMCkge1xuICAgIHJldHVybiBQbG90LnBsb3Qoe1xuICAgICAgaGVpZ2h0OiAyMDAsXG4gICAgICB3aWR0aDogMTAwMCxcbiAgICAgIGNvbG9yOiB7XG4gICAgICAgIHNjaGVtZTogXCJSZWRzXCJcbiAgICAgIH0sXG4gICAgICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAobS9zKVwifSxcbiAgICAgIHk6IHtsYWJlbDogXCJcIiwgdGlja3M6IDB9LFxuICAgICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5kb3QocG9wZXN0aW1hdGVzLCBQbG90LmRvZGdlWSh7eDogXCIwXCJ9KSksXG4gICAgICAgIFBsb3QucnVsZVgocG9wY2ksIHtzdHJva2U6ICdyZWQnfSksXG4gICAgICAgIFBsb3QuYXJlYVkoW1twb3BjaVswXSwgMV0sIFtwb3BjaVsxXSwgMV1dLCB7eDogXCIwXCIsIHk6IFwiMVwiLCBmaWxsOiBcInJlZFwiLCBmaWxsT3BhY2l0eTogMC4wNX0pLFxuICAgICAgICBQbG90LnJ1bGVYKHBhcmFtZXRlciwge3N0cm9rZTogJ2JsdWUnLCBzdHJva2VXaWR0aDogM30pLFxuICAgIFBsb3QudGlwKFtcIkRpc3RyaWJ1dGlvbiBvZiBzdGF0aXN0aWNcIl0sIHtmcmFtZUFuY2hvcjogXCJ0b3AtcmlnaHRcIiwgc3Ryb2tlV2lkdGg6IDAsIGZvbnRXZWlnaHQ6ICdib2xkJywgZm9udFNpemU6IDEyLCBwYXRoRmlsdGVyOiBmYWxzZX0pXG4gICAgICBdXG4gICAgfSlcbiAgfSBlbHNlIHtcbiAgICByZXR1cm4gUGxvdC5wbG90KHtcbiAgICAgIGhlaWdodDogMjAwLFxuICAgICAgd2lkdGg6IDEwMDAsXG4gICAgICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAobS9zKVwifSxcbiAgICAgIHk6IHtsYWJlbDogXCJcIiwgdGlja3M6IDB9LFxuICAgICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5ydWxlWShbMF0pLFxuICAgICAgICBQbG90LnJlY3RZKHBvcGVzdGltYXRlcywgUGxvdC5iaW5YKHt5OiBcImNvdW50XCJ9LCB7eDogXCIwXCIsIHRocmVzaG9sZHM6ICdzY290dCd9KSksXG4gICAgICAgIFBsb3QucnVsZVgocG9wY2ksIHtzdHJva2U6ICdyZWQnLCBzdHJva2VXaWR0aDogM30pLFxuICAgICAgICBQbG90LmFyZWFZKFtbcG9wY2lbMF0sIDFdLCBbcG9wY2lbMV0sIDFdXSwge3g6IFwiMFwiLCB5OiBcIjFcIiwgZmlsbDogXCJyZWRcIiwgZmlsbE9wYWNpdHk6IDAuMDV9KSxcbiAgICAgICAgUGxvdC5ydWxlWChbcGFyYW1ldGVyXSwge3N0cm9rZTogJ2JsdWUnLCBzdHJva2VXaWR0aDogM30pLFxuICAgIFBsb3QudGlwKFtcIkRpc3RyaWJ1dGlvbiBvZiBzdGF0aXN0aWNcIl0sIHtmcmFtZUFuY2hvcjogXCJ0b3AtcmlnaHRcIiwgc3Ryb2tlV2lkdGg6IDAsIGZvbnRXZWlnaHQ6ICdib2xkJywgZm9udFNpemU6IDEyLCBwYXRoRmlsdGVyOiBmYWxzZX0pXG4gICAgICBdXG4gICAgfSlcbiAgfVxufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgcG9wcmVzYW1wbGVkXG4gIGlmIChwb3Blc3RpbWF0ZXMubGVuZ3RoIDwgNTAwKSB7XG4gICAgcmV0dXJuIFBsb3QucGxvdCh7XG4gICAgICBoZWlnaHQ6IDIwMCxcbiAgICAgIHdpZHRoOiAxMDAwLFxuICAgICAgY29sb3I6IHtcbiAgICAgICAgc2NoZW1lOiBcIlJlZHNcIlxuICAgICAgfSxcbiAgICAgIHg6IHtsYWJlbDogXCJXaW5kIHNwZWVkIChtL3MpXCJ9LFxuICAgICAgeToge2xhYmVsOiBcIlwiLCB0aWNrczogMH0sXG4gICAgICBtYXJrczogW1xuICAgICAgICBQbG90LmRvdChwb3Blc3RpbWF0ZXMsIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIn0pKSxcbiAgICAgICAgUGxvdC5ydWxlWChwb3BjaSwge3N0cm9rZTogJ3JlZCd9KSxcbiAgICAgICAgUGxvdC5hcmVhWShbW3BvcGNpWzBdLCAxXSwgW3BvcGNpWzFdLCAxXV0sIHt4OiBcIjBcIiwgeTogXCIxXCIsIGZpbGw6IFwicmVkXCIsIGZpbGxPcGFjaXR5OiAwLjA1fSksXG4gICAgICAgIFBsb3QucnVsZVgocGFyYW1ldGVyLCB7c3Ryb2tlOiAnYmx1ZScsIHN0cm9rZVdpZHRoOiAzfSksXG4gICAgUGxvdC50aXAoW1wiRGlzdHJpYnV0aW9uIG9mIHN0YXRpc3RpY1wiXSwge2ZyYW1lQW5jaG9yOiBcInRvcC1yaWdodFwiLCBzdHJva2VXaWR0aDogMCwgZm9udFdlaWdodDogJ2JvbGQnLCBmb250U2l6ZTogMTIsIHBhdGhGaWx0ZXI6IGZhbHNlfSlcbiAgICAgIF1cbiAgICB9KVxuICB9IGVsc2Uge1xuICAgIHJldHVybiBQbG90LnBsb3Qoe1xuICAgICAgaGVpZ2h0OiAyMDAsXG4gICAgICB3aWR0aDogMTAwMCxcbiAgICAgIHg6IHtsYWJlbDogXCJXaW5kIHNwZWVkIChtL3MpXCJ9LFxuICAgICAgeToge2xhYmVsOiBcIlwiLCB0aWNrczogMH0sXG4gICAgICBtYXJrczogW1xuICAgICAgICBQbG90LnJ1bGVZKFswXSksXG4gICAgICAgIFBsb3QucmVjdFkocG9wZXN0aW1hdGVzLCBQbG90LmJpblgoe3k6IFwiY291bnRcIn0sIHt4OiBcIjBcIiwgdGhyZXNob2xkczogJ3Njb3R0J30pKSxcbiAgICAgICAgUGxvdC5ydWxlWChwb3BjaSwge3N0cm9rZTogJ3JlZCcsIHN0cm9rZVdpZHRoOiAzfSksXG4gICAgICAgIFBsb3QuYXJlYVkoW1twb3BjaVswXSwgMV0sIFtwb3BjaVsxXSwgMV1dLCB7eDogXCIwXCIsIHk6IFwiMVwiLCBmaWxsOiBcInJlZFwiLCBmaWxsT3BhY2l0eTogMC4wNX0pLFxuICAgICAgICBQbG90LnJ1bGVYKFtwYXJhbWV0ZXJdLCB7c3Ryb2tlOiAnYmx1ZScsIHN0cm9rZVdpZHRoOiAzfSksXG4gICAgUGxvdC50aXAoW1wiRGlzdHJpYnV0aW9uIG9mIHN0YXRpc3RpY1wiXSwge2ZyYW1lQW5jaG9yOiBcInRvcC1yaWdodFwiLCBzdHJva2VXaWR0aDogMCwgZm9udFdlaWdodDogJ2JvbGQnLCBmb250U2l6ZTogMTIsIHBhdGhGaWx0ZXI6IGZhbHNlfSlcbiAgICAgIF1cbiAgICB9KVxuICB9XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE3IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgaGVpZ2h0OiAyMDAsXG4gIHdpZHRoOiAxMDAwLFxuICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAobS9zKVwiLCBkb21haW46IHRmLnRpZHkoKCkgPT4ge3JldHVybiBbcG9wdWxhdGlvbi5taW4oKS5hcnJheVN5bmMoKSwgcG9wdWxhdGlvbi5tYXgoKS5hcnJheVN5bmMoKV19KX0sXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5kb3Qod2VpZ2h0cy5hcnJheVN5bmMoKSwgUGxvdC5kb2RnZVkoe3g6IFwiMFwiLCBzdHJva2U6ICdibGFjayd9KSksXG4gICAgUGxvdC5ydWxlWChbZXN0aW1hdGVdLCB7c3Ryb2tlOiAnYmx1ZScsIHN0cm9rZVdpZHRoOiAyfSksXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE4IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgaGVpZ2h0OiAzMDAsXG4gIHdpZHRoOiAxMDAwLFxuICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAobS9zKVwiLCBkb21haW46IHRmLnRpZHkoKCkgPT4ge3JldHVybiBbcG9wdWxhdGlvbi5taW4oKS5hcnJheVN5bmMoKSwgcG9wdWxhdGlvbi5tYXgoKS5hcnJheVN5bmMoKV19KX0sXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5kb3QocG9wdWxhdGlvbi5hcnJheVN5bmMoKSwgUGxvdC5kb2RnZVkoe3g6IFwiMFwiLCByOjF9KSksXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE5IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgaGVpZ2h0OiAzMDAsXG4gIHdpZHRoOiAxMDAwLFxuICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAobS9zKVwiLCBkb21haW46IHRmLnRpZHkoKCkgPT4ge3JldHVybiBbcG9wdWxhdGlvbi5taW4oKS5hcnJheVN5bmMoKSwgcG9wdWxhdGlvbi5tYXgoKS5hcnJheVN5bmMoKV19KX0sXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5kb3QodGYudGlkeSgoKSA9PiB0Zi50aWxlKHdlaWdodHMsIFtyZXBlYXRzLCAxXSkuYXJyYXlTeW5jKCkpLCBQbG90LmRvZGdlWSh7eDogXCIwXCIsIHI6IDUgLyBNYXRoLnNxcnQocmVwZWF0cyl9KSksXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIwIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIHJlcGVhdHMgPSBJbnB1dHMucmFuZ2UoWzEsIDIwXSwge2xhYmVsOiBcIlJlcGVhdHNcIiwgdmFsdWU6IDEsIHN0ZXA6IDF9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIGhlaWdodDogMTgwLFxuICB3aWR0aDogNTAwLFxuICBjb2xvcjoge1xuICAgIHNjaGVtZTogXCJSZWRzXCIsXG4gICAgbGVnZW5kOiB0cnVlLFxuICAgIGxhYmVsOiBcIk9jY3VyZW5jZXMgaW4gYm9vdHN0cmFwIHNhbXBsZVwiLFxuICAgIGRvbWFpbjogWzAsIDVdXG4gIH0sXG4gIHg6IHtsYWJlbDogXCJXaW5kIHNwZWVkIChtL3MpXCIsIGRvbWFpbjogdGYudGlkeSgoKSA9PiB7cmV0dXJuIFtwb3B1bGF0aW9uLm1pbigpLmFycmF5U3luYygpLCBwb3B1bGF0aW9uLm1heCgpLmFycmF5U3luYygpXX0pfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmRvdChyZXNhbXBsZWQsIFBsb3QuZG9kZ2VZKHt4OiBcIjFcIiwgZmlsbDogXCIyXCIsIHN0cm9rZTogJ2JsYWNrJ30pKSxcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xuICBoZWlnaHQ6IDIyNSxcbiAgd2lkdGg6IDUwMCxcbiAgY29sb3I6IHtcbiAgICBzY2hlbWU6IFwiUmVkc1wiXG4gIH0sXG4gIHg6IHtsYWJlbDogXCJXaW5kIHNwZWVkIChtL3MpXCIsZG9tYWluOiB0Zi50aWR5KCgpID0+IHtyZXR1cm4gW3BvcHVsYXRpb24ubWluKCkuYXJyYXlTeW5jKCksIHBvcHVsYXRpb24ubWF4KCkuYXJyYXlTeW5jKCldfSl9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZG90KHJlc2FtcGxlZCwgUGxvdC5kb2RnZVkoe3g6IFwiMFwifSkpLFxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIGhlaWdodDogMTgwLFxuICB3aWR0aDogNTAwLFxuICBjb2xvcjoge1xuICAgIHNjaGVtZTogXCJSZWRzXCIsXG4gICAgbGVnZW5kOiB0cnVlLFxuICAgIGxhYmVsOiBcIk9jY3VyZW5jZXMgaW4gYm9vdHN0cmFwIHNhbXBsZVwiLFxuICAgIGRvbWFpbjogWzAsIDVdXG4gIH0sXG4gIHg6IHtsYWJlbDogXCJXaW5kIHNwZWVkIChtL3MpXCIsIGRvbWFpbjogdGYudGlkeSgoKSA9PiB7cmV0dXJuIFtwb3B1bGF0aW9uLm1pbigpLmFycmF5U3luYygpLCBwb3B1bGF0aW9uLm1heCgpLmFycmF5U3luYygpXX0pfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmRvdChyZXNhbXBsZWQsIFBsb3QuZG9kZ2VZKHt4OiBcIjFcIiwgZmlsbDogXCIyXCIsIHN0cm9rZTogJ2JsYWNrJ30pKSxcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xuICBoZWlnaHQ6IDIyNSxcbiAgd2lkdGg6IDUwMCxcbiAgY29sb3I6IHtcbiAgICBzY2hlbWU6IFwiUmVkc1wiXG4gIH0sXG4gIHg6IHtsYWJlbDogXCJXaW5kIHNwZWVkIChtL3MpXCIsZG9tYWluOiB0Zi50aWR5KCgpID0+IHtyZXR1cm4gW3BvcHVsYXRpb24ubWluKCkuYXJyYXlTeW5jKCksIHBvcHVsYXRpb24ubWF4KCkuYXJyYXlTeW5jKCldfSl9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZG90KHJlc2FtcGxlZCwgUGxvdC5kb2RnZVkoe3g6IFwiMFwifSkpLFxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiByZXBsYXkgPSBJbnB1dHMuYnV0dG9uKFwiUGxheVwiKTtcbnJlc2FtcGxlVG9nZ2xlMiA9IHtcbiAgbGV0IGNvdW50ID0gcmVwbGF5ID4gMCA/IDEwMCA6IDA7XG4gIGZvciAobGV0IGkgPSAwOyBpIDwgY291bnQ7ICsraSkge1xuICAgIHlpZWxkIGk7XG4gIH1cbn07XG5cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2Ygc3RlcDIgPSBJbnB1dHMuYnV0dG9uKFwiUmVzYW1wbGVcIilcblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yNyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiByZXNldDIgPSBJbnB1dHMuYnV0dG9uKFwiUmVzZXRcIilcblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImVzdGltYXRlcyA9IHtcbiAgc3RhdGlzdGljXG4gIHJlc2V0MlxuICBzdGVwMlxuICBwZXJjZW50aWxlXG4gIHJldHVybiBbXTtcbn1cblxuY2kgPSB7XG4gIHJlc2FtcGxlZFxuICBsZXQgZmxhdF9lc3RpbWF0ZXMgPSBlc3RpbWF0ZXMuZmxhdCgpO1xuICByZXR1cm4gW1txdWFudGlsZShmbGF0X2VzdGltYXRlcywgMC4wMjUpXSwgW3F1YW50aWxlKGZsYXRfZXN0aW1hdGVzLCAwLjk3NSldXTtcbn1cblxucmVzYW1wbGVkID0ge1xuICByZXNhbXBsZVRvZ2dsZTJcbiAgbGV0IHggPSByZXNhbXBsZSh3ZWlnaHRzKTtcbiAgbGV0IGVzdCA9IGNvbXB1dGVTdGF0KHgpO1xuICBlc3RpbWF0ZXMucHVzaChbZXN0XSk7XG4gIGxldCBvdXRwdXQgPSB4LmFycmF5U3luYygpO1xuICB4LmRpc3Bvc2UoKVxuICByZXR1cm4gb3V0cHV0O1xufVxuXG5QbG90LnBsb3Qoe1xuICBoZWlnaHQ6IDE4MCxcbiAgd2lkdGg6IDEwMDAsXG4gIGNvbG9yOiB7XG4gICAgc2NoZW1lOiBcIlJlZHNcIixcbiAgICBsZWdlbmQ6IHRydWUsXG4gICAgbGFiZWw6IFwiT2NjdXJlbmNlcyBpbiBib290c3RyYXAgc2FtcGxlXCIsXG4gICAgZG9tYWluOiBbMCwgNV1cbiAgfSxcbiAgeDoge2xhYmVsOiBcIldpbmQgc3BlZWQgKG0vcylcIiwgZG9tYWluOiB0Zi50aWR5KCgpID0+IHtyZXR1cm4gW3BvcHVsYXRpb24ubWluKCkuYXJyYXlTeW5jKCksIHBvcHVsYXRpb24ubWF4KCkuYXJyYXlTeW5jKCldfSl9LFxuICBtYXJrczogW1xuICAgIFBsb3QuZG90KHJlc2FtcGxlZCwgUGxvdC5kb2RnZVkoe3g6IFwiMVwiLCBmaWxsOiBcIjJcIiwgc3Ryb2tlOiAnYmxhY2snfSkpLFxuICAgIFBsb3QudGlwKFtcIk9yaWdpbmFsIHNhbXBsZVwiXSwge2ZyYW1lQW5jaG9yOiBcInRvcC1yaWdodFwiLCBzdHJva2VXaWR0aDogMCwgZm9udFdlaWdodDogJ2JvbGQnLCBmb250U2l6ZTogMTIsIHBhdGhGaWx0ZXI6IGZhbHNlfSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjkiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xuICBoZWlnaHQ6IDE4MCxcbiAgd2lkdGg6IDEwMDAsXG4gIGNvbG9yOiB7XG4gICAgc2NoZW1lOiBcIlJlZHNcIlxuICB9LFxuICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAobS9zKVwiLGRvbWFpbjogdGYudGlkeSgoKSA9PiB7cmV0dXJuIFtwb3B1bGF0aW9uLm1pbigpLmFycmF5U3luYygpLCBwb3B1bGF0aW9uLm1heCgpLmFycmF5U3luYygpXX0pfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmRvdChyZXNhbXBsZWQsIFBsb3QuZG9kZ2VZKHt4OiBcIjBcIn0pKSxcbiAgICBQbG90LnJ1bGVYKGVzdGltYXRlc1tlc3RpbWF0ZXMubGVuZ3RoIC0gMV0sIHtzdHJva2U6ICdibHVlJywgc3Ryb2tlV2lkdGg6IDJ9KSxcbiAgICBQbG90LnRpcChbXCJCb290c3RyYXAgc2FtcGxlXCJdLCB7ZnJhbWVBbmNob3I6IFwidG9wLXJpZ2h0XCIsIHN0cm9rZVdpZHRoOiAwLCBmb250V2VpZ2h0OiAnYm9sZCcsIGZvbnRTaXplOiAxMiwgcGF0aEZpbHRlcjogZmFsc2V9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zMCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgcmVzYW1wbGVkXG4gIGlmIChlc3RpbWF0ZXMubGVuZ3RoIDwgNTAwKSB7XG4gICAgcmV0dXJuIFBsb3QucGxvdCh7XG4gICAgICBoZWlnaHQ6IDE4MCxcbiAgICAgIHdpZHRoOiAxMDAwLFxuICAgICAgc3Ryb2tlOiB7XG4gICAgICAgIGxlZ2VuZDogdHJ1ZSxcbiAgICAgIH0sXG4gICAgICB4OiB7bGFiZWw6IFwiV2luZCBzcGVlZCAobS9zKVwifSxcbiAgICAgIHk6IHtsYWJlbDogXCJcIiwgdGlja3M6IDB9LFxuICAgICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5kb3QoZXN0aW1hdGVzLCBQbG90LmRvZGdlWSh7eDogXCIwXCIsIHN0cm9rZTogXCJibHVlXCJ9KSksXG4gICAgICAgIFBsb3QucnVsZVgoY2ksIHtzdHJva2U6ICdyZWQnfSksXG4gICAgICAgIFBsb3QuYXJlYVkoW1tjaVswXSwgMV0sIFtjaVsxXSwgMV1dLCB7eDogXCIwXCIsIHk6IFwiMVwiLCBmaWxsOiBcInJlZFwiLCBmaWxsT3BhY2l0eTogMC4wNX0pLFxuICAgICAgICAvL1Bsb3QucnVsZVgoZXN0aW1hdGUsIHtzdHJva2U6ICdibHVlJywgc3Ryb2tlV2lkdGg6IDN9KSxcbiAgICAgICAgUGxvdC50aXAoW1wiRXN0aW1hdGVkIHN0YXRpc3RpYyBkaXN0cmlidXRpb25cIl0sIHtmcmFtZUFuY2hvcjogXCJ0b3AtcmlnaHRcIiwgc3Ryb2tlV2lkdGg6IDAsIGZvbnRXZWlnaHQ6ICdib2xkJywgZm9udFNpemU6IDEyLCBwYXRoRmlsdGVyOiBmYWxzZX0pXG4gICAgICBdXG4gICAgfSlcbiAgfSBlbHNlIHtcbiAgICByZXR1cm4gUGxvdC5wbG90KHtcbiAgICAgIGhlaWdodDogMjAwLFxuICAgIHdpZHRoOiAxMDAwLFxuICAgIHk6IHtsYWJlbDogXCJcIiwgdGlja3M6IDB9LFxuICAgICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5ydWxlWShbMF0pLFxuICAgICAgICBQbG90LnJlY3RZKGVzdGltYXRlcywgUGxvdC5iaW5YKHt5OiBcImNvdW50XCJ9LCB7eDogXCIwXCIsIHRocmVzaG9sZHM6ICdzY290dCcsIGZpbGw6IFwiYmx1ZVwifSkpLFxuICAgICAgICBQbG90LnJ1bGVYKGNpLCB7c3Ryb2tlOiAncmVkJywgc3Ryb2tlV2lkdGg6IDN9KSxcbiAgICAgICAgUGxvdC5hcmVhWShbW2NpWzBdLCAxXSwgW2NpWzFdLCAxXV0sIHt4OiBcIjBcIiwgeTogXCIxXCIsIGZpbGw6IFwicmVkXCIsIGZpbGxPcGFjaXR5OiAwLjA1fSksXG4gICAgICAgIC8vUGxvdC5ydWxlWChbZXN0aW1hdGVdLCB7c3Ryb2tlOiAnYmx1ZScsIHN0cm9rZVdpZHRoOiAzfSksXG4gICAgICAgIFBsb3QudGlwKFtcIkVzdGltYXRlZCBzdGF0aXN0aWMgZGlzdHJpYnV0aW9uXCJdLCB7ZnJhbWVBbmNob3I6IFwidG9wLXJpZ2h0XCIsIHN0cm9rZVdpZHRoOiAwLCBmb250V2VpZ2h0OiAnYm9sZCcsIGZvbnRTaXplOiAxMiwgcGF0aEZpbHRlcjogZmFsc2V9KVxuICAgICAgXVxuICAgIH0pXG4gIH1cbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMzEiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIHJlc2FtcGxlZFxuICBpZiAoZXN0aW1hdGVzLmxlbmd0aCA8IDUwMCkge1xuICAgIHJldHVybiBQbG90LnBsb3Qoe1xuICAgICAgaGVpZ2h0OiAyMDAsXG4gICAgICB3aWR0aDogMTAwMCxcbiAgICAgIHN0cm9rZToge1xuICAgICAgICBsZWdlbmQ6IHRydWUsXG4gICAgICB9LFxuICAgICAgeDoge2xhYmVsOiBcIldpbmQgc3BlZWQgKG0vcylcIn0sXG4gICAgICB5OiB7bGFiZWw6IFwiXCIsIHRpY2tzOiAwfSxcbiAgICAgIG1hcmtzOiBbXG4gICAgICAgIFBsb3QuZG90KGVzdGltYXRlcywgUGxvdC5kb2RnZVkoe3g6IFwiMFwifSkpLFxuICAgICAgICBQbG90LnJ1bGVYKGNpLCB7c3Ryb2tlOiAncmVkJ30pLFxuICAgICAgICBQbG90LmFyZWFZKFtbY2lbMF0sIDFdLCBbY2lbMV0sIDFdXSwge3g6IFwiMFwiLCB5OiBcIjFcIiwgZmlsbDogXCJyZWRcIiwgZmlsbE9wYWNpdHk6IDAuMDV9KSxcbiAgICAgICAgLy9QbG90LnJ1bGVYKGVzdGltYXRlLCB7c3Ryb2tlOiAnYmx1ZScsIHN0cm9rZVdpZHRoOiAzfSksXG4gICAgICAgIFBsb3QudGlwKFtcIkVzdGltYXRlZCBzdGF0aXN0aWMgZGlzdHJpYnV0aW9uXCJdLCB7ZnJhbWVBbmNob3I6IFwidG9wLXJpZ2h0XCIsIHN0cm9rZVdpZHRoOiAwLCBmb250V2VpZ2h0OiAnYm9sZCcsIGZvbnRTaXplOiAxMiwgcGF0aEZpbHRlcjogZmFsc2V9KVxuICAgICAgXVxuICAgIH0pXG4gIH0gZWxzZSB7XG4gICAgcmV0dXJuIFBsb3QucGxvdCh7XG4gICAgICBoZWlnaHQ6IDIwMCxcbiAgICB3aWR0aDogNDAwLFxuICAgIHk6IHtsYWJlbDogXCJcIiwgdGlja3M6IDB9LFxuICAgICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5ydWxlWShbMF0pLFxuICAgICAgICBQbG90LnJlY3RZKGVzdGltYXRlcywgUGxvdC5iaW5YKHt5OiBcImNvdW50XCJ9LCB7eDogXCIwXCIsIHRocmVzaG9sZHM6ICdzY290dCd9KSksXG4gICAgICAgIFBsb3QucnVsZVgoY2ksIHtzdHJva2U6ICdyZWQnLCBzdHJva2VXaWR0aDogM30pLFxuICAgICAgICBQbG90LmFyZWFZKFtbY2lbMF0sIDFdLCBbY2lbMV0sIDFdXSwge3g6IFwiMFwiLCB5OiBcIjFcIiwgZmlsbDogXCJyZWRcIiwgZmlsbE9wYWNpdHk6IDAuMDV9KSxcbiAgICAgICAgLy9QbG90LnJ1bGVYKFtlc3RpbWF0ZV0sIHtzdHJva2U6ICdibHVlJywgc3Ryb2tlV2lkdGg6IDN9KSxcbiAgICAgICAgUGxvdC50aXAoW1wiRXN0aW1hdGVkIHN0YXRpc3RpYyBkaXN0cmlidXRpb25cIl0sIHtmcmFtZUFuY2hvcjogXCJ0b3AtcmlnaHRcIiwgc3Ryb2tlV2lkdGg6IDAsIGZvbnRXZWlnaHQ6ICdib2xkJywgZm9udFNpemU6IDEyLCBwYXRoRmlsdGVyOiBmYWxzZX0pXG4gICAgICBdXG4gICAgfSlcbiAgfVxufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdzYW1wbGUnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnc3RhdGlzdGljJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3BlcmNlbnRpbGUnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncmVzYW1wbGVUb2dnbGUnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnc3RlcCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdyZXNldCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdyZXBlYXRzJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3JlcGxheScpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdzdGVwMicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdyZXNldDInKSJ9XX0=
     </script>
     <script type="module">
     if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }

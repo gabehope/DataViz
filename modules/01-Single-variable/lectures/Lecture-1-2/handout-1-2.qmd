@@ -1,0 +1,52 @@
+---
+format: 
+    pdf:
+        include-in-header: 
+            text: '\pagenumbering{gobble}'
+---
+
+
+# Name:
+
+*Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
+
+# Data Analytics and Visualization: Week 4 - Simulation based inference
+
+## In-class questions
+
+#### Can you think of contexts where you would use Bootstrapping?
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  Why might classic techniques be preferred in some cases?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+## Reflection (*complete at the end of class*)
+
+#### How was the pace/difficulty of this material?
+
+|
+|
+|
+|
+|
+|
+|
+|

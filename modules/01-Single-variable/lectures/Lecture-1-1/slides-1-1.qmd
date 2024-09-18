@@ -114,7 +114,7 @@ weights = resample(population, sample);
 Plot.plot({
   height: 200,
   width: 1000,
-  x: {label: "Wind speed (km/h)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
   marks: [
     Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'black'})),
     Plot.tip(["The dataset we've collected"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
@@ -204,7 +204,7 @@ estimate = computeStat(weights)
 Plot.plot({
   height: 200,
   width: 1000,
-  x: {label: "Wind speed (km/h)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
   marks: [
     Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'black'})),
     Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),
@@ -255,7 +255,7 @@ Our sample statistic is a **point estimate** of the population parameter.
 Plot.plot({
   height: 200,
   width: 1000,
-  x: {label: "Wind speed (km/h)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
   marks: [
     Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'black'})),
     Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),
@@ -278,7 +278,7 @@ A **95% confidence interval** for a statistic is a range computed from a sample 
 Plot.plot({
   height: 200,
   width: 1000,
-  x: {label: "Wind speed (km/h)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
   marks: [
     Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'black'})),
     Plot.ruleX([1.5, 8.3], {stroke: 'red', strokeWidth: 2}),
@@ -363,6 +363,18 @@ $$\theta_{u} = \bar{x} + q_{97.5} \frac{s}{\sqrt{N}}$$
 - Requires possibly unrealistic assumptions about population
 - Requires complex new derivation for every new statistic
 - This derivation might be unknown/impossible!
+
+
+## Classic (parametric) approach
+
+### Model-based inference
+**Assumptions we make**
+
+- Observations in our sample are i.i.d.
+- Our sample is *representative* of the population
+- We know the form of the population distribution.
+- We can analytically derive a confidence interval for our statistic
+
 
 ## So, what if we **don't know** the distribution of our data?
 
@@ -449,7 +461,7 @@ Plot.plot({
   color: {
     scheme: "Reds"
   },
-  x: {label: "Wind speed (km/h)",domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  x: {label: "Wind speed (m/s)",domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
   marks: [
     Plot.dot(popresampled, Plot.dodgeY({x: "0"})),
     Plot.ruleX(popestimates[popestimates.length - 1], {stroke: 'blue', strokeWidth: 2}),
@@ -468,10 +480,12 @@ This would show us the **distribution of our statistic**.
       color: {
         scheme: "Reds"
       },
-      x: {label: "Wind speed (km/h)"},
+      x: {label: "Wind speed (m/s)"},
+      y: {label: "", ticks: 0},
       marks: [
         Plot.dot(popestimates, Plot.dodgeY({x: "0"})),
         Plot.ruleX(popci, {stroke: 'red'}),
+        Plot.areaY([[popci[0], 1], [popci[1], 1]], {x: "0", y: "1", fill: "red", fillOpacity: 0.05}),
         Plot.ruleX(parameter, {stroke: 'blue', strokeWidth: 3}),
     Plot.tip(["Distribution of statistic"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
       ]
@@ -480,11 +494,13 @@ This would show us the **distribution of our statistic**.
     return Plot.plot({
       height: 200,
       width: 1000,
-      x: {label: "Wind speed (km/h)"},
+      x: {label: "Wind speed (m/s)"},
+      y: {label: "", ticks: 0},
       marks: [
         Plot.ruleY([0]),
         Plot.rectY(popestimates, Plot.binX({y: "count"}, {x: "0", thresholds: 'scott'})),
-        Plot.ruleX(popci, {stroke: 'red'}),
+        Plot.ruleX(popci, {stroke: 'red', strokeWidth: 3}),
+        Plot.areaY([[popci[0], 1], [popci[1], 1]], {x: "0", y: "1", fill: "red", fillOpacity: 0.05}),
         Plot.ruleX([parameter], {stroke: 'blue', strokeWidth: 3}),
     Plot.tip(["Distribution of statistic"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
       ]
@@ -492,6 +508,105 @@ This would show us the **distribution of our statistic**.
   }
 }
 ```
+
+## Simulation CI: a **simple** approach
+
+Computing a 95% confidence interval with resampling is simple! 
+
+- Just take the 2.5% percentile and 97.5% percentile of our bootstrapped statistics.
+
+::::: columns
+::: {.column style="width: 50%; font-size: 50%;"}
+```{python}
+#| echo: true
+#| eval: false
+
+def simple_simulation_ci(data, statistic_fun, nsamples, confidence=0.95):
+    # Distribution of statistic estimates
+    estimates = simulate_samples(data, statistic_fun, nsamples)
+    margin = (1 - confidence) / 2
+    lower = estimates[ceil(nsamples * margin)]
+    upper = estimates[ceil(nsamples * (1 - margin))] 
+    return lower, upper
+
+```
+
+Here we sort the data and take indices $0.025N$ and $0.975N$
+
+![](pictures/autos.png){fig-align="left" width="500"}
+:::
+::: {.column style="width: 50%; font-size: 50%;"}
+```{ojs}
+{
+  popresampled
+  if (popestimates.length < 500) {
+    return Plot.plot({
+      height: 200,
+      width: 1000,
+      color: {
+        scheme: "Reds"
+      },
+      x: {label: "Wind speed (m/s)"},
+      y: {label: "", ticks: 0},
+      marks: [
+        Plot.dot(popestimates, Plot.dodgeY({x: "0"})),
+        Plot.ruleX(popci, {stroke: 'red'}),
+        Plot.areaY([[popci[0], 1], [popci[1], 1]], {x: "0", y: "1", fill: "red", fillOpacity: 0.05}),
+        Plot.ruleX(parameter, {stroke: 'blue', strokeWidth: 3}),
+    Plot.tip(["Distribution of statistic"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+      ]
+    })
+  } else {
+    return Plot.plot({
+      height: 200,
+      width: 1000,
+      x: {label: "Wind speed (m/s)"},
+      y: {label: "", ticks: 0},
+      marks: [
+        Plot.ruleY([0]),
+        Plot.rectY(popestimates, Plot.binX({y: "count"}, {x: "0", thresholds: 'scott'})),
+        Plot.ruleX(popci, {stroke: 'red', strokeWidth: 3}),
+        Plot.areaY([[popci[0], 1], [popci[1], 1]], {x: "0", y: "1", fill: "red", fillOpacity: 0.05}),
+        Plot.ruleX([parameter], {stroke: 'blue', strokeWidth: 3}),
+    Plot.tip(["Distribution of statistic"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+      ]
+    })
+  }
+}
+```
+
+Example resampled percentiles
+![](pictures/bs-ci.png){fig-align="left" width="500"}
+::: 
+:::::
+
+## Point vs. uncertainty estimates grid
+
+::::: columns
+::: {.column style="width: 50%; font-size: 75%;"}
+#### Model-based inference
+
+**Point-estimate**
+
+- Calculate value from observed sample
+
+**Uncertainty-estimate**
+
+- Derive a model of our statistic's distribution
+:::
+::: {.column style="width: 50%; font-size: 75%;"}
+#### Simulation-based inference
+
+**Point-estimate**
+
+- Calculate value from observed sample
+
+**Uncertainty-estimate**
+
+- Resample the data many times
+
+:::
+:::::
 
 ## Sampling our statistic many times
 
@@ -505,7 +620,7 @@ So we're stuck with the sample (and estimate) we have...
 Plot.plot({
   height: 200,
   width: 1000,
-  x: {label: "Wind speed (km/h)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
   marks: [
     Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'black'})),
     Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),
@@ -519,7 +634,63 @@ Plot.plot({
 
 This is the idea behind **bootstrapping**. Rather than collecting new samples, we'll *resample* our existing data.
 
+## What if we can **fake** new samples from the population?
 
+This is the idea behind **bootstrapping**. Rather than collecting new samples, we'll *resample* our existing data.
+
+### We'll use the **empirical** distribution of our data
+
+- Sample: $\{x_1,...,x_N\}$
+- New (bootstrapped) sample: $\{\hat{x}_1,...,\hat{x}_N\} \sim \hat{p}(x)$
+
+Empirical distribution
+$$\hat{p}(x) = \frac{1}{N} \sum_{i=1}^{N} I(x=x_i)$$
+
+## One way to frame this
+
+Rather than using our sample statistic to estimate our population parameter, *we'll use our sample to estimate our population*.
+
+::: {style="font-size: 80%"}
+- Assume our much larger population follows the same distribution as our sample.
+- Our estimated population is the limit as we repeat each observation in our sample *infinitely* many times.
+:::
+
+
+
+::::: columns
+::: {.column style="width: 50%; font-size: 50%"}
+Population
+```{ojs}
+Plot.plot({
+  height: 300,
+  width: 1000,
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(population.arraySync(), Plot.dodgeY({x: "0", r:1})),
+  ]
+})
+```
+
+:::
+::: {.column style="width: 50%; font-size: 50%"}
+Population **estimate**
+```{ojs}
+Plot.plot({
+  height: 300,
+  width: 1000,
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(tf.tidy(() => tf.tile(weights, [repeats, 1]).arraySync()), Plot.dodgeY({x: "0", r: 5 / Math.sqrt(repeats)})),
+  ]
+})
+```
+
+```{ojs}
+viewof repeats = Inputs.range([1, 20], {label: "Repeats", value: 1, step: 1})
+```
+:::
+:::::
+Then we can do the sampling process we just described with our *estimated* population!
 
 ## Bootstrapping
 
@@ -538,15 +709,57 @@ def bootstrap_sample(data):
 
 ```
 
+::::: columns
+::: {.column style="width: 50%; font-size: 50%"}
+Original sample
+```{ojs}
+Plot.plot({
+  height: 180,
+  width: 500,
+  color: {
+    scheme: "Reds",
+    legend: true,
+    label: "Occurences in bootstrap sample",
+    domain: [0, 5]
+  },
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(resampled, Plot.dodgeY({x: "1", fill: "2", stroke: 'black'})),
+  ]
+})
+```
+:::
+::: {.column style="width: 50%; font-size: 50%"}
+Bootstrap sample
+```{ojs}
+Plot.plot({
+  height: 225,
+  width: 500,
+  color: {
+    scheme: "Reds"
+  },
+  x: {label: "Wind speed (m/s)",domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(resampled, Plot.dodgeY({x: "0"})),
+  ]
+})
+```
+:::
+:::::
+::: {style="font-size: 80%"}
+Equivalent to sampling from our infinite population estimate!
+:::
 
 ## Bootstrapping
 
-This means that:
-
+::: {style="font-size: 80%"}
 - Every observation is added  with probability $\frac{1}{N}$
 - The same observation can be added multiple times!
 
 We can use these bootstrap samples to estimate the distribution of our statistic!
+:::
+
+
 
 ```{python}
 #| echo: true
@@ -562,6 +775,44 @@ def bootstrap_distribution(data, statistic_fun, nsamples):
 
 ```
 
+::::: columns
+::: {.column style="width: 50%; font-size: 50%"}
+Original sample
+```{ojs}
+Plot.plot({
+  height: 180,
+  width: 500,
+  color: {
+    scheme: "Reds",
+    legend: true,
+    label: "Occurences in bootstrap sample",
+    domain: [0, 5]
+  },
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(resampled, Plot.dodgeY({x: "1", fill: "2", stroke: 'black'})),
+  ]
+})
+```
+:::
+::: {.column style="width: 50%; font-size: 50%"}
+Bootstrap sample
+```{ojs}
+Plot.plot({
+  height: 225,
+  width: 500,
+  color: {
+    scheme: "Reds"
+  },
+  x: {label: "Wind speed (m/s)",domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(resampled, Plot.dodgeY({x: "0"})),
+  ]
+})
+```
+:::
+:::::
+
 ## What does this look like?
 
 ::::: columns
@@ -570,7 +821,13 @@ Statistic: `{ojs} statistic`
 :::
 ::: {.column style="width: 25%; font-size: 50%;"}
 ```{ojs}
-viewof resampleToggle2 = Inputs.range();
+viewof replay = Inputs.button("Play");
+resampleToggle2 = {
+  let count = replay > 0 ? 100 : 0;
+  for (let i = 0; i < count; ++i) {
+    yield i;
+  }
+};
 
 ```
 :::
@@ -592,6 +849,7 @@ viewof reset2 = Inputs.button("Reset")
 estimates = {
   statistic
   reset2
+  step2
   percentile
   return [];
 }
@@ -599,7 +857,7 @@ estimates = {
 ci = {
   resampled
   let flat_estimates = estimates.flat();
-  return [[quantile(flat_estimates, 0.05)], [quantile(flat_estimates, 0.95)]];
+  return [[quantile(flat_estimates, 0.025)], [quantile(flat_estimates, 0.975)]];
 }
 
 resampled = {
@@ -621,10 +879,9 @@ Plot.plot({
     label: "Occurences in bootstrap sample",
     domain: [0, 5]
   },
-  x: {label: "Wind speed (km/h)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
   marks: [
     Plot.dot(resampled, Plot.dodgeY({x: "1", fill: "2", stroke: 'black'})),
-    Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),
     Plot.tip(["Original sample"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
   ]
 })
@@ -637,7 +894,7 @@ Plot.plot({
   color: {
     scheme: "Reds"
   },
-  x: {label: "Wind speed (km/h)",domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  x: {label: "Wind speed (m/s)",domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
   marks: [
     Plot.dot(resampled, Plot.dodgeY({x: "0"})),
     Plot.ruleX(estimates[estimates.length - 1], {stroke: 'blue', strokeWidth: 2}),
@@ -656,11 +913,13 @@ Plot.plot({
       stroke: {
         legend: true,
       },
-      x: {label: "Wind speed (km/h)"},
+      x: {label: "Wind speed (m/s)"},
+      y: {label: "", ticks: 0},
       marks: [
-        Plot.dot(estimates, Plot.dodgeY({x: "0"})),
+        Plot.dot(estimates, Plot.dodgeY({x: "0", stroke: "blue"})),
         Plot.ruleX(ci, {stroke: 'red'}),
-        Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),
+        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: "0", y: "1", fill: "red", fillOpacity: 0.05}),
+        //Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),
         Plot.tip(["Estimated statistic distribution"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
       ]
     })
@@ -668,11 +927,13 @@ Plot.plot({
     return Plot.plot({
       height: 200,
     width: 1000,
+    y: {label: "", ticks: 0},
       marks: [
         Plot.ruleY([0]),
-        Plot.rectY(estimates, Plot.binX({y: "count"}, {x: "0", thresholds: 'scott'})),
-        Plot.ruleX(ci, {stroke: 'red'}),
-        Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),
+        Plot.rectY(estimates, Plot.binX({y: "count"}, {x: "0", thresholds: 'scott', fill: "blue"})),
+        Plot.ruleX(ci, {stroke: 'red', strokeWidth: 3}),
+        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: "0", y: "1", fill: "red", fillOpacity: 0.05}),
+        //Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),
         Plot.tip(["Estimated statistic distribution"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
       ]
     })
@@ -684,7 +945,7 @@ Plot.plot({
 
 Computing a 95% confidence interval with bootstrapping is simple! 
 
-- Just take the 2.5% percentile and 97.5% percentile of our bootstraped samples.
+- Just take the 2.5% percentile and 97.5% percentile of our bootstrapped statistics.
 
 ::::: columns
 ::: {.column style="width: 50%; font-size: 50%;"}
@@ -717,11 +978,13 @@ Here we sort the data and take indices $0.025N$ and $0.975N$
       stroke: {
         legend: true,
       },
-      x: {label: "Wind speed (km/h)"},
+      x: {label: "Wind speed (m/s)"},
+      y: {label: "", ticks: 0},
       marks: [
         Plot.dot(estimates, Plot.dodgeY({x: "0"})),
         Plot.ruleX(ci, {stroke: 'red'}),
-        Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),
+        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: "0", y: "1", fill: "red", fillOpacity: 0.05}),
+        //Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),
         Plot.tip(["Estimated statistic distribution"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
       ]
     })
@@ -729,11 +992,13 @@ Here we sort the data and take indices $0.025N$ and $0.975N$
     return Plot.plot({
       height: 200,
     width: 400,
+    y: {label: "", ticks: 0},
       marks: [
         Plot.ruleY([0]),
         Plot.rectY(estimates, Plot.binX({y: "count"}, {x: "0", thresholds: 'scott'})),
-        Plot.ruleX(ci, {stroke: 'red'}),
-        Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),
+        Plot.ruleX(ci, {stroke: 'red', strokeWidth: 3}),
+        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: "0", y: "1", fill: "red", fillOpacity: 0.05}),
+        //Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),
         Plot.tip(["Estimated statistic distribution"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
       ]
     })
@@ -766,30 +1031,6 @@ Complicated theory beyond the scope of this class!
 - Leverages the fact that full sample provides more information about the population than a single statistic
 
 
-## Point vs. uncertainty estimates grid
 
-::::: columns
-::: {.column style="width: 50%; font-size: 75%;"}
-#### Model-based inference
 
-**Point-estimate**
 
-- Calculate value from observed sample
-
-**Uncertainty-estimate**
-
-- Derive a model of our statistic's distribution
-:::
-::: {.column style="width: 50%; font-size: 75%;"}
-#### Simulation-based inference
-
-**Point-estimate**
-
-- Calculate value from observed sample
-
-**Uncertainty-estimate**
-
-- Resample the data many times
-
-:::
-:::::

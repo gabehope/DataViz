@@ -1,0 +1,909 @@
+---
+title: "Data Analytics and Visualization"
+subtitle: "1-2: Parametric Bootstrapping and Maximum Likelihood"
+author: "Prof. Gabe Hope"
+format: 
+    revealjs:
+        theme: ["../../../../theme.scss"]
+        html-math-method: katex
+---
+
+# **Continued:** Statistics for computer scientists
+
+## Wind vectors
+
+::::: columns
+::: {.column style="width: 50%"}
+
+```{ojs}
+tf = require('@tensorflow/tfjs@4.11.0')
+d3Fetch = require("d3-fetch@1.1.2")
+tquantile = import('https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-t-quantile@esm/index.mjs')
+
+wind = FileAttachment("data/wind.csv").csv({typed: true})
+land = topojson.feature(europe, europe.objects.europe)
+europe = d3Fetch.json("https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson")
+circle = d3.geoCircle().center([0, 52]).radius(5.5).precision(2)()
+
+Plot.plot({
+  width: 500,
+  height: 500,
+  inset:  10,
+  aspectRatio: 1,
+  color: {
+    label: "Speed (m/s)",
+    zero: true,
+    legend: true
+  },
+  projection: {
+    type: "azimuthal-equal-area",
+    //rotate: [-9, -34],
+    domain: circle,
+    inset: 10
+  },
+  marks: [
+    Plot.graticule(),
+    Plot.geo(land, {fill: "currentColor", stroke: 'black', fill: 'white'}),
+    Plot.vector(wind, {
+      x: "longitude",
+      y: "latitude",
+      rotate: ({u, v}) => Math.atan2(u, v) * 180 / Math.PI,
+      length: ({u, v}) => Math.hypot(u, v),
+      stroke: ({u, v}) => Math.hypot(u, v)
+    }),    
+  ]
+})
+```
+:::
+::: {.column style="width: 50%; font-size: 75%"}
+
+We'll focus on just the `speed` variable.
+```{ojs}
+
+data2 = d3Fetch.csv("https://raw.githubusercontent.com/vega/vega-datasets/master/data/windvectors.csv");
+windpopulation = tf.tensor(data2.map(d => parseFloat(d['speed']))).reshape([-1, 1]);
+
+
+Plot.plot({
+  height: 500,
+  width: 500,
+  x: {label: "Wind speed (m/s)", domain: tf.tidy(() => {return [windpopulation.min().arraySync(), windpopulation.max().arraySync()]})},
+  marks: [
+    Plot.dot(windpopulation.arraySync(), Plot.dodgeY({x: "0", r:1.5, fill: '0'})),
+  ]
+})
+```
+:::
+:::::
+
+## IMDB Ratings
+
+User ratings for movies on IMDB.
+```{ojs}
+
+//data2 = d3Fetch.csv("https://raw.githubusercontent.com/vega/vega-datasets/master/data/windvectors.csv");
+//population = tf.tensor(data2.map(d => parseFloat(d['speed']))).reshape([-1, 1]);
+
+imdb = d3Fetch.json("https://raw.githubusercontent.com/vega/vega-datasets/master/data/movies.json");
+imdbpopulation = tf.tensor(imdb.map(d => parseFloat(d['IMDB Rating'])).filter((d) => d == d)).reshape([-1, 1]);
+
+Plot.plot({
+  height: 500,
+  width: 1000,
+  x: {label: "IMDB Rating", domain: tf.tidy(() => {return [imdbpopulation.min().arraySync(), imdbpopulation.max().arraySync()]})},
+  marks: [
+    Plot.dot(imdb, Plot.dodgeY({x: "IMDB Rating", r:1.5, tip: true, title: "Title"})),
+  ]
+})
+```
+
+
+## Samples and populations
+
+::: {style="font-size: 50%"}
+```{ojs}
+viewof dataset = Inputs.select(["wind speed", "IMDB rating"], {label: "Dataset"});
+population = (dataset == "wind speed") ? windpopulation : imdbpopulation; 
+```
+:::
+
+Typically, datasets we collect do not contain the entire universe. They are a **sample** from a much larger **population**.
+
+```{ojs}
+Plot.plot({
+  height: 250,
+  width: 1000,
+  x: {label: dataset, domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(population.arraySync(), Plot.dodgeY({x: "0", r:1})),
+    Plot.tip(["All possible " + dataset + "s"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+
+```{ojs}
+viewof sample = Inputs.range([1, 1000], {label: "Sample", value: 200, step: 1})
+resample = function(x, size) {
+  return tf.tidy(() => {
+    
+    let inds;
+    let counts;
+    if (size) {
+      inds = tf.randomUniformInt([size], 0, x.shape[0]);
+      return x.gather(inds).reshape([-1, 1]);
+    } else {
+      inds = tf.randomUniformInt([x.shape[0]], 0, x.shape[0]);
+      counts = tf.bincount(inds, [], x.shape[0]).reshape(x.shape);
+      return tf.concat([x.gather(inds), x, counts], 1);
+    }
+  });
+}
+
+weights = resample(population, sample);
+Plot.plot({
+  height: 180,
+  width: 1000,
+  x: {label: dataset, domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'black'})),
+    Plot.tip(["The dataset we've collected"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+
+## Statistics and parameters
+
+We can compute a **statistic** of interest using our sample.
+
+::::: columns
+::: {.column style="width: 50%; font-size: 50%;"}
+```{ojs}
+viewof statistic = Inputs.select(["Mean", "Median", "Percentile", "Variance", "StdDev"], {label: "Statistic"});
+```
+:::
+::: {.column style="width: 50%; font-size: 50%;"}
+```{ojs}
+viewof percentile =  Inputs.range([0, 100], {label: (statistic == "Percentile") ? "Percentile" : "", step: 1});
+```
+:::
+:::::
+
+```{ojs}
+
+quantile = {
+  const asc = arr => arr.sort((a, b) => a - b);
+  const sum = arr => arr.reduce((a, b) => a + b, 0);
+  const mean = arr => sum(arr) / arr.length;
+  
+  // sample standard deviation
+  const std = (arr) => {
+      const mu = mean(arr);
+      const diffArr = arr.map(a => (a - mu) ** 2);
+      return Math.sqrt(sum(diffArr) / (arr.length - 1));
+  };
+  
+  const quantile = (arr, q) => {
+      const sorted = asc(arr);
+      const pos = (sorted.length - 1) * q;
+      const base = Math.floor(pos);
+      const rest = pos - base;
+      if (sorted[base + 1] !== undefined) {
+          return sorted[base] + rest * (sorted[base + 1] - sorted[base]);
+      } else {
+          return sorted[base];
+      }
+  };
+  return quantile;
+}
+
+stdJS = {
+  const asc = arr => arr.sort((a, b) => a - b);
+  const sum = arr => arr.reduce((a, b) => a + b, 0);
+  const mean = arr => sum(arr) / arr.length;
+  
+  // sample standard deviation
+  const std = (arr) => {
+      const mu = mean(arr);
+      const diffArr = arr.map(a => (a - mu) ** 2);
+      return Math.sqrt(sum(diffArr) / (arr.length - 1));
+  };
+
+  return std;
+}
+
+computeStat = (x) => {
+  let est = tf.tidy(() => {
+    let values = x.slice([0, 0], [-1, 1]).reshape([-1]);
+    if (statistic == 'Mean') {
+      return values.mean().arraySync();
+    } else if (statistic == 'Median') {
+      return quantile(values.arraySync(), 0.5);
+    } else if (statistic == 'Percentile') {
+      return quantile(values.arraySync(), percentile / 100);
+    } else if (statistic == 'Variance') {
+      return Math.pow(std(values.arraySync()), 2);
+    } else if (statistic == 'StdDev') {
+      return stdJS(values.arraySync());
+    }
+  });
+  return est;
+}
+
+normalPlot = function(loc, scale){
+  return tf.tidy(()=> {
+    let x = tf.linspace(loc - 4 * scale, loc + 4 * scale, 1000);
+    let normalizer = 1 / (scale * Math.sqrt(2 * Math.PI));
+    let px = x.sub(loc).div(scale).square().mul(-0.5).exp().mul(normalizer);
+    return tf.stack([x, px]).transpose().arraySync();
+  });
+}
+
+mean = (x) => {return tf.mean(x).arraySync()};
+std = function(x) {
+  let m = mean(x);
+  return x.sub(m).square().sum().div(x.shape[0] - 1).sqrt().arraySync();
+};
+
+N = weights.shape[0];
+sampleMean = mean(weights);
+sampleStd = std(weights);
+sampleDomain = [sampleMean - 4 * sampleStd, sampleMean + 4 * sampleStd];
+tci = tquantile.default(0.025, N - 1) * sampleStd / Math.sqrt(N)
+meanCI = [[sampleMean - tci, "Model-based CI"], [sampleMean + tci, "Model-based CI"]];
+meanCIPlot = statistic == "Mean" ? [Plot.ruleX(meanCI, {stroke: 'green', fontWeight: 'bold', x: "0"}), Plot.tip(meanCI, Plot.pointerX({x: "0", title: "1"}))] : [];
+
+estimate = computeStat(weights)
+Plot.plot({
+  height: 200,
+  width: 1000,
+  x: {label: dataset, domain: tf.tidy(() => {return [population.min().arraySync(), population.max().arraySync()]})},
+  marks: [
+    Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'black'})),
+    Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),
+    Plot.tip(["Sample statistic"], {x: estimate, dy: -50, anchor: "left", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+
+*Here our **`{ojs} statistic`** `{ojs} dataset` is `{ojs} estimate.toFixed(2)`*
+
+# Parametric Bootstrapping
+
+## Refresher: Bootstrapping
+
+::::: columns
+::: {.column style="width: 50%; font-size: 75%;"}
+### Model-based inference
+
+**Assumptions we make**
+
+- Observations in our sample are i.i.d.
+- Our sample is *representative* of the population
+- We know the form of the population distribution.
+- We are able to analytically derive a confidence interval for our statistic 
+  - *e.g. using the central limit theorem*
+:::
+::: {.column style="width: 50%; font-size: 75%;"}
+### *Non-parametric* bootstrapping
+
+**Assumptions we make**
+
+- Observations in our sample are i.i.d.
+- Our sample is **very** *representative* of the population
+
+**Assumptions we *do not* make**
+
+- We know the form of the population distribution.
+- We are able to analytically derive a confidence interval for our statistic 
+
+:::
+:::::
+
+## So far: **non-parametric bootstrapping**
+
+Technically what we've seen so far is the **non-parametric** bootstrap.
+
+::: {style="font-size: 75%;"}
+- We didn't make any assumptions about our population distribution
+:::
+
+::::: columns
+::: {.column style="width: 50%; font-size: 75%;"}
+![](pictures/ok_estimate.png){fig-align="left" width="500"}
+
+This can be great if we have a large enough sample to represent our population.
+:::
+::: {.column style="width: 50%; font-size: 75%;"}
+![](pictures/bad_estimate.png){fig-align="left" width="500"}
+
+But can break down if we have too few samples!
+:::
+:::::
+
+Assumptions can be helpful when we have little information!
+
+## Parametric Bootstrapping
+
+::::: columns
+::: {.column style="width: 50%; font-size: 75%;"}
+*Let's go from this...*
+
+### Assumptions we make
+
+- Observations in our sample are i.i.d.
+- Our sample is **very** *representative* of the population
+
+### Assumptions we *do not* make
+
+- **We know the form of the population distribution.**
+- We are able to analytically derive a confidence interval for our statistic 
+:::
+::: {.column style="width: 50%; font-size: 75%;"}
+*To this:*
+
+### Assumptions we make
+
+- Observations in our sample are i.i.d.
+- Our sample is *representative* of the population
+- **We know the form of the population distribution.**
+
+### Assumptions we *do not* make
+- We are able to analytically derive a confidence interval for our statistic 
+
+:::
+:::::
+
+
+
+## Parametric Bootstrapping: In context
+
+::::: columns
+::: {.column style="width: 30%; font-size: 50%;"}
+### Model-based inference
+
+**Assumptions we make**
+
+- Observations in our sample are i.i.d.
+- Our sample is *representative* of the population
+- We know the form of the population distribution.
+- We are able to analytically derive a confidence interval for our statistic 
+  - *e.g. using the central limit theorem*
+:::
+::: {.column style="width: 5%; font-size: 50%;"}
+:::
+::: {.column style="width: 30%; font-size: 50%;"}
+### *Non-parametric* bootstrapping
+
+**Assumptions we make**
+
+- Observations in our sample are i.i.d.
+- Our sample is **very** *representative* of the population
+
+**Assumptions we *do not* make**
+
+- We know the form of the population distribution.
+- We are able to analytically derive a confidence interval for our statistic 
+
+:::
+::: {.column style="width: 5%; font-size: 50%;"}
+:::
+::: {.column style="width: 30%; font-size: 50%;"}
+### *Parametric* bootstrapping
+
+**Assumptions we make**
+
+- Observations in our sample are i.i.d.
+- Our sample is *representative* of the population
+- *We know the form of the population distribution.*
+
+**Assumptions we *do not* make**
+
+- We are able to analytically derive a confidence interval for our statistic 
+
+:::
+:::::
+
+## Parametric bootstrapping 
+
+::::: columns
+::: {.column style="width: 50%; font-size: 60%"}
+```{ojs}
+Plot.plot({
+  height: 200,
+  width: 500,
+  x: {label: dataset, domain: sampleDomain},
+  marks: [
+    Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'lightgrey'})),
+    Plot.lineY(normalPlot(sampleMean, sampleStd), {x: "0", y: "1", stroke: 'firebrick'}),
+    Plot.tip(["Parametric bootstap"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 16, pathFilter: false, dy: -15}),
+  ]
+})
+```
+### Setup
+
+**Assume** the population has a certain distribution (*e.g. normal*)
+
+- **Estimate** the parameters of this distribution from our sample
+
+### Bootstrap
+
+Resample from this model many times
+
+- Repeat bootstrap estimation as before!
+
+
+
+:::
+::: {.column style="width: 50%; font-size: 60%"}
+### Example: Normal distribution
+
+Assume normal population distribution:
+$$p(x) = \mathcal{N}(x; \mu, \sigma)$$
+
+Estimate with sample: 
+
+$$\mu^*=\bar{x},\ \sigma^*=s$$
+Resample from our estimated distribution:
+$$\{\hat{x}_1,...,\hat{x}_N\} \sim \mathcal{N}(x; \bar{x},s)$$
+
+In code:
+```{python}
+#| echo: true
+#| eval: false
+
+def normal_bootstrap_sample(data):
+    N = data.shape[0]                   # Number of obsevations
+    m,  = data.mean(), data.std()       # Estimated parameters           
+    inds = np.random.normal(m, s, (N,)) # Resample {1,...,N}
+    return data[inds]                   # Return the new sample
+
+```
+
+:::
+:::::
+
+
+## Parametric vs. Non-Parametric
+
+::::: columns
+::: {.column style="width: 25%; font-size: 50%;"}
+Statistic: `{ojs} statistic`, BS Samples: `{ojs} nsamples`
+:::
+::: {.column style="width: 25%; font-size: 50%;"}
+```{ojs}
+viewof replay = Inputs.button("Play");
+resampleToggle2 = {
+  let count = replay > 0 ? 100 : 0;
+  for (let i = 0; i < count; ++i) {
+    yield i;
+  }
+};
+
+```
+:::
+::: {.column style="width: 25%; font-size: 50%;"}
+```{ojs}
+viewof step2 = Inputs.button("Resample once")
+
+```
+:::
+::: {.column style="width: 25%; font-size: 50%;"}
+```{ojs}
+viewof reset2 = Inputs.button("Reset")
+
+```
+:::
+:::::
+
+::::: columns
+::: {.column style="width: 50%; font-size: 80%"}
+
+```{ojs}
+
+
+pestimates = {
+  statistic
+  reset2
+
+  percentile
+  sample
+  return [];
+}
+
+nsamples = {
+  resampled;
+  return estimates.length;
+}
+
+pci = {
+  presampled
+  let flat_estimates = pestimates.flat();
+  return [[quantile(flat_estimates, 0.025)], [quantile(flat_estimates, 0.975)]];
+}
+
+presampled = {
+  resampleToggle2
+    step2
+  let x = tf.randomNormal(weights.shape, sampleMean, sampleStd);
+  let est = computeStat(x);
+  pestimates.push([est]);
+  let output = x.arraySync();
+  x.dispose()
+  return output;
+}
+
+Plot.plot({
+  height: 200,
+  width: 500,
+  x: {label: dataset, domain: sampleDomain},
+  marks: [
+    Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'lightgrey'})),
+    Plot.lineY(normalPlot(sampleMean, sampleStd), {x: "0", y: "1", stroke: 'firebrick'}),
+    Plot.tip(["Parametric bootstap"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 16, pathFilter: false, dy: -15}),
+  ]
+})
+```
+
+```{ojs}
+Plot.plot({
+  height: 180,
+  width: 500,
+  color: {
+    scheme: "Reds"
+  },
+  x: {label: dataset,domain: sampleDomain},
+  y: {domain: [0, 1], ticks: 0},
+  marks: [
+    Plot.dot(presampled, Plot.dodgeY({x: "0"})),
+    Plot.ruleX(pestimates[pestimates.length - 1], {stroke: 'blue', strokeWidth: 2}),
+    Plot.tip(["Bootstrap sample"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+
+```{ojs}
+{
+  presampled
+  if (pestimates.length < 500) {
+    return Plot.plot({
+      height: 180,
+      width: 500,
+      stroke: {
+        legend: true,
+      },
+      x: {label: dataset, domain: statdomain},
+      y: {label: "", ticks: 0},
+      marks: [
+        Plot.dot(pestimates, Plot.dodgeY({x: "0", stroke: "blue"})),
+        Plot.ruleX(pci, {stroke: 'red'}),
+        Plot.areaY([[pci[0], 1], [pci[1], 1]], {x: "0", y: "1", fill: "red", fillOpacity: 0.05}),
+        //Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),
+        Plot.tip(["Estimated statistic distribution"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false}), 
+        Plot.tip([[pci[0], 1], [pci[1], 1]], Plot.pointerX({x: "0", title: "Boostrap CI"}))
+      ].concat(meanCIPlot)
+    })
+  } else {
+    return Plot.plot({
+      height: 200,
+    width: 500,
+    x: {label: dataset, domain: statdomain},
+    y: {label: "", ticks: 0},
+      marks: [
+        Plot.ruleY([0]),
+        Plot.rectY(pestimates, Plot.binX({y: "count"}, {x: "0", thresholds: 'scott', fill: "blue"})),
+        Plot.ruleX(pci, {stroke: 'red', strokeWidth: 3}),
+        Plot.areaY([[pci[0], 1], [pci[1], 1]], {x: "0", y: "1", fill: "red", fillOpacity: 0.05}),
+        //Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),
+        Plot.tip(["Estimated statistic distribution"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false}), 
+        Plot.tip([[pci[0], 1], [pci[1], 1]], Plot.pointerX({x: "0", title: "Boostrap CI"}))
+      ].concat(meanCIPlot)
+    })
+  }
+}
+```
+:::
+::: {.column style="width: 50%; font-size: 80%"}
+```{ojs}
+estimates = {
+  statistic
+  reset2
+  sample
+  percentile
+  return [];
+}
+
+statdomain = {
+  resampled
+  let estd = [Math.min(...(estimates.map((d) => {return d[0]}))), Math.max(...(estimates.map((d) => {return  d[0]})))];
+  let pestd = [Math.min(...(pestimates.map((d) => {return d[0]}))), Math.max(...(pestimates.map((d) => {return  d[0]})))]
+  return [Math.min(estd[0], pestd[0]), Math.max(estd[1], pestd[1])];
+}
+
+ci = {
+  resampled
+  let flat_estimates = estimates.flat();
+  return [[quantile(flat_estimates, 0.025)], [quantile(flat_estimates, 0.975)]];
+}
+
+resampled = {
+  resampleToggle2
+    step2
+  let x = resample(weights);
+  let est = computeStat(x);
+  estimates.push([est]);
+  let output = x.arraySync();
+  x.dispose()
+  return output;
+}
+
+Plot.plot({
+  height: 200,
+  width: 500,
+  color: {
+    scheme: "Reds",
+    legend: false,
+    label: "Occurences in bootstrap sample",
+    domain: [0, 5]
+  },
+  x: {label: dataset, domain: sampleDomain},
+  marks: [
+    Plot.dot(resampled, Plot.dodgeY({x: "1", fill: "2", stroke: 'black'})),
+    Plot.tip(["Non-parametric bootstap"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 16, pathFilter: false})
+  ]
+})
+```
+
+```{ojs}
+Plot.plot({
+  height: 180,
+  width: 500,
+  color: {
+    scheme: "Reds"
+  },
+  x: {label: dataset, domain: sampleDomain},
+  marks: [
+    Plot.dot(resampled, Plot.dodgeY({x: "0"})),
+    Plot.ruleX(estimates[estimates.length - 1], {stroke: 'blue', strokeWidth: 2}),
+    Plot.tip(["Bootstrap sample"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})
+  ]
+})
+```
+
+```{ojs}
+{
+  resampled
+  if (estimates.length < 500) {
+    return Plot.plot({
+      height: 180,
+      width: 500,
+      stroke: {
+        legend: true,
+      },
+      x: {label: dataset, domain: statdomain},
+      y: {label: "", ticks: 0},
+      marks: [
+        Plot.dot(estimates, Plot.dodgeY({x: "0", stroke: "blue"})),
+        Plot.ruleX(ci, {stroke: 'red'}),
+        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: "0", y: "1", fill: "red", fillOpacity: 0.05}),
+        //Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),
+        Plot.tip(["Estimated statistic distribution"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false}), 
+        Plot.tip([[ci[0], 1], [ci[1], 1]], Plot.pointerX({x: "0", title: "Boostrap CI"}))
+      ].concat(meanCIPlot)
+    })
+  } else {
+    return Plot.plot({
+      height: 200,
+    width: 500,
+    x: {label: dataset, domain: statdomain},
+    y: {label: "", ticks: 0},
+      marks: [
+        Plot.ruleY([0]),
+        Plot.rectY(estimates, Plot.binX({y: "count"}, {x: "0", thresholds: 'scott', fill: "blue"})),
+        Plot.ruleX(ci, {stroke: 'red', strokeWidth: 3}),
+        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: "0", y: "1", fill: "red", fillOpacity: 0.05}),
+        //Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),
+        Plot.tip(["Estimated statistic distribution"], {frameAnchor: "top-right", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false}), 
+        Plot.tip([[ci[0], 1], [ci[1], 1]], Plot.pointerX({x: "0", title: "Boostrap CI"}))
+      ].concat(meanCIPlot)
+    })
+  }
+}
+```
+:::
+:::::
+
+# Estimating distributions
+
+## Breaking down a distribution
+
+
+::::: columns
+::: {.column style="width: 50%; font-size: 70%;"}
+### Recall the components of a distibution
+
+#### PDF/PMF: $p(x)$
+The probability **density** or **mass** function tells us how much (relative) probability each possible value has.
+
+#### Support
+The **support** tells us the set of possible values a distribution could produce.
+
+#### Parameters: $\theta$
+The **parameters** of a distribution definie the specific distribution within a family.
+
+- We'll use $\theta$ to generically refer to distribution parameters, e.g. $p(x; \theta)$
+:::
+::: {.column style="width: 50%; font-size: 70%;"}
+### Example: Normal distribution
+Distribution of the average of many i.i.d. values
+
+#### PDF:
+$$p(x; \mu, \sigma) = \frac{1}{\sigma\sqrt{2\pi}}\exp \left( -\frac{1}{2}\left( \frac{x-\mu}{\sigma}\right)^2 \right)$$
+
+#### Support:
+$$x\in \mathbb{R}$$
+
+#### Parameters:
+$$\theta = \{\mu, \sigma \}$$
+:::
+:::::
+
+## Fitting distribution parameters
+
+::::: columns
+::: {.column style="width: 50%; font-size: 70%;"}
+### For a Normal distribution 
+We could estimate the parameters $\mu$ and $\sigma$ with the sample mean and std. deviations.
+$$\mu^*=\bar{x},\ \sigma^*=s$$
+
+### What about in general?
+How do we estimate the parameter(s) for **any** distribution?
+
+- For a Poisson, how do we estimate $\lambda$?
+
+:::
+::: {.column style="width: 50%; font-size: 70%;"}
+### Example: Poisson distribtion
+Distribution of the average of many i.i.d. values
+
+#### PDF:
+$$p(x; \lambda) = \frac{\lambda^x e^{-\lambda}}{x!}$$
+
+#### Support:
+$$x\in \mathbb{N}$$
+
+#### Parameters:
+$$\theta = \{ \lambda \}$$
+:::
+:::::
+
+# Maximum likelihood
+
+## Maximum likelihood
+
+::::: columns
+::: {.column style="width: 50%; font-size: 60%;"}
+### Goal
+We have **known** distribution $p(x; \theta)$ with **unknown** parameters $\theta$. 
+
+We want to choose $\theta$ to best fit to our data $\{x_1,...,x_N\}$.
+
+### Idea
+
+**Maximize** the joint probability of our data:
+
+$$\underset{\theta}{\text{argmax}}\ p(x_1,...x_N; \theta)$$
+
+Under i.i.d. assumption:
+
+$$\underset{i.i.d.}{\equiv} \underset{\theta}{\text{argmax}} \prod_{i=1}^N p(x_i; \theta)$$
+
+*Note:* $p(x ;\theta)$ could be a PMF **or** PDF!
+:::
+::: {.column style="width: 50%; font-size: 60%;"}
+Visualized:
+
+```{ojs}
+Plot.plot({
+  height: 120,
+  width: 500,
+  x: {label: dataset, domain: sampleDomain},
+  marks: [
+    Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'lightgrey'})),
+    Plot.lineY(normalPlot(sampleMean, sampleStd), {x: "0", y: "1", stroke: 'firebrick'})
+  ]
+})
+```
+:::
+:::::
+
+## Maximum likelihood
+::::: columns
+::: {.column style="width: 50%; font-size: 60%;"}
+### Goal
+We have **known** distribution $p(x; \theta)$ with **unknown** parameters $\theta$. 
+
+We want to choose $\theta$ to best fit to our data $\{x_1,...,x_N\}$.
+
+### Idea
+
+**Maximize** the joint probability of our data:
+
+$$\underset{\theta}{\text{argmax}}\ p(x_1,...x_N; \theta)$$
+
+Under i.i.d. assumption:
+
+$$\underset{i.i.d.}{\equiv} \underset{\theta}{\text{argmax}} \prod_{i=1}^N p(x_i; \theta)$$
+:::
+::: {.column style="width: 50%; font-size: 60%;"}
+### Example: Normal dist.
+
+$$\theta = \{\mu, \sigma \}$$
+$$p(x; \mu, \sigma) = \frac{1}{\sigma\sqrt{2\pi}}\exp \left( -\frac{1}{2}\left( \frac{x-\mu}{\sigma}\right)^2 \right)$$
+
+Visualized:
+
+```{ojs}
+Plot.plot({
+  height: 120,
+  width: 500,
+  x: {label: dataset, domain: sampleDomain},
+  marks: [
+    Plot.dot(weights.arraySync(), Plot.dodgeY({x: "0", stroke: 'lightgrey'})),
+    Plot.lineY(normalPlot(sampleMean, sampleStd), {x: "0", y: "1", stroke: 'firebrick'})
+  ]
+})
+```
+
+$$\underset{\mu, \sigma}{\text{argmax}} \prod_{i=1}^N\frac{1}{\sigma\sqrt{2\pi}}\exp \left( -\frac{1}{2}\left( \frac{x_i-\mu}{\sigma}\right)^2 \right)$$
+
+:::
+:::::
+## Maximum likelihood
+::: {style="font-size: 75%;"}
+Normal distribution:
+$$\underset{\mu, \sigma}{\text{argmax}} \prod_{i=1}^N\frac{1}{\sigma\sqrt{2\pi}}\exp \left( -\frac{1}{2}\left( \frac{x_i-\mu}{\sigma}\right)^2 \right)$$
+
+This is painful... Often easier to equivalently maximize the *log*-probability (likelihood).
+$$\underset{\theta}{\text{argmax}} \prod_{i=1}^N p(x_i; \theta) =  \underset{\theta}{\text{argmax}}\ \log \prod_{i=1}^N p(x_i; \theta)$$
+
+$$ =  \underset{\theta}{\text{argmax}}\  \sum_{i=1}^N \log p(x_i; \theta)$$
+:::
+
+## Maximum likelihood
+::: {style="font-size: 75%;"}
+For a normal distribution the **maximum likelihood estimate** (MLE) of the parameters $\mu^*,\sigma^*$ is:
+$$ \mu^*,\sigma^* =  \underset{\mu,\sigma}{\text{argmax}}\  \sum_{i=1}^N \log p(x_i; \mu,\sigma)$$
+Using the Normal PDF (and applying log rules) we get:
+$$ \mu^*,\sigma^* =  \underset{\mu,\sigma}{\text{argmax}}\  -\frac{N}{2} \log\left( 2\pi \sigma^2  \right)  -\frac{1}{2\sigma^2}\sum_{i=1}^N \left(x_i-\mu\right)^2$$
+
+
+Using calculus we can solve for $\mu^*,\sigma^*$ (setting derivatives equal to 0). We'd get:
+$$\mu^* = \frac{1}{N}\sum_{i=1}^N x_i, \quad \sigma^* = \sqrt{\frac{1}{N}\sum_{i=1}^N (x_i - \mu^*)^2 }$$
+:::
+
+## Maximum likelihood
+::: {style="font-size: 75%;"}
+For a normal distribution the **maximum likelihood estimate** (MLE) of the parameters $\mu^*,\sigma^*$ is:
+
+$$\mu^* = \frac{1}{N}\sum_{i=1}^N x_i, \quad \sigma^* = \sqrt{\frac{1}{N}\sum_{i=1}^N (x_i - \mu^*)^2 }$$
+
+Note that the estimated mean is the sample mean $\bar{x}$:
+$$\mu^* = \bar{x} = \frac{1}{N}\sum_{i=1}^N x_i$$
+ But the estimated standard deviation is **not** the sample standard deviation $s$:
+$$ \sigma^* = \sqrt{\frac{1}{N}\sum_{i=1}^N (x_i - \mu^*)^2 }, \quad s = \sqrt{\frac{1}{N-1}\sum_{i=1}^N (x_i - \mu^*)^2 }$$
+:::
+
+
+## Maximum likelihood
+
+$$MLE_\theta = \underset{\theta}{\text{argmax}} \prod_{i=1}^N p(x_i; \theta)$$
+
+This is a natural way to estimate the parameters of most distributions.
+
+- We just need to know the pmf/pdf and be able to optimize it!
+- Not always possible with basic caculus though...
+
+## Returning to parametric bootstrap
+
+
+For any distribution we assume for our population, we can use the **maximum likelihood estimate** to get parameters for our bootstrap distribution!
