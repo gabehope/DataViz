@@ -2,7 +2,10 @@
 title: "Data Analytics and Visualization"
 subtitle: "0-0: Course introduction"
 author: "Prof. Gabe Hope"
-format: revealjs
+format: 
+    revealjs:
+        theme: ["../../../../theme.scss"]
+        slideNumber: true
 ---
 
 # Welcome!

@@ -5,6 +5,7 @@ author: "Prof. Gabe Hope"
 format: 
     revealjs:
         theme: ["../../../../theme.scss"]
+        slideNumber: true
 ---
 
 # Why is effective visualization important?

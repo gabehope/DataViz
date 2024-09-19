@@ -6,6 +6,7 @@ format:
     revealjs:
         theme: ["../../../../theme.scss"]
         html-math-method: katex
+        slideNumber: true
 ---
 
 # **Continued:** Statistics for computer scientists
@@ -84,15 +85,22 @@ User ratings for movies on IMDB.
 //data2 = d3Fetch.csv("https://raw.githubusercontent.com/vega/vega-datasets/master/data/windvectors.csv");
 //population = tf.tensor(data2.map(d => parseFloat(d['speed']))).reshape([-1, 1]);
 
-imdb = d3Fetch.json("https://raw.githubusercontent.com/vega/vega-datasets/master/data/movies.json");
+imdb = { 
+  let data = await d3Fetch.json("https://raw.githubusercontent.com/vega/vega-datasets/master/data/movies.json");
+  return data.map((d) => {
+    d["Major Genre"] = d["Major Genre"] || "Unclassified";
+    return d;
+  });
+};
 imdbpopulation = tf.tensor(imdb.map(d => parseFloat(d['IMDB Rating'])).filter((d) => d == d)).reshape([-1, 1]);
 
 Plot.plot({
   height: 500,
   width: 1000,
   x: {label: "IMDB Rating", domain: tf.tidy(() => {return [imdbpopulation.min().arraySync(), imdbpopulation.max().arraySync()]})},
+  color: {legend: true},
   marks: [
-    Plot.dot(imdb, Plot.dodgeY({x: "IMDB Rating", r:1.5, tip: true, title: "Title"})),
+    Plot.dot(imdb, Plot.dodgeY({x: "IMDB Rating", r:1.5, tip: true, title: "Title", fill: "Major Genre"})),
   ]
 })
 ```
