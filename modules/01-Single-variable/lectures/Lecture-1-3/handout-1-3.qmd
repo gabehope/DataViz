@@ -1,0 +1,52 @@
+---
+format: 
+    pdf:
+        include-in-header: 
+            text: '\pagenumbering{gobble}'
+---
+
+
+# Name:
+
+*Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
+
+# Data Analytics and Visualization: Week 5 - Maximum likelihood
+
+## In-class questions
+
+#### What other questions might you use these techniques to analyze?
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  How would you choose a distribution to model data?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+## Reflection (*complete at the end of class*)
+
+#### How was the pace/difficulty of this material?
+
+|
+|
+|
+|
+|
+|
+|
+|

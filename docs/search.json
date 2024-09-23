@@ -2440,7 +2440,7 @@
     "href": "calendar/calendar.html",
     "title": "Course Calendar",
     "section": "",
-    "text": "This is the tentative course calendar for Data Analytics and Visualization. This calendar is subject to change depending on the pace of the class and student interest.\n\n\n\n\n\n\n\n\nDate\nEvent\nTopics\nReadings\nMaterials\n\n\n\n\nWeek 1\n\n\nAug 26, 2024\nLecture 0\nCourse introduction\n538\nSlides Handout\n\n\nAug 28, 2024\nLecture 1\nTidy data, data types\nMDSR 6.1\nSlides Handout\n\n\nWeek 2\n\n\nSep 2, 2024\nLabor day\n\n\n\n\n\nSep 4, 2024\nLecture 2\nIntroduction to visualization\nDV ch. 1 MDSR 2.1-2.5\nSlides Handout\n\n\nWeek 3\n\n\nSep 9, 2024\nLecture 3\nPrinciples for effective visualization\n\nSlides Handout\n\n\nSep 11, 2024\nLecture 4\nSingle variable analysis & visualization\n\nSlides Handout\n\n\nWeek 4\n\n\nSep 16, 2024\nLecture 5\nSimulation-based inference\n\nSlides Handout\n\n\nSep 18, 2024\nLecture 6\nModeling and maximum likelihood\n\nSlides Handout\n\n\nSep 19, 2024\nQuiz 0 Due\nVisualization\n\nNotebook Gradescope\n\n\nWeek 5\n\n\nSep 23, 2024\nLecture 7\nClustering and mixtures\n\n\n\n\nSep 25, 2024\nLecture 8\nData wrangling for multiple variables\n\n\n\n\nSep 26, 2024\nQuiz 1 Due\nSingle variable analysis & visualization\n\nNotebook Gradescope\n\n\nSep 27, 2024\nHomework 1 Due\nSingle variable analysis & visualization\n\nAssignment Gradescope\n\n\nWeek 6\n\n\nSep 30, 2024\nLecture 9\nData cleaning and missing values\n\n\n\n\nOct 2, 2024\nLecture 10\nConditional models and regression\n\n\n\n\nWeek 7\n\n\nOct 7, 2024\nLecture 11\nData cleaning and missing values\n\n\n\n\nOct 9, 2024\nFall break\n\n\n\n\n\nWeek 8\n\n\nOct 14, 2024\nLecture 12\nUncertainty and estimation\n\n\n\n\nOct 16, 2024\nLecture 13\nBootstrapping and simulation\n\n\n\n\nWeek 9\n\n\nOct 21, 2024\nLecture 14\nHigh dimensional data, dimensionality reduction\n\n\n\n\nOct 23, 2024\nLecture 15\nWorking with timeseries\n\n\n\n\nWeek 10\n\n\nOct 28, 2024\nLecture 16\nTimeseries data\n\n\n\n\nOct 30, 2024\nLecture 17\nTimeseries models and analysis\n\n\n\n\nWeek 11\n\n\nNov 4, 2024\nLecture 18\nSpatial analysis and visualization\n\n\n\n\nNov 6, 2024\nLecture 19\nGeographic data, projections and maps\n\n\n\n\nWeek 12\n\n\nNov 11, 2024\nLecture 20\nClimate data\n\n\n\n\nNov 13, 2024\nLecture 21\nMoving to the web\n\n\n\n\nWeek 13\n\n\nNov 18, 2024\nLecture 22\nInteraction and animation\n\n\n\n\nNov 20, 2024\nLecture 23\nInteraction and animation\n\n\n\n\nWeek 14\n\n\nNov 25, 2024\nLecture 24\nNetwork data\n\n\n\n\nNov 27, 2024\nThanksgiving\n\n\n\n\n\nWeek 15\n\n\nDec 2, 2024\nLecture 26\nNetwork visualization\n\n\n\n\nDec 4, 2024\nLecture 27\nNetwork modeling\n\n\n\n\nFinals\n\n\nDec 9, 2024\nFinal project due\n\n\n\n\n\nDec 13, 2024\nFinal project feedback due"
+    "text": "This is the tentative course calendar for Data Analytics and Visualization. This calendar is subject to change depending on the pace of the class and student interest.\n\n\n\n\n\n\n\n\nDate\nEvent\nTopics\nReadings\nMaterials\n\n\n\n\nWeek 1\n\n\nAug 26, 2024\nLecture 0\nCourse introduction\n538\nSlides Handout\n\n\nAug 28, 2024\nLecture 1\nTidy data, data types\nMDSR 6.1\nSlides Handout\n\n\nWeek 2\n\n\nSep 2, 2024\nLabor day\n\n\n\n\n\nSep 4, 2024\nLecture 2\nIntroduction to visualization\nDV ch. 1 MDSR 2.1-2.5\nSlides Handout\n\n\nWeek 3\n\n\nSep 9, 2024\nLecture 3\nPrinciples for effective visualization\n\nSlides Handout\n\n\nSep 11, 2024\nLecture 4\nSingle variable analysis & visualization\n\nSlides Handout\n\n\nWeek 4\n\n\nSep 16, 2024\nLecture 5\nSimulation-based inference\n\nSlides Handout\n\n\nSep 18, 2024\nLecture 6\nModeling and maximum likelihood\n\nSlides Handout\n\n\nSep 19, 2024\nQuiz 0 Due\nVisualization\n\nNotebook Gradescope\n\n\nWeek 5\n\n\nSep 23, 2024\nLecture 7\nMore on maximum likelihood\n\nSlides Handout\n\n\nSep 25, 2024\nLecture 8\nData wrangling for multiple variables\n\n\n\n\nSep 26, 2024\nQuiz 1 Due\nClustering and mixtures\n\nNotebook Gradescope\n\n\nSep 27, 2024\nHomework 1 Due\nSingle variable analysis & visualization\n\nAssignment Gradescope\n\n\nWeek 6\n\n\nSep 30, 2024\nLecture 9\nData cleaning and missing values\n\n\n\n\nOct 2, 2024\nLecture 10\nConditional models and regression\n\n\n\n\nWeek 7\n\n\nOct 7, 2024\nLecture 11\nData cleaning and missing values\n\n\n\n\nOct 9, 2024\nFall break\n\n\n\n\n\nWeek 8\n\n\nOct 14, 2024\nLecture 12\nUncertainty and estimation\n\n\n\n\nOct 16, 2024\nLecture 13\nBootstrapping and simulation\n\n\n\n\nWeek 9\n\n\nOct 21, 2024\nLecture 14\nHigh dimensional data, dimensionality reduction\n\n\n\n\nOct 23, 2024\nLecture 15\nWorking with timeseries\n\n\n\n\nWeek 10\n\n\nOct 28, 2024\nLecture 16\nTimeseries data\n\n\n\n\nOct 30, 2024\nLecture 17\nTimeseries models and analysis\n\n\n\n\nWeek 11\n\n\nNov 4, 2024\nLecture 18\nSpatial analysis and visualization\n\n\n\n\nNov 6, 2024\nLecture 19\nGeographic data, projections and maps\n\n\n\n\nWeek 12\n\n\nNov 11, 2024\nLecture 20\nClimate data\n\n\n\n\nNov 13, 2024\nLecture 21\nMoving to the web\n\n\n\n\nWeek 13\n\n\nNov 18, 2024\nLecture 22\nInteraction and animation\n\n\n\n\nNov 20, 2024\nLecture 23\nInteraction and animation\n\n\n\n\nWeek 14\n\n\nNov 25, 2024\nLecture 24\nNetwork data\n\n\n\n\nNov 27, 2024\nThanksgiving\n\n\n\n\n\nWeek 15\n\n\nDec 2, 2024\nLecture 26\nNetwork visualization\n\n\n\n\nDec 4, 2024\nLecture 27\nNetwork modeling\n\n\n\n\nFinals\n\n\nDec 9, 2024\nFinal project due\n\n\n\n\n\nDec 13, 2024\nFinal project feedback due"
   },
   {
     "objectID": "calendar/calendar.html#week-0-826---830",
@@ -2559,14 +2559,14 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-2/handout-0-2.html#in-class-questions",
     "title": "Name:",
     "section": "In-class questions",
-    "text": "In-class questions\n\nWhat information is contained in this plot?\n\n\n\n\n\n\n\n\n\n\nWhich data organization is most logical to you?\n\n\n\n\n\n\n\n\n\n\nWhat visual dimension is encoding each piece of information?\n\n\n\n\n\n\n\n\n\n\nWhich encoding scheme seems most valuable?"
+    "text": "In-class questions\n\nWhat can we understand from this plot?\n\n\n\n\n\n\n\n\n\n\nSketch a visualization!\n\n\n\n\n\n\n\n\n\n\nWhat dimensions did you find most effective?\n\n\n\n\n\n\n\n\n\n\nWhich plot did you find more effective/memorable?"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/handout-0-2.html#reflection-complete-at-the-end-of-class",
     "href": "modules/00-Introduction/lectures/Lecture-0-2/handout-0-2.html#reflection-complete-at-the-end-of-class",
     "title": "Name:",
     "section": "Reflection (complete at the end of class)",
-    "text": "Reflection (complete at the end of class)\n\nDid these concepts seems obvious or obvious in hindsight?\n\n\n\n\n\n\n\n\n\n\nHave you used any of these libraries before?"
+    "text": "Reflection (complete at the end of class)\n\nWhat are your thoughts on the principles we discussed?\n\n\n\n\n\n\n\n\n\n\nDo you find the real-world examples helpful/interesting?"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html",
@@ -2986,28 +2986,28 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---understand-data",
     "title": "Data Analytics and Visualization",
     "section": "Exploration - Understand data",
-    "text": "Exploration - Understand data\n\nWhat are the differences between these 4 datasets?"
+    "text": "Exploration - Understand data\n\n\n\n\n\nWhat are the differences between these 4 datasets?"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---understand-data-1",
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---understand-data-1",
     "title": "Data Analytics and Visualization",
     "section": "Exploration - Understand data",
-    "text": "Exploration - Understand data\n\nWe could try using some basic tools from statistics to answer this question. e.g. means, variances, corrleations, regression coefficients, etc."
+    "text": "Exploration - Understand data\n\n\n\n\n\nWe could try using some basic tools from statistics to answer this question. e.g. means, variances, corrleations, regression coefficients, etc."
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---understand-data-2",
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---understand-data-2",
     "title": "Data Analytics and Visualization",
     "section": "Exploration - Understand data",
-    "text": "Exploration - Understand data\n\nThey’re the same for every dataset?!?!\n\nCan we conclude that the datasets are all the same?"
+    "text": "Exploration - Understand data\n\n\n\n\n\nThey’re the same for every dataset?!?!\n\nCan we conclude that the datasets are all the same?"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---anscombes-quartet",
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#exploration---anscombes-quartet",
     "title": "Data Analytics and Visualization",
     "section": "Exploration - Anscombe’s quartet",
-    "text": "Exploration - Anscombe’s quartet\n\nVisualization shows there’s much more going on!"
+    "text": "Exploration - Anscombe’s quartet\n\n\n\n\n\nVisualization shows there’s much more going on!"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#jon-snow",
@@ -3042,7 +3042,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#john-snows-map-1",
     "title": "Data Analytics and Visualization",
     "section": "John Snow’s map",
-    "text": "John Snow’s map\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe source: A pump with contaminated water"
+    "text": "John Snow’s map\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe source: A pump with contaminated water"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#validation",
@@ -3091,7 +3091,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visualization-communicates-information-efficiently",
     "title": "Data Analytics and Visualization",
     "section": "Visualization communicates information efficiently",
-    "text": "Visualization communicates information efficiently\n\n\n\n\n\n            \n            \n            \n\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005\n50.95\n\n\n5\nCameroon\nSub-Saharan Africa\n1997.18\n18054929\n51.39\n\n\n6\nCape Verde\nSub-Saharan Africa\n3456.14\n426113\n71.68\n\n\n7\nChad\nSub-Saharan Africa\n1557.83\n10541156\n48.97\n\n\n8\nComoros\nSub-Saharan Africa\n1016.42\n731281\n65.77\n\n\n9\nCongo, Dem. Rep.\nSub-Saharan Africa\n358.80\n66604314\n47.81\n\n\n10\nCongo, Rep.\nSub-Saharan Africa\n3834.67\n3903318\n53.75\n\n\n11\nCote d'Ivoire\nSub-Saharan Africa\n1520.23\n18373060\n57.86\n\n\n12\nEquatorial Guinea\nSub-Saharan Africa\n15342.20\n562339\n50.64\n\n\n13\nEritrea\nSub-Saharan Africa\n548.37\n5028475\n60.03\n\n\n14\nEthiopia\nSub-Saharan Africa\n812.16\n78254090\n55.69\n\n\n15\nGabon\nSub-Saharan Africa\n12704.99\n1484149\n60.89\n\n\n16\nGhana\nSub-Saharan Africa\n1382.95\n23336661\n56.83\n\n\n17\nGuinea\nSub-Saharan Africa\n908.86\n10211437\n58.35\n\n\n18\nGuinea-Bissau\nSub-Saharan Africa\n568.94\n1502442\n48.20\n\n\n19\nKenya\nSub-Saharan Africa\n1493.53\n36529155\n54.95\n\n\n\n\n\n\n\n\n\n\n\n            \n            \n            \n\n\n   \n   \n\n\n\n\nWe can process much more information from the visualization than the table."
+    "text": "Visualization communicates information efficiently\n\n\n\n\n\n            \n            \n            \n\n\n\n\n\n\n\n\n\nname\nregion\nincome\npopulation\nlifeExpectancy\n\n\n\n\n0\nAngola\nSub-Saharan Africa\n5055.59\n12707546\n47.58\n\n\n1\nBenin\nSub-Saharan Africa\n1457.57\n8294941\n61.89\n\n\n2\nBotswana\nSub-Saharan Africa\n12282.28\n1638393\n55.12\n\n\n3\nBurkina Faso\nSub-Saharan Africa\n1234.42\n14761339\n53.38\n\n\n4\nBurundi\nSub-Saharan Africa\n457.07\n8691005\n50.95\n\n\n5\nCameroon\nSub-Saharan Africa\n1997.18\n18054929\n51.39\n\n\n6\nCape Verde\nSub-Saharan Africa\n3456.14\n426113\n71.68\n\n\n7\nChad\nSub-Saharan Africa\n1557.83\n10541156\n48.97\n\n\n8\nComoros\nSub-Saharan Africa\n1016.42\n731281\n65.77\n\n\n9\nCongo, Dem. Rep.\nSub-Saharan Africa\n358.80\n66604314\n47.81\n\n\n10\nCongo, Rep.\nSub-Saharan Africa\n3834.67\n3903318\n53.75\n\n\n11\nCote d'Ivoire\nSub-Saharan Africa\n1520.23\n18373060\n57.86\n\n\n12\nEquatorial Guinea\nSub-Saharan Africa\n15342.20\n562339\n50.64\n\n\n13\nEritrea\nSub-Saharan Africa\n548.37\n5028475\n60.03\n\n\n14\nEthiopia\nSub-Saharan Africa\n812.16\n78254090\n55.69\n\n\n15\nGabon\nSub-Saharan Africa\n12704.99\n1484149\n60.89\n\n\n16\nGhana\nSub-Saharan Africa\n1382.95\n23336661\n56.83\n\n\n17\nGuinea\nSub-Saharan Africa\n908.86\n10211437\n58.35\n\n\n18\nGuinea-Bissau\nSub-Saharan Africa\n568.94\n1502442\n48.20\n\n\n19\nKenya\nSub-Saharan Africa\n1493.53\n36529155\n54.95\n\n\n\n\n\n\n\n\n\n\n\n            \n            \n            \n\n\n   \n   \n\n\n\n\n\nWe can process much more information from the visualization than the table."
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visual-semantics",
@@ -3315,7 +3315,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#previous-studies",
     "title": "Data Analytics and Visualization",
     "section": "Previous studies",
-    "text": "Previous studies\n\nSome channels are far more effective at communicating values."
+    "text": "Previous studies\n\n\n\n\n\nSome channels are far more effective at communicating values."
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#mackinlays-ranking",
@@ -3357,14 +3357,14 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#express-all-the-facts-overplotting",
     "title": "Data Analytics and Visualization",
     "section": "Express all the facts: overplotting",
-    "text": "Express all the facts: overplotting\nOverlapping points can make it impossible to tell the number of observations\n\nHow many total cars are represented?"
+    "text": "Express all the facts: overplotting\nOverlapping points can make it impossible to tell the number of observations\n\n\n\n\n\nHow many total cars are represented?"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#encode-only-the-facts-consistency",
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#encode-only-the-facts-consistency",
     "title": "Data Analytics and Visualization",
     "section": "Encode only the facts: consistency",
-    "text": "Encode only the facts: consistency\nThe properties of the image (visual variables) should match the properties of the data\n\nNations are not ordinal!"
+    "text": "Encode only the facts: consistency\nThe properties of the image (visual variables) should match the properties of the data\n\n\n\n\n\nNations are not ordinal!"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#encode-only-the-facts-ordering",
@@ -3385,7 +3385,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#data-ink-ratio",
     "title": "Data Analytics and Visualization",
     "section": "Data-ink ratio",
-    "text": "Data-ink ratio\n\n\nHeuristic for visual complexity\n\n\n\n\n\n\n\n\n\nLow data-ink ratio (William Playfair 1785): \n\nHigh data-ink ratio (William Playfair 1786):"
+    "text": "Data-ink ratio\n\n\nHeuristic for visual complexity\n\n\n\n\n\n\n\n\n\n\nLow data-ink ratio (William Playfair 1785): \n\nHigh data-ink ratio (William Playfair 1786):"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#maximal-data-ink-ratio-eeg",
@@ -3420,7 +3420,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#violations-of-these-principles",
     "title": "Data Analytics and Visualization",
     "section": "Violations of these principles",
-    "text": "Violations of these principles\nThe following charts from Morton Thiokol documented O-ring damage on pre-challenger flights\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat principle(s) are violated here?"
+    "text": "Violations of these principles\nThe following charts from Morton Thiokol documented O-ring damage on pre-challenger flights\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat principle(s) are violated here?"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#tuftes-fixes",
@@ -3441,7 +3441,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#chart-junk",
     "title": "Data Analytics and Visualization",
     "section": "Chart junk",
-    "text": "Chart junk\nDistracting patterns and unnecessary artistic embelishment\n\n\nA typical example"
+    "text": "Chart junk\nDistracting patterns and unnecessary artistic embelishment\n\n\n\n\n\n\nA typical example"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#distracting-patterns",
@@ -3539,7 +3539,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-2/slides-0-2.html#visual-semantics-1",
     "title": "Data Analytics and Visualization",
     "section": "Visual semantics",
-    "text": "Visual semantics\n\n\n\n\n\n\n\nFrom Jeffery Heer\n\nWhat can we understand from this plot?\n\nA, B, C are distinguishable\nB is between A and C\nBC is twice as long as AB\n\n\n“Resemblance, order and proportional are the three signfields in graphics.” - Bertin"
+    "text": "Visual semantics\n\n\n\n\n\n\n\nFrom Jeffery Heer\n\nWhat can we understand from this plot?\n\nA, B, C are distinguishable\nB is between A and C\nBC is twice as long as AB\n\n\n\n“Resemblance, order and proportional are the three signfields in graphics.” - Bertin"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#exercise-aesthetic-mappings",
@@ -3553,14 +3553,14 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#previous-studies",
     "title": "Data Analytics and Visualization",
     "section": "Previous studies",
-    "text": "Previous studies\n\nSome channels are far more effective at communicating values."
+    "text": "Previous studies\n\n\n\n\n\nSome channels are far more effective at communicating values."
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#mackinlays-ranking",
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#mackinlays-ranking",
     "title": "Data Analytics and Visualization",
     "section": "MacKinlay’s Ranking",
-    "text": "MacKinlay’s Ranking\n\nMost effective representation may depend on the type of data"
+    "text": "MacKinlay’s Ranking\n\n\n\n\n\nMost effective representation may depend on the type of data"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#a-first-principle-importance-ordering",
@@ -3581,7 +3581,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#express-all-the-facts-overplotting",
     "title": "Data Analytics and Visualization",
     "section": "Express all the facts: overplotting",
-    "text": "Express all the facts: overplotting\nOverlapping points can make it impossible to tell the number of observations\n\nHow many total cars are represented?"
+    "text": "Express all the facts: overplotting\nOverlapping points can make it impossible to tell the number of observations\n\n\n\n\n\nHow many total cars are represented?"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#encode-only-the-facts-consistency",
@@ -3602,7 +3602,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#violations-of-these-principles",
     "title": "Data Analytics and Visualization",
     "section": "Violations of these principles",
-    "text": "Violations of these principles\nThe following charts from Morton Thiokol documented O-ring damage on pre-challenger flights\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat principle(s) are violated here?"
+    "text": "Violations of these principles\nThe following charts from Morton Thiokol documented O-ring damage on pre-challenger flights\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat principle(s) are violated here?"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#tuftes-fixes",
@@ -3630,7 +3630,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#data-ink-ratio",
     "title": "Data Analytics and Visualization",
     "section": "Data-ink ratio",
-    "text": "Data-ink ratio\n\n\nHeuristic for visual complexity\n\n\n\n\n\n\n\n\n\nLow data-ink ratio (William Playfair 1785): \n\nHigh data-ink ratio (William Playfair 1786):"
+    "text": "Data-ink ratio\n\n\nHeuristic for visual complexity\n\n\n\n\n\n\n\n\n\n\nLow data-ink ratio (William Playfair 1785): \n\nHigh data-ink ratio (William Playfair 1786):"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#maximal-data-ink-ratio-eeg",
@@ -3672,7 +3672,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#chart-junk",
     "title": "Data Analytics and Visualization",
     "section": "Chart junk",
-    "text": "Chart junk\nDistracting patterns and unnecessary artistic embelishment\n\n\nA typical example"
+    "text": "Chart junk\nDistracting patterns and unnecessary artistic embelishment\n\n\n\n\n\n\nA typical example"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#distracting-patterns",
@@ -3791,7 +3791,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#space-of-visualizations",
     "title": "Data Analytics and Visualization",
     "section": "Space of visualizations",
-    "text": "Space of visualizations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLarge number of possible visualizations for any given dataset:\n\\[\\text{variables} \\times \\text{aesthetics} \\times \\text{geoms} \\times \\text{scales}...\\]"
+    "text": "Space of visualizations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLarge number of possible visualizations for any given dataset:\n\\[\\text{variables} \\times \\text{aesthetics} \\times \\text{geoms} \\times \\text{scales}...\\]"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#automating-the-design-of-graphical-presentations-of-relational-information",
@@ -3840,14 +3840,14 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#a-debate-angle-vs.-length",
     "title": "Data Analytics and Visualization",
     "section": "A debate: Angle vs. Length",
-    "text": "A debate: Angle vs. Length\n\n\n\nfrom lets_plot.mapping import as_discrete\nggplot() + geom_pie(\n  data=cars, \n  mapping=aes(fill=as_discrete('Origin', order_by='..count..')),\n   size=25\n)\n\n   \n   \n\n\n\n\nfrom lets_plot.mapping import as_discrete\n\nggplot() + geom_bar(\n  data=cars, \n  mapping=aes(fill='Origin'),\n)\n\n   \n   \n\n\n\nPerceptual studies lean in favor of pie charts"
+    "text": "A debate: Angle vs. Length\n\n\n\nfrom lets_plot.mapping import as_discrete\nggplot() + geom_pie(\n  data=cars, \n  mapping=aes(fill=as_discrete('Origin', order_by='..count..')),\n   size=25\n)\n\n   \n   \n\n\n\n\nfrom lets_plot.mapping import as_discrete\n\nggplot() + geom_bar(\n  data=cars, \n  mapping=aes(fill='Origin'),\n)\n\n   \n   \n\n\n\n\nPerceptual studies lean in favor of pie charts"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#a-solution-angle-vs.-position",
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#a-solution-angle-vs.-position",
     "title": "Data Analytics and Visualization",
     "section": "A solution: Angle vs. Position",
-    "text": "A solution: Angle vs. Position\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPosition along the x-axis is much easier to compare than angle!"
+    "text": "A solution: Angle vs. Position\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPosition along the x-axis is much easier to compare than angle!"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#ordering-multiple-variables",
@@ -3861,7 +3861,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#a-historical-example-william-playfair",
     "title": "Data Analytics and Visualization",
     "section": "A historical example: William Playfair",
-    "text": "A historical example: William Playfair\n\nWhat visual encoding represents the deficit/surplus?"
+    "text": "A historical example: William Playfair\n\n\n\n\n\nWhat visual encoding represents the deficit/surplus?"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#encoding-the-value-on-interest",
@@ -3931,7 +3931,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#should-axes-start-at-0",
     "title": "Data Analytics and Visualization",
     "section": "Should axes start at 0?",
-    "text": "Should axes start at 0?\n\nFrom How to Lie with Statistics"
+    "text": "Should axes start at 0?\n\n\n\n\n\nFrom How to Lie with Statistics"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#should-axes-start-at-0-consistency",
@@ -3945,7 +3945,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#axis-tick-marks",
     "title": "Data Analytics and Visualization",
     "section": "Axis tick marks",
-    "text": "Axis tick marks\nTick marks are our positional legend – they show how to map visual position back to values."
+    "text": "Axis tick marks\nTick marks are our positional legend – they show how to map visual position back to values.\n\ncars = all_cars\nggplot() + geom_point(data=cars, mapping=aes(x='Horsepower', y='Miles_per_Gallon', color='Origin')) \\\n + scale_x_continuous() \\\n + scale_y_continuous()"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#addressing-data-skew-and-outliers",
@@ -3973,7 +3973,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#log-scales",
     "title": "Data Analytics and Visualization",
     "section": "Log scales",
-    "text": "Log scales\nLog scales can address outliers, but also overall data skew.\n\n\n\nggplot() + geom_point(\n  data=nations, \n  mapping=aes(\n    x='income', y='lifeExpectancy')\n  ) + scale_x_continuous()\\\n  + ggsize(400,400)\n\n   \n   \n\n\nSkewed data, makes it hard to distinguish the majority of observations.\n\n\nggplot() + geom_point(\n  data=nations, \n  mapping=aes(\n    x='income', y='lifeExpectancy')\n  ) + scale_x_continuous(trans='log10')\\\n  + ggsize(400,400)\n\n   \n   \n\n\nA log-scale spreads out observations across orders of magnitude."
+    "text": "Log scales\nLog scales can address outliers, but also overall data skew.\n\nnations = pd.read_csv('data/nations.csv')\n\n\n\n\nggplot() + geom_point(\n  data=nations, \n  mapping=aes(\n    x='income', y='lifeExpectancy')\n  ) + scale_x_continuous()\\\n  + ggsize(400,400)\n\n   \n   \n\n\nSkewed data, makes it hard to distinguish the majority of observations.\n\n\nggplot() + geom_point(\n  data=nations, \n  mapping=aes(\n    x='income', y='lifeExpectancy')\n  ) + scale_x_continuous(trans='log10')\\\n  + ggsize(400,400)\n\n   \n   \n\n\nA log-scale spreads out observations across orders of magnitude."
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#another-perceptual-study",
@@ -4008,7 +4008,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#encode-only-the-facts-consistency-2",
     "title": "Data Analytics and Visualization",
     "section": "Encode only the facts: consistency",
-    "text": "Encode only the facts: consistency\nAn improvement:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIs this the best way to show this relationship?"
+    "text": "Encode only the facts: consistency\nAn improvement:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIs this the best way to show this relationship?"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#encode-only-the-facts-consistency-3",
@@ -4057,7 +4057,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#a-classic-dataset",
     "title": "Data Analytics and Visualization",
     "section": "A classic dataset",
-    "text": "A classic dataset\nFuel efficiency of cars from the 80’s and 90’s.\n\n\n\n            \n            \n            \n\n\n\n\n\n\n\n\n\nName\nMiles_per_Gallon\nCylinders\nDisplacement\nHorsepower\nWeight_in_lbs\nAcceleration\nYear\nOrigin\n\n\n\n\n0\nchevrolet chevelle malibu\n18.0\n8\n307.0\n130.0\n3504\n12.0\n1970-01-01\nUSA\n\n\n1\nbuick skylark 320\n15.0\n8\n350.0\n165.0\n3693\n11.5\n1970-01-01\nUSA\n\n\n2\nplymouth satellite\n18.0\n8\n318.0\n150.0\n3436\n11.0\n1970-01-01\nUSA\n\n\n3\namc rebel sst\n16.0\n8\n304.0\n150.0\n3433\n12.0\n1970-01-01\nUSA\n\n\n4\nford torino\n17.0\n8\n302.0\n140.0\n3449\n10.5\n1970-01-01\nUSA\n\n\n5\nford galaxie 500\n15.0\n8\n429.0\n198.0\n4341\n10.0\n1970-01-01\nUSA\n\n\n6\nchevrolet impala\n14.0\n8\n454.0\n220.0\n4354\n9.0\n1970-01-01\nUSA\n\n\n7\nplymouth fury iii\n14.0\n8\n440.0\n215.0\n4312\n8.5\n1970-01-01\nUSA\n\n\n8\npontiac catalina\n14.0\n8\n455.0\n225.0\n4425\n10.0\n1970-01-01\nUSA\n\n\n9\namc ambassador dpl\n15.0\n8\n390.0\n190.0\n3850\n8.5\n1970-01-01\nUSA\n\n\n10\ncitroen ds-21 pallas\nNaN\n4\n133.0\n115.0\n3090\n17.5\n1970-01-01\nEurope\n\n\n11\nchevrolet chevelle concours (sw)\nNaN\n8\n350.0\n165.0\n4142\n11.5\n1970-01-01\nUSA"
+    "text": "A classic dataset\nFuel efficiency of cars from the 80’s and 90’s.\n\nimport pandas as pd\nimport numpy as np\nfrom lets_plot import *\nLetsPlot.setup_html()\n\nimport vega_datasets\nall_cars = vega_datasets.data.cars()\ncars = all_cars.iloc[:12]\ncars\n\n\n            \n            \n            \n\n\n\n\n\n\n\n\n\nName\nMiles_per_Gallon\nCylinders\nDisplacement\nHorsepower\nWeight_in_lbs\nAcceleration\nYear\nOrigin\n\n\n\n\n0\nchevrolet chevelle malibu\n18.0\n8\n307.0\n130.0\n3504\n12.0\n1970-01-01\nUSA\n\n\n1\nbuick skylark 320\n15.0\n8\n350.0\n165.0\n3693\n11.5\n1970-01-01\nUSA\n\n\n2\nplymouth satellite\n18.0\n8\n318.0\n150.0\n3436\n11.0\n1970-01-01\nUSA\n\n\n3\namc rebel sst\n16.0\n8\n304.0\n150.0\n3433\n12.0\n1970-01-01\nUSA\n\n\n4\nford torino\n17.0\n8\n302.0\n140.0\n3449\n10.5\n1970-01-01\nUSA\n\n\n5\nford galaxie 500\n15.0\n8\n429.0\n198.0\n4341\n10.0\n1970-01-01\nUSA\n\n\n6\nchevrolet impala\n14.0\n8\n454.0\n220.0\n4354\n9.0\n1970-01-01\nUSA\n\n\n7\nplymouth fury iii\n14.0\n8\n440.0\n215.0\n4312\n8.5\n1970-01-01\nUSA\n\n\n8\npontiac catalina\n14.0\n8\n455.0\n225.0\n4425\n10.0\n1970-01-01\nUSA\n\n\n9\namc ambassador dpl\n15.0\n8\n390.0\n190.0\n3850\n8.5\n1970-01-01\nUSA\n\n\n10\ncitroen ds-21 pallas\nNaN\n4\n133.0\n115.0\n3090\n17.5\n1970-01-01\nEurope\n\n\n11\nchevrolet chevelle concours (sw)\nNaN\n8\n350.0\n165.0\n4142\n11.5\n1970-01-01\nUSA"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#encoding-a-single-variable",
@@ -4078,7 +4078,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#encoding-multiple-variables",
     "title": "Data Analytics and Visualization",
     "section": "Encoding multiple variables",
-    "text": "Encoding multiple variables\n\n\n\nggplot() + geom_point(\n  data=cars, \n  mapping=aes(x='Weight_in_lbs', \n    y='Miles_per_Gallon', color='Origin')\n)\n\n   \n   \n\n\n\n\nggplot() + geom_point(\n  data=cars, \n  mapping=aes(x='Origin', y='Miles_per_Gallon', \n    color='Weight_in_lbs')\n)"
+    "text": "Encoding multiple variables\n\ncars = all_cars\n\n\n\n\nggplot() + geom_point(\n  data=cars, \n  mapping=aes(x='Weight_in_lbs', \n    y='Miles_per_Gallon', color='Origin')\n)\n\n   \n   \n\n\n\n\nggplot() + geom_point(\n  data=cars, \n  mapping=aes(x='Origin', y='Miles_per_Gallon', \n    color='Weight_in_lbs')\n)"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/lecture-0-3.html",
@@ -4099,35 +4099,35 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/handout-0-3.html#in-class-questions",
     "title": "Name:",
     "section": "In-class questions",
-    "text": "In-class questions\n\nWhat can we understand from this plot?\n\n\n\n\n\n\n\n\n\n\nSketch a visualization!\n\n\n\n\n\n\n\n\n\n\nWhat dimensions did you find most effective?\n\n\n\n\n\n\n\n\n\n\nWhich plot did you find more effective/memorable?"
+    "text": "In-class questions\n\nWhich encodings did you find most effective?\n\n\n\n\n\n\n\n\n\n\nWhat principles do Morton Thiokol’s plots violate?\n\n\n\n\n\n\n\n\n\n\nSimplify the box-and-whisker plot\n\n\n\n\n\n\n\n\n\n\nWhat variables are shown by Minards visualizaiton?"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/handout-0-3.html#reflection-complete-at-the-end-of-class",
     "href": "modules/00-Introduction/lectures/Lecture-0-3/handout-0-3.html#reflection-complete-at-the-end-of-class",
     "title": "Name:",
     "section": "Reflection (complete at the end of class)",
-    "text": "Reflection (complete at the end of class)\n\nWhat are your thoughts on the principles we discussed?\n\n\n\n\n\n\n\n\n\n\nDo you find the real-world examples helpful/interesting?"
+    "text": "Reflection (complete at the end of class)\n\nWhat are your thoughts on the principles we discussed?\n\n\n\n\n\n\n\n\n\n\nDo you have any others?"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#encoding-multiple-variables-1",
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#encoding-multiple-variables-1",
     "title": "Data Analytics and Visualization",
     "section": "Encoding multiple variables",
-    "text": "Encoding multiple variables\n\n\n\nggplot() + geom_point(\n  data=cars, \n  mapping=aes(x='Weight_in_lbs', y='Miles_per_Gallon', \n    color='Cylinders')\n)\n\n   \n   \n\n\n\n\nggplot() + geom_point(\n  data=cars, \n  mapping=aes(x='Cylinders', y='Miles_per_Gallon', \n    color='Weight_in_lbs')\n)"
+    "text": "Encoding multiple variables\n\ncars = all_cars\n\n\n\n\nggplot() + geom_point(\n  data=cars, \n  mapping=aes(x='Weight_in_lbs', y='Miles_per_Gallon', \n    color='Cylinders')\n)\n\n   \n   \n\n\n\n\nggplot() + geom_point(\n  data=cars, \n  mapping=aes(x='Cylinders', y='Miles_per_Gallon', \n    color='Weight_in_lbs')\n)"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#curve-differences-with-ggplot",
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#curve-differences-with-ggplot",
     "title": "Data Analytics and Visualization",
     "section": "Curve differences with ggplot!",
-    "text": "Curve differences with ggplot!\n\n\n\nggplot() + geom_ribbon(\n  data=trade[trade['Balance'] &gt; 0], \n  mapping=aes(x='Year', ymin='Imports', ymax='Exports'), \n  size=0, fill='blue', alpha=0.25)\\\n + geom_ribbon(\n  data=trade[trade['Balance'] &lt; 0], \n  mapping=aes(x='Year', ymin='Imports', ymax='Exports'), \n  fill='red', alpha=0.25)\\\n + geom_line(data=trade, mapping=aes(x='Year', y='Imports')) \\\n + geom_line(data=trade, mapping=aes(x='Year', y='Exports'))\\\n + ggtitle('US Imports and Exports with South America') \\\n + scale_y_continuous(name='Value ($)') + scale_x_continuous(format='d')\n\n   \n   \n\n\n\n\nggplot() + geom_line(\n  data=trade, \n  mapping=aes(x='Year', y='Balance'))\\\n + ggtitle('US Imports and Exports with\\\n   South America') \\\n + scale_y_continuous(name='Balance ($)')\\\n + scale_x_continuous(format='d')"
+    "text": "Curve differences with ggplot!\n\ntrade = pd.read_csv('data/imports-exports.csv')\ntrade['Year'] = np.linspace(1999, 2024, len(trade))\n\n\n\n\nggplot() + geom_ribbon(\n  data=trade[trade['Balance'] &gt; 0], \n  mapping=aes(x='Year', ymin='Imports', ymax='Exports'), \n  size=0, fill='blue', alpha=0.25)\\\n + geom_ribbon(\n  data=trade[trade['Balance'] &lt; 0], \n  mapping=aes(x='Year', ymin='Imports', ymax='Exports'), \n  fill='red', alpha=0.25)\\\n + geom_line(data=trade, mapping=aes(x='Year', y='Imports')) \\\n + geom_line(data=trade, mapping=aes(x='Year', y='Exports'))\\\n + ggtitle('US Imports and Exports with South America') \\\n + scale_y_continuous(name='Value ($)') + scale_x_continuous(format='d')\n\n   \n   \n\n\n\n\nggplot() + geom_line(\n  data=trade, \n  mapping=aes(x='Year', y='Balance'))\\\n + ggtitle('US Imports and Exports with\\\n   South America') \\\n + scale_y_continuous(name='Balance ($)')\\\n + scale_x_continuous(format='d')"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#express-all-the-facts-overplotting-1",
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#express-all-the-facts-overplotting-1",
     "title": "Data Analytics and Visualization",
     "section": "Express all the facts: overplotting",
-    "text": "Express all the facts: overplotting\nA 2-D example:"
+    "text": "Express all the facts: overplotting\nA 2-D example:\n\nimport pandas as pd\nimport numpy as np\nfrom lets_plot import *\nLetsPlot.setup_html()\n\nimport vega_datasets\nall_cars = vega_datasets.data.cars()\ncars = all_cars\nggplot() + geom_point(data=cars, mapping=aes(x='Weight_in_lbs', y='Miles_per_Gallon', color='Origin'), size=10)"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#should-axes-start-at-0-1",
@@ -4141,21 +4141,21 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#may-not-be-an-appropriate-minimum",
     "title": "Data Analytics and Visualization",
     "section": "0 may not be an appropriate minimum!",
-    "text": "0 may not be an appropriate minimum!\n\n\n\nco2 = pd.read_csv('data/co2.csv')\nggplot() + geom_line(\n  data=co2, \n  mapping=aes(x='Date', y='Co2')\n)\\\n  + scale_x_continuous(\n    format='d' # Specify number format as int\n) \n\n   \n   \n\n\n\n\nco2 = pd.read_csv('data/co2.csv')\nggplot() + geom_line(\n  data=co2, \n  mapping=aes(x='Date', y='Co2')\n)\\\n  + scale_x_continuous(format='d') \\\n  + scale_y_continuous(\n    limits=[0, 425]) # Specify range\n\n   \n   \n\n\n\nGlobal CO2 concentration was never 0!"
+    "text": "0 may not be an appropriate minimum!\n\n\n\nco2 = pd.read_csv('data/co2.csv')\nggplot() + geom_line(\n  data=co2, \n  mapping=aes(x='Date', y='Co2')\n)\\\n  + scale_x_continuous(\n    format='d' # Specify number format as int\n) \n\n   \n   \n\n\n\n\nco2 = pd.read_csv('data/co2.csv')\nggplot() + geom_line(\n  data=co2, \n  mapping=aes(x='Date', y='Co2')\n)\\\n  + scale_x_continuous(format='d') \\\n  + scale_y_continuous(\n    limits=[0, 425]) # Specify range\n\n   \n   \n\n\n\n\nGlobal CO2 concentration was never 0!"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#cleveland-saw-this-in-the-80s",
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#cleveland-saw-this-in-the-80s",
     "title": "Data Analytics and Visualization",
     "section": "Cleveland saw this in the 80s!",
-    "text": "Cleveland saw this in the 80s!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGlobal CO2 concentration was never 0!"
+    "text": "Cleveland saw this in the 80s!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGlobal CO2 concentration was never 0!"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#should-axes-start-at-0---consistency",
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#should-axes-start-at-0---consistency",
     "title": "Data Analytics and Visualization",
     "section": "Should axes start at 0? - consistency",
-    "text": "Should axes start at 0? - consistency\nBar charts imply ratio variables. So 0 is important!\n\nggplot() + geom_bar(\n  data=cars, mapping=aes(y='Name', x='Weight_in_lbs'), stat='identity') \\\n+ scale_x_continuous(limits=[3000, 4500]) + scale_y_discrete(lablim=20)\n\n   \n   \n\n\nA Chevelle is not 10x the weight of a Citroen DS!"
+    "text": "Should axes start at 0? - consistency\nBar charts imply ratio variables. So 0 is important!\n\ncars = all_cars.iloc[:15]\n\n\nggplot() + geom_bar(\n  data=cars, mapping=aes(y='Name', x='Weight_in_lbs'), stat='identity') \\\n+ scale_x_continuous(limits=[3000, 4500]) + scale_y_discrete(lablim=20)\n\n   \n   \n\n\nA Chevelle is not 10x the weight of a Citroen DS!"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#should-axes-start-at-0---consistency-1",
@@ -4190,7 +4190,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#outliers",
     "title": "Data Analytics and Visualization",
     "section": "Outliers",
-    "text": "Outliers\nOutlying observations can make a scale ineffective"
+    "text": "Outliers\nOutlying observations can make a scale ineffective\n\nnations = pd.read_csv('data/nations.csv')\ns_asia = nations[nations['region'] == 'South Asia']\n\nggplot() + geom_point(data=s_asia, mapping=aes(color='name', x='population', y='income'), size=5)"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#crimean-war",
@@ -4239,7 +4239,7 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#axis-breaks-1",
     "title": "Data Analytics and Visualization",
     "section": "Axis breaks",
-    "text": "Axis breaks\nIn general breaks are not recommended; much more cognitive work for the reader!\n\n\n\n\n\n\n\nLog scales show all the data directly.\n\n\n\n\n\n\nBreaks require separate parsing of two (or more) sections.\n\nNot implemented in (base) ggplot!"
+    "text": "Axis breaks\nIn general breaks are not recommended; much more cognitive work for the reader!\n\n\n\n\n\n\n\nLog scales show all the data directly.\n\n\n\n\n\n\nBreaks require separate parsing of two (or more) sections.\n\n\nNot implemented in (base) ggplot!"
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#log-scales-1",
@@ -4260,14 +4260,14 @@
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#log-scales-3",
     "title": "Data Analytics and Visualization",
     "section": "Log scales",
-    "text": "Log scales\n\nOn the log scale, a slope of 1 corresponds to exponential growth."
+    "text": "Log scales\n\n\n\n\n\nOn the log scale, a slope of 1 corresponds to exponential growth."
   },
   {
     "objectID": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#what-did-we-find-1",
     "href": "modules/00-Introduction/lectures/Lecture-0-3/slides-0-3.html#what-did-we-find-1",
     "title": "Data Analytics and Visualization",
     "section": "What did we find?",
-    "text": "What did we find?"
+    "text": "What did we find?\n\nfrom lets_plot import *\nLetsPlot.setup_html()\nresults = pd.read_csv('data/results.csv')\nresults.melt()\n\ntruth = pd.DataFrame({'value': [.2, .44, .4, .31, .39, .37], 'variable': ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6']})\n\nggplot() + geom_histogram(data=results.melt(), mapping=aes(x='value'), bins=12) + geom_vline(data=truth, mapping=aes(xintercept='value'), color='red')+ facet_wrap('variable')"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-0/slides-1-0.html#so-far-dataframes",
@@ -5057,64 +5057,64 @@
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#a-new-dataset-wind-vectors",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#a-new-dataset-wind-vectors",
     "title": "Data Analytics and Visualization",
-    "section": "A new dataset: Wind vectors",
-    "text": "A new dataset: Wind vectors\n\n\n\ntf = require('@tensorflow/tfjs@4.11.0')\nd3Fetch = require(\"d3-fetch@1.1.2\")\n\nwind = FileAttachment(\"data/wind.csv\").csv({typed: true})\nland = topojson.feature(europe, europe.objects.europe)\neurope = d3Fetch.json(\"https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson\")\ncircle = d3.geoCircle().center([0, 52]).radius(5.5).precision(2)()\n\nPlot.plot({\n  width: 500,\n  height: 500,\n  inset:  10,\n  aspectRatio: 1,\n  color: {\n    label: \"Speed (m/s)\",\n    zero: true,\n    legend: true\n  },\n  projection: {\n    type: \"azimuthal-equal-area\",\n    //rotate: [-9, -34],\n    domain: circle,\n    inset: 10\n  },\n  marks: [\n    Plot.graticule(),\n    Plot.geo(land, {fill: \"currentColor\", stroke: 'black', fill: 'white'}),\n    Plot.vector(wind, {\n      x: \"longitude\",\n      y: \"latitude\",\n      rotate: ({u, v}) =&gt; Math.atan2(u, v) * 180 / Math.PI,\n      length: ({u, v}) =&gt; Math.hypot(u, v),\n      stroke: ({u, v}) =&gt; Math.hypot(u, v)\n    }),    \n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe’ll focus on just the speed variable.\n\ndata2 = d3Fetch.csv(\"https://raw.githubusercontent.com/vega/vega-datasets/master/data/windvectors.csv\");\npopulation = tf.tensor(data2.map(d =&gt; parseFloat(d['speed']))).reshape([-1, 1]);\n\nPlot.plot({\n  height: 500,\n  width: 500,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(population.arraySync(), Plot.dodgeY({x: \"0\", r:1.5, fill: '0'})),\n  ]\n})"
+    "section": "",
+    "text": "tf = require('@tensorflow/tfjs@4.11.0')\nd3Fetch = require(\"d3-fetch@1.1.2\")\n\nwind = FileAttachment(\"data/wind.csv\").csv({typed: true})\nland = topojson.feature(europe, europe.objects.europe)\neurope = d3Fetch.json(\"https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson\")\ncircle = d3.geoCircle().center([0, 52]).radius(5.5).precision(2)()\n\nPlot.plot({\n  width: 500,\n  height: 500,\n  inset:  10,\n  aspectRatio: 1,\n  color: {\n    label: \"Speed (m/s)\",\n    zero: true,\n    legend: true\n  },\n  projection: {\n    type: \"azimuthal-equal-area\",\n    //rotate: [-9, -34],\n    domain: circle,\n    inset: 10\n  },\n  marks: [\n    Plot.graticule(),\n    Plot.geo(land, {fill: \"currentColor\", stroke: 'black', fill: 'white'}),\n    Plot.vector(wind, {\n      x: \"longitude\",\n      y: \"latitude\",\n      rotate: ({u, v}) =&gt; Math.atan2(u, v) * 180 / Math.PI,\n      length: ({u, v}) =&gt; Math.hypot(u, v),\n      stroke: ({u, v}) =&gt; Math.hypot(u, v)\n    }),    \n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe’ll focus on just the speed variable.\n\ndata2 = d3Fetch.csv(\"https://raw.githubusercontent.com/vega/vega-datasets/master/data/windvectors.csv\");\npopulation = tf.tensor(data2.map(d =&gt; parseFloat(d['speed']))).reshape([-1, 1]);\n\nPlot.plot({\n  height: 500,\n  width: 500,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(population.arraySync(), Plot.dodgeY({x: \"0\", r:1.5, fill: '0'})),\n  ]\n})"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#samples-and-populations",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#samples-and-populations",
     "title": "Data Analytics and Visualization",
-    "section": "Samples and populations",
-    "text": "Samples and populations\nTypically, datasets we collect do not contain the entire universe. They are a sample from a much larger population.\n\nPlot.plot({\n  height: 250,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(population.arraySync(), Plot.dodgeY({x: \"0\", r:1})),\n    Plot.tip([\"All possible wind speeds\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\nviewof sample = Inputs.range([1, 1000], {label: \"Sample\", value: 200, step: 1})\nresample = function(x, size) {\n  return tf.tidy(() =&gt; {\n    \n    let inds;\n    let counts;\n    if (size) {\n      inds = tf.randomUniformInt([size], 0, x.shape[0]);\n      return x.gather(inds).reshape([-1, 1]);\n    } else {\n      inds = tf.randomUniformInt([x.shape[0]], 0, x.shape[0]);\n      counts = tf.bincount(inds, [], x.shape[0]).reshape(x.shape);\n      return tf.concat([x.gather(inds), x, counts], 1);\n    }\n  });\n}\n\nweights = resample(population, sample);\nPlot.plot({\n  height: 200,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.tip([\"The dataset we've collected\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})"
+    "section": "",
+    "text": "Typically, datasets we collect do not contain the entire universe. They are a sample from a much larger population.\n\nPlot.plot({\n  height: 250,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(population.arraySync(), Plot.dodgeY({x: \"0\", r:1})),\n    Plot.tip([\"All possible wind speeds\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\nviewof sample = Inputs.range([1, 1000], {label: \"Sample\", value: 200, step: 1})\nresample = function(x, size) {\n  return tf.tidy(() =&gt; {\n    \n    let inds;\n    let counts;\n    if (size) {\n      inds = tf.randomUniformInt([size], 0, x.shape[0]);\n      return x.gather(inds).reshape([-1, 1]);\n    } else {\n      inds = tf.randomUniformInt([x.shape[0]], 0, x.shape[0]);\n      counts = tf.bincount(inds, [], x.shape[0]).reshape(x.shape);\n      return tf.concat([x.gather(inds), x, counts], 1);\n    }\n  });\n}\n\nweights = resample(population, sample);\nPlot.plot({\n  height: 200,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.tip([\"The dataset we've collected\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#statistics-and-parameters",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#statistics-and-parameters",
     "title": "Data Analytics and Visualization",
-    "section": "Statistics and parameters",
-    "text": "Statistics and parameters\nWe can compute a statistic of interest using our sample.\n\n\n\nviewof statistic = Inputs.select([\"Mean\", \"Median\", \"Percentile\", \"Variance\", \"StdDev\"], {label: \"Statistic\"});\n\n\n\n\n\n\n\n\nviewof percentile =  Inputs.range([0, 100], {label: (statistic == \"Percentile\") ? \"Percentile\" : \"\", step: 1});\n\n\n\n\n\n\n\n\nquantile = {\n  const asc = arr =&gt; arr.sort((a, b) =&gt; a - b);\n  const sum = arr =&gt; arr.reduce((a, b) =&gt; a + b, 0);\n  const mean = arr =&gt; sum(arr) / arr.length;\n  \n  // sample standard deviation\n  const std = (arr) =&gt; {\n      const mu = mean(arr);\n      const diffArr = arr.map(a =&gt; (a - mu) ** 2);\n      return Math.sqrt(sum(diffArr) / (arr.length - 1));\n  };\n  \n  const quantile = (arr, q) =&gt; {\n      const sorted = asc(arr);\n      const pos = (sorted.length - 1) * q;\n      const base = Math.floor(pos);\n      const rest = pos - base;\n      if (sorted[base + 1] !== undefined) {\n          return sorted[base] + rest * (sorted[base + 1] - sorted[base]);\n      } else {\n          return sorted[base];\n      }\n  };\n  return quantile;\n}\n\nstd = {\n  const asc = arr =&gt; arr.sort((a, b) =&gt; a - b);\n  const sum = arr =&gt; arr.reduce((a, b) =&gt; a + b, 0);\n  const mean = arr =&gt; sum(arr) / arr.length;\n  \n  // sample standard deviation\n  const std = (arr) =&gt; {\n      const mu = mean(arr);\n      const diffArr = arr.map(a =&gt; (a - mu) ** 2);\n      return Math.sqrt(sum(diffArr) / (arr.length - 1));\n  };\n\n  return std;\n}\n\ncomputeStat = (x) =&gt; {\n  let est = tf.tidy(() =&gt; {\n    let values = x.slice([0, 0], [-1, 1]).reshape([-1]);\n    if (statistic == 'Mean') {\n      return values.mean().arraySync();\n    } else if (statistic == 'Median') {\n      return quantile(values.arraySync(), 0.5);\n    } else if (statistic == 'Percentile') {\n      return quantile(values.arraySync(), percentile / 100);\n    } else if (statistic == 'Variance') {\n      return Math.pow(std(values.arraySync()), 2);\n    } else if (statistic == 'StdDev') {\n      return std(values.arraySync());\n    }\n  });\n  return est;\n}\n\nestimate = computeStat(weights)\nPlot.plot({\n  height: 200,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Sample statistic\"], {x: estimate, dy: -50, anchor: \"left\", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHere our  wind speed is \nWe could also ask questions such as:\n\nWhat is the 90th percentile of wind speeds?\nWhat is the probability that the wind speed is greater than 10 m/s?"
+    "section": "",
+    "text": "We can compute a statistic of interest using our sample.\n\n\n\nviewof statistic = Inputs.select([\"Mean\", \"Median\", \"Percentile\", \"Variance\", \"StdDev\"], {label: \"Statistic\"});\n\n\n\n\n\n\n\n\nviewof percentile =  Inputs.range([0, 100], {label: (statistic == \"Percentile\") ? \"Percentile\" : \"\", step: 1});\n\n\n\n\n\n\n\n\n\nquantile = {\n  const asc = arr =&gt; arr.sort((a, b) =&gt; a - b);\n  const sum = arr =&gt; arr.reduce((a, b) =&gt; a + b, 0);\n  const mean = arr =&gt; sum(arr) / arr.length;\n  \n  // sample standard deviation\n  const std = (arr) =&gt; {\n      const mu = mean(arr);\n      const diffArr = arr.map(a =&gt; (a - mu) ** 2);\n      return Math.sqrt(sum(diffArr) / (arr.length - 1));\n  };\n  \n  const quantile = (arr, q) =&gt; {\n      const sorted = asc(arr);\n      const pos = (sorted.length - 1) * q;\n      const base = Math.floor(pos);\n      const rest = pos - base;\n      if (sorted[base + 1] !== undefined) {\n          return sorted[base] + rest * (sorted[base + 1] - sorted[base]);\n      } else {\n          return sorted[base];\n      }\n  };\n  return quantile;\n}\n\nstd = {\n  const asc = arr =&gt; arr.sort((a, b) =&gt; a - b);\n  const sum = arr =&gt; arr.reduce((a, b) =&gt; a + b, 0);\n  const mean = arr =&gt; sum(arr) / arr.length;\n  \n  // sample standard deviation\n  const std = (arr) =&gt; {\n      const mu = mean(arr);\n      const diffArr = arr.map(a =&gt; (a - mu) ** 2);\n      return Math.sqrt(sum(diffArr) / (arr.length - 1));\n  };\n\n  return std;\n}\n\ncomputeStat = (x) =&gt; {\n  let est = tf.tidy(() =&gt; {\n    let values = x.slice([0, 0], [-1, 1]).reshape([-1]);\n    if (statistic == 'Mean') {\n      return values.mean().arraySync();\n    } else if (statistic == 'Median') {\n      return quantile(values.arraySync(), 0.5);\n    } else if (statistic == 'Percentile') {\n      return quantile(values.arraySync(), percentile / 100);\n    } else if (statistic == 'Variance') {\n      return Math.pow(std(values.arraySync()), 2);\n    } else if (statistic == 'StdDev') {\n      return std(values.arraySync());\n    }\n  });\n  return est;\n}\n\nestimate = computeStat(weights)\nPlot.plot({\n  height: 200,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Sample statistic\"], {x: estimate, dy: -50, anchor: \"left\", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHere our  wind speed is \n\n\n\nWhat is the 90th percentile of wind speeds?\nWhat is the probability that the wind speed is greater than 10 m/s?"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#statistics-and-parameters-1",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#statistics-and-parameters-1",
     "title": "Data Analytics and Visualization",
-    "section": "Statistics and parameters",
-    "text": "Statistics and parameters\nWhat we’re really interested in is the value for the population, which we call the corresponding parameter.\n\n\nWhat is the true mean wind speed?\nWhat is the true probability that the wind speed is greater than 10 m/s?\n\n\n\nPlot.plot({\n  height: 300,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(population.arraySync(), Plot.dodgeY({x: \"0\", r:1})),\n    Plot.ruleX([5.4], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Population parameter\"], {x: 5.4, dy: -50, anchor: \"left\", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\nWe can’t know for sure, but we can try to quantify our uncertainty."
+    "section": "",
+    "text": "What we’re really interested in is the value for the population, which we call the corresponding parameter.\n\n\nWhat is the true mean wind speed?\nWhat is the true probability that the wind speed is greater than 10 m/s?\n\n\n\nPlot.plot({\n  height: 300,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(population.arraySync(), Plot.dodgeY({x: \"0\", r:1})),\n    Plot.ruleX([5.4], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Population parameter\"], {x: 5.4, dy: -50, anchor: \"left\", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\nWe can’t know for sure, but we can try to quantify our uncertainty."
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#classic-parametric-approach",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#classic-parametric-approach",
     "title": "Data Analytics and Visualization",
-    "section": "Classic (parametric) approach",
-    "text": "Classic (parametric) approach\nDerive a model for the distribution of the statistic of interest.\n\nCalculate a confidence interval from this distribution."
+    "section": "",
+    "text": "Derive a model for the distribution of the statistic of interest.\n\n\n\n\n\nCalculate a confidence interval from this distribution."
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#confidence-intervals",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#confidence-intervals",
     "title": "Data Analytics and Visualization",
-    "section": "Confidence intervals",
-    "text": "Confidence intervals\nA 95% confidence interval for a statistic is a range computed from a sample such that:\n\nfor 95% of samples the true parameter will fall in the range.\n\n\nPlot.plot({\n  height: 200,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.ruleX([1.5, 8.3], {stroke: 'red', strokeWidth: 2}),\n    Plot.tip([\"Lower interval edge\"], {x: 1.5, dy: -50, anchor: \"left\", stroke: 'red', fontColor:'red', fontWeight: 'bold', fontSize: 12, pathFilter: false}),\n    Plot.tip([\"Upper interval edge\"], {x:8.3, dy: -50, anchor: \"right\", stroke: 'red', fontColor:'red', fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\nThis gives us a sense of the uncertainty of our statistic across samples."
+    "section": "",
+    "text": "A 95% confidence interval for a statistic is a range computed from a sample such that:\n\nfor 95% of samples the true parameter will fall in the range.\n\n\nPlot.plot({\n  height: 200,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.ruleX([1.5, 8.3], {stroke: 'red', strokeWidth: 2}),\n    Plot.tip([\"Lower interval edge\"], {x: 1.5, dy: -50, anchor: \"left\", stroke: 'red', fontColor:'red', fontWeight: 'bold', fontSize: 12, pathFilter: false}),\n    Plot.tip([\"Upper interval edge\"], {x:8.3, dy: -50, anchor: \"right\", stroke: 'red', fontColor:'red', fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\nThis gives us a sense of the uncertainty of our statistic across samples."
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#classic-parametric-approach-1",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#classic-parametric-approach-1",
     "title": "Data Analytics and Visualization",
-    "section": "Classic (parametric) approach",
-    "text": "Classic (parametric) approach\nExample: Confidence interval on the population mean (\\mu).\nAssuming:\n\n\nObservations are independently sampled.\nThe population distribution is normal\n\n\nThen the statistic:\n\n\nT = \\frac{\\bar{x} - \\mu}{\\frac{s}{\\sqrt{N}}}\nHas a Student’s T distribution with N-1 degrees of freedom"
+    "section": "",
+    "text": "Example: Confidence interval on the population mean (\\(\\mu\\)).\nAssuming:\n\n\nObservations are independently sampled.\nThe population distribution is normal\n\n\nThen the statistic:\n\n\n\\[T = \\frac{\\bar{x} - \\mu}{\\frac{s}{\\sqrt{N}}}\\]\nHas a Student’s T distribution with \\(N-1\\) degrees of freedom"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#classic-parametric-approach-2",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#classic-parametric-approach-2",
     "title": "Data Analytics and Visualization",
-    "section": "Classic (parametric) approach",
-    "text": "Classic (parametric) approach\nExample: Confidence interval on the population mean (\\mu).\n\n\nT = \\frac{\\bar{x} - \\mu}{\\frac{s}{\\sqrt{N}}}\nHas a Student’s T distribution with N-1 degrees of freedom.\nUnder this distribution define q_{2.5} as:\nP(T \\leq q_{2.5}) = 0.025\n\n\n\n\n\n\nLower edge of CI \\theta_{l}\nq_{2.5} = \\frac{\\bar{x} - \\theta_{l}}{\\frac{s}{\\sqrt{N}}} Therefore \\theta_{l} = \\bar{x} - q_{2.5} \\frac{s}{\\sqrt{N}}\nUpper edge of CI \\theta_{u} is symmetric \\theta_{u} = \\bar{x} + q_{97.5} \\frac{s}{\\sqrt{N}}"
+    "section": "",
+    "text": "Example: Confidence interval on the population mean (\\(\\mu\\)).\n\n\n\\[T = \\frac{\\bar{x} - \\mu}{\\frac{s}{\\sqrt{N}}}\\]\nHas a Student’s T distribution with \\(N-1\\) degrees of freedom.\nUnder this distribution define \\(q_{2.5}\\) as:\n\\[P(T \\leq q_{2.5}) = 0.025\\]\n\n\n\n\n\n\nLower edge of CI \\(\\theta_{l}\\)\n\\[q_{2.5} = \\frac{\\bar{x} - \\theta_{l}}{\\frac{s}{\\sqrt{N}}}\\] Therefore \\[\\theta_{l} = \\bar{x} - q_{2.5} \\frac{s}{\\sqrt{N}}\\]\nUpper edge of CI \\(\\theta_{u}\\) is symmetric \\[\\theta_{u} = \\bar{x} + q_{97.5} \\frac{s}{\\sqrt{N}}\\]"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#sampling-our-statistic-many-times",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#sampling-our-statistic-many-times",
     "title": "Data Analytics and Visualization",
     "section": "Sampling our statistic many times",
-    "text": "Sampling our statistic many times\nIdeally we could draw many samples from our population and compute our statistic each time.\n\n\nStatistic: \n\n\nviewof resampleToggle = Inputs.range();\n\n\n\n\n\n\n\n\nviewof step = Inputs.button(\"Resample\")\n\n\n\n\n\n\n\n\nviewof reset = Inputs.button(\"Reset\")\n\n\n\n\n\n\n\n\nplaying = {\n  resampleToggle;\n  return !this;\n}\n\nresampleButton = {\n  while(playing) {\n    yield true;\n  }\n  step;\n  return false;\n}\n\npopestimates = {\n  statistic\n  reset\n  percentile\n  return [];\n}\n\npopci = {\n  popresampled\n  let flat_estimates = popestimates.flat();\n  return [[quantile(flat_estimates, 0.05)], [quantile(flat_estimates, 0.95)]];\n}\n\nparameter = computeStat(population);\n\npopresampled = {\n  resampleButton\n  let x = resample(population, sample);\n  let est = computeStat(x);\n  popestimates.push([est]);\n  let output = x.arraySync();\n  x.dispose()\n  return output;\n}\n\nPlot.plot({\n  height: 200,\n  width: 1000,\n  color: {\n    scheme: \"Reds\"\n  },\n  x: {label: \"Wind speed (m/s)\",domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(popresampled, Plot.dodgeY({x: \"0\"})),\n    Plot.ruleX(popestimates[popestimates.length - 1], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Sample from population\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis would show us the distribution of our statistic.\n\n{\n  popresampled\n  if (popestimates.length &lt; 500) {\n    return Plot.plot({\n      height: 200,\n      width: 1000,\n      color: {\n        scheme: \"Reds\"\n      },\n      x: {label: \"Wind speed (m/s)\"},\n      y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.dot(popestimates, Plot.dodgeY({x: \"0\"})),\n        Plot.ruleX(popci, {stroke: 'red'}),\n        Plot.areaY([[popci[0], 1], [popci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        Plot.ruleX(parameter, {stroke: 'blue', strokeWidth: 3}),\n    Plot.tip([\"Distribution of statistic\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  } else {\n    return Plot.plot({\n      height: 200,\n      width: 1000,\n      x: {label: \"Wind speed (m/s)\"},\n      y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.ruleY([0]),\n        Plot.rectY(popestimates, Plot.binX({y: \"count\"}, {x: \"0\", thresholds: 'scott'})),\n        Plot.ruleX(popci, {stroke: 'red', strokeWidth: 3}),\n        Plot.areaY([[popci[0], 1], [popci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        Plot.ruleX([parameter], {stroke: 'blue', strokeWidth: 3}),\n    Plot.tip([\"Distribution of statistic\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  }\n}"
+    "text": "Sampling our statistic many times\nIdeally we could draw many samples from our population and compute our statistic each time.\n\n\nStatistic: \n\n\nviewof resampleToggle = Inputs.range();\n\n\n\n\n\n\n\n\nviewof step = Inputs.button(\"Resample\")\n\n\n\n\n\n\n\n\nviewof reset = Inputs.button(\"Reset\")\n\n\n\n\n\n\n\n\n\nplaying = {\n  resampleToggle;\n  return !this;\n}\n\nresampleButton = {\n  while(playing) {\n    yield true;\n  }\n  step;\n  return false;\n}\n\npopestimates = {\n  statistic\n  reset\n  percentile\n  return [];\n}\n\npopci = {\n  popresampled\n  let flat_estimates = popestimates.flat();\n  return [[quantile(flat_estimates, 0.05)], [quantile(flat_estimates, 0.95)]];\n}\n\nparameter = computeStat(population);\n\npopresampled = {\n  resampleButton\n  let x = resample(population, sample);\n  let est = computeStat(x);\n  popestimates.push([est]);\n  let output = x.arraySync();\n  x.dispose()\n  return output;\n}\n\nPlot.plot({\n  height: 200,\n  width: 1000,\n  color: {\n    scheme: \"Reds\"\n  },\n  x: {label: \"Wind speed (m/s)\",domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(popresampled, Plot.dodgeY({x: \"0\"})),\n    Plot.ruleX(popestimates[popestimates.length - 1], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Sample from population\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis would show us the distribution of our statistic.\n\n{\n  popresampled\n  if (popestimates.length &lt; 500) {\n    return Plot.plot({\n      height: 200,\n      width: 1000,\n      color: {\n        scheme: \"Reds\"\n      },\n      x: {label: \"Wind speed (m/s)\"},\n      y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.dot(popestimates, Plot.dodgeY({x: \"0\"})),\n        Plot.ruleX(popci, {stroke: 'red'}),\n        Plot.areaY([[popci[0], 1], [popci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        Plot.ruleX(parameter, {stroke: 'blue', strokeWidth: 3}),\n    Plot.tip([\"Distribution of statistic\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  } else {\n    return Plot.plot({\n      height: 200,\n      width: 1000,\n      x: {label: \"Wind speed (m/s)\"},\n      y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.ruleY([0]),\n        Plot.rectY(popestimates, Plot.binX({y: \"count\"}, {x: \"0\", thresholds: 'scott'})),\n        Plot.ruleX(popci, {stroke: 'red', strokeWidth: 3}),\n        Plot.areaY([[popci[0], 1], [popci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        Plot.ruleX([parameter], {stroke: 'blue', strokeWidth: 3}),\n    Plot.tip([\"Distribution of statistic\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  }\n}"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#sampling-our-statistic-many-times-1",
@@ -5135,7 +5135,7 @@
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#bootstrapping-1",
     "title": "Data Analytics and Visualization",
     "section": "Bootstrapping",
-    "text": "Bootstrapping\nWith N observations we will generate a bootstrap sample by:\n\nDrawing N values from our sample with replacement\n\n\ndef bootstrap_sample(data):\n    N = len(data)                      # Number of obsevations\n    inds = np.random.randint(0, N, N)  # Resample from {1,...,N}, N times\n    return data[inds]                  # Return the new sample\n\n\n\nOriginal sample\n\nPlot.plot({\n  height: 180,\n  width: 500,\n  color: {\n    scheme: \"Reds\",\n    legend: true,\n    label: \"Occurences in bootstrap sample\",\n    domain: [0, 5]\n  },\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(resampled, Plot.dodgeY({x: \"1\", fill: \"2\", stroke: 'black'})),\n  ]\n})\n\n\n\n\n\n\n\nBootstrap sample\n\nPlot.plot({\n  height: 225,\n  width: 500,\n  color: {\n    scheme: \"Reds\"\n  },\n  x: {label: \"Wind speed (m/s)\",domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(resampled, Plot.dodgeY({x: \"0\"})),\n  ]\n})\n\n\n\n\n\n\n\n\nEquivalent to sampling from our infinite population estimate!"
+    "text": "Bootstrapping\nWith \\(N\\) observations we will generate a bootstrap sample by:\n\nDrawing \\(N\\) values from our sample with replacement\n\n\ndef bootstrap_sample(data):\n    N = len(data)                      # Number of obsevations\n    inds = np.random.randint(0, N, N)  # Resample from {1,...,N}, N times\n    return data[inds]                  # Return the new sample\n\n\n\nOriginal sample\n\nPlot.plot({\n  height: 180,\n  width: 500,\n  color: {\n    scheme: \"Reds\",\n    legend: true,\n    label: \"Occurences in bootstrap sample\",\n    domain: [0, 5]\n  },\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(resampled, Plot.dodgeY({x: \"1\", fill: \"2\", stroke: 'black'})),\n  ]\n})\n\n\n\n\n\n\n\nBootstrap sample\n\nPlot.plot({\n  height: 225,\n  width: 500,\n  color: {\n    scheme: \"Reds\"\n  },\n  x: {label: \"Wind speed (m/s)\",domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(resampled, Plot.dodgeY({x: \"0\"})),\n  ]\n})\n\n\n\n\n\n\n\n\n\nEquivalent to sampling from our infinite population estimate!"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#what-t",
@@ -5149,7 +5149,7 @@
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#what-does-this-look-like",
     "title": "Data Analytics and Visualization",
     "section": "What does this look like?",
-    "text": "What does this look like?\n\n\nStatistic: \n\n\nviewof replay = Inputs.button(\"Play\");\nresampleToggle2 = {\n  let count = replay &gt; 0 ? 100 : 0;\n  for (let i = 0; i &lt; count; ++i) {\n    yield i;\n  }\n};\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof step2 = Inputs.button(\"Resample\")\n\n\n\n\n\n\n\n\nviewof reset2 = Inputs.button(\"Reset\")\n\n\n\n\n\n\n\n\nestimates = {\n  statistic\n  reset2\n  step2\n  percentile\n  return [];\n}\n\nci = {\n  resampled\n  let flat_estimates = estimates.flat();\n  return [[quantile(flat_estimates, 0.025)], [quantile(flat_estimates, 0.975)]];\n}\n\nresampled = {\n  resampleToggle2\n  let x = resample(weights);\n  let est = computeStat(x);\n  estimates.push([est]);\n  let output = x.arraySync();\n  x.dispose()\n  return output;\n}\n\nPlot.plot({\n  height: 180,\n  width: 1000,\n  color: {\n    scheme: \"Reds\",\n    legend: true,\n    label: \"Occurences in bootstrap sample\",\n    domain: [0, 5]\n  },\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(resampled, Plot.dodgeY({x: \"1\", fill: \"2\", stroke: 'black'})),\n    Plot.tip([\"Original sample\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  height: 180,\n  width: 1000,\n  color: {\n    scheme: \"Reds\"\n  },\n  x: {label: \"Wind speed (m/s)\",domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(resampled, Plot.dodgeY({x: \"0\"})),\n    Plot.ruleX(estimates[estimates.length - 1], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Bootstrap sample\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\n{\n  resampled\n  if (estimates.length &lt; 500) {\n    return Plot.plot({\n      height: 180,\n      width: 1000,\n      stroke: {\n        legend: true,\n      },\n      x: {label: \"Wind speed (m/s)\"},\n      y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.dot(estimates, Plot.dodgeY({x: \"0\", stroke: \"blue\"})),\n        Plot.ruleX(ci, {stroke: 'red'}),\n        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        //Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),\n        Plot.tip([\"Estimated statistic distribution\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  } else {\n    return Plot.plot({\n      height: 200,\n    width: 1000,\n    y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.ruleY([0]),\n        Plot.rectY(estimates, Plot.binX({y: \"count\"}, {x: \"0\", thresholds: 'scott', fill: \"blue\"})),\n        Plot.ruleX(ci, {stroke: 'red', strokeWidth: 3}),\n        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        //Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),\n        Plot.tip([\"Estimated statistic distribution\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  }\n}"
+    "text": "What does this look like?\n\n\nStatistic: \n\n\nviewof replay = Inputs.button(\"Play\");\nresampleToggle2 = {\n  let count = replay &gt; 0 ? 100 : 0;\n  for (let i = 0; i &lt; count; ++i) {\n    yield i;\n  }\n};\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof step2 = Inputs.button(\"Resample\")\n\n\n\n\n\n\n\n\nviewof reset2 = Inputs.button(\"Reset\")\n\n\n\n\n\n\n\n\n\nestimates = {\n  statistic\n  reset2\n  step2\n  percentile\n  return [];\n}\n\nci = {\n  resampled\n  let flat_estimates = estimates.flat();\n  return [[quantile(flat_estimates, 0.025)], [quantile(flat_estimates, 0.975)]];\n}\n\nresampled = {\n  resampleToggle2\n  let x = resample(weights);\n  let est = computeStat(x);\n  estimates.push([est]);\n  let output = x.arraySync();\n  x.dispose()\n  return output;\n}\n\nPlot.plot({\n  height: 180,\n  width: 1000,\n  color: {\n    scheme: \"Reds\",\n    legend: true,\n    label: \"Occurences in bootstrap sample\",\n    domain: [0, 5]\n  },\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(resampled, Plot.dodgeY({x: \"1\", fill: \"2\", stroke: 'black'})),\n    Plot.tip([\"Original sample\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  height: 180,\n  width: 1000,\n  color: {\n    scheme: \"Reds\"\n  },\n  x: {label: \"Wind speed (m/s)\",domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(resampled, Plot.dodgeY({x: \"0\"})),\n    Plot.ruleX(estimates[estimates.length - 1], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Bootstrap sample\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\n{\n  resampled\n  if (estimates.length &lt; 500) {\n    return Plot.plot({\n      height: 180,\n      width: 1000,\n      stroke: {\n        legend: true,\n      },\n      x: {label: \"Wind speed (m/s)\"},\n      y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.dot(estimates, Plot.dodgeY({x: \"0\", stroke: \"blue\"})),\n        Plot.ruleX(ci, {stroke: 'red'}),\n        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        //Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),\n        Plot.tip([\"Estimated statistic distribution\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  } else {\n    return Plot.plot({\n      height: 200,\n    width: 1000,\n    y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.ruleY([0]),\n        Plot.rectY(estimates, Plot.binX({y: \"count\"}, {x: \"0\", thresholds: 'scott', fill: \"blue\"})),\n        Plot.ruleX(ci, {stroke: 'red', strokeWidth: 3}),\n        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        //Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),\n        Plot.tip([\"Estimated statistic distribution\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  }\n}"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-0/slides-1-0.html#number-of-bins-9",
@@ -5163,7 +5163,7 @@
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#bootstrapping-2",
     "title": "Data Analytics and Visualization",
     "section": "Bootstrapping",
-    "text": "Bootstrapping\n\n\nEvery observation is added with probability \\frac{1}{N}\nThe same observation can be added multiple times!\n\nWe can use these bootstrap samples to estimate the distribution of our statistic!\n\n\ndef bootstrap_distribution(data, statistic_fun, nsamples):\n    estimates = []                       # Distribution of statistic estimates\n    for i in range(nsamples):            # Resample many times\n        sample = bootstrap_sample(data)  # Get a new bootstrapped sample\n        stat = statistic_fun(sample)     # Compute our statistic\n        estimates.append(stat)           # add it to the distribution\n    return estimates\n\n\n\nOriginal sample\n\nPlot.plot({\n  height: 180,\n  width: 500,\n  color: {\n    scheme: \"Reds\",\n    legend: true,\n    label: \"Occurences in bootstrap sample\",\n    domain: [0, 5]\n  },\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(resampled, Plot.dodgeY({x: \"1\", fill: \"2\", stroke: 'black'})),\n  ]\n})\n\n\n\n\n\n\n\nBootstrap sample\n\nPlot.plot({\n  height: 225,\n  width: 500,\n  color: {\n    scheme: \"Reds\"\n  },\n  x: {label: \"Wind speed (m/s)\",domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(resampled, Plot.dodgeY({x: \"0\"})),\n  ]\n})"
+    "text": "Bootstrapping\n\n\nEvery observation is added with probability \\(\\frac{1}{N}\\)\nThe same observation can be added multiple times!\n\nWe can use these bootstrap samples to estimate the distribution of our statistic!\n\n\ndef bootstrap_distribution(data, statistic_fun, nsamples):\n    estimates = []                       # Distribution of statistic estimates\n    for i in range(nsamples):            # Resample many times\n        sample = bootstrap_sample(data)  # Get a new bootstrapped sample\n        stat = statistic_fun(sample)     # Compute our statistic\n        estimates.append(stat)           # add it to the distribution\n    return estimates\n\n\n\nOriginal sample\n\nPlot.plot({\n  height: 180,\n  width: 500,\n  color: {\n    scheme: \"Reds\",\n    legend: true,\n    label: \"Occurences in bootstrap sample\",\n    domain: [0, 5]\n  },\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(resampled, Plot.dodgeY({x: \"1\", fill: \"2\", stroke: 'black'})),\n  ]\n})\n\n\n\n\n\n\n\nBootstrap sample\n\nPlot.plot({\n  height: 225,\n  width: 500,\n  color: {\n    scheme: \"Reds\"\n  },\n  x: {label: \"Wind speed (m/s)\",domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(resampled, Plot.dodgeY({x: \"0\"})),\n  ]\n})"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#bootstrapped-confidence-intervals",
@@ -5191,7 +5191,7 @@
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#bootstrap-ci-a-simple-approach",
     "title": "Data Analytics and Visualization",
     "section": "Bootstrap CI: a simple approach",
-    "text": "Bootstrap CI: a simple approach\nComputing a 95% confidence interval with bootstrapping is simple!\n\nJust take the 2.5% percentile and 97.5% percentile of our bootstrapped statistics.\n\n\n\n\ndef simple_bootstrap_ci(data, statistic_fun, nsamples, confidence=0.95):\n    # Distribution of statistic estimates\n    estimates = bootstrap_distribution(data, statistic_fun, nsamples)\n    margin = (1 - confidence) / 2\n    lower = estimates[ceil(nsamples * margin)]\n    upper = estimates[ceil(nsamples * (1 - margin))] \n    return lower, upper\n\nHere we sort the data and take indices 0.025N and 0.975N\n\n\n\n\n\n\n\n{\n  resampled\n  if (estimates.length &lt; 500) {\n    return Plot.plot({\n      height: 200,\n      width: 1000,\n      stroke: {\n        legend: true,\n      },\n      x: {label: \"Wind speed (m/s)\"},\n      y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.dot(estimates, Plot.dodgeY({x: \"0\"})),\n        Plot.ruleX(ci, {stroke: 'red'}),\n        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        //Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),\n        Plot.tip([\"Estimated statistic distribution\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  } else {\n    return Plot.plot({\n      height: 200,\n    width: 400,\n    y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.ruleY([0]),\n        Plot.rectY(estimates, Plot.binX({y: \"count\"}, {x: \"0\", thresholds: 'scott'})),\n        Plot.ruleX(ci, {stroke: 'red', strokeWidth: 3}),\n        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        //Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),\n        Plot.tip([\"Estimated statistic distribution\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  }\n}\n\n\n\n\n\n\nExample bootstrapped percentiles"
+    "text": "Bootstrap CI: a simple approach\nComputing a 95% confidence interval with bootstrapping is simple!\n\nJust take the 2.5% percentile and 97.5% percentile of our bootstrapped statistics.\n\n\n\n\ndef simple_bootstrap_ci(data, statistic_fun, nsamples, confidence=0.95):\n    # Distribution of statistic estimates\n    estimates = bootstrap_distribution(data, statistic_fun, nsamples)\n    margin = (1 - confidence) / 2\n    lower = estimates[ceil(nsamples * margin)]\n    upper = estimates[ceil(nsamples * (1 - margin))] \n    return lower, upper\n\nHere we sort the data and take indices \\(0.025N\\) and \\(0.975N\\)\n\n\n\n\n\n\n\n{\n  resampled\n  if (estimates.length &lt; 500) {\n    return Plot.plot({\n      height: 200,\n      width: 1000,\n      stroke: {\n        legend: true,\n      },\n      x: {label: \"Wind speed (m/s)\"},\n      y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.dot(estimates, Plot.dodgeY({x: \"0\"})),\n        Plot.ruleX(ci, {stroke: 'red'}),\n        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        //Plot.ruleX(estimate, {stroke: 'blue', strokeWidth: 3}),\n        Plot.tip([\"Estimated statistic distribution\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  } else {\n    return Plot.plot({\n      height: 200,\n    width: 400,\n    y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.ruleY([0]),\n        Plot.rectY(estimates, Plot.binX({y: \"count\"}, {x: \"0\", thresholds: 'scott'})),\n        Plot.ruleX(ci, {stroke: 'red', strokeWidth: 3}),\n        Plot.areaY([[ci[0], 1], [ci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        //Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 3}),\n        Plot.tip([\"Estimated statistic distribution\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  }\n}\n\n\n\n\n\n\nExample bootstrapped percentiles"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#whenwhy-does-bootstrapping-work",
@@ -5204,15 +5204,15 @@
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#classic-parametric-approach-3",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#classic-parametric-approach-3",
     "title": "Data Analytics and Visualization",
-    "section": "Classic (parametric) approach",
-    "text": "Classic (parametric) approach\nDisadvantages:\n\nRequires possibly unrealistic assumptions about population\nRequires complex new derivation for every new statistic\nThis derivation might be unknown/impossible!"
+    "section": "",
+    "text": "Disadvantages:\n\nRequires possibly unrealistic assumptions about population\nRequires complex new derivation for every new statistic\nThis derivation might be unknown/impossible!"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#point-estimates",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#point-estimates",
     "title": "Data Analytics and Visualization",
-    "section": "Point estimates",
-    "text": "Point estimates\nOur sample statistic is a point estimate of the population parameter.\n\nA single value\nHopefully close to the parameter, but might be far if we’re unlucky\n\n\nPlot.plot({\n  height: 200,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Sample statistic\"], {x: estimate, dy: -50, anchor: \"left\", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\nIn order to understand where our population parameter might be, we would like an estimate of the uncertainty of our sample statistic."
+    "section": "",
+    "text": "Our sample statistic is a point estimate of the population parameter.\n\nA single value\nHopefully close to the parameter, but might be far if we’re unlucky\n\n\nPlot.plot({\n  height: 200,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Sample statistic\"], {x: estimate, dy: -50, anchor: \"left\", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\nIn order to understand where our population parameter might be, we would like an estimate of the uncertainty of our sample statistic."
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#what-if-we-dont-know-the-distribution-of-our-data",
@@ -5232,8 +5232,8 @@
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#so-what-if-we-dont-know-the-distribution-of-our-data",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#so-what-if-we-dont-know-the-distribution-of-our-data",
     "title": "Data Analytics and Visualization",
-    "section": "So, what if we don’t know the distribution of our data?",
-    "text": "So, what if we don’t know the distribution of our data?\nFor the mean:\n\nthe central limit theorem kicks in if our sample is large enough.\n\nBut what about for other statistics?"
+    "section": "",
+    "text": "For the mean:\n\nthe central limit theorem kicks in if our sample is large enough.\n\nBut what about for other statistics?"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-0/slides-1-0.html#waffle-plots",
@@ -5282,7 +5282,7 @@
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#point-vs.-uncertainty-estimates-grid",
     "title": "Data Analytics and Visualization",
     "section": "Point vs. uncertainty estimates grid",
-    "text": "Point vs. uncertainty estimates grid\n\n\nModel-based inference\nPoint-estimate\n\nCalculate value from observed sample\n\nUncertainty-estimate\n\nDerive a model of our statistic’s distribution\n\n\nSimulation-based inference\nPoint-estimate\n\nCalculate value from observed sample\n\nUncertainty-estimate\n\nResample the data many times"
+    "text": "Point vs. uncertainty estimates grid\n\n\n\nModel-based inference\nPoint-estimate\n\nCalculate value from observed sample\n\nUncertainty-estimate\n\nDerive a model of our statistic’s distribution\n\n\n\n\nSimulation-based inference\nPoint-estimate\n\nCalculate value from observed sample\n\nUncertainty-estimate\n\nResample the data many times"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-0/slides-1-0.html#bars-at-observations-12",
@@ -5310,7 +5310,7 @@
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#one-way-to-frame-this",
     "title": "Data Analytics and Visualization",
     "section": "One way to frame this",
-    "text": "One way to frame this\nRather than using our sample statistic to estimate our population parameter, we’ll use our sample to estimate our population.\n\n\nAssume our much larger population follows the same distribution as our sample.\nOur estimated population is the limit as we repeat each observation in our sample infinitely many times.\n\n\n\n\nPopulation\n\nPlot.plot({\n  height: 300,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(population.arraySync(), Plot.dodgeY({x: \"0\", r:1})),\n  ]\n})\n\n\n\n\n\n\n\nPopulation estimate\n\nPlot.plot({\n  height: 300,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(tf.tidy(() =&gt; tf.tile(weights, [repeats, 1]).arraySync()), Plot.dodgeY({x: \"0\", r: 5 / Math.sqrt(repeats)})),\n  ]\n})\n\n\n\n\n\n\n\nviewof repeats = Inputs.range([1, 20], {label: \"Repeats\", value: 1, step: 1})\n\n\n\n\n\n\n\nThen we can do the sampling process we just described with our estimated population!"
+    "text": "One way to frame this\nRather than using our sample statistic to estimate our population parameter, we’ll use our sample to estimate our population.\n\n\nAssume our much larger population follows the same distribution as our sample.\nOur estimated population is the limit as we repeat each observation in our sample infinitely many times.\n\n\n\n\nPopulation\n\nPlot.plot({\n  height: 300,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(population.arraySync(), Plot.dodgeY({x: \"0\", r:1})),\n  ]\n})\n\n\n\n\n\n\n\nPopulation estimate\n\nPlot.plot({\n  height: 300,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(tf.tidy(() =&gt; tf.tile(weights, [repeats, 1]).arraySync()), Plot.dodgeY({x: \"0\", r: 5 / Math.sqrt(repeats)})),\n  ]\n})\n\n\n\n\n\n\n\nviewof repeats = Inputs.range([1, 20], {label: \"Repeats\", value: 1, step: 1})\n\n\n\n\n\n\n\n\nThen we can do the sampling process we just described with our estimated population!"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#so-far-non-parametric-bootstrapping",
@@ -5393,8 +5393,8 @@
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#classic-parametric-approach-4",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#classic-parametric-approach-4",
     "title": "Data Analytics and Visualization",
-    "section": "Classic (parametric) approach",
-    "text": "Classic (parametric) approach\nModel-based inference\nAssumptions we make\n\nObservations in our sample are i.i.d.\nOur sample is representative of the population\nWe know the form of the population distribution.\nWe can analytically derive a confidence interval for our statistic"
+    "section": "",
+    "text": "Assumptions we make\n\nObservations in our sample are i.i.d.\nOur sample is representative of the population\nWe know the form of the population distribution.\nWe can analytically derive a confidence interval for our statistic"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-2/slides-1-2.html#a-new-dataset-wind-vectors",
@@ -5548,7 +5548,7 @@
     "href": "modules/01-Single-variable/lectures/Lecture-1-2/slides-1-2.html#imdb-ratings",
     "title": "Data Analytics and Visualization",
     "section": "IMDB Ratings",
-    "text": "IMDB Ratings\nUser ratings for movies on IMDB.\n\nimdb = d3Fetch.json(\"https://raw.githubusercontent.com/vega/vega-datasets/master/data/movies.json\");\nimdbpopulation = tf.tensor(imdb.map(d =&gt; parseFloat(d['IMDB Rating'])).filter((d) =&gt; d == d)).reshape([-1, 1]);\n\nPlot.plot({\n  height: 500,\n  width: 1000,\n  x: {label: \"IMDB Rating\", domain: tf.tidy(() =&gt; {return [imdbpopulation.min().arraySync(), imdbpopulation.max().arraySync()]})},\n  color: {legend: true},\n  marks: [\n    Plot.dot(imdb, Plot.dodgeY({x: \"IMDB Rating\", r:1.5, tip: true, title: \"Title\", fill: \"Major Genre\"})),\n  ]\n})"
+    "text": "IMDB Ratings\nUser ratings for movies on IMDB.\n\nimdb = { \n  let data = await d3Fetch.json(\"https://raw.githubusercontent.com/vega/vega-datasets/master/data/movies.json\");\n  return data.map((d) =&gt; {\n    d[\"Major Genre\"] = d[\"Major Genre\"] || \"Unclassified\";\n    return d;\n  });\n};\nimdbpopulation = tf.tensor(imdb.map(d =&gt; parseFloat(d['IMDB Rating'])).filter((d) =&gt; d == d)).reshape([-1, 1]);\n\nPlot.plot({\n  height: 500,\n  width: 1000,\n  x: {label: \"IMDB Rating\", domain: tf.tidy(() =&gt; {return [imdbpopulation.min().arraySync(), imdbpopulation.max().arraySync()]})},\n  color: {legend: true},\n  marks: [\n    Plot.dot(imdb, Plot.dodgeY({x: \"IMDB Rating\", r:1.5, tip: true, title: \"Title\", fill: \"Major Genre\"})),\n  ]\n})"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-2/slides-1-2.html#parametric-bootstrapping-3",
@@ -5653,14 +5653,14 @@
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#simulation-ci-a-simple-approach",
     "title": "Data Analytics and Visualization",
     "section": "Simulation CI: a simple approach",
-    "text": "Simulation CI: a simple approach\nComputing a 95% confidence interval with resampling is simple!\n\nJust take the 2.5% percentile and 97.5% percentile of our bootstrapped statistics.\n\n\n\n\ndef simple_simulation_ci(data, statistic_fun, nsamples, confidence=0.95):\n    # Distribution of statistic estimates\n    estimates = simulate_samples(data, statistic_fun, nsamples)\n    margin = (1 - confidence) / 2\n    lower = estimates[ceil(nsamples * margin)]\n    upper = estimates[ceil(nsamples * (1 - margin))] \n    return lower, upper\n\nHere we sort the data and take indices 0.025N and 0.975N\n\n\n\n\n\n\n\n{\n  popresampled\n  if (popestimates.length &lt; 500) {\n    return Plot.plot({\n      height: 200,\n      width: 1000,\n      color: {\n        scheme: \"Reds\"\n      },\n      x: {label: \"Wind speed (m/s)\"},\n      y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.dot(popestimates, Plot.dodgeY({x: \"0\"})),\n        Plot.ruleX(popci, {stroke: 'red'}),\n        Plot.areaY([[popci[0], 1], [popci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        Plot.ruleX(parameter, {stroke: 'blue', strokeWidth: 3}),\n    Plot.tip([\"Distribution of statistic\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  } else {\n    return Plot.plot({\n      height: 200,\n      width: 1000,\n      x: {label: \"Wind speed (m/s)\"},\n      y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.ruleY([0]),\n        Plot.rectY(popestimates, Plot.binX({y: \"count\"}, {x: \"0\", thresholds: 'scott'})),\n        Plot.ruleX(popci, {stroke: 'red', strokeWidth: 3}),\n        Plot.areaY([[popci[0], 1], [popci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        Plot.ruleX([parameter], {stroke: 'blue', strokeWidth: 3}),\n    Plot.tip([\"Distribution of statistic\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  }\n}\n\n\n\n\n\n\nExample resampled percentiles"
+    "text": "Simulation CI: a simple approach\nComputing a 95% confidence interval with resampling is simple!\n\nJust take the 2.5% percentile and 97.5% percentile of our bootstrapped statistics.\n\n\n\n\ndef simple_simulation_ci(data, statistic_fun, nsamples, confidence=0.95):\n    # Distribution of statistic estimates\n    estimates = simulate_samples(data, statistic_fun, nsamples)\n    margin = (1 - confidence) / 2\n    lower = estimates[ceil(nsamples * margin)]\n    upper = estimates[ceil(nsamples * (1 - margin))] \n    return lower, upper\n\nHere we sort the data and take indices \\(0.025N\\) and \\(0.975N\\)\n\n\n\n\n\n\n\n{\n  popresampled\n  if (popestimates.length &lt; 500) {\n    return Plot.plot({\n      height: 200,\n      width: 1000,\n      color: {\n        scheme: \"Reds\"\n      },\n      x: {label: \"Wind speed (m/s)\"},\n      y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.dot(popestimates, Plot.dodgeY({x: \"0\"})),\n        Plot.ruleX(popci, {stroke: 'red'}),\n        Plot.areaY([[popci[0], 1], [popci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        Plot.ruleX(parameter, {stroke: 'blue', strokeWidth: 3}),\n    Plot.tip([\"Distribution of statistic\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  } else {\n    return Plot.plot({\n      height: 200,\n      width: 1000,\n      x: {label: \"Wind speed (m/s)\"},\n      y: {label: \"\", ticks: 0},\n      marks: [\n        Plot.ruleY([0]),\n        Plot.rectY(popestimates, Plot.binX({y: \"count\"}, {x: \"0\", thresholds: 'scott'})),\n        Plot.ruleX(popci, {stroke: 'red', strokeWidth: 3}),\n        Plot.areaY([[popci[0], 1], [popci[1], 1]], {x: \"0\", y: \"1\", fill: \"red\", fillOpacity: 0.05}),\n        Plot.ruleX([parameter], {stroke: 'blue', strokeWidth: 3}),\n    Plot.tip([\"Distribution of statistic\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n      ]\n    })\n  }\n}\n\n\n\n\n\n\nExample resampled percentiles"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#what-if-we-can-fake-new-samples-from-the-population-1",
     "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#what-if-we-can-fake-new-samples-from-the-population-1",
     "title": "Data Analytics and Visualization",
     "section": "What if we can fake new samples from the population?",
-    "text": "What if we can fake new samples from the population?\nThis is the idea behind bootstrapping. Rather than collecting new samples, we’ll resample our existing data.\nWe’ll use the empirical distribution of our data\n\nSample: \\{x_1,...,x_N\\}\nNew (bootstrapped) sample: \\{\\hat{x}_1,...,\\hat{x}_N\\} \\sim \\hat{p}(x)\n\nEmpirical distribution \\hat{p}(x) = \\frac{1}{N} \\sum_{i=1}^{N} I(x=x_i)"
+    "text": "What if we can fake new samples from the population?\nThis is the idea behind bootstrapping. Rather than collecting new samples, we’ll resample our existing data.\n\nWe’ll use the empirical distribution of our data\n\nSample: \\(\\{x_1,...,x_N\\}\\)\nNew (bootstrapped) sample: \\(\\{\\hat{x}_1,...,\\hat{x}_N\\} \\sim \\hat{p}(x)\\)\n\nEmpirical distribution \\[\\hat{p}(x) = \\frac{1}{N} \\sum_{i=1}^{N} I(x=x_i)\\]"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html#empirical-distribution",
@@ -5689,5 +5689,460 @@
     "title": "Data Analytics and Visualization",
     "section": "",
     "text": "tf = require('@tensorflow/tfjs@4.11.0')\nd3Fetch = require(\"d3-fetch@1.1.2\")\ntquantile = import('https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-t-quantile@esm/index.mjs')\n\nwind = FileAttachment(\"data/wind.csv\").csv({typed: true})\nland = topojson.feature(europe, europe.objects.europe)\neurope = d3Fetch.json(\"https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson\")\ncircle = d3.geoCircle().center([0, 52]).radius(5.5).precision(2)()\n\nPlot.plot({\n  width: 500,\n  height: 500,\n  inset:  10,\n  aspectRatio: 1,\n  color: {\n    label: \"Speed (m/s)\",\n    zero: true,\n    legend: true\n  },\n  projection: {\n    type: \"azimuthal-equal-area\",\n    //rotate: [-9, -34],\n    domain: circle,\n    inset: 10\n  },\n  marks: [\n    Plot.graticule(),\n    Plot.geo(land, {fill: \"currentColor\", stroke: 'black', fill: 'white'}),\n    Plot.vector(wind, {\n      x: \"longitude\",\n      y: \"latitude\",\n      rotate: ({u, v}) =&gt; Math.atan2(u, v) * 180 / Math.PI,\n      length: ({u, v}) =&gt; Math.hypot(u, v),\n      stroke: ({u, v}) =&gt; Math.hypot(u, v)\n    }),    \n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe’ll focus on just the speed variable.\n\ndata2 = d3Fetch.csv(\"https://raw.githubusercontent.com/vega/vega-datasets/master/data/windvectors.csv\");\nwindpopulation = tf.tensor(data2.map(d =&gt; parseFloat(d['speed']))).reshape([-1, 1]);\n\n\nPlot.plot({\n  height: 500,\n  width: 500,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [windpopulation.min().arraySync(), windpopulation.max().arraySync()]})},\n  marks: [\n    Plot.dot(windpopulation.arraySync(), Plot.dodgeY({x: \"0\", r:1.5, fill: '0'})),\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUser ratings for movies on IMDB.\n\nimdb = d3Fetch.json(\"https://raw.githubusercontent.com/vega/vega-datasets/master/data/movies.json\");\nimdbpopulation = tf.tensor(imdb.map(d =&gt; parseFloat(d['IMDB Rating'])).filter((d) =&gt; d == d)).reshape([-1, 1]);\n\nPlot.plot({\n  height: 500,\n  width: 1000,\n  x: {label: \"IMDB Rating\", domain: tf.tidy(() =&gt; {return [imdbpopulation.min().arraySync(), imdbpopulation.max().arraySync()]})},\n  marks: [\n    Plot.dot(imdb, Plot.dodgeY({x: \"IMDB Rating\", r:1.5, tip: true, title: \"Title\"})),\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof dataset = Inputs.select([\"wind speed\", \"IMDB rating\"], {label: \"Dataset\"});\npopulation = (dataset == \"wind speed\") ? windpopulation : imdbpopulation;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTypically, datasets we collect do not contain the entire universe. They are a sample from a much larger population.\n\nPlot.plot({\n  height: 250,\n  width: 1000,\n  x: {label: dataset, domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(population.arraySync(), Plot.dodgeY({x: \"0\", r:1})),\n    Plot.tip([\"All possible \" + dataset + \"s\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\nviewof sample = Inputs.range([1, 1000], {label: \"Sample\", value: 200, step: 1})\nresample = function(x, size) {\n  return tf.tidy(() =&gt; {\n    \n    let inds;\n    let counts;\n    if (size) {\n      inds = tf.randomUniformInt([size], 0, x.shape[0]);\n      return x.gather(inds).reshape([-1, 1]);\n    } else {\n      inds = tf.randomUniformInt([x.shape[0]], 0, x.shape[0]);\n      counts = tf.bincount(inds, [], x.shape[0]).reshape(x.shape);\n      return tf.concat([x.gather(inds), x, counts], 1);\n    }\n  });\n}\n\nweights = resample(population, sample);\nPlot.plot({\n  height: 180,\n  width: 1000,\n  x: {label: dataset, domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.tip([\"The dataset we've collected\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe can compute a statistic of interest using our sample.\n\n\n\nviewof statistic = Inputs.select([\"Mean\", \"Median\", \"Percentile\", \"Variance\", \"StdDev\"], {label: \"Statistic\"});\n\n\n\n\n\n\n\n\nviewof percentile =  Inputs.range([0, 100], {label: (statistic == \"Percentile\") ? \"Percentile\" : \"\", step: 1});\n\n\n\n\n\n\n\n\n\nquantile = {\n  const asc = arr =&gt; arr.sort((a, b) =&gt; a - b);\n  const sum = arr =&gt; arr.reduce((a, b) =&gt; a + b, 0);\n  const mean = arr =&gt; sum(arr) / arr.length;\n  \n  // sample standard deviation\n  const std = (arr) =&gt; {\n      const mu = mean(arr);\n      const diffArr = arr.map(a =&gt; (a - mu) ** 2);\n      return Math.sqrt(sum(diffArr) / (arr.length - 1));\n  };\n  \n  const quantile = (arr, q) =&gt; {\n      const sorted = asc(arr);\n      const pos = (sorted.length - 1) * q;\n      const base = Math.floor(pos);\n      const rest = pos - base;\n      if (sorted[base + 1] !== undefined) {\n          return sorted[base] + rest * (sorted[base + 1] - sorted[base]);\n      } else {\n          return sorted[base];\n      }\n  };\n  return quantile;\n}\n\nstdJS = {\n  const asc = arr =&gt; arr.sort((a, b) =&gt; a - b);\n  const sum = arr =&gt; arr.reduce((a, b) =&gt; a + b, 0);\n  const mean = arr =&gt; sum(arr) / arr.length;\n  \n  // sample standard deviation\n  const std = (arr) =&gt; {\n      const mu = mean(arr);\n      const diffArr = arr.map(a =&gt; (a - mu) ** 2);\n      return Math.sqrt(sum(diffArr) / (arr.length - 1));\n  };\n\n  return std;\n}\n\ncomputeStat = (x) =&gt; {\n  let est = tf.tidy(() =&gt; {\n    let values = x.slice([0, 0], [-1, 1]).reshape([-1]);\n    if (statistic == 'Mean') {\n      return values.mean().arraySync();\n    } else if (statistic == 'Median') {\n      return quantile(values.arraySync(), 0.5);\n    } else if (statistic == 'Percentile') {\n      return quantile(values.arraySync(), percentile / 100);\n    } else if (statistic == 'Variance') {\n      return Math.pow(std(values.arraySync()), 2);\n    } else if (statistic == 'StdDev') {\n      return stdJS(values.arraySync());\n    }\n  });\n  return est;\n}\n\nnormalPlot = function(loc, scale){\n  return tf.tidy(()=&gt; {\n    let x = tf.linspace(loc - 4 * scale, loc + 4 * scale, 1000);\n    let normalizer = 1 / (scale * Math.sqrt(2 * Math.PI));\n    let px = x.sub(loc).div(scale).square().mul(-0.5).exp().mul(normalizer);\n    return tf.stack([x, px]).transpose().arraySync();\n  });\n}\n\nmean = (x) =&gt; {return tf.mean(x).arraySync()};\nstd = function(x) {\n  let m = mean(x);\n  return x.sub(m).square().sum().div(x.shape[0] - 1).sqrt().arraySync();\n};\n\nN = weights.shape[0];\nsampleMean = mean(weights);\nsampleStd = std(weights);\nsampleDomain = [sampleMean - 4 * sampleStd, sampleMean + 4 * sampleStd];\ntci = tquantile.default(0.025, N - 1) * sampleStd / Math.sqrt(N)\nmeanCI = [[sampleMean - tci, \"Model-based CI\"], [sampleMean + tci, \"Model-based CI\"]];\nmeanCIPlot = statistic == \"Mean\" ? [Plot.ruleX(meanCI, {stroke: 'green', fontWeight: 'bold', x: \"0\"}), Plot.tip(meanCI, Plot.pointerX({x: \"0\", title: \"1\"}))] : [];\n\nestimate = computeStat(weights)\nPlot.plot({\n  height: 200,\n  width: 1000,\n  x: {label: dataset, domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Sample statistic\"], {x: estimate, dy: -50, anchor: \"left\", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHere our   is"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-1/slides-1-1.html",
+    "title": "Data Analytics and Visualization",
+    "section": "",
+    "text": "tf = require('@tensorflow/tfjs@4.11.0')\nd3Fetch = require(\"d3-fetch@1.1.2\")\n\nwind = FileAttachment(\"data/wind.csv\").csv({typed: true})\nland = topojson.feature(europe, europe.objects.europe)\neurope = d3Fetch.json(\"https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson\")\ncircle = d3.geoCircle().center([0, 52]).radius(5.5).precision(2)()\n\nPlot.plot({\n  width: 500,\n  height: 500,\n  inset:  10,\n  aspectRatio: 1,\n  color: {\n    label: \"Speed (m/s)\",\n    zero: true,\n    legend: true\n  },\n  projection: {\n    type: \"azimuthal-equal-area\",\n    //rotate: [-9, -34],\n    domain: circle,\n    inset: 10\n  },\n  marks: [\n    Plot.graticule(),\n    Plot.geo(land, {fill: \"currentColor\", stroke: 'black', fill: 'white'}),\n    Plot.vector(wind, {\n      x: \"longitude\",\n      y: \"latitude\",\n      rotate: ({u, v}) =&gt; Math.atan2(u, v) * 180 / Math.PI,\n      length: ({u, v}) =&gt; Math.hypot(u, v),\n      stroke: ({u, v}) =&gt; Math.hypot(u, v)\n    }),    \n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe’ll focus on just the speed variable.\n\ndata2 = d3Fetch.csv(\"https://raw.githubusercontent.com/vega/vega-datasets/master/data/windvectors.csv\");\npopulation = tf.tensor(data2.map(d =&gt; parseFloat(d['speed']))).reshape([-1, 1]);\n\nPlot.plot({\n  height: 500,\n  width: 500,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(population.arraySync(), Plot.dodgeY({x: \"0\", r:1.5, fill: '0'})),\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTypically, datasets we collect do not contain the entire universe. They are a sample from a much larger population.\n\nPlot.plot({\n  height: 250,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(population.arraySync(), Plot.dodgeY({x: \"0\", r:1})),\n    Plot.tip([\"All possible wind speeds\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\nviewof sample = Inputs.range([1, 1000], {label: \"Sample\", value: 200, step: 1})\nresample = function(x, size) {\n  return tf.tidy(() =&gt; {\n    \n    let inds;\n    let counts;\n    if (size) {\n      inds = tf.randomUniformInt([size], 0, x.shape[0]);\n      return x.gather(inds).reshape([-1, 1]);\n    } else {\n      inds = tf.randomUniformInt([x.shape[0]], 0, x.shape[0]);\n      counts = tf.bincount(inds, [], x.shape[0]).reshape(x.shape);\n      return tf.concat([x.gather(inds), x, counts], 1);\n    }\n  });\n}\n\nweights = resample(population, sample);\nPlot.plot({\n  height: 200,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.tip([\"The dataset we've collected\"], {frameAnchor: \"top-right\", strokeWidth: 0, fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe can compute a statistic of interest using our sample.\n\n\n\nviewof statistic = Inputs.select([\"Mean\", \"Median\", \"Percentile\", \"Variance\", \"StdDev\"], {label: \"Statistic\"});\n\n\n\n\n\n\n\n\nviewof percentile =  Inputs.range([0, 100], {label: (statistic == \"Percentile\") ? \"Percentile\" : \"\", step: 1});\n\n\n\n\n\n\n\n\n\nquantile = {\n  const asc = arr =&gt; arr.sort((a, b) =&gt; a - b);\n  const sum = arr =&gt; arr.reduce((a, b) =&gt; a + b, 0);\n  const mean = arr =&gt; sum(arr) / arr.length;\n  \n  // sample standard deviation\n  const std = (arr) =&gt; {\n      const mu = mean(arr);\n      const diffArr = arr.map(a =&gt; (a - mu) ** 2);\n      return Math.sqrt(sum(diffArr) / (arr.length - 1));\n  };\n  \n  const quantile = (arr, q) =&gt; {\n      const sorted = asc(arr);\n      const pos = (sorted.length - 1) * q;\n      const base = Math.floor(pos);\n      const rest = pos - base;\n      if (sorted[base + 1] !== undefined) {\n          return sorted[base] + rest * (sorted[base + 1] - sorted[base]);\n      } else {\n          return sorted[base];\n      }\n  };\n  return quantile;\n}\n\nstd = {\n  const asc = arr =&gt; arr.sort((a, b) =&gt; a - b);\n  const sum = arr =&gt; arr.reduce((a, b) =&gt; a + b, 0);\n  const mean = arr =&gt; sum(arr) / arr.length;\n  \n  // sample standard deviation\n  const std = (arr) =&gt; {\n      const mu = mean(arr);\n      const diffArr = arr.map(a =&gt; (a - mu) ** 2);\n      return Math.sqrt(sum(diffArr) / (arr.length - 1));\n  };\n\n  return std;\n}\n\ncomputeStat = (x) =&gt; {\n  let est = tf.tidy(() =&gt; {\n    let values = x.slice([0, 0], [-1, 1]).reshape([-1]);\n    if (statistic == 'Mean') {\n      return values.mean().arraySync();\n    } else if (statistic == 'Median') {\n      return quantile(values.arraySync(), 0.5);\n    } else if (statistic == 'Percentile') {\n      return quantile(values.arraySync(), percentile / 100);\n    } else if (statistic == 'Variance') {\n      return Math.pow(std(values.arraySync()), 2);\n    } else if (statistic == 'StdDev') {\n      return std(values.arraySync());\n    }\n  });\n  return est;\n}\n\nestimate = computeStat(weights)\nPlot.plot({\n  height: 200,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Sample statistic\"], {x: estimate, dy: -50, anchor: \"left\", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHere our  wind speed is \n\n\n\nWhat is the 90th percentile of wind speeds?\nWhat is the probability that the wind speed is greater than 10 m/s?\n\n\n\n\n\nWhat we’re really interested in is the value for the population, which we call the corresponding parameter.\n\n\nWhat is the true mean wind speed?\nWhat is the true probability that the wind speed is greater than 10 m/s?\n\n\n\nPlot.plot({\n  height: 300,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(population.arraySync(), Plot.dodgeY({x: \"0\", r:1})),\n    Plot.ruleX([5.4], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Population parameter\"], {x: 5.4, dy: -50, anchor: \"left\", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\nWe can’t know for sure, but we can try to quantify our uncertainty.\n\n\n\nOur sample statistic is a point estimate of the population parameter.\n\nA single value\nHopefully close to the parameter, but might be far if we’re unlucky\n\n\nPlot.plot({\n  height: 200,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.ruleX([estimate], {stroke: 'blue', strokeWidth: 2}),\n    Plot.tip([\"Sample statistic\"], {x: estimate, dy: -50, anchor: \"left\", stroke: 'blue', fontColor:'blue', fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\nIn order to understand where our population parameter might be, we would like an estimate of the uncertainty of our sample statistic.\n\n\n\nA 95% confidence interval for a statistic is a range computed from a sample such that:\n\nfor 95% of samples the true parameter will fall in the range.\n\n\nPlot.plot({\n  height: 200,\n  width: 1000,\n  x: {label: \"Wind speed (m/s)\", domain: tf.tidy(() =&gt; {return [population.min().arraySync(), population.max().arraySync()]})},\n  marks: [\n    Plot.dot(weights.arraySync(), Plot.dodgeY({x: \"0\", stroke: 'black'})),\n    Plot.ruleX([1.5, 8.3], {stroke: 'red', strokeWidth: 2}),\n    Plot.tip([\"Lower interval edge\"], {x: 1.5, dy: -50, anchor: \"left\", stroke: 'red', fontColor:'red', fontWeight: 'bold', fontSize: 12, pathFilter: false}),\n    Plot.tip([\"Upper interval edge\"], {x:8.3, dy: -50, anchor: \"right\", stroke: 'red', fontColor:'red', fontWeight: 'bold', fontSize: 12, pathFilter: false})\n  ]\n})\n\n\n\n\n\n\nThis gives us a sense of the uncertainty of our statistic across samples.\n\n\n\nDerive a model for the distribution of the statistic of interest.\n\n\n\n\n\nCalculate a confidence interval from this distribution.\n\n\n\nExample: Confidence interval on the population mean (\\(\\mu\\)).\nAssuming:\n\n\nObservations are independently sampled.\nThe population distribution is normal\n\n\nThen the statistic:\n\n\n\\[T = \\frac{\\bar{x} - \\mu}{\\frac{s}{\\sqrt{N}}}\\]\nHas a Student’s T distribution with \\(N-1\\) degrees of freedom\n\n\n\n\n\n\n\n\n\n\n\nExample: Confidence interval on the population mean (\\(\\mu\\)).\n\n\n\\[T = \\frac{\\bar{x} - \\mu}{\\frac{s}{\\sqrt{N}}}\\]\nHas a Student’s T distribution with \\(N-1\\) degrees of freedom.\nUnder this distribution define \\(q_{2.5}\\) as:\n\\[P(T \\leq q_{2.5}) = 0.025\\]\n\n\n\n\n\n\nLower edge of CI \\(\\theta_{l}\\)\n\\[q_{2.5} = \\frac{\\bar{x} - \\theta_{l}}{\\frac{s}{\\sqrt{N}}}\\] Therefore \\[\\theta_{l} = \\bar{x} - q_{2.5} \\frac{s}{\\sqrt{N}}\\]\nUpper edge of CI \\(\\theta_{u}\\) is symmetric \\[\\theta_{u} = \\bar{x} + q_{97.5} \\frac{s}{\\sqrt{N}}\\]\n\n\n\n\n\nDisadvantages:\n\nRequires possibly unrealistic assumptions about population\nRequires complex new derivation for every new statistic\nThis derivation might be unknown/impossible!\n\n\n\n\n\n\nAssumptions we make\n\nObservations in our sample are i.i.d.\nOur sample is representative of the population\nWe know the form of the population distribution.\nWe can analytically derive a confidence interval for our statistic\n\n\n\n\n\nFor the mean:\n\nthe central limit theorem kicks in if our sample is large enough.\n\nBut what about for other statistics?"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-0/slides-1-0.html",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-0/slides-1-0.html",
+    "title": "Data Analytics and Visualization",
+    "section": "",
+    "text": "What can we do with just one of these columns?\n\nimport numpy as np\nimport pandas as pd\n\nfrom lets_plot import *\nLetsPlot.setup_html()\n\nimport vega_datasets\nall_cars = vega_datasets.data.cars()\ncars = all_cars\ncars\n\n\n            \n            \n            \n\n\n\n\n\n\n\n\n\nName\nMiles_per_Gallon\nCylinders\nDisplacement\nHorsepower\nWeight_in_lbs\nAcceleration\nYear\nOrigin\n\n\n\n\n0\nchevrolet chevelle malibu\n18.0\n8\n307.0\n130.0\n3504\n12.0\n1970-01-01\nUSA\n\n\n1\nbuick skylark 320\n15.0\n8\n350.0\n165.0\n3693\n11.5\n1970-01-01\nUSA\n\n\n2\nplymouth satellite\n18.0\n8\n318.0\n150.0\n3436\n11.0\n1970-01-01\nUSA\n\n\n3\namc rebel sst\n16.0\n8\n304.0\n150.0\n3433\n12.0\n1970-01-01\nUSA\n\n\n4\nford torino\n17.0\n8\n302.0\n140.0\n3449\n10.5\n1970-01-01\nUSA\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n401\nford mustang gl\n27.0\n4\n140.0\n86.0\n2790\n15.6\n1982-01-01\nUSA\n\n\n402\nvw pickup\n44.0\n4\n97.0\n52.0\n2130\n24.6\n1982-01-01\nEurope\n\n\n403\ndodge rampage\n32.0\n4\n135.0\n84.0\n2295\n11.6\n1982-01-01\nUSA\n\n\n404\nford ranger\n28.0\n4\n120.0\n79.0\n2625\n18.6\n1982-01-01\nUSA\n\n\n405\nchevy s-10\n31.0\n4\n119.0\n82.0\n2720\n19.4\n1982-01-01\nUSA\n\n\n\n\n406 rows × 9 columns\n\n\n\n\n\n\n\n\n\nNomial\nOrdinal\nQuantitative\n\n\n\ncars.head(15)\n\n\n\n\n\n\n\n\nName\nMiles_per_Gallon\nCylinders\nDisplacement\nHorsepower\nWeight_in_lbs\nAcceleration\nYear\nOrigin\n\n\n\n\n0\nchevrolet chevelle malibu\n18.0\n8\n307.0\n130.0\n3504\n12.0\n1970-01-01\nUSA\n\n\n1\nbuick skylark 320\n15.0\n8\n350.0\n165.0\n3693\n11.5\n1970-01-01\nUSA\n\n\n2\nplymouth satellite\n18.0\n8\n318.0\n150.0\n3436\n11.0\n1970-01-01\nUSA\n\n\n3\namc rebel sst\n16.0\n8\n304.0\n150.0\n3433\n12.0\n1970-01-01\nUSA\n\n\n4\nford torino\n17.0\n8\n302.0\n140.0\n3449\n10.5\n1970-01-01\nUSA\n\n\n5\nford galaxie 500\n15.0\n8\n429.0\n198.0\n4341\n10.0\n1970-01-01\nUSA\n\n\n6\nchevrolet impala\n14.0\n8\n454.0\n220.0\n4354\n9.0\n1970-01-01\nUSA\n\n\n7\nplymouth fury iii\n14.0\n8\n440.0\n215.0\n4312\n8.5\n1970-01-01\nUSA\n\n\n8\npontiac catalina\n14.0\n8\n455.0\n225.0\n4425\n10.0\n1970-01-01\nUSA\n\n\n9\namc ambassador dpl\n15.0\n8\n390.0\n190.0\n3850\n8.5\n1970-01-01\nUSA\n\n\n10\ncitroen ds-21 pallas\nNaN\n4\n133.0\n115.0\n3090\n17.5\n1970-01-01\nEurope\n\n\n11\nchevrolet chevelle concours (sw)\nNaN\n8\n350.0\n165.0\n4142\n11.5\n1970-01-01\nUSA\n\n\n12\nford torino (sw)\nNaN\n8\n351.0\n153.0\n4034\n11.0\n1970-01-01\nUSA\n\n\n13\nplymouth satellite (sw)\nNaN\n8\n383.0\n175.0\n4166\n10.5\n1970-01-01\nUSA\n\n\n14\namc rebel sst (sw)\nNaN\n8\n360.0\n175.0\n3850\n11.0\n1970-01-01\nUSA"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/notebook-1-3.html",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/notebook-1-3.html",
+    "title": "Data Analytics and Visualization",
+    "section": "",
+    "text": "import pandas as pd\nimport numpy as np\nfrom lets_plot import *\nLetsPlot.setup_html()\n\n\n            \n            \n            \n\n\n\nclark = pd.read_csv('data/clark.csv')\ncopper = pd.read_csv('data/copper.csv')\nogunbawale = pd.read_csv('data/ogunbawale.csv')\nstewart = pd.read_csv('data/stewart.csv')\nwilson = pd.read_csv('data/wilson.csv')\n\n\nclark['name'] = 'Clark'\ncopper['name'] = 'Copper'\nogunbawale['name'] = 'Ogunbawale'\nstewart['name'] = 'Stewart'\nwilson['name'] = 'Wilson'\n\nplayers = pd.concat([clark, copper, ogunbawale, stewart, wilson])\n\n\nplayers.to_csv('data/wnba_players.csv')\n\n\nggplot() + geom_bar(data=clark, mapping=aes(x='AST', fill='name')) + ggsize(1000, 400)\n\n   \n   \n\n\n\nggplot() + geom_density(data=clark, mapping=aes(x='AST', color='name', fill='name'), alpha=0.05) + ggsize(1000, 400)\n\n   \n   \n\n\n\nggplot() + geom_density(data=clark, mapping=aes(x='AST', color='name', fill='name'), alpha=0.05, bw=0.25) + ggsize(1000, 400)\n\n   \n   \n\n\n\nggplot() + geom_density(data=clark, mapping=aes(x='AST', color='name', fill='name'), alpha=0.05, bw=1.) + ggsize(1000, 400)\n\n   \n   \n\n\n\nfrom scipy.special import factorial\n\nlam = clark['AST'].mean()\nx = np.arange(25)\ny = (np.exp(-lam) * lam ** x) / factorial(x)\n\n\nggplot() + geom_line(data=pd.DataFrame(dict(x=x, y=y)), mapping=aes(x='x', y='y'))\n\n   \n   \n\n\n\nggplot() + geom_bar(data=pd.concat([clark, wilson]), mapping=aes(x='AST', fill='name')) + ggsize(1000, 400)\n\n   \n   \n\n\n\nggplot() + geom_bar(data=pd.concat([clark, wilson]), mapping=aes(x='AST', fill='name'), position='nudge') + ggsize(1000, 400)\n\n   \n   \n\n\n\nggplot() + geom_bar(data=pd.concat([clark, wilson]), mapping=aes(x='AST', fill='name'), position='dodge') + ggsize(1000, 400)\n\n   \n   \n\n\n\nggplot() + geom_bar(data=players, mapping=aes(x='AST', fill='name')) + ggsize(1000, 400)\n\n   \n   \n\n\n\nggplot() + geom_bar(data=players, mapping=aes(x='AST', fill='name'), position='dodge') + ggsize(1000, 400)\n\n   \n   \n\n\n\nggplot() + geom_density(data=players, mapping=aes(x='AST', color='name', fill='name'), alpha=0.05) + ggsize(1000, 400)\n\n   \n   \n\n\n\nggplot() + geom_bar(data=players, mapping=aes(x='AST', fill='name'), position='') \n\n\nggplot() + geom_density(data=players, mapping=aes(x='PTS', color='name', fill='name'), alpha=0.1) + ggsize(1000, 400)"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-1/handout-0-1.html",
+    "href": "modules/00-Introduction/lectures/Lecture-0-1/handout-0-1.html",
+    "title": "Name:",
+    "section": "",
+    "text": "Complete this worksheet during class and turn it in at the end. Please print your full name above to ensure participation credit."
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-1/handout-0-1.html#in-class-questions",
+    "href": "modules/00-Introduction/lectures/Lecture-0-1/handout-0-1.html#in-class-questions",
+    "title": "Name:",
+    "section": "In-class questions",
+    "text": "In-class questions\n\nWhat information is contained in this plot?\n\n\n\n\n\n\n\n\n\n\nWhich data organization is most logical to you?\n\n\n\n\n\n\n\n\n\n\nWhat visual dimension is encoding each piece of information?\n\n\n\n\n\n\n\n\n\n\nWhich encoding scheme seems most valuable?"
+  },
+  {
+    "objectID": "modules/00-Introduction/lectures/Lecture-0-1/handout-0-1.html#reflection-complete-at-the-end-of-class",
+    "href": "modules/00-Introduction/lectures/Lecture-0-1/handout-0-1.html#reflection-complete-at-the-end-of-class",
+    "title": "Name:",
+    "section": "Reflection (complete at the end of class)",
+    "text": "Reflection (complete at the end of class)\n\nDid these concepts seems obvious or obvious in hindsight?\n\n\n\n\n\n\n\n\n\n\nHave you used any of these libraries before?"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-2/handout-1-2.html",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-2/handout-1-2.html",
+    "title": "Name:",
+    "section": "",
+    "text": "Complete this worksheet during class and turn it in at the end. Please print your full name above to ensure participation credit."
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-2/handout-1-2.html#in-class-questions",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-2/handout-1-2.html#in-class-questions",
+    "title": "Name:",
+    "section": "In-class questions",
+    "text": "In-class questions\n\nCan you think of contexts where you would use Bootstrapping?\n\n\n\n\n\n\n\n\n\n\nWhy might classic techniques be preferred in some cases?"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-2/handout-1-2.html#reflection-complete-at-the-end-of-class",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-2/handout-1-2.html#reflection-complete-at-the-end-of-class",
+    "title": "Name:",
+    "section": "Reflection (complete at the end of class)",
+    "text": "Reflection (complete at the end of class)\n\nHow was the pace/difficulty of this material?"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-0/handout-1-0.html",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-0/handout-1-0.html",
+    "title": "Name:",
+    "section": "",
+    "text": "Complete this worksheet during class and turn it in at the end. Please print your full name above to ensure participation credit."
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-0/handout-1-0.html#in-class-questions",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-0/handout-1-0.html#in-class-questions",
+    "title": "Name:",
+    "section": "In-class questions",
+    "text": "In-class questions\n\nSimplify the box-and-whisker plot\n\n\n\n\n\n\n\n\n\n\nWhich plot do you prefer?\n\n\n\n\n\n\n\n\n\n\nWhich plot do you prefer?\n\n\n\n\n\n\n\n\n\n\nWhat is the ideal bin size?"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-0/handout-1-0.html#reflection-complete-at-the-end-of-class",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-0/handout-1-0.html#reflection-complete-at-the-end-of-class",
+    "title": "Name:",
+    "section": "Reflection (complete at the end of class)",
+    "text": "Reflection (complete at the end of class)\n\nWhat are your thoughts on the principles we discussed?\n\n\n\n\n\n\n\n\n\n\nWhat would you like to cover in statistics?"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/handout-1-1.html",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-1/handout-1-1.html",
+    "title": "Name:",
+    "section": "",
+    "text": "Complete this worksheet during class and turn it in at the end. Please print your full name above to ensure participation credit."
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/handout-1-1.html#in-class-questions",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-1/handout-1-1.html#in-class-questions",
+    "title": "Name:",
+    "section": "In-class questions",
+    "text": "In-class questions\n\nHow would you choose the ideal number of histogram bins?\n\n\n\n\n\n\n\n\n\n\nWhich single-variable plot do you prefer?"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-1/handout-1-1.html#reflection-complete-at-the-end-of-class",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-1/handout-1-1.html#reflection-complete-at-the-end-of-class",
+    "title": "Name:",
+    "section": "Reflection (complete at the end of class)",
+    "text": "Reflection (complete at the end of class)\n\nHow was the pace of this class?"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#catlin-clark",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#catlin-clark",
+    "title": "Data Analytics and Visualization",
+    "section": "Catlin Clark",
+    "text": "Catlin Clark"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#caitlin-clark",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#caitlin-clark",
+    "title": "Data Analytics and Visualization",
+    "section": "Caitlin Clark",
+    "text": "Caitlin Clark"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#the-data-from-basketball-reference.com",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#the-data-from-basketball-reference.com",
+    "title": "Data Analytics and Visualization",
+    "section": "The data (from basketball-reference.com )",
+    "text": "The data (from basketball-reference.com )\nFull data:\n\n\n\n\n\n\n\n\n\nRk\nDate\nAge\nTm\nUnnamed: 4\nOpp\nUnnamed: 6\nGS\nMP\nFG\n...\nORB\nDRB\nTRB\nAST\nSTL\nBLK\nTOV\nPF\nPTS\nGmSc\n\n\n\n\n0\n1\n2024-05-14\n22-113\nIND\n@\nCON\nL (-21)\n1\n32:27\n5\n...\n0\n0\n0\n3\n2\n0\n10\n4\n20\n4.0\n\n\n1\n2\n2024-05-16\n22-115\nIND\nNaN\nNYL\nL (-36)\n1\n30:08\n2\n...\n0\n7\n7\n6\n0\n1\n3\n5\n9\n6.2\n\n\n2\n3\n2024-05-18\n22-117\nIND\n@\nNYL\nL (-11)\n1\n34:27\n9\n...\n2\n4\n6\n8\n1\n0\n8\n3\n22\n13.7\n\n\n3\n4\n2024-05-20\n22-119\nIND\nNaN\nCON\nL (-4)\n1\n27:24\n5\n...\n0\n3\n3\n5\n0\n2\n5\n5\n17\n10.1\n\n\n4\n5\n2024-05-22\n22-121\nIND\n@\nSEA\nL (-2)\n1\n32:56\n6\n...\n1\n6\n7\n7\n0\n2\n3\n0\n21\n17.2\n\n\n5\n6\n2024-05-24\n22-123\nIND\n@\nLAS\nW (+5)\n1\n36:51\n4\n...\n1\n9\n10\n8\n4\n1\n2\n2\n11\n13.3\n\n\n6\n7\n2024-05-25\n22-124\nIND\n@\nLVA\nL (-19)\n1\n28:31\n2\n...\n0\n5\n5\n7\n1\n0\n6\n2\n8\n3.8\n\n\n7\n8\n2024-05-28\n22-127\nIND\nNaN\nLAS\nL (-6)\n1\n34:05\n7\n...\n0\n5\n5\n6\n3\n3\n7\n5\n30\n22.6\n\n\n8\n9\n2024-05-30\n22-129\nIND\nNaN\nSEA\nL (-15)\n1\n39:56\n6\n...\n1\n2\n3\n9\n0\n1\n7\n2\n20\n11.0\n\n\n9\n10\n2024-06-01\n22-131\nIND\nNaN\nCHI\nW (+1)\n1\n37:15\n4\n...\n1\n7\n8\n6\n1\n0\n5\n2\n11\n7.1\n\n\n\n\n10 rows × 28 columns\n\n\n\nAssists:\n\n\n0    3\n1    6\n2    8\n3    5\n4    7\nName: AST, dtype: int64"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#setup",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#setup",
+    "title": "Data Analytics and Visualization",
+    "section": "Setup",
+    "text": "Setup"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-1-histogram",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-1-histogram",
+    "title": "Data Analytics and Visualization",
+    "section": "Option 1: Histogram",
+    "text": "Option 1: Histogram\n\nggplot() + geom_histogram(data=clark, mapping=aes(x='AST')) + ggsize(1000, 400)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-2-kde",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-2-kde",
+    "title": "Data Analytics and Visualization",
+    "section": "Option 2: KDE",
+    "text": "Option 2: KDE\n\nggplot() + geom_density(data=clark, mapping=aes(x='AST'), alpha=0.05)\\\n     + ggsize(1000, 400)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-2-kde-bandwidth",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-2-kde-bandwidth",
+    "title": "Data Analytics and Visualization",
+    "section": "Option 2: KDE (bandwidth)",
+    "text": "Option 2: KDE (bandwidth)\n\nggplot() + geom_density(data=clark, mapping=aes(x='AST'), alpha=0.05, bw=1.)\\\n     + ggsize(1000, 250)\n\n   \n   \n\n\n\nggplot() + geom_density(data=clark, mapping=aes(x='AST'), alpha=0.05, bw=0.25)\\\n     + ggsize(1000, 250)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-2-kde-bandwidth-options",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-2-kde-bandwidth-options",
+    "title": "Data Analytics and Visualization",
+    "section": "Option 2: KDE (bandwidth options)",
+    "text": "Option 2: KDE (bandwidth options)\n\nggplot() + geom_density(data=clark, mapping=aes(x='AST'), alpha=0.05, bw=1.)\\\n     + ggsize(1000, 250)\n\n   \n   \n\n\n\nggplot() + geom_density(data=clark, mapping=aes(x='AST'), alpha=0.05, bw=0.25)\\\n     + ggsize(1000, 250)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#aside-mode-of-a-continuous-distribution",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#aside-mode-of-a-continuous-distribution",
+    "title": "Data Analytics and Visualization",
+    "section": "Aside: mode of a continuous distribution",
+    "text": "Aside: mode of a continuous distribution\nAny local maximum of the PDF\n2 modes\n\n\n   \n   \n\n\n12 modes\n\n\n   \n   \n\n\n\nThe number of modes is often an important consideration for modeling and visualization"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-1-histogram-bins",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-1-histogram-bins",
+    "title": "Data Analytics and Visualization",
+    "section": "Option 1: Histogram (bins)",
+    "text": "Option 1: Histogram (bins)\n\nggplot() + geom_histogram(data=clark, mapping=aes(x='AST'), bins=20)\\\n     + ggsize(1000, 400)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-1.5-bar-plot",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-1.5-bar-plot",
+    "title": "Data Analytics and Visualization",
+    "section": "Option 1.5: Bar plot",
+    "text": "Option 1.5: Bar plot\n\nggplot() + geom_bar(data=clark, mapping=aes(x='AST'))\\\n     + ggsize(1000, 400)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-2-bar-plot",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-2-bar-plot",
+    "title": "Data Analytics and Visualization",
+    "section": "Option 2: Bar plot",
+    "text": "Option 2: Bar plot\n\nggplot() + geom_bar(data=clark, mapping=aes(x='AST'))\\\n     + ggsize(1000, 400)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-3-kde",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-3-kde",
+    "title": "Data Analytics and Visualization",
+    "section": "Option 3: KDE",
+    "text": "Option 3: KDE\n\nggplot() + geom_density(data=clark, mapping=aes(x='AST'), alpha=0.05)\\\n     + ggsize(1000, 400)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-3-kde-bandwidth-options",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-3-kde-bandwidth-options",
+    "title": "Data Analytics and Visualization",
+    "section": "Option 3: KDE (bandwidth options)",
+    "text": "Option 3: KDE (bandwidth options)\n\nggplot() + geom_density(data=clark, mapping=aes(x='AST'), alpha=0.05, bw=1.)\\\n     + ggsize(1000, 250)\n\n   \n   \n\n\n\nggplot() + geom_density(data=clark, mapping=aes(x='AST'), alpha=0.05, bw=0.25)\\\n     + ggsize(1000, 250)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-2-bar-plot-1",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-2-bar-plot-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Option 2: Bar plot",
+    "text": "Option 2: Bar plot\n\nggplot() + geom_bar(data=clark, mapping=aes(x='AST'))\\\n     + ggsize(1000, 400)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-2-bar-plot-why",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#option-2-bar-plot-why",
+    "title": "Data Analytics and Visualization",
+    "section": "Option 2: Bar plot (why?)",
+    "text": "Option 2: Bar plot (why?)\n\nggplot() + geom_bar(data=clark, mapping=aes(x='AST'))\\\n     + ggsize(1000, 400)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#statistics-mean",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#statistics-mean",
+    "title": "Data Analytics and Visualization",
+    "section": "Statistics: Mean",
+    "text": "Statistics: Mean\nLet’s compute the mean statistic and plot it!\n\nmean_ast = clark['AST'].mean()\nggplot() + geom_bar(data=clark, mapping=aes(x='AST')) \\\n+ geom_vline(xintercept=clark['AST'].mean(), color='red', linetype='longdash')\\\n+ ggsize(1000, 400)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#double-double",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#double-double",
+    "title": "Data Analytics and Visualization",
+    "section": "Double double",
+    "text": "Double double\n\n\nFrom Wikipedia:\n“In basketball, a double-double is a single-game performance in which a player accumulates ten or more in two of the following five statistical categories: points, rebounds, assists, steals, and blocked shots.”\n\n\n\nFollow up question: in what fraction of games will Caitlin Clark get at least 10 assists?"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#statistics-above-10-assists",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#statistics-above-10-assists",
+    "title": "Data Analytics and Visualization",
+    "section": "Statistics: Above 10 assists",
+    "text": "Statistics: Above 10 assists\nLet’s compute this new statistic!\n\nggplot() + geom_bar(data=clark, mapping=aes(x='AST')) \\\n+ geom_vline(xintercept=10, color='red', linetype='longdash')\\\n+ ggsize(1000, 350)\n\n   \n   \n\n\n\ndef statistic(data):\n    return (data &gt;= 10).mean()\nprint('Fraction of games with &gt;= 10 assists:', statistic(clark['AST']))\n\nFraction of games with &gt;= 10 assists: 0.3"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#only-40-games",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#only-40-games",
+    "title": "Data Analytics and Visualization",
+    "section": "Only 40 games",
+    "text": "Only 40 games\nWhat’s our uncertainty about Caitlin Clark’s “true” double double rate?"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#bootstrapping",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#bootstrapping",
+    "title": "Data Analytics and Visualization",
+    "section": "Bootstrapping!",
+    "text": "Bootstrapping!\nSetup code:\n\nimport math \ndef bootstrap_sample(data):\n    N = len(data)                      # Number of obsevations\n    inds = np.random.randint(0, N, N)  # Resample from {1,...,N}, N times\n    return data[inds]                  # Return the new sample\n\ndef bootstrap_distribution(data, statistic_fun, nsamples):\n    estimates = []                       # Distribution of statistic estimates\n    for i in range(nsamples):            # Resample many times\n        sample = bootstrap_sample(data)  # Get a new bootstrapped sample\n        stat = statistic_fun(sample)     # Compute our statistic\n        estimates.append(stat)           # add it to the distribution\n    return estimates\n\ndef simple_simulation_ci(data, statistic_fun, nsamples, confidence=0.95):\n    # Distribution of statistic estimates\n    estimates = sorted(bootstrap_distribution(data, statistic_fun, nsamples))\n    margin = (1 - confidence) / 2\n    lower = estimates[math.ceil(nsamples * margin)]\n    upper = estimates[math.ceil(nsamples * (1 - margin))] \n    return estimates, lower, upper"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#bootstrapping-1",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#bootstrapping-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Bootstrapping!",
+    "text": "Bootstrapping!\n\nestimates, lower, upper = simple_simulation_ci(clark['AST'], statistic, 10000)\nestimates = pd.DataFrame({\"Simulated fraction\": estimates})\n\nggplot() + geom_bar(data=estimates, mapping=aes(x=\"Simulated fraction\"))\\\n+ geom_vline(xintercept=lower, color='red', linetype='longdash')\\\n+ geom_vline(xintercept=upper, color='red', linetype='longdash') + ggsize(1000, 350)\n\n   \n   \n\n\n\nprint('95% confidence interval: ', [lower, upper])\n\n95% confidence interval:  [np.float64(0.15), np.float64(0.45)]"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#probability-of-getting-20-assists-in-a-game",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#probability-of-getting-20-assists-in-a-game",
+    "title": "Data Analytics and Visualization",
+    "section": "Probability of getting >= 20 assists in a game?",
+    "text": "Probability of getting &gt;= 20 assists in a game?\n\nggplot() + geom_bar(data=clark, mapping=aes(x='AST'))+ geom_vline(xintercept=20, linetype='longdash', size=2) + ggsize(1000, 400)\n\n   \n   \n\n\n\ndef statistic(data):\n    return (data &gt;= 20).mean()\nprint('Fraction of games with &gt;= 20 assists:', statistic(clark['AST']))\n\nFraction of games with &gt;= 20 assists: 0.0"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#probability-of-20-assists-in-a-game",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#probability-of-20-assists-in-a-game",
+    "title": "Data Analytics and Visualization",
+    "section": "Probability of >= 20 assists in a game?",
+    "text": "Probability of &gt;= 20 assists in a game?\n\nggplot() + geom_bar(data=clark, mapping=aes(x='AST'))+ geom_vline(xintercept=20, linetype='longdash', size=2) + ggsize(1000, 400)\n\n   \n   \n\n\n\ndef statistic(data):\n    return (data &gt;= 20).mean()\nprint('Fraction of games with &gt;= 20 assists:', statistic(clark['AST']))\n\nFraction of games with &gt;= 20 assists: 0.0\n\n\nIt can’t really be 0!"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#which-distribution",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#which-distribution",
+    "title": "Data Analytics and Visualization",
+    "section": "Which distribution?",
+    "text": "Which distribution?\nLet’s look at Wikipedia"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#poisson",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#poisson",
+    "title": "Data Analytics and Visualization",
+    "section": "Poisson!",
+    "text": "Poisson!\nModels number of events in a fixed period (like a basketball game!)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#fitting-a-poisson",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#fitting-a-poisson",
+    "title": "Data Analytics and Visualization",
+    "section": "Fitting a Poisson",
+    "text": "Fitting a Poisson\nPoisson pdf:\n p(x) = \\frac{\\lambda^x e^{-\\lambda}}{x!}\nOne parameter to choose: \\lambda\nFind with maximum likelihood\n\\underset{\\lambda}{\\text{argmax}} \\prod_{i=1}^N p(x_i) = \\prod_{i=1}^N \\frac{\\lambda^x_i e^{-\\lambda}}{x_i!}"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#fitting-a-poisson-visualized",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#fitting-a-poisson-visualized",
+    "title": "Data Analytics and Visualization",
+    "section": "Fitting a Poisson: visualized",
+    "text": "Fitting a Poisson: visualized\n\n\n\n\n\nCredit: Maximum Likelihood  (Poisson) by Gabe Hope"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#find-with-maximum-likelihood-1",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#find-with-maximum-likelihood-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Find with maximum likelihood",
+    "text": "Find with maximum likelihood\n\\underset{\\lambda}{\\text{argmax}} \\prod_{i=1}^N p(x_i) = \\prod_{i=1}^N \\frac{\\lambda^x_i e^{-\\lambda}}{x_i!}"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#find-with-maximum-likelihood-2",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#find-with-maximum-likelihood-2",
+    "title": "Data Analytics and Visualization",
+    "section": "Find with maximum likelihood",
+    "text": "Find with maximum likelihood\n\\underset{\\lambda}{\\text{argmax}} \\prod_{i=1}^N p(x_i) = \\prod_{i=1}^N \\frac{\\lambda^x_i e^{-\\lambda}}{x_i!}\n\\equiv \\underset{\\lambda}{\\text{argmax}} \\log \\prod_{i=1}^N p(x_i) =\\sum_{i=1}^N \\left(x_i \\log\\lambda - \\lambda - \\log x_i! \\right)\n\\frac{d}{d\\lambda}\\sum_{i=1}^N \\left(x_i \\log\\lambda - \\lambda - \\log x_i! \\right) =0"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#find-with-maximum-likelihood-3",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#find-with-maximum-likelihood-3",
+    "title": "Data Analytics and Visualization",
+    "section": "Find with maximum likelihood",
+    "text": "Find with maximum likelihood\n\\frac{d}{d\\lambda}\\sum_{i=1}^N \\left(x_i \\log\\lambda - \\lambda - \\log x_i! \\right) =0\n\\sum_{i=1}^N \\left(\\frac{x_i}{\\lambda} - 1 \\right) =0 \\frac{1}{\\lambda}\\sum_{i=1}^N x_i - N =0 \\frac{1}{\\lambda}\\sum_{i=1}^N x_i = N, \\quad \\lambda = \\frac{1}{N}\\sum_{i=1}^N x_i"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#fit-a-distribution",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#fit-a-distribution",
+    "title": "Data Analytics and Visualization",
+    "section": "Fit a distribution",
+    "text": "Fit a distribution\n\nfrom scipy.stats import poisson\n\nlam = clark['AST'].mean()\ndist = poisson(lam)\n\nAnd plot it!\n\nx = np.arange(25)\ny = dist.pmf(x)\nggplot() + geom_line(data=pd.DataFrame(dict(x=x, y=y)), mapping=aes(x='x', y='y'))\\\n+ geom_histogram(data=clark, mapping=aes(x='AST', y=\"..density..\"), bins=25, alpha=0.05, bw=1.) \\\n+ ggsize(1000, 350)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#compute-our-desired-probability",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#compute-our-desired-probability",
+    "title": "Data Analytics and Visualization",
+    "section": "Compute our desired probability",
+    "text": "Compute our desired probability\np(x\\geq 20) = 1 - p(x\\leq 19) = 1 - cdf(19)\n\nprint('Estimated probability:', 1 - poisson(lam).cdf(19))\n\nEstimated probability: 0.0004801251376509441"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#revisting-probability-of-20-assists-in-a-game",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#revisting-probability-of-20-assists-in-a-game",
+    "title": "Data Analytics and Visualization",
+    "section": "Revisting: Probability of >= 20 assists in a game?",
+    "text": "Revisting: Probability of &gt;= 20 assists in a game?"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#revisting-probability-of-10-assists-in-a-game",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#revisting-probability-of-10-assists-in-a-game",
+    "title": "Data Analytics and Visualization",
+    "section": "Revisting: Probability of >= 10 assists in a game?",
+    "text": "Revisting: Probability of &gt;= 10 assists in a game?"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#parametric-bootstrap",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#parametric-bootstrap",
+    "title": "Data Analytics and Visualization",
+    "section": "Parametric bootstrap",
+    "text": "Parametric bootstrap\n\ndef bootstrap_sample(data):\n    N = len(data)                      # Number of obsevations\n    return poisson(data.mean()).rvs(N) # Resample from {1,...,N}, N times\n\ndef bootstrap_distribution(data, statistic_fun, nsamples):\n    estimates = []                       # Distribution of statistic estimates\n    for i in range(nsamples):            # Resample many times\n        sample = bootstrap_sample(data)  # Get a new bootstrapped sample\n        stat = statistic_fun(sample)     # Compute our statistic\n        estimates.append(stat)           # add it to the distribution\n    return estimates\n\ndef simple_simulation_ci(data, statistic_fun, nsamples, confidence=0.95):\n    # Distribution of statistic estimates\n    estimates = sorted(bootstrap_distribution(data, statistic_fun, nsamples))\n    margin = (1 - confidence) / 2\n    lower = estimates[math.ceil(nsamples * margin)]\n    upper = estimates[math.ceil(nsamples * (1 - margin))] \n    return estimates, lower, upper"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#parametric-bootstrap-1",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#parametric-bootstrap-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Parametric bootstrap",
+    "text": "Parametric bootstrap\n\ndef statistic(data):\n    return (data &gt;= 10).mean()\n\nestimates, lower, upper = simple_simulation_ci(clark['AST'], statistic, 10000)\nestimates = pd.DataFrame({\"Simulated fraction\": estimates})\n\nggplot() + geom_bar(data=estimates, mapping=aes(x=\"Simulated fraction\"))\\\n+ geom_vline(xintercept=lower, color='red', linetype='longdash')\\\n+ geom_vline(xintercept=upper, color='red', linetype='longdash') + ggsize(1000, 350)\n\n   \n   \n\n\n\nprint('95% confidence interval: ', [lower, upper])\n\n95% confidence interval:  [np.float64(0.2), np.float64(0.475)]"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#non-parametric-bootstrap-for-lambda",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#non-parametric-bootstrap-for-lambda",
+    "title": "Data Analytics and Visualization",
+    "section": "Non-parametric bootstrap for \\lambda",
+    "text": "Non-parametric bootstrap for \\lambda\n\nestimates, lower, upper = simple_simulation_ci(clark['AST'], np.mean, 10000)\nestimates = pd.DataFrame({\"Simulated Poisson rate MLE\": estimates})\nggplot() + geom_bar(data=estimates, mapping=aes(x=\"Simulated Poisson rate MLE\")) + geom_vline(xintercept=lower, color='red', linetype='longdash') + geom_vline(xintercept=upper, color='red', linetype='longdash')  + ggsize(1000, 350)"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#not-great",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#not-great",
+    "title": "Data Analytics and Visualization",
+    "section": "Not great!",
+    "text": "Not great!\n\nggplot() + geom_line(data=pd.DataFrame(dict(x=x, y=y)), mapping=aes(x='x', y='y')) + geom_histogram(data=clark, mapping=aes(x='AST', y=\"..density..\"), bins=25, alpha=0.05, bw=1.) + ggsize(1000, 350)\n\n   \n   \n\n\nNot much flexibility with only 1 parameter to choose!"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#which-distribution-1",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#which-distribution-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Which distribution?",
+    "text": "Which distribution?\nLet’s see if there’s something else"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#negative-binomial",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#negative-binomial",
+    "title": "Data Analytics and Visualization",
+    "section": "Negative binomial",
+    "text": "Negative binomial"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#negative-binomial-1",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#negative-binomial-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Negative binomial",
+    "text": "Negative binomial\nPdf:\np(x) = {x + r - 1 \\choose x} (1-p)^k p^r\nTwo parameters: p and r"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#more-flexibility",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#more-flexibility",
+    "title": "Data Analytics and Visualization",
+    "section": "More flexibility!",
+    "text": "More flexibility!\n\n\n\n\nCredit: Maximum Likelihood  (Negative Binomial) by Gabe Hope"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#can-we-fit-with-maximum-likelihood",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#can-we-fit-with-maximum-likelihood",
+    "title": "Data Analytics and Visualization",
+    "section": "Can we fit with maximum likelihood?",
+    "text": "Can we fit with maximum likelihood?\n\\underset{p,r}{\\text{argmax}}\\prod_{i=1}^N p(x) = \\prod_{i=1}^N{x + r - 1 \\choose x} (1-p)^k p^r"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#mle",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#mle",
+    "title": "Data Analytics and Visualization",
+    "section": "MLE",
+    "text": "MLE\n\n\n\n\nCredit: Maximum Likelihood  (Negative Binomial) by Gabe Hope"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#mle-negative-binomial",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#mle-negative-binomial",
+    "title": "Data Analytics and Visualization",
+    "section": "MLE: Negative Binomial",
+    "text": "MLE: Negative Binomial\n\n\n\n\nCredit: Maximum Likelihood  (Negative Binomial) by Gabe Hope"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#can-we-fit-with-maximum-likelihood-1",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#can-we-fit-with-maximum-likelihood-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Can we fit with maximum likelihood?",
+    "text": "Can we fit with maximum likelihood?\n\\underset{p,r}{\\text{argmax}}\\prod_{i=1}^N p(x) = \\prod_{i=1}^N{x + r - 1 \\choose x} (1-p)^k p^r\nNot easily!"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#using-the-statsmodel-package",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#using-the-statsmodel-package",
+    "title": "Data Analytics and Visualization",
+    "section": "Using the statsmodel package",
+    "text": "Using the statsmodel package\n\nfrom scipy.stats import nbinom\nfrom statsmodels.discrete.discrete_model import NegativeBinomial\n\nmodel = NegativeBinomial(clark['AST'], np.ones_like(clark['AST'])).fit()\ndist = model.get_distribution(1.)\nprint('r and p for MLE neg. binomial:', dist.args)\n\nOptimization terminated successfully.\n         Current function value: 2.560325\n         Iterations: 9\n         Function evaluations: 10\n         Gradient evaluations: 10\nr and p for MLE neg. binomial: (array([35.41071048]), array([0.8078051]))"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#computing-probability-of-20-assists",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#computing-probability-of-20-assists",
+    "title": "Data Analytics and Visualization",
+    "section": "Computing probability of >= 20 assists",
+    "text": "Computing probability of &gt;= 20 assists\n\nprob = 1 - dist.cdf(19)\nprint('Est. probability of &gt;= 20 assists', prob)\n\nEst. probability of &gt;= 20 assists [0.0018927]"
+  },
+  {
+    "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#comparing-likelihood-with-poisson-model",
+    "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#comparing-likelihood-with-poisson-model",
+    "title": "Data Analytics and Visualization",
+    "section": "Comparing likelihood with Poisson model",
+    "text": "Comparing likelihood with Poisson model\n\nnbinom_llik = dist.logpmf(clark['AST']).sum()\npoisson_llik = poisson(lam).logpmf(clark['AST']).sum()\nprint('Neg. Binomial lik: %.4f, Poisson lik: %.4f' % (nbinom_llik, poisson_llik))\n\nNeg. Binomial lik: -102.4130, Poisson lik: -102.9351"
   }
 ]

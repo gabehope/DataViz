@@ -1,0 +1,534 @@
+---
+title: "Data Analytics and Visualization"
+subtitle: "1-3: Maximum Likelihood and Clustering"
+author: "Prof. Gabe Hope"
+format: 
+    revealjs:
+        theme: ["../../../../theme.scss"]
+        html-math-method: katex
+        slideNumber: true
+---
+
+# Let's start with an example
+
+## Caitlin Clark
+
+![](pictures/clark.png){fig-align="center" height=600}
+
+# Let's analyze Catilin Clark's assists!
+
+## Setup
+
+```{python}
+import pandas as pd
+import numpy as np
+from lets_plot import *
+LetsPlot.setup_html()
+```
+
+## The data (from [basketball-reference.com](http://basketball-reference.com) )
+
+Full data:
+```{python}
+clark = pd.read_csv('data/clark.csv')
+clark.head(10)
+```
+
+Assists:
+
+```{python}
+clark['AST'].head(5)
+```
+
+# Plotting the distribution
+
+## Option 1: Histogram
+
+```{python}
+#| echo: true
+ggplot() + geom_histogram(data=clark, mapping=aes(x='AST')) + ggsize(1000, 400)
+```
+
+## Option 1: Histogram (bins)
+
+```{python}
+#| echo: true
+ggplot() + geom_histogram(data=clark, mapping=aes(x='AST'), bins=20)\
+     + ggsize(1000, 400)
+```
+
+## Option 2: Bar plot
+
+```{python}
+#| echo: true
+ggplot() + geom_bar(data=clark, mapping=aes(x='AST'))\
+     + ggsize(1000, 400)
+```
+
+## Option 3: KDE
+
+```{python}
+#| echo: true
+ggplot() + geom_density(data=clark, mapping=aes(x='AST'), alpha=0.05)\
+     + ggsize(1000, 400)
+```
+
+## Option 3: KDE (bandwidth options)
+
+
+```{python}
+#| echo: true
+ggplot() + geom_density(data=clark, mapping=aes(x='AST'), alpha=0.05, bw=1.)\
+     + ggsize(1000, 250)
+```
+```{python}
+#| echo: true
+ggplot() + geom_density(data=clark, mapping=aes(x='AST'), alpha=0.05, bw=0.25)\
+     + ggsize(1000, 250)
+```
+
+## Aside: **mode** of a continuous distribution
+
+#### *Any* **local maximum** of the PDF
+
+2 modes
+```{python}
+ggplot() + geom_density(data=clark, mapping=aes(x='AST'), alpha=0.05, bw=1.)\
+     + ggsize(1000, 250)
+```
+
+12 modes
+```{python}
+ggplot() + geom_density(data=clark, mapping=aes(x='AST'), alpha=0.05, bw=0.25)\
+     + ggsize(1000, 250)
+```
+
+::: {style="font-size: 80%"}
+The *number of modes* is often an important consideration for modeling and visualization
+
+:::
+
+# Which option? 
+
+
+## **Option 2: Bar plot** (why?)
+
+```{python}
+#| echo: true
+ggplot() + geom_bar(data=clark, mapping=aes(x='AST'))\
+     + ggsize(1000, 400)
+```
+
+# Statistics
+
+## Statistics: **Mean**
+Let's compute the mean statistic and plot it!
+```{python}
+#| echo: true
+
+mean_ast = clark['AST'].mean()
+ggplot() + geom_bar(data=clark, mapping=aes(x='AST')) \
++ geom_vline(xintercept=clark['AST'].mean(), color='red', linetype='longdash')\
++ ggsize(1000, 400)
+```
+
+# Analytics
+
+## Double double
+
+::::: columns
+::: {.column style="width: 80%; font-size: 80%;"}
+#### From Wikipedia:
+
+*"In basketball, a double-double is a single-game performance in which a player accumulates ten or more in two of the following five statistical categories: points, rebounds, assists, steals, and blocked shots."*
+::: 
+::: {.column style="width: 20%; font-size: 80%;"}
+![](pictures/wilt.png)
+:::
+:::::
+#### Follow up question: **in what fraction of games will Caitlin Clark get *at least* 10 assists?**
+
+## Statistics: **Above 10 assists**
+Let's compute this new statistic!
+```{python}
+#| echo: true
+ggplot() + geom_bar(data=clark, mapping=aes(x='AST')) \
++ geom_vline(xintercept=10, color='red', linetype='longdash')\
++ ggsize(1000, 350)
+```
+```{python}
+#| echo: true
+def statistic(data):
+    return (data >= 10).mean()
+print('Fraction of games with >= 10 assists:', statistic(clark['AST']))
+```
+
+## Only 40 games
+
+What's our uncertainty about Caitlin Clark's *"true"* double double rate?
+
+## Bootstrapping!
+
+Setup code:
+```{python}
+#| echo: true
+import math 
+def bootstrap_sample(data):
+    N = len(data)                      # Number of obsevations
+    inds = np.random.randint(0, N, N)  # Resample from {1,...,N}, N times
+    return data[inds]                  # Return the new sample
+
+def bootstrap_distribution(data, statistic_fun, nsamples):
+    estimates = []                       # Distribution of statistic estimates
+    for i in range(nsamples):            # Resample many times
+        sample = bootstrap_sample(data)  # Get a new bootstrapped sample
+        stat = statistic_fun(sample)     # Compute our statistic
+        estimates.append(stat)           # add it to the distribution
+    return estimates
+
+def simple_simulation_ci(data, statistic_fun, nsamples, confidence=0.95):
+    # Distribution of statistic estimates
+    estimates = sorted(bootstrap_distribution(data, statistic_fun, nsamples))
+    margin = (1 - confidence) / 2
+    lower = estimates[math.ceil(nsamples * margin)]
+    upper = estimates[math.ceil(nsamples * (1 - margin))] 
+    return estimates, lower, upper
+```
+
+## Bootstrapping!
+
+```{python}
+#| echo: true
+estimates, lower, upper = simple_simulation_ci(clark['AST'], statistic, 10000)
+estimates = pd.DataFrame({"Simulated fraction": estimates})
+
+ggplot() + geom_bar(data=estimates, mapping=aes(x="Simulated fraction"))\
++ geom_vline(xintercept=lower, color='red', linetype='longdash')\
++ geom_vline(xintercept=upper, color='red', linetype='longdash') + ggsize(1000, 350)
+```
+
+```{python}
+#| echo: true
+print('95% confidence interval: ', [lower, upper])
+```
+
+# Another question
+
+## Probability of >= 20 assists in a game?
+
+```{python}
+#| echo: true
+ggplot() + geom_bar(data=clark, mapping=aes(x='AST'))+ geom_vline(xintercept=20, linetype='longdash', size=2) + ggsize(1000, 400)
+```
+
+```{python}
+#| echo: true
+def statistic(data):
+    return (data >= 20).mean()
+print('Fraction of games with >= 20 assists:', statistic(clark['AST']))
+```
+
+**It can't really be 0!**
+
+# We need to make some stronger assumptions
+
+Let's model the data with a probability distribution!
+
+## Which distribution?
+
+Let's look at Wikipedia
+
+![](pictures/dists.png){height=500}
+
+## Poisson!
+
+Models number of events in a fixed period (**like a basketball game!**)
+
+![](pictures/poisson.png){height=500}
+
+## Fitting a Poisson
+
+Poisson pdf:
+
+$$ p(x) = \frac{\lambda^x e^{-\lambda}}{x!}$$
+
+One parameter to choose: $\lambda$
+
+#### Find with **maximum likelihood**
+
+$$\underset{\lambda}{\text{argmax}} \prod_{i=1}^N p(x_i) = \prod_{i=1}^N \frac{\lambda^x_i e^{-\lambda}}{x_i!}$$
+
+## Fitting a Poisson: visualized
+
+```{=html}
+<div id="observablehq-poissonPDF-971220f7"></div>
+<div id="observablehq-viewof-poissonLikelihood-971220f7"></div>
+<div id="observablehq-viewof-logSelector-971220f7"></div>
+<div id="observablehq-viewof-lam-971220f7"></div>
+<div id="observablehq-likelihood-971220f7"></div>
+<p>Credit: <a href="https://observablehq.com/d/4264a4e367444b76@137">Maximum Likelihood  (Poisson) by Gabe Hope</a></p>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/4264a4e367444b76@137.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "poissonPDF") return new Inspector(document.querySelector("#observablehq-poissonPDF-971220f7"));
+  if (name === "viewof poissonLikelihood") return new Inspector(document.querySelector("#observablehq-viewof-poissonLikelihood-971220f7"));
+  if (name === "viewof logSelector") return new Inspector(document.querySelector("#observablehq-viewof-logSelector-971220f7"));
+  if (name === "viewof lam") return new Inspector(document.querySelector("#observablehq-viewof-lam-971220f7"));
+  if (name === "likelihood") return new Inspector(document.querySelector("#observablehq-likelihood-971220f7"));
+  return ["likelihoodfn","likData","poissonData"].includes(name);
+});
+</script>
+```
+
+## Find with **maximum likelihood**
+
+$$\underset{\lambda}{\text{argmax}} \prod_{i=1}^N p(x_i) = \prod_{i=1}^N \frac{\lambda^x_i e^{-\lambda}}{x_i!}$$
+
+
+## Find with **maximum likelihood**
+
+$$\underset{\lambda}{\text{argmax}} \prod_{i=1}^N p(x_i) = \prod_{i=1}^N \frac{\lambda^x_i e^{-\lambda}}{x_i!}$$
+
+$$\equiv \underset{\lambda}{\text{argmax}} \log \prod_{i=1}^N p(x_i)$$
+$$=\sum_{i=1}^N \left(x_i \log\lambda - \lambda - \log x_i! \right)$$
+
+$$\frac{d}{d\lambda}\sum_{i=1}^N \left(x_i \log\lambda - \lambda - \log x_i! \right) =0$$
+
+## Find with **maximum likelihood**
+$$\frac{d}{d\lambda}\sum_{i=1}^N \left(x_i \log\lambda - \lambda - \log x_i! \right) =0$$
+
+$$\sum_{i=1}^N \left(\frac{x_i}{\lambda} - 1 \right) =0$$
+$$\frac{1}{\lambda}\sum_{i=1}^N x_i - N =0$$
+$$\frac{1}{\lambda}\sum_{i=1}^N x_i = N, \quad \lambda = \frac{1}{N}\sum_{i=1}^N x_i$$
+
+## Fit a distribution
+
+```{python}
+#| echo: true
+from scipy.stats import poisson
+
+lam = clark['AST'].mean()
+dist = poisson(lam)
+```
+
+And plot it!
+```{python}
+#| echo: true
+x = np.arange(25)
+y = dist.pmf(x)
+ggplot() + geom_line(data=pd.DataFrame(dict(x=x, y=y)), mapping=aes(x='x', y='y'))\
++ geom_histogram(data=clark, mapping=aes(x='AST', y="..density.."), bins=25, alpha=0.05, bw=1.) \
++ ggsize(1000, 350)
+```
+
+
+## Compute our desired probability
+$$p(x\geq 20) = 1 - p(x\leq 19) = 1 - cdf(19)$$
+```{python}
+#| echo: true
+print('Estimated probability:', 1 - poisson(lam).cdf(19))
+```
+
+# Revisting: Probability of >= 10 assists?
+
+## Parametric bootstrap
+
+```{python}
+#| echo: true
+def bootstrap_sample(data):
+    N = len(data)                      # Number of obsevations
+    return poisson(data.mean()).rvs(N) # Resample from {1,...,N}, N times
+
+def bootstrap_distribution(data, statistic_fun, nsamples):
+    estimates = []                       # Distribution of statistic estimates
+    for i in range(nsamples):            # Resample many times
+        sample = bootstrap_sample(data)  # Get a new bootstrapped sample
+        stat = statistic_fun(sample)     # Compute our statistic
+        estimates.append(stat)           # add it to the distribution
+    return estimates
+
+def simple_simulation_ci(data, statistic_fun, nsamples, confidence=0.95):
+    # Distribution of statistic estimates
+    estimates = sorted(bootstrap_distribution(data, statistic_fun, nsamples))
+    margin = (1 - confidence) / 2
+    lower = estimates[math.ceil(nsamples * margin)]
+    upper = estimates[math.ceil(nsamples * (1 - margin))] 
+    return estimates, lower, upper
+```
+
+## Parametric bootstrap
+
+```{python}
+#| echo: true
+
+def statistic(data):
+    return (data >= 10).mean()
+
+estimates, lower, upper = simple_simulation_ci(clark['AST'], statistic, 10000)
+estimates = pd.DataFrame({"Simulated fraction": estimates})
+
+ggplot() + geom_bar(data=estimates, mapping=aes(x="Simulated fraction"))\
++ geom_vline(xintercept=lower, color='red', linetype='longdash')\
++ geom_vline(xintercept=upper, color='red', linetype='longdash') + ggsize(1000, 350)
+```
+
+```{python}
+#| echo: true
+print('95% confidence interval: ', [lower, upper])
+```
+
+# How certain are we in our parameter?
+
+## Non-parametric bootstrap for $\lambda$
+```{python}
+def bootstrap_sample(data):
+    N = len(data)                      # Number of obsevations
+    inds = np.random.randint(0, N, N)  # Resample from {1,...,N}, N times
+    return data[inds]                  # Return the new sample
+
+def bootstrap_distribution(data, statistic_fun, nsamples):
+    estimates = []                       # Distribution of statistic estimates
+    for i in range(nsamples):            # Resample many times
+        sample = bootstrap_sample(data)  # Get a new bootstrapped sample
+        stat = statistic_fun(sample)     # Compute our statistic
+        estimates.append(stat)           # add it to the distribution
+    return estimates
+
+def simple_simulation_ci(data, statistic_fun, nsamples, confidence=0.95):
+    # Distribution of statistic estimates
+    estimates = sorted(bootstrap_distribution(data, statistic_fun, nsamples))
+    margin = (1 - confidence) / 2
+    lower = estimates[math.ceil(nsamples * margin)]
+    upper = estimates[math.ceil(nsamples * (1 - margin))] 
+    return estimates, lower, upper
+```
+
+```{python}
+#| echo: true
+
+estimates, lower, upper = simple_simulation_ci(clark['AST'], np.mean, 10000)
+estimates = pd.DataFrame({"Simulated Poisson rate MLE": estimates})
+ggplot() + geom_bar(data=estimates, mapping=aes(x="Simulated Poisson rate MLE")) + geom_vline(xintercept=lower, color='red', linetype='longdash') + geom_vline(xintercept=upper, color='red', linetype='longdash')  + ggsize(1000, 350)
+```
+
+# How about our fit?
+
+## Not great!
+
+```{python}
+#| echo: true
+ggplot() + geom_line(data=pd.DataFrame(dict(x=x, y=y)), mapping=aes(x='x', y='y')) + geom_histogram(data=clark, mapping=aes(x='AST', y="..density.."), bins=25, alpha=0.05, bw=1.) + ggsize(1000, 350)
+```
+
+Not much flexibility with only 1 parameter to choose!
+
+## Which distribution?
+
+Let's see if there's something else
+
+![](pictures/dists.png){height=500}
+
+
+## Negative binomial
+
+![](pictures/nbinom.png){height=500}
+
+## Negative binomial
+
+Pdf:
+
+$$p(x) = {x + r - 1 \choose x} (1-p)^k p^r$$
+
+Two parameters: $p$ and $r$
+
+## More flexibility!
+
+```{=html}
+<div id="observablehq-viewof-nbinomPDF-9d3e594c"></div>
+<div id="observablehq-viewof-logSelector-9d3e594c"></div>
+<div id="observablehq-viewof-p-9d3e594c"></div>
+<div id="observablehq-viewof-r-9d3e594c"></div>
+<p>Credit: <a href="https://observablehq.com/d/f5319950ecda48fc">Maximum Likelihood  (Negative Binomial) by Gabe Hope</a></p>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/f5319950ecda48fc.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "viewof nbinomPDF") return new Inspector(document.querySelector("#observablehq-viewof-nbinomPDF-9d3e594c"));
+  if (name === "viewof logSelector") return new Inspector(document.querySelector("#observablehq-viewof-logSelector-9d3e594c"));
+  if (name === "viewof p") return new Inspector(document.querySelector("#observablehq-viewof-p-9d3e594c"));
+  if (name === "viewof r") return new Inspector(document.querySelector("#observablehq-viewof-r-9d3e594c"));
+  return ["likelihoodfn","viewof nbinomLikelihood","likelihood","nbinomData"].includes(name);
+});
+</script>
+```
+
+## Can we fit with maximum likelihood?
+
+$$\underset{p,r}{\text{argmax}}\prod_{i=1}^N p(x) = \prod_{i=1}^N{x + r - 1 \choose x} (1-p)^k p^r$$
+
+## MLE: Negative Binomial
+
+```{=html}
+<div id="observablehq-viewof-nbinomPDF-6c7532de"></div>
+<div id="observablehq-viewof-nbinomLikelihood-6c7532de"></div>
+<div id="observablehq-viewof-p-6c7532de"></div>
+<div id="observablehq-viewof-r-6c7532de"></div>
+<p>Credit: <a href="https://observablehq.com/d/f5319950ecda48fc@223">Maximum Likelihood  (Negative Binomial) by Gabe Hope</a></p>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/f5319950ecda48fc@223.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "viewof nbinomPDF") return new Inspector(document.querySelector("#observablehq-viewof-nbinomPDF-6c7532de"));
+  if (name === "viewof nbinomLikelihood") return new Inspector(document.querySelector("#observablehq-viewof-nbinomLikelihood-6c7532de"));
+  if (name === "viewof p") return new Inspector(document.querySelector("#observablehq-viewof-p-6c7532de"));
+  if (name === "viewof r") return new Inspector(document.querySelector("#observablehq-viewof-r-6c7532de"));
+  return ["likelihood","nbinomData"].includes(name);
+});
+</script>
+```
+
+## Can we fit with maximum likelihood?
+
+$$\underset{p,r}{\text{argmax}}\prod_{i=1}^N p(x) = \prod_{i=1}^N{x + r - 1 \choose x} (1-p)^k p^r$$
+
+**Not easily!**
+
+## Using the `statsmodel` package
+
+```{python}
+#| echo: true
+from scipy.stats import nbinom
+from statsmodels.discrete.discrete_model import NegativeBinomial
+
+model = NegativeBinomial(clark['AST'], np.ones_like(clark['AST'])).fit()
+dist = model.get_distribution(1.)
+print('r and p for MLE neg. binomial:', dist.args)
+```
+
+```{python}
+ggplot() + geom_line(data=pd.DataFrame(dict(x=x, y=y)), mapping=aes(x='x', y='y')) + geom_histogram(data=clark, mapping=aes(x='AST', y="..density.."), bins=25, alpha=0.05, bw=1.) + ggsize(1000, 300)
+```
+
+## Computing probability of >= 20 assists
+
+```{python}
+#| echo: true
+prob = 1 - dist.cdf(19)
+print('Est. probability of >= 20 assists', prob)
+```
+
+## Comparing likelihood with Poisson model
+```{python}
+#| echo: true
+nbinom_llik = dist.logpmf(clark['AST']).sum()
+poisson_llik = poisson(lam).logpmf(clark['AST']).sum()
+print('Neg. Binomial lik: %.4f, Poisson lik: %.4f' % (nbinom_llik, poisson_llik))
+```
+

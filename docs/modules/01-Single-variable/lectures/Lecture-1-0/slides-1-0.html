@@ -8,7 +8,7 @@
 <link href="../../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.54">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Gabe Hope">
   <title>Data Analytics and Visualization</title>
@@ -432,10 +432,10 @@ Prof.&nbsp;Gabe Hope
 <section id="so-far-dataframes" class="slide level2">
 <h2>So far: DataFrames</h2>
 <p>What can we do with just <strong>one</strong> of these columns?</p>
-<div id="3113f2c7" class="cell" data-execution_count="1">
+<div id="ba395eda" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 
-            <div id="RTwcL5"></div>
+            <div id="T0krQf"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -446,7 +446,7 @@ Prof.&nbsp;Gabe Hope
                 (function() {
                     var script = document.createElement("script");
                     script.type = "text/javascript";
-                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.3/js-package/distr/lets-plot.min.js";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.4.1/js-package/distr/lets-plot.min.js";
                     script.onload = function() {
                         window.letsPlotCall = function(f) {f();};
                         window.letsPlotCallQueue.forEach(function(f) {f();});
@@ -459,9 +459,9 @@ Prof.&nbsp;Gabe Hope
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("RTwcL5").appendChild(div);
+                        document.getElementById("T0krQf").appendChild(div);
                     };
-                    var e = document.getElementById("RTwcL5");
+                    var e = document.getElementById("T0krQf");
                     e.appendChild(script);
                 })()
             </script>
@@ -649,7 +649,7 @@ Prof.&nbsp;Gabe Hope
 <li>Quantitative</li>
 </ul>
 </div><div class="column" style="font-size: 75%; width: 75%">
-<div id="8767894c" class="cell" data-execution_count="2">
+<div id="0f724c7f" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 <style scoped="">
@@ -885,7 +885,7 @@ Prof.&nbsp;Gabe Hope
 <li>Quantitative</li>
 </ul>
 </div><div class="column" style="font-size: 75%; width: 35%">
-<div id="8103c5f3" class="cell" data-execution_count="3">
+<div id="4122de3e" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>origin_data <span class="op">=</span> cars[[<span class="st">'Origin'</span>]]</span>
 <span id="cb1-2"><a></a>origin_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -969,7 +969,7 @@ Prof.&nbsp;Gabe Hope
 <h2>Analyzing a single <strong>nominal</strong> variable</h2>
 <div class="columns">
 <div class="column" style="width: 25%">
-<div id="adee9392" class="cell" data-execution_count="4">
+<div id="b05e4f64" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 <style scoped="">
@@ -1089,7 +1089,7 @@ Prof.&nbsp;Gabe Hope
 <p><em>Assuming it’s a <strong>categorical</strong> variable with a finite set of possible values.</em></p>
 <div class="columns">
 <div class="column" style="width: 25%">
-<div id="8e4d8806" class="cell" data-execution_count="5">
+<div id="33dc6287" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 <style scoped="">
@@ -1202,7 +1202,7 @@ Prof.&nbsp;Gabe Hope
 </div>
 </div><div class="column" style="font-size: 75%; width: 75%">
 <p>In Pandas, get the <strong>unique</strong> values in a <code>series</code> object with <code>unique()</code></p>
-<div id="e1e4d55a" class="cell" data-execution_count="6">
+<div id="84edb5e2" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>origin_series <span class="op">=</span> origin_data[<span class="st">'Origin'</span>]</span>
 <span id="cb2-2"><a></a>origin_series.unique() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
@@ -1210,7 +1210,7 @@ Prof.&nbsp;Gabe Hope
 </div>
 </div>
 <p>Explicitly set the type of the column to <code>category</code></p>
-<div id="618e2f03" class="cell" data-execution_count="7">
+<div id="3e155085" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>origin_data[<span class="st">'Origin'</span>] <span class="op">=</span> origin_data[<span class="st">'Origin'</span>].astype(<span class="st">'category'</span>)</span>
 <span id="cb4-2"><a></a>origin_data[<span class="st">'Origin'</span>] <span class="co"># View the column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
@@ -1237,13 +1237,13 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 <p>We only have <strong>1</strong> variable to encode…</p>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
-<div id="c775e035" class="cell" data-execution_count="8">
+<div id="47aafdc4" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>ggplot() <span class="op">+</span> geom_point(</span>
 <span id="cb6-2"><a></a>    data<span class="op">=</span>origin_data,</span>
 <span id="cb6-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Origin'</span>),</span>
 <span id="cb6-4"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
-   <div id="lmLI7g"></div>
+   <div id="E5SkI7"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1262,11 +1262,15 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 "x":"Origin"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"Origin"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("lmLI7g");
+           var plotContainer = document.getElementById("E5SkI7");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1276,13 +1280,13 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 </div>
 <p>Not helpful</p>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="cc59b0ca" class="cell" data-execution_count="9">
+<div id="fc00b0ba" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>ggplot() <span class="op">+</span> geom_point(</span>
 <span id="cb7-2"><a></a>    data<span class="op">=</span>origin_data,</span>
 <span id="cb7-3"><a></a>    mapping<span class="op">=</span>aes(color<span class="op">=</span><span class="st">'Origin'</span>),</span>
 <span id="cb7-4"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
-   <div id="wIKiaz"></div>
+   <div id="Cecaw6"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1301,11 +1305,15 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 "color":"Origin"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"Origin"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("wIKiaz");
+           var plotContainer = document.getElementById("Cecaw6");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1321,7 +1329,7 @@ Categories (3, object): ['Europe', 'Japan', 'USA']</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>We need to <strong>count</strong> them!</p>
-<div id="cc5b8d55" class="cell" data-execution_count="10">
+<div id="ede70c62" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>counts <span class="op">=</span> origin_data.value_counts()</span>
 <span id="cb8-2"><a></a>counts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
@@ -1333,7 +1341,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>This gives a <code>series</code>, we can convert back to a <code>DataFrame</code> with:</p>
-<div id="7dd4bd2a" class="cell" data-execution_count="11">
+<div id="62a1d6e0" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>counts <span class="op">=</span> counts.reset_index()</span>
 <span id="cb10-2"><a></a>counts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
@@ -1384,13 +1392,13 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
 <p>Now we can plot <code>Origin</code> vs.&nbsp;<code>count</code>!</p>
-<div id="a76325d0" class="cell" data-execution_count="12">
+<div id="ccbf309f" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>ggplot() <span class="op">+</span> geom_point(</span>
 <span id="cb11-2"><a></a>    data<span class="op">=</span>counts,</span>
 <span id="cb11-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Origin'</span>, y<span class="op">=</span><span class="st">'count'</span>),</span>
 <span id="cb11-4"><a></a>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="dv">0</span>, <span class="va">None</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
-   <div id="rYJCak"></div>
+   <div id="udN6UN"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1414,11 +1422,18 @@ Name: count, dtype: int64</code></pre>
 "y":"count"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"Origin"
+},{
+"type":"int",
+"column":"count"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("rYJCak");
+           var plotContainer = document.getElementById("udN6UN");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1433,7 +1448,7 @@ Name: count, dtype: int64</code></pre>
 <p>A count is our first example of a <strong>statistic</strong>: <em>a value of interest computed from our data!</em></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="a9d0b95b" class="cell" data-execution_count="13">
+<div id="28693e25" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="co"># Our original data</span></span>
 <span id="cb12-2"><a></a>origin_data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
@@ -1487,7 +1502,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="d05cacaa" class="cell" data-execution_count="14">
+<div id="07dd87af" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>counts <span class="op">=</span> origin_data.value_counts().reset_index()</span>
 <span id="cb13-2"><a></a>counts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
@@ -1565,13 +1580,13 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p><strong>New</strong></p>
-<div id="15428201" class="cell" data-execution_count="15">
+<div id="962da550" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>ggplot() <span class="op">+</span> geom_point(</span>
 <span id="cb14-2"><a></a>    data<span class="op">=</span>origin_data, stat<span class="op">=</span><span class="st">'count'</span>,</span>
 <span id="cb14-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Origin'</span>, y<span class="op">=</span><span class="st">'..count..'</span>),</span>
 <span id="cb14-4"><a></a>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="dv">0</span>, <span class="va">None</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
-   <div id="IOHrm1"></div>
+   <div id="1pLjrD"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1596,11 +1611,15 @@ Name: count, dtype: int64</code></pre>
 "y":"..count.."
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"Origin"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("IOHrm1");
+           var plotContainer = document.getElementById("1pLjrD");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1611,13 +1630,13 @@ Name: count, dtype: int64</code></pre>
 <p>Computed statistics are given names of the form <code>..stat..</code></p>
 </div><div class="column" style="font-size: 75%; width: 50%">
 <p>Old</p>
-<div id="5219eb74" class="cell" data-execution_count="16">
+<div id="ed2510ba" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>ggplot() <span class="op">+</span> geom_point(</span>
 <span id="cb15-2"><a></a>    data<span class="op">=</span>counts,</span>
 <span id="cb15-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Origin'</span>, y<span class="op">=</span><span class="st">'count'</span>),</span>
 <span id="cb15-4"><a></a>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="dv">0</span>, <span class="va">None</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
-   <div id="YLLkxJ"></div>
+   <div id="Mjoiqr"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1641,11 +1660,18 @@ Name: count, dtype: int64</code></pre>
 "y":"count"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"Origin"
+},{
+"type":"int",
+"column":"count"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("YLLkxJ");
+           var plotContainer = document.getElementById("Mjoiqr");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1660,13 +1686,13 @@ Name: count, dtype: int64</code></pre>
 <p>Bar geometries use the <code>count</code> stat by default.</p>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
-<div id="f3a02885" class="cell" data-execution_count="17">
+<div id="e0b02fe5" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>ggplot() <span class="op">+</span> geom_bar(</span>
 <span id="cb16-2"><a></a>    data<span class="op">=</span>origin_data,</span>
 <span id="cb16-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Origin'</span>),</span>
 <span id="cb16-4"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
-   <div id="GFOTOk"></div>
+   <div id="NSfgWn"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1686,11 +1712,15 @@ Name: count, dtype: int64</code></pre>
 "x":"Origin"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"Origin"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("GFOTOk");
+           var plotContainer = document.getElementById("NSfgWn");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1699,13 +1729,13 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="46a279fa" class="cell" data-execution_count="18">
+<div id="4163fd06" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>ggplot() <span class="op">+</span> geom_bar(</span>
 <span id="cb17-2"><a></a>    data<span class="op">=</span>counts, stat<span class="op">=</span><span class="st">'identity'</span>,</span>
 <span id="cb17-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Origin'</span>, y<span class="op">=</span><span class="st">'count'</span>),</span>
 <span id="cb17-4"><a></a>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="dv">0</span>, <span class="va">None</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
-   <div id="1tlq66"></div>
+   <div id="TJ2KiV"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1730,11 +1760,18 @@ Name: count, dtype: int64</code></pre>
 "y":"count"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"Origin"
+},{
+"type":"int",
+"column":"count"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("1tlq66");
+           var plotContainer = document.getElementById("TJ2KiV");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1750,13 +1787,13 @@ Name: count, dtype: int64</code></pre>
 <p>Specifying the <code>fill</code> mapping creates a <strong>stacked bar plot</strong> showing proportions of a whole.</p>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
-<div id="b4dc844c" class="cell" data-execution_count="19">
+<div id="c7339d21" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>ggplot() <span class="op">+</span> geom_bar(</span>
 <span id="cb18-2"><a></a>    data<span class="op">=</span>origin_data,</span>
 <span id="cb18-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Origin'</span>),</span>
 <span id="cb18-4"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
-   <div id="0ynSeF"></div>
+   <div id="0GAo5j"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1776,11 +1813,15 @@ Name: count, dtype: int64</code></pre>
 "x":"Origin"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"Origin"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("0ynSeF");
+           var plotContainer = document.getElementById("0GAo5j");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1789,13 +1830,13 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="2944dd4d" class="cell" data-execution_count="20">
+<div id="404c0b92" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a>ggplot() <span class="op">+</span> geom_bar(</span>
 <span id="cb19-2"><a></a>    data<span class="op">=</span>origin_data,</span>
 <span id="cb19-3"><a></a>    mapping<span class="op">=</span>aes(fill<span class="op">=</span><span class="st">'Origin'</span>),</span>
 <span id="cb19-4"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="20">
-   <div id="MZXQ11"></div>
+   <div id="28QgUj"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1816,11 +1857,15 @@ Name: count, dtype: int64</code></pre>
 "fill":"Origin"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"Origin"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("MZXQ11");
+           var plotContainer = document.getElementById("28QgUj");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1835,13 +1880,13 @@ Name: count, dtype: int64</code></pre>
 <p><strong>Pie &amp; donut charts</strong> work similarly</p>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
-<div id="5412165d" class="cell" data-execution_count="21">
+<div id="0dc771ed" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a>ggplot() <span class="op">+</span> geom_bar(</span>
 <span id="cb20-2"><a></a>    data<span class="op">=</span>origin_data,</span>
 <span id="cb20-3"><a></a>    mapping<span class="op">=</span>aes(fill<span class="op">=</span><span class="st">'Origin'</span>),</span>
 <span id="cb20-4"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="21">
-   <div id="YGzUbK"></div>
+   <div id="OijNc9"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1862,11 +1907,15 @@ Name: count, dtype: int64</code></pre>
 "fill":"Origin"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"Origin"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("YGzUbK");
+           var plotContainer = document.getElementById("OijNc9");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1875,13 +1924,13 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="92a8d41a" class="cell" data-execution_count="22">
+<div id="b484223f" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>ggplot() <span class="op">+</span> geom_pie(</span>
 <span id="cb21-2"><a></a>    data<span class="op">=</span>origin_data, size<span class="op">=</span><span class="dv">25</span>, hole<span class="op">=</span><span class="fl">0.3</span>,</span>
 <span id="cb21-3"><a></a>    mapping<span class="op">=</span>aes(fill<span class="op">=</span><span class="st">'Origin'</span>),</span>
 <span id="cb21-4"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="22">
-   <div id="YNHPCq"></div>
+   <div id="sM638a"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1903,13 +1952,17 @@ Name: count, dtype: int64</code></pre>
 "fill":"Origin"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"Origin"
+}]
 },
 "hole":0.3,
 "size":25.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("YNHPCq");
+           var plotContainer = document.getElementById("sM638a");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1923,7 +1976,7 @@ Name: count, dtype: int64</code></pre>
 <section id="ordering" class="slide level2">
 <h2>Ordering</h2>
 <p>NYC subway rides for July 2024, by station</p>
-<div id="2f9dfa66" class="cell" data-execution_count="23">
+<div id="38913557" class="cell" data-execution_count="23">
 <div class="cell-output cell-output-display" data-execution_count="23">
 <div>
 <style scoped="">
@@ -2015,14 +2068,14 @@ Name: count, dtype: int64</code></pre>
 <section id="ordering-1" class="slide level2">
 <h2>Ordering</h2>
 <p>How to order all <strong>428</strong> stations?</p>
-<div id="a6b03b19" class="cell" data-execution_count="24">
+<div id="09ab53c0" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a>ggplot() <span class="op">+</span> geom_bar(</span>
 <span id="cb22-2"><a></a>    data<span class="op">=</span>rides,</span>
 <span id="cb22-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'station_complex'</span>, y<span class="op">=</span><span class="st">'count'</span>),</span>
 <span id="cb22-4"><a></a>    stat<span class="op">=</span><span class="st">'identity'</span>, width<span class="op">=</span><span class="dv">1</span>,</span>
 <span id="cb22-5"><a></a>) <span class="op">+</span> scale_x_discrete(lablim<span class="op">=</span><span class="dv">12</span>) <span class="op">+</span> ggsize(<span class="dv">3000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
-   <div id="BMlu5x"></div>
+   <div id="lkR3Hn"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2053,12 +2106,19 @@ Name: count, dtype: int64</code></pre>
 "y":"count"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"station_complex"
+},{
+"type":"int",
+"column":"count"
+}]
 },
 "width":1.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("BMlu5x");
+           var plotContainer = document.getElementById("lkR3Hn");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2071,7 +2131,7 @@ Name: count, dtype: int64</code></pre>
 <section id="ordering-2" class="slide level2">
 <h2>Ordering</h2>
 <p>Order by count!</p>
-<div id="bd312cbf" class="cell" data-execution_count="25">
+<div id="1948cf3b" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a>sorted_rides <span class="op">=</span> rides.sort_values(<span class="st">'count'</span>, ascending<span class="op">=</span><span class="va">False</span>) </span>
 <span id="cb23-2"><a></a></span>
 <span id="cb23-3"><a></a>ggplot() <span class="op">+</span> geom_bar(</span>
@@ -2080,7 +2140,7 @@ Name: count, dtype: int64</code></pre>
 <span id="cb23-6"><a></a>    stat<span class="op">=</span><span class="st">'identity'</span>, width<span class="op">=</span><span class="dv">1</span>,</span>
 <span id="cb23-7"><a></a>) <span class="op">+</span> scale_x_discrete(lablim<span class="op">=</span><span class="dv">12</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="25">
-   <div id="GAAUli"></div>
+   <div id="yEO7lg"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2111,12 +2171,19 @@ Name: count, dtype: int64</code></pre>
 "y":"count"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"station_complex"
+},{
+"type":"int",
+"column":"count"
+}]
 },
 "width":1.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("GAAUli");
+           var plotContainer = document.getElementById("yEO7lg");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2128,9 +2195,9 @@ Name: count, dtype: int64</code></pre>
 <section id="another-statistic-mode" class="slide level2">
 <h2>Another statistic: <strong>mode</strong></h2>
 <p>The <strong>mode</strong> is the most frequent value in a dataset</p>
-<div id="80317e61" class="cell" data-execution_count="26">
+<div id="baeed6ff" class="cell" data-execution_count="26">
 <div class="cell-output cell-output-display" data-execution_count="26">
-   <div id="6p6yeW"></div>
+   <div id="u1CGpy"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2161,6 +2228,13 @@ Name: count, dtype: int64</code></pre>
 "y":"count"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"station_complex"
+},{
+"type":"int",
+"column":"count"
+}]
 },
 "width":1.0
 },{
@@ -2175,13 +2249,20 @@ Name: count, dtype: int64</code></pre>
 "y":"count"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"station_complex"
+},{
+"type":"int",
+"column":"count"
+}]
 },
 "width":1.0,
 "fill":"red"
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("6p6yeW");
+           var plotContainer = document.getElementById("u1CGpy");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2190,7 +2271,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>Computing in Pandas:</p>
-<div id="cc410859" class="cell" data-execution_count="27">
+<div id="edea5bef" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a>rides.sort_values(<span class="st">'count'</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="27">
 <div>
@@ -2244,7 +2325,7 @@ Name: count, dtype: int64</code></pre>
 <li>Quantitative</li>
 </ul>
 </div><div class="column" style="font-size: 75%; width: 75%">
-<div id="4c4d9856" class="cell" data-execution_count="28">
+<div id="178931bc" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>cyl_data <span class="op">=</span> cars[[<span class="st">'Cylinders'</span>]]</span>
 <span id="cb25-2"><a></a>cyl_data.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
@@ -2298,7 +2379,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>Creating an ordinal type</p>
-<div id="93576676" class="cell" data-execution_count="29">
+<div id="6bc7b05d" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a>cylinder_type <span class="op">=</span> pd.CategoricalDtype([<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>], ordered<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb26-2"><a></a>cyl_data[<span class="st">'Cylinders'</span>] <span class="op">=</span> cyl_data[<span class="st">'Cylinders'</span>].astype(cylinder_type)</span>
 <span id="cb26-3"><a></a>cyl_data.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2359,13 +2440,13 @@ Name: count, dtype: int64</code></pre>
 <p>Maintain the correct order!</p>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
-<div id="4fba926c" class="cell" data-execution_count="30">
+<div id="c837409a" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a>ggplot() <span class="op">+</span> geom_bar(</span>
 <span id="cb27-2"><a></a>    data<span class="op">=</span>cyl_data,</span>
 <span id="cb27-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Cylinders'</span>)</span>
 <span id="cb27-4"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
-   <div id="uGdlHO"></div>
+   <div id="hiup5h"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2386,14 +2467,15 @@ Name: count, dtype: int64</code></pre>
 },
 "data_meta":{
 "series_annotations":[{
-"column":"Cylinders",
-"factor_levels":[3.0,4.0,5.0,6.0,8.0]
+"type":"int",
+"factor_levels":[3.0,4.0,5.0,6.0,8.0],
+"column":"Cylinders"
 }]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("uGdlHO");
+           var plotContainer = document.getElementById("hiup5h");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2402,13 +2484,13 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="d6312929" class="cell" data-execution_count="31">
+<div id="28b595c2" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a>ggplot() <span class="op">+</span> geom_bar(</span>
 <span id="cb28-2"><a></a>    data<span class="op">=</span>cars,</span>
 <span id="cb28-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Cylinders'</span>)</span>
 <span id="cb28-4"><a></a>) <span class="op">+</span> scale_x_discrete()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="31">
-   <div id="a8izAN"></div>
+   <div id="uVJQqa"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2433,14 +2515,38 @@ Name: count, dtype: int64</code></pre>
 },
 "data_meta":{
 "series_annotations":[{
-"column":"Year",
-"type":"datetime"
+"type":"str",
+"column":"Name"
+},{
+"type":"float",
+"column":"Miles_per_Gallon"
+},{
+"type":"int",
+"column":"Cylinders"
+},{
+"type":"float",
+"column":"Displacement"
+},{
+"type":"float",
+"column":"Horsepower"
+},{
+"type":"int",
+"column":"Weight_in_lbs"
+},{
+"type":"float",
+"column":"Acceleration"
+},{
+"type":"datetime",
+"column":"Year"
+},{
+"type":"str",
+"column":"Origin"
 }]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("a8izAN");
+           var plotContainer = document.getElementById("uVJQqa");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2465,7 +2571,7 @@ Name: count, dtype: int64</code></pre>
 <li><strong>Quantitative</strong></li>
 </ul>
 </div><div class="column" style="font-size: 75%; width: 35%">
-<div id="a77fa99d" class="cell" data-execution_count="32">
+<div id="1a04552f" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a>weight_data <span class="op">=</span> cars[[<span class="st">'Weight_in_lbs'</span>]]</span>
 <span id="cb29-2"><a></a>weight_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="32">
@@ -2549,7 +2655,7 @@ Name: count, dtype: int64</code></pre>
 <h2>Analyzing a single <strong>quantitative</strong> variable</h2>
 <div class="columns">
 <div class="column" style="width: 25%">
-<div id="79825547" class="cell" data-execution_count="33">
+<div id="2564a89d" class="cell" data-execution_count="33">
 <div class="cell-output cell-output-display" data-execution_count="33">
 <div>
 <style scoped="">
@@ -2666,13 +2772,13 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="visualizing-a-single-quantitative-variable" class="slide level2">
 <h2>Visualizing a single quantitative variable</h2>
-<div id="a6f58977" class="cell" data-execution_count="34">
+<div id="bb990528" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a></a>ggplot() <span class="op">+</span> geom_point(</span>
 <span id="cb30-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb30-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
 <span id="cb30-4"><a></a>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="34">
-   <div id="fd2TPn"></div>
+   <div id="j5QUr4"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2695,11 +2801,15 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("fd2TPn");
+           var plotContainer = document.getElementById("j5QUr4");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2710,9 +2820,9 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="visualizing-a-single-quantitative-variable-1" class="slide level2">
 <h2>Visualizing a single quantitative variable</h2>
-<div id="be6cf319" class="cell" data-execution_count="35">
+<div id="b5f61854" class="cell" data-execution_count="35">
 <div class="cell-output cell-output-display" data-execution_count="35">
-   <div id="h3OsWv"></div>
+   <div id="mVs8Y6"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2735,11 +2845,15 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("h3OsWv");
+           var plotContainer = document.getElementById("mVs8Y6");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2748,13 +2862,13 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>Using a different shape</p>
-<div id="efd74403" class="cell" data-execution_count="36">
+<div id="b2da7a48" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a>ggplot() <span class="op">+</span> geom_point(</span>
 <span id="cb31-2"><a></a>    data<span class="op">=</span>weight_data, shape<span class="op">=</span><span class="dv">3</span>,</span>
 <span id="cb31-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
 <span id="cb31-4"><a></a>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="36">
-   <div id="up8uJd"></div>
+   <div id="VEtF0H"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2777,12 +2891,16 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "shape":3.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("up8uJd");
+           var plotContainer = document.getElementById("VEtF0H");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2793,13 +2911,13 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="rule-plots" class="slide level2">
 <h2>Rule plots</h2>
-<div id="bd37155b" class="cell" data-execution_count="37">
+<div id="186a72c4" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a>ggplot() <span class="op">+</span> geom_vline(</span>
 <span id="cb32-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb32-3"><a></a>    mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
 <span id="cb32-4"><a></a>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="37">
-   <div id="TCwJHN"></div>
+   <div id="BjqaEg"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2822,11 +2940,15 @@ Name: count, dtype: int64</code></pre>
 "xintercept":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("TCwJHN");
+           var plotContainer = document.getElementById("BjqaEg");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2835,13 +2957,13 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>Using a different thickness</p>
-<div id="43d68e9d" class="cell" data-execution_count="38">
+<div id="cdaa1c1e" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a>ggplot() <span class="op">+</span> geom_vline(</span>
 <span id="cb33-2"><a></a>    data<span class="op">=</span>weight_data, size<span class="op">=</span><span class="fl">0.1</span>,</span>
 <span id="cb33-3"><a></a>    mapping<span class="op">=</span>aes(xintercept<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
 <span id="cb33-4"><a></a>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="38">
-   <div id="IzhE4v"></div>
+   <div id="cHrXgu"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2864,12 +2986,16 @@ Name: count, dtype: int64</code></pre>
 "xintercept":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "size":0.1
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("IzhE4v");
+           var plotContainer = document.getElementById("cHrXgu");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2880,9 +3006,9 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="visualizing-a-single-quantitative-variable-2" class="slide level2">
 <h2>Visualizing a single quantitative variable</h2>
-<div id="84b0c72c" class="cell" data-execution_count="39">
+<div id="fdbd1e11" class="cell" data-execution_count="39">
 <div class="cell-output cell-output-display" data-execution_count="39">
-   <div id="knGXD5"></div>
+   <div id="CN2BwN"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2905,12 +3031,16 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "size":5.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("knGXD5");
+           var plotContainer = document.getElementById("CN2BwN");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2919,13 +3049,13 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>Using a different <code>alpha</code> (opacity)</p>
-<div id="c830f9a6" class="cell" data-execution_count="40">
+<div id="96ae1027" class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a>ggplot() <span class="op">+</span> geom_point(</span>
 <span id="cb34-2"><a></a>    data<span class="op">=</span>weight_data, size<span class="op">=</span><span class="dv">5</span>, alpha<span class="op">=</span><span class="fl">0.1</span>, </span>
 <span id="cb34-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
 <span id="cb34-4"><a></a>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="40">
-   <div id="vQv4ei"></div>
+   <div id="ktuKk5"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2948,13 +3078,17 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "size":5.0,
 "alpha":0.1
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("vQv4ei");
+           var plotContainer = document.getElementById("ktuKk5");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2966,9 +3100,9 @@ Name: count, dtype: int64</code></pre>
 <section id="visualizing-a-single-quantitative-variable-3" class="slide level2">
 <h2>Visualizing a single quantitative variable</h2>
 <p>Why not use the y-axis?</p>
-<div id="709cb6db" class="cell" data-execution_count="41">
+<div id="b82d0659" class="cell" data-execution_count="41">
 <div class="cell-output cell-output-display" data-execution_count="41">
-   <div id="52UUED"></div>
+   <div id="Pa8pfD"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2991,12 +3125,16 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "size":5.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("52UUED");
+           var plotContainer = document.getElementById("Pa8pfD");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3005,7 +3143,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>Set it to something random…</p>
-<div id="116e508c" class="cell" data-execution_count="42">
+<div id="3829c584" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a>jittered_weights <span class="op">=</span> pd.DataFrame(<span class="bu">dict</span>(</span>
 <span id="cb35-2"><a></a>    Weight_in_lbs <span class="op">=</span> weight_data[<span class="st">'Weight_in_lbs'</span>],</span>
 <span id="cb35-3"><a></a>    jitter <span class="op">=</span> np.random.random(<span class="bu">len</span>(weight_data))))</span>
@@ -3015,7 +3153,7 @@ Name: count, dtype: int64</code></pre>
 <span id="cb35-7"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>, y<span class="op">=</span><span class="st">'jitter'</span>)</span>
 <span id="cb35-8"><a></a>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="42">
-   <div id="8uPK6R"></div>
+   <div id="l1qcZ9"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3033,18 +3171,25 @@ Name: count, dtype: int64</code></pre>
 "geom":"point",
 "data":{
 "Weight_in_lbs":[3504.0,3693.0,3436.0,3433.0,3449.0,4341.0,4354.0,4312.0,4425.0,3850.0,3090.0,4142.0,4034.0,4166.0,3850.0,3563.0,3609.0,3353.0,3761.0,3086.0,2372.0,2833.0,2774.0,2587.0,2130.0,1835.0,2672.0,2430.0,2375.0,2234.0,2648.0,4615.0,4376.0,4382.0,4732.0,2130.0,2264.0,2228.0,2046.0,1978.0,2634.0,3439.0,3329.0,3302.0,3288.0,4209.0,4464.0,4154.0,4096.0,4955.0,4746.0,5140.0,2962.0,2408.0,3282.0,3139.0,2220.0,2123.0,2074.0,2065.0,1773.0,1613.0,1834.0,1955.0,2278.0,2126.0,2254.0,2408.0,2226.0,4274.0,4385.0,4135.0,4129.0,3672.0,4633.0,4502.0,4456.0,4422.0,2330.0,3892.0,4098.0,4294.0,4077.0,2933.0,2511.0,2979.0,2189.0,2395.0,2288.0,2506.0,2164.0,2100.0,4100.0,3672.0,3988.0,4042.0,3777.0,4952.0,4464.0,4363.0,4237.0,4735.0,4951.0,3821.0,3121.0,3278.0,2945.0,3021.0,2904.0,1950.0,4997.0,4906.0,4654.0,4499.0,2789.0,2279.0,2401.0,2379.0,2124.0,2310.0,2472.0,2265.0,4082.0,4278.0,1867.0,2158.0,2582.0,2868.0,3399.0,2660.0,2807.0,3664.0,3102.0,2875.0,2901.0,3336.0,1950.0,2451.0,1836.0,2542.0,3781.0,3632.0,3613.0,4141.0,4699.0,4457.0,4638.0,4257.0,2219.0,1963.0,2300.0,1649.0,2003.0,2125.0,2108.0,2246.0,2489.0,2391.0,2000.0,3264.0,3459.0,3432.0,3158.0,4668.0,4440.0,4498.0,4657.0,3907.0,3897.0,3730.0,3785.0,3039.0,3221.0,3169.0,2171.0,2639.0,2914.0,2592.0,2702.0,2223.0,2545.0,2984.0,1937.0,3211.0,2694.0,2957.0,2945.0,2671.0,1795.0,2464.0,2220.0,2572.0,2255.0,2202.0,4215.0,4190.0,3962.0,4215.0,3233.0,3353.0,3012.0,3085.0,2035.0,2164.0,1937.0,1795.0,3651.0,3574.0,3645.0,3193.0,1825.0,1990.0,2155.0,2565.0,3150.0,3940.0,3270.0,2930.0,3820.0,4380.0,4055.0,3870.0,3755.0,2045.0,2155.0,1825.0,2300.0,1945.0,3880.0,4060.0,4140.0,4295.0,3520.0,3425.0,3630.0,3525.0,4220.0,4165.0,4325.0,4335.0,1940.0,2740.0,2265.0,2755.0,2051.0,2075.0,1985.0,2190.0,2815.0,2600.0,2720.0,1985.0,1800.0,1985.0,2070.0,1800.0,3365.0,3735.0,3570.0,3535.0,3155.0,2965.0,2720.0,3430.0,3210.0,3380.0,3070.0,3620.0,3410.0,3425.0,3445.0,3205.0,4080.0,2155.0,2560.0,2300.0,2230.0,2515.0,2745.0,2855.0,2405.0,2830.0,3140.0,2795.0,3410.0,1990.0,2135.0,3245.0,2990.0,2890.0,3265.0,3360.0,3840.0,3725.0,3955.0,3830.0,4360.0,4054.0,3605.0,3940.0,1925.0,1975.0,1915.0,2670.0,3530.0,3900.0,3190.0,3420.0,2200.0,2150.0,2020.0,2130.0,2670.0,2595.0,2700.0,2556.0,2144.0,1968.0,2120.0,2019.0,2678.0,2870.0,3003.0,3381.0,2188.0,2711.0,2542.0,2434.0,2265.0,2110.0,2800.0,2110.0,2085.0,2335.0,2950.0,3250.0,1850.0,1835.0,2145.0,1845.0,2910.0,2420.0,2500.0,2905.0,2290.0,2490.0,2635.0,2620.0,2725.0,2385.0,1755.0,1875.0,1760.0,2065.0,1975.0,2050.0,1985.0,2215.0,2045.0,2380.0,2190.0,2320.0,2210.0,2350.0,2615.0,2635.0,3230.0,2800.0,3160.0,2900.0,2930.0,3415.0,3725.0,3060.0,3465.0,2605.0,2640.0,2395.0,2575.0,2525.0,2735.0,2865.0,3035.0,1980.0,2025.0,1970.0,2125.0,2125.0,2160.0,2205.0,2245.0,1965.0,1965.0,1995.0,2945.0,3015.0,2585.0,2835.0,2665.0,2370.0,2950.0,2790.0,2130.0,2295.0,2625.0,2720.0],
-"jitter":[0.7657447170409462,0.07788646899412799,0.9222960902500346,0.3705456993985462,0.576202018331347,0.034943291736459825,0.9861224664658708,0.2055039549964579,0.4770623824773821,0.7974695905984946,0.428314297157671,0.7217852690971545,0.4056737764339533,0.5523395543847159,0.04459080916986902,0.7966242835511508,0.885644884573611,0.977206200514396,0.9664875790331058,0.38511347638905735,0.6925382718858936,0.06808473637383272,0.6573888339010764,0.5118668885618245,0.39977937813890074,0.4644821768603373,0.24231155693653905,0.15215813999270722,0.16540888095708994,0.7517271359238767,0.8882399638919493,0.36446051051208683,0.6860852901143427,0.29902490290884753,0.31396844047807493,0.712299736111672,0.7241365824922413,0.9013040597512262,0.6057524841072659,0.9995892767806415,0.4227659282368925,0.20592264655217563,0.5563033020898592,0.6699566883033484,0.3186313896409132,0.7902271121453868,0.243314937890874,0.8426389052061681,0.2984103407746753,0.4673787521327655,0.6449655333566267,0.5821315494826262,0.0952130297695275,0.5453517373298754,0.7017851567730397,0.8217984107608087,0.875311663352784,0.6471914276866246,0.10523125056918547,0.4668895289448801,0.18835083611140901,0.3409033330840936,0.18724876555716408,0.7458900034008215,0.10554670693270285,0.1259398798534762,0.5276374406311712,0.7010897248969975,0.5469898938638085,0.4356389746098659,0.11254205890316127,0.9815177490182979,0.5790737265684426,0.9644967312416587,0.6979242831923529,0.3303261255379212,0.1750033522351535,0.594568786856717,0.6381744500533533,0.977161781045802,0.2639480191955389,0.6099701752679942,0.8861705508911258,0.41627772359389625,0.2796692874346619,0.7487611067920907,0.6552830963659705,0.7997948933593656,0.4279248213966165,0.8403699753234034,0.837191258265494,0.4314633958554024,0.27879475727913994,0.6135428210058171,0.08886289050145713,0.37032539904650863,0.897613429162258,0.12688141504305472,0.7058149440274342,0.6636309142967769,0.26011007721478896,0.9342152602089789,0.48734505921938076,0.9439468166628433,0.40707057142645175,0.273769583183639,0.7577361100705573,0.8184895788862413,0.11143943480086049,0.888561998909401,0.02474435968343125,0.14063672525742266,0.09327805619304474,0.8374552736274283,0.06709560863555353,0.6960691938089845,0.027531247841136364,0.6472142362558162,0.44200621895081005,0.31153611215626176,0.04687040825139621,0.02443861438409567,0.6422054467682077,0.5192371088337201,0.5304804927572386,0.19988955048371504,0.016426309932343952,0.3555280521171126,0.5652066840380767,0.6309794132438995,0.6833334994211495,0.6040295604114772,0.4350994403618157,0.2567564553598758,0.7219527347147469,0.4662914226162055,0.5470384042263865,0.47951957379886867,0.19075239661106813,0.7770277639458515,0.29838713887324964,0.46897496599660726,0.23492397511510654,0.5467470228381909,0.2527279607003228,0.10460955771052816,0.8192349394558075,0.3842912061524756,0.981602759868169,0.796293657510249,0.6373306915160452,0.5019085380233548,0.03982060080716987,0.3654789257255844,0.7026093794218967,0.8597124015727342,0.159934604792204,0.6403490346834806,0.7253807232692343,0.48858866136943047,0.20876372953427713,0.05829662824898263,0.0017163098887339467,0.8692385338407322,0.6585346099612085,0.7481041375426417,0.16955957457321824,0.22559589084987786,0.21855694558567218,0.29273525454389593,0.3769630665990171,0.6818850357366091,0.2268110004009064,0.6902868365839838,0.49669173544402256,0.3207064247917357,0.4429113298555717,0.03369421507982473,0.27926105241553434,0.07109733649101546,0.6316568321801714,0.6790389674235557,0.044024109970082215,0.015358161823893157,0.9272208973566831,0.9781322543746507,0.8415216996653975,0.5260760986295961,0.6331788733247089,0.9059220135749755,0.6354413115629558,0.6757966527779226,0.8115769485446996,0.36159285396082497,0.27382447613943717,0.14138539970839326,0.05254689505622401,0.5418840348469275,0.07464574085951858,0.8570705016906156,0.6486877009044533,0.7470952739857704,0.9408969506204997,0.5505244854298945,0.9943238526174387,0.752565142111661,0.07733135195432761,0.165994168699637,0.5125574711876321,0.0017603154230152462,0.43578012702104285,0.4834552941449748,0.18087161475589086,0.4543262653318193,0.3562296843297664,0.3217590210613791,0.5519473596320763,0.4652858734566855,0.29698294535067216,0.9131638086962965,0.46813866610658283,0.8906755086156313,0.5777456830912049,0.30012081030530213,0.13324926790100688,0.07554182434060164,0.7064633574447703,0.815971434976872,0.46742544678645204,0.8481478557467628,0.22947542576189517,0.039871298849914694,0.6803519181947911,0.27352483254569016,0.6151543767609101,0.33171702197871156,0.15111840169078872,0.6354312709643959,0.865702058243959,0.9134392207880726,0.12684710924268283,0.9614117660851773,0.03759759174049848,0.2061887177585724,0.9460289179725017,0.8442627930617124,0.6821787311734362,0.8766234509244605,0.5415402850816166,0.44967051377321776,0.37236537641953804,0.5067397418211146,0.4114858567494556,0.7933180267724481,0.8951281576444337,0.3463628244574021,0.6620548146675257,0.1465570307794133,0.6945794833285674,0.9880581953700606,0.45734809796413767,0.46580800986503634,0.8814645708225071,0.8644577417449255,0.10743058465463218,0.8645657063562587,0.6694227543208665,0.09240896933107212,0.32684538571788624,0.4766594975401808,0.4861151224658401,0.9559371002305045,0.16885376668772833,0.20376831428243047,0.382545624170891,0.6767446776482845,0.6429859986930357,0.6038893942451324,0.6594275570325502,0.06863803983776617,0.6702152982743645,0.038913039047662634,0.6070588111690205,0.9264442816161673,0.8835996745589704,0.026342830863444466,0.3390920426052747,0.34478216733299594,0.7751910343200772,0.6812164519290004,0.44744937339247615,0.46878509435055205,0.6072387134716242,0.8322438179169008,0.537678408194456,0.6930209697544845,0.4891673149759399,0.8486091332242506,0.5914358985968001,0.7414425116717518,0.3409454747434014,0.6620411766517132,0.11306662273586121,0.42840158188275546,0.7099952287366688,0.10412936589158894,0.8939942654877902,0.11721083301709423,0.7090347032500244,0.07382533329836616,0.3602186822248653,0.92364899900297,0.656594611957074,0.3267720522587533,0.9979660393902647,0.15199593253679367,0.2746822368826022,0.3255886140245138,0.28095885480622473,0.5379899723191643,0.5851563981548094,0.5079247146859374,0.7190004881687717,0.45593665301408626,0.6443930081785807,0.7960151918349299,0.01709526491400115,0.5114530938603432,0.5929033574296563,0.49730912760549817,0.15297721705065148,0.3017899391097524,0.2124788292833485,0.6044839246920429,0.2104880189955497,0.29495803639261564,0.23685456793834203,0.2889818263191437,0.15612919041071815,0.8377670721435131,0.2999931943453653,0.25477384796934865,0.745173393195474,0.7311492165857127,0.9717905276924369,0.7431156108754562,0.5049089047230003,0.9260950809376824,0.8019914650944662,0.16454402510746424,0.015824279587605572,0.17443261678298527,0.21966358508483197,0.41988772722615375,0.9098601760025334,0.24911586981150835,0.048151866231795015,0.20423116359812776,0.08151696309146217,0.4108501033510361,0.5963383603890303,0.8669650806166405,0.8460655513657128,0.4078153029828152,0.7279164109975448,0.7415289501798883,0.7568255113875322,0.3754386444734549,0.5907025826006279,0.3378462332251585,0.33212530113022465,0.5643455597047284,0.842188727222647,0.7123818998833823,0.8556292111949552,0.8238679993808613,0.7433461595166176,0.5400901011014607,0.21928343016406693,0.634509733364491,0.6101138088710123,0.8771343726668351,0.5269721958450935,0.7687787709107444,0.7102806061767668,0.34812613153946226,0.9549343861384019,0.5325883822968336,0.5532524248260331,0.6166054869296378,0.27079251858674813,0.7791354428998114,0.8623097438410315,0.32477527470404477,0.5363085358799294,0.922640186670316,0.21273913075222872,0.36311492426685776,0.5330777938588751,0.8092034314343525,0.12887123637821707,0.38047003087894904,0.6654102693296068,0.2957436107885296,0.19199216617636716,0.05401253015737428]
+"jitter":[0.9542728627432427,0.756267221299369,0.9279864199089173,0.700653758622171,0.7956724154677545,0.9819903048826487,0.6978459887461252,0.1616203423769026,0.047304366511902285,0.14425056301252448,0.04154430688879185,0.06883550230350977,0.8534407802159268,0.30342998981982894,0.08552477446332618,0.6404978451419194,0.1260858322606241,0.855444901747249,0.1553771635641602,0.2834963094296724,0.6618963979892835,0.00237377383445736,0.03160273395390212,0.4744989971322625,0.18850391655114784,0.04521662011605487,0.20597895831424085,0.6954315897363886,0.48555303188517407,0.18107250751821513,0.25773195567424523,0.9406465257917688,0.7311180451373478,0.5380161811686687,0.19355295797298067,0.8397211316871445,0.3990507456898579,0.40019541732380925,0.31252589052649893,0.15536705758427316,0.3276927230505131,0.09608272340105717,0.2913493457268398,0.9740010697504144,0.6241454682212954,0.587224998429405,0.2835535527909656,0.9019040394499452,0.7292004126363804,0.052334334727595966,0.029204188678524146,0.2606076452859881,0.15004101806172265,0.039502257335914503,0.2993006859373961,0.4279620945883169,0.492467231444617,0.15184261294525647,0.7990542334580987,0.06043495444684044,0.9988687301206176,0.9251395743621145,0.8540258190309326,0.06936749319838198,0.9520155321154347,0.04260351110038263,0.40519314741682055,0.7382367592998477,0.21962130920484668,0.8943026821981886,0.4267420312976503,0.14537760055389626,0.961601815038963,0.9380305498426885,0.11671106076050863,0.10934369638812003,0.6488979234659935,0.7739175466902751,0.661983354454413,0.24621406282626124,0.5200855987288394,0.08728050252872732,0.07458000410140597,0.7278071370373375,0.7608575443827932,0.5810672261484404,0.6204723558136048,0.7853424696196337,0.5556328806923888,0.48004156332417547,0.3187317052613765,0.2432984904864559,0.1534586047425872,0.9899551922138615,0.637721944110052,0.7393391787150905,0.4866202830666476,0.33251451730502857,0.27338599004846986,0.6157448252861812,0.3310217203951026,0.045148715903469694,0.45796334729991006,0.9568863232070373,0.8229014950238638,0.5813045846469461,0.3692522584465411,0.9521975506592651,0.20287846063116832,0.6662374847269317,0.7746725059675499,0.15415671573326806,0.09963079170124733,0.7749276868610004,0.989182568100314,0.26861786673024224,0.3874824955928827,0.6940665014348556,0.4267508828274321,0.5747606264792386,0.18018266266933258,0.3075233656840668,0.49016900480662406,0.8326402483585029,0.17410629941126599,0.23679366107243138,0.04928064441729396,0.013591021349344867,0.9874677756133216,0.13302359870184688,0.25501648875547933,0.11610976645065074,0.9753897049829069,0.6374704934959109,0.9990617996772527,0.16323574232977,0.6479404544418585,0.74811523918305,0.7513744875296628,0.5825766971634203,0.14841239177928234,0.31922837364355927,0.12277909310279811,0.483051398760474,0.11414197768182022,0.45302923651546034,0.8683268871577774,0.8986532422532078,0.7859816837088203,0.44589132591250347,0.8902009690573414,0.3282884791044408,0.7159809768468852,0.6143440378140914,0.8750476597002168,0.576765931497368,0.618559628055227,0.5208812546029281,0.6742168225499493,0.9526302821829116,0.8297579848115055,0.9764389523261653,0.26353995639382244,0.33126181660359555,0.5740244411203381,0.7969379599259806,0.3218243485133442,0.22454931150843405,0.6413471580530989,0.27849167399740415,0.3799719999889891,0.22175313241867434,0.010209540431605268,0.20765894299962517,0.8441309080428585,0.5773534743494133,0.43387196939104733,0.8720775783670836,0.407726327611478,0.13183292616269549,0.05046910666448601,0.1216136122190774,0.1687349643956466,0.6180945668120528,0.5566003003639788,0.9378045377560408,0.4384009063886377,0.3303915726217226,0.001808586791298139,0.3063187699096189,0.1398760891388009,0.9985856446128711,0.9165380091207223,0.35845959344735745,0.8048078620515051,0.7560435899959133,0.9093467238633709,0.1305604899858297,0.16372827758724684,0.5857610939625976,0.12636685508867462,0.9848990546288932,0.27489833916132056,0.4137451494141612,0.7615098572199848,0.7685056720069451,0.6839206676570431,0.5269395980067472,0.0827779512144593,0.750223006072039,0.21310396121228548,0.8722019528620526,0.5128014001409199,0.036583928181587844,0.11552681997847747,0.9007556996753101,0.8097537388847671,0.10123739333975179,0.5089161868557236,0.8233836492057961,0.08726766889515603,0.3051184580274867,0.12371335687886087,0.11654658996937683,0.29505615507641136,0.37280733543052713,0.5266215644977692,0.47809309996165383,0.926420429070674,0.44170235324280915,0.2921705948181954,0.5479484663461646,0.49984912150698924,0.46873696610906646,0.9524550472018324,0.841391818889413,0.02287098036050106,0.47788782769107796,0.6150059432256645,0.30508095213231123,0.23885533936659187,0.6390532396881567,0.014339362544192324,0.47503581982787546,0.5995734865515322,0.8841418124453342,0.9406665479763547,0.6479417113465491,0.33355447653202686,0.8668371680701653,0.3429678695963858,0.9655909613603765,0.13794616185641917,0.30406867873146104,0.023494378256414317,0.0031892906499624285,0.11645979570426557,0.18697618600176447,0.3026130084904831,0.48220380515209216,0.852371159173589,0.08979779631380691,0.21063837211003678,0.25458472523338005,0.43572075726431536,0.6407375946846624,0.13336533298547004,0.3303129184934822,0.5891367151844424,0.24433530997228803,0.18806970052915728,0.4219612843217013,0.7565543023312513,0.16073747667332294,0.9028188152295153,0.45798653718628013,0.14790494873995097,0.5866625430012752,0.2887069654551192,0.5639112357187115,0.09272824405304303,0.9405841417861667,0.5934241674166496,0.4873697291612049,0.7243428377358534,0.03192620639942134,0.8084344062674097,0.8610158778490591,0.09444545875960841,0.36433467856826285,0.6564532553656846,0.7213997938105113,0.2886666260068428,0.3369660933726937,0.5316465158411411,0.5989146198499428,0.08800657893476693,0.209408432328412,0.9206280815725738,0.20234985377486048,0.2944139549106439,0.07781210355596002,0.29735736696764925,0.2815633184021553,0.6763899325008335,0.9094140138948881,0.698136842796792,0.49478510914758156,0.9651451579955078,0.17205795583575645,0.0025255955010453635,0.04160047418478485,0.73339488984276,0.2293157046453287,0.3046903372296773,0.8872196171966295,0.10912455086762085,0.6596122915188408,0.04480625673391514,0.3148730114769903,0.31150302308388844,0.7567705302941372,0.06710256218682076,0.4754383666897407,0.2340886489750138,0.4863817122441685,0.034050282247251706,0.43914167537660964,0.08834880110058585,0.17990950050935028,0.9843396048174607,0.8348641423228088,0.4535906464123024,0.03738084742903425,0.6182964331990505,0.7858684573087975,0.726752800631531,0.2704553686295743,0.7266503679797928,0.3091763052356836,0.058024540921728374,0.46946828974118726,0.23286362087164147,0.31459767991662646,0.7283937978347148,0.9090906932832428,0.005953293633802703,0.20505564222165817,0.6271221985036065,0.8477225457447624,0.22522037933852612,0.5129254070674949,0.3780859320620009,0.6537604910272935,0.23772383520405027,0.6198872224157952,0.16473863595448224,0.23846713836276023,0.6597324603339854,0.41688652292894535,0.7019444423736981,0.8368597479756699,0.13389826952826434,0.47785344203163216,0.9359132091635533,0.010016085964547616,0.8093958654363034,0.8327461646595895,0.30234872693232406,0.5886849784479634,0.4021459112231677,0.8217722054687021,0.05971774914755601,0.043769247710066184,0.3557174498719945,0.7102254762071378,0.3586607535162041,0.3329282698321454,0.34402824047278024,0.9038991555049217,0.010482474832518518,0.9094504337023175,0.5831729549413095,0.06357795653347831,0.5404149262231466,0.05751524524742668,0.0702243490731147,0.09387575522367486,0.5887432939462263,0.3365484502567929,0.9619889016916037,0.8710742262092028,0.8314123490172608,0.37138297731940795,0.25186233729646157,0.44177677056062603,0.5700445337588059,0.9858964188695862,0.7053492954194603,0.1533764877484809,0.5082136431553244,0.834336855968296,0.9092397362812121,0.08475321393082136,0.6291462609794081,0.4218571301384849]
 },
 "mapping":{
 "x":"Weight_in_lbs",
 "y":"jitter"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+},{
+"type":"float",
+"column":"jitter"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("8uPK6R");
+           var plotContainer = document.getElementById("l1qcZ9");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3056,12 +3201,12 @@ Name: count, dtype: int64</code></pre>
 <section id="jitter-plots" class="slide level2">
 <h2>Jitter plots</h2>
 <p>Tell <code>ggplot</code> what to do when points overlap with <code>position</code></p>
-<div id="4db26654" class="cell" data-execution_count="43">
+<div id="c610ca1d" class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a></a>ggplot() <span class="op">+</span> geom_point(</span>
 <span id="cb36-2"><a></a>    data<span class="op">=</span>weight_data, position<span class="op">=</span><span class="st">'jitter'</span>,</span>
 <span id="cb36-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">150</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="43">
-   <div id="NVXPmd"></div>
+   <div id="nqa5h1"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3085,11 +3230,15 @@ Name: count, dtype: int64</code></pre>
 },
 "position":"jitter",
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("NVXPmd");
+           var plotContainer = document.getElementById("nqa5h1");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3098,12 +3247,12 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>Or use <code>geom_jitter</code></p>
-<div id="751f3b07" class="cell" data-execution_count="44">
+<div id="24279615" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a></a>ggplot() <span class="op">+</span> geom_jitter(</span>
 <span id="cb37-2"><a></a>    data<span class="op">=</span>weight_data,</span>
 <span id="cb37-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">150</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="44">
-   <div id="WoUViv"></div>
+   <div id="6bA8ZA"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3126,11 +3275,15 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("WoUViv");
+           var plotContainer = document.getElementById("6bA8ZA");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3143,9 +3296,9 @@ Name: count, dtype: int64</code></pre>
 <h2>Opinions?</h2>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
-<div id="abb05ef1" class="cell" data-execution_count="45">
+<div id="8522e403" class="cell" data-execution_count="45">
 <div class="cell-output cell-output-display" data-execution_count="45">
-   <div id="qQZzVF"></div>
+   <div id="XyYwvj"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3168,13 +3321,17 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "size":5.0,
 "shape":3.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("qQZzVF");
+           var plotContainer = document.getElementById("XyYwvj");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3182,9 +3339,9 @@ Name: count, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="a1789e90" class="cell" data-execution_count="46">
+<div id="867bac17" class="cell" data-execution_count="46">
 <div class="cell-output cell-output-display" data-execution_count="46">
-   <div id="RMChF9"></div>
+   <div id="gBvAxF"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3207,13 +3364,17 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "size":5.0,
 "alpha":0.1
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("RMChF9");
+           var plotContainer = document.getElementById("gBvAxF");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3222,9 +3383,9 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="1234c55b" class="cell" data-execution_count="47">
+<div id="2f7b4273" class="cell" data-execution_count="47">
 <div class="cell-output cell-output-display" data-execution_count="47">
-   <div id="4ZbFKc"></div>
+   <div id="FjivpV"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3247,12 +3408,16 @@ Name: count, dtype: int64</code></pre>
 "xintercept":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "size":0.1
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("4ZbFKc");
+           var plotContainer = document.getElementById("FjivpV");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3260,9 +3425,9 @@ Name: count, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="f4db7f9b" class="cell" data-execution_count="48">
+<div id="0d39ba0a" class="cell" data-execution_count="48">
 <div class="cell-output cell-output-display" data-execution_count="48">
-   <div id="T5sbgN"></div>
+   <div id="DPqFu9"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3285,11 +3450,15 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("T5sbgN");
+           var plotContainer = document.getElementById("DPqFu9");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3301,14 +3470,14 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="dot-plots" class="slide level2">
 <h2>Dot plots</h2>
-<div id="86354824" class="cell" data-execution_count="49">
+<div id="72c2cf57" class="cell" data-execution_count="49">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a></a>ggplot() <span class="op">+</span> geom_dotplot(</span>
 <span id="cb38-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb38-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), </span>
 <span id="cb38-4"><a></a>    stackratio<span class="op">=</span><span class="fl">1.</span>, binwidth<span class="op">=</span><span class="dv">50</span>, fill<span class="op">=</span><span class="st">'black'</span>,</span>
 <span id="cb38-5"><a></a>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="49">
-   <div id="KsdVM3"></div>
+   <div id="yae8bN"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3333,6 +3502,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "binwidth":50.0,
 "stackratio":1.0,
@@ -3340,7 +3513,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("KsdVM3");
+           var plotContainer = document.getElementById("yae8bN");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3359,9 +3532,9 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="dot-plots-1" class="slide level2">
 <h2>Dot plots</h2>
-<div id="60ebb2be" class="cell" data-execution_count="50">
+<div id="651546a4" class="cell" data-execution_count="50">
 <div class="cell-output cell-output-display" data-execution_count="50">
-   <div id="iOXHIl"></div>
+   <div id="QBooD4"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3385,6 +3558,10 @@ Name: count, dtype: int64</code></pre>
 },
 "position":"jitter",
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 },{
 "geom":"vline",
@@ -3395,13 +3572,17 @@ Name: count, dtype: int64</code></pre>
 "xintercept":"edges"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"edges"
+}]
 },
 "color":"red",
 "size":0.5
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("iOXHIl");
+           var plotContainer = document.getElementById("QBooD4");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3409,9 +3590,9 @@ Name: count, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="60305b02" class="cell" data-execution_count="51">
+<div id="13de052a" class="cell" data-execution_count="51">
 <div class="cell-output cell-output-display" data-execution_count="51">
-   <div id="2A06bz"></div>
+   <div id="y5xX4P"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3436,6 +3617,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "binwidth":50.0,
 "stackratio":1.0,
@@ -3443,7 +3628,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("2A06bz");
+           var plotContainer = document.getElementById("y5xX4P");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3454,12 +3639,12 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="histogram-transform-bin-transform" class="slide level2">
 <h2>Histogram transform (bin transform)</h2>
-<div id="ecbc9d61" class="cell" data-execution_count="52">
+<div id="7def08b5" class="cell" data-execution_count="52">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a></a>counts, edges <span class="op">=</span> np.histogram(weight_data[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cb802e77" class="cell" data-execution_count="53">
+<div id="b69f4e1c" class="cell" data-execution_count="53">
 <div class="cell-output cell-output-display" data-execution_count="53">
-   <div id="QL5Rfe"></div>
+   <div id="Etovnv"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3483,6 +3668,10 @@ Name: count, dtype: int64</code></pre>
 },
 "position":"jitter",
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 },{
 "geom":"vline",
@@ -3493,13 +3682,17 @@ Name: count, dtype: int64</code></pre>
 "xintercept":"edges"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"edges"
+}]
 },
 "color":"red",
 "size":0.5
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("QL5Rfe");
+           var plotContainer = document.getElementById("Etovnv");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3507,12 +3700,12 @@ Name: count, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="16a01834" class="cell" data-execution_count="54">
+<div id="8e4436af" class="cell" data-execution_count="54">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a></a>ggplot() <span class="op">+</span> geom_histogram(</span>
 <span id="cb40-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb40-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), bins<span class="op">=</span><span class="dv">75</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="54">
-   <div id="R9ZKrc"></div>
+   <div id="i77QaO"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3536,12 +3729,16 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "bins":75.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("R9ZKrc");
+           var plotContainer = document.getElementById("i77QaO");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3552,12 +3749,12 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="number-of-bins" class="slide level2">
 <h2>Number of bins</h2>
-<div id="b6eea51d" class="cell" data-execution_count="55">
+<div id="594c87e0" class="cell" data-execution_count="55">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a></a>counts, edges <span class="op">=</span> np.histogram(weight_data[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="31789c0d" class="cell" data-execution_count="56">
+<div id="8dea90d9" class="cell" data-execution_count="56">
 <div class="cell-output cell-output-display" data-execution_count="56">
-   <div id="S1Ft5K"></div>
+   <div id="6e5fds"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3581,6 +3778,10 @@ Name: count, dtype: int64</code></pre>
 },
 "position":"jitter",
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 },{
 "geom":"vline",
@@ -3591,13 +3792,17 @@ Name: count, dtype: int64</code></pre>
 "xintercept":"edges"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"edges"
+}]
 },
 "color":"red",
 "size":0.5
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("S1Ft5K");
+           var plotContainer = document.getElementById("6e5fds");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3605,12 +3810,12 @@ Name: count, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="8857441a" class="cell" data-execution_count="57">
+<div id="a9143628" class="cell" data-execution_count="57">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a></a>ggplot() <span class="op">+</span> geom_histogram(</span>
 <span id="cb42-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb42-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), bins<span class="op">=</span><span class="dv">10</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="57">
-   <div id="ahxNEq"></div>
+   <div id="byzkBr"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3634,12 +3839,16 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "bins":10.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("ahxNEq");
+           var plotContainer = document.getElementById("byzkBr");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3764,9 +3973,9 @@ Name: count, dtype: int64</code></pre>
 <section id="histogram-transform-bin-transform-1" class="slide level2">
 <h2>Histogram transform (bin transform)</h2>
 <p>What questions are <em>easy</em> to answer with a histogram? What questions are <strong>hard</strong>?</p>
-<div id="93993ab7" class="cell" data-execution_count="58">
+<div id="7033e56c" class="cell" data-execution_count="58">
 <div class="cell-output cell-output-display" data-execution_count="58">
-   <div id="Mu1z4v"></div>
+   <div id="ywr40L"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3790,12 +3999,16 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "bins":75.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("Mu1z4v");
+           var plotContainer = document.getElementById("ywr40L");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3809,9 +4022,9 @@ Name: count, dtype: int64</code></pre>
 <h2><strong>Cumulative</strong> histograms</h2>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
-<div id="041fee03" class="cell" data-execution_count="59">
+<div id="e565c46d" class="cell" data-execution_count="59">
 <div class="cell-output cell-output-display" data-execution_count="59">
-   <div id="ea1JgC"></div>
+   <div id="D2IkFH"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3835,12 +4048,16 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "bins":10.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("ea1JgC");
+           var plotContainer = document.getElementById("D2IkFH");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3849,9 +4066,9 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="a8435be8" class="cell" data-execution_count="60">
+<div id="3481fda6" class="cell" data-execution_count="60">
 <div class="cell-output cell-output-display" data-execution_count="60">
-   <div id="ka9GdD"></div>
+   <div id="mhozSx"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3877,12 +4094,22 @@ Name: count, dtype: int64</code></pre>
 "y":"ccounts"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"centers"
+},{
+"type":"float",
+"column":"edges"
+},{
+"type":"int",
+"column":"ccounts"
+}]
 },
 "width":1.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("ka9GdD");
+           var plotContainer = document.getElementById("mhozSx");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3891,7 +4118,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div></div>
-<div id="61775dd1" class="cell" data-execution_count="61">
+<div id="547a4b61" class="cell" data-execution_count="61">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a></a>counts, edges <span class="op">=</span> np.histogram(weight_data[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb45-2"><a></a>centers <span class="op">=</span> (edges[<span class="dv">1</span>:] <span class="op">+</span> edges[:<span class="op">-</span><span class="dv">1</span>]) <span class="op">/</span> <span class="fl">2.</span></span>
 <span id="cb45-3"><a></a>ccounts <span class="op">=</span> np.cumsum(counts)</span>
@@ -3909,9 +4136,9 @@ Name: count, dtype: int64</code></pre>
 <h2><strong>Cumulative</strong> histograms</h2>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
-<div id="2923b9bf" class="cell" data-execution_count="62">
+<div id="d7f815f9" class="cell" data-execution_count="62">
 <div class="cell-output cell-output-display" data-execution_count="61">
-   <div id="CnlgTa"></div>
+   <div id="uaJYqX"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3935,12 +4162,16 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "bins":20.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("CnlgTa");
+           var plotContainer = document.getElementById("uaJYqX");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3949,9 +4180,9 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="76c451d3" class="cell" data-execution_count="63">
+<div id="6c86b6f2" class="cell" data-execution_count="63">
 <div class="cell-output cell-output-display" data-execution_count="62">
-   <div id="2wVFac"></div>
+   <div id="i7DK5l"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3977,12 +4208,22 @@ Name: count, dtype: int64</code></pre>
 "y":"ccounts"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"centers"
+},{
+"type":"float",
+"column":"edges"
+},{
+"type":"int",
+"column":"ccounts"
+}]
 },
 "width":1.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("2wVFac");
+           var plotContainer = document.getElementById("i7DK5l");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4044,7 +4285,7 @@ Name: count, dtype: int64</code></pre>
 <section id="cumulative-histograms-bins-1" class="slide level2">
 <h2><strong>Cumulative</strong> histograms: bins</h2>
 <p>Taken to the extreme: one bin for every observation.</p>
-<div id="13b0c293" class="cell" data-execution_count="64">
+<div id="32b5bc3a" class="cell" data-execution_count="64">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a></a>counts, edges <span class="op">=</span> np.histogram(weight_data[<span class="st">'Weight_in_lbs'</span>], bins<span class="op">=</span><span class="dv">1000</span>)</span>
 <span id="cb49-2"><a></a></span>
 <span id="cb49-3"><a></a>centers <span class="op">=</span> (edges[<span class="dv">1</span>:] <span class="op">+</span> edges[:<span class="op">-</span><span class="dv">1</span>]) <span class="op">/</span> <span class="fl">2.</span></span>
@@ -4056,7 +4297,7 @@ Name: count, dtype: int64</code></pre>
 <span id="cb49-9"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'centers'</span>, y<span class="op">=</span><span class="st">'ccount'</span>), </span>
 <span id="cb49-10"><a></a>    stat<span class="op">=</span><span class="st">'identity'</span>,) <span class="op">+</span> ylab(<span class="st">'Cumulative count'</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="63">
-   <div id="n5CLrx"></div>
+   <div id="xOgD4H"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4064,15 +4305,17 @@ Name: count, dtype: int64</code></pre>
 },
 "data_meta":{
 },
+"guides":{
+"y":{
+"title":"Cumulative count"
+}
+},
 "ggsize":{
 "width":1000.0,
 "height":300.0
 },
 "kind":"plot",
-"scales":[{
-"name":"Cumulative count",
-"aesthetic":"y"
-}],
+"scales":[],
 "layers":[{
 "geom":"line",
 "stat":"identity",
@@ -4085,11 +4328,21 @@ Name: count, dtype: int64</code></pre>
 "y":"ccount"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"centers"
+},{
+"type":"float",
+"column":"edges"
+},{
+"type":"int",
+"column":"ccount"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("n5CLrx");
+           var plotContainer = document.getElementById("xOgD4H");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4103,9 +4356,9 @@ Name: count, dtype: int64</code></pre>
 <p>If we divide by the total number of observations we get the <strong>fraction</strong> of data up to a point.</p>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
-<div id="4a794e03" class="cell" data-execution_count="65">
+<div id="eb74dd15" class="cell" data-execution_count="65">
 <div class="cell-output cell-output-display" data-execution_count="64">
-   <div id="UruGD8"></div>
+   <div id="Zne1oY"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4113,11 +4366,13 @@ Name: count, dtype: int64</code></pre>
 },
 "data_meta":{
 },
+"guides":{
+"y":{
+"title":"Cumulative count"
+}
+},
 "kind":"plot",
-"scales":[{
-"name":"Cumulative count",
-"aesthetic":"y"
-}],
+"scales":[],
 "layers":[{
 "geom":"line",
 "stat":"identity",
@@ -4130,11 +4385,21 @@ Name: count, dtype: int64</code></pre>
 "y":"ccount"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"centers"
+},{
+"type":"float",
+"column":"edges"
+},{
+"type":"int",
+"column":"ccount"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("UruGD8");
+           var plotContainer = document.getElementById("Zne1oY");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4143,9 +4408,9 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="487a256c" class="cell" data-execution_count="66">
+<div id="21f8af2a" class="cell" data-execution_count="66">
 <div class="cell-output cell-output-display" data-execution_count="65">
-   <div id="h8z8qA"></div>
+   <div id="xIwglI"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4153,13 +4418,15 @@ Name: count, dtype: int64</code></pre>
 },
 "data_meta":{
 },
+"guides":{
+"y":{
+"title":"Quantile"
+}
+},
 "kind":"plot",
 "scales":[{
 "aesthetic":"y",
 "breaks":[0.0,0.25,0.5,0.75,1.0]
-},{
-"name":"Quantile",
-"aesthetic":"y"
 }],
 "layers":[{
 "geom":"step",
@@ -4172,12 +4439,16 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "pad":true
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("h8z8qA");
+           var plotContainer = document.getElementById("xIwglI");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4185,7 +4456,7 @@ Name: count, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="26385fe0" class="cell" data-execution_count="67">
+<div id="c7e7d543" class="cell" data-execution_count="67">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a></a>ggplot() <span class="op">+</span> stat_ecdf(</span>
 <span id="cb50-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb50-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
@@ -4201,9 +4472,9 @@ Name: count, dtype: int64</code></pre>
 <p>This is an <strong>empirical CDF plot</strong> (percentile/quantile plot)</p>
 <p>An <strong>x percentile</strong> is the observation that <strong>x%</strong> of observations are less than.</p>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="a2ffc574" class="cell" data-execution_count="68">
+<div id="f8544970" class="cell" data-execution_count="68">
 <div class="cell-output cell-output-display" data-execution_count="66">
-   <div id="BFno4b"></div>
+   <div id="0STVob"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4211,13 +4482,15 @@ Name: count, dtype: int64</code></pre>
 },
 "data_meta":{
 },
+"guides":{
+"y":{
+"title":"Quantile"
+}
+},
 "kind":"plot",
 "scales":[{
 "aesthetic":"y",
 "breaks":[0.0,0.25,0.5,0.75,1.0]
-},{
-"name":"Quantile",
-"aesthetic":"y"
 }],
 "layers":[{
 "geom":"step",
@@ -4230,12 +4503,16 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "pad":true
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("BFno4b");
+           var plotContainer = document.getElementById("0STVob");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4243,7 +4520,7 @@ Name: count, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="2d867f52" class="cell" data-execution_count="69">
+<div id="7b5ed182" class="cell" data-execution_count="69">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a></a>ggplot() <span class="op">+</span> stat_ecdf(</span>
 <span id="cb51-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb51-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
@@ -4257,9 +4534,9 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>The <strong>median</strong> is the point such that 50% of observations are smaller.</p>
-<div id="ce134400" class="cell" data-execution_count="70">
+<div id="11f0888e" class="cell" data-execution_count="70">
 <div class="cell-output cell-output-display" data-execution_count="67">
-   <div id="xzAzhP"></div>
+   <div id="ezOUbL"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4283,6 +4560,10 @@ Name: count, dtype: int64</code></pre>
 },
 "position":"jitter",
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 },{
 "geom":"vline",
@@ -4297,7 +4578,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("xzAzhP");
+           var plotContainer = document.getElementById("ezOUbL");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4306,16 +4587,16 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>In Pandas:</p>
-<div id="940a369b" class="cell" data-execution_count="71">
+<div id="40a700e5" class="cell" data-execution_count="71">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a></a>weight_data[<span class="st">'Weight_in_lbs'</span>].median()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="68">
 <pre><code>np.float64(2822.5)</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="2222043a" class="cell" data-execution_count="72">
+<div id="d12828ec" class="cell" data-execution_count="72">
 <div class="cell-output cell-output-display" data-execution_count="69">
-   <div id="U2ILLD"></div>
+   <div id="Uzyn7p"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4323,13 +4604,15 @@ Name: count, dtype: int64</code></pre>
 },
 "data_meta":{
 },
+"guides":{
+"y":{
+"title":"Quantile"
+}
+},
 "kind":"plot",
 "scales":[{
 "aesthetic":"y",
 "breaks":[0.0,0.25,0.5,0.75,1.0]
-},{
-"name":"Quantile",
-"aesthetic":"y"
 }],
 "layers":[{
 "geom":"hline",
@@ -4352,12 +4635,16 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "pad":true
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("U2ILLD");
+           var plotContainer = document.getElementById("Uzyn7p");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4365,7 +4652,7 @@ Name: count, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="e2796b1b" class="cell" data-execution_count="73">
+<div id="77cc508a" class="cell" data-execution_count="73">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a></a>ggplot()  <span class="op">+</span> stat_ecdf(</span>
 <span id="cb54-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb54-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
@@ -4379,9 +4666,9 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>The <strong>min/max</strong> are self-explanatory, but are also the 0% and 100% percentiles of the data.</p>
-<div id="065f4f1c" class="cell" data-execution_count="74">
+<div id="7131de97" class="cell" data-execution_count="74">
 <div class="cell-output cell-output-display" data-execution_count="70">
-   <div id="gfOgAu"></div>
+   <div id="Mj0pMh"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4405,6 +4692,10 @@ Name: count, dtype: int64</code></pre>
 },
 "position":"jitter",
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 },{
 "geom":"vline",
@@ -4429,7 +4720,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("gfOgAu");
+           var plotContainer = document.getElementById("Mj0pMh");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4438,16 +4729,16 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>In Pandas:</p>
-<div id="f751cd47" class="cell" data-execution_count="75">
+<div id="b446a459" class="cell" data-execution_count="75">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a></a>weight_data[<span class="st">'Weight_in_lbs'</span>].<span class="bu">min</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="71">
 <pre><code>np.int64(1613)</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="6d06c3dc" class="cell" data-execution_count="76">
+<div id="49852875" class="cell" data-execution_count="76">
 <div class="cell-output cell-output-display" data-execution_count="72">
-   <div id="ynwrAo"></div>
+   <div id="aYdgw8"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4455,13 +4746,15 @@ Name: count, dtype: int64</code></pre>
 },
 "data_meta":{
 },
+"guides":{
+"y":{
+"title":"Quantile"
+}
+},
 "kind":"plot",
 "scales":[{
 "aesthetic":"y",
 "breaks":[0.0,0.25,0.5,0.75,1.0]
-},{
-"name":"Quantile",
-"aesthetic":"y"
 }],
 "layers":[{
 "geom":"hline",
@@ -4494,12 +4787,16 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "pad":true
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("ynwrAo");
+           var plotContainer = document.getElementById("aYdgw8");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4507,7 +4804,7 @@ Name: count, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="d12d10d6" class="cell" data-execution_count="77">
+<div id="cf6bbc59" class="cell" data-execution_count="77">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a></a>ggplot()  <span class="op">+</span> stat_ecdf(</span>
 <span id="cb57-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb57-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
@@ -4521,9 +4818,9 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>The <strong>quartiles</strong> are the <strong>25%</strong>, <strong>50%</strong> (median) and <strong>75%</strong> percentiles of the data.</p>
-<div id="2b4bd505" class="cell" data-execution_count="78">
+<div id="91200564" class="cell" data-execution_count="78">
 <div class="cell-output cell-output-display" data-execution_count="73">
-   <div id="Ufc8lw"></div>
+   <div id="q6DBAX"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4547,6 +4844,10 @@ Name: count, dtype: int64</code></pre>
 },
 "position":"jitter",
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 },{
 "geom":"vline",
@@ -4581,7 +4882,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("Ufc8lw");
+           var plotContainer = document.getElementById("q6DBAX");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4590,16 +4891,16 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>In Pandas:</p>
-<div id="c6ab41b3" class="cell" data-execution_count="79">
+<div id="ab86acfd" class="cell" data-execution_count="79">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a></a>weight_data[<span class="st">'Weight_in_lbs'</span>].quantile(<span class="fl">0.25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="74">
 <pre><code>np.float64(2226.5)</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="eb71b384" class="cell" data-execution_count="80">
+<div id="28b95dbd" class="cell" data-execution_count="80">
 <div class="cell-output cell-output-display" data-execution_count="75">
-   <div id="7neUxB"></div>
+   <div id="PGVVxN"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4607,13 +4908,15 @@ Name: count, dtype: int64</code></pre>
 },
 "data_meta":{
 },
+"guides":{
+"y":{
+"title":"Quantile"
+}
+},
 "kind":"plot",
 "scales":[{
 "aesthetic":"y",
 "breaks":[0.0,0.25,0.5,0.75,1.0]
-},{
-"name":"Quantile",
-"aesthetic":"y"
 }],
 "layers":[{
 "geom":"hline",
@@ -4656,12 +4959,16 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "pad":true
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("7neUxB");
+           var plotContainer = document.getElementById("PGVVxN");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4669,7 +4976,7 @@ Name: count, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="c9869e8e" class="cell" data-execution_count="81">
+<div id="44bdfe04" class="cell" data-execution_count="81">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a></a>ggplot() <span class="op">+</span> stat_ecdf(</span>
 <span id="cb60-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb60-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
@@ -4688,9 +4995,9 @@ Name: count, dtype: int64</code></pre>
 <li>Median</li>
 <li>25% and 75% percentiles</li>
 </ul>
-<div id="3985b6ca" class="cell" data-execution_count="82">
+<div id="69767533" class="cell" data-execution_count="82">
 <div class="cell-output cell-output-display" data-execution_count="76">
-   <div id="xIRBby"></div>
+   <div id="OjWCNW"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4714,6 +5021,10 @@ Name: count, dtype: int64</code></pre>
 },
 "position":"jitter",
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 },{
 "geom":"vline",
@@ -4768,7 +5079,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("xIRBby");
+           var plotContainer = document.getElementById("OjWCNW");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4777,13 +5088,13 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="c4735756" class="cell" data-execution_count="83">
+<div id="8a540f97" class="cell" data-execution_count="83">
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a></a>ggplot() <span class="op">+</span> geom_boxplot(</span>
 <span id="cb61-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb61-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), orientation<span class="op">=</span><span class="st">'y'</span></span>
 <span id="cb61-4"><a></a>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="op">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>]) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="77">
-   <div id="d2yZQ8"></div>
+   <div id="RSJ2cI"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4810,6 +5121,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "orientation":"y"
 },{
@@ -4829,12 +5144,16 @@ Name: count, dtype: int64</code></pre>
 },
 "show_legend":false,
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "orientation":"y"
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("d2yZQ8");
+           var plotContainer = document.getElementById("RSJ2cI");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4855,9 +5174,9 @@ Name: count, dtype: int64</code></pre>
 <li>Median</li>
 <li>25% and 75% percentiles</li>
 </ul>
-<div id="0f00cf5c" class="cell" data-execution_count="84">
+<div id="d8c7ba2c" class="cell" data-execution_count="84">
 <div class="cell-output cell-output-display" data-execution_count="78">
-   <div id="qcSTAE"></div>
+   <div id="xPCXmL"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4881,6 +5200,10 @@ Name: count, dtype: int64</code></pre>
 },
 "position":"jitter",
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 },{
 "geom":"vline",
@@ -4935,7 +5258,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("qcSTAE");
+           var plotContainer = document.getElementById("xPCXmL");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -4944,15 +5267,15 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="e0920f02" class="cell" data-execution_count="85">
+<div id="f3c135e4" class="cell" data-execution_count="85">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a></a>ggplot() <span class="op">+</span> geom_boxplot(</span>
 <span id="cb62-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb62-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>), orientation<span class="op">=</span><span class="st">'y'</span></span>
 <span id="cb62-4"><a></a>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="op">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>]) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="3c15b1c7" class="cell" data-execution_count="86">
+<div id="fc71d66c" class="cell" data-execution_count="86">
 <div class="cell-output cell-output-display" data-execution_count="79">
-   <div id="uP9B2J"></div>
+   <div id="qZwEMx"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -4981,6 +5304,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "orientation":"y",
 "width":0.5,
@@ -5002,6 +5329,10 @@ Name: count, dtype: int64</code></pre>
 },
 "show_legend":false,
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "orientation":"y"
 },{
@@ -5015,13 +5346,17 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "pad":true,
 "color":"blue"
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("uP9B2J");
+           var plotContainer = document.getElementById("qZwEMx");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -5054,14 +5389,14 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>Position by origin</p>
-<div id="23b00db1" class="cell" data-execution_count="87">
+<div id="da28bbd4" class="cell" data-execution_count="87">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a></a>ggplot() <span class="op">+</span> geom_boxplot(</span>
 <span id="cb63-2"><a></a>    data<span class="op">=</span>cars, </span>
 <span id="cb63-3"><a></a>    mapping<span class="op">=</span>aes(y<span class="op">=</span><span class="st">'Weight_in_lbs'</span>, x<span class="op">=</span><span class="st">'Origin'</span>), </span>
 <span id="cb63-4"><a></a>    orientation<span class="op">=</span><span class="st">'x'</span></span>
 <span id="cb63-5"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="80">
-   <div id="3kcVog"></div>
+   <div id="wLC3nk"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -5087,8 +5422,32 @@ Name: count, dtype: int64</code></pre>
 },
 "data_meta":{
 "series_annotations":[{
-"column":"Year",
-"type":"datetime"
+"type":"str",
+"column":"Name"
+},{
+"type":"float",
+"column":"Miles_per_Gallon"
+},{
+"type":"int",
+"column":"Cylinders"
+},{
+"type":"float",
+"column":"Displacement"
+},{
+"type":"float",
+"column":"Horsepower"
+},{
+"type":"int",
+"column":"Weight_in_lbs"
+},{
+"type":"float",
+"column":"Acceleration"
+},{
+"type":"datetime",
+"column":"Year"
+},{
+"type":"str",
+"column":"Origin"
 }]
 },
 "orientation":"x"
@@ -5111,15 +5470,39 @@ Name: count, dtype: int64</code></pre>
 "show_legend":false,
 "data_meta":{
 "series_annotations":[{
-"column":"Year",
-"type":"datetime"
+"type":"str",
+"column":"Name"
+},{
+"type":"float",
+"column":"Miles_per_Gallon"
+},{
+"type":"int",
+"column":"Cylinders"
+},{
+"type":"float",
+"column":"Displacement"
+},{
+"type":"float",
+"column":"Horsepower"
+},{
+"type":"int",
+"column":"Weight_in_lbs"
+},{
+"type":"float",
+"column":"Acceleration"
+},{
+"type":"datetime",
+"column":"Year"
+},{
+"type":"str",
+"column":"Origin"
 }]
 },
 "orientation":"x"
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("3kcVog");
+           var plotContainer = document.getElementById("wLC3nk");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -5129,14 +5512,14 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
 <p>Scale box width by number of observations</p>
-<div id="b15c7144" class="cell" data-execution_count="88">
+<div id="c0933b96" class="cell" data-execution_count="88">
 <div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a></a>ggplot() <span class="op">+</span> geom_boxplot(</span>
 <span id="cb64-2"><a></a>    data<span class="op">=</span>cars, varwidth<span class="op">=</span><span class="va">True</span>,</span>
 <span id="cb64-3"><a></a>    mapping<span class="op">=</span>aes(y<span class="op">=</span><span class="st">'Weight_in_lbs'</span>, x<span class="op">=</span><span class="st">'Origin'</span>), </span>
 <span id="cb64-4"><a></a>    orientation<span class="op">=</span><span class="st">'x'</span></span>
 <span id="cb64-5"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="81">
-   <div id="x3kwzZ"></div>
+   <div id="cBvqgs"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -5163,8 +5546,32 @@ Name: count, dtype: int64</code></pre>
 },
 "data_meta":{
 "series_annotations":[{
-"column":"Year",
-"type":"datetime"
+"type":"str",
+"column":"Name"
+},{
+"type":"float",
+"column":"Miles_per_Gallon"
+},{
+"type":"int",
+"column":"Cylinders"
+},{
+"type":"float",
+"column":"Displacement"
+},{
+"type":"float",
+"column":"Horsepower"
+},{
+"type":"int",
+"column":"Weight_in_lbs"
+},{
+"type":"float",
+"column":"Acceleration"
+},{
+"type":"datetime",
+"column":"Year"
+},{
+"type":"str",
+"column":"Origin"
 }]
 },
 "orientation":"x",
@@ -5188,15 +5595,39 @@ Name: count, dtype: int64</code></pre>
 "show_legend":false,
 "data_meta":{
 "series_annotations":[{
-"column":"Year",
-"type":"datetime"
+"type":"str",
+"column":"Name"
+},{
+"type":"float",
+"column":"Miles_per_Gallon"
+},{
+"type":"int",
+"column":"Cylinders"
+},{
+"type":"float",
+"column":"Displacement"
+},{
+"type":"float",
+"column":"Horsepower"
+},{
+"type":"int",
+"column":"Weight_in_lbs"
+},{
+"type":"float",
+"column":"Acceleration"
+},{
+"type":"datetime",
+"column":"Year"
+},{
+"type":"str",
+"column":"Origin"
 }]
 },
 "orientation":"x"
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("x3kwzZ");
+           var plotContainer = document.getElementById("cBvqgs");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -5219,9 +5650,9 @@ Name: count, dtype: int64</code></pre>
 <li>Divided into <span class="math inline">K</span> bins <span class="math inline">\{ b_1, ... , b_K \}</span>, with <strong>equal</strong> width <span class="math inline">h</span>.</li>
 <li>Let <span class="math inline">c_k</span> be the number of observations in bin <span class="math inline">k</span>.</li>
 </ul>
-<div id="ffcaf6f5" class="cell" data-execution_count="89">
+<div id="cb5fd2f1" class="cell" data-execution_count="89">
 <div class="cell-output cell-output-display" data-execution_count="82">
-   <div id="c0DveC"></div>
+   <div id="MxFOFf"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -5245,6 +5676,10 @@ Name: count, dtype: int64</code></pre>
 },
 "position":"jitter",
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 }
 },{
 "geom":"vline",
@@ -5255,13 +5690,17 @@ Name: count, dtype: int64</code></pre>
 "xintercept":"edges"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"edges"
+}]
 },
 "color":"red",
 "size":0.5
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("c0DveC");
+           var plotContainer = document.getElementById("MxFOFf");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -5279,13 +5718,13 @@ Name: count, dtype: int64</code></pre>
 <p>Note that: <span class="math display">p_k \geq 0, \quad \sum_{1}^{K} p_k = 1</span></p>
 <p>Therefore <span class="math inline">\{p_1,...,p_K\}</span> form a <strong>probability mass function</strong> (PMF) over bins.</p>
 </div><div class="column" style="font-size: 50%; width: 50%">
-<div id="35f815fc" class="cell" data-execution_count="90">
+<div id="d01aa12e" class="cell" data-execution_count="90">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a></a>ggplot() <span class="op">+</span> geom_histogram(</span>
 <span id="cb65-2"><a></a>    data<span class="op">=</span>weight_data, stat<span class="op">=</span><span class="st">'bin'</span>,</span>
 <span id="cb65-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>, y<span class="op">=</span><span class="st">'..count..'</span>), </span>
 <span id="cb65-4"><a></a>    bins<span class="op">=</span><span class="dv">75</span>) <span class="op">+</span> ggsize(<span class="dv">400</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="83">
-   <div id="13M6vA"></div>
+   <div id="Av1Al6"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -5311,12 +5750,16 @@ Name: count, dtype: int64</code></pre>
 "y":"..count.."
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "bins":75.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("13M6vA");
+           var plotContainer = document.getElementById("Av1Al6");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -5324,13 +5767,13 @@ Name: count, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="a5e72d8a" class="cell" data-execution_count="91">
+<div id="8e2a0759" class="cell" data-execution_count="91">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a></a>ggplot() <span class="op">+</span> geom_histogram(</span>
 <span id="cb66-2"><a></a>    data<span class="op">=</span>weight_data, stat<span class="op">=</span><span class="st">'bin'</span>,</span>
 <span id="cb66-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>, y<span class="op">=</span><span class="st">'..density..'</span>), </span>
 <span id="cb66-4"><a></a>    bins<span class="op">=</span><span class="dv">75</span>) <span class="op">+</span> ggsize(<span class="dv">400</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="84">
-   <div id="Opyy2u"></div>
+   <div id="v2o79I"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -5348,7 +5791,7 @@ Name: count, dtype: int64</code></pre>
 "geom":"histogram",
 "stat":"bin",
 "data":{
-"..density..":[5.2375691533713884E-5,5.2375691533713884E-5,0.0,1.0475138306742777E-4,2.6187845766856944E-4,4.7138122380342495E-4,1.0475138306742777E-4,4.7138122380342495E-4,8.90386756073136E-4,4.7138122380342495E-4,3.666298407359972E-4,9.427624476068499E-4,7.332596814719944E-4,6.808839899382805E-4,5.761326068708528E-4,3.666298407359972E-4,4.1900553226971107E-4,4.7138122380342495E-4,2.6187845766856944E-4,2.6187845766856944E-4,5.237569153371389E-4,4.1900553226971107E-4,6.808839899382805E-4,4.1900553226971107E-4,2.6187845766856944E-4,3.666298407359972E-4,3.666298407359972E-4,4.1900553226971107E-4,5.761326068708528E-4,3.1425414920228326E-4,2.0950276613485554E-4,2.6187845766856944E-4,3.666298407359972E-4,2.0950276613485554E-4,3.666298407359972E-4,3.666298407359972E-4,1.0475138306742777E-4,3.666298407359972E-4,6.285082984045665E-4,1.5712707460114163E-4,2.6187845766856944E-4,1.5712707460114163E-4,3.1425414920228326E-4,2.6187845766856944E-4,2.6187845766856944E-4,2.0950276613485554E-4,2.0950276613485554E-4,2.0950276613485554E-4,2.6187845766856944E-4,2.0950276613485554E-4,5.2375691533713884E-5,2.6187845766856944E-4,3.1425414920228326E-4,4.1900553226971107E-4,1.0475138306742777E-4,2.6187845766856944E-4,2.0950276613485554E-4,2.6187845766856944E-4,3.1425414920228326E-4,1.5712707460114163E-4,3.666298407359972E-4,0.0,0.0,1.5712707460114163E-4,1.5712707460114163E-4,1.5712707460114163E-4,5.2375691533713884E-5,0.0,0.0,5.2375691533713884E-5,1.5712707460114163E-4,5.2375691533713884E-5,0.0,0.0,5.2375691533713884E-5],
+"..density..":[5.14159275527296E-5,5.14159275527296E-5,0.0,1.028318551054592E-4,2.57079637763648E-4,4.6274334797456637E-4,1.028318551054592E-4,4.6274334797456637E-4,8.74070768396403E-4,4.6274334797456637E-4,3.5991149286910716E-4,9.254866959491327E-4,7.198229857382143E-4,6.684070581854848E-4,5.655752030800256E-4,3.5991149286910716E-4,4.113274204218368E-4,4.6274334797456637E-4,2.57079637763648E-4,2.57079637763648E-4,5.14159275527296E-4,4.113274204218368E-4,6.684070581854848E-4,4.113274204218368E-4,2.57079637763648E-4,3.5991149286910716E-4,3.5991149286910716E-4,4.113274204218368E-4,5.655752030800256E-4,3.084955653163776E-4,2.056637102109184E-4,2.57079637763648E-4,3.5991149286910716E-4,2.056637102109184E-4,3.5991149286910716E-4,3.5991149286910716E-4,1.028318551054592E-4,3.5991149286910716E-4,6.169911306327552E-4,1.542477826581888E-4,2.57079637763648E-4,1.542477826581888E-4,3.084955653163776E-4,2.57079637763648E-4,2.57079637763648E-4,2.056637102109184E-4,2.056637102109184E-4,2.056637102109184E-4,2.57079637763648E-4,2.056637102109184E-4,5.14159275527296E-5,2.57079637763648E-4,3.084955653163776E-4,4.113274204218368E-4,1.028318551054592E-4,2.57079637763648E-4,2.056637102109184E-4,2.57079637763648E-4,3.084955653163776E-4,1.542477826581888E-4,3.5991149286910716E-4,0.0,0.0,1.542477826581888E-4,1.542477826581888E-4,1.542477826581888E-4,5.14159275527296E-5,0.0,0.0,5.14159275527296E-5,1.542477826581888E-4,5.14159275527296E-5,0.0,0.0,5.14159275527296E-5],
 "Weight_in_lbs":[1604.033582222222,1651.93808,1699.8425777777777,1747.7470755555555,1795.651573333333,1843.556071111111,1891.4605688888887,1939.3650666666665,1987.2695644444443,2035.1740622222221,2083.07856,2130.9830577777775,2178.8875555555555,2226.792053333333,2274.696551111111,2322.6010488888887,2370.5055466666663,2418.4100444444443,2466.3145422222224,2514.21904,2562.1235377777775,2610.0280355555556,2657.932533333333,2705.837031111111,2753.7415288888888,2801.6460266666663,2849.5505244444444,2897.4550222222224,2945.35952,2993.2640177777776,3041.168515555555,3089.073013333333,3136.977511111111,3184.882008888889,3232.7865066666664,3280.6910044444444,3328.5955022222224,3376.5,3424.4044977777776,3472.308995555555,3520.213493333333,3568.117991111111,3616.022488888889,3663.9269866666664,3711.831484444444,3759.7359822222224,3807.64048,3855.5449777777776,3903.449475555555,3951.3539733333328,3999.2584711111112,4047.162968888889,4095.0674666666664,4142.971964444444,4190.8764622222225,4238.78096,4286.685457777778,4334.589955555555,4382.494453333333,4430.398951111111,4478.303448888889,4526.207946666666,4574.112444444444,4622.0169422222225,4669.92144,4717.825937777778,4765.730435555555,4813.634933333333,4861.539431111111,4909.443928888889,4957.3484266666665,5005.252924444444,5053.1574222222225,5101.06192,5148.966417777778]
 },
 "mapping":{
@@ -5356,12 +5799,16 @@ Name: count, dtype: int64</code></pre>
 "y":"..density.."
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "bins":75.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("Opyy2u");
+           var plotContainer = document.getElementById("v2o79I");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -5374,9 +5821,9 @@ Name: count, dtype: int64</code></pre>
 <section id="number-of-bins-4" class="slide level2">
 <h2>Number of bins</h2>
 <p>Our underlying data is <em>continuous</em> not <em>discrete</em>, can we estimate a <strong>probability density function</strong> (<span class="math inline">\hat{p}(x)</span>) instead?</p>
-<div id="16c2398b" class="cell" data-execution_count="92">
+<div id="cd9c0afe" class="cell" data-execution_count="92">
 <div class="cell-output cell-output-display" data-execution_count="85">
-   <div id="mj2J0p"></div>
+   <div id="w5RERE"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -5401,11 +5848,18 @@ Name: count, dtype: int64</code></pre>
 "y":"density"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"edges"
+},{
+"type":"float",
+"column":"density"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("mj2J0p");
+           var plotContainer = document.getElementById("w5RERE");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -5423,9 +5877,9 @@ Name: count, dtype: int64</code></pre>
 </div><div class="column" style="font-size: 75%; width: 50%">
 <p>Therefore our density function should be: <span class="math display">\hat{p}(x)= \frac{p_k}{h}=\frac{c_k}{N\cdot h}</span> <span class="math display">\text{for } x \in [b_k, b_k+h)</span></p>
 </div></div>
-<div id="ea99ad53" class="cell" data-execution_count="93">
+<div id="484b33e4" class="cell" data-execution_count="93">
 <div class="cell-output cell-output-display" data-execution_count="86">
-   <div id="H788G3"></div>
+   <div id="CANhvt"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -5450,11 +5904,18 @@ Name: count, dtype: int64</code></pre>
 "y":"density"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"edges"
+},{
+"type":"float",
+"column":"density"
+}]
 }
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("H788G3");
+           var plotContainer = document.getElementById("CANhvt");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -5771,14 +6232,14 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>One observation</p>
-<div id="486c5390" class="cell" data-execution_count="94">
+<div id="658dadc5" class="cell" data-execution_count="94">
 <div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a></a>ggplot(</span>
 <span id="cb73-2"><a></a>    data<span class="op">=</span>weight_data[:<span class="dv">1</span>], </span>
 <span id="cb73-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb73-4"><a></a>    geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb73-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="87">
-   <div id="HqTPwL"></div>
+   <div id="dUj4Mw"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -5789,6 +6250,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -5820,7 +6285,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("HqTPwL");
+           var plotContainer = document.getElementById("dUj4Mw");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -5830,14 +6295,14 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
 <p>Two observations</p>
-<div id="d298b5f0" class="cell" data-execution_count="95">
+<div id="57a4ba2d" class="cell" data-execution_count="95">
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a></a>ggplot(</span>
 <span id="cb74-2"><a></a>    data<span class="op">=</span>weight_data[:<span class="dv">2</span>], </span>
 <span id="cb74-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb74-4"><a></a>    geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb74-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="88">
-   <div id="vzOcKK"></div>
+   <div id="TkMR8T"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -5848,6 +6313,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -5879,7 +6348,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("vzOcKK");
+           var plotContainer = document.getElementById("TkMR8T");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -5894,14 +6363,14 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>One observation</p>
-<div id="6ff07a86" class="cell" data-execution_count="96">
+<div id="1df84016" class="cell" data-execution_count="96">
 <div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a></a>ggplot(</span>
 <span id="cb75-2"><a></a>    data<span class="op">=</span>weight_data[:<span class="dv">1</span>], </span>
 <span id="cb75-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb75-4"><a></a>    geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb75-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="89">
-   <div id="vJLAzD"></div>
+   <div id="IBUzb5"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -5912,6 +6381,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -5943,7 +6416,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("vJLAzD");
+           var plotContainer = document.getElementById("IBUzb5");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -5966,14 +6439,14 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>Two observations</p>
-<div id="09bf8957" class="cell" data-execution_count="97">
+<div id="2c2748a9" class="cell" data-execution_count="97">
 <div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a></a>ggplot(</span>
 <span id="cb76-2"><a></a>    data<span class="op">=</span>weight_data[:<span class="dv">2</span>], </span>
 <span id="cb76-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb76-4"><a></a>    geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb76-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="90">
-   <div id="XL46ID"></div>
+   <div id="Eiz73i"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -5984,6 +6457,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6015,7 +6492,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("XL46ID");
+           var plotContainer = document.getElementById("Eiz73i");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6025,14 +6502,14 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
 <p>Three observations</p>
-<div id="e1b3d4e5" class="cell" data-execution_count="98">
+<div id="6098aed6" class="cell" data-execution_count="98">
 <div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a></a>ggplot(</span>
 <span id="cb77-2"><a></a>    data<span class="op">=</span>weight_data[:<span class="dv">3</span>], </span>
 <span id="cb77-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb77-4"><a></a>    geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb77-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="91">
-   <div id="9sYNW0"></div>
+   <div id="5m05dV"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6043,6 +6520,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6074,7 +6555,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("9sYNW0");
+           var plotContainer = document.getElementById("5m05dV");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6090,14 +6571,14 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>Three observations</p>
-<div id="5adff319" class="cell" data-execution_count="99">
+<div id="68720852" class="cell" data-execution_count="99">
 <div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a></a>ggplot(</span>
 <span id="cb78-2"><a></a>    data<span class="op">=</span>weight_data[:<span class="dv">3</span>], </span>
 <span id="cb78-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb78-4"><a></a>    geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb78-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="92">
-   <div id="0q23Tq"></div>
+   <div id="h8lEAA"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6108,6 +6589,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6139,7 +6624,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("0q23Tq");
+           var plotContainer = document.getElementById("h8lEAA");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6149,14 +6634,14 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
 <p>Five observations</p>
-<div id="ab697616" class="cell" data-execution_count="100">
+<div id="86669825" class="cell" data-execution_count="100">
 <div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a></a>ggplot(</span>
 <span id="cb79-2"><a></a>    data<span class="op">=</span>weight_data[:<span class="dv">5</span>], </span>
 <span id="cb79-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb79-4"><a></a>    geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb79-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="93">
-   <div id="mLvroF"></div>
+   <div id="5qWeIo"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6167,6 +6652,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6198,7 +6687,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("mLvroF");
+           var plotContainer = document.getElementById("5qWeIo");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6213,7 +6702,7 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p><strong>All</strong> observations</p>
-<div id="38aa2226" class="cell" data-execution_count="101">
+<div id="71b71403" class="cell" data-execution_count="101">
 <div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a></a>ggplot(</span>
 <span id="cb80-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb80-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
@@ -6221,7 +6710,7 @@ Name: count, dtype: int64</code></pre>
 <span id="cb80-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])<span class="op">\</span></span>
 <span id="cb80-6"><a></a>        <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="94">
-   <div id="1iOjZ3"></div>
+   <div id="LyBgSf"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6232,6 +6721,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "ggsize":{
 "width":1000.0,
@@ -6267,7 +6760,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("1iOjZ3");
+           var plotContainer = document.getElementById("LyBgSf");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6286,14 +6779,14 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>Three observations</p>
-<div id="c2d5f55e" class="cell" data-execution_count="102">
+<div id="3769ae40" class="cell" data-execution_count="102">
 <div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a></a>ggplot(</span>
 <span id="cb81-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb81-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb81-4"><a></a>    geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">20</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb81-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="95">
-   <div id="6pNYMR"></div>
+   <div id="Db8dpO"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6304,6 +6797,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6335,7 +6832,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("6pNYMR");
+           var plotContainer = document.getElementById("Db8dpO");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6345,14 +6842,14 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
 <p>Five observations</p>
-<div id="51ac034f" class="cell" data-execution_count="103">
+<div id="c93bc957" class="cell" data-execution_count="103">
 <div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a></a>ggplot(</span>
 <span id="cb82-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb82-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb82-4"><a></a>    geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">200</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb82-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="96">
-   <div id="RUTI1t"></div>
+   <div id="jkVBbX"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6363,6 +6860,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6394,7 +6895,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("RUTI1t");
+           var plotContainer = document.getElementById("jkVBbX");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6409,14 +6910,14 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>Sharp drop-off not ideal.</p>
-<div id="7e7c54a0" class="cell" data-execution_count="104">
+<div id="b8e0edda" class="cell" data-execution_count="104">
 <div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a></a>ggplot(</span>
 <span id="cb83-2"><a></a>    data<span class="op">=</span>weight_data[:<span class="dv">1</span>], </span>
 <span id="cb83-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb83-4"><a></a>    geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb83-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="97">
-   <div id="vpOM3w"></div>
+   <div id="DS2YEg"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6427,6 +6928,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6458,7 +6963,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("vpOM3w");
+           var plotContainer = document.getElementById("DS2YEg");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6468,14 +6973,14 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
 <p>Replace indicator with a <em>smooth</em> function</p>
-<div id="0dd657b6" class="cell" data-execution_count="105">
+<div id="93577a1d" class="cell" data-execution_count="105">
 <div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a></a>ggplot(</span>
 <span id="cb84-2"><a></a>    data<span class="op">=</span>weight_data[:<span class="dv">1</span>], </span>
 <span id="cb84-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
 <span id="cb84-4"><a></a>) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'gaussian'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">\</span></span>
 <span id="cb84-5"><a></a>  <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>) <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="98">
-   <div id="K0T2Co"></div>
+   <div id="FBSKTk"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6486,6 +6991,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6517,7 +7026,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("K0T2Co");
+           var plotContainer = document.getElementById("FBSKTk");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6533,9 +7042,9 @@ Name: count, dtype: int64</code></pre>
 <p><span class="math display">\hat{p}(x) = \frac{1}{2Nh} \sum_{i=1}^N \phi\left(\frac{x - x_i}{h}\right), \quad \phi(u) = \frac{1}{\sqrt{2 \pi}} \exp\left(-\frac{u^2}{2} \right)</span></p>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
-<div id="465f3848" class="cell" data-execution_count="106">
+<div id="8d810da9" class="cell" data-execution_count="106">
 <div class="cell-output cell-output-display" data-execution_count="99">
-   <div id="h2xfG7"></div>
+   <div id="SfOQzj"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6546,6 +7055,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6577,7 +7090,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("h2xfG7");
+           var plotContainer = document.getElementById("SfOQzj");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6586,9 +7099,9 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
-<div id="e0dc6562" class="cell" data-execution_count="107">
+<div id="09ae3b3c" class="cell" data-execution_count="107">
 <div class="cell-output cell-output-display" data-execution_count="100">
-   <div id="CrUXtN"></div>
+   <div id="HRWfzU"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6599,6 +7112,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6630,7 +7147,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("CrUXtN");
+           var plotContainer = document.getElementById("HRWfzU");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6645,14 +7162,14 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>Gaussian</p>
-<div id="75a9cc8a" class="cell" data-execution_count="108">
+<div id="3a499971" class="cell" data-execution_count="108">
 <div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a></a>ggplot(</span>
 <span id="cb85-2"><a></a>    data<span class="op">=</span>weight_data[:<span class="dv">3</span>], </span>
 <span id="cb85-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
 <span id="cb85-4"><a></a>) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'gaussian'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">\</span></span>
 <span id="cb85-5"><a></a>  <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>) <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="101">
-   <div id="kxW0Ar"></div>
+   <div id="HPXj1d"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6663,6 +7180,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6694,7 +7215,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("kxW0Ar");
+           var plotContainer = document.getElementById("HPXj1d");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6704,14 +7225,14 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
 <p>Uniform</p>
-<div id="e919859d" class="cell" data-execution_count="109">
+<div id="df8e6841" class="cell" data-execution_count="109">
 <div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a></a>ggplot(</span>
 <span id="cb86-2"><a></a>    data<span class="op">=</span>weight_data[:<span class="dv">3</span>], </span>
 <span id="cb86-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb86-4"><a></a>    geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb86-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="102">
-   <div id="RXlj7b"></div>
+   <div id="m8bnhW"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6722,6 +7243,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6753,7 +7278,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("RXlj7b");
+           var plotContainer = document.getElementById("m8bnhW");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6768,14 +7293,14 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>Gaussian</p>
-<div id="73eee6c0" class="cell" data-execution_count="110">
+<div id="7088481b" class="cell" data-execution_count="110">
 <div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a></a>ggplot(</span>
 <span id="cb87-2"><a></a>    data<span class="op">=</span>weight_data[:<span class="dv">5</span>], </span>
 <span id="cb87-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
 <span id="cb87-4"><a></a>) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'gaussian'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">\</span></span>
 <span id="cb87-5"><a></a>  <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>) <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="103">
-   <div id="IPq2hF"></div>
+   <div id="L9YER1"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6786,6 +7311,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6817,7 +7346,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("IPq2hF");
+           var plotContainer = document.getElementById("L9YER1");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6827,14 +7356,14 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
 <p>Uniform</p>
-<div id="26a03d36" class="cell" data-execution_count="111">
+<div id="cc35d96d" class="cell" data-execution_count="111">
 <div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a></a>ggplot(</span>
 <span id="cb88-2"><a></a>    data<span class="op">=</span>weight_data[:<span class="dv">5</span>], </span>
 <span id="cb88-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb88-4"><a></a>    geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb88-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="104">
-   <div id="R1IDBS"></div>
+   <div id="NDrjui"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6845,6 +7374,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6876,7 +7409,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("R1IDBS");
+           var plotContainer = document.getElementById("NDrjui");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6891,14 +7424,14 @@ Name: count, dtype: int64</code></pre>
 <div class="columns">
 <div class="column" style="font-size: 75%; width: 50%">
 <p>Gaussian</p>
-<div id="740253d0" class="cell" data-execution_count="112">
+<div id="460ac62b" class="cell" data-execution_count="112">
 <div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a></a>ggplot(</span>
 <span id="cb89-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb89-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)</span>
 <span id="cb89-4"><a></a>) <span class="op">+</span> geom_density(kernel<span class="op">=</span><span class="st">'gaussian'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">\</span></span>
 <span id="cb89-5"><a></a>  <span class="op">+</span> geom_point(size<span class="op">=</span><span class="dv">10</span>) <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="105">
-   <div id="Wc6fSb"></div>
+   <div id="35SfL4"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6909,6 +7442,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6940,7 +7477,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("Wc6fSb");
+           var plotContainer = document.getElementById("35SfL4");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -6950,14 +7487,14 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div><div class="column" style="font-size: 75%; width: 50%">
 <p>Uniform</p>
-<div id="0bf143f7" class="cell" data-execution_count="113">
+<div id="fd044852" class="cell" data-execution_count="113">
 <div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a></a>ggplot(</span>
 <span id="cb90-2"><a></a>    data<span class="op">=</span>weight_data, </span>
 <span id="cb90-3"><a></a>    mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'Weight_in_lbs'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb90-4"><a></a>    geom_density(kernel<span class="op">=</span><span class="st">'rectangular'</span>, bw<span class="op">=</span><span class="dv">50</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb90-5"><a></a>    geom_point(size<span class="op">=</span><span class="dv">10</span>)  <span class="op">+</span> scale_x_continuous(limits<span class="op">=</span>[<span class="dv">3000</span>, <span class="dv">4000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="106">
-   <div id="2XEFIK"></div>
+   <div id="7v0J6X"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -6968,6 +7505,10 @@ Name: count, dtype: int64</code></pre>
 "x":"Weight_in_lbs"
 },
 "data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weight_in_lbs"
+}]
 },
 "kind":"plot",
 "scales":[{
@@ -6999,7 +7540,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("2XEFIK");
+           var plotContainer = document.getElementById("7v0J6X");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -7294,11 +7835,11 @@ Name: count, dtype: int64</code></pre>
 <section id="violin-plots" class="slide level2">
 <h2>Violin plots</h2>
 <p>Symmetric kernel density estimate.</p>
-<div id="83cdc033" class="cell" data-execution_count="115">
+<div id="914eee7c" class="cell" data-execution_count="115">
 <div class="sourceCode cell-code" id="cb101"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb101-1"><a></a>ggplot({<span class="st">'x'</span>: x, <span class="st">'y1'</span>: y1, <span class="st">'y2'</span>: y2}) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb101-2"><a></a>    geom_violin(aes(<span class="st">'x'</span>, <span class="st">'y1'</span>), trim<span class="op">=</span><span class="va">False</span>, fill<span class="op">=</span><span class="st">'red'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="108">
-   <div id="olesol"></div>
+   <div id="vrzFwj"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -7307,6 +7848,16 @@ Name: count, dtype: int64</code></pre>
 "mapping":{
 },
 "data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"x"
+},{
+"type":"float",
+"column":"y1"
+},{
+"type":"float",
+"column":"y2"
+}]
 },
 "kind":"plot",
 "scales":[],
@@ -7329,7 +7880,7 @@ Name: count, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("olesol");
+           var plotContainer = document.getElementById("vrzFwj");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
