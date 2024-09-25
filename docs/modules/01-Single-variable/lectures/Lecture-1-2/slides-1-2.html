@@ -1102,7 +1102,7 @@ Prof.&nbsp;Gabe Hope
 <p>Estimate with sample:</p>
 <p><span class="math display">\mu^*=\bar{x},\ \sigma^*=s</span> Resample from our estimated distribution: <span class="math display">\{\hat{x}_1,...,\hat{x}_N\} \sim \mathcal{N}(x; \bar{x},s)</span></p>
 <p>In code:</p>
-<div id="4f8f7d8c" class="cell" data-execution_count="1">
+<div id="6626fee6" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> normal_bootstrap_sample(data):</span>
 <span id="cb11-2"><a></a>    N <span class="op">=</span> data.shape[<span class="dv">0</span>]                   <span class="co"># Number of obsevations</span></span>
 <span id="cb11-3"><a></a>    m,  <span class="op">=</span> data.mean(), data.std()       <span class="co"># Estimated parameters           </span></span>

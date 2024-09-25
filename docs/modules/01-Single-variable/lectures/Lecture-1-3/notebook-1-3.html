@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>notebook-1-3 – Data Analytics and Visualization</title>
+<title>Plotting the distribution – Data Analytics and Visualization</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -192,23 +192,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#fraction-of-games-above-10-assists" id="toc-fraction-of-games-above-10-assists" class="nav-link active" data-scroll-target="#fraction-of-games-above-10-assists">Fraction of games above 10 assists</a></li>
+  <li><a href="#probability-of-getting-20-assists-in-a-game" id="toc-probability-of-getting-20-assists-in-a-game" class="nav-link" data-scroll-target="#probability-of-getting-20-assists-in-a-game">Probability of getting &gt;= 20 assists in a game?</a></li>
+  <li><a href="#negative-binomial-model" id="toc-negative-binomial-model" class="nav-link" data-scroll-target="#negative-binomial-model">Negative Binomial model</a></li>
+  <li><a href="#poisson-parametric-bootstrap" id="toc-poisson-parametric-bootstrap" class="nav-link" data-scroll-target="#poisson-parametric-bootstrap">Poisson parametric bootstrap</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Plotting the distribution</h1>
+</div>
 
 
 
-<div id="cell-0" class="cell" data-execution_count="10">
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="cell-1" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
-            <div id="N0t2aj"></div>
+            <div id="rLNCWu"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -232,23 +257,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("N0t2aj").appendChild(div);
+                        document.getElementById("rLNCWu").appendChild(div);
                     };
-                    var e = document.getElementById("N0t2aj");
+                    var e = document.getElementById("rLNCWu");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 </div>
-<div id="cell-1" class="cell" data-execution_count="34">
+<div id="cell-2" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>clark <span class="op">=</span> pd.read_csv(<span class="st">'data/clark.csv'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>copper <span class="op">=</span> pd.read_csv(<span class="st">'data/copper.csv'</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>ogunbawale <span class="op">=</span> pd.read_csv(<span class="st">'data/ogunbawale.csv'</span>)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>stewart <span class="op">=</span> pd.read_csv(<span class="st">'data/stewart.csv'</span>)</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>wilson <span class="op">=</span> pd.read_csv(<span class="st">'data/wilson.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-2" class="cell" data-execution_count="36">
+<div id="cell-3" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>clark[<span class="st">'name'</span>] <span class="op">=</span> <span class="st">'Clark'</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>copper[<span class="st">'name'</span>] <span class="op">=</span> <span class="st">'Copper'</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>ogunbawale[<span class="st">'name'</span>] <span class="op">=</span> <span class="st">'Ogunbawale'</span></span>
@@ -257,13 +282,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>players <span class="op">=</span> pd.concat([clark, copper, ogunbawale, stewart, wilson])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-3" class="cell" data-execution_count="74">
+<div id="cell-4" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>players.to_csv(<span class="st">'data/wnba_players.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-4" class="cell" data-execution_count="56">
+<div id="cell-6" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>)) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="56">
-   <div id="TqoyL1"></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+   <div id="9UB5Ii"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -381,7 +406,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("TqoyL1");
+           var plotContainer = document.getElementById("9UB5Ii");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -389,10 +414,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-5" class="cell" data-execution_count="60">
+<div id="cell-7" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_density(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, color<span class="op">=</span><span class="st">'name'</span>, fill<span class="op">=</span><span class="st">'name'</span>), alpha<span class="op">=</span><span class="fl">0.05</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="60">
-   <div id="fhH5GP"></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+   <div id="MCh054"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -513,7 +538,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("fhH5GP");
+           var plotContainer = document.getElementById("MCh054");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -521,10 +546,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-6" class="cell" data-execution_count="63">
+<div id="cell-8" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_density(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, color<span class="op">=</span><span class="st">'name'</span>, fill<span class="op">=</span><span class="st">'name'</span>), alpha<span class="op">=</span><span class="fl">0.05</span>, bw<span class="op">=</span><span class="fl">0.25</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="63">
-   <div id="gaLTVR"></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+   <div id="sa8Pul"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -646,7 +671,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("gaLTVR");
+           var plotContainer = document.getElementById("sa8Pul");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -654,10 +679,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-7" class="cell" data-execution_count="62">
+<div id="cell-9" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_density(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, color<span class="op">=</span><span class="st">'name'</span>, fill<span class="op">=</span><span class="st">'name'</span>), alpha<span class="op">=</span><span class="fl">0.05</span>, bw<span class="op">=</span><span class="fl">1.</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="62">
-   <div id="6Tdw0G"></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+   <div id="mgoR91"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -779,7 +804,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("6Tdw0G");
+           var plotContainer = document.getElementById("mgoR91");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -787,17 +812,541 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-8" class="cell" data-execution_count="71">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.special <span class="im">import</span> factorial</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>lam <span class="op">=</span> clark[<span class="st">'AST'</span>].mean()</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">25</span>)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> (np.exp(<span class="op">-</span>lam) <span class="op">*</span> lam <span class="op">**</span> x) <span class="op">/</span> factorial(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-10" class="cell" data-execution_count="96">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>))<span class="op">+</span> geom_vline(xintercept<span class="op">=</span>clark[<span class="st">'AST'</span>].mean(), color<span class="op">=</span><span class="st">'black'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>)  <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="96">
+   <div id="WUQ4I1"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"ggsize":{
+"width":1000.0,
+"height":400.0
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"data":{
+"..count..":[1.0,8.0,6.0,3.0,5.0,4.0,1.0,4.0,4.0,1.0,1.0,2.0],
+"AST":[3.0,6.0,8.0,5.0,7.0,9.0,2.0,13.0,12.0,11.0,19.0,10.0],
+"name":["Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark"]
+},
+"mapping":{
+"x":"AST",
+"fill":"name"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Rk"
+},{
+"type":"str",
+"column":"Date"
+},{
+"type":"str",
+"column":"Age"
+},{
+"type":"str",
+"column":"Tm"
+},{
+"type":"str",
+"column":"Unnamed: 4"
+},{
+"type":"str",
+"column":"Opp"
+},{
+"type":"str",
+"column":"Unnamed: 6"
+},{
+"type":"int",
+"column":"GS"
+},{
+"type":"str",
+"column":"MP"
+},{
+"type":"int",
+"column":"FG"
+},{
+"type":"int",
+"column":"FGA"
+},{
+"type":"float",
+"column":"FG%"
+},{
+"type":"int",
+"column":"3P"
+},{
+"type":"int",
+"column":"3PA"
+},{
+"type":"float",
+"column":"3P%"
+},{
+"type":"int",
+"column":"FT"
+},{
+"type":"int",
+"column":"FTA"
+},{
+"type":"float",
+"column":"FT%"
+},{
+"type":"int",
+"column":"ORB"
+},{
+"type":"int",
+"column":"DRB"
+},{
+"type":"int",
+"column":"TRB"
+},{
+"type":"int",
+"column":"AST"
+},{
+"type":"int",
+"column":"STL"
+},{
+"type":"int",
+"column":"BLK"
+},{
+"type":"int",
+"column":"TOV"
+},{
+"type":"int",
+"column":"PF"
+},{
+"type":"int",
+"column":"PTS"
+},{
+"type":"float",
+"column":"GmSc"
+},{
+"type":"str",
+"column":"name"
+}]
+}
+},{
+"geom":"vline",
+"mapping":{
+},
+"data_meta":{
+},
+"xintercept":8.425,
+"color":"black",
+"linetype":"longdash",
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("WUQ4I1");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
 </div>
-<div id="cell-9" class="cell" data-execution_count="73">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(data<span class="op">=</span>pd.DataFrame(<span class="bu">dict</span>(x<span class="op">=</span>x, y<span class="op">=</span>y)), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'x'</span>, y<span class="op">=</span><span class="st">'y'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="73">
-   <div id="bnIsOT"></div>
+</div>
+<section id="fraction-of-games-above-10-assists" class="level1">
+<h1>Fraction of games above 10 assists</h1>
+<div id="cell-12" class="cell" data-execution_count="98">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>))<span class="op">+</span> geom_vline(xintercept<span class="op">=</span><span class="dv">10</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>, size<span class="op">=</span><span class="dv">2</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="98">
+   <div id="wYu0Sd"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"ggsize":{
+"width":1000.0,
+"height":400.0
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"data":{
+"..count..":[1.0,8.0,6.0,3.0,5.0,4.0,1.0,4.0,4.0,1.0,1.0,2.0],
+"AST":[3.0,6.0,8.0,5.0,7.0,9.0,2.0,13.0,12.0,11.0,19.0,10.0],
+"name":["Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark"]
+},
+"mapping":{
+"x":"AST",
+"fill":"name"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Rk"
+},{
+"type":"str",
+"column":"Date"
+},{
+"type":"str",
+"column":"Age"
+},{
+"type":"str",
+"column":"Tm"
+},{
+"type":"str",
+"column":"Unnamed: 4"
+},{
+"type":"str",
+"column":"Opp"
+},{
+"type":"str",
+"column":"Unnamed: 6"
+},{
+"type":"int",
+"column":"GS"
+},{
+"type":"str",
+"column":"MP"
+},{
+"type":"int",
+"column":"FG"
+},{
+"type":"int",
+"column":"FGA"
+},{
+"type":"float",
+"column":"FG%"
+},{
+"type":"int",
+"column":"3P"
+},{
+"type":"int",
+"column":"3PA"
+},{
+"type":"float",
+"column":"3P%"
+},{
+"type":"int",
+"column":"FT"
+},{
+"type":"int",
+"column":"FTA"
+},{
+"type":"float",
+"column":"FT%"
+},{
+"type":"int",
+"column":"ORB"
+},{
+"type":"int",
+"column":"DRB"
+},{
+"type":"int",
+"column":"TRB"
+},{
+"type":"int",
+"column":"AST"
+},{
+"type":"int",
+"column":"STL"
+},{
+"type":"int",
+"column":"BLK"
+},{
+"type":"int",
+"column":"TOV"
+},{
+"type":"int",
+"column":"PF"
+},{
+"type":"int",
+"column":"PTS"
+},{
+"type":"float",
+"column":"GmSc"
+},{
+"type":"str",
+"column":"name"
+}]
+}
+},{
+"geom":"vline",
+"mapping":{
+},
+"data_meta":{
+},
+"xintercept":10.0,
+"linetype":"longdash",
+"size":2.0,
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("wYu0Sd");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+<div id="cell-13" class="cell" data-execution_count="191">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> statistic(data):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (data <span class="op">&gt;=</span> <span class="dv">10</span>).mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-14" class="cell" data-execution_count="89">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>statistic(clark[<span class="st">'AST'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="89">
+<pre><code>np.float64(0.3)</code></pre>
+</div>
+</div>
+<div id="cell-15" class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bootstrap_sample(data):</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="bu">len</span>(data)                      <span class="co"># Number of obsevations</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    inds <span class="op">=</span> np.random.randint(<span class="dv">0</span>, N, N)  <span class="co"># Resample from {1,...,N}, N times</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> data[inds]                  <span class="co"># Return the new sample</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bootstrap_distribution(data, statistic_fun, nsamples):</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    estimates <span class="op">=</span> []                       <span class="co"># Distribution of statistic estimates</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(nsamples):            <span class="co"># Resample many times</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>        sample <span class="op">=</span> bootstrap_sample(data)  <span class="co"># Get a new bootstrapped sample</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>        stat <span class="op">=</span> statistic_fun(sample)     <span class="co"># Compute our statistic</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>        estimates.append(stat)           <span class="co"># add it to the distribution</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> estimates</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simple_simulation_ci(data, statistic_fun, nsamples, confidence<span class="op">=</span><span class="fl">0.95</span>):</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Distribution of statistic estimates</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    estimates <span class="op">=</span> <span class="bu">sorted</span>(bootstrap_distribution(data, statistic_fun, nsamples))</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>    margin <span class="op">=</span> (<span class="dv">1</span> <span class="op">-</span> confidence) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    lower <span class="op">=</span> estimates[math.ceil(nsamples <span class="op">*</span> margin)]</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    upper <span class="op">=</span> estimates[math.ceil(nsamples <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> margin))] </span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> estimates, lower, upper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-16" class="cell" data-execution_count="88">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>estimates, lower, upper <span class="op">=</span> simple_simulation_ci(clark[<span class="st">'AST'</span>], statistic, <span class="dv">10000</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>estimates <span class="op">=</span> pd.DataFrame({<span class="st">"Simulated fraction of games with &gt;= 10 assists"</span>: estimates})</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>estimates, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">"Simulated fraction of games with &gt;= 10 assists"</span>)) <span class="op">+</span> geom_vline(xintercept<span class="op">=</span>lower, color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>) <span class="op">+</span> geom_vline(xintercept<span class="op">=</span>upper, color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="88">
+   <div id="CgMLAr"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"data":{
+"..count..":[1.0,18.0,60.0,153.0,311.0,571.0,817.0,1146.0,1317.0,1372.0,1276.0,1000.0,803.0,504.0,319.0,169.0,91.0,46.0,16.0,7.0,1.0,2.0],
+"Simulated fraction of games with >= 10 assists":[0.075,0.1,0.125,0.15,0.175,0.2,0.225,0.25,0.275,0.3,0.325,0.35,0.375,0.4,0.425,0.45,0.475,0.5,0.525,0.55,0.575,0.625]
+},
+"mapping":{
+"x":"Simulated fraction of games with >= 10 assists"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"Simulated fraction of games with >= 10 assists"
+}]
+}
+},{
+"geom":"vline",
+"mapping":{
+},
+"data_meta":{
+},
+"xintercept":0.175,
+"color":"red",
+"linetype":"longdash",
+"data":{
+}
+},{
+"geom":"vline",
+"mapping":{
+},
+"data_meta":{
+},
+"xintercept":0.45,
+"color":"red",
+"linetype":"longdash",
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("CgMLAr");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+</section>
+<section id="probability-of-getting-20-assists-in-a-game" class="level1">
+<h1>Probability of getting &gt;= 20 assists in a game?</h1>
+<div id="cell-18" class="cell" data-execution_count="90">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> poisson</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-19" class="cell" data-execution_count="99">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>))<span class="op">+</span> geom_vline(xintercept<span class="op">=</span><span class="dv">20</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>, size<span class="op">=</span><span class="dv">2</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="99">
+   <div id="OGeuiH"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"ggsize":{
+"width":1000.0,
+"height":400.0
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"data":{
+"..count..":[1.0,8.0,6.0,3.0,5.0,4.0,1.0,4.0,4.0,1.0,1.0,2.0],
+"AST":[3.0,6.0,8.0,5.0,7.0,9.0,2.0,13.0,12.0,11.0,19.0,10.0],
+"name":["Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark"]
+},
+"mapping":{
+"x":"AST",
+"fill":"name"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Rk"
+},{
+"type":"str",
+"column":"Date"
+},{
+"type":"str",
+"column":"Age"
+},{
+"type":"str",
+"column":"Tm"
+},{
+"type":"str",
+"column":"Unnamed: 4"
+},{
+"type":"str",
+"column":"Opp"
+},{
+"type":"str",
+"column":"Unnamed: 6"
+},{
+"type":"int",
+"column":"GS"
+},{
+"type":"str",
+"column":"MP"
+},{
+"type":"int",
+"column":"FG"
+},{
+"type":"int",
+"column":"FGA"
+},{
+"type":"float",
+"column":"FG%"
+},{
+"type":"int",
+"column":"3P"
+},{
+"type":"int",
+"column":"3PA"
+},{
+"type":"float",
+"column":"3P%"
+},{
+"type":"int",
+"column":"FT"
+},{
+"type":"int",
+"column":"FTA"
+},{
+"type":"float",
+"column":"FT%"
+},{
+"type":"int",
+"column":"ORB"
+},{
+"type":"int",
+"column":"DRB"
+},{
+"type":"int",
+"column":"TRB"
+},{
+"type":"int",
+"column":"AST"
+},{
+"type":"int",
+"column":"STL"
+},{
+"type":"int",
+"column":"BLK"
+},{
+"type":"int",
+"column":"TOV"
+},{
+"type":"int",
+"column":"PF"
+},{
+"type":"int",
+"column":"PTS"
+},{
+"type":"float",
+"column":"GmSc"
+},{
+"type":"str",
+"column":"name"
+}]
+}
+},{
+"geom":"vline",
+"mapping":{
+},
+"data_meta":{
+},
+"xintercept":20.0,
+"linetype":"longdash",
+"size":2.0,
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("OGeuiH");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+<div id="cell-20" class="cell" data-execution_count="112">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> poisson</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>lam <span class="op">=</span> clark[<span class="st">'AST'</span>].mean()</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">25</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> poisson(lam).pmf(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-21" class="cell" data-execution_count="117">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(data<span class="op">=</span>pd.DataFrame(<span class="bu">dict</span>(x<span class="op">=</span>x, y<span class="op">=</span>y)), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'x'</span>, y<span class="op">=</span><span class="st">'y'</span>)) <span class="op">+</span> geom_histogram(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, y<span class="op">=</span><span class="st">"..density.."</span>, color<span class="op">=</span><span class="st">'name'</span>, fill<span class="op">=</span><span class="st">'name'</span>), bins<span class="op">=</span><span class="dv">25</span>, alpha<span class="op">=</span><span class="fl">0.05</span>, bw<span class="op">=</span><span class="fl">1.</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="117">
+   <div id="PyAwrU"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -811,7 +1360,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 "geom":"line",
 "data":{
 "x":[0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0],
-"y":[2.193153301629189E-4,0.001847731656622592,0.00778356960352267,0.02185885796989283,0.046040219599086774,0.07757777002446123,0.10893211874268098,0.13110758577244108,0.138072676266602,0.12925136639401355,0.10889427618695642,0.08340311607955526,0.0585559377475211,0.037948751963297334,0.022837016806484287,0.012826791106308678,0.006754107191915663,0.003347256064228792,0.0015667017967293097,6.947085598654967E-4,2.9264598084334043E-4,1.1740678040976876E-4,4.4961460225104634E-5,1.64695783650655E-5,5.7815082385698694E-6]
+"y":[2.193153301629189E-4,0.0018477316566225925,0.007783569603522666,0.02185885796989282,0.04604021959908676,0.07757777002446122,0.10893211874268074,0.13110758577244078,0.13807267626660172,0.12925136639401347,0.10889427618695625,0.08340311607955515,0.05855593774752074,0.037948751963297264,0.022837016806484166,0.012826791106308652,0.006754107191915625,0.003347256064228777,0.0015667017967293075,6.947085598654947E-4,2.9264598084333994E-4,1.1740678040976777E-4,4.496146022510442E-5,1.6469578365065426E-5,5.781508238569826E-6]
 },
 "mapping":{
 "x":"x",
@@ -826,10 +1375,116 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 "column":"y"
 }]
 }
+},{
+"geom":"histogram",
+"data":{
+"..density..":[0.0,0.0,0.024660669191919195,0.024660669191919195,0.0,0.07398200757575758,0.19728535353535356,0.12330334595959597,0.14796401515151517,0.09864267676767678,0.04932133838383839,0.024660669191919195,0.09864267676767678,0.09864267676767678,0.0,0.0,0.0,0.0,0.0,0.024660669191919195,0.0,0.0,0.0,0.0,0.0],
+"AST":[-0.16511999999999993,0.8486400000000001,1.8624,2.87616,3.88992,4.90368,5.91744,6.9312000000000005,7.94496,8.95872,9.97248,10.98624,12.0,13.01376,14.02752,15.04128,16.055039999999998,17.068800000000003,18.08256,19.09632,20.110079999999996,21.12384,22.1376,23.151359999999997,24.16512],
+"name":["Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark"]
+},
+"mapping":{
+"x":"AST",
+"y":"..density..",
+"color":"name",
+"fill":"name"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Rk"
+},{
+"type":"str",
+"column":"Date"
+},{
+"type":"str",
+"column":"Age"
+},{
+"type":"str",
+"column":"Tm"
+},{
+"type":"str",
+"column":"Unnamed: 4"
+},{
+"type":"str",
+"column":"Opp"
+},{
+"type":"str",
+"column":"Unnamed: 6"
+},{
+"type":"int",
+"column":"GS"
+},{
+"type":"str",
+"column":"MP"
+},{
+"type":"int",
+"column":"FG"
+},{
+"type":"int",
+"column":"FGA"
+},{
+"type":"float",
+"column":"FG%"
+},{
+"type":"int",
+"column":"3P"
+},{
+"type":"int",
+"column":"3PA"
+},{
+"type":"float",
+"column":"3P%"
+},{
+"type":"int",
+"column":"FT"
+},{
+"type":"int",
+"column":"FTA"
+},{
+"type":"float",
+"column":"FT%"
+},{
+"type":"int",
+"column":"ORB"
+},{
+"type":"int",
+"column":"DRB"
+},{
+"type":"int",
+"column":"TRB"
+},{
+"type":"int",
+"column":"AST"
+},{
+"type":"int",
+"column":"STL"
+},{
+"type":"int",
+"column":"BLK"
+},{
+"type":"int",
+"column":"TOV"
+},{
+"type":"int",
+"column":"PF"
+},{
+"type":"int",
+"column":"PTS"
+},{
+"type":"float",
+"column":"GmSc"
+},{
+"type":"str",
+"column":"name"
+}]
+},
+"bins":25.0,
+"alpha":0.05,
+"bw":1.0
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("bnIsOT");
+           var plotContainer = document.getElementById("PyAwrU");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -837,10 +1492,522 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-10" class="cell" data-execution_count="51">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>pd.concat([clark, wilson]), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>)) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="51">
-   <div id="6JMbxB"></div>
+<div id="cell-22" class="cell" data-execution_count="111">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">-</span> poisson(lam).cdf(<span class="dv">19</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="111">
+<pre><code>np.float64(0.0004801251376509441)</code></pre>
+</div>
+</div>
+<div id="cell-24" class="cell" data-execution_count="185">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>estimates, lower, upper <span class="op">=</span> simple_simulation_ci(clark[<span class="st">'AST'</span>], np.mean, <span class="dv">10000</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>estimates <span class="op">=</span> pd.DataFrame({<span class="st">"Simulated Poisson rate MLE"</span>: estimates})</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>estimates, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">"Simulated Poisson rate MLE"</span>)) <span class="op">+</span> geom_vline(xintercept<span class="op">=</span>lower, color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>) <span class="op">+</span> geom_vline(xintercept<span class="op">=</span>upper, color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="185">
+   <div id="4SGpJ0"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"data":{
+"..count..":[1.0,1.0,2.0,2.0,2.0,2.0,2.0,3.0,6.0,3.0,3.0,7.0,2.0,3.0,5.0,7.0,8.0,8.0,6.0,14.0,12.0,16.0,9.0,20.0,14.0,20.0,26.0,26.0,19.0,33.0,48.0,37.0,44.0,59.0,54.0,46.0,49.0,56.0,79.0,79.0,89.0,90.0,105.0,99.0,112.0,101.0,121.0,122.0,116.0,153.0,145.0,159.0,162.0,165.0,158.0,178.0,155.0,170.0,172.0,199.0,211.0,212.0,196.0,183.0,214.0,191.0,207.0,215.0,192.0,211.0,195.0,190.0,168.0,181.0,165.0,161.0,167.0,148.0,151.0,144.0,154.0,183.0,142.0,138.0,140.0,130.0,139.0,105.0,90.0,97.0,97.0,83.0,97.0,85.0,99.0,78.0,72.0,54.0,67.0,57.0,57.0,48.0,51.0,35.0,38.0,28.0,38.0,22.0,20.0,31.0,31.0,23.0,16.0,13.0,12.0,17.0,15.0,13.0,11.0,4.0,6.0,8.0,12.0,1.0,5.0,4.0,6.0,2.0,3.0,3.0,2.0,1.0,2.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0],
+"Simulated Poisson rate MLE":[6.625,6.7,6.725,6.775,6.8,6.825,6.85,6.925,6.95,6.975,7.0,7.025,7.05,7.075,7.1,7.125,7.15,7.175,7.2,7.225,7.25,7.275,7.3,7.325,7.35,7.375,7.4,7.425,7.45,7.475,7.5,7.525,7.55,7.575,7.6,7.625,7.65,7.675,7.7,7.725,7.75,7.775,7.8,7.825,7.85,7.875,7.9,7.925,7.95,7.975,8.0,8.025,8.05,8.075,8.1,8.125,8.15,8.175,8.2,8.225,8.25,8.275,8.3,8.325,8.35,8.375,8.4,8.425,8.45,8.475,8.5,8.525,8.55,8.575,8.6,8.625,8.65,8.675,8.7,8.725,8.75,8.775,8.8,8.825,8.85,8.875,8.9,8.925,8.95,8.975,9.0,9.025,9.05,9.075,9.1,9.125,9.15,9.175,9.2,9.225,9.25,9.275,9.3,9.325,9.35,9.375,9.4,9.425,9.45,9.475,9.5,9.525,9.55,9.575,9.6,9.625,9.65,9.675,9.7,9.725,9.75,9.775,9.8,9.825,9.85,9.875,9.9,9.925,9.95,9.975,10.0,10.025,10.05,10.075,10.1,10.15,10.225,10.275,10.3,10.325,10.425]
+},
+"mapping":{
+"x":"Simulated Poisson rate MLE"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"Simulated Poisson rate MLE"
+}]
+}
+},{
+"geom":"vline",
+"mapping":{
+},
+"data_meta":{
+},
+"xintercept":7.475,
+"color":"red",
+"linetype":"longdash",
+"data":{
+}
+},{
+"geom":"vline",
+"mapping":{
+},
+"data_meta":{
+},
+"xintercept":9.475,
+"color":"red",
+"linetype":"longdash",
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("4SGpJ0");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+</section>
+<section id="negative-binomial-model" class="level1">
+<h1>Negative Binomial model</h1>
+<div id="cell-26" class="cell" data-execution_count="119">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> nbinom</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.discrete.discrete_model <span class="im">import</span> NegativeBinomial</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> NegativeBinomial(clark[<span class="st">'AST'</span>], np.ones_like(clark[<span class="st">'AST'</span>])).fit()</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>dist <span class="op">=</span> model.get_distribution(<span class="fl">1.</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-27" class="cell" data-execution_count="163">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>model.params</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="163">
+<pre><code>const    2.131203
+alpha    0.028236
+dtype: float64</code></pre>
+</div>
+</div>
+<div id="cell-28" class="cell" data-execution_count="173">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Optimization terminated successfully.
+         Current function value: 2.560325
+         Iterations: 4
+         Function evaluations: 5
+         Gradient evaluations: 5
+         Hessian evaluations: 4</code></pre>
+</div>
+</div>
+<div id="cell-29" class="cell" data-execution_count="174">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">25</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> dist.pmf(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-30" class="cell" data-execution_count="178">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>dist.args</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="178">
+<pre><code>(array([35.41599529]), array([0.80782827]))</code></pre>
+</div>
+</div>
+<div id="cell-31" class="cell" data-execution_count="175">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(data<span class="op">=</span>pd.DataFrame(<span class="bu">dict</span>(x<span class="op">=</span>x, y<span class="op">=</span>y)), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'x'</span>, y<span class="op">=</span><span class="st">'y'</span>)) <span class="op">+</span> geom_histogram(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, y<span class="op">=</span><span class="st">"..density.."</span>, color<span class="op">=</span><span class="st">'name'</span>, fill<span class="op">=</span><span class="st">'name'</span>), bins<span class="op">=</span><span class="dv">25</span>, alpha<span class="op">=</span><span class="fl">0.05</span>, bw<span class="op">=</span><span class="fl">1.</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="175">
+   <div id="4cBKqV"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"line",
+"data":{
+"x":[0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0],
+"y":[5.21929416953426E-4,0.0035522271631831573,0.012429464661630115,0.02979051258750574,0.05498187910288111,0.08329358908648567,0.10782093867511554,0.12259215389004126,0.12490846033589006,0.1157946812645648,0.09883653567206069,0.07841933768497299,0.05829067653083841,0.04085734286519313,0.027153164583861314,0.017190410373399773,0.010409361987729581,0.006050105414894977,0.003385663393123223,0.0018291570964483457,9.563945488747278E-4,4.8500078283809824E-4,2.39007493620347E-4,1.1465845454052508E-4,5.363102867618959E-5]
+},
+"mapping":{
+"x":"x",
+"y":"y"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"x"
+},{
+"type":"float",
+"column":"y"
+}]
+}
+},{
+"geom":"histogram",
+"data":{
+"..density..":[0.0,0.0,0.024660669191919195,0.024660669191919195,0.0,0.07398200757575758,0.19728535353535356,0.12330334595959597,0.14796401515151517,0.09864267676767678,0.04932133838383839,0.024660669191919195,0.09864267676767678,0.09864267676767678,0.0,0.0,0.0,0.0,0.0,0.024660669191919195,0.0,0.0,0.0,0.0,0.0],
+"AST":[-0.16511999999999993,0.8486400000000001,1.8624,2.87616,3.88992,4.90368,5.91744,6.9312000000000005,7.94496,8.95872,9.97248,10.98624,12.0,13.01376,14.02752,15.04128,16.055039999999998,17.068800000000003,18.08256,19.09632,20.110079999999996,21.12384,22.1376,23.151359999999997,24.16512],
+"name":["Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark"]
+},
+"mapping":{
+"x":"AST",
+"y":"..density..",
+"color":"name",
+"fill":"name"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Rk"
+},{
+"type":"str",
+"column":"Date"
+},{
+"type":"str",
+"column":"Age"
+},{
+"type":"str",
+"column":"Tm"
+},{
+"type":"str",
+"column":"Unnamed: 4"
+},{
+"type":"str",
+"column":"Opp"
+},{
+"type":"str",
+"column":"Unnamed: 6"
+},{
+"type":"int",
+"column":"GS"
+},{
+"type":"str",
+"column":"MP"
+},{
+"type":"int",
+"column":"FG"
+},{
+"type":"int",
+"column":"FGA"
+},{
+"type":"float",
+"column":"FG%"
+},{
+"type":"int",
+"column":"3P"
+},{
+"type":"int",
+"column":"3PA"
+},{
+"type":"float",
+"column":"3P%"
+},{
+"type":"int",
+"column":"FT"
+},{
+"type":"int",
+"column":"FTA"
+},{
+"type":"float",
+"column":"FT%"
+},{
+"type":"int",
+"column":"ORB"
+},{
+"type":"int",
+"column":"DRB"
+},{
+"type":"int",
+"column":"TRB"
+},{
+"type":"int",
+"column":"AST"
+},{
+"type":"int",
+"column":"STL"
+},{
+"type":"int",
+"column":"BLK"
+},{
+"type":"int",
+"column":"TOV"
+},{
+"type":"int",
+"column":"PF"
+},{
+"type":"int",
+"column":"PTS"
+},{
+"type":"float",
+"column":"GmSc"
+},{
+"type":"str",
+"column":"name"
+}]
+},
+"bins":25.0,
+"alpha":0.05,
+"bw":1.0
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("4cBKqV");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+<div id="cell-32" class="cell" data-execution_count="176">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">-</span> dist.cdf(<span class="dv">19</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="176">
+<pre><code>array([0.00189241])</code></pre>
+</div>
+</div>
+<div id="cell-33" class="cell" data-execution_count="181">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>dist.logpmf(clark[<span class="st">'AST'</span>]).<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="181">
+<pre><code>np.float64(-102.41300969308647)</code></pre>
+</div>
+</div>
+<div id="cell-34" class="cell" data-execution_count="180">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>poisson(lam).logpmf(clark[<span class="st">'AST'</span>]).<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="180">
+<pre><code>np.float64(-102.93508479835576)</code></pre>
+</div>
+</div>
+</section>
+<section id="poisson-parametric-bootstrap" class="level1">
+<h1>Poisson parametric bootstrap</h1>
+<div id="cell-36" class="cell" data-execution_count="113">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(data<span class="op">=</span>pd.DataFrame(<span class="bu">dict</span>(x<span class="op">=</span>x, y<span class="op">=</span>y)), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'x'</span>, y<span class="op">=</span><span class="st">'y'</span>)) <span class="op">+</span> geom_density(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, color<span class="op">=</span><span class="st">'name'</span>, fill<span class="op">=</span><span class="st">'name'</span>), alpha<span class="op">=</span><span class="fl">0.05</span>, bw<span class="op">=</span><span class="fl">1.</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="113">
+   <div id="g65Y9b"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"line",
+"data":{
+"x":[0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0],
+"y":[2.193153301629189E-4,0.0018477316566225925,0.007783569603522666,0.02185885796989282,0.04604021959908676,0.07757777002446122,0.10893211874268074,0.13110758577244078,0.13807267626660172,0.12925136639401347,0.10889427618695625,0.08340311607955515,0.05855593774752074,0.037948751963297264,0.022837016806484166,0.012826791106308652,0.006754107191915625,0.003347256064228777,0.0015667017967293075,6.947085598654947E-4,2.9264598084333994E-4,1.1740678040976777E-4,4.496146022510442E-5,1.6469578365065426E-5,5.781508238569826E-6]
+},
+"mapping":{
+"x":"x",
+"y":"y"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"x"
+},{
+"type":"float",
+"column":"y"
+}]
+}
+},{
+"geom":"density",
+"data":{
+"..density..":[0.0014606830934109252,0.0016086370870807612,0.00176796133700285,0.0019391123473080497,0.002122519628764885,0.0023185801398066157,0.002527652608363055,0.0027500517947724465,0.002986042761499179,0.0032358352201635834,0.0034995780303728663,0.0037773539279097866,0.004069174561884175,0.004374975921393952,0.00469461423201015,0.005027862400948147,0.005374407087094596,0.005733846468129583,0.0061056887718474815,0.006489351632493412,0.006884162325576955,0.007289358926305211,0.007704092427619769,0.008127429843969044,0.008558358316557884,0.008995790225056907,0.00943856929979756,0.009885477717499166,0.010335244152739268,0.010786552746849965,0.011238052945844141,0.011688370149479524,0.01213611710476088,0.012579905969148398,0.013018360961545777,0.013450131512819,0.013873905822160512,0.014288424721049058,0.014692495742835978,0.015085007293057584,0.015464942813375649,0.015831394830505073,0.016183578780528805,0.016520846498547643,0.01684269926359894,0.017148800289146497,0.01743898655014955,0.01771327983873894,0.0179718969418601,0.018215258835900312,0.018443998795350237,0.01865896931501007,0.018861247748230437,0.019052140567266465,0.01923318615613498,0.0194061560515111,0.01957305455329706,0.019736116633651067,0.019897804081570814,0.020060799829661437,0.020228000420527407,0.02040250658233208,0.02058761189644822,0.02078678955472221,0.021003677219595417,0.021242060017035134,0.021505851709746386,0.02179907411625613,0.02212583485994151,0.022490303550651077,0.02289668651995563,0.02334920024898198,0.02385204364492755,0.02440936933845833,0.02502525418898401,0.025703669198055834,0.026448449042636803,0.02726326144959268,0.02815157664032687,0.02911663707996128,0.0301614277688253,0.03128864731528156,0.032500680028143616,0.033799569264240485,0.0351869922621729,0.036664236687138904,0.038232179104042446,0.03989126558709154,0.041641494663895766,0.043482402780805826,0.04541305246401071,0.04743202333777369,0.04953740614716884,0.051726799917761815,0.053997312368784356,0.05634556367937886,0.05876769368929824,0.06125937259586358,0.06381581518782778,0.06643179863388102,0.0691016838186971,0.07181944019251583,0.07457867407119809,0.07737266029244626,0.08019437710051502,0.08303654409637931,0.08589166305324655,0.08875206135884424,0.09160993780656787,0.0944574104179248,0.09728656593945222,0.10008951061921526,0.1028584218319704,0.10558560008904698,0.10826352093991458,0.11088488624823829,0.11344267430692985,0.11593018824516683,0.11834110217638134,0.12066950454050926,0.12290993810685995,0.12505743612620981,0.12710755415226999,0.12905639709352695,0.13090064110629376,0.13263754999817567,0.13426498587729171,0.1357814138555828,0.13718590069321038,0.13847810735410077,0.13847810735410077,0.139658275528626,0.1407272082666478,0.14168624495101434,0.14253723092636567,0.14328248217907796,0.14392474553969498,0.14446715494767653,0.1449131843783027,0.14526659808185535,0.14553139882463312,0.14571177484915782,0.1458120462864558,0.14583661175624385,0.14578989588114916,0.14567629841895946,0.14550014568282293,0.14526564487403223,0.14497684189649668,0.14463758315742883,0.14425148178649022,0.14382188862717163,0.14335186827114005,0.14284418032034887,0.14230126597459114,0.1417252399555883,0.14111788769429706,0.1404806676274494,0.13981471837387865,0.13912087049221125,0.13839966246015925,0.13765136046285217,0.1368759815341371,0.13607331956103189,0.13524297363783316,0.13438437824281582,0.1334968347068288,0.1325795434490641,0.1325795434490641,0.1316316364702624,0.1306522096169239,0.12964035416083636,0.12859518727542021,0.12751588103296657,0.12640168959363193,0.12525197430691148,0.12406622649802726,0.12284408776410245,0.12158536765701553,0.12029005868041624,0.11895834857656222,0.11759062992359022,0.11618750710481038,0.11474980074805682,0.1132785497645499,0.11177501114284265,0.11024065767404904,0.10867717379963564,0.10708644978270158,0.10547057440806336,0.10383182641590435,0.10217266486864182,0.10049571864147352,0.0988037752143127,0.0970997689270875,0.0953867688422495,0.09366796633844218,0.09194666253821514,0.09022625565105184,0.08851022829137627,0.08680213481016792,0.08510558865884739,0.08342424978565946,0.0817618120482771,0.08012199061213152,0.07850850929233447,0.07692508778821894,0.07537542875366446,0.07386320464358684,0.07239204427730969,0.07096551906297534,0.06958712883361387,0.06826028725483745,0.06698830677616138,0.06577438311242453,0.06462157925839064,0.06353280905800106,0.0625108203695306,0.06155817788864169,0.0606772457125665,0.05987016974989795,0.0591388601012298,0.05848497355564876,0.05790989636634998,0.05741472748492893,0.05700026244774474,0.05666697811873074,0.05641501850077087,0.05624418183196524,0.05624418183196524,0.05615390918352414,0.056143274772497774,0.0562109781949941,0.05635533877396193,0.05657429220013436,0.05686538962552,0.05722579934618951,0.05765231118539042,0.05814134365967397,0.058688953980242355,0.0592908509096711,0.05994241046112827,0.06063869439380678,0.061374471425129785,0.062144241047987325,0.06294225981038594,0.06376256988598106,0.0645990297374792,0.06544534665125043,0.06629511090099953,0.06714183128123966,0.06797897173773874,0.06879998881211628,0.06959836961132046,0.07036767000969038,0.07110155279151427,0.0717938254451776,0.07243847732584936,0.07302971591184768,0.07356200189000085,0.07403008281712492,0.07442902511783481,0.07475424419297658,0.07500153242775078,0.07516708490386442,0.07524752263564646,0.07523991316588417,0.07514178837315336,0.07495115935864277,0.07466652829699125,0.07428689715258487,0.0738117731802527,0.07324117114752934,0.07257561223479299,0.07181611958980685,0.07096421053462301,0.07002188544554724,0.06899161335094839,0.0678763143170946,0.06667933871880763,0.06540444351935844,0.06405576571240847,0.06263779310758717,0.06115533267005595,0.05961347665265153,0.0580175667863879,0.05637315682063785,0.05468597372761671,0.05296187790625155,0.05120682273755626,0.04942681385671258,0.0476278685157009,0.04581597541412814,0.043997055374573366,0.042176923232105944,0.04036125129556096,0.038555534720726176,0.03676505911297841,0.0349948706494099,0.033249748978523216,0.031534183119673,0.029852350545228324,0.028208099586617307,0.02660493526176817,0.02504600857678998,0.02353410930986403,0.022071662241082653,0.020660726749174206,0.019302999655457634,0.01799982115768324,0.01675218366225778,0.01556074329325916,0.014425833831049858,0.013347482812517256,0.012325429509216182,0.011359144489051997,0.010447850461601621,0.009590544106600339,0.0087860185892908,0.008032886474923008,0.007329602767313986,0.00667448781256124,0.006065749828249069,0.005501506840243042,0.004979807832871628,0.004498652943375779,0.0040560125574020224,0.0036498451884816804,0.0032781140503670932,0.00293880225631416,0.0026299266034904055,0.0023495499232808405,0.002095791999053603,0.0018668390716884277,0.0016609519696780528,0.0014764729147637744,0.001311831065797319,0.0011655468728229625,0.0010362353202901296,9.22608142925434E-4,8.234751002438153E-4,7.377443961252196E-4,6.644223285176083E-4,6.026122513637804E-4,5.515129265190679E-4,5.104163379704996E-4,4.7870503433229423E-4,4.5584905862419125E-4,4.4140251698086385E-4,4.3499983042742283E-4,4.363517064104549E-4,4.4524085960489287E-4,4.6151750481523995E-4,4.850946387268632E-4,5.159431219895849E-4,5.540865687586818E-4,5.995960474809955E-4,6.525845944735595E-4,7.132015407511061E-4,7.816266526420098E-4,8.580640879877749E-4,9.427361721210265E-4,0.0010358770013047943,0.0011377258858109673,0.0012485206502105529,0.0013684908146114685,0.0014978506873578946,0.0016367924069240058,0.0017854789782019108,0.001944037355892738,0.0021125516350420847,0.0022910564156907766,0.002479530414912234,0.0026778904049501893,0.0028859855605383885,0.0031035923015695637,0.003330409718895807,0.0035660556710241085,0.003810063637680325,0.0040618804125536175,0.004320864711936203,0.004586286768418582,0.004857328969313906,0.0051330875881363544,0.005412575644366405,0.005694726912069618,0.005978401081906853,0.00626239006393971,0.006545425400694765,0.006826186741530421,0.0071033113108137464,0.0073754042841374075,0.007641049969178748,0.007898823671219654,0.008147304108188064,0.00838508622672255,0.00861079425953934,0.008823094855602228,0.009020710108522517,0.009202430305454446,0.009367126218650844,0.00951376076488899,0.009641399864182314,0.009749222338505502,0.009836528703555036,0.009902748721648662,0.009947447601479465,0.009970330750263273,0.009971247005482098,0.009950190296516297,0.0099072997105245,0.009842857961500537,0.009757288286025139,0.00965114981335162,0.009525131480644109,0.009380044585972637,0.009216814091642966,0.009036468808224824,0.008840130604916913,0.008629002804386983,0.008404357929748517,0.0081675249777533,0.007919876395527044,0.007662814938263647,0.007397760582299966,0.0071261376620567075,0.0068493623906574165,0.006568830912877803,0.006285908025734176,0.006001916686829623,0.005718128413902533,0.005435754661248138,0.005155939240200332,0.004879751832055301,0.00460818262307018,0.004342138072838759,0.004082437809761595,0.003829812630793783,0.0035849035674265354,0.003348261966160139,0.0031203505197286525,0.0029015451751656426,0.0026921378365388246,0.002492339773860452,0.0023022856452928177,0.0021220380372643792,0.0019515924264045872,0.0017908824681779553,0.0016397855196053856,0.0014981283073362156,0.0013656926573969875,0.0012422212090001503,0.0011274230416488714,0.0010209791522274698,9.225477266252564E-4,8.317691585215786E-4,7.482707760887039E-4,6.716712453882723E-4,6.015846270072982E-4,5.376240698777731E-4,4.794051331486942E-4,4.265487333485996E-4,3.7868371982798486E-4,3.3544908656207726E-4,2.96495832800738E-4,2.61488488765883E-4,2.3010632562569787E-4,2.0204427133993394E-4,1.7701355570369997E-4,1.5474210906053795E-4,1.3497473975755052E-4,1.1747311553047591E-4,1.0201557369243041E-4,8.839678431573699E-5,7.642728960162955E-5,6.593294138564464E-5,5.675425728330968E-5,4.8745714393845683E-5,4.177499779749323E-5,3.5722219348739856E-5,3.0479120522091253E-5,2.5948271342827967E-5,2.2042275761066332E-5,1.8682992226862435E-5,1.5800776715618703E-5,1.3333754050736445E-5,1.1227122084000884E-5,9.432492129579878E-6,7.907268007325257E-6,6.614065134930496E-6,5.520170313657081E-6,4.597042173960337E-6,3.819851679059287E-6,3.167061618724981E-6,2.6200436539032676E-6,2.1627311863438555E-6,1.7813061170450874E-6,1.463917413924835E-6,1.2004293237953306E-6,9.82197027921763E-7,8.01867546145379E-7,6.532037343077337E-7,5.309292867160008E-7,4.305927435193277E-7,3.484486066889304E-7,2.8135378305996043E-7,2.266776945150681E-7,1.8222452040638254E-7,1.4616616285109354E-7,1.1698464925822655E-7,9.342280649825394E-8,7.444215609306773E-8,5.918708863963329E-8,4.695447767125128E-8,3.716798786835744E-8],
+"..quantile..":[0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0],
+"AST":[0.0,0.046966731898238745,0.09393346379647749,0.14090019569471623,0.18786692759295498,0.23483365949119372,0.28180039138943247,0.3287671232876712,0.37573385518590996,0.4227005870841487,0.46966731898238745,0.5166340508806262,0.5636007827788649,0.6105675146771037,0.6575342465753424,0.7045009784735812,0.7514677103718199,0.7984344422700587,0.8454011741682974,0.8923679060665362,0.9393346379647749,0.9863013698630136,1.0332681017612524,1.0802348336594911,1.1272015655577299,1.1741682974559686,1.2211350293542074,1.2681017612524461,1.3150684931506849,1.3620352250489236,1.4090019569471623,1.455968688845401,1.5029354207436398,1.5499021526418786,1.5968688845401173,1.643835616438356,1.6908023483365948,1.7377690802348336,1.7847358121330723,1.831702544031311,1.8786692759295498,1.9256360078277885,1.9726027397260273,2.019569471624266,2.0665362035225048,2.1135029354207435,2.1604696673189823,2.207436399217221,2.2544031311154598,2.3013698630136985,2.3483365949119372,2.395303326810176,2.4422700587084147,2.4892367906066535,2.5362035225048922,2.583170254403131,2.6301369863013697,2.6771037181996085,2.724070450097847,2.771037181996086,2.8180039138943247,2.8649706457925634,2.911937377690802,2.958904109589041,3.0058708414872797,3.0528375733855184,3.099804305283757,3.146771037181996,3.1937377690802347,3.2407045009784734,3.287671232876712,3.334637964774951,3.3816046966731896,3.4285714285714284,3.475538160469667,3.522504892367906,3.5694716242661446,3.6164383561643834,3.663405088062622,3.710371819960861,3.7573385518590996,3.8043052837573383,3.851272015655577,3.898238747553816,3.9452054794520546,3.9921722113502933,4.039138943248532,4.08610567514677,4.1330724070450096,4.180039138943249,4.227005870841487,4.273972602739725,4.3209393346379645,4.367906066536204,4.414872798434442,4.46183953033268,4.5088062622309195,4.555772994129159,4.602739726027397,4.649706457925635,4.6966731898238745,4.743639921722114,4.790606653620352,4.83757338551859,4.8845401174168295,4.931506849315069,4.978473581213307,5.025440313111545,5.0724070450097845,5.119373776908024,5.166340508806262,5.2133072407045,5.260273972602739,5.307240704500979,5.354207436399217,5.401174168297455,5.448140900195694,5.495107632093934,5.542074363992172,5.58904109589041,5.636007827788649,5.682974559686889,5.729941291585127,5.776908023483365,5.823874755381604,5.870841487279844,5.917808219178082,5.96477495107632,6.011741682974559,6.0587084148727985,6.0587084148727985,6.105675146771037,6.152641878669275,6.199608610567514,6.2465753424657535,6.293542074363992,6.34050880626223,6.387475538160469,6.4344422700587085,6.481409001956947,6.528375733855185,6.575342465753424,6.6223091976516635,6.669275929549902,6.71624266144814,6.763209393346379,6.8101761252446185,6.857142857142857,6.904109589041095,6.951076320939334,6.998043052837573,7.045009784735812,7.09197651663405,7.138943248532289,7.185909980430528,7.232876712328767,7.279843444227005,7.326810176125244,7.373776908023483,7.420743639921722,7.46771037181996,7.514677103718199,7.561643835616438,7.608610567514677,7.655577299412915,7.702544031311154,7.749510763209393,7.796477495107632,7.796477495107632,7.84344422700587,7.890410958904109,7.937377690802348,7.984344422700587,8.031311154598825,8.078277886497064,8.125244618395303,8.17221135029354,8.21917808219178,8.266144814090019,8.313111545988258,8.360078277886497,8.407045009784735,8.454011741682974,8.500978473581213,8.54794520547945,8.59491193737769,8.641878669275929,8.688845401174168,8.735812133072407,8.782778864970645,8.829745596868884,8.876712328767123,8.92367906066536,8.9706457925636,9.017612524461839,9.064579256360078,9.111545988258317,9.158512720156555,9.205479452054794,9.252446183953033,9.29941291585127,9.34637964774951,9.393346379647749,9.440313111545988,9.487279843444227,9.534246575342465,9.581213307240704,9.628180039138943,9.67514677103718,9.72211350293542,9.769080234833659,9.816046966731898,9.863013698630137,9.909980430528375,9.956947162426614,10.003913894324853,10.05088062622309,10.09784735812133,10.144814090019569,10.191780821917808,10.238747553816047,10.285714285714285,10.332681017612524,10.379647749510763,10.426614481409,10.47358121330724,10.520547945205479,10.567514677103718,10.614481409001957,10.614481409001957,10.661448140900195,10.708414872798434,10.755381604696673,10.80234833659491,10.84931506849315,10.896281800391389,10.943248532289628,10.990215264187867,11.037181996086105,11.084148727984344,11.131115459882583,11.17808219178082,11.22504892367906,11.272015655577299,11.318982387475538,11.365949119373777,11.412915851272015,11.459882583170254,11.506849315068493,11.55381604696673,11.60078277886497,11.647749510763209,11.694716242661448,11.741682974559687,11.788649706457925,11.835616438356164,11.882583170254403,11.92954990215264,11.97651663405088,12.023483365949119,12.070450097847358,12.117416829745597,12.164383561643834,12.211350293542074,12.258317025440313,12.30528375733855,12.35225048923679,12.399217221135029,12.446183953033268,12.493150684931507,12.540117416829744,12.587084148727984,12.634050880626223,12.68101761252446,12.7279843444227,12.774951076320939,12.821917808219178,12.868884540117417,12.915851272015654,12.962818003913894,13.009784735812133,13.05675146771037,13.10371819960861,13.150684931506849,13.197651663405088,13.244618395303327,13.291585127201564,13.338551859099804,13.385518590998043,13.43248532289628,13.47945205479452,13.526418786692759,13.573385518590998,13.620352250489237,13.667318982387474,13.714285714285714,13.761252446183953,13.80821917808219,13.85518590998043,13.902152641878669,13.949119373776908,13.996086105675147,14.043052837573384,14.090019569471623,14.136986301369863,14.1839530332681,14.23091976516634,14.277886497064578,14.324853228962818,14.371819960861057,14.418786692759294,14.465753424657533,14.512720156555773,14.55968688845401,14.60665362035225,14.653620352250488,14.700587084148728,14.747553816046967,14.794520547945204,14.841487279843443,14.888454011741683,14.93542074363992,14.98238747553816,15.029354207436398,15.076320939334638,15.123287671232877,15.170254403131114,15.217221135029353,15.264187866927593,15.31115459882583,15.35812133072407,15.405088062622308,15.452054794520548,15.499021526418787,15.545988258317024,15.592954990215263,15.639921722113503,15.68688845401174,15.73385518590998,15.780821917808218,15.827788649706457,15.874755381604697,15.921722113502934,15.968688845401173,16.015655577299412,16.06262230919765,16.10958904109589,16.15655577299413,16.203522504892366,16.250489236790607,16.297455968688844,16.34442270058708,16.391389432485322,16.43835616438356,16.4853228962818,16.532289628180038,16.579256360078276,16.626223091976517,16.673189823874754,16.720156555772995,16.767123287671232,16.81409001956947,16.86105675146771,16.908023483365948,16.954990215264186,17.001956947162427,17.048923679060664,17.0958904109589,17.142857142857142,17.18982387475538,17.23679060665362,17.283757338551858,17.330724070450096,17.377690802348337,17.424657534246574,17.471624266144815,17.518590998043052,17.56555772994129,17.61252446183953,17.659491193737768,17.706457925636006,17.753424657534246,17.800391389432484,17.84735812133072,17.894324853228962,17.9412915851272,17.98825831702544,18.035225048923678,18.082191780821915,18.129158512720156,18.176125244618394,18.223091976516635,18.270058708414872,18.31702544031311,18.36399217221135,18.410958904109588,18.457925636007825,18.504892367906066,18.551859099804304,18.59882583170254,18.645792563600782,18.69275929549902,18.73972602739726,18.786692759295498,18.833659491193735,18.880626223091976,18.927592954990214,18.974559686888455,19.021526418786692,19.06849315068493,19.11545988258317,19.162426614481408,19.209393346379645,19.256360078277886,19.303326810176124,19.35029354207436,19.397260273972602,19.44422700587084,19.49119373776908,19.538160469667318,19.585127201565555,19.632093933463796,19.679060665362034,19.726027397260275,19.772994129158512,19.81996086105675,19.86692759295499,19.913894324853228,19.960861056751465,20.007827788649706,20.054794520547944,20.10176125244618,20.148727984344422,20.19569471624266,20.2426614481409,20.289628180039138,20.336594911937375,20.383561643835616,20.430528375733854,20.477495107632095,20.524461839530332,20.57142857142857,20.61839530332681,20.665362035225048,20.712328767123285,20.759295499021526,20.806262230919764,20.853228962818,20.900195694716242,20.94716242661448,20.99412915851272,21.041095890410958,21.088062622309195,21.135029354207436,21.181996086105674,21.228962818003914,21.275929549902152,21.32289628180039,21.36986301369863,21.416829745596868,21.463796477495105,21.510763209393346,21.557729941291583,21.60469667318982,21.651663405088062,21.6986301369863,21.74559686888454,21.792563600782778,21.839530332681015,21.886497064579256,21.933463796477493,21.980430528375734,22.027397260273972,22.07436399217221,22.12133072407045,22.168297455968688,22.215264187866925,22.262230919765166,22.309197651663403,22.35616438356164,22.403131115459882,22.45009784735812,22.49706457925636,22.544031311154598,22.590998043052835,22.637964774951076,22.684931506849313,22.731898238747554,22.77886497064579,22.82583170254403,22.87279843444227,22.919765166340508,22.966731898238745,23.013698630136986,23.060665362035223,23.10763209393346,23.1545988258317,23.20156555772994,23.24853228962818,23.295499021526417,23.342465753424655,23.389432485322896,23.436399217221133,23.483365949119374,23.53033268101761,23.57729941291585,23.62426614481409,23.671232876712327,23.718199608610565,23.765166340508806,23.812133072407043,23.85909980430528,23.90606653620352,23.95303326810176,24.0],
+"name":["Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark"]
+},
+"mapping":{
+"x":"AST",
+"color":"name",
+"fill":"name"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Rk"
+},{
+"type":"str",
+"column":"Date"
+},{
+"type":"str",
+"column":"Age"
+},{
+"type":"str",
+"column":"Tm"
+},{
+"type":"str",
+"column":"Unnamed: 4"
+},{
+"type":"str",
+"column":"Opp"
+},{
+"type":"str",
+"column":"Unnamed: 6"
+},{
+"type":"int",
+"column":"GS"
+},{
+"type":"str",
+"column":"MP"
+},{
+"type":"int",
+"column":"FG"
+},{
+"type":"int",
+"column":"FGA"
+},{
+"type":"float",
+"column":"FG%"
+},{
+"type":"int",
+"column":"3P"
+},{
+"type":"int",
+"column":"3PA"
+},{
+"type":"float",
+"column":"3P%"
+},{
+"type":"int",
+"column":"FT"
+},{
+"type":"int",
+"column":"FTA"
+},{
+"type":"float",
+"column":"FT%"
+},{
+"type":"int",
+"column":"ORB"
+},{
+"type":"int",
+"column":"DRB"
+},{
+"type":"int",
+"column":"TRB"
+},{
+"type":"int",
+"column":"AST"
+},{
+"type":"int",
+"column":"STL"
+},{
+"type":"int",
+"column":"BLK"
+},{
+"type":"int",
+"column":"TOV"
+},{
+"type":"int",
+"column":"PF"
+},{
+"type":"int",
+"column":"PTS"
+},{
+"type":"float",
+"column":"GmSc"
+},{
+"type":"str",
+"column":"name"
+}]
+},
+"bw":1.0,
+"alpha":0.05
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("g65Y9b");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+<div id="cell-37" class="cell" data-execution_count="213">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math </span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bootstrap_sample(data):</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="bu">len</span>(data)                      <span class="co"># Number of obsevations</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> poisson(data.mean()).rvs(N) <span class="co"># Resample from {1,...,N}, N times</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bootstrap_distribution(data, statistic_fun, nsamples):</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>    estimates <span class="op">=</span> []                       <span class="co"># Distribution of statistic estimates</span></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(nsamples):            <span class="co"># Resample many times</span></span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>        sample <span class="op">=</span> bootstrap_sample(data)  <span class="co"># Get a new bootstrapped sample</span></span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>        stat <span class="op">=</span> statistic_fun(sample)     <span class="co"># Compute our statistic</span></span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>        estimates.append(stat)           <span class="co"># add it to the distribution</span></span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> estimates</span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simple_simulation_ci(data, statistic_fun, nsamples, confidence<span class="op">=</span><span class="fl">0.95</span>):</span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Distribution of statistic estimates</span></span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>    estimates <span class="op">=</span> <span class="bu">sorted</span>(bootstrap_distribution(data, statistic_fun, nsamples))</span>
+<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a>    margin <span class="op">=</span> (<span class="dv">1</span> <span class="op">-</span> confidence) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a>    lower <span class="op">=</span> estimates[math.ceil(nsamples <span class="op">*</span> margin)]</span>
+<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a>    upper <span class="op">=</span> estimates[math.ceil(nsamples <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> margin))] </span>
+<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> estimates, lower, upper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-38" class="cell" data-execution_count="214">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>estimates, lower, upper <span class="op">=</span> simple_simulation_ci(clark[<span class="st">'AST'</span>], statistic, <span class="dv">10000</span>)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>estimates <span class="op">=</span> pd.DataFrame({<span class="st">"Simulated fraction of games with &gt;= 10 assists"</span>: estimates})</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>estimates, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">"Simulated fraction of games with &gt;= 10 assists"</span>)) <span class="op">+</span> geom_vline(xintercept<span class="op">=</span>lower, color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>) <span class="op">+</span> geom_vline(xintercept<span class="op">=</span>upper, color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="214">
+   <div id="cGwpSP"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"data":{
+"..count..":[1.0,1.0,6.0,18.0,45.0,118.0,240.0,420.0,691.0,962.0,1227.0,1331.0,1310.0,1135.0,932.0,651.0,393.0,263.0,156.0,55.0,32.0,10.0,3.0],
+"Simulated fraction of games with >= 10 assists":[0.05,0.075,0.1,0.125,0.15,0.175,0.2,0.225,0.25,0.275,0.3,0.325,0.35,0.375,0.4,0.425,0.45,0.475,0.5,0.525,0.55,0.575,0.6]
+},
+"mapping":{
+"x":"Simulated fraction of games with >= 10 assists"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"Simulated fraction of games with >= 10 assists"
+}]
+}
+},{
+"geom":"vline",
+"mapping":{
+},
+"data_meta":{
+},
+"xintercept":0.2,
+"color":"red",
+"linetype":"longdash",
+"data":{
+}
+},{
+"geom":"vline",
+"mapping":{
+},
+"data_meta":{
+},
+"xintercept":0.5,
+"color":"red",
+"linetype":"longdash",
+"data":{
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("cGwpSP");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+<div id="cell-39" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>pd.concat([clark, wilson]), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>)) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+   <div id="LIZzFs"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -958,7 +2125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("6JMbxB");
+           var plotContainer = document.getElementById("LIZzFs");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -966,10 +2133,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-11" class="cell" data-execution_count="54">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>pd.concat([clark, wilson]), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>), position<span class="op">=</span><span class="st">'nudge'</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="54">
-   <div id="WwhKFY"></div>
+<div id="cell-40" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>pd.concat([clark, wilson]), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>), position<span class="op">=</span><span class="st">'nudge'</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+   <div id="eOVA15"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1088,7 +2255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("WwhKFY");
+           var plotContainer = document.getElementById("eOVA15");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1096,10 +2263,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-12" class="cell" data-execution_count="55">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>pd.concat([clark, wilson]), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>), position<span class="op">=</span><span class="st">'dodge'</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="55">
-   <div id="XJH3u0"></div>
+<div id="cell-41" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>pd.concat([clark, wilson]), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>), position<span class="op">=</span><span class="st">'dodge'</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+   <div id="d6XQte"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1218,7 +2385,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("XJH3u0");
+           var plotContainer = document.getElementById("d6XQte");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1226,8 +2393,145 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-13" class="cell" data-execution_count="48">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>players, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>)) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-42" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>pd.concat([clark, wilson]), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>), position<span class="op">=</span><span class="st">'dodge'</span>) <span class="op">+</span> facet_grid(x<span class="op">=</span><span class="st">'name'</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="21">
+   <div id="4OXjif"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       (function() {
+           var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"facet":{
+"name":"grid",
+"x":"name",
+"x_order":1.0,
+"y_order":1.0
+},
+"ggsize":{
+"width":1000.0,
+"height":400.0
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"data":{
+"..count..":[1.0,8.0,6.0,3.0,5.0,4.0,1.0,4.0,4.0,1.0,1.0,2.0,4.0,6.0,11.0,10.0,5.0,1.0,1.0],
+"AST":[3.0,6.0,8.0,5.0,7.0,9.0,2.0,13.0,12.0,11.0,19.0,10.0,5.0,1.0,2.0,3.0,0.0,4.0,6.0],
+"name":["Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Clark","Wilson","Wilson","Wilson","Wilson","Wilson","Wilson","Wilson"]
+},
+"mapping":{
+"x":"AST",
+"fill":"name"
+},
+"position":"dodge",
+"data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Rk"
+},{
+"type":"str",
+"column":"Date"
+},{
+"type":"str",
+"column":"Age"
+},{
+"type":"str",
+"column":"Tm"
+},{
+"type":"str",
+"column":"Unnamed: 4"
+},{
+"type":"str",
+"column":"Opp"
+},{
+"type":"str",
+"column":"Unnamed: 6"
+},{
+"type":"int",
+"column":"GS"
+},{
+"type":"str",
+"column":"MP"
+},{
+"type":"int",
+"column":"FG"
+},{
+"type":"int",
+"column":"FGA"
+},{
+"type":"float",
+"column":"FG%"
+},{
+"type":"int",
+"column":"3P"
+},{
+"type":"int",
+"column":"3PA"
+},{
+"type":"float",
+"column":"3P%"
+},{
+"type":"int",
+"column":"FT"
+},{
+"type":"int",
+"column":"FTA"
+},{
+"type":"float",
+"column":"FT%"
+},{
+"type":"int",
+"column":"ORB"
+},{
+"type":"int",
+"column":"DRB"
+},{
+"type":"int",
+"column":"TRB"
+},{
+"type":"int",
+"column":"AST"
+},{
+"type":"int",
+"column":"STL"
+},{
+"type":"int",
+"column":"BLK"
+},{
+"type":"int",
+"column":"TOV"
+},{
+"type":"int",
+"column":"PF"
+},{
+"type":"int",
+"column":"PTS"
+},{
+"type":"float",
+"column":"GmSc"
+},{
+"type":"str",
+"column":"name",
+"factor_levels":["Clark","Wilson"]
+}]
+}
+}],
+"metainfo_list":[]
+};
+           var plotContainer = document.getElementById("4OXjif");
+           window.letsPlotCall(function() {{
+               LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+           }});
+       })();
+   </script>
+</div>
+</div>
+<div id="cell-43" class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>players, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>)) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="48">
    <div id="uXGJ3l"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1355,8 +2659,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-14" class="cell" data-execution_count="49">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>players, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>), position<span class="op">=</span><span class="st">'dodge'</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-44" class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>players, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>), position<span class="op">=</span><span class="st">'dodge'</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="49">
    <div id="UhyVpf"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1485,8 +2789,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-15" class="cell" data-execution_count="59">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_density(data<span class="op">=</span>players, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, color<span class="op">=</span><span class="st">'name'</span>, fill<span class="op">=</span><span class="st">'name'</span>), alpha<span class="op">=</span><span class="fl">0.05</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-45" class="cell" data-execution_count="59">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_density(data<span class="op">=</span>players, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, color<span class="op">=</span><span class="st">'name'</span>, fill<span class="op">=</span><span class="st">'name'</span>), alpha<span class="op">=</span><span class="fl">0.05</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="59">
    <div id="SB0gZk"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1617,11 +2921,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    </script>
 </div>
 </div>
-<div id="cell-16" class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>players, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>), position<span class="op">=</span><span class="st">''</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-46" class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>players, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, fill<span class="op">=</span><span class="st">'name'</span>), position<span class="op">=</span><span class="st">''</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-17" class="cell" data-execution_count="38">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_density(data<span class="op">=</span>players, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'PTS'</span>, color<span class="op">=</span><span class="st">'name'</span>, fill<span class="op">=</span><span class="st">'name'</span>), alpha<span class="op">=</span><span class="fl">0.1</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-47" class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_density(data<span class="op">=</span>players, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'PTS'</span>, color<span class="op">=</span><span class="st">'name'</span>, fill<span class="op">=</span><span class="st">'name'</span>), alpha<span class="op">=</span><span class="fl">0.1</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="38">
    <div id="kuSJ1E"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -1754,6 +3058,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
