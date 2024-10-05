@@ -1,0 +1,981 @@
+---
+title: "Data Analytics and Visualization"
+subtitle: "2-0: Data frames"
+author: "Prof. Gabe Hope"
+format: 
+    revealjs:
+        theme: ["../../../../theme.scss"]
+        html-math-method: katex
+        slideNumber: true
+---
+
+# Anatomy of a dataframe
+
+```{python}
+#| eval: true
+#| echo: false
+import pandas as pd
+import seaborn as sns
+from great_tables import GT, md, html, style, loc, exibble
+from lets_plot import *
+LetsPlot.setup_html()
+nations = pd.read_csv('data/nations.csv')
+
+
+penguins = sns.load_dataset("penguins")
+```
+
+## The Pandas `DataFrame` object
+
+```{python}
+#| eval: true
+#| echo: true
+data = pd.DataFrame(dict(
+    day=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    temperature=[83.2, 74.3, 78.9, 68.1, 70.6],
+    weather=['sun', 'clouds', 'sun', 'rain',  'rain'],
+    precipitation=[0, 1, 0, 8, 6],
+))
+data
+```
+
+Can be seen as a dictionary of columns
+
+## Columns
+
+We can access a column using the `[]` operator
+
+```{python}
+#| eval: true
+#| echo: true
+data['day']
+```
+
+## Indices
+The `index` is a special column that labels each row. 
+
+```{python}
+#| eval: true
+#| echo: true
+data
+```
+Defaults to just a range of numbers
+```{python}
+#| eval: true
+#| echo: true
+data.index
+```
+
+## Indices
+The `index` is a special column that labels each row. 
+```{python}
+#| eval: true
+#| echo: true
+data
+```
+But we can set another column as the index
+```{python}
+#| eval: true
+#| echo: true
+data.set_index('day')
+```
+
+# Series 
+
+## Series 
+Each column is a `Series` object
+
+```{python}
+#| eval: true
+#| echo: true
+data['day']
+```
+
+```{python}
+#| eval: true
+#| echo: true
+type(data['day'])
+```
+
+## A `Series` is a **typed** 1-dimensional array.
+
+Three important attributes:
+
+- `dtype`: The type specification
+- `values`: The actual array of data (a `numpy` array)
+- `index`: The index array, as in a `DataFrame`
+
+![](pictures/series.png)
+
+## Operations on `Series`
+
+Most basic operations on `Series` objects are applied to every entry.
+
+```{python}
+#| eval: false
+#| echo: true
+A = pd.Series([1., 2., 3.])
+A + 5
+```
+```{python}
+#| eval: true
+#| echo: false
+(pd.Series([1., 2., 3.]) + 5).tolist()
+```
+
+```{python}
+#| eval: false
+#| echo: true
+A = pd.Series(['a', 'b', 'c'])
+A + ' d'
+```
+```{python}
+#| eval: true
+#| echo: false
+(pd.Series(['a', 'b', 'c']) + ' d').tolist()
+```
+
+## Boolean operations on `Series`
+
+```{python}
+#| eval: false
+#| echo: true
+A = pd.Series([1., 2., 3., 4., 5., 6.])
+A > 2
+```
+```{python}
+#| eval: true
+#| echo: false
+(pd.Series([1., 2., 3., 4., 5., 6.]) > 2).tolist()
+```
+
+```{python}
+#| eval: false
+#| echo: true
+A = pd.Series([1., 2., 3., 4., 5., 6.])
+(A > 2) & (A < 5)
+```
+```{python}
+#| eval: true
+#| echo: false
+A = pd.Series([1., 2., 3., 4., 5., 6.])
+((A > 2) & (A < 5)).tolist()
+```
+
+## Operations on `Series`
+
+Operations between 2 series match corresponding entries
+
+```{python}
+#| eval: false
+#| echo: true
+A = pd.Series([1., 2., 3.])
+B = pd.Series([4., 5., 6.])
+A + B
+```
+```{python}
+#| eval: true
+#| echo: false
+(pd.Series([1., 2., 3.]) + pd.Series([4., 5., 6.])).tolist()
+```
+
+**Be careful!** Correspondence is determined by *index*, not position
+```{python}
+#| eval: false
+#| echo: true
+A = pd.Series([1., 2., 3.], index=[0, 1, 2])
+B = pd.Series([4., 5., 6.], index=[2, 3, 4])
+A + B
+```
+```{python}
+#| eval: true
+#| echo: false
+(pd.Series([1., 2., 3.]) + pd.Series([4., 5., 6.], index=[2, 3, 4])).tolist()
+```
+
+## Missing data values
+
+`NaN` values indicate values that are **missing**. Pandas knows that a value should exist, but can't determine what it is. 
+
+```{python}
+#| eval: false
+#| echo: true
+A = pd.Series([1., 2., 3.], index=[0, 1, 2])
+B = pd.Series([4., 5., 6.], index=[2, 3, 4])
+A + B
+```
+```{python}
+#| eval: true
+#| echo: false
+(pd.Series([1., 2., 3.]) + pd.Series([4., 5., 6.], index=[2, 3, 4])).tolist()
+```
+
+In this case `A` has a value at position `0`, but there is no corresponding value in `B`, so we do not know what the result at position `0` should be in the result.
+
+## Indexing and slicing `Series`
+
+
+```{python}
+#| eval: true
+#| echo: true
+A = pd.Series(['a', 'b', 'c', 'd', 'e'])
+A[2]
+```
+
+```{python}
+#| eval: false
+#| echo: true
+A = pd.Series(['a', 'b', 'c', 'd', 'e'])
+A[2:4]
+```
+```{python}
+#| eval: true
+#| echo: false
+pd.Series(['a', 'b', 'c', 'd', 'e'])[2:4].tolist()
+```
+
+## Boolean indexing
+
+```{python}
+#| eval: false
+#| echo: true
+A = pd.Series([4, 2, 7, 8, 1])
+A > 3
+```
+```{python}
+#| eval: true
+#| echo: false
+(pd.Series([4, 2, 7, 8, 1]) > 3).tolist()
+```
+
+```{python}
+#| eval: false
+#| echo: true
+A = pd.Series([4, 2, 7, 8, 1])
+A[A > 3]
+```
+```{python}
+#| eval: true
+#| echo: false
+A = pd.Series([4, 2, 7, 8, 1])
+A[A > 3].tolist()
+```
+
+# Back to DataFrames
+
+## Indexing Dataframes
+
+Let's start with a very simple example
+```{python}
+#| eval: false
+#| echo: true
+data = pd.DataFrame(dict(
+    day=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    temperature=[83.2, 74.3, 78.9, 68.1, 70.6],
+    weather=['sun', 'clouds', 'sun', 'rain',  'rain'],
+    precipitation=[0, 1, 0, 8, 6],
+))
+```
+```{python}
+#| eval: true
+#| echo: false
+
+data = pd.DataFrame(dict(
+    day=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    temperature=[83.2, 74.3, 78.9, 68.1, 70.6],
+    weather=['sun', 'clouds', 'sun', 'rain',  'rain'],
+    precipitation=[0, 1, 0, 8, 6],
+))
+GT(data.reset_index(), rowname_col="index")
+```
+
+## Indexing Dataframes
+
+We already saw that we can select a single column as a series. We can pass a list of column names to get a Dataframe with a subset of the columns.
+
+```{python}
+#| eval: false
+#| echo: true
+data[['day', 'temperature']]
+```
+```{python}
+#| eval: true
+#| echo: false
+GT(data[['day', 'temperature']].reset_index(), rowname_col="index")
+```
+
+## Indexing by position
+
+If we want to treat the dataframe a 2-D array, use the `iloc` property.
+
+```{python}
+#| eval: false
+#| echo: true
+data.iloc[:2, 1:4]
+```
+```{python}
+#| eval: true
+#| echo: false
+GT(data.iloc[:2, 1:4].reset_index(), rowname_col="index")
+```
+
+## Indexing by row/col labels
+
+The `loc` property works similarly to `iloc`, but uses row and column *names*
+
+```{python}
+#| eval: false
+#| echo: true
+data.loc[:, "temperature":]
+```
+```{python}
+#| eval: true
+#| echo: false
+GT(data.loc[:, "temperature":].reset_index(), rowname_col="index")
+```
+
+```{python}
+#| eval: false
+#| echo: true
+
+data = data.set_index('day')
+data.loc['Monday':'Wednesday', "temperature":]
+```
+```{python}
+#| eval: true
+#| echo: false
+GT(data.iloc[:3], rowname_col="day")
+```
+
+## Boolean indexing on dataframes
+
+We can select subsets of rows by using a boolean series
+
+```{python}
+#| eval: false
+#| echo: true
+
+data[data['temperature'] > 75]
+```
+```{python}
+#| eval: true
+#| echo: false
+GT(data[data['temperature'] > 75].reset_index(), rowname_col="index")
+```
+
+## Query 
+
+We can also use the shorthand `query` method.
+
+```{python}
+#| eval: false
+#| echo: true
+
+data.query('temperature > 70 & weather == "sun"')
+```
+```{python}
+#| eval: true
+#| echo: false
+GT(data.query('temperature > 70 & weather == "sun"').reset_index(), rowname_col="index")
+```
+
+## Indexing and slicing `DataFrames`
+```{python}
+#| eval: true
+#| echo: false
+GT(data.reset_index(), rowname_col="index").tab_style(style=[style.fill(color='lightgreen')], locations=loc.body(rows=lambda df: df['day'] == 'Monday'))
+```
+
+# Tidying data with Pandas
+
+## Our goal
+
+```{python}
+ggplot(nations, aes(x='income', y='lifeExpectancy', size='population')) + geom_point(aes(fill='region'), tooltips=layer_tooltips(['name']), stroke=0.5, shape=21, alpha=0.7) + scale_size(trans='sqrt', range = (0.2,12)) + scale_x_continuous(trans='log2', breaks=[500, 700, 1000, 5000, 7000, 10000, 50000, 70000,]) + ggsize(800, 500) + ggtitle('The Wealth and Health of Nations')
+```
+
+## Our starting point
+
+Files from gapminder.org:
+
+- income.csv
+- lex.csv (life expectency)
+- pop.csv (population)
+- countries.csv (region + more)
+
+## Our starting point
+
+#### Income
+
+```{python}
+#| echo: true
+income = pd.read_csv('data/income.csv')
+income.head()
+```
+
+#### Life expectency
+
+```{python}
+#| echo: true
+lex = pd.read_csv('data/lex.csv')
+lex.head()
+```
+
+## Our starting point
+
+#### Population
+
+```{python}
+#| echo: true
+population = pd.read_csv('data/pop.csv')
+population.head()
+```
+
+#### Countries
+
+```{python}
+#| echo: true
+countries = pd.read_csv('data/countries.csv')
+countries.head()
+```
+
+
+# Melting and Pivoting
+
+## Choosing a subset to look at
+
+```{python}
+#| echo: true
+income_data = income.set_index("country").loc[:"UAE", "2018":"2023"]
+income_data
+```
+
+```{python}
+#| echo: true
+income_data = income_data.reset_index()
+income_data
+```
+
+## Melting data
+
+We see that we have an implicit variable "year" that is represented *across* columns. This is not "*tidy*"
+
+- *Each variable should be a column*
+
+We can use the `melt` function to create 2 variables `year` and `income` from this table.
+
+```{python}
+#| echo: true
+data = income_data.melt(id_vars=['country'])
+data.head(10)
+```
+
+## Melting data
+
+`id_vars` let us specify which columns to keep as-is.
+
+::::: columns
+::: {.column}
+```{python}
+#| echo: true
+data = income_data.melt(id_vars=['country'])
+data.head(10)
+```
+:::
+::: {.column}
+
+```{python}
+#| echo: true
+data = income_data.melt()
+data.head(10)
+```
+:::
+:::::
+
+## Melting data
+
+We can also specify names for our new columns
+
+::::: columns
+::: {.column}
+```{python}
+#| echo: true
+data = income_data.melt(id_vars=['country'])
+data.head(10)
+```
+:::
+::: {.column}
+
+```{python}
+#| echo: true
+data = income_data.melt(id_vars=['country'], var_name="year", value_name='income')
+data.head(10)
+```
+:::
+:::::
+
+
+## Pivoting data 
+
+What if we want to do the reverse?
+
+::::: columns
+::: {.column}
+```{python}
+#| echo: true
+data = income_data.melt(id_vars=['country'], var_name="year", value_name='income')
+data.head(6)
+```
+:::
+::: {.column}
+
+```{python}
+#| echo: true
+data = data.pivot(index="country", columns="year", values="income")
+data
+```
+:::
+:::::
+
+```{python}
+#| echo: false
+income_data = income_data.melt(id_vars=['country'], var_name="year", value_name='income')
+```
+
+Here we use 3 arguments:
+
+- `index`: Specifies what to use to identify rows
+- `columns`: Specifies what to use to identify columns
+- `values`: Specifies what column to fill in as the values
+
+All other columns will be dropped.
+
+## Pivoting data 
+
+We could also then reset the index to get `country` as a normal column.
+
+```{python}
+#| echo: true
+data = income_data.pivot(index="country", columns="year", values="income")
+data.reset_index()
+```
+
+## Melting data
+
+Let's `melt` all of the untidy dataframes:
+
+```{python}
+#| echo: true
+income = income.melt(id_vars=['country'], var_name="year", value_name='income')
+population = population.melt(id_vars=['country'], var_name="year", value_name='population')
+lex = lex.melt(id_vars=['country'], var_name="year", value_name='life expectency')
+```
+
+# Merging and Joining
+
+## Multiple data frames
+
+We would like to merge these 2 data frames into 1.
+
+::::: columns
+::: {.column}
+```{python}
+population = pd.read_csv('data/pop.csv')
+data = population.set_index("country").loc[:"UAE", "2018":"2023"]
+population_data = data.reset_index().melt(id_vars=['country'], var_name="year", value_name='population')
+population_data.head()
+```
+:::
+::: {.column}
+```{python}
+income_data.head()
+```
+:::
+:::::
+
+## Combining columns
+::::: columns
+::: {.column}
+```{python}
+population = pd.read_csv('data/pop.csv')
+data = population.set_index("country").loc[:"UAE", "2018":"2023"]
+population_data = data.reset_index().melt(id_vars=['country'], var_name="year", value_name='population')
+population_data.head()
+```
+:::
+::: {.column}
+```{python}
+income_data.head()
+```
+:::
+:::::
+
+#### Adding a new column to an existing dataframe
+```{python}
+#| echo: true
+income_data['population'] = population_data['population']
+income_data.head()
+```
+
+
+**How can we ensure that each population value joined the correct observation?**
+
+## Combining columns
+::::: columns
+::: {.column}
+```{python}
+population = pd.read_csv('data/pop.csv')
+data = population.set_index("country").loc[:"UAE", "2018":"2023"]
+population_data = data.reset_index().melt(id_vars=['country'], var_name="year", value_name='population')
+population_data.head()
+```
+:::
+::: {.column}
+```{python}
+income_data.head()
+```
+:::
+:::::
+
+
+#### Creating a new dataframe by taking both sets of colmuns
+
+```{python}
+#| echo: false
+del income_data['population']
+```
+
+```{python}
+#| echo: true
+data = pd.concat([income_data, population_data], axis=1)
+data.head()
+```
+
+**How can we ensure that each population value joined the correct observation?**
+
+## Aside: concatenating rows
+
+
+```{python}
+#| echo: true
+income_2018 = income_data.query('year == "2018"')
+income_2019 = income_data.query('year == "2019"')
+```
+
+::::: columns
+::: {.column}
+```{python}
+income_2018
+```
+:::
+::: {.column}
+```{python}
+income_2019
+```
+:::
+:::::
+
+```{python}
+#| echo: true
+pd.concat([income_2018, income_2019], axis=0)
+```
+
+## Merging dataframes
+
+How do we ensure we match up observations correctly?
+
+::::: columns
+::: {.column style="width: 50%; font-size: 80%"}
+```{python}
+data = pd.read_csv('data/income.csv').set_index("country").loc[:"Afghanistan", "2018":"2022"]
+income_data = data.reset_index().melt(id_vars=['country'], var_name="year", value_name='income')
+income_data
+```
+:::
+::: {.column style="width: 50%; font-size: 80%"}
+
+```{python}
+data = pd.read_csv('data/pop.csv').set_index("country").loc[:"Afghanistan", "2019":"2023"]
+population_data = data.reset_index().melt(id_vars=['country'], var_name="year", value_name='population')
+population_data
+```
+:::
+:::::
+
+#### Pandas `merge`
+
+```{python}
+#| echo: true
+
+income_data.merge(population_data, on=['country', 'year'])
+```
+
+## Inner join
+
+::::: columns
+::: {.column style="width: 50%; font-size: 80%"}
+```{python}
+data = pd.read_csv('data/income.csv').set_index("country").loc[:"Afghanistan", "2018":"2022"]
+income_data = data.reset_index().melt(id_vars=['country'], var_name="year", value_name='income')
+income_data
+```
+:::
+::: {.column style="width: 50%; font-size: 80%"}
+
+```{python}
+data = pd.read_csv('data/pop.csv').set_index("country").loc[:"Afghanistan", "2019":"2023"]
+population_data = data.reset_index().melt(id_vars=['country'], var_name="year", value_name='population')
+population_data
+```
+:::
+:::::
+
+#### Inner join: take intersection of keys
+
+```{python}
+#| echo: true
+
+income_data.merge(population_data, on=['country', 'year'], how='inner')
+```
+
+## Merging dataframes
+
+::::: columns
+::: {.column style="width: 50%; font-size: 80%"}
+```{python}
+data = pd.read_csv('data/income.csv').set_index("country").loc[:"Afghanistan", "2018":"2022"]
+income_data = data.reset_index().melt(id_vars=['country'], var_name="year", value_name='income')
+income_data
+```
+:::
+::: {.column style="width: 50%; font-size: 80%"}
+
+```{python}
+data = pd.read_csv('data/pop.csv').set_index("country").loc[:"Afghanistan", "2019":"2023"]
+population_data = data.reset_index().melt(id_vars=['country'], var_name="year", value_name='population')
+population_data
+```
+:::
+:::::
+
+#### Left (outer) join: take intersection of keys *and* keys for the left dataframe
+
+```{python}
+#| echo: true
+
+income_data.merge(population_data, on=['country', 'year'], how='left')
+```
+
+## Merging dataframes
+
+::::: columns
+::: {.column style="width: 50%; font-size: 80%"}
+```{python}
+data = pd.read_csv('data/income.csv').set_index("country").loc[:"Afghanistan", "2018":"2022"]
+income_data = data.reset_index().melt(id_vars=['country'], var_name="year", value_name='income')
+income_data
+```
+:::
+::: {.column style="width: 50%; font-size: 80%"}
+
+```{python}
+data = pd.read_csv('data/pop.csv').set_index("country").loc[:"Afghanistan", "2019":"2023"]
+population_data = data.reset_index().melt(id_vars=['country'], var_name="year", value_name='population')
+population_data
+```
+:::
+:::::
+
+#### Right (outer) join: take intersection of keys *and* keys for the right dataframe
+
+```{python}
+#| echo: true
+
+income_data.merge(population_data, on=['country', 'year'], how='right')
+```
+
+## Merging dataframes
+
+::::: columns
+::: {.column style="width: 50%; font-size: 80%"}
+```{python}
+data = pd.read_csv('data/income.csv').set_index("country").loc[:"Afghanistan", "2018":"2022"]
+income_data = data.reset_index().melt(id_vars=['country'], var_name="year", value_name='income')
+income_data
+```
+:::
+::: {.column style="width: 50%; font-size: 80%"}
+
+```{python}
+data = pd.read_csv('data/pop.csv').set_index("country").loc[:"Afghanistan", "2019":"2023"]
+population_data = data.reset_index().melt(id_vars=['country'], var_name="year", value_name='population')
+population_data
+```
+:::
+:::::
+
+#### Outer join: take union of keys in both data frames
+
+```{python}
+#| echo: true
+
+income_data.merge(population_data, on=['country', 'year'], how='outer')
+```
+
+## Merging
+
+Let's merge country information with our other variables.
+
+::::: columns
+::: {.column}
+```{python}
+#| echo: true
+countries[['name', 'World bank region']].head()
+```
+:::
+::: {.column}
+```{python}
+#| echo: true
+income.head()
+```
+:::
+:::::
+
+First we'll `rename` our country column
+
+```{python}
+#| echo: true
+countries = countries.rename(columns=dict(name='country'))[['country', 'World bank region']]
+countries.head()
+```
+## Merging
+
+Now we can merge on the country name
+
+::::: columns
+::: {.column}
+```{python}
+#| echo: true
+countries[['country', 'World bank region']].head()
+```
+:::
+::: {.column}
+```{python}
+#| echo: true
+income.head()
+```
+:::
+:::::
+
+```{python}
+#| echo: true
+data = countries.merge(income, on='country')
+data.head()
+```
+
+## Merging
+
+```{python}
+#| echo: true
+income = pd.read_csv('data/income.csv').melt(id_vars=['country'], var_name="year", value_name='income')
+population = pd.read_csv('data/pop.csv').melt(id_vars=['country'], var_name="year", value_name='population')
+lex = pd.read_csv('data/lex.csv').melt(id_vars=['country'], var_name="year", value_name='life expectency')
+```
+
+And so on for our other variables
+
+```{python}
+#| echo: true
+data = data.merge(population, on=['country', 'year']).merge(lex, on=['country', 'year'])
+data.head()
+```
+
+## Clean-up
+
+Let's make sure all of our types are ok
+
+```{python}
+#| echo: true
+data.info()
+```
+
+## Fixing types
+
+Let's make sure all of our types are ok
+
+```{python}
+#| echo: true
+data['World bank region'] = data['World bank region'].astype('category')
+data['year'] = pd.to_numeric(data['year'])
+data.info()
+```
+
+## Fixing types
+
+Let's fix our population values too
+```{python}
+#| echo: true
+data['population'] = pd.to_numeric(data['population'].replace({
+    'B': 'e+09', 'M': 'e+06', 'k': 'e+03'
+    }, regex=True).astype(float).astype(int)
+)
+data.info()
+```
+
+
+## Filtering
+
+Let's consider only years from 2015-2020
+
+```{python}
+#| echo: true
+data = data.query('(year >= 2015) & (year < 2021)')
+data.head()
+```
+
+# Grouping and aggregation
+
+## Grouping and aggregation
+
+What if I want to average the years 2015-2020 for **each** country?
+
+```{python}
+#| echo: true
+data.head()
+```
+
+`groupby` country and take the mean
+
+```{python}
+#| echo: true
+data[['country', 'income']].groupby('country').mean().head()
+```
+
+## Grouping and aggregation
+
+Taking the mean over a categorical variable like `World bank region` is meaningless. 
+
+- Can specify different aggregations for difference variables with `agg`
+
+```{python}
+#| echo: true
+data.groupby('country').agg({
+    'World bank region': 'first',
+    'population': 'mean', 
+    'income': 'mean', 
+    'life expectency': 'mean'
+}).head()
+```
+
+`first` just takes the first value
+
+## Grouping and aggregation
+
+We can also `count` in groups
+
+```{python}
+#| echo: true
+data[['country', 'World bank region']].groupby('World bank region').count().head()
+```
+
+

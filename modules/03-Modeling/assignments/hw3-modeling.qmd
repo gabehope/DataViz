@@ -3,7 +3,6 @@ title: "Homework 1: Analyzing a single variable"
 subtitle: Data Analytics and Visualization, Fall 2024
 author: Prof. Gabe Hope
 institute: Harvey Mudd College
-date: August 2024
 format: html
 ---
 
@@ -161,3 +160,34 @@ Make sure each group member performs some analysis of this form.
 Finally, once your visualization an analysis is complete you'll need to write up a report on what you found. Consider our class guidelines for writing good reports!
 
 
+```{python}
+import numpy as np
+
+from lets_plot import *
+import lets_plot
+import pandas as pd
+import vega_datasets
+import seaborn as sns
+
+from lets_plot import *
+
+LetsPlot.setup_html()
+
+from IPython.display import SVG
+class ggsvg(lets_plot.plot.core.PlotSpec):
+    def __init__(self):
+        pass
+
+    def __radd__(self, plot):
+        ggsave(plot, 'plot.svg', w=8, h=4, unit='in', dpi=300)
+        return SVG(filename='lets-plot-images/plot.svg')
+
+   
+
+ggplot() + geom_point(x=0, y=0) + ggsize(200, 200)
+
+```
+
+```{ojs}
+Plot.rectY({length: 10000}, Plot.binX({y: "count"}, {x: d3.randomNormal()})).plot()
+```

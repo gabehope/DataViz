@@ -1196,13 +1196,13 @@ window.Quarto = {
 <p>If <span class="math inline">\(\sum_{k=1}^K w_k = 1\)</span> and <span class="math inline">\(w_k \geq 0, \forall k\)</span> <span class="math display">\[\log\left(\sum_{k=1}^K w_kx_k\right) \geq \sum_{k=1}^K w_k\log(x_k) \]</span></p>
 <p>And more generally for any <strong>concave</strong> function <span class="math inline">\(f\)</span></p>
 <p><span class="math display">\[f\left(\sum_{k=1}^K w_kx_k\right) \geq \sum_{k=1}^K w_kf(x_k) \]</span></p>
+</section>
+<section id="elbo" class="level2">
+<h2 class="anchored" data-anchor-id="elbo">ELBO</h2>
 <p>Also true as <span class="math inline">\(K \rightarrow \infty\)</span> and a weighting <em>function</em> <span class="math inline">\(\int_{-\infty}^\infty w(x) dx = 1, \quad w(x) \geq 0, x\in \mathbb{R}\)</span></p>
 <p><span class="math display">\[f\left(\int_{-\infty}^\infty w(x)x dx\right) \geq \int_{-\infty}^\infty w(x) f(x) dx \]</span></p>
 <p>Often framed as an <strong>expectation</strong></p>
 <p><span class="math display">\[f\left(\mathbb{E}_{p(x)}[ x] \right) \geq \mathbb{E}_{p(x)}[ f\left(x \right)]\]</span></p>
-</section>
-<section id="elbo" class="level2">
-<h2 class="anchored" data-anchor-id="elbo">ELBO</h2>
 <p><span class="math display">\[\sum_{i=1}^N \log  p(x_i) =\sum_{i=1}^N \log \left( \sum_{z_i=1}^K p(x_i\mid z_i)p(z_i) \right)\]</span></p>
 <p><span class="math display">\[= \sum_{i=1}^N \log \left( \sum_{z_i=1}^K \frac{w_{iz_i}}{w_{iz_i}} p(x_i\mid z_i)p(z_i) \right)\]</span> <span class="math display">\[= \sum_{i=1}^N \log \left( \sum_{z_i=1}^K w_{iz_i} \frac{p(x_i\mid z_i)p(z_i)}{w_{iz_i}}  \right)\]</span></p>
 <p><span class="math display">\[\geq \sum_{i=1}^N  \sum_{z_i=1}^K w_{iz_i}  \log \left(\frac{p(x_i\mid z_i)p(z_i)}{w_{iz_i}}  \right) = \mathcal{L}\]</span></p>
