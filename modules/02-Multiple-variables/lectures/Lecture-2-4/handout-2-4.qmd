@@ -1,0 +1,63 @@
+---
+format: 
+    pdf:
+        include-in-header: 
+            text: '\pagenumbering{gobble}'
+---
+
+
+# Name:
+
+*Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
+
+# Data Analytics and Visualization: Week 8 - Conditional models and web visualization
+
+## In-class questions
+
+#### Which model is more suited to each data?
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  What would you like to learn from the Olympian data?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+## Reflection (*complete at the end of class*)
+
+#### Where would you like this course to go next?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+#### Are there other topics from statistics you'd like to cover?
+
+|
+|
+|
+|
+|
+|
+|
+|

@@ -129,6 +129,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../../../resources/datasets.html">
  <span class="dropdown-text">Datasets</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/gabehope/DataViz-Homework-Template">
+ <span class="dropdown-text">Homework template</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -180,9 +184,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#tips-tricks-and-suggestions" id="toc-tips-tricks-and-suggestions" class="nav-link" data-scroll-target="#tips-tricks-and-suggestions">Tips, tricks and suggestions</a>
   <ul class="collapse">
   <li><a href="#part-1-finding-a-dataset" id="toc-part-1-finding-a-dataset" class="nav-link" data-scroll-target="#part-1-finding-a-dataset">Part 1: Finding a dataset</a></li>
-  <li><a href="#part-2-visualizing-single-variables" id="toc-part-2-visualizing-single-variables" class="nav-link" data-scroll-target="#part-2-visualizing-single-variables">Part 2: Visualizing single variables</a></li>
-  <li><a href="#part-3-analysis" id="toc-part-3-analysis" class="nav-link" data-scroll-target="#part-3-analysis">Part 3: Analysis</a></li>
-  <li><a href="#part-4-writing-up" id="toc-part-4-writing-up" class="nav-link" data-scroll-target="#part-4-writing-up">Part 4: Writing up!</a></li>
+  <li><a href="#part-2-create-and-iterate-on-your-visualizations" id="toc-part-2-create-and-iterate-on-your-visualizations" class="nav-link" data-scroll-target="#part-2-create-and-iterate-on-your-visualizations">Part 2: Create (and iterate on) your visualizations</a></li>
+  <li><a href="#part-3-writing-up" id="toc-part-3-writing-up" class="nav-link" data-scroll-target="#part-3-writing-up">Part 3: Writing up!</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -246,10 +249,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="timeline" class="level2">
 <h2 class="anchored" data-anchor-id="timeline">Timeline</h2>
 <ul>
-<li><strong>Friday, September XX 11:59pm</strong> Create a gradescope submission for your assignment with all group members.</li>
-<li><strong>Thursday, September XX 11:59pm</strong> Submit your final assignment on Gradescope</li>
-<li><strong>Friday, September XX 11:59pm</strong> Submit your reflections on Gradescope.</li>
-<li><strong>Thursday, September XX 11:59pm</strong> Submit your peer feedback on Gradescope.</li>
+<li><strong>Friday, October 18 11:59pm</strong> Create a gradescope submission for your assignment with all group members.</li>
+<li><strong>Friday, October 25 11:59pm</strong> Submit your final assignment on Gradescope</li>
+<li><strong>Friday, October 25 11:59pm</strong> Submit your reflections on Gradescope.</li>
+<li><strong>Tuesday, October 29 11:59pm</strong> Submit your peer feedback on Gradescope.</li>
 </ul>
 </section>
 <section id="groups" class="level2">
@@ -260,9 +263,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="assignment" class="level1">
 <h1>Assignment</h1>
-<p><strong>Goal:</strong> As in the first assignment, your goal is to choose a public dataset and put yourselves in the shoes of the someone who collected this data; show why it is interesting and what can be learned from it! This time however, you will aim to show that there are meaningful relationships <em>between</em> the variables in your dataset. You’ll use the multi-variable analysis and visualization techniques that we’ve learned in class to make your case.</p>
+<p><strong>Goal:</strong> In this assignment, you’ll put yourselves in the shoes of a <em>data journalist</em> (perhaps working somewhere like FiveThirtyEight or the Upshot). Your goal is to create some eye-catching, informative visualizations that will entice readers to your site (while also educating them!) and justify the descisions you made in creating these visualizations to convince your editor to put them on the front page. You’ll use the <em>multi-variable</em> analysis and visualization techniques that we’ve learned in class to make your case.</p>
 <p>To start, choose a public dataset <strong>as a group</strong>. You’re welcome to continue using the same dataset from the previous assignment or to choose a new one. Your chosen dataset should have a <strong>minimum of 3-5 variables</strong> including <strong>at least one nominal variable</strong> and <strong>at least 2 ordinal or continuous variables</strong>. If your dataset does not have enough varibles for your analysis of interest, you may <strong>join</strong> 2 or more datasets as discussed in class.</p>
-<p><strong>Each member</strong> of your team should create a visualization using two or more variables that illustrates some interesting structure of the data. <strong>Each visualization should be a distinct</strong> both in terms of the variables being shown <em>and</em> the visualization techniques used. At least one visualization should encode <strong>3 or more variables</strong> (including at least one nominal variable) and at least one visualization should involve <strong>grouping/aggregating</strong> the data in some way. Your visualizations may focus on illustrating the results of your analysis (as described below), you may also include additional visualization for this purpose.</p>
+<p><strong>Each member</strong> of your team should create at least one visualization using two or more variables that illustrates some interesting structure of the data. <strong>Each visualization should be a distinct</strong> both in terms of the variables being shown <em>and</em> the visualization techniques used. At least one visualization should encode <strong>3 or more variables</strong> (including at least one nominal variable) and at least one visualization should involve <strong>grouping/aggregating</strong> the data in some way.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -276,15 +279,15 @@ Note
 <p>There may be overlap in the variables and/or techniques used across plots, as long as there is some noteable distinction in each case. For example, it is <em>not</em> sufficient to produce 2-3 scatterplots of different pairs of variables, nor is it sufficient to simply plot the same (untransformed) variables as a scatterplot and a density plot.</p>
 </div>
 </div>
-<p><strong>For each group member</strong> perform a multivariate analysis that illustrates something about the data using two or more variables in the dataset. This analysis could be exploratory, or could attempt to test your assumptions about the data. Some example forms this could take are:</p>
+<p>In designing your visualizations, you should focus on the following qualities from the visualization rubric:</p>
 <ul>
-<li><strong>Summarization:</strong> query, filter, transform and/or group the data to produce descriptive statistics of some subpopulations of interest. Compare and contrast these results.</li>
-<li><strong>Conditional modeling:</strong> create a univariate model of some variable <em>conditioned</em> on the value of one or more other variables and predict the likelihood of a future outcome.</li>
-<li><strong>Multiple-sample hypothesis testing:</strong> consider two subpopulations of the data (i.e.&nbsp;by grouping or filtering) and test a hypothesis about their relationship (e.g.&nbsp;are the population means equal?).</li>
-<li><strong>Correlation analysis:</strong> Examine the correlation between variables in the data (or subpopulations). Determine which variables are most strongly correlated.</li>
+<li><strong>Motivation:</strong> Does my visualization reveal something non-obvious about my data? Would a reader find it interesting or exciting?</li>
+<li><strong>Completeness:</strong> Does my visualization show the most important and/or relevant relationships between variables in my dataset? Does my visualization leave out any factors that might help further explain the information shown?</li>
+<li><strong>Interpretability:</strong> What kinds of questions could a reader answer using my visualization? How difficult would it be to parse the answers to these questions from the visualization?</li>
+<li><strong>Aesthetics:</strong> Is my visualization eye-catching and aesthetically pleasing? Does it appropriately convey any emotion that I’d like my reader to take from it?</li>
+<li><strong>Acessibility:</strong> Is my visualization acessable? It it clear, easy to read, even for readers with visual impairments?</li>
 </ul>
-<p>In all cases your analysis should aim to lead to a useful, exciting or surprising conclusion about the data.</p>
-<p><strong>Submit a 1-3 page (including figures) report</strong> about you dataset that includes your visualizations and the results of your analysis. Your report should be written for a general audience who you think should be interested in this data. This could be researchers, policy-makers or the general public; anyone whose descisions may be influenced by your findings. This means you should first motivate <em>why</em> your chosen dataset is interesting/exciting/important. Then explain what your visualizations show about the data. Finally discuss what your analysis shows and why it is exciting, intuitive or surprising. You do <em>not</em> need to include the details of your calculations, but it should be clear what assumptions are being made for each model and how reasonable these assumptions are.</p>
+<p><strong>Submit a 1-3 page (including figures) report</strong> about your visualizations. Your report should be written for a someone (like a data journalism editor) with knowledge of data analytics and visualization, to convince them of the merits of your visualizations. This means, as in the first assignment, you should first motivate <em>why</em> your chosen dataset is interesting/exciting/important. Then explain what your visualizations show about the data. Make sure to justify <em>why</em> you chose to show the variables you did, and <em>why</em> you think each plot type you chose is most appropriate for visualizing those particular variables. Also make sure to justify any choices you made with respect to colors, scales or labeling. Finally, give concrete examples of what a reader could take away from your visualizations, e.g.&nbsp;what questions a reader might have about a subject that could be answered by your visualization.</p>
 <section id="requirements-checklist" class="level2">
 <h2 class="anchored" data-anchor-id="requirements-checklist">Requirements checklist</h2>
 <ul class="task-list">
@@ -297,13 +300,12 @@ Note
 <li><label><input type="checkbox">1 visualization should include at least 3 variables (at least 1 being nomial).</label></li>
 <li><label><input type="checkbox">1 visualization should involve grouping/aggregating the data.</label></li>
 </ul></li>
-<li><label><input type="checkbox">Perform some kind of <strong>multi-variable analysis</strong> for <strong>each team member</strong>. In your report discuss the asumptions used in each analysis and the conclusion.</label></li>
-<li><label><input type="checkbox">Submit a report that: <strong>introduces and motivates the chosen dataset</strong>, <strong>shows and discusses your visualizations</strong>, and <strong>discuses your analysis</strong>.</label></li>
+<li><label><input type="checkbox">Submit a report that: <strong>introduces and motivates the chosen dataset</strong>, <strong>shows and discusses your visualizations</strong>, and <strong>discuses your analysis of the visualizations</strong>.</label></li>
 </ul>
 </section>
 <section id="format-and-submission" class="level2">
 <h2 class="anchored" data-anchor-id="format-and-submission">Format and submission</h2>
-<p>Assignments should follow the homework Quarto template. Each submission should be rendered as a PDF and submitted through Gradescope.</p>
+<p>Assignments should follow the homework <a href="https://github.com/gabehope/DataViz-Homework-Template">Quarto/Jupyter template</a>. Each submission should be rendered as HTML and submitted through Canvas.</p>
 </section>
 <section id="rubric" class="level2">
 <h2 class="anchored" data-anchor-id="rubric">Rubric</h2>
@@ -344,8 +346,7 @@ Note
 <p>Below is a (rough) outline of how much time each team member should aim to work on each part of this assignment. If you find that any part of this assingment is taking considerably longer, please reach out to the instructor.</p>
 <ul>
 <li><strong>Choosing a dataset and variables:</strong> 30 minutes.</li>
-<li><strong>Creating a visualization:</strong> 30-60 minutes.</li>
-<li><strong>Analyzing a variable:</strong> 30-60 minutes.</li>
+<li><strong>Creating a visualization:</strong> up to 60 minutes.</li>
 <li><strong>Writing the report:</strong> up to 60 minutes.</li>
 <li><strong>Reflections and peer feedback:</strong> &lt;30 minutes.</li>
 </ul>
@@ -367,78 +368,18 @@ Note
 </ul>
 <p>Once you’ve chosen your data, download it an make sure every team member has access.</p>
 <p><strong>Load your data into Python using Pandas.</strong> You should be able to verify that it loaded correctly using something like <code>df.head()</code>. Then make sure you understand what the data represents. You should be able to answer the following questions: <em>How many variables are in the dataset? What is the type of each variable and what does it represent? How many observations are in the dataset and what does each one represent?</em></p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>For example:</strong> You might choose to look at Lebron James’ per-game performance over the 2023-2024 NBA season. You might find that each observation in your data represents a single game and the varibles include quantitative statistics such as points scored, rebounds, steals etc. as well as nominal values such as the opposing team and whether it was a home or away game.</p>
-</div>
-</div>
+<p><strong>Be careful when joining datasets!</strong> It will often be useful to combine data from multiple files, as shown in quiz 2. However you should be careful when doing so. Make sure the variable you are joining on has the same <em>meaning</em> in both data sources. If possible, it’s a good idea to stick to combining datasets from the same source. In the example in quiz 2, both datasets are from the Gapminder organization.</p>
 </section>
-<section id="part-2-visualizing-single-variables" class="level2">
-<h2 class="anchored" data-anchor-id="part-2-visualizing-single-variables">Part 2: Visualizing single variables</h2>
-<p>With your dataset in hand, it’s time to start trying to understand it using visualization! For this assignment, we’re only going to look at one variable at a time. Again, try to choose variables that you think may show an interesting property of your data.</p>
-<p><strong>Choose one <em>continuous</em> or <em>ordinal</em> variable from your dataset.</strong> Using Lets-Plot or PlotNine, create a visualization of the distribution of this variable. Exactly what type of visualization you use is up to you, but the visualization should be clear, well-labeled and provide an accurate picture of the data. Follow the relevant guidelines from the visualization rubric.</p>
-<p>You should also compute key summary statistics for the variable. At minimum, the <em>mean</em>, <em>median</em>, <em>minimum</em> and <em>maximum</em> using Pandas. If appropriate, show them in the visualizaiton otherwise you may refer to them in your write-up.</p>
-<p><strong>And/or choose one <em>nominal</em> (categorical) variable from your dataset.</strong> Visualize the distribution of this variable. As before, the exact style of visualization is up to you, but the same standards of quality will apply.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>For example:</strong> In your analysis of Lebron’s games you may decide to look at the number of points score per-game, visualizing this distribution using a histogram. You may consider visualizing the proportion of home and away games, but decide that because you already know that the proportion is 50-50 that it’s not worth analyzing.</p>
-</div>
-</div>
+<section id="part-2-create-and-iterate-on-your-visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-create-and-iterate-on-your-visualizations">Part 2: Create (and iterate on) your visualizations</h2>
+<p>Use Let’s plot or your favorite visualization library to create the required visualizations.</p>
+<p><strong>Delegate tasks as a group.</strong> Before creating individual visualizations, make sure all group members are in agreement about what you’d like to show in each visualization and that the requirements outlined about will be met.</p>
+<p><strong>Iterate on your visualizations.</strong> Make sure that each visualization that you create is <em>effective</em> and <em>expressive</em>. This might mean trying out different geometries, scales, coordinate systems or mappings. Find a visualization that says something interesting about the chosen dataset.</p>
+<p><strong>Discuss as a group.</strong> Solicit feedback from your group memebers as you go. Make sure that other can understand what a given visualization is showing.</p>
 </section>
-<section id="part-3-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="part-3-analysis">Part 3: Analysis</h2>
-<p>Now that we understand our data a bit better having visualized it, let’s see if we can use it to help us make useful decisions. To do this we’ll first need to determine a specific piece of knowledge that we want to get from our data.</p>
-<p><strong>Pose a question.</strong> Consider continuous/ordinal variable that you visualized in the previous part. Determine a question that you could answer using a model of this variable. In this case we’ll restrict it to asking about the likelihood of some future outcome.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>For example:</strong> if your variable is the number of points Lebron James scores in each game, you could attempt to answer the question: <em>how likely is it that Lebron will score more than 50 points?</em></p>
-</div>
-</div>
-<p><strong>Fit a distribution.</strong> Choose the most appropriate distribution out of those discussed in class to model your continuous/ordinal variable. (This could be a Normal, Exponential, Binomial, Negative Binomial or Poisson). Estimate the parameters of this distribution that best fits your data using the <em>maximum likelihood principle.</em></p>
-<p>As you complete this section, consider the <em>assumptions</em> that you are relying on. For example: Is your chosen distribution a good fit to the data? Is it reasonable to assume your observations are independent?</p>
-<p><strong>Answer the question.</strong> Use your model to attempt to answer this question (e.g.&nbsp;<em>under our model, Lebron has an 8% chance of scoring more than 50 points</em>)</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>For example:</strong> if your variable is the number of points Lebron James scores in each game, you could attempt to answer the question: <em>how likely is it that Lebron will score more than 50 points?</em></p>
-</div>
-</div>
-<p>Make sure each group member performs some analysis of this form.</p>
-</section>
-<section id="part-4-writing-up" class="level2">
-<h2 class="anchored" data-anchor-id="part-4-writing-up">Part 4: Writing up!</h2>
-<p>Finally, once your visualization an analysis is complete you’ll need to write up a report on what you found. Consider our class guidelines for writing good reports!</p>
+<section id="part-3-writing-up" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-writing-up">Part 3: Writing up!</h2>
+<p>Finally, once your visualization an analysis is complete you’ll need to write up a report on what you found. Consider why you chose the data that you did and what you were hoping to find. Did your visualization show this? How do your visualizations meet the goals of <em>effectiveness</em> and <em>expressiveness</em>? Is there anything you would have liked to improve?</p>
 
 
 </section>

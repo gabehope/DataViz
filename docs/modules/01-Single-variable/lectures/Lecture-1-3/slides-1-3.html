@@ -442,10 +442,10 @@ Prof.&nbsp;Gabe Hope
 </section>
 <section id="setup" class="slide level2">
 <h2>Setup</h2>
-<div id="21eae29c" class="cell" data-execution_count="1">
+<div id="42a5e354" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 
-            <div id="2oR9Pv"></div>
+            <div id="5esnbI"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -469,9 +469,9 @@ Prof.&nbsp;Gabe Hope
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("2oR9Pv").appendChild(div);
+                        document.getElementById("5esnbI").appendChild(div);
                     };
-                    var e = document.getElementById("2oR9Pv");
+                    var e = document.getElementById("5esnbI");
                     e.appendChild(script);
                 })()
             </script>
@@ -482,8 +482,8 @@ Prof.&nbsp;Gabe Hope
 <section id="the-data-from-basketball-reference.com" class="slide level2">
 <h2>The data (from <a href="http://basketball-reference.com">basketball-reference.com</a> )</h2>
 <p>Full data:</p>
-<div id="a5b8f36b" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display" data-execution_count="67">
+<div id="646d0f1a" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -775,8 +775,8 @@ Prof.&nbsp;Gabe Hope
 </div>
 </div>
 <p>Assists:</p>
-<div id="b1e51c53" class="cell" data-execution_count="3">
-<div class="cell-output cell-output-display" data-execution_count="68">
+<div id="a496c91e" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>0    3
 1    6
 2    8
@@ -793,10 +793,10 @@ Name: AST, dtype: int64</code></pre>
 </section>
 <section id="option-1-histogram" class="slide level2">
 <h2>Option 1: Histogram</h2>
-<div id="b2ec015c" class="cell" data-execution_count="4">
+<div id="9fbf8980" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>)) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="69">
-   <div id="EuOP31"></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+   <div id="CcPVUp"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -909,7 +909,7 @@ Name: AST, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("EuOP31");
+           var plotContainer = document.getElementById("CcPVUp");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -920,11 +920,11 @@ Name: AST, dtype: int64</code></pre>
 </section>
 <section id="option-1-histogram-bins" class="slide level2">
 <h2>Option 1: Histogram (bins)</h2>
-<div id="7b73dba9" class="cell" data-execution_count="5">
+<div id="b3cb5f62" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>), bins<span class="op">=</span><span class="dv">20</span>)<span class="op">\</span></span>
 <span id="cb3-2"><a></a>     <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="70">
-   <div id="CsxEJk"></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+   <div id="HtITye"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1038,7 +1038,7 @@ Name: AST, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("CsxEJk");
+           var plotContainer = document.getElementById("HtITye");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1049,11 +1049,11 @@ Name: AST, dtype: int64</code></pre>
 </section>
 <section id="option-2-bar-plot" class="slide level2">
 <h2>Option 2: Bar plot</h2>
-<div id="4c5c182b" class="cell" data-execution_count="6">
+<div id="1ea90004" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>))<span class="op">\</span></span>
 <span id="cb4-2"><a></a>     <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="71">
-   <div id="5ZKNRN"></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+   <div id="tE9MDy"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1166,7 +1166,7 @@ Name: AST, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("5ZKNRN");
+           var plotContainer = document.getElementById("tE9MDy");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1177,11 +1177,11 @@ Name: AST, dtype: int64</code></pre>
 </section>
 <section id="option-3-kde" class="slide level2">
 <h2>Option 3: KDE</h2>
-<div id="3adf61de" class="cell" data-execution_count="7">
+<div id="25416546" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>ggplot() <span class="op">+</span> geom_density(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>), alpha<span class="op">=</span><span class="fl">0.05</span>)<span class="op">\</span></span>
 <span id="cb5-2"><a></a>     <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="72">
-   <div id="7nxmUA"></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+   <div id="uEXFfU"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1296,7 +1296,7 @@ Name: AST, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("7nxmUA");
+           var plotContainer = document.getElementById("uEXFfU");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1307,11 +1307,11 @@ Name: AST, dtype: int64</code></pre>
 </section>
 <section id="option-3-kde-bandwidth-options" class="slide level2">
 <h2>Option 3: KDE (bandwidth options)</h2>
-<div id="da4d29c7" class="cell" data-execution_count="8">
+<div id="c0ea38eb" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>ggplot() <span class="op">+</span> geom_density(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>), alpha<span class="op">=</span><span class="fl">0.05</span>, bw<span class="op">=</span><span class="fl">1.</span>)<span class="op">\</span></span>
 <span id="cb6-2"><a></a>     <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">250</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="73">
-   <div id="p7H74T"></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+   <div id="m5dH8p"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1427,7 +1427,7 @@ Name: AST, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("p7H74T");
+           var plotContainer = document.getElementById("m5dH8p");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1435,11 +1435,11 @@ Name: AST, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="6abcc69b" class="cell" data-execution_count="9">
+<div id="f89049cb" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>ggplot() <span class="op">+</span> geom_density(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>), alpha<span class="op">=</span><span class="fl">0.05</span>, bw<span class="op">=</span><span class="fl">0.25</span>)<span class="op">\</span></span>
 <span id="cb7-2"><a></a>     <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">250</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="74">
-   <div id="2gBIzR"></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+   <div id="RbEUqZ"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1555,7 +1555,7 @@ Name: AST, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("2gBIzR");
+           var plotContainer = document.getElementById("RbEUqZ");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1568,9 +1568,9 @@ Name: AST, dtype: int64</code></pre>
 <h2>Aside: <strong>mode</strong> of a continuous distribution</h2>
 <h4 id="any-local-maximum-of-the-pdf"><em>Any</em> <strong>local maximum</strong> of the PDF</h4>
 <p>2 modes</p>
-<div id="dd02070c" class="cell" data-execution_count="10">
-<div class="cell-output cell-output-display" data-execution_count="75">
-   <div id="KyemBu"></div>
+<div id="51108148" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="10">
+   <div id="DLgT46"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1686,7 +1686,7 @@ Name: AST, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("KyemBu");
+           var plotContainer = document.getElementById("DLgT46");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1695,9 +1695,9 @@ Name: AST, dtype: int64</code></pre>
 </div>
 </div>
 <p>12 modes</p>
-<div id="1f3109ff" class="cell" data-execution_count="11">
-<div class="cell-output cell-output-display" data-execution_count="76">
-   <div id="qnY1si"></div>
+<div id="4a413429" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="11">
+   <div id="aWy3kD"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1813,7 +1813,7 @@ Name: AST, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("qnY1si");
+           var plotContainer = document.getElementById("aWy3kD");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1832,11 +1832,11 @@ Name: AST, dtype: int64</code></pre>
 </section>
 <section id="option-2-bar-plot-why" class="slide level2">
 <h2><strong>Option 2: Bar plot</strong> (why?)</h2>
-<div id="2d129559" class="cell" data-execution_count="12">
+<div id="5d6d8883" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>))<span class="op">\</span></span>
 <span id="cb8-2"><a></a>     <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="77">
-   <div id="CZUqN6"></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+   <div id="OOohQY"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -1949,7 +1949,7 @@ Name: AST, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("CZUqN6");
+           var plotContainer = document.getElementById("OOohQY");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -1966,13 +1966,13 @@ Name: AST, dtype: int64</code></pre>
 <section id="statistics-mean" class="slide level2">
 <h2>Statistics: <strong>Mean</strong></h2>
 <p>Let’s compute the mean statistic and plot it!</p>
-<div id="1a378400" class="cell" data-execution_count="13">
+<div id="bb4f067d" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>mean_ast <span class="op">=</span> clark[<span class="st">'AST'</span>].mean()</span>
 <span id="cb9-2"><a></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>)) <span class="op">\</span></span>
 <span id="cb9-3"><a></a><span class="op">+</span> geom_vline(xintercept<span class="op">=</span>clark[<span class="st">'AST'</span>].mean(), color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>)<span class="op">\</span></span>
 <span id="cb9-4"><a></a><span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="78">
-   <div id="I3o5eF"></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+   <div id="HsRpC2"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2096,7 +2096,7 @@ Name: AST, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("I3o5eF");
+           var plotContainer = document.getElementById("HsRpC2");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2124,12 +2124,12 @@ Name: AST, dtype: int64</code></pre>
 <section id="statistics-above-10-assists" class="slide level2">
 <h2>Statistics: <strong>Above 10 assists</strong></h2>
 <p>Let’s compute this new statistic!</p>
-<div id="2899e2b8" class="cell" data-execution_count="14">
+<div id="daa972e2" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>)) <span class="op">\</span></span>
 <span id="cb10-2"><a></a><span class="op">+</span> geom_vline(xintercept<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>)<span class="op">\</span></span>
 <span id="cb10-3"><a></a><span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">350</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="79">
-   <div id="5pupKB"></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+   <div id="jzHUH1"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2253,7 +2253,7 @@ Name: AST, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("5pupKB");
+           var plotContainer = document.getElementById("jzHUH1");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2261,7 +2261,7 @@ Name: AST, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="0222630f" class="cell" data-execution_count="15">
+<div id="f953377c" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> statistic(data):</span>
 <span id="cb11-2"><a></a>    <span class="cf">return</span> (data <span class="op">&gt;=</span> <span class="dv">10</span>).mean()</span>
 <span id="cb11-3"><a></a><span class="bu">print</span>(<span class="st">'Fraction of games with &gt;= 10 assists:'</span>, statistic(clark[<span class="st">'AST'</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2277,7 +2277,7 @@ Name: AST, dtype: int64</code></pre>
 <section id="bootstrapping" class="slide level2">
 <h2>Bootstrapping!</h2>
 <p>Setup code:</p>
-<div id="b525e67a" class="cell" data-execution_count="16">
+<div id="3fcd00a6" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">import</span> math </span>
 <span id="cb13-2"><a></a><span class="kw">def</span> bootstrap_sample(data):</span>
 <span id="cb13-3"><a></a>    N <span class="op">=</span> <span class="bu">len</span>(data)                      <span class="co"># Number of obsevations</span></span>
@@ -2303,15 +2303,15 @@ Name: AST, dtype: int64</code></pre>
 </section>
 <section id="bootstrapping-1" class="slide level2">
 <h2>Bootstrapping!</h2>
-<div id="2af98824" class="cell" data-execution_count="17">
+<div id="61ff08c1" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>estimates, lower, upper <span class="op">=</span> simple_simulation_ci(clark[<span class="st">'AST'</span>], statistic, <span class="dv">10000</span>)</span>
 <span id="cb14-2"><a></a>estimates <span class="op">=</span> pd.DataFrame({<span class="st">"Simulated fraction"</span>: estimates})</span>
 <span id="cb14-3"><a></a></span>
 <span id="cb14-4"><a></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>estimates, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">"Simulated fraction"</span>))<span class="op">\</span></span>
 <span id="cb14-5"><a></a><span class="op">+</span> geom_vline(xintercept<span class="op">=</span>lower, color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>)<span class="op">\</span></span>
 <span id="cb14-6"><a></a><span class="op">+</span> geom_vline(xintercept<span class="op">=</span>upper, color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">350</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="82">
-   <div id="TF3FP5"></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+   <div id="zE9caL"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2328,8 +2328,8 @@ Name: AST, dtype: int64</code></pre>
 "layers":[{
 "geom":"bar",
 "data":{
-"..count..":[1.0,7.0,23.0,69.0,171.0,316.0,545.0,857.0,1096.0,1367.0,1348.0,1234.0,1036.0,823.0,501.0,294.0,171.0,74.0,39.0,19.0,4.0,5.0],
-"Simulated fraction":[0.025,0.075,0.1,0.125,0.15,0.175,0.2,0.225,0.25,0.275,0.3,0.325,0.35,0.375,0.4,0.425,0.45,0.475,0.5,0.525,0.55,0.575]
+"..count..":[6.0,11.0,56.0,129.0,289.0,524.0,858.0,1121.0,1348.0,1418.0,1316.0,1046.0,783.0,489.0,291.0,172.0,89.0,35.0,12.0,5.0,2.0],
+"Simulated fraction":[0.075,0.1,0.125,0.15,0.175,0.2,0.225,0.25,0.275,0.3,0.325,0.35,0.375,0.4,0.425,0.45,0.475,0.5,0.525,0.55,0.575]
 },
 "mapping":{
 "x":"Simulated fraction"
@@ -2346,7 +2346,7 @@ Name: AST, dtype: int64</code></pre>
 },
 "data_meta":{
 },
-"xintercept":0.15,
+"xintercept":0.175,
 "color":"red",
 "linetype":"longdash",
 "data":{
@@ -2365,7 +2365,7 @@ Name: AST, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("TF3FP5");
+           var plotContainer = document.getElementById("zE9caL");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2373,10 +2373,10 @@ Name: AST, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="607f5d62" class="cell" data-execution_count="18">
+<div id="3c97fbee" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="bu">print</span>(<span class="st">'95</span><span class="sc">% c</span><span class="st">onfidence interval: '</span>, [lower, upper])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>95% confidence interval:  [np.float64(0.15), np.float64(0.45)]</code></pre>
+<pre><code>95% confidence interval:  [np.float64(0.175), np.float64(0.45)]</code></pre>
 </div>
 </div>
 </section></section>
@@ -2387,10 +2387,10 @@ Name: AST, dtype: int64</code></pre>
 </section>
 <section id="probability-of-20-assists-in-a-game" class="slide level2">
 <h2>Probability of &gt;= 20 assists in a game?</h2>
-<div id="f2ccd598" class="cell" data-execution_count="19">
+<div id="2f9609ba" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>))<span class="op">+</span> geom_vline(xintercept<span class="op">=</span><span class="dv">20</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>, size<span class="op">=</span><span class="dv">2</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="84">
-   <div id="pdLAOm"></div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+   <div id="gA4QSN"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2514,7 +2514,7 @@ Name: AST, dtype: int64</code></pre>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("pdLAOm");
+           var plotContainer = document.getElementById("gA4QSN");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2522,7 +2522,7 @@ Name: AST, dtype: int64</code></pre>
    </script>
 </div>
 </div>
-<div id="2cccaeaa" class="cell" data-execution_count="20">
+<div id="181075af" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> statistic(data):</span>
 <span id="cb18-2"><a></a>    <span class="cf">return</span> (data <span class="op">&gt;=</span> <span class="dv">20</span>).mean()</span>
 <span id="cb18-3"><a></a><span class="bu">print</span>(<span class="st">'Fraction of games with &gt;= 20 assists:'</span>, statistic(clark[<span class="st">'AST'</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2595,21 +2595,21 @@ new Runtime().module(define, name => {
 </section>
 <section id="fit-a-distribution" class="slide level2">
 <h2>Fit a distribution</h2>
-<div id="d98cf7ba" class="cell" data-execution_count="21">
+<div id="b3d8409f" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="im">from</span> scipy.stats <span class="im">import</span> poisson</span>
 <span id="cb20-2"><a></a></span>
 <span id="cb20-3"><a></a>lam <span class="op">=</span> clark[<span class="st">'AST'</span>].mean()</span>
 <span id="cb20-4"><a></a>dist <span class="op">=</span> poisson(lam)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>And plot it!</p>
-<div id="e4bdd74a" class="cell" data-execution_count="22">
+<div id="78d3c469" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>x <span class="op">=</span> np.arange(<span class="dv">25</span>)</span>
 <span id="cb21-2"><a></a>y <span class="op">=</span> dist.pmf(x)</span>
 <span id="cb21-3"><a></a>ggplot() <span class="op">+</span> geom_line(data<span class="op">=</span>pd.DataFrame(<span class="bu">dict</span>(x<span class="op">=</span>x, y<span class="op">=</span>y)), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'x'</span>, y<span class="op">=</span><span class="st">'y'</span>))<span class="op">\</span></span>
 <span id="cb21-4"><a></a><span class="op">+</span> geom_histogram(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, y<span class="op">=</span><span class="st">"..density.."</span>), bins<span class="op">=</span><span class="dv">25</span>, alpha<span class="op">=</span><span class="fl">0.05</span>, bw<span class="op">=</span><span class="fl">1.</span>) <span class="op">\</span></span>
 <span id="cb21-5"><a></a><span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">350</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="87">
-   <div id="rHSLq7"></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+   <div id="0M0pJr"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2745,7 +2745,7 @@ new Runtime().module(define, name => {
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("rHSLq7");
+           var plotContainer = document.getElementById("0M0pJr");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2757,7 +2757,7 @@ new Runtime().module(define, name => {
 <section id="compute-our-desired-probability" class="slide level2">
 <h2>Compute our desired probability</h2>
 <p><span class="math display">p(x\geq 20) = 1 - p(x\leq 19) = 1 - cdf(19)</span></p>
-<div id="733d8daf" class="cell" data-execution_count="23">
+<div id="e49dda21" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a><span class="bu">print</span>(<span class="st">'Estimated probability:'</span>, <span class="dv">1</span> <span class="op">-</span> poisson(lam).cdf(<span class="dv">19</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Estimated probability: 0.0004801251376509441</code></pre>
@@ -2771,7 +2771,7 @@ new Runtime().module(define, name => {
 </section>
 <section id="parametric-bootstrap" class="slide level2">
 <h2>Parametric bootstrap</h2>
-<div id="b0c0ea26" class="cell" data-execution_count="24">
+<div id="cf2ecf38" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a><span class="kw">def</span> bootstrap_sample(data):</span>
 <span id="cb24-2"><a></a>    N <span class="op">=</span> <span class="bu">len</span>(data)                      <span class="co"># Number of obsevations</span></span>
 <span id="cb24-3"><a></a>    <span class="cf">return</span> poisson(data.mean()).rvs(N) <span class="co"># Resample from {1,...,N}, N times</span></span>
@@ -2795,7 +2795,7 @@ new Runtime().module(define, name => {
 </section>
 <section id="parametric-bootstrap-1" class="slide level2">
 <h2>Parametric bootstrap</h2>
-<div id="fe2327de" class="cell" data-execution_count="25">
+<div id="2f1341f9" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a><span class="kw">def</span> statistic(data):</span>
 <span id="cb25-2"><a></a>    <span class="cf">return</span> (data <span class="op">&gt;=</span> <span class="dv">10</span>).mean()</span>
 <span id="cb25-3"><a></a></span>
@@ -2805,8 +2805,8 @@ new Runtime().module(define, name => {
 <span id="cb25-7"><a></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>estimates, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">"Simulated fraction"</span>))<span class="op">\</span></span>
 <span id="cb25-8"><a></a><span class="op">+</span> geom_vline(xintercept<span class="op">=</span>lower, color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>)<span class="op">\</span></span>
 <span id="cb25-9"><a></a><span class="op">+</span> geom_vline(xintercept<span class="op">=</span>upper, color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">350</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="90">
-   <div id="1RE39z"></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+   <div id="KhxGAr"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2823,8 +2823,8 @@ new Runtime().module(define, name => {
 "layers":[{
 "geom":"bar",
 "data":{
-"..count..":[5.0,10.0,54.0,115.0,260.0,439.0,700.0,962.0,1145.0,1292.0,1328.0,1162.0,946.0,682.0,431.0,223.0,128.0,77.0,32.0,8.0,1.0],
-"Simulated fraction":[0.1,0.125,0.15,0.175,0.2,0.225,0.25,0.275,0.3,0.325,0.35,0.375,0.4,0.425,0.45,0.475,0.5,0.525,0.55,0.575,0.6]
+"..count..":[1.0,2.0,4.0,10.0,48.0,119.0,243.0,436.0,709.0,947.0,1237.0,1248.0,1307.0,1154.0,943.0,648.0,441.0,266.0,140.0,57.0,24.0,9.0,4.0,2.0,1.0],
+"Simulated fraction":[0.05,0.075,0.1,0.125,0.15,0.175,0.2,0.225,0.25,0.275,0.3,0.325,0.35,0.375,0.4,0.425,0.45,0.475,0.5,0.525,0.55,0.575,0.6,0.625,0.65]
 },
 "mapping":{
 "x":"Simulated fraction"
@@ -2860,7 +2860,7 @@ new Runtime().module(define, name => {
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("1RE39z");
+           var plotContainer = document.getElementById("KhxGAr");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2868,7 +2868,7 @@ new Runtime().module(define, name => {
    </script>
 </div>
 </div>
-<div id="27a664c1" class="cell" data-execution_count="26">
+<div id="f546bf8f" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a><span class="bu">print</span>(<span class="st">'95</span><span class="sc">% c</span><span class="st">onfidence interval: '</span>, [lower, upper])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>95% confidence interval:  [np.float64(0.2), np.float64(0.475)]</code></pre>
@@ -2882,12 +2882,12 @@ new Runtime().module(define, name => {
 </section>
 <section id="non-parametric-bootstrap-for-lambda" class="slide level2">
 <h2>Non-parametric bootstrap for <span class="math inline">\lambda</span></h2>
-<div id="8fc7bd35" class="cell" data-execution_count="28">
+<div id="d4629c3f" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a>estimates, lower, upper <span class="op">=</span> simple_simulation_ci(clark[<span class="st">'AST'</span>], np.mean, <span class="dv">10000</span>)</span>
 <span id="cb28-2"><a></a>estimates <span class="op">=</span> pd.DataFrame({<span class="st">"Simulated Poisson rate MLE"</span>: estimates})</span>
 <span id="cb28-3"><a></a>ggplot() <span class="op">+</span> geom_bar(data<span class="op">=</span>estimates, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">"Simulated Poisson rate MLE"</span>)) <span class="op">+</span> geom_vline(xintercept<span class="op">=</span>lower, color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>) <span class="op">+</span> geom_vline(xintercept<span class="op">=</span>upper, color<span class="op">=</span><span class="st">'red'</span>, linetype<span class="op">=</span><span class="st">'longdash'</span>)  <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">350</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="93">
-   <div id="zy1HxW"></div>
+<div class="cell-output cell-output-display" data-execution_count="28">
+   <div id="owX5E8"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -2904,8 +2904,8 @@ new Runtime().module(define, name => {
 "layers":[{
 "geom":"bar",
 "data":{
-"..count..":[1.0,1.0,1.0,1.0,1.0,1.0,1.0,3.0,1.0,1.0,2.0,4.0,1.0,3.0,3.0,1.0,9.0,3.0,2.0,13.0,5.0,10.0,11.0,8.0,14.0,11.0,11.0,25.0,24.0,28.0,22.0,43.0,25.0,37.0,37.0,51.0,47.0,47.0,49.0,61.0,57.0,65.0,80.0,106.0,96.0,92.0,95.0,93.0,113.0,127.0,137.0,139.0,140.0,146.0,155.0,173.0,163.0,160.0,158.0,169.0,197.0,208.0,201.0,177.0,183.0,188.0,198.0,194.0,203.0,218.0,178.0,188.0,158.0,181.0,182.0,169.0,191.0,188.0,161.0,195.0,158.0,161.0,164.0,160.0,147.0,154.0,148.0,121.0,127.0,110.0,110.0,123.0,91.0,95.0,88.0,84.0,82.0,60.0,70.0,68.0,62.0,69.0,52.0,52.0,54.0,51.0,47.0,37.0,39.0,42.0,38.0,22.0,21.0,26.0,23.0,20.0,28.0,22.0,15.0,13.0,13.0,7.0,12.0,9.0,4.0,3.0,4.0,8.0,6.0,8.0,3.0,5.0,2.0,2.0,2.0,2.0,2.0,2.0,4.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0],
-"Simulated Poisson rate MLE":[6.425,6.625,6.675,6.7,6.775,6.8,6.825,6.85,6.875,6.9,6.925,6.95,6.975,7.0,7.025,7.05,7.075,7.1,7.125,7.15,7.175,7.2,7.225,7.25,7.275,7.3,7.325,7.35,7.375,7.4,7.425,7.45,7.475,7.5,7.525,7.55,7.575,7.6,7.625,7.65,7.675,7.7,7.725,7.75,7.775,7.8,7.825,7.85,7.875,7.9,7.925,7.95,7.975,8.0,8.025,8.05,8.075,8.1,8.125,8.15,8.175,8.2,8.225,8.25,8.275,8.3,8.325,8.35,8.375,8.4,8.425,8.45,8.475,8.5,8.525,8.55,8.575,8.6,8.625,8.65,8.675,8.7,8.725,8.75,8.775,8.8,8.825,8.85,8.875,8.9,8.925,8.95,8.975,9.0,9.025,9.05,9.075,9.1,9.125,9.15,9.175,9.2,9.225,9.25,9.275,9.3,9.325,9.35,9.375,9.4,9.425,9.45,9.475,9.5,9.525,9.55,9.575,9.6,9.625,9.65,9.675,9.7,9.725,9.75,9.775,9.8,9.825,9.85,9.875,9.9,9.925,9.95,9.975,10.0,10.025,10.05,10.075,10.1,10.125,10.2,10.225,10.25,10.35,10.375,10.45,10.5]
+"..count..":[1.0,1.0,1.0,1.0,2.0,3.0,1.0,3.0,7.0,7.0,2.0,4.0,8.0,6.0,10.0,10.0,12.0,9.0,17.0,15.0,15.0,8.0,15.0,23.0,19.0,40.0,27.0,36.0,33.0,42.0,48.0,43.0,44.0,58.0,52.0,64.0,68.0,64.0,80.0,89.0,94.0,98.0,114.0,108.0,106.0,117.0,142.0,120.0,174.0,137.0,157.0,174.0,160.0,160.0,166.0,177.0,177.0,225.0,198.0,184.0,189.0,226.0,192.0,184.0,172.0,196.0,210.0,191.0,182.0,194.0,202.0,210.0,176.0,169.0,197.0,170.0,168.0,168.0,172.0,146.0,152.0,123.0,131.0,146.0,136.0,89.0,121.0,91.0,96.0,106.0,84.0,77.0,73.0,71.0,70.0,55.0,70.0,51.0,48.0,48.0,32.0,34.0,42.0,43.0,33.0,34.0,30.0,24.0,21.0,13.0,19.0,16.0,11.0,9.0,14.0,8.0,15.0,6.0,8.0,9.0,8.0,4.0,6.0,3.0,3.0,4.0,4.0,3.0,1.0,2.0,1.0,1.0,3.0,3.0,1.0,1.0,1.0,1.0,1.0],
+"Simulated Poisson rate MLE":[6.6,6.7,6.8,6.825,6.9,6.925,6.95,6.975,7.0,7.025,7.05,7.075,7.1,7.125,7.15,7.175,7.2,7.225,7.25,7.275,7.3,7.325,7.35,7.375,7.4,7.425,7.45,7.475,7.5,7.525,7.55,7.575,7.6,7.625,7.65,7.675,7.7,7.725,7.75,7.775,7.8,7.825,7.85,7.875,7.9,7.925,7.95,7.975,8.0,8.025,8.05,8.075,8.1,8.125,8.15,8.175,8.2,8.225,8.25,8.275,8.3,8.325,8.35,8.375,8.4,8.425,8.45,8.475,8.5,8.525,8.55,8.575,8.6,8.625,8.65,8.675,8.7,8.725,8.75,8.775,8.8,8.825,8.85,8.875,8.9,8.925,8.95,8.975,9.0,9.025,9.05,9.075,9.1,9.125,9.15,9.175,9.2,9.225,9.25,9.275,9.3,9.325,9.35,9.375,9.4,9.425,9.45,9.475,9.5,9.525,9.55,9.575,9.6,9.625,9.65,9.675,9.7,9.725,9.75,9.775,9.8,9.825,9.85,9.875,9.9,9.925,9.95,9.975,10.0,10.025,10.05,10.1,10.125,10.175,10.2,10.325,10.35,10.575,10.775]
 },
 "mapping":{
 "x":"Simulated Poisson rate MLE"
@@ -2933,7 +2933,7 @@ new Runtime().module(define, name => {
 },
 "data_meta":{
 },
-"xintercept":9.5,
+"xintercept":9.45,
 "color":"red",
 "linetype":"longdash",
 "data":{
@@ -2941,7 +2941,7 @@ new Runtime().module(define, name => {
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("zy1HxW");
+           var plotContainer = document.getElementById("owX5E8");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -2957,10 +2957,10 @@ new Runtime().module(define, name => {
 </section>
 <section id="not-great" class="slide level2">
 <h2>Not great!</h2>
-<div id="48d82bb6" class="cell" data-execution_count="29">
+<div id="927b2bbd" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a>ggplot() <span class="op">+</span> geom_line(data<span class="op">=</span>pd.DataFrame(<span class="bu">dict</span>(x<span class="op">=</span>x, y<span class="op">=</span>y)), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'x'</span>, y<span class="op">=</span><span class="st">'y'</span>)) <span class="op">+</span> geom_histogram(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'AST'</span>, y<span class="op">=</span><span class="st">"..density.."</span>), bins<span class="op">=</span><span class="dv">25</span>, alpha<span class="op">=</span><span class="fl">0.05</span>, bw<span class="op">=</span><span class="fl">1.</span>) <span class="op">+</span> ggsize(<span class="dv">1000</span>, <span class="dv">350</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="94">
-   <div id="UyWuAZ"></div>
+<div class="cell-output cell-output-display" data-execution_count="29">
+   <div id="dRom37"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3096,7 +3096,7 @@ new Runtime().module(define, name => {
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("UyWuAZ");
+           var plotContainer = document.getElementById("dRom37");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3174,7 +3174,7 @@ new Runtime().module(define, name => {
 </section>
 <section id="using-the-statsmodel-package" class="slide level2">
 <h2>Using the <code>statsmodel</code> package</h2>
-<div id="4a903072" class="cell" data-execution_count="30">
+<div id="6e3d9e0c" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a></a><span class="im">from</span> scipy.stats <span class="im">import</span> nbinom</span>
 <span id="cb30-2"><a></a><span class="im">from</span> statsmodels.discrete.discrete_model <span class="im">import</span> NegativeBinomial</span>
 <span id="cb30-3"><a></a></span>
@@ -3190,9 +3190,9 @@ new Runtime().module(define, name => {
 r and p for MLE neg. binomial: (array([35.41071048]), array([0.8078051]))</code></pre>
 </div>
 </div>
-<div id="6275dab7" class="cell" data-execution_count="31">
-<div class="cell-output cell-output-display" data-execution_count="96">
-   <div id="WogOyy"></div>
+<div id="6355aa02" class="cell" data-execution_count="31">
+<div class="cell-output cell-output-display" data-execution_count="31">
+   <div id="4mrRUg"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -3328,7 +3328,7 @@ r and p for MLE neg. binomial: (array([35.41071048]), array([0.8078051]))</code>
 }],
 "metainfo_list":[]
 };
-           var plotContainer = document.getElementById("WogOyy");
+           var plotContainer = document.getElementById("4mrRUg");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
@@ -3339,7 +3339,7 @@ r and p for MLE neg. binomial: (array([35.41071048]), array([0.8078051]))</code>
 </section>
 <section id="computing-probability-of-20-assists" class="slide level2">
 <h2>Computing probability of &gt;= 20 assists</h2>
-<div id="b5603661" class="cell" data-execution_count="32">
+<div id="86fb0635" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a>prob <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> dist.cdf(<span class="dv">19</span>)</span>
 <span id="cb32-2"><a></a><span class="bu">print</span>(<span class="st">'Est. probability of &gt;= 20 assists'</span>, prob)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3349,7 +3349,7 @@ r and p for MLE neg. binomial: (array([35.41071048]), array([0.8078051]))</code>
 </section>
 <section id="comparing-likelihood-with-poisson-model" class="slide level2">
 <h2>Comparing likelihood with Poisson model</h2>
-<div id="cfb52ba6" class="cell" data-execution_count="33">
+<div id="9016545c" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a>nbinom_llik <span class="op">=</span> dist.logpmf(clark[<span class="st">'AST'</span>]).<span class="bu">sum</span>()</span>
 <span id="cb34-2"><a></a>poisson_llik <span class="op">=</span> poisson(lam).logpmf(clark[<span class="st">'AST'</span>]).<span class="bu">sum</span>()</span>
 <span id="cb34-3"><a></a><span class="bu">print</span>(<span class="st">'Neg. Binomial lik: </span><span class="sc">%.4f</span><span class="st">, Poisson lik: </span><span class="sc">%.4f</span><span class="st">'</span> <span class="op">%</span> (nbinom_llik, poisson_llik))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

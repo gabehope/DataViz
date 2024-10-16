@@ -1,0 +1,355 @@
+---
+title: "Data Analytics and Visualization"
+subtitle: "2-0: Data frames"
+author: "Prof. Gabe Hope"
+format: 
+    revealjs:
+        theme: ["../../../../theme.scss"]
+        html-math-method: katex
+        slideNumber: true
+---
+
+# Conditional models continued
+
+## Estimating binary variables
+
+**Estimate:** $p(y\mid x)$
+
+#### Assuming: 
+- $y$ is a **binary categorical vairable**, $y \in \{0, 1\}$
+- $x$ is a (real or integer) **quantitative** variable $x \in \mathbb{R}$.
+
+Recall: 
+
+- We call $x$ the **independent variable**
+- We call $y$ the **dependent variable**
+
+## Estimating binary variables
+
+**Estimate:** $p(y\mid x)$
+
+#### Assuming: 
+- $y$ is a **binary categorical vairable**, $y \in \{0, 1\}$
+- $x$ is a (real or integer) **quantitative** variable $x \in \mathbb{R}$.
+
+Estimate using our observed data with $N$ observations:
+$$\{(x_1, y_1), (x_2, y_2),...,(x_N, y_N)\}$$
+
+
+## Estimating binary variables
+
+**Estimate:** $p(y\mid x)$
+
+#### Assuming: 
+- $y$ is a **binary categorical vairable**, $y \in \{0, 1\}$
+- $x$ is a (real or integer) **quantitative** variable $x \in \mathbb{R}$.
+
+Sufficient to estimate $p(y=1 \mid x)$
+
+- Since $p(y=0 \mid x) = 1 - p(y=1 \mid x)$
+
+**Note:** $p(y=0 \mid x)$ is a shorthand to stand in for the more rigorous
+
+$$p( Y=1 \mid X=x )$$
+
+## Approach 1: Use **Bayes' Rule**
+
+$$p(y \mid x ) = \frac{p(x \mid y) p(y)}{p(x)} = \frac{p(x \mid y) p(y)}{\sum_y p(x\mid y)p(y)} $$
+
+In the binary case, $y\in \{0, 1\}$ this becomes:
+$$p(y=1 \mid x ) = \frac{p(x \mid y=1 ) p(y=1)}{p(x \mid y =1 ) p(y = 1) + p(x \mid y =0 ) p(y = 0)}$$
+
+We need to estimate 3 distributions: 
+$$p(x \mid y=1)\quad p(x \mid y=0)\quad p(y)$$ 
+
+## Approach 1: Use **Bayes' Rule**
+
+Estimating $p(x\mid y=1)$ (or $p(x\mid y=0)$ )
+
+Choose a reasonable distribution and fit with maximum likelihood over observations where $y=1$. 
+
+## Approach 2: Use **Logistic Regression**
+
+#### **Assume** $p(y=1 \mid x )$ changes predictably as $x$ increases.
+
+Ideally $p(y=1 \mid x )$ would change by a fixed amount: $a$
+$$\textcolor{red}{p(y=1 \mid x ) = ax + b}$$ 
+
+**But** we need $p(y=1 \mid x ) \in [0, 1]$, so we apply a function $\sigma(\cdot)$ that maps $\mathbb{R} \rightarrow [0,1]$
+
+$$p(y=1 \mid x ) = \sigma(ax + b)$$
+
+$$\sigma(x) = \frac{e^x}{1+e^x}$$
+
+## Approach 2: Use **Logistic Regression**
+$$p(y=1 \mid x ) = \sigma(ax + b)$$
+
+The **parameters** $a, b$ can be fit with *maximum likelihood*!
+
+$$\underset{a,b}{\text{argmax}} \sum_{i=1}^N \log p(y_i \mid x_i )$$
+
+Note that we need to rely on an algorithm to find these parameters as we did for mixture models.
+
+# Differences between approaches
+
+# Mulitple independent variables
+
+## Bayesian model with 2 variables
+
+**Estimate:** $p(y\mid x, z)$
+
+$$p(y \mid x ) = \frac{p(x, z \mid y) p(y)}{p(x, z)} = \frac{p(x, z \mid y) p(y)}{\sum_y p(x, z\mid y)p(y)} $$
+
+In the binary case, $y\in \{0, 1\}$ this becomes:
+$$p(y=1 \mid x, z) = \frac{p(x, z \mid y=1 ) p(y=1)}{p(x, z \mid y =1 ) p(y = 1) + p(x, z \mid y =0 ) p(y = 0)}$$
+
+We need to estimate 3 distributions: 
+$$p(x, z \mid y=1)\quad p(x, z \mid y=0)\quad p(y)$$ 
+
+## Bayesian model with 2 variables
+
+Estimating $p(x, z \mid y=1)$ (or $p(x, z\mid y=0)$ )
+
+We haven't talked about *joint* distributions over quantitative variables! 
+
+We **can** make a simplifying assumption: **conditional independence**!
+
+#### Assume:
+$$p(x,z\mid y) = p(x\mid y)p(z \mid y)$$
+
+This is called the **Naive Bayes** assumption in this context.
+
+Now we just need to estimate 4 distributions as before:
+
+$$p(x \mid y=1)\quad p(z \mid y=1) \quad p(x \mid y=0) \quad  p(z \mid y=0)$$
+
+**Note:** $x$ or $z$ could also be categorical!
+
+## Bayesian model with many variables
+
+We can generalize to a dataset with many ($D$) variables:
+
+$$(y_1, x_{11},...,x_{1D}), (y_2, x_{21},...,x_{2D}),...,(y_N, x_{N1},...,x_{ND})$$
+
+We'll simply take a product
+
+$p(y=1 \mid x_{1},...,x_{D} ) =$
+$$\frac{p(y=1) \prod_{d=1}^D p(x_d\mid y=1)}{p(y=1) \prod_{d=1}^D p(x_d\mid y=1) + p(y=0) \prod_{d=1}^D p(x_d\mid y=0) } $$
+
+## Logistic regression with multiple variables
+
+For logistic regression we can extend our function to 2 variables
+$$p(y=1 \mid x, z ) = \sigma(a_1x + a_2z + b)$$
+
+Or even $D$ variables
+
+$$p(y=1 \mid x_1,...,x_D ) = \sigma\left(\sum_{d=1}^D a_dx_d + b\right)$$
+
+By simply adding more parameters!
+
+## Logistic regression with categorical variables
+
+We saw that our Bayesian model could handle cases where $z$ is **categorical**, e.g.:
+
+$$z \in \{red, green, blue\}$$
+
+#### Can logistic regression?
+
+$$p(y=1 \mid x, z ) = \sigma(a_1x + a_2z + b)$$
+
+## Logistic regression with categorical variables
+$$\textcolor{red}{p(y=1 \mid x, z ) = \sigma(a_1x + a_2z + b)}$$
+
+We could create a new variable $\hat{z}$ that maps $z$ to quantitative numbers:
+
+$$\hat{z} = \begin{cases} 0 \text{ if } z=red \\  1 \text{ if } z=green \\  2 \text{ if } z=red  \end{cases}$$
+
+$$p(y=1 \mid x, z ) = \sigma(a_1x + a_2\hat{z} + b)$$
+
+#### What's wrong with this?
+
+## Logistic regression with categorical variables
+
+**Better approach:** map $z$ to *multiple variables*
+
+$$\hat{z}^{(red)} = I(z=red)$$ 
+$$\hat{z}^{(green)} = I(z=green)$$ 
+$$ \hat{z}^{(blue)} = I(z=blue)$$
+
+Here we are creating 3 new *computed* variables to use:
+$$p(y=1 \mid x, z ) = \sigma(a_1x + a_2 \hat{z}^{(red)} + a_3\hat{z}^{(green)}  + a_4 \hat{z}^{(blue)}+ b)$$
+
+## Multiple categorical indpendent variables
+
+Naive Bayes and logistic regression models can be a good choice even if all our independent variables are categorical!
+
+Say we have $D$ independent variable each taking $K$ values. $y$ takes $C$ values. 
+
+#### Direct model
+
+- $p(y\mid x_1,...,x_D)$: $CD^K$ probabilities to estimate!
+
+#### Bayesian or logistic regression model
+
+- $p(y\mid x_1,...,x_D)$: $CDK$ probabilities to estimate!
+
+# Mulitple dependent values
+
+## Approach 1: Use **Bayes' Rule**
+
+$$p(y \mid x ) = \frac{p(x \mid y) p(y)}{p(x)} = \frac{p(x \mid y) p(y)}{\sum_y p(x\mid y)p(y)} $$
+
+In the **non-binary** case, $y\in \{1, ..., C\}$ this becomes:
+$$p(y=c \mid x ) = \frac{p(x \mid y=c ) p(y=c)}{\sum_{k=1}^C p(x \mid y =k ) p(y = k)}$$
+
+We need to estimate $C+1$ distributions: 
+$$p(x \mid y=1),...,p(x \mid y=C)\quad p(y)$$ 
+
+## Bayesian model with many variables
+
+We can again generalize to a dataset with many ($D$) variables:
+
+$$(y_1, x_{11},...,x_{1D}), (y_2, x_{21},...,x_{2D}),...,(y_N, x_{N1},...,x_{ND})$$
+
+Using the **Naive Bayes** assumption:
+
+$$p(x_1,...,x_D\mid y) = \prod_{d=1}^D p(x_d\mid y)$$
+
+Therefore our general model needs to estimate $CD + 1$ distributions:
+
+$$p(y=c \mid x_{1},...,x_{D} ) = \frac{p(y=c) \prod_{d=1}^D p(x_d\mid y=c)}{\sum_{k=1}^C p(y=k) \prod_{d=1}^D p(x_d\mid y=k)  } $$
+
+## Approach 2: Use **Logistic Regression**
+
+In the **non-binary** case, $y\in \{1, ..., C\}$:
+
+#### **Assume** $p(y=c \mid x )$ changes predictably as $x$ increases.
+
+Ideally $p(y=c \mid x )$ would change by a fixed amount: $a_c$
+$$\textcolor{red}{p(y=c\mid x ) = a_cx + b_c}$$ 
+
+We have $C$ different functions, one for each possible outcome.
+
+**But** we need:
+$$\sum_{c=1}^C p(y=c \mid x ) = 1, \quad p(y=c \mid x ) \geq 0 $$
+
+## Approach 2: Use **Logistic Regression**
+
+Again apply function to force that we have the correct properties
+$$p(y=c\mid x ) = \frac{e^{a_cx + b_c}}{\sum_{k=1}^C e^{a_kx + b_k}}$$ 
+
+#### 2 Steps:
+
+- $e^x$ is always $> 0$
+- Dividing by the sum $\frac{x_c}{\sum_k x_k}$ ensures $\sum_{c=1}^C p(y=c \mid x ) = 1$
+
+Extensions to multiple independent variables still apply!
+
+# Ordinal regression
+
+## Ordinal regression
+
+What if our dependent variable is **ordinal** instead of categorical? 
+$$y\in \{1, ..., C\}, \quad 1 < 2 < ... < C$$
+
+So the *order* of values is meaningful! **But distance is not!**
+
+#### Option 1: We could just treat it as Categorical
+
+- Use the same logistic regression approach as before.
+- Why is this an issue?
+
+## Ordinal regression
+
+Let's consider a different way of framing non-binary logistic regression:
+
+$$p(y\leq 1 \mid x) = \sigma(a x + b_1)$$
+$$p(y\leq 2 \mid x) = \sigma(a x + b_2)$$
+$$\vdots$$
+$$p(y\leq C-1 \mid x) = \sigma(a x + b_{C-1})$$
+$$p(y\leq C \mid x) = 1$$
+
+$b_1 < b_2 < ... < b_{C-1}$
+
+Then $p(y=c \mid x) = p(y \leq c \mid x) - p(y\leq c-1 \mid x)$
+
+**Why is this valid?**
+
+## Ordinal regression
+
+
+# Quantitative Conditional models
+
+
+## Estimating Quantitative variables
+
+Let's consider the final case
+
+**Estimate:** $p(y\mid x)$
+
+#### Assuming: 
+- $y$ is a **quantitative vairable**
+- $x$ is a (real or integer) **quantitative** variable $x \in \mathbb{R}$.
+
+#### This could encompass different scenerios
+
+- $y$ is an unbounded real number $y\in \mathbb{R}$
+- $y$ is a bounded real number e.g. $y\in [0, \infty)$ or $y\in [0, 1]$
+- $y$ is a bounded integer e.g. $y \in \{0, 1, 2, 3,...\}$
+
+## Bayes rule?
+
+$$p(y \mid x ) = \frac{p(x \mid y) p(y)}{p(x)} = \frac{p(x \mid y) p(y)}{\sum_y p(x\mid y)p(y)} $$
+
+**$y$ could still take infinitely many values!**
+
+## Linear regression
+
+#### Assume a **Normal distribution**: 
+
+$$p(y\mid x) = \mathcal{N}(ax + b, 1)$$
+
+For a given change in $x$ the mean changes by a factor of $a$.
+
+#### Maximum likelihood
+
+$$\underset{a, b}{\text{argmax}} \sum_{i=1}^N \log p(y_i\mid x_i)$$
+$$=\sum_{i=1}^N \log \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}(ax_i + b - y_i) ^2} = \sum_{i=1}^N -\frac{1}{2} (ax_i + b - y_i) ^2 + Cst.$$
+
+## Linear regression
+
+Extends to $D$ independent variables as with logistic regression
+
+$$p(y\mid x) = \mathcal{N}\left(\sum_{d=1}^D a_d x_d + b, 1\right)$$
+
+## Linear regression
+
+$$p(y\mid x) = \mathcal{N}\left(\sum_{d=1}^D a_d x_d + b, \bar{\sigma}\right)$$
+
+Can also fit the standard deviation to data with maximum likelihood:
+
+$$\bar{\sigma}= \sqrt{\frac{1}{N} \sum_{i=1}^N \left(y_i - \sum_{d=1}^D a_d x_{id} + b\right)^2 }$$
+
+## Generalizing
+
+Both linear and logistic regression take the following form:
+
+- **Choose a distribution for $p(y\mid x)$**
+
+- **Assume a parameter of the distribution will be a linear function of $x$**
+  
+- **If needed use another function to map into valid values**
+
+::::: columns
+::: {.column}
+#### Logistic regression
+:::
+::: {.column}
+#### Linear regression
+
+
+:::
+:::::
+
+- Normal for linear regression, Bernoulli/categorical for logistic
+  - $ax + b$ (or $\sum_{d=1}^D a_d x_d +b$ for more variables)

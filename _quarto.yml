@@ -24,6 +24,8 @@ website:
             text: Software & tools
           - href: resources/datasets.qmd
             text: Datasets
+          - href: https://github.com/gabehope/DataViz-Homework-Template
+            text: Homework template
       - text: Links
         menu:
           - href: https://harveymuddcollege.instructure.com/courses/1728

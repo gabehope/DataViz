@@ -1,0 +1,449 @@
+---
+title: "Data Analytics and Visualization"
+subtitle: "2-4: Javascript and Observable"
+author: "Prof. Gabe Hope"
+format: 
+    revealjs:
+        theme: ["../../../../theme.scss"]
+        html-math-method: katex
+        slideNumber: true
+---
+
+# From ggplot to ObservablePlot
+
+## Penguins!
+
+```{python}
+#| echo: true
+import pandas as pd
+import seaborn as sns
+penguins = sns.load_dataset('penguins')
+ojs_define(data=penguins)
+```
+
+## In Javascript
+
+Columns format:
+
+```{ojs}
+//| echo: true
+data
+```
+
+
+Records format:
+```{ojs}
+//| echo: true
+penguins = transpose(data)
+penguins
+```
+
+## Making a plot
+
+```{ojs}
+//| echo: true
+Plot.plot({
+  'marks': [
+    Plot.dot(penguins, {'x': "bill_length_mm", 'y': "bill_depth_mm", 'stroke': "species"})
+  ]
+})
+```
+
+## Making a plot
+
+```{ojs}
+//| echo: true
+//| code-line-numbers: "1"
+Plot.plot({ // Dictionary (object) keys don't need to be strings
+  marks: [ 
+    Plot.dot(penguins, {x: "bill_length_mm", y: "bill_depth_mm", stroke: "species"})
+  ]
+})
+```
+
+## Making a plot
+
+`Plot.plot` creates a new plot (like `ggplot()`). 
+
+- Rather than adding to it, we'll pass a dictionary (Javascript object) that contains all the components of our grammar. 
+
+```{ojs}
+//| echo: true
+//| code-line-numbers: "1"
+Plot.plot({ height: 300,
+  marks: [ 
+    Plot.dot(penguins, {x: "bill_length_mm", y: "bill_depth_mm", stroke: "species"})
+  ]
+})
+```
+
+## Components of the grammar of graphics
+
+**Stretching the metaphor:** The *parts of speech* for our visual language
+
+::::: columns
+::: {.column width="50%"}
+- Data
+- Aesthetic mappings
+- Geometries
+- Transforms
+:::
+
+::: {.column width="50%"}
+- Scales
+- Coordinate systems
+- Faceting systems
+- Annotations
+:::
+:::::
+
+## Components: Data
+
+Data in a tidy (records) format:
+
+```{ojs}
+//| echo: true
+penguins
+```
+
+## Components: Aesthetic mappings
+
+Here our aesthetic mapping is defined as a dictionary (object)
+```{python}
+#| echo: true
+#| eval: false
+{x: "bill_length_mm", y: "bill_depth_mm", stroke: "species"}
+```
+
+Full code
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300,
+  marks: [ 
+    Plot.dot(penguins, {x: "bill_length_mm", y: "bill_depth_mm", stroke: "species"})
+  ]
+})
+```
+
+## Components: Aesthetic mappings
+
+We can assign constant values in the same dictionary 
+
+Full code
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300,
+  marks: [ 
+    Plot.dot(penguins, {x: "bill_length_mm", y: "bill_depth_mm", stroke: "lightgrey"})
+  ]
+})
+```
+
+## Components: Geometries   
+
+Like ggplot, our choice of geometry is defined via a function
+```{python}
+#| echo: true
+#| eval: false
+Plot.dot(...)
+```
+::: {style="font-size: 60%"}
+*`Plot.dot` is equivalent to `geom_point`*
+:::
+
+Full code
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300,
+  marks: [ 
+    Plot.dot(penguins, {x: "bill_length_mm", y: "bill_depth_mm", stroke: "species"})
+  ]
+})
+```
+
+## Layers
+
+The geometry plus data and aesthetic mapping forms a **layer**
+```{python}
+#| echo: true
+#| eval: false
+Plot.dot(penguins, {x: "bill_length_mm", y: "bill_depth_mm", stroke: "species"})
+```
+::: {style="font-size: 60%"}
+*`Plot.dot` is equivalent to `geom_point`*
+:::
+
+Full code
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300,
+  marks: [ 
+    Plot.dot(penguins, {x: "bill_length_mm", y: "bill_depth_mm", stroke: "species"})
+  ]
+})
+```
+
+## Layers
+
+A plot can have multiple layers (passed as a list under `marks`)
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300,
+  marks: [ 
+    Plot.dot(penguins, {x: "bill_length_mm", y: "bill_depth_mm", stroke: "lightgrey"}),
+    Plot.dot(penguins.filter((d) => d.species == 'Gentoo'), 
+        {x: "bill_length_mm", y: "bill_depth_mm", stroke: "species"}
+    ),
+    Plot.ruleX([45]) // Equivalent of geom_vline()
+  ]
+})
+```
+
+## Filtering
+
+```{ojs}
+//| echo: true
+penguins.filter((d) => d.species == 'Gentoo')
+```
+
+The input to the `filter` method is an *anonymous function* in javascript. It's equivalent in Python would be:
+
+```{python}
+#| eval: false
+#| echo: true
+lambda d: d['species'] == 'Gentoo'
+```
+
+`filter` takes all entries where the function returns `true`. 
+- Like pandas' `query`
+
+## Components: Scales   
+
+Like ggplot, scales are shared across layers.
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300,
+  x: {domain: [20, 80]},     // Domain is limits in ggplot
+  color: {scheme: 'Accent'}, // Scheme changes the color scheme
+  marks: [ 
+    Plot.dot(penguins, {x: "bill_length_mm", y: "bill_depth_mm", stroke: "species"})
+  ]
+})
+```
+
+## Components: Coordinate systems   
+
+Called **projections** in observable plot (a bit more complicated)
+
+## Components: Facets   
+
+Facets are specified per-layer with `fx`/`fy`
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 1200,
+  marks: [ 
+    Plot.dot(penguins,
+     {x: "bill_length_mm", y: "bill_depth_mm", stroke: "species", 
+     fx: "island"
+     })
+  ]
+})
+```
+
+## Components: Facets   
+
+Layers without a facet specified are replicated. 
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 1200,
+  marks: [ 
+    Plot.dot(penguins, {x: "bill_length_mm", y: "bill_depth_mm", stroke: "lightgrey"}),
+    Plot.dot(penguins, 
+    {x: "bill_length_mm", y: "bill_depth_mm", stroke: "species", 
+    fx: "island"
+    })
+  ]
+})
+```
+
+## Components: Transforms   
+
+Transforms create new computed aesthetic mappings and usually have the form:
+
+```{python}
+#| eval: false
+#| echo: true
+Plot.bin({transform options}, {aesthetic mappings})
+```
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 600,
+  color: {scheme: 'BuRd', type: 'linear'},
+  marks: [ 
+    Plot.rect(penguins,
+    Plot.bin({fill: "count"}, {x: "bill_length_mm", y: "bill_depth_mm"})
+    )
+  ]
+})
+```
+
+## Components: Transforms   
+
+The transform object defines how to compute new aesthetic mappings from the data.
+
+```{ojs}
+//| echo: true
+Plot.bin({fill: "count"}, {x: "bill_length_mm", y: "bill_depth_mm"})
+```
+
+
+## Components: Transforms   
+
+The hexbin transform works with the `dot` geometry.
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 600,
+  color: {scheme: 'BuRd', type: 'linear'},
+  marks: [ 
+    Plot.dot(penguins,
+    Plot.hexbin({fill: "count"}, {x: "bill_length_mm", y: "bill_depth_mm"})
+    )
+  ]
+})
+```
+
+## Components: Transforms   
+
+Our 2-d histogram doesn't need to be defined via color.
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 600,
+  marks: [ 
+    Plot.dot(penguins,
+    Plot.hexbin({r: "count"}, {x: "bill_length_mm", y: "bill_depth_mm"})
+    )
+  ]
+})
+```
+
+
+
+## Components: Transforms   
+
+We can create a 1-d histrogram by binning just the x coordinate with `binX`. The geometry `rectY` corresponds to bars.
+
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 600,
+  marks: [ 
+    Plot.rectY(penguins,
+        Plot.binX({y: "count"}, {x: "bill_length_mm"})
+    )
+  ]
+})
+```
+
+## Components: Transforms   
+
+The `dodge` transform ensures that points don't overlap (here by moving up the y axis).
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 600,
+  marks: [ 
+    Plot.dot(penguins,
+        Plot.dodgeY({x: "bill_length_mm"})
+    )
+  ]
+})
+```
+
+## Components: Transforms   
+
+The `sort` transform sorts observations by some column. Here we'll compose it with the `dodge` transform.
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 600,
+  marks: [ 
+    Plot.dot(penguins,
+        Plot.dodgeY(Plot.sort("bill_length_mm", {x: "bill_length_mm"}))
+    )
+  ]
+})
+```
+
+## Components: Annotations   
+Annotations can be created by specifying other options like `title`
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 600,
+  title: "Penguins!",
+  marks: [ 
+    Plot.rectY(penguins,
+        Plot.binX({y: "count"}, {x: "bill_length_mm"})
+    )
+  ]
+})
+```
+
+## Components: Annotations   
+An extremely important annotation is a legend. Defined per scale.
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 1200,
+  color: {legend: true},
+  marks: [ 
+    Plot.dot(penguins,
+     {x: "bill_length_mm", y: "bill_depth_mm", stroke: "species"})
+  ]
+})
+```
+
+## Other plots
+
+A density plot can be computed with the `density` geometry
+```{ojs}
+//| echo: true
+Plot.plot({
+  marks: [
+    Plot.density(penguins, {x: "bill_length_mm", y: "bill_depth_mm",}),
+    Plot.dot(penguins, {x: "bill_length_mm", y: "bill_depth_mm", stroke: "species"})
+  ]
+})
+```
+
+## Let's try it out!
+
+An [observable notebook](https://observablehq.com/d/cf37ed064de497f1)
+
+## Components: **Interactions**
+`Inputs` allow for values that the user controls.
+
+```{ojs}
+//| echo: true
+viewof bins = Inputs.range([0, 100], {step: 1})
+```
+When this values changes the plot changes!
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 600,
+  marks: [ 
+    Plot.rectY(penguins,
+        Plot.binX({y: "count", thresholds: bins}, {x: "bill_length_mm"})
+    )
+  ]
+})
+```

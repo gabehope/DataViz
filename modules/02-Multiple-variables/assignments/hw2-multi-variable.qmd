@@ -19,10 +19,10 @@ format: html
 # Logistics
 
 ## Timeline
-- **Friday, September XX 11:59pm** Create a gradescope submission for your assignment with all group members.
-- **Thursday, September XX 11:59pm** Submit your final assignment on Gradescope
-- **Friday, September XX 11:59pm** Submit your reflections on Gradescope.
-- **Thursday, September XX 11:59pm** Submit your peer feedback on Gradescope.
+- **Friday, October 18 11:59pm** Create a gradescope submission for your assignment with all group members.
+- **Friday, October 25 11:59pm** Submit your final assignment on Gradescope
+- **Friday, October 25 11:59pm** Submit your reflections on Gradescope.
+- **Tuesday, October 29 11:59pm** Submit your peer feedback on Gradescope.
 
 ## Groups
 This assignment **must** be completed in groups of 2-3 students. You are free to switch groups from previous assignments if you'd like. The instructor reserves the right to add students to a group as needed.
@@ -31,26 +31,25 @@ Once you have chosen your group, please create a submission on Gradescope with a
 
 # Assignment
 
-**Goal:** As in the first assignment, your goal is to choose a public dataset and put yourselves in the shoes of the someone who collected this data; show why it is interesting and what can be learned from it! This time however, you will aim to show that there are meaningful relationships *between* the variables in your dataset. You'll use the multi-variable analysis and visualization techniques that we've learned in class to make your case.
+**Goal:** In this assignment, you'll put yourselves in the shoes of a *data journalist* (perhaps working somewhere like FiveThirtyEight or the Upshot). Your goal is to create some eye-catching, informative visualizations that will entice readers to your site (while also educating them!) and justify the descisions you made in creating these visualizations to convince your editor to put them on the front page. You'll use the *multi-variable* analysis and visualization techniques that we've learned in class to make your case.
 
 To start, choose a public dataset **as a group**. You're welcome to continue using the same dataset from the previous assignment or to choose a new one. Your chosen dataset should have a **minimum of 3-5 variables** including **at least one nominal variable** and **at least 2 ordinal or continuous variables**. If your dataset does not have enough varibles for your analysis of interest, you may **join** 2 or more datasets as discussed in class.  
 
-**Each member** of your team should create a visualization using two or more variables that illustrates some interesting structure of the data. **Each visualization should be a distinct** both in terms of the variables being shown *and* the visualization techniques used. At least one visualization should encode **3 or more variables** (including at least one nominal variable) and at least one visualization should involve **grouping/aggregating** the data in some way. Your visualizations may focus on illustrating the results of your analysis (as described below), you may also include additional visualization for this purpose.
+**Each member** of your team should create at least one visualization using two or more variables that illustrates some interesting structure of the data. **Each visualization should be a distinct** both in terms of the variables being shown *and* the visualization techniques used. At least one visualization should encode **3 or more variables** (including at least one nominal variable) and at least one visualization should involve **grouping/aggregating** the data in some way.
 
 :::{.callout-note}
 There may be overlap in the variables and/or techniques used across plots, as long as there is some noteable distinction in each case. For example, it is *not* sufficient to produce 2-3 scatterplots of different pairs of variables, nor is it sufficient to simply plot the same (untransformed) variables as a scatterplot and a density plot.
 :::
 
-**For each group member** perform a multivariate analysis that illustrates something about the data using two or more variables in the dataset. This analysis could be exploratory, or could attempt to test your assumptions about the data. Some example forms this could take are:
+In designing your visualizations, you should focus on the following qualities from the visualization rubric:
 
-- **Summarization:** query, filter, transform and/or group the data to produce descriptive statistics of some subpopulations of interest. Compare and contrast these results.
-- **Conditional modeling:** create a univariate model of some variable *conditioned* on the value of one or more other variables and predict the likelihood of a future outcome.
-- **Multiple-sample hypothesis testing:** consider two subpopulations of the data (i.e. by grouping or filtering) and test a hypothesis about their relationship (e.g. are the population means equal?).
-- **Correlation analysis:**  Examine the correlation between variables in the data (or subpopulations). Determine which variables are most strongly correlated.
+- **Motivation:** Does my visualization reveal something non-obvious about my data? Would a reader find it interesting or exciting?
+- **Completeness:** Does my visualization show the most important and/or relevant relationships between variables in my dataset? Does my visualization leave out any factors that might help further explain the information shown?
+- **Interpretability:** What kinds of questions could a reader answer using my visualization? How difficult would it be to parse the answers to these questions from the visualization?
+- **Aesthetics:** Is my visualization eye-catching and aesthetically pleasing? Does it appropriately convey any emotion that I'd like my reader to take from it?
+- **Acessibility:** Is my visualization acessable? It it clear, easy to read, even for readers with visual impairments?
 
-In all cases your analysis should aim to lead to a useful, exciting or surprising conclusion about the data.
-
-**Submit a 1-3 page (including figures) report** about you dataset that includes your visualizations and the results of your analysis. Your report should be written for a general audience who you think should be interested in this data. This could be researchers, policy-makers or the general public; anyone whose descisions may be influenced by your findings. This means you should first motivate *why* your chosen dataset is interesting/exciting/important. Then explain what your visualizations show about the data. Finally discuss what your analysis shows and why it is exciting, intuitive or surprising. You do *not* need to include the details of your calculations, but it should be clear what assumptions are being made for each model and how reasonable these assumptions are.
+**Submit a 1-3 page (including figures) report** about your visualizations. Your report should be written for a someone (like a data journalism editor) with knowledge of data analytics and visualization, to convince them of the merits of your visualizations. This means, as in the first assignment, you should first motivate *why* your chosen dataset is interesting/exciting/important. Then explain what your visualizations show about the data. Make sure to justify *why* you chose to show the variables you did, and *why* you think each plot type you chose is most appropriate for visualizing those particular variables. Also make sure to justify any choices you made with respect to colors, scales or labeling. Finally, give concrete examples of what a reader could take away from your visualizations, e.g. what questions a reader might have about a subject that could be answered by your visualization.
 
 
 ## Requirements checklist
@@ -60,12 +59,11 @@ In all cases your analysis should aim to lead to a useful, exciting or surprisin
 - [ ] Create 1 visualization for **each team member**. Every chosen variable should have a visualization that shows its distribution. 
     - [ ] 1 visualization should include at least 3 variables (at least 1 being nomial).
     - [ ] 1 visualization should involve grouping/aggregating the data.
-- [ ] Perform some kind of **multi-variable analysis** for **each team member**. In your report discuss the asumptions used in each analysis and the conclusion.
-- [ ] Submit a report that: **introduces and motivates the chosen dataset**, **shows and discusses your visualizations**, and **discuses your analysis**.
+- [ ] Submit a report that: **introduces and motivates the chosen dataset**, **shows and discusses your visualizations**, and **discuses your analysis of the visualizations**.
 
 ## Format and submission
 
-Assignments should follow the homework Quarto template. Each submission should be rendered as a PDF and submitted through Gradescope. 
+Assignments should follow the homework [Quarto/Jupyter template](https://github.com/gabehope/DataViz-Homework-Template). Each submission should be rendered as HTML and submitted through Canvas. 
 
 ## Rubric
 
@@ -97,8 +95,7 @@ While your options are valued and may be referenced in instructor feedback, peer
 Below is a (rough) outline of how much time each team member should aim to work on each part of this assignment. If you find that any part of this assingment is taking considerably longer, please reach out to the instructor.
 
 - **Choosing a dataset and variables:** 30 minutes.
-- **Creating a visualization:** 30-60 minutes.
-- **Analyzing a variable:** 30-60 minutes.
+- **Creating a visualization:** up to 60 minutes.
 - **Writing the report:** up to 60 minutes.
 - **Reflections and peer feedback:** <30 minutes.
 
@@ -123,50 +120,21 @@ Once you've chosen your data, download it an make sure every team member has acc
 
 **Load your data into Python using Pandas.** You should be able to verify that it loaded correctly using something like `df.head()`. Then make sure you understand what the data represents. You should be able to answer the following questions: *How many variables are in the dataset? What is the type of each variable and what does it represent? How many observations are in the dataset and what does each one represent?*
 
-:::{.callout-tip}
-**For example:** You might choose to look at Lebron James' per-game performance over the 2023-2024 NBA season. You might find that each observation in your data represents a single game and the varibles include quantitative statistics such as points scored, rebounds, steals etc. as well as nominal values such as the opposing team and whether it was a home or away game.
-:::
+**Be careful when joining datasets!** It will often be useful to combine data from multiple files, as shown in quiz 2. However you should be careful when doing so. Make sure the variable you are joining on has the same *meaning* in both data sources. If possible, it's a good idea to stick to combining datasets from the same source. In the example in quiz 2, both datasets are from the Gapminder organization. 
 
 
-## Part 2: Visualizing single variables
+## Part 2: Create (and iterate on) your visualizations
 
-With your dataset in hand, it's time to start trying to understand it using visualization! For this assignment, we're only going to look at one variable at a time. Again, try to choose variables that you think may show an interesting property of your data.
+Use Let's plot or your favorite visualization library to create the required visualizations. 
 
+**Delegate tasks as a group.** Before creating individual visualizations, make sure all group members are in agreement about what you'd like to show in each visualization and that the requirements outlined about will be met.
 
-**Choose one *continuous* or *ordinal* variable from your dataset.** Using Lets-Plot or PlotNine, create a visualization of the distribution of this variable. Exactly what type of visualization you use is up to you, but the visualization should be clear, well-labeled and provide an accurate picture of the data. Follow the relevant guidelines from the visualization rubric.
+**Iterate on your visualizations.** Make sure that each visualization that you create is *effective* and *expressive*. This might mean trying out different geometries, scales, coordinate systems or mappings. Find a visualization that says something interesting about the chosen dataset.
 
-You should also compute key summary statistics for the variable. At minimum, the *mean*, *median*, *minimum* and *maximum* using Pandas. If appropriate, show them in the visualizaiton otherwise you may refer to them in your write-up.
+**Discuss as a group.** Solicit feedback from your group memebers as you go. Make sure that other can understand what a given visualization is showing.
 
-**And/or choose one *nominal* (categorical) variable from your dataset.** Visualize the distribution of this variable. As before, the exact style of visualization is up to you, but the same standards of quality will apply.
+## Part 3: Writing up!
 
-:::{.callout-tip}
-**For example:** In your analysis of Lebron's games you may decide to look at the number of points score per-game, visualizing this distribution using a histogram. You may consider visualizing the proportion of home and away games, but decide that because you already know that the proportion is 50-50 that it's not worth analyzing. 
-:::
-
-## Part 3: Analysis
-Now that we understand our data a bit better having visualized it, let's see if we can use it to help us make useful decisions. To do this we'll first need to determine a specific piece of knowledge that we want to get from our data. 
-
-**Pose a question.** Consider continuous/ordinal variable that you visualized in the previous part. Determine a question that you could answer using a model of this variable. In this case we'll restrict it to asking about the likelihood of some future outcome.
-
-:::{.callout-tip}
-**For example:** if your variable is the number of points Lebron James scores in each game, you could attempt to answer the question: *how likely is it that Lebron will score more than 50 points?*
-:::
-
-**Fit a distribution.** Choose the most appropriate distribution out of those discussed in class to model your continuous/ordinal variable. (This could be a Normal, Exponential, Binomial, Negative Binomial or Poisson). Estimate the parameters of this distribution that best fits your data using the *maximum likelihood principle.* 
-
-As you complete this section, consider the *assumptions* that you are relying on. For example: Is your chosen distribution a good fit to the data? Is it reasonable to assume your observations are independent?
-
-**Answer the question.**
-Use your model to attempt to answer this question (e.g. *under our model, Lebron has an 8% chance of scoring more than 50 points*)
-
-:::{.callout-tip}
-**For example:** if your variable is the number of points Lebron James scores in each game, you could attempt to answer the question: *how likely is it that Lebron will score more than 50 points?*
-:::
-
-Make sure each group member performs some analysis of this form.
-
-## Part 4: Writing up!
-
-Finally, once your visualization an analysis is complete you'll need to write up a report on what you found. Consider our class guidelines for writing good reports!
+Finally, once your visualization an analysis is complete you'll need to write up a report on what you found. Consider why you chose the data that you did and what you were hoping to find. Did your visualization show this? How do your visualizations meet the goals of *effectiveness* and *expressiveness*? Is there anything you would have liked to improve?
 
 
