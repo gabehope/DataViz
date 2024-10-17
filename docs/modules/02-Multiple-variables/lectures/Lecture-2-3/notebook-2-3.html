@@ -193,6 +193,10 @@ window.Quarto = {
     <a class="dropdown-item" href="../../../../resources/datasets.html">
  <span class="dropdown-text">Datasets</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/gabehope/DataViz-Homework-Template">
+ <span class="dropdown-text">Homework template</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -2224,17 +2228,22 @@ dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-47" class="cell" data-execution_count="130">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>p_gentoo <span class="op">=</span> (cond_data[<span class="st">'species'</span>] <span class="op">==</span> <span class="st">'Gentoo'</span>).mean()</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>p_chinstrap <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> p_gentoo</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> p_gentoo_given_mass(mass):</span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>    p_mass_given_gentoo <span class="op">=</span> dists[<span class="st">'Gentoo'</span>].pdf(mass)</span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>    p_mass_given_chinstrap <span class="op">=</span> dists[<span class="st">'Chinstrap'</span>].pdf(mass)</span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p_mass_given_gentoo <span class="op">*</span> p_gentoo <span class="op">/</span> (p_mass_given_gentoo <span class="op">*</span> p_gentoo <span class="op">+</span> p_mass_given_chinstrap <span class="op">*</span> p_chinstrap)</span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">2500</span>, <span class="dv">6500</span>, <span class="dv">1000</span>)</span>
-<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>p_gentoo_given_mass(x))) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-47" class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Chinstrap"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Gentoo"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-48" class="cell" data-execution_count="130">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>p_gentoo <span class="op">=</span> (cond_data[<span class="st">'species'</span>] <span class="op">==</span> <span class="st">'Gentoo'</span>).mean()</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>p_chinstrap <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> p_gentoo</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> p_gentoo_given_mass(mass):</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>    p_mass_given_gentoo <span class="op">=</span> dists[<span class="st">'Gentoo'</span>].pdf(mass)</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>    p_mass_given_chinstrap <span class="op">=</span> dists[<span class="st">'Chinstrap'</span>].pdf(mass)</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p_mass_given_gentoo <span class="op">*</span> p_gentoo <span class="op">/</span> (p_mass_given_gentoo <span class="op">*</span> p_gentoo <span class="op">+</span> p_mass_given_chinstrap <span class="op">*</span> p_chinstrap)</span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">2500</span>, <span class="dv">6500</span>, <span class="dv">1000</span>)</span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>p_gentoo_given_mass(x))) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="130">
    <div id="JRpXD7"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2273,11 +2282,11 @@ dtype: float64</code></pre>
    </script>
 </div>
 </div>
-<div id="cell-48" class="cell" data-execution_count="133">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Chinstrap"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Gentoo"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>p_gentoo_given_mass(x) <span class="op">/</span> <span class="dv">5</span>))<span class="op">\</span></span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-49" class="cell" data-execution_count="133">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Chinstrap"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Gentoo"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>p_gentoo_given_mass(x) <span class="op">/</span> <span class="dv">5</span>))<span class="op">\</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="133">
    <div id="p0f945"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2390,21 +2399,21 @@ dtype: float64</code></pre>
    </script>
 </div>
 </div>
-<div id="cell-49" class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>cond_data <span class="op">=</span> data.query(<span class="st">'(species == "Adelie") | (species == "Chinstrap")'</span>)</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>cond_data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-50" class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>cond_data <span class="op">=</span> data.query(<span class="st">'(species == "Adelie") | (species == "Chinstrap")'</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>cond_data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-50" class="cell" data-execution_count="134">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>p_adelie <span class="op">=</span> (cond_data[<span class="st">'species'</span>] <span class="op">==</span> <span class="st">'Gentoo'</span>).mean()</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>p_chinstrap <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> p_adelie</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> p_gentoo_given_mass(mass):</span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>    p_mass_given_adelie <span class="op">=</span> dists[<span class="st">'Adelie'</span>].pdf(mass)</span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>    p_mass_given_chinstrap <span class="op">=</span> dists[<span class="st">'Chinstrap'</span>].pdf(mass)</span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p_mass_given_adelie <span class="op">*</span> p_adelie <span class="op">/</span> (p_mass_given_adelie <span class="op">*</span> p_adelie <span class="op">+</span> p_mass_given_chinstrap <span class="op">*</span> p_chinstrap)</span>
-<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">2500</span>, <span class="dv">6500</span>, <span class="dv">1000</span>)</span>
-<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>p_gentoo_given_mass(x))) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-51" class="cell" data-execution_count="134">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>p_adelie <span class="op">=</span> (cond_data[<span class="st">'species'</span>] <span class="op">==</span> <span class="st">'Gentoo'</span>).mean()</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>p_chinstrap <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> p_adelie</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> p_gentoo_given_mass(mass):</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>    p_mass_given_adelie <span class="op">=</span> dists[<span class="st">'Adelie'</span>].pdf(mass)</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>    p_mass_given_chinstrap <span class="op">=</span> dists[<span class="st">'Chinstrap'</span>].pdf(mass)</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p_mass_given_adelie <span class="op">*</span> p_adelie <span class="op">/</span> (p_mass_given_adelie <span class="op">*</span> p_adelie <span class="op">+</span> p_mass_given_chinstrap <span class="op">*</span> p_chinstrap)</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">2500</span>, <span class="dv">6500</span>, <span class="dv">1000</span>)</span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>p_gentoo_given_mass(x))) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="134">
    <div id="CE2Q4c"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2443,11 +2452,11 @@ dtype: float64</code></pre>
    </script>
 </div>
 </div>
-<div id="cell-51" class="cell" data-execution_count="135">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Chinstrap"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Adelie"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>p_gentoo_given_mass(x) <span class="op">/</span> <span class="dv">5</span>))<span class="op">\</span></span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-52" class="cell" data-execution_count="135">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Chinstrap"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Adelie"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>p_gentoo_given_mass(x) <span class="op">/</span> <span class="dv">5</span>))<span class="op">\</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="135">
    <div id="LQmAZl"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2560,18 +2569,18 @@ dtype: float64</code></pre>
    </script>
 </div>
 </div>
-<div id="cell-52" class="cell" data-execution_count="172">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>cond_data <span class="op">=</span> data.query(<span class="st">'(species == "Gentoo") | (species == "Chinstrap")'</span>)</span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LogisticRegression(<span class="va">None</span>)</span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>model.fit(cond_data[<span class="st">'body_mass_g'</span>].values.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)), (cond_data[<span class="st">'species'</span>] <span class="op">==</span> <span class="st">'Gentoo'</span>).values)</span>
-<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">2500</span>, <span class="dv">6500</span>, <span class="dv">1000</span>)</span>
-<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict_proba(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))[:, <span class="dv">1</span>])) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-53" class="cell" data-execution_count="172">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>cond_data <span class="op">=</span> data.query(<span class="st">'(species == "Gentoo") | (species == "Chinstrap")'</span>)</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LogisticRegression(<span class="va">None</span>)</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>model.fit(cond_data[<span class="st">'body_mass_g'</span>].values.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)), (cond_data[<span class="st">'species'</span>] <span class="op">==</span> <span class="st">'Gentoo'</span>).values)</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">2500</span>, <span class="dv">6500</span>, <span class="dv">1000</span>)</span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict_proba(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))[:, <span class="dv">1</span>])) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="172">
    <div id="3YwEMZ"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2610,11 +2619,11 @@ dtype: float64</code></pre>
    </script>
 </div>
 </div>
-<div id="cell-53" class="cell" data-execution_count="175">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Chinstrap"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Gentoo"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict_proba(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))[:, <span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>))<span class="op">\</span></span>
-<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-54" class="cell" data-execution_count="175">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Chinstrap"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Gentoo"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict_proba(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))[:, <span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>))<span class="op">\</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="175">
    <div id="AUGg73"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2727,18 +2736,18 @@ dtype: float64</code></pre>
    </script>
 </div>
 </div>
-<div id="cell-54" class="cell" data-execution_count="176">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>cond_data <span class="op">=</span> data.query(<span class="st">'(species == "Adelie") | (species == "Chinstrap")'</span>)</span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LogisticRegression(<span class="va">None</span>)</span>
-<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>model.fit(cond_data[<span class="st">'body_mass_g'</span>].values.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)), (cond_data[<span class="st">'species'</span>] <span class="op">==</span> <span class="st">'Adelie'</span>).values)</span>
-<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">2500</span>, <span class="dv">6500</span>, <span class="dv">1000</span>)</span>
-<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict_proba(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))[:, <span class="dv">1</span>])) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-55" class="cell" data-execution_count="176">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>cond_data <span class="op">=</span> data.query(<span class="st">'(species == "Adelie") | (species == "Chinstrap")'</span>)</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LogisticRegression(<span class="va">None</span>)</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>model.fit(cond_data[<span class="st">'body_mass_g'</span>].values.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)), (cond_data[<span class="st">'species'</span>] <span class="op">==</span> <span class="st">'Adelie'</span>).values)</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">2500</span>, <span class="dv">6500</span>, <span class="dv">1000</span>)</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict_proba(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))[:, <span class="dv">1</span>])) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="176">
    <div id="gtRh2a"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2777,11 +2786,11 @@ dtype: float64</code></pre>
    </script>
 </div>
 </div>
-<div id="cell-55" class="cell" data-execution_count="178">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Chinstrap"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Adelie"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict_proba(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))[:, <span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>))<span class="op">\</span></span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-56" class="cell" data-execution_count="178">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Chinstrap"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_histogram(data<span class="op">=</span>data.query(<span class="st">'species == "Adelie"'</span>), mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'body_mass_g'</span>, fill<span class="op">=</span><span class="st">'species'</span>, y<span class="op">=</span><span class="st">'..sumprop..'</span>), alpha<span class="op">=</span><span class="fl">0.2</span>)<span class="op">\</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict_proba(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))[:, <span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>))<span class="op">\</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="178">
    <div id="rHk7HV"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2897,12 +2906,12 @@ dtype: float64</code></pre>
 </section>
 <section id="penguins-q-q-conditional-model" class="level2">
 <h2 class="anchored" data-anchor-id="penguins-q-q-conditional-model">Penguins Q | Q conditional model</h2>
-<div id="cell-57" class="cell" data-execution_count="181">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>cond_data <span class="op">=</span> data[[<span class="st">'bill_length_mm'</span>, <span class="st">'flipper_length_mm'</span>]]</span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>data, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'bill_length_mm'</span>, y<span class="op">=</span><span class="st">'flipper_length_mm'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-58" class="cell" data-execution_count="181">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>cond_data <span class="op">=</span> data[[<span class="st">'bill_length_mm'</span>, <span class="st">'flipper_length_mm'</span>]]</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>data, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'bill_length_mm'</span>, y<span class="op">=</span><span class="st">'flipper_length_mm'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="181">
    <div id="nb6Ixi"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -2959,12 +2968,12 @@ dtype: float64</code></pre>
    </script>
 </div>
 </div>
-<div id="cell-58" class="cell" data-execution_count="191">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearRegression()</span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>model.fit(data[<span class="st">'bill_length_mm'</span>].values.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)), data[<span class="st">'flipper_length_mm'</span>].values)</span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">30</span>, <span class="dv">60</span>, <span class="dv">1000</span>)</span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>data, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'bill_length_mm'</span>, y<span class="op">=</span><span class="st">'flipper_length_mm'</span>))<span class="op">\</span></span>
-<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>      <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))), color<span class="op">=</span><span class="st">'red'</span>) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-59" class="cell" data-execution_count="191">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearRegression()</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>model.fit(data[<span class="st">'bill_length_mm'</span>].values.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)), data[<span class="st">'flipper_length_mm'</span>].values)</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">30</span>, <span class="dv">60</span>, <span class="dv">1000</span>)</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>data, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'bill_length_mm'</span>, y<span class="op">=</span><span class="st">'flipper_length_mm'</span>))<span class="op">\</span></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>      <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))), color<span class="op">=</span><span class="st">'red'</span>) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="191">
    <div id="blbDWw"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -3038,16 +3047,16 @@ dtype: float64</code></pre>
    </script>
 </div>
 </div>
-<div id="cell-59" class="cell" data-execution_count="201">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>std <span class="op">=</span> model.predict(data[<span class="st">'bill_length_mm'</span>].values.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>))) <span class="op">-</span> data[<span class="st">'flipper_length_mm'</span>].values</span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>std <span class="op">=</span> std.std()</span>
-<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>data, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'bill_length_mm'</span>, y<span class="op">=</span><span class="st">'flipper_length_mm'</span>))<span class="op">\</span></span>
-<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>      <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))), color<span class="op">=</span><span class="st">'red'</span>) <span class="op">\</span></span>
-<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>      <span class="op">+</span> geom_ribbon(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, </span>
-<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>                                ymin<span class="op">=</span>model.predict(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>))) <span class="op">-</span> std, </span>
-<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>                                ymax<span class="op">=</span>model.predict(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>))) <span class="op">+</span> std,),</span>
-<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>color<span class="op">=</span><span class="st">'red'</span>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="dv">150</span>, <span class="dv">250</span>]) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-60" class="cell" data-execution_count="201">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>std <span class="op">=</span> model.predict(data[<span class="st">'bill_length_mm'</span>].values.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>))) <span class="op">-</span> data[<span class="st">'flipper_length_mm'</span>].values</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>std <span class="op">=</span> std.std()</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>data, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'bill_length_mm'</span>, y<span class="op">=</span><span class="st">'flipper_length_mm'</span>))<span class="op">\</span></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>      <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))), color<span class="op">=</span><span class="st">'red'</span>) <span class="op">\</span></span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>      <span class="op">+</span> geom_ribbon(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, </span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>                                ymin<span class="op">=</span>model.predict(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>))) <span class="op">-</span> std, </span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>                                ymax<span class="op">=</span>model.predict(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>))) <span class="op">+</span> std,),</span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>color<span class="op">=</span><span class="st">'red'</span>) <span class="op">+</span> scale_y_continuous(limits<span class="op">=</span>[<span class="dv">150</span>, <span class="dv">250</span>]) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="201">
    <div id="6arEWn"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -3142,10 +3151,10 @@ dtype: float64</code></pre>
 </section>
 <section id="caitlin-clark-q-q-conidtional-model" class="level2">
 <h2 class="anchored" data-anchor-id="caitlin-clark-q-q-conidtional-model">Caitlin Clark Q | Q conidtional model</h2>
-<div id="cell-61" class="cell" data-execution_count="202">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'PTS'</span>, y<span class="op">=</span><span class="st">'AST'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-62" class="cell" data-execution_count="202">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'PTS'</span>, y<span class="op">=</span><span class="st">'AST'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="202">
    <div id="jTx1Th"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -3274,8 +3283,8 @@ dtype: float64</code></pre>
    </script>
 </div>
 </div>
-<div id="cell-62" class="cell" data-execution_count="204">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>clark</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-63" class="cell" data-execution_count="204">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>clark</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="204">
 <div>
 
@@ -4275,14 +4284,14 @@ dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-63" class="cell" data-execution_count="208">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> PoissonRegressor</span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> PoissonRegressor()</span>
-<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>model.fit(clark[<span class="st">'PTS'</span>].values.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)), clark[<span class="st">'AST'</span>].values)</span>
-<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">40</span>, <span class="dv">1000</span>)</span>
-<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'PTS'</span>, y<span class="op">=</span><span class="st">'AST'</span>))<span class="op">\</span></span>
-<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>      <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))), color<span class="op">=</span><span class="st">'red'</span>) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-64" class="cell" data-execution_count="208">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> PoissonRegressor</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> PoissonRegressor()</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>model.fit(clark[<span class="st">'PTS'</span>].values.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)), clark[<span class="st">'AST'</span>].values)</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">40</span>, <span class="dv">1000</span>)</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(data<span class="op">=</span>clark, mapping<span class="op">=</span>aes(x<span class="op">=</span><span class="st">'PTS'</span>, y<span class="op">=</span><span class="st">'AST'</span>))<span class="op">\</span></span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>      <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>model.predict(x.reshape((<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)))), color<span class="op">=</span><span class="st">'red'</span>) <span class="op">+</span> ggsize(<span class="dv">800</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="208">
    <div id="qYxRoh"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
@@ -4428,12 +4437,12 @@ dtype: float64</code></pre>
    </script>
 </div>
 </div>
-<div id="cell-64" class="cell" data-execution_count="213">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>lam20 <span class="op">=</span> model.predict([[<span class="dv">20</span>]])</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>dist <span class="op">=</span> poisson(lam20)</span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">20</span>)</span>
-<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>yW <span class="op">=</span> dist.pmf(x)</span>
-<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>yW), color<span class="op">=</span><span class="st">'red'</span>) <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>yW), color<span class="op">=</span><span class="st">'red'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-65" class="cell" data-execution_count="213">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>lam20 <span class="op">=</span> model.predict([[<span class="dv">20</span>]])</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>dist <span class="op">=</span> poisson(lam20)</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">20</span>)</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>yW <span class="op">=</span> dist.pmf(x)</span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> geom_point(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>yW), color<span class="op">=</span><span class="st">'red'</span>) <span class="op">+</span> geom_line(mapping<span class="op">=</span>aes(x<span class="op">=</span>x, y<span class="op">=</span>yW), color<span class="op">=</span><span class="st">'red'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="213">
    <div id="wuvzgI"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
