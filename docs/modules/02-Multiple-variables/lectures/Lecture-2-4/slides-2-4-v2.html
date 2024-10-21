@@ -409,17 +409,112 @@ Prof.&nbsp;Gabe Hope
 
 </section>
 <section>
+<section id="what-do-we-use-visualization-for" class="title-slide slide level1 center">
+<h1>What do we use visualization for?</h1>
+
+</section>
+<section id="internal-exploratory-data-analysis" class="slide level2">
+<h2><strong>Internal:</strong> Exploratory data analysis</h2>
+<p>I don’t know anything about my data, how do I start to understand it?</p>
+<h4 id="penguins">Penguins:</h4>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="21" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 20;"><span id="cb1-21"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb1-22"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb1-23"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
+<span id="cb1-24"><a></a>  ]</span>
+<span id="cb1-25"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-1" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+<section id="internal-model-and-assumption-checking" class="slide level2">
+<h2><strong>Internal:</strong> Model and assumption checking</h2>
+<p>I’m making assumptions about my data, are they correct?</p>
+<h4 id="caitlin-clark-model">Caitlin Clark model:</h4>
+
+<img data-src="pictures/fit.png" class="r-stretch"></section>
+<section id="internal-debugging-and-question-answering" class="slide level2">
+<h2><strong>Internal:</strong> Debugging and question answering</h2>
+<p>I have a question about my data, can I answer easily?</p>
+<h4 id="missing-data">Missing data?:</h4>
+
+<img data-src="pictures/fit.png" class="r-stretch"></section>
+<section id="external-supporting-conclusions" class="slide level2">
+<h2><strong>External:</strong> Supporting conclusions</h2>
+<p>I want to showcase a result I found</p>
+<h4 id="my-own-work">My own work:</h4>
+
+<img data-src="pictures/movies.png" class="r-stretch"></section>
+<section id="external-decision-making" class="slide level2">
+<h2><strong>External:</strong> Decision making</h2>
+<p>Help users make good decisions</p>
+<h4 id="covid-dashboards">Covid dashboards:</h4>
+
+<img data-src="pictures/dashboard.png" class="r-stretch"></section>
+<section id="external-visual-storytelling" class="slide level2">
+<h2><strong>External:</strong> Visual storytelling</h2>
+<p>Use visualization in service of a larger story</p>
+<h4 id="ny-times">NY Times:</h4>
+
+<img data-src="pictures/story.png" class="r-stretch"></section></section>
+<section>
+<section id="visualization-on-the-web" class="title-slide slide level1 center">
+<h1>Visualization on the Web</h1>
+
+</section>
+<section id="exercise-form-groups-and-analyze-a-story" class="slide level2">
+<h2><strong>Exercise:</strong> form groups and analyze a story</h2>
+<ul>
+<li><a href="https://www.washingtonpost.com/graphics/2018/national/segregation-us-cities/">Segregation in U.S. Cities</a></li>
+<li><a href="https://www.washingtonpost.com/graphics/2020/climate-environment/north-complex-fire-california-climate-change/?itid=lk_inline_manual_2">Fires in California</a></li>
+<li><a href="https://www.washingtonpost.com/graphics/2020/world/corona-simulator/?itid=lk_inline_manual_4">Covid Simulator</a></li>
+<li><a href="https://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html">Family income vs college</a></li>
+<li><a href="https://www.nytimes.com/interactive/projects/college-mobility/harvey-mudd-college">College mobility</a></li>
+</ul>
+</section></section>
+<section>
 <section id="from-ggplot-to-observableplot" class="title-slide slide level1 center">
 <h1>From ggplot to ObservablePlot</h1>
 
 </section>
-<section id="penguins" class="slide level2">
+<section id="lets-try-it-out" class="slide level2">
+<h2>Let’s try it out!</h2>
+<p>An <a href="https://observablehq.com/d/cf37ed064de497f1">observable notebook</a></p>
+</section>
+<section id="plot" class="slide level2">
+<h2>Plot</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 34%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Purpose</th>
+<th><code>ggplot2</code></th>
+<th><code>Observable Plot</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="coh hello"><u>Initialize the plot</u></span><u><br><br><br><span class="coh geom">Specify geom or mark</span><br><span class="coh data">From which dataset?</span><br><span class="coh variables">Variable mappings</span><br><span class="coh fill">Mark color</span><br><span class="coh symbol">Mark shape</span><br><span class="coh opacity">Mark opacity (constant)</span><br><span class="coh size">Mark size (constant)</span><br><br><br><span class="coh legend">Reveal legend</span><br><span class="coh facet">Facet</span><br><span class="coh axislabel">Axis labels</span><br><br><br><span class="coh grid">Add gridlines</span></u></td>
+<td><span class="coh hello"><code>ggplot()</code></span>&nbsp;&nbsp;<code>+</code><br><br><br>&nbsp;&nbsp;<span class="coh geom"><code>geom_point</code></span><code>(</code><span class="coh data"><code>penguins</code></span><code>,</code> <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh variables"><code>aes(x = flipper_length_mm,</code><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>y = body_mass_g,</code></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh fill"><code>color = species,</code></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh symbol"><code>shape = species</code></span><code>),</code><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh opacity"><code>alpha = 0.7,</code></span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh size"><code>size = 4</code></span><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>) +</code><br><br>&nbsp;&nbsp;<span class="coh legend" style="color: gray;"><i><code># N/A: legends revealed by default</code></i></span><br>&nbsp;&nbsp;<span class="coh facet"><code>facet_wrap(~island)</code></span>&nbsp;&nbsp;<code>+</code><br>&nbsp;&nbsp;<span class="coh axislabel"><code>labs(x = "Flipper length (mm)",</code><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>y = "Body mass (g)")</code></span><br><br>&nbsp;&nbsp;<span class="coh grid" style="color: gray;"><i><code># N/A: gridlines added by default</code></i></span></td>
+<td><span class="coh hello"><code>Plot.plot</code></span><code>({</code><br><br>&nbsp;&nbsp;<code>marks: [</code><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh geom"><code>Plot.dot</code></span><code>(</code><span class="coh data"><code>penguins</code></span><code>,</code> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh variables"><code>{x: "flipper_length_mm",</code><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>y: "body_mass_g",</code></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh fill"><code>fill: "species",</code></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh symbol"><code>symbol: "species"</code></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh opacity"><code>opacity: 0.7</code></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh size"><code>r: 4</code></span><code>})</code><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>]</code><br><br>&nbsp;&nbsp;<span class="coh legend"><code>symbol: {legend: true},</code></span><br>&nbsp;&nbsp;<span class="coh facet"><code>facet: {data: penguins, x: "island"},</code></span><br>&nbsp;&nbsp;<span class="coh axislabel"><code>x: {label: "Flipper length (mm)"},</code></span><br>&nbsp;&nbsp;<span class="coh axislabel"><code>y: {label: "Body mass (g)"},</code></span><br><br>&nbsp;&nbsp;<span class="coh grid"><code>grid: true</code></span><br><br><code>})</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="penguins-1" class="slide level2">
 <h2>Penguins!</h2>
-<div id="80ebe407" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-3"><a></a>penguins <span class="op">=</span> sns.load_dataset(<span class="st">'penguins'</span>)</span>
-<span id="cb1-4"><a></a>ojs_define(data<span class="op">=</span>penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="d38bb436" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb2-3"><a></a>penguins <span class="op">=</span> sns.load_dataset(<span class="st">'penguins'</span>)</span>
+<span id="cb2-4"><a></a>ojs_define(data<span class="op">=</span>penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="ojs-define">{"contents": [{"name": "data", "value": {"species": ["Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Adelie", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Chinstrap", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo", "Gentoo"], "island": ["Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Torgersen", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Dream", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe", "Biscoe"], "bill_length_mm": [39.1, 39.5, 40.3, null, 36.7, 39.3, 38.9, 39.2, 34.1, 42.0, 37.8, 37.8, 41.1, 38.6, 34.6, 36.6, 38.7, 42.5, 34.4, 46.0, 37.8, 37.7, 35.9, 38.2, 38.8, 35.3, 40.6, 40.5, 37.9, 40.5, 39.5, 37.2, 39.5, 40.9, 36.4, 39.2, 38.8, 42.2, 37.6, 39.8, 36.5, 40.8, 36.0, 44.1, 37.0, 39.6, 41.1, 37.5, 36.0, 42.3, 39.6, 40.1, 35.0, 42.0, 34.5, 41.4, 39.0, 40.6, 36.5, 37.6, 35.7, 41.3, 37.6, 41.1, 36.4, 41.6, 35.5, 41.1, 35.9, 41.8, 33.5, 39.7, 39.6, 45.8, 35.5, 42.8, 40.9, 37.2, 36.2, 42.1, 34.6, 42.9, 36.7, 35.1, 37.3, 41.3, 36.3, 36.9, 38.3, 38.9, 35.7, 41.1, 34.0, 39.6, 36.2, 40.8, 38.1, 40.3, 33.1, 43.2, 35.0, 41.0, 37.7, 37.8, 37.9, 39.7, 38.6, 38.2, 38.1, 43.2, 38.1, 45.6, 39.7, 42.2, 39.6, 42.7, 38.6, 37.3, 35.7, 41.1, 36.2, 37.7, 40.2, 41.4, 35.2, 40.6, 38.8, 41.5, 39.0, 44.1, 38.5, 43.1, 36.8, 37.5, 38.1, 41.1, 35.6, 40.2, 37.0, 39.7, 40.2, 40.6, 32.1, 40.7, 37.3, 39.0, 39.2, 36.6, 36.0, 37.8, 36.0, 41.5, 46.5, 50.0, 51.3, 45.4, 52.7, 45.2, 46.1, 51.3, 46.0, 51.3, 46.6, 51.7, 47.0, 52.0, 45.9, 50.5, 50.3, 58.0, 46.4, 49.2, 42.4, 48.5, 43.2, 50.6, 46.7, 52.0, 50.5, 49.5, 46.4, 52.8, 40.9, 54.2, 42.5, 51.0, 49.7, 47.5, 47.6, 52.0, 46.9, 53.5, 49.0, 46.2, 50.9, 45.5, 50.9, 50.8, 50.1, 49.0, 51.5, 49.8, 48.1, 51.4, 45.7, 50.7, 42.5, 52.2, 45.2, 49.3, 50.2, 45.6, 51.9, 46.8, 45.7, 55.8, 43.5, 49.6, 50.8, 50.2, 46.1, 50.0, 48.7, 50.0, 47.6, 46.5, 45.4, 46.7, 43.3, 46.8, 40.9, 49.0, 45.5, 48.4, 45.8, 49.3, 42.0, 49.2, 46.2, 48.7, 50.2, 45.1, 46.5, 46.3, 42.9, 46.1, 44.5, 47.8, 48.2, 50.0, 47.3, 42.8, 45.1, 59.6, 49.1, 48.4, 42.6, 44.4, 44.0, 48.7, 42.7, 49.6, 45.3, 49.6, 50.5, 43.6, 45.5, 50.5, 44.9, 45.2, 46.6, 48.5, 45.1, 50.1, 46.5, 45.0, 43.8, 45.5, 43.2, 50.4, 45.3, 46.2, 45.7, 54.3, 45.8, 49.8, 46.2, 49.5, 43.5, 50.7, 47.7, 46.4, 48.2, 46.5, 46.4, 48.6, 47.5, 51.1, 45.2, 45.2, 49.1, 52.5, 47.4, 50.0, 44.9, 50.8, 43.4, 51.3, 47.5, 52.1, 47.5, 52.2, 45.5, 49.5, 44.5, 50.8, 49.4, 46.9, 48.4, 51.1, 48.5, 55.9, 47.2, 49.1, 47.3, 46.8, 41.7, 53.4, 43.3, 48.1, 50.5, 49.8, 43.5, 51.5, 46.2, 55.1, 44.5, 48.8, 47.2, null, 46.8, 50.4, 45.2, 49.9], "bill_depth_mm": [18.7, 17.4, 18.0, null, 19.3, 20.6, 17.8, 19.6, 18.1, 20.2, 17.1, 17.3, 17.6, 21.2, 21.1, 17.8, 19.0, 20.7, 18.4, 21.5, 18.3, 18.7, 19.2, 18.1, 17.2, 18.9, 18.6, 17.9, 18.6, 18.9, 16.7, 18.1, 17.8, 18.9, 17.0, 21.1, 20.0, 18.5, 19.3, 19.1, 18.0, 18.4, 18.5, 19.7, 16.9, 18.8, 19.0, 18.9, 17.9, 21.2, 17.7, 18.9, 17.9, 19.5, 18.1, 18.6, 17.5, 18.8, 16.6, 19.1, 16.9, 21.1, 17.0, 18.2, 17.1, 18.0, 16.2, 19.1, 16.6, 19.4, 19.0, 18.4, 17.2, 18.9, 17.5, 18.5, 16.8, 19.4, 16.1, 19.1, 17.2, 17.6, 18.8, 19.4, 17.8, 20.3, 19.5, 18.6, 19.2, 18.8, 18.0, 18.1, 17.1, 18.1, 17.3, 18.9, 18.6, 18.5, 16.1, 18.5, 17.9, 20.0, 16.0, 20.0, 18.6, 18.9, 17.2, 20.0, 17.0, 19.0, 16.5, 20.3, 17.7, 19.5, 20.7, 18.3, 17.0, 20.5, 17.0, 18.6, 17.2, 19.8, 17.0, 18.5, 15.9, 19.0, 17.6, 18.3, 17.1, 18.0, 17.9, 19.2, 18.5, 18.5, 17.6, 17.5, 17.5, 20.1, 16.5, 17.9, 17.1, 17.2, 15.5, 17.0, 16.8, 18.7, 18.6, 18.4, 17.8, 18.1, 17.1, 18.5, 17.9, 19.5, 19.2, 18.7, 19.8, 17.8, 18.2, 18.2, 18.9, 19.9, 17.8, 20.3, 17.3, 18.1, 17.1, 19.6, 20.0, 17.8, 18.6, 18.2, 17.3, 17.5, 16.6, 19.4, 17.9, 19.0, 18.4, 19.0, 17.8, 20.0, 16.6, 20.8, 16.7, 18.8, 18.6, 16.8, 18.3, 20.7, 16.6, 19.9, 19.5, 17.5, 19.1, 17.0, 17.9, 18.5, 17.9, 19.6, 18.7, 17.3, 16.4, 19.0, 17.3, 19.7, 17.3, 18.8, 16.6, 19.9, 18.8, 19.4, 19.5, 16.5, 17.0, 19.8, 18.1, 18.2, 19.0, 18.7, 13.2, 16.3, 14.1, 15.2, 14.5, 13.5, 14.6, 15.3, 13.4, 15.4, 13.7, 16.1, 13.7, 14.6, 14.6, 15.7, 13.5, 15.2, 14.5, 15.1, 14.3, 14.5, 14.5, 15.8, 13.1, 15.1, 14.3, 15.0, 14.3, 15.3, 15.3, 14.2, 14.5, 17.0, 14.8, 16.3, 13.7, 17.3, 13.6, 15.7, 13.7, 16.0, 13.7, 15.0, 15.9, 13.9, 13.9, 15.9, 13.3, 15.8, 14.2, 14.1, 14.4, 15.0, 14.4, 15.4, 13.9, 15.0, 14.5, 15.3, 13.8, 14.9, 13.9, 15.7, 14.2, 16.8, 14.4, 16.2, 14.2, 15.0, 15.0, 15.6, 15.6, 14.8, 15.0, 16.0, 14.2, 16.3, 13.8, 16.4, 14.5, 15.6, 14.6, 15.9, 13.8, 17.3, 14.4, 14.2, 14.0, 17.0, 15.0, 17.1, 14.5, 16.1, 14.7, 15.7, 15.8, 14.6, 14.4, 16.5, 15.0, 17.0, 15.5, 15.0, 13.8, 16.1, 14.7, 15.8, 14.0, 15.1, 15.2, 15.9, 15.2, 16.3, 14.1, 16.0, 15.7, 16.2, 13.7, null, 14.3, 15.7, 14.8, 16.1], "flipper_length_mm": [181.0, 186.0, 195.0, null, 193.0, 190.0, 181.0, 195.0, 193.0, 190.0, 186.0, 180.0, 182.0, 191.0, 198.0, 185.0, 195.0, 197.0, 184.0, 194.0, 174.0, 180.0, 189.0, 185.0, 180.0, 187.0, 183.0, 187.0, 172.0, 180.0, 178.0, 178.0, 188.0, 184.0, 195.0, 196.0, 190.0, 180.0, 181.0, 184.0, 182.0, 195.0, 186.0, 196.0, 185.0, 190.0, 182.0, 179.0, 190.0, 191.0, 186.0, 188.0, 190.0, 200.0, 187.0, 191.0, 186.0, 193.0, 181.0, 194.0, 185.0, 195.0, 185.0, 192.0, 184.0, 192.0, 195.0, 188.0, 190.0, 198.0, 190.0, 190.0, 196.0, 197.0, 190.0, 195.0, 191.0, 184.0, 187.0, 195.0, 189.0, 196.0, 187.0, 193.0, 191.0, 194.0, 190.0, 189.0, 189.0, 190.0, 202.0, 205.0, 185.0, 186.0, 187.0, 208.0, 190.0, 196.0, 178.0, 192.0, 192.0, 203.0, 183.0, 190.0, 193.0, 184.0, 199.0, 190.0, 181.0, 197.0, 198.0, 191.0, 193.0, 197.0, 191.0, 196.0, 188.0, 199.0, 189.0, 189.0, 187.0, 198.0, 176.0, 202.0, 186.0, 199.0, 191.0, 195.0, 191.0, 210.0, 190.0, 197.0, 193.0, 199.0, 187.0, 190.0, 191.0, 200.0, 185.0, 193.0, 193.0, 187.0, 188.0, 190.0, 192.0, 185.0, 190.0, 184.0, 195.0, 193.0, 187.0, 201.0, 192.0, 196.0, 193.0, 188.0, 197.0, 198.0, 178.0, 197.0, 195.0, 198.0, 193.0, 194.0, 185.0, 201.0, 190.0, 201.0, 197.0, 181.0, 190.0, 195.0, 181.0, 191.0, 187.0, 193.0, 195.0, 197.0, 200.0, 200.0, 191.0, 205.0, 187.0, 201.0, 187.0, 203.0, 195.0, 199.0, 195.0, 210.0, 192.0, 205.0, 210.0, 187.0, 196.0, 196.0, 196.0, 201.0, 190.0, 212.0, 187.0, 198.0, 199.0, 201.0, 193.0, 203.0, 187.0, 197.0, 191.0, 203.0, 202.0, 194.0, 206.0, 189.0, 195.0, 207.0, 202.0, 193.0, 210.0, 198.0, 211.0, 230.0, 210.0, 218.0, 215.0, 210.0, 211.0, 219.0, 209.0, 215.0, 214.0, 216.0, 214.0, 213.0, 210.0, 217.0, 210.0, 221.0, 209.0, 222.0, 218.0, 215.0, 213.0, 215.0, 215.0, 215.0, 216.0, 215.0, 210.0, 220.0, 222.0, 209.0, 207.0, 230.0, 220.0, 220.0, 213.0, 219.0, 208.0, 208.0, 208.0, 225.0, 210.0, 216.0, 222.0, 217.0, 210.0, 225.0, 213.0, 215.0, 210.0, 220.0, 210.0, 225.0, 217.0, 220.0, 208.0, 220.0, 208.0, 224.0, 208.0, 221.0, 214.0, 231.0, 219.0, 230.0, 214.0, 229.0, 220.0, 223.0, 216.0, 221.0, 221.0, 217.0, 216.0, 230.0, 209.0, 220.0, 215.0, 223.0, 212.0, 221.0, 212.0, 224.0, 212.0, 228.0, 218.0, 218.0, 212.0, 230.0, 218.0, 228.0, 212.0, 224.0, 214.0, 226.0, 216.0, 222.0, 203.0, 225.0, 219.0, 228.0, 215.0, 228.0, 216.0, 215.0, 210.0, 219.0, 208.0, 209.0, 216.0, 229.0, 213.0, 230.0, 217.0, 230.0, 217.0, 222.0, 214.0, null, 215.0, 222.0, 212.0, 213.0], "body_mass_g": [3750.0, 3800.0, 3250.0, null, 3450.0, 3650.0, 3625.0, 4675.0, 3475.0, 4250.0, 3300.0, 3700.0, 3200.0, 3800.0, 4400.0, 3700.0, 3450.0, 4500.0, 3325.0, 4200.0, 3400.0, 3600.0, 3800.0, 3950.0, 3800.0, 3800.0, 3550.0, 3200.0, 3150.0, 3950.0, 3250.0, 3900.0, 3300.0, 3900.0, 3325.0, 4150.0, 3950.0, 3550.0, 3300.0, 4650.0, 3150.0, 3900.0, 3100.0, 4400.0, 3000.0, 4600.0, 3425.0, 2975.0, 3450.0, 4150.0, 3500.0, 4300.0, 3450.0, 4050.0, 2900.0, 3700.0, 3550.0, 3800.0, 2850.0, 3750.0, 3150.0, 4400.0, 3600.0, 4050.0, 2850.0, 3950.0, 3350.0, 4100.0, 3050.0, 4450.0, 3600.0, 3900.0, 3550.0, 4150.0, 3700.0, 4250.0, 3700.0, 3900.0, 3550.0, 4000.0, 3200.0, 4700.0, 3800.0, 4200.0, 3350.0, 3550.0, 3800.0, 3500.0, 3950.0, 3600.0, 3550.0, 4300.0, 3400.0, 4450.0, 3300.0, 4300.0, 3700.0, 4350.0, 2900.0, 4100.0, 3725.0, 4725.0, 3075.0, 4250.0, 2925.0, 3550.0, 3750.0, 3900.0, 3175.0, 4775.0, 3825.0, 4600.0, 3200.0, 4275.0, 3900.0, 4075.0, 2900.0, 3775.0, 3350.0, 3325.0, 3150.0, 3500.0, 3450.0, 3875.0, 3050.0, 4000.0, 3275.0, 4300.0, 3050.0, 4000.0, 3325.0, 3500.0, 3500.0, 4475.0, 3425.0, 3900.0, 3175.0, 3975.0, 3400.0, 4250.0, 3400.0, 3475.0, 3050.0, 3725.0, 3000.0, 3650.0, 4250.0, 3475.0, 3450.0, 3750.0, 3700.0, 4000.0, 3500.0, 3900.0, 3650.0, 3525.0, 3725.0, 3950.0, 3250.0, 3750.0, 4150.0, 3700.0, 3800.0, 3775.0, 3700.0, 4050.0, 3575.0, 4050.0, 3300.0, 3700.0, 3450.0, 4400.0, 3600.0, 3400.0, 2900.0, 3800.0, 3300.0, 4150.0, 3400.0, 3800.0, 3700.0, 4550.0, 3200.0, 4300.0, 3350.0, 4100.0, 3600.0, 3900.0, 3850.0, 4800.0, 2700.0, 4500.0, 3950.0, 3650.0, 3550.0, 3500.0, 3675.0, 4450.0, 3400.0, 4300.0, 3250.0, 3675.0, 3325.0, 3950.0, 3600.0, 4050.0, 3350.0, 3450.0, 3250.0, 4050.0, 3800.0, 3525.0, 3950.0, 3650.0, 3650.0, 4000.0, 3400.0, 3775.0, 4100.0, 3775.0, 4500.0, 5700.0, 4450.0, 5700.0, 5400.0, 4550.0, 4800.0, 5200.0, 4400.0, 5150.0, 4650.0, 5550.0, 4650.0, 5850.0, 4200.0, 5850.0, 4150.0, 6300.0, 4800.0, 5350.0, 5700.0, 5000.0, 4400.0, 5050.0, 5000.0, 5100.0, 4100.0, 5650.0, 4600.0, 5550.0, 5250.0, 4700.0, 5050.0, 6050.0, 5150.0, 5400.0, 4950.0, 5250.0, 4350.0, 5350.0, 3950.0, 5700.0, 4300.0, 4750.0, 5550.0, 4900.0, 4200.0, 5400.0, 5100.0, 5300.0, 4850.0, 5300.0, 4400.0, 5000.0, 4900.0, 5050.0, 4300.0, 5000.0, 4450.0, 5550.0, 4200.0, 5300.0, 4400.0, 5650.0, 4700.0, 5700.0, 4650.0, 5800.0, 4700.0, 5550.0, 4750.0, 5000.0, 5100.0, 5200.0, 4700.0, 5800.0, 4600.0, 6000.0, 4750.0, 5950.0, 4625.0, 5450.0, 4725.0, 5350.0, 4750.0, 5600.0, 4600.0, 5300.0, 4875.0, 5550.0, 4950.0, 5400.0, 4750.0, 5650.0, 4850.0, 5200.0, 4925.0, 4875.0, 4625.0, 5250.0, 4850.0, 5600.0, 4975.0, 5500.0, 4725.0, 5500.0, 4700.0, 5500.0, 4575.0, 5500.0, 5000.0, 5950.0, 4650.0, 5500.0, 4375.0, 5850.0, 4875.0, 6000.0, 4925.0, null, 4850.0, 5750.0, 5200.0, 5400.0], "sex": ["Male", "Female", "Female", null, "Female", "Male", "Female", "Male", null, null, null, null, "Female", "Male", "Male", "Female", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Male", "Female", "Male", "Female", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Male", null, "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Male", "Female", "Male", "Female", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female", "Male", "Female", "Male", "Male", "Female", "Male", "Female", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female", "Male", "Male", "Female", "Male", "Female", "Female", "Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Male", "Female", "Male", "Female", "Female", "Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female", "Male", null, "Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", null, "Male", "Female", "Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female", "Male", "Female", "Male", null, "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", "Female", "Male", null, "Male", "Female", null, "Female", "Male", "Female", "Male"]}}]}</script>
 </div>
@@ -429,27 +524,27 @@ Prof.&nbsp;Gabe Hope
 <h2>In Javascript</h2>
 <p>Columns format:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-startfrom="29" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 28;"><span id="cb2-29"><a></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3" data-startfrom="105" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 104;"><span id="cb3-105"><a></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-1" data-nodetype="expression">
+<div id="ojs-cell-2" data-nodetype="expression">
 
 </div>
 </div>
 </div>
 <p>Records format:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" data-startfrom="37" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 36;"><span id="cb3-37"><a></a>penguins <span class="op">=</span> <span class="fu">transpose</span>(data)</span>
-<span id="cb3-38"><a></a>penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4" data-startfrom="113" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 112;"><span id="cb4-113"><a></a>penguins <span class="op">=</span> <span class="fu">transpose</span>(data)</span>
+<span id="cb4-114"><a></a>penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-2-1" data-nodetype="declaration">
+<div id="ojs-cell-3-1" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-2-2" data-nodetype="expression">
+<div id="ojs-cell-3-2" data-nodetype="expression">
 
 </div>
 </div>
@@ -459,13 +554,13 @@ Prof.&nbsp;Gabe Hope
 <section id="making-a-plot" class="slide level2">
 <h2>Making a plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" data-startfrom="44" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 43;"><span id="cb4-44"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb4-45"><a></a>  <span class="st">'marks'</span><span class="op">:</span> [</span>
-<span id="cb4-46"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="st">'x'</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="st">'y'</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="st">'stroke'</span><span class="op">:</span> <span class="st">"species"</span>})</span>
-<span id="cb4-47"><a></a>  ]</span>
-<span id="cb4-48"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5" data-startfrom="120" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 119;"><span id="cb5-120"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb5-121"><a></a>  <span class="st">'marks'</span><span class="op">:</span> [</span>
+<span id="cb5-122"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="st">'x'</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="st">'y'</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="st">'stroke'</span><span class="op">:</span> <span class="st">"species"</span>})</span>
+<span id="cb5-123"><a></a>  ]</span>
+<span id="cb5-124"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-3" data-nodetype="expression">
+<div id="ojs-cell-4" data-nodetype="expression">
 
 </div>
 </div>
@@ -474,13 +569,13 @@ Prof.&nbsp;Gabe Hope
 <section id="making-a-plot-1" class="slide level2">
 <h2>Making a plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" data-startfrom="56" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 55;"><span id="cb5-56"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({ <span class="co">// Dictionary (object) keys don't need to be strings</span></span>
-<span id="cb5-57"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb5-58"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
-<span id="cb5-59"><a></a>  ]</span>
-<span id="cb5-60"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6" data-startfrom="132" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 131;"><span id="cb6-132"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({ <span class="co">// Dictionary (object) keys don't need to be strings</span></span>
+<span id="cb6-133"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb6-134"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
+<span id="cb6-135"><a></a>  ]</span>
+<span id="cb6-136"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-4" data-nodetype="expression">
+<div id="ojs-cell-5" data-nodetype="expression">
 
 </div>
 </div>
@@ -493,13 +588,13 @@ Prof.&nbsp;Gabe Hope
 <li>Rather than adding to it, we’ll pass a dictionary (Javascript object) that contains all the components of our grammar.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" data-startfrom="72" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 71;"><span id="cb6-72"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({ <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
-<span id="cb6-73"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb6-74"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
-<span id="cb6-75"><a></a>  ]</span>
-<span id="cb6-76"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7" data-startfrom="148" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 147;"><span id="cb7-148"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({ <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb7-149"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb7-150"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
+<span id="cb7-151"><a></a>  ]</span>
+<span id="cb7-152"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-5" data-nodetype="expression">
+<div id="ojs-cell-6" data-nodetype="expression">
 
 </div>
 </div>
@@ -529,9 +624,9 @@ Prof.&nbsp;Gabe Hope
 <h2>Components: Data</h2>
 <p>Data in a tidy (records) format:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" data-startfrom="105" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 104;"><span id="cb7-105"><a></a>penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8" data-startfrom="181" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 180;"><span id="cb8-181"><a></a>penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-6" data-nodetype="expression">
+<div id="ojs-cell-7" data-nodetype="expression">
 
 </div>
 </div>
@@ -540,18 +635,18 @@ Prof.&nbsp;Gabe Hope
 <section id="components-aesthetic-mappings" class="slide level2">
 <h2>Components: Aesthetic mappings</h2>
 <p>Here our aesthetic mapping is defined as a dictionary (object)</p>
-<div id="7c850131" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>{x: <span class="st">"bill_length_mm"</span>, y: <span class="st">"bill_depth_mm"</span>, stroke: <span class="st">"species"</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="ed0accf7" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>{x: <span class="st">"bill_length_mm"</span>, y: <span class="st">"bill_depth_mm"</span>, stroke: <span class="st">"species"</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Full code</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" data-startfrom="121" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 120;"><span id="cb9-121"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
-<span id="cb9-122"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb9-123"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
-<span id="cb9-124"><a></a>  ]</span>
-<span id="cb9-125"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10" data-startfrom="197" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 196;"><span id="cb10-197"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb10-198"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb10-199"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
+<span id="cb10-200"><a></a>  ]</span>
+<span id="cb10-201"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-7" data-nodetype="expression">
+<div id="ojs-cell-8" data-nodetype="expression">
 
 </div>
 </div>
@@ -562,13 +657,13 @@ Prof.&nbsp;Gabe Hope
 <p>We can assign constant values in the same dictionary</p>
 <p>Full code</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" data-startfrom="136" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 135;"><span id="cb10-136"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
-<span id="cb10-137"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb10-138"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"lightgrey"</span>})</span>
-<span id="cb10-139"><a></a>  ]</span>
-<span id="cb10-140"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11" data-startfrom="212" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 211;"><span id="cb11-212"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb11-213"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb11-214"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"lightgrey"</span>})</span>
+<span id="cb11-215"><a></a>  ]</span>
+<span id="cb11-216"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-8" data-nodetype="expression">
+<div id="ojs-cell-9" data-nodetype="expression">
 
 </div>
 </div>
@@ -577,21 +672,21 @@ Prof.&nbsp;Gabe Hope
 <section id="components-geometries" class="slide level2">
 <h2>Components: Geometries</h2>
 <p>Like ggplot, our choice of geometry is defined via a function</p>
-<div id="52a5d8e6" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>Plot.dot(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="4958ccea" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>Plot.dot(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div style="font-size: 60%">
 <p><em><code>Plot.dot</code> is equivalent to <code>geom_point</code></em></p>
 </div>
 <p>Full code</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12" data-startfrom="159" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 158;"><span id="cb12-159"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
-<span id="cb12-160"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb12-161"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
-<span id="cb12-162"><a></a>  ]</span>
-<span id="cb12-163"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13" data-startfrom="235" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 234;"><span id="cb13-235"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb13-236"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb13-237"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
+<span id="cb13-238"><a></a>  ]</span>
+<span id="cb13-239"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-9" data-nodetype="expression">
+<div id="ojs-cell-10" data-nodetype="expression">
 
 </div>
 </div>
@@ -600,21 +695,21 @@ Prof.&nbsp;Gabe Hope
 <section id="layers" class="slide level2">
 <h2>Layers</h2>
 <p>The geometry plus data and aesthetic mapping forms a <strong>layer</strong></p>
-<div id="ba766709" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>Plot.dot(penguins, {x: <span class="st">"bill_length_mm"</span>, y: <span class="st">"bill_depth_mm"</span>, stroke: <span class="st">"species"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="686bce14" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>Plot.dot(penguins, {x: <span class="st">"bill_length_mm"</span>, y: <span class="st">"bill_depth_mm"</span>, stroke: <span class="st">"species"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div style="font-size: 60%">
 <p><em><code>Plot.dot</code> is equivalent to <code>geom_point</code></em></p>
 </div>
 <p>Full code</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14" data-startfrom="182" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 181;"><span id="cb14-182"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
-<span id="cb14-183"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb14-184"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
-<span id="cb14-185"><a></a>  ]</span>
-<span id="cb14-186"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15" data-startfrom="258" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 257;"><span id="cb15-258"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb15-259"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb15-260"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
+<span id="cb15-261"><a></a>  ]</span>
+<span id="cb15-262"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-10" data-nodetype="expression">
+<div id="ojs-cell-11" data-nodetype="expression">
 
 </div>
 </div>
@@ -624,17 +719,17 @@ Prof.&nbsp;Gabe Hope
 <h2>Layers</h2>
 <p>A plot can have multiple layers (passed as a list under <code>marks</code>)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15" data-startfrom="195" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 194;"><span id="cb15-195"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
-<span id="cb15-196"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb15-197"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"lightgrey"</span>})<span class="op">,</span></span>
-<span id="cb15-198"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">species</span> <span class="op">==</span> <span class="st">'Gentoo'</span>)<span class="op">,</span> </span>
-<span id="cb15-199"><a></a>        {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>}</span>
-<span id="cb15-200"><a></a>    )<span class="op">,</span></span>
-<span id="cb15-201"><a></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="dv">45</span>]) <span class="co">// Equivalent of geom_vline()</span></span>
-<span id="cb15-202"><a></a>  ]</span>
-<span id="cb15-203"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16" data-startfrom="271" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 270;"><span id="cb16-271"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb16-272"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb16-273"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"lightgrey"</span>})<span class="op">,</span></span>
+<span id="cb16-274"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">species</span> <span class="op">==</span> <span class="st">'Gentoo'</span>)<span class="op">,</span> </span>
+<span id="cb16-275"><a></a>        {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>}</span>
+<span id="cb16-276"><a></a>    )<span class="op">,</span></span>
+<span id="cb16-277"><a></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="dv">45</span>]) <span class="co">// Equivalent of geom_vline()</span></span>
+<span id="cb16-278"><a></a>  ]</span>
+<span id="cb16-279"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-11" data-nodetype="expression">
+<div id="ojs-cell-12" data-nodetype="expression">
 
 </div>
 </div>
@@ -643,16 +738,16 @@ Prof.&nbsp;Gabe Hope
 <section id="filtering" class="slide level2">
 <h2>Filtering</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16" data-startfrom="210" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 209;"><span id="cb16-210"><a></a>penguins<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">species</span> <span class="op">==</span> <span class="st">'Gentoo'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17" data-startfrom="286" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 285;"><span id="cb17-286"><a></a>penguins<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">species</span> <span class="op">==</span> <span class="st">'Gentoo'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-12" data-nodetype="expression">
+<div id="ojs-cell-13" data-nodetype="expression">
 
 </div>
 </div>
 </div>
 <p>The input to the <code>filter</code> method is an <em>anonymous function</em> in javascript. It’s equivalent in Python would be:</p>
-<div id="2251cd53" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="kw">lambda</span> d: d[<span class="st">'species'</span>] <span class="op">==</span> <span class="st">'Gentoo'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="21023eab" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">lambda</span> d: d[<span class="st">'species'</span>] <span class="op">==</span> <span class="st">'Gentoo'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>filter</code> takes all entries where the function returns <code>true</code>. - Like pandas’ <code>query</code></p>
 </section>
@@ -660,15 +755,15 @@ Prof.&nbsp;Gabe Hope
 <h2>Components: Scales</h2>
 <p>Like ggplot, scales are shared across layers.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18" data-startfrom="230" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 229;"><span id="cb18-230"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
-<span id="cb18-231"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="dv">20</span><span class="op">,</span> <span class="dv">80</span>]}<span class="op">,</span>     <span class="co">// Domain is limits in ggplot</span></span>
-<span id="cb18-232"><a></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">scheme</span><span class="op">:</span> <span class="st">'Accent'</span>}<span class="op">,</span> <span class="co">// Scheme changes the color scheme</span></span>
-<span id="cb18-233"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb18-234"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
-<span id="cb18-235"><a></a>  ]</span>
-<span id="cb18-236"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19" data-startfrom="306" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 305;"><span id="cb19-306"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb19-307"><a></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="dv">20</span><span class="op">,</span> <span class="dv">80</span>]}<span class="op">,</span>     <span class="co">// Domain is limits in ggplot</span></span>
+<span id="cb19-308"><a></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">scheme</span><span class="op">:</span> <span class="st">'Accent'</span>}<span class="op">,</span> <span class="co">// Scheme changes the color scheme</span></span>
+<span id="cb19-309"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb19-310"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
+<span id="cb19-311"><a></a>  ]</span>
+<span id="cb19-312"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-13" data-nodetype="expression">
+<div id="ojs-cell-14" data-nodetype="expression">
 
 </div>
 </div>
@@ -682,16 +777,16 @@ Prof.&nbsp;Gabe Hope
 <h2>Components: Facets</h2>
 <p>Facets are specified per-layer with <code>fx</code>/<code>fy</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19" data-startfrom="249" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 248;"><span id="cb19-249"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">1200</span><span class="op">,</span></span>
-<span id="cb19-250"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb19-251"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
-<span id="cb19-252"><a></a>     {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span><span class="op">,</span> </span>
-<span id="cb19-253"><a></a>     <span class="dt">fx</span><span class="op">:</span> <span class="st">"island"</span></span>
-<span id="cb19-254"><a></a>     })</span>
-<span id="cb19-255"><a></a>  ]</span>
-<span id="cb19-256"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20" data-startfrom="325" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 324;"><span id="cb20-325"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">1200</span><span class="op">,</span></span>
+<span id="cb20-326"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb20-327"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
+<span id="cb20-328"><a></a>     {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span><span class="op">,</span> </span>
+<span id="cb20-329"><a></a>     <span class="dt">fx</span><span class="op">:</span> <span class="st">"island"</span></span>
+<span id="cb20-330"><a></a>     })</span>
+<span id="cb20-331"><a></a>  ]</span>
+<span id="cb20-332"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-14" data-nodetype="expression">
+<div id="ojs-cell-15" data-nodetype="expression">
 
 </div>
 </div>
@@ -701,17 +796,17 @@ Prof.&nbsp;Gabe Hope
 <h2>Components: Facets</h2>
 <p>Layers without a facet specified are replicated.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20" data-startfrom="265" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 264;"><span id="cb20-265"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">1200</span><span class="op">,</span></span>
-<span id="cb20-266"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb20-267"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"lightgrey"</span>})<span class="op">,</span></span>
-<span id="cb20-268"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> </span>
-<span id="cb20-269"><a></a>    {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span><span class="op">,</span> </span>
-<span id="cb20-270"><a></a>    <span class="dt">fx</span><span class="op">:</span> <span class="st">"island"</span></span>
-<span id="cb20-271"><a></a>    })</span>
-<span id="cb20-272"><a></a>  ]</span>
-<span id="cb20-273"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21" data-startfrom="341" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 340;"><span id="cb21-341"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">1200</span><span class="op">,</span></span>
+<span id="cb21-342"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb21-343"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"lightgrey"</span>})<span class="op">,</span></span>
+<span id="cb21-344"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> </span>
+<span id="cb21-345"><a></a>    {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span><span class="op">,</span> </span>
+<span id="cb21-346"><a></a>    <span class="dt">fx</span><span class="op">:</span> <span class="st">"island"</span></span>
+<span id="cb21-347"><a></a>    })</span>
+<span id="cb21-348"><a></a>  ]</span>
+<span id="cb21-349"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-15" data-nodetype="expression">
+<div id="ojs-cell-16" data-nodetype="expression">
 
 </div>
 </div>
@@ -720,20 +815,20 @@ Prof.&nbsp;Gabe Hope
 <section id="components-transforms" class="slide level2">
 <h2>Components: Transforms</h2>
 <p>Transforms create new computed aesthetic mappings and usually have the form:</p>
-<div id="1607274d" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>Plot.<span class="bu">bin</span>({transform options}, {aesthetic mappings})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="5351a440" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a>Plot.<span class="bu">bin</span>({transform options}, {aesthetic mappings})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22" data-startfrom="288" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 287;"><span id="cb22-288"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
-<span id="cb22-289"><a></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">scheme</span><span class="op">:</span> <span class="st">'BuRd'</span><span class="op">,</span> <span class="dt">type</span><span class="op">:</span> <span class="st">'linear'</span>}<span class="op">,</span></span>
-<span id="cb22-290"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb22-291"><a></a>    Plot<span class="op">.</span><span class="fu">rect</span>(penguins<span class="op">,</span></span>
-<span id="cb22-292"><a></a>    Plot<span class="op">.</span><span class="fu">bin</span>({<span class="dt">fill</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span>})</span>
-<span id="cb22-293"><a></a>    )</span>
-<span id="cb22-294"><a></a>  ]</span>
-<span id="cb22-295"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23" data-startfrom="364" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 363;"><span id="cb23-364"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb23-365"><a></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">scheme</span><span class="op">:</span> <span class="st">'BuRd'</span><span class="op">,</span> <span class="dt">type</span><span class="op">:</span> <span class="st">'linear'</span>}<span class="op">,</span></span>
+<span id="cb23-366"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb23-367"><a></a>    Plot<span class="op">.</span><span class="fu">rect</span>(penguins<span class="op">,</span></span>
+<span id="cb23-368"><a></a>    Plot<span class="op">.</span><span class="fu">bin</span>({<span class="dt">fill</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span>})</span>
+<span id="cb23-369"><a></a>    )</span>
+<span id="cb23-370"><a></a>  ]</span>
+<span id="cb23-371"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-16" data-nodetype="expression">
+<div id="ojs-cell-17" data-nodetype="expression">
 
 </div>
 </div>
@@ -743,9 +838,9 @@ Prof.&nbsp;Gabe Hope
 <h2>Components: Transforms</h2>
 <p>The transform object defines how to compute new aesthetic mappings from the data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23" data-startfrom="304" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 303;"><span id="cb23-304"><a></a>Plot<span class="op">.</span><span class="fu">bin</span>({<span class="dt">fill</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24" data-startfrom="380" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 379;"><span id="cb24-380"><a></a>Plot<span class="op">.</span><span class="fu">bin</span>({<span class="dt">fill</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-17" data-nodetype="expression">
+<div id="ojs-cell-18" data-nodetype="expression">
 
 </div>
 </div>
@@ -755,16 +850,16 @@ Prof.&nbsp;Gabe Hope
 <h2>Components: Transforms</h2>
 <p>The hexbin transform works with the <code>dot</code> geometry.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24" data-startfrom="314" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 313;"><span id="cb24-314"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
-<span id="cb24-315"><a></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">scheme</span><span class="op">:</span> <span class="st">'BuRd'</span><span class="op">,</span> <span class="dt">type</span><span class="op">:</span> <span class="st">'linear'</span>}<span class="op">,</span></span>
-<span id="cb24-316"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb24-317"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
-<span id="cb24-318"><a></a>    Plot<span class="op">.</span><span class="fu">hexbin</span>({<span class="dt">fill</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span>})</span>
-<span id="cb24-319"><a></a>    )</span>
-<span id="cb24-320"><a></a>  ]</span>
-<span id="cb24-321"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25" data-startfrom="390" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 389;"><span id="cb25-390"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb25-391"><a></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">scheme</span><span class="op">:</span> <span class="st">'BuRd'</span><span class="op">,</span> <span class="dt">type</span><span class="op">:</span> <span class="st">'linear'</span>}<span class="op">,</span></span>
+<span id="cb25-392"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb25-393"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
+<span id="cb25-394"><a></a>    Plot<span class="op">.</span><span class="fu">hexbin</span>({<span class="dt">fill</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span>})</span>
+<span id="cb25-395"><a></a>    )</span>
+<span id="cb25-396"><a></a>  ]</span>
+<span id="cb25-397"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-18" data-nodetype="expression">
+<div id="ojs-cell-19" data-nodetype="expression">
 
 </div>
 </div>
@@ -774,31 +869,13 @@ Prof.&nbsp;Gabe Hope
 <h2>Components: Transforms</h2>
 <p>Our 2-d histogram doesn’t need to be defined via color.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25" data-startfrom="329" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 328;"><span id="cb25-329"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
-<span id="cb25-330"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb25-331"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
-<span id="cb25-332"><a></a>    Plot<span class="op">.</span><span class="fu">hexbin</span>({<span class="dt">r</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span>})</span>
-<span id="cb25-333"><a></a>    )</span>
-<span id="cb25-334"><a></a>  ]</span>
-<span id="cb25-335"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div id="ojs-cell-19" data-nodetype="expression">
-
-</div>
-</div>
-</div>
-</section>
-<section id="components-transforms-4" class="slide level2">
-<h2>Components: Transforms</h2>
-<p>We can create a 1-d histrogram by binning just the x coordinate with <code>binX</code>. The geometry <code>rectY</code> corresponds to bars.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb26" data-startfrom="347" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 346;"><span id="cb26-347"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
-<span id="cb26-348"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb26-349"><a></a>    Plot<span class="op">.</span><span class="fu">rectY</span>(penguins<span class="op">,</span></span>
-<span id="cb26-350"><a></a>        Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span>})</span>
-<span id="cb26-351"><a></a>    )</span>
-<span id="cb26-352"><a></a>  ]</span>
-<span id="cb26-353"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26" data-startfrom="405" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 404;"><span id="cb26-405"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb26-406"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb26-407"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
+<span id="cb26-408"><a></a>    Plot<span class="op">.</span><span class="fu">hexbin</span>({<span class="dt">r</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span>})</span>
+<span id="cb26-409"><a></a>    )</span>
+<span id="cb26-410"><a></a>  ]</span>
+<span id="cb26-411"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-20" data-nodetype="expression">
 
@@ -806,19 +883,63 @@ Prof.&nbsp;Gabe Hope
 </div>
 </div>
 </section>
-<section id="components-transforms-5" class="slide level2">
+<section id="components-transforms-4" class="slide level2">
 <h2>Components: Transforms</h2>
-<p>The <code>dodge</code> transform ensures that points don’t overlap (here by moving up the y axis).</p>
+<p>We can use color to group our data</p>
+<div class="columns">
+<div class="column">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27" data-startfrom="362" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 361;"><span id="cb27-362"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
-<span id="cb27-363"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb27-364"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
-<span id="cb27-365"><a></a>        Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span>})</span>
-<span id="cb27-366"><a></a>    )</span>
-<span id="cb27-367"><a></a>  ]</span>
-<span id="cb27-368"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27" data-startfrom="422" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 421;"><span id="cb27-422"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb27-423"><a></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb27-424"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb27-425"><a></a>    Plot<span class="op">.</span><span class="fu">hexgrid</span>()<span class="op">,</span></span>
+<span id="cb27-426"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
+<span id="cb27-427"><a></a>    Plot<span class="op">.</span><span class="fu">hexbin</span>({<span class="dt">r</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> </span>
+<span id="cb27-428"><a></a>    {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> </span>
+<span id="cb27-429"><a></a>    <span class="dt">stroke</span><span class="op">:</span> <span class="st">'species'</span>})</span>
+<span id="cb27-430"><a></a>    )</span>
+<span id="cb27-431"><a></a>  ]<span class="op">,</span></span>
+<span id="cb27-432"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-21" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28" data-startfrom="438" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 437;"><span id="cb28-438"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb28-439"><a></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb28-440"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb28-441"><a></a>    Plot<span class="op">.</span><span class="fu">hexgrid</span>()<span class="op">,</span></span>
+<span id="cb28-442"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
+<span id="cb28-443"><a></a>    Plot<span class="op">.</span><span class="fu">hexbin</span>({<span class="dt">r</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> </span>
+<span id="cb28-444"><a></a>    {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> </span>
+<span id="cb28-445"><a></a>    <span class="dt">stroke</span><span class="op">:</span> <span class="st">'island'</span>})</span>
+<span id="cb28-446"><a></a>    )</span>
+<span id="cb28-447"><a></a>  ]<span class="op">,</span></span>
+<span id="cb28-448"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-22" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="components-transforms-5" class="slide level2">
+<h2>Components: Transforms</h2>
+<p>We can create a 1-d histrogram by binning just the x coordinate with <code>binX</code>. The geometry <code>rectY</code> corresponds to tightly packed bars.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29" data-startfrom="460" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 459;"><span id="cb29-460"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb29-461"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb29-462"><a></a>    Plot<span class="op">.</span><span class="fu">rectY</span>(penguins<span class="op">,</span></span>
+<span id="cb29-463"><a></a>        Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span>})</span>
+<span id="cb29-464"><a></a>    )</span>
+<span id="cb29-465"><a></a>  ]</span>
+<span id="cb29-466"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-23" data-nodetype="expression">
 
 </div>
 </div>
@@ -826,17 +947,54 @@ Prof.&nbsp;Gabe Hope
 </section>
 <section id="components-transforms-6" class="slide level2">
 <h2>Components: Transforms</h2>
+<p>The <code>group</code> transform does the equivalent for categorical variables.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30" data-startfrom="476" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 475;"><span id="cb30-476"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb30-477"><a></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb30-478"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb30-479"><a></a>    Plot<span class="op">.</span><span class="fu">barY</span>(penguins<span class="op">,</span></span>
+<span id="cb30-480"><a></a>        Plot<span class="op">.</span><span class="fu">groupX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"island"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"species"</span>})</span>
+<span id="cb30-481"><a></a>    )</span>
+<span id="cb30-482"><a></a>  ]</span>
+<span id="cb30-483"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-24" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+<section id="components-transforms-7" class="slide level2">
+<h2>Components: Transforms</h2>
+<p>The <code>dodge</code> transform ensures that points don’t overlap (here by moving up the y axis).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31" data-startfrom="494" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 493;"><span id="cb31-494"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb31-495"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb31-496"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
+<span id="cb31-497"><a></a>        Plot<span class="op">.</span><span class="fu">dodgeY</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span>})</span>
+<span id="cb31-498"><a></a>    )</span>
+<span id="cb31-499"><a></a>  ]</span>
+<span id="cb31-500"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-25" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+<section id="components-transforms-8" class="slide level2">
+<h2>Components: Transforms</h2>
 <p>The <code>sort</code> transform sorts observations by some column. Here we’ll compose it with the <code>dodge</code> transform.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28" data-startfrom="377" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 376;"><span id="cb28-377"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
-<span id="cb28-378"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb28-379"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
-<span id="cb28-380"><a></a>        Plot<span class="op">.</span><span class="fu">dodgeY</span>(Plot<span class="op">.</span><span class="fu">sort</span>(<span class="st">"bill_length_mm"</span><span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span>}))</span>
-<span id="cb28-381"><a></a>    )</span>
-<span id="cb28-382"><a></a>  ]</span>
-<span id="cb28-383"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32" data-startfrom="509" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 508;"><span id="cb32-509"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb32-510"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb32-511"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
+<span id="cb32-512"><a></a>        Plot<span class="op">.</span><span class="fu">dodgeY</span>(Plot<span class="op">.</span><span class="fu">sort</span>(<span class="st">"bill_length_mm"</span><span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span>}))</span>
+<span id="cb32-513"><a></a>    )</span>
+<span id="cb32-514"><a></a>  ]</span>
+<span id="cb32-515"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-22" data-nodetype="expression">
+<div id="ojs-cell-26" data-nodetype="expression">
 
 </div>
 </div>
@@ -846,16 +1004,16 @@ Prof.&nbsp;Gabe Hope
 <h2>Components: Annotations</h2>
 <p>Annotations can be created by specifying other options like <code>title</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29" data-startfrom="391" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 390;"><span id="cb29-391"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
-<span id="cb29-392"><a></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">"Penguins!"</span><span class="op">,</span></span>
-<span id="cb29-393"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb29-394"><a></a>    Plot<span class="op">.</span><span class="fu">rectY</span>(penguins<span class="op">,</span></span>
-<span id="cb29-395"><a></a>        Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span>})</span>
-<span id="cb29-396"><a></a>    )</span>
-<span id="cb29-397"><a></a>  ]</span>
-<span id="cb29-398"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33" data-startfrom="523" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 522;"><span id="cb33-523"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb33-524"><a></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">"Penguins!"</span><span class="op">,</span></span>
+<span id="cb33-525"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb33-526"><a></a>    Plot<span class="op">.</span><span class="fu">rectY</span>(penguins<span class="op">,</span></span>
+<span id="cb33-527"><a></a>        Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span>})</span>
+<span id="cb33-528"><a></a>    )</span>
+<span id="cb33-529"><a></a>  ]</span>
+<span id="cb33-530"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-23" data-nodetype="expression">
+<div id="ojs-cell-27" data-nodetype="expression">
 
 </div>
 </div>
@@ -865,15 +1023,15 @@ Prof.&nbsp;Gabe Hope
 <h2>Components: Annotations</h2>
 <p>An extremely important annotation is a legend. Defined per scale.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30" data-startfrom="405" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 404;"><span id="cb30-405"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">1200</span><span class="op">,</span></span>
-<span id="cb30-406"><a></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
-<span id="cb30-407"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb30-408"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
-<span id="cb30-409"><a></a>     {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
-<span id="cb30-410"><a></a>  ]</span>
-<span id="cb30-411"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34" data-startfrom="537" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 536;"><span id="cb34-537"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">1200</span><span class="op">,</span></span>
+<span id="cb34-538"><a></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb34-539"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb34-540"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span></span>
+<span id="cb34-541"><a></a>     {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
+<span id="cb34-542"><a></a>  ]</span>
+<span id="cb34-543"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-24" data-nodetype="expression">
+<div id="ojs-cell-28" data-nodetype="expression">
 
 </div>
 </div>
@@ -883,49 +1041,48 @@ Prof.&nbsp;Gabe Hope
 <h2>Other plots</h2>
 <p>A density plot can be computed with the <code>density</code> geometry</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31" data-startfrom="419" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 418;"><span id="cb31-419"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb31-420"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb31-421"><a></a>    Plot<span class="op">.</span><span class="fu">density</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span>})<span class="op">,</span></span>
-<span id="cb31-422"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
-<span id="cb31-423"><a></a>  ]</span>
-<span id="cb31-424"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35" data-startfrom="551" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 550;"><span id="cb35-551"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb35-552"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb35-553"><a></a>    Plot<span class="op">.</span><span class="fu">density</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span>})<span class="op">,</span></span>
+<span id="cb35-554"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"bill_depth_mm"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"species"</span>})</span>
+<span id="cb35-555"><a></a>  ]</span>
+<span id="cb35-556"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-25" data-nodetype="expression">
+<div id="ojs-cell-29" data-nodetype="expression">
 
 </div>
 </div>
 </div>
 </section>
-<section id="lets-try-it-out" class="slide level2">
-<h2>Let’s try it out!</h2>
-<p>An <a href="https://observablehq.com/d/cf37ed064de497f1">observable notebook</a></p>
-</section>
 <section id="components-interactions" class="slide level2">
 <h2>Components: <strong>Interactions</strong></h2>
 <p><code>Inputs</code> allow for values that the user controls.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32" data-startfrom="436" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 435;"><span id="cb32-436"><a></a>viewof bins <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36" data-startfrom="566" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 565;"><span id="cb36-566"><a></a>viewof bins <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-26" data-nodetype="declaration">
+<div id="ojs-cell-30" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 <p>When this values changes the plot changes!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33" data-startfrom="441" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 440;"><span id="cb33-441"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
-<span id="cb33-442"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
-<span id="cb33-443"><a></a>    Plot<span class="op">.</span><span class="fu">rectY</span>(penguins<span class="op">,</span></span>
-<span id="cb33-444"><a></a>        Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> bins}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span>})</span>
-<span id="cb33-445"><a></a>    )</span>
-<span id="cb33-446"><a></a>  ]</span>
-<span id="cb33-447"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37" data-startfrom="571" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 570;"><span id="cb37-571"><a></a>Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb37-572"><a></a>  <span class="dt">marks</span><span class="op">:</span> [ </span>
+<span id="cb37-573"><a></a>    Plot<span class="op">.</span><span class="fu">rectY</span>(penguins<span class="op">,</span></span>
+<span id="cb37-574"><a></a>        Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> bins}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"bill_length_mm"</span>})</span>
+<span id="cb37-575"><a></a>    )</span>
+<span id="cb37-576"><a></a>  ]</span>
+<span id="cb37-577"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-27" data-nodetype="expression">
+<div id="ojs-cell-31" data-nodetype="expression">
 
 </div>
 </div>
 </div>
+</section>
+<section id="components-interactions-1" class="slide level2">
+<h2>Components: <strong>Interactions</strong></h2>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -1125,7 +1282,7 @@ Prof.&nbsp;Gabe Hope
       });
     </script>
     <script type="ojs-module-contents">
-    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImRhdGFcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InBlbmd1aW5zID0gdHJhbnNwb3NlKGRhdGEpXG5wZW5ndWluc1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgJ21hcmtzJzogW1xuICAgIFBsb3QuZG90KHBlbmd1aW5zLCB7J3gnOiBcImJpbGxfbGVuZ3RoX21tXCIsICd5JzogXCJiaWxsX2RlcHRoX21tXCIsICdzdHJva2UnOiBcInNwZWNpZXNcIn0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3QoeyAvLyBEaWN0aW9uYXJ5IChvYmplY3QpIGtleXMgZG9uJ3QgbmVlZCB0byBiZSBzdHJpbmdzXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgc3Ryb2tlOiBcInNwZWNpZXNcIn0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3QoeyBoZWlnaHQ6IDMwMCxcbiAgbWFya3M6IFsgXG4gICAgUGxvdC5kb3QocGVuZ3VpbnMsIHt4OiBcImJpbGxfbGVuZ3RoX21tXCIsIHk6IFwiYmlsbF9kZXB0aF9tbVwiLCBzdHJva2U6IFwic3BlY2llc1wifSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InBlbmd1aW5zXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe2hlaWdodDogMzAwLFxuICBtYXJrczogWyBcbiAgICBQbG90LmRvdChwZW5ndWlucywge3g6IFwiYmlsbF9sZW5ndGhfbW1cIiwgeTogXCJiaWxsX2RlcHRoX21tXCIsIHN0cm9rZTogXCJzcGVjaWVzXCJ9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtoZWlnaHQ6IDMwMCxcbiAgbWFya3M6IFsgXG4gICAgUGxvdC5kb3QocGVuZ3VpbnMsIHt4OiBcImJpbGxfbGVuZ3RoX21tXCIsIHk6IFwiYmlsbF9kZXB0aF9tbVwiLCBzdHJva2U6IFwibGlnaHRncmV5XCJ9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC05IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtoZWlnaHQ6IDMwMCxcbiAgbWFya3M6IFsgXG4gICAgUGxvdC5kb3QocGVuZ3VpbnMsIHt4OiBcImJpbGxfbGVuZ3RoX21tXCIsIHk6IFwiYmlsbF9kZXB0aF9tbVwiLCBzdHJva2U6IFwic3BlY2llc1wifSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe2hlaWdodDogMzAwLFxuICBtYXJrczogWyBcbiAgICBQbG90LmRvdChwZW5ndWlucywge3g6IFwiYmlsbF9sZW5ndGhfbW1cIiwgeTogXCJiaWxsX2RlcHRoX21tXCIsIHN0cm9rZTogXCJzcGVjaWVzXCJ9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7aGVpZ2h0OiAzMDAsXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgc3Ryb2tlOiBcImxpZ2h0Z3JleVwifSksXG4gICAgUGxvdC5kb3QocGVuZ3VpbnMuZmlsdGVyKChkKSA9PiBkLnNwZWNpZXMgPT0gJ0dlbnRvbycpLCBcbiAgICAgICAge3g6IFwiYmlsbF9sZW5ndGhfbW1cIiwgeTogXCJiaWxsX2RlcHRoX21tXCIsIHN0cm9rZTogXCJzcGVjaWVzXCJ9XG4gICAgKSxcbiAgICBQbG90LnJ1bGVYKFs0NV0pIC8vIEVxdWl2YWxlbnQgb2YgZ2VvbV92bGluZSgpXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEyIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoicGVuZ3VpbnMuZmlsdGVyKChkKSA9PiBkLnNwZWNpZXMgPT0gJ0dlbnRvbycpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEzIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtoZWlnaHQ6IDMwMCxcbiAgeDoge2RvbWFpbjogWzIwLCA4MF19LCAgICAgLy8gRG9tYWluIGlzIGxpbWl0cyBpbiBnZ3Bsb3RcbiAgY29sb3I6IHtzY2hlbWU6ICdBY2NlbnQnfSwgLy8gU2NoZW1lIGNoYW5nZXMgdGhlIGNvbG9yIHNjaGVtZVxuICBtYXJrczogWyBcbiAgICBQbG90LmRvdChwZW5ndWlucywge3g6IFwiYmlsbF9sZW5ndGhfbW1cIiwgeTogXCJiaWxsX2RlcHRoX21tXCIsIHN0cm9rZTogXCJzcGVjaWVzXCJ9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7aGVpZ2h0OiAzMDAsIHdpZHRoOiAxMjAwLFxuICBtYXJrczogWyBcbiAgICBQbG90LmRvdChwZW5ndWlucyxcbiAgICAge3g6IFwiYmlsbF9sZW5ndGhfbW1cIiwgeTogXCJiaWxsX2RlcHRoX21tXCIsIHN0cm9rZTogXCJzcGVjaWVzXCIsIFxuICAgICBmeDogXCJpc2xhbmRcIlxuICAgICB9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7aGVpZ2h0OiAzMDAsIHdpZHRoOiAxMjAwLFxuICBtYXJrczogWyBcbiAgICBQbG90LmRvdChwZW5ndWlucywge3g6IFwiYmlsbF9sZW5ndGhfbW1cIiwgeTogXCJiaWxsX2RlcHRoX21tXCIsIHN0cm9rZTogXCJsaWdodGdyZXlcIn0pLFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLCBcbiAgICB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgc3Ryb2tlOiBcInNwZWNpZXNcIiwgXG4gICAgZng6IFwiaXNsYW5kXCJcbiAgICB9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7aGVpZ2h0OiAzMDAsIHdpZHRoOiA2MDAsXG4gIGNvbG9yOiB7c2NoZW1lOiAnQnVSZCcsIHR5cGU6ICdsaW5lYXInfSxcbiAgbWFya3M6IFsgXG4gICAgUGxvdC5yZWN0KHBlbmd1aW5zLFxuICAgIFBsb3QuYmluKHtmaWxsOiBcImNvdW50XCJ9LCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIn0pXG4gICAgKVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QuYmluKHtmaWxsOiBcImNvdW50XCJ9LCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE4IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtoZWlnaHQ6IDMwMCwgd2lkdGg6IDYwMCxcbiAgY29sb3I6IHtzY2hlbWU6ICdCdVJkJywgdHlwZTogJ2xpbmVhcid9LFxuICBtYXJrczogWyBcbiAgICBQbG90LmRvdChwZW5ndWlucyxcbiAgICBQbG90LmhleGJpbih7ZmlsbDogXCJjb3VudFwifSwge3g6IFwiYmlsbF9sZW5ndGhfbW1cIiwgeTogXCJiaWxsX2RlcHRoX21tXCJ9KVxuICAgIClcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTkiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe2hlaWdodDogMzAwLCB3aWR0aDogNjAwLFxuICBtYXJrczogWyBcbiAgICBQbG90LmRvdChwZW5ndWlucyxcbiAgICBQbG90LmhleGJpbih7cjogXCJjb3VudFwifSwge3g6IFwiYmlsbF9sZW5ndGhfbW1cIiwgeTogXCJiaWxsX2RlcHRoX21tXCJ9KVxuICAgIClcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe2hlaWdodDogMzAwLCB3aWR0aDogNjAwLFxuICBtYXJrczogWyBcbiAgICBQbG90LnJlY3RZKHBlbmd1aW5zLFxuICAgICAgICBQbG90LmJpblgoe3k6IFwiY291bnRcIn0sIHt4OiBcImJpbGxfbGVuZ3RoX21tXCJ9KVxuICAgIClcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjEiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe2hlaWdodDogMzAwLCB3aWR0aDogNjAwLFxuICBtYXJrczogWyBcbiAgICBQbG90LmRvdChwZW5ndWlucyxcbiAgICAgICAgUGxvdC5kb2RnZVkoe3g6IFwiYmlsbF9sZW5ndGhfbW1cIn0pXG4gICAgKVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7aGVpZ2h0OiAzMDAsIHdpZHRoOiA2MDAsXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLFxuICAgICAgICBQbG90LmRvZGdlWShQbG90LnNvcnQoXCJiaWxsX2xlbmd0aF9tbVwiLCB7eDogXCJiaWxsX2xlbmd0aF9tbVwifSkpXG4gICAgKVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7aGVpZ2h0OiAzMDAsIHdpZHRoOiA2MDAsXG4gIHRpdGxlOiBcIlBlbmd1aW5zIVwiLFxuICBtYXJrczogWyBcbiAgICBQbG90LnJlY3RZKHBlbmd1aW5zLFxuICAgICAgICBQbG90LmJpblgoe3k6IFwiY291bnRcIn0sIHt4OiBcImJpbGxfbGVuZ3RoX21tXCJ9KVxuICAgIClcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe2hlaWdodDogMzAwLCB3aWR0aDogMTIwMCxcbiAgY29sb3I6IHtsZWdlbmQ6IHRydWV9LFxuICBtYXJrczogWyBcbiAgICBQbG90LmRvdChwZW5ndWlucyxcbiAgICAge3g6IFwiYmlsbF9sZW5ndGhfbW1cIiwgeTogXCJiaWxsX2RlcHRoX21tXCIsIHN0cm9rZTogXCJzcGVjaWVzXCJ9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIG1hcmtzOiBbXG4gICAgUGxvdC5kZW5zaXR5KHBlbmd1aW5zLCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIix9KSxcbiAgICBQbG90LmRvdChwZW5ndWlucywge3g6IFwiYmlsbF9sZW5ndGhfbW1cIiwgeTogXCJiaWxsX2RlcHRoX21tXCIsIHN0cm9rZTogXCJzcGVjaWVzXCJ9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBiaW5zID0gSW5wdXRzLnJhbmdlKFswLCAxMDBdLCB7c3RlcDogMX0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTI3IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtoZWlnaHQ6IDMwMCwgd2lkdGg6IDYwMCxcbiAgbWFya3M6IFsgXG4gICAgUGxvdC5yZWN0WShwZW5ndWlucyxcbiAgICAgICAgUGxvdC5iaW5YKHt5OiBcImNvdW50XCIsIHRocmVzaG9sZHM6IGJpbnN9LCB7eDogXCJiaWxsX2xlbmd0aF9tbVwifSlcbiAgICApXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2JpbnMnKSJ9XX0=
+    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7aGVpZ2h0OiAzMDAsXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgc3Ryb2tlOiBcInNwZWNpZXNcIn0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJkYXRhXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJwZW5ndWlucyA9IHRyYW5zcG9zZShkYXRhKVxucGVuZ3VpbnNcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gICdtYXJrcyc6IFtcbiAgICBQbG90LmRvdChwZW5ndWlucywgeyd4JzogXCJiaWxsX2xlbmd0aF9tbVwiLCAneSc6IFwiYmlsbF9kZXB0aF9tbVwiLCAnc3Ryb2tlJzogXCJzcGVjaWVzXCJ9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC01IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHsgLy8gRGljdGlvbmFyeSAob2JqZWN0KSBrZXlzIGRvbid0IG5lZWQgdG8gYmUgc3RyaW5nc1xuICBtYXJrczogWyBcbiAgICBQbG90LmRvdChwZW5ndWlucywge3g6IFwiYmlsbF9sZW5ndGhfbW1cIiwgeTogXCJiaWxsX2RlcHRoX21tXCIsIHN0cm9rZTogXCJzcGVjaWVzXCJ9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC02IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHsgaGVpZ2h0OiAzMDAsXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgc3Ryb2tlOiBcInNwZWNpZXNcIn0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJwZW5ndWluc1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtoZWlnaHQ6IDMwMCxcbiAgbWFya3M6IFsgXG4gICAgUGxvdC5kb3QocGVuZ3VpbnMsIHt4OiBcImJpbGxfbGVuZ3RoX21tXCIsIHk6IFwiYmlsbF9kZXB0aF9tbVwiLCBzdHJva2U6IFwic3BlY2llc1wifSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7aGVpZ2h0OiAzMDAsXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgc3Ryb2tlOiBcImxpZ2h0Z3JleVwifSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe2hlaWdodDogMzAwLFxuICBtYXJrczogWyBcbiAgICBQbG90LmRvdChwZW5ndWlucywge3g6IFwiYmlsbF9sZW5ndGhfbW1cIiwgeTogXCJiaWxsX2RlcHRoX21tXCIsIHN0cm9rZTogXCJzcGVjaWVzXCJ9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7aGVpZ2h0OiAzMDAsXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgc3Ryb2tlOiBcInNwZWNpZXNcIn0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEyIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtoZWlnaHQ6IDMwMCxcbiAgbWFya3M6IFsgXG4gICAgUGxvdC5kb3QocGVuZ3VpbnMsIHt4OiBcImJpbGxfbGVuZ3RoX21tXCIsIHk6IFwiYmlsbF9kZXB0aF9tbVwiLCBzdHJva2U6IFwibGlnaHRncmV5XCJ9KSxcbiAgICBQbG90LmRvdChwZW5ndWlucy5maWx0ZXIoKGQpID0+IGQuc3BlY2llcyA9PSAnR2VudG9vJyksIFxuICAgICAgICB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgc3Ryb2tlOiBcInNwZWNpZXNcIn1cbiAgICApLFxuICAgIFBsb3QucnVsZVgoWzQ1XSkgLy8gRXF1aXZhbGVudCBvZiBnZW9tX3ZsaW5lKClcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJwZW5ndWlucy5maWx0ZXIoKGQpID0+IGQuc3BlY2llcyA9PSAnR2VudG9vJylcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe2hlaWdodDogMzAwLFxuICB4OiB7ZG9tYWluOiBbMjAsIDgwXX0sICAgICAvLyBEb21haW4gaXMgbGltaXRzIGluIGdncGxvdFxuICBjb2xvcjoge3NjaGVtZTogJ0FjY2VudCd9LCAvLyBTY2hlbWUgY2hhbmdlcyB0aGUgY29sb3Igc2NoZW1lXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgc3Ryb2tlOiBcInNwZWNpZXNcIn0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE1IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtoZWlnaHQ6IDMwMCwgd2lkdGg6IDEyMDAsXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLFxuICAgICB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgc3Ryb2tlOiBcInNwZWNpZXNcIiwgXG4gICAgIGZ4OiBcImlzbGFuZFwiXG4gICAgIH0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE2IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtoZWlnaHQ6IDMwMCwgd2lkdGg6IDEyMDAsXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgc3Ryb2tlOiBcImxpZ2h0Z3JleVwifSksXG4gICAgUGxvdC5kb3QocGVuZ3VpbnMsIFxuICAgIHt4OiBcImJpbGxfbGVuZ3RoX21tXCIsIHk6IFwiYmlsbF9kZXB0aF9tbVwiLCBzdHJva2U6IFwic3BlY2llc1wiLCBcbiAgICBmeDogXCJpc2xhbmRcIlxuICAgIH0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE3IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtoZWlnaHQ6IDMwMCwgd2lkdGg6IDYwMCxcbiAgY29sb3I6IHtzY2hlbWU6ICdCdVJkJywgdHlwZTogJ2xpbmVhcid9LFxuICBtYXJrczogWyBcbiAgICBQbG90LnJlY3QocGVuZ3VpbnMsXG4gICAgUGxvdC5iaW4oe2ZpbGw6IFwiY291bnRcIn0sIHt4OiBcImJpbGxfbGVuZ3RoX21tXCIsIHk6IFwiYmlsbF9kZXB0aF9tbVwifSlcbiAgICApXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE4IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5iaW4oe2ZpbGw6IFwiY291bnRcIn0sIHt4OiBcImJpbGxfbGVuZ3RoX21tXCIsIHk6IFwiYmlsbF9kZXB0aF9tbVwifSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTkiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe2hlaWdodDogMzAwLCB3aWR0aDogNjAwLFxuICBjb2xvcjoge3NjaGVtZTogJ0J1UmQnLCB0eXBlOiAnbGluZWFyJ30sXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLFxuICAgIFBsb3QuaGV4YmluKHtmaWxsOiBcImNvdW50XCJ9LCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIn0pXG4gICAgKVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7aGVpZ2h0OiAzMDAsIHdpZHRoOiA2MDAsXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLFxuICAgIFBsb3QuaGV4YmluKHtyOiBcImNvdW50XCJ9LCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIn0pXG4gICAgKVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7aGVpZ2h0OiAzMDAsIHdpZHRoOiA2MDAsXG4gIGNvbG9yOiB7bGVnZW5kOiB0cnVlfSxcbiAgbWFya3M6IFsgXG4gICAgUGxvdC5oZXhncmlkKCksXG4gICAgUGxvdC5kb3QocGVuZ3VpbnMsXG4gICAgUGxvdC5oZXhiaW4oe3I6IFwiY291bnRcIn0sIFxuICAgIHt4OiBcImJpbGxfbGVuZ3RoX21tXCIsIHk6IFwiYmlsbF9kZXB0aF9tbVwiLCBcbiAgICBzdHJva2U6ICdzcGVjaWVzJ30pXG4gICAgKVxuICBdLFxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe2hlaWdodDogMzAwLCB3aWR0aDogNjAwLFxuICBjb2xvcjoge2xlZ2VuZDogdHJ1ZX0sXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuaGV4Z3JpZCgpLFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLFxuICAgIFBsb3QuaGV4YmluKHtyOiBcImNvdW50XCJ9LCBcbiAgICB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgXG4gICAgc3Ryb2tlOiAnaXNsYW5kJ30pXG4gICAgKVxuICBdLFxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe2hlaWdodDogMzAwLCB3aWR0aDogNjAwLFxuICBtYXJrczogWyBcbiAgICBQbG90LnJlY3RZKHBlbmd1aW5zLFxuICAgICAgICBQbG90LmJpblgoe3k6IFwiY291bnRcIn0sIHt4OiBcImJpbGxfbGVuZ3RoX21tXCJ9KVxuICAgIClcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe2hlaWdodDogMzAwLCB3aWR0aDogNjAwLFxuICBjb2xvcjoge2xlZ2VuZDogdHJ1ZX0sXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuYmFyWShwZW5ndWlucyxcbiAgICAgICAgUGxvdC5ncm91cFgoe3k6IFwiY291bnRcIn0sIHt4OiBcImlzbGFuZFwiLCBmaWxsOiBcInNwZWNpZXNcIn0pXG4gICAgKVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7aGVpZ2h0OiAzMDAsIHdpZHRoOiA2MDAsXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLFxuICAgICAgICBQbG90LmRvZGdlWSh7eDogXCJiaWxsX2xlbmd0aF9tbVwifSlcbiAgICApXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTI2IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtoZWlnaHQ6IDMwMCwgd2lkdGg6IDYwMCxcbiAgbWFya3M6IFsgXG4gICAgUGxvdC5kb3QocGVuZ3VpbnMsXG4gICAgICAgIFBsb3QuZG9kZ2VZKFBsb3Quc29ydChcImJpbGxfbGVuZ3RoX21tXCIsIHt4OiBcImJpbGxfbGVuZ3RoX21tXCJ9KSlcbiAgICApXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTI3IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtoZWlnaHQ6IDMwMCwgd2lkdGg6IDYwMCxcbiAgdGl0bGU6IFwiUGVuZ3VpbnMhXCIsXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QucmVjdFkocGVuZ3VpbnMsXG4gICAgICAgIFBsb3QuYmluWCh7eTogXCJjb3VudFwifSwge3g6IFwiYmlsbF9sZW5ndGhfbW1cIn0pXG4gICAgKVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7aGVpZ2h0OiAzMDAsIHdpZHRoOiAxMjAwLFxuICBjb2xvcjoge2xlZ2VuZDogdHJ1ZX0sXG4gIG1hcmtzOiBbIFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLFxuICAgICB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgc3Ryb2tlOiBcInNwZWNpZXNcIn0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTI5IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgbWFya3M6IFtcbiAgICBQbG90LmRlbnNpdHkocGVuZ3VpbnMsIHt4OiBcImJpbGxfbGVuZ3RoX21tXCIsIHk6IFwiYmlsbF9kZXB0aF9tbVwiLH0pLFxuICAgIFBsb3QuZG90KHBlbmd1aW5zLCB7eDogXCJiaWxsX2xlbmd0aF9tbVwiLCB5OiBcImJpbGxfZGVwdGhfbW1cIiwgc3Ryb2tlOiBcInNwZWNpZXNcIn0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMwIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIGJpbnMgPSBJbnB1dHMucmFuZ2UoWzAsIDEwMF0sIHtzdGVwOiAxfSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMzEiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe2hlaWdodDogMzAwLCB3aWR0aDogNjAwLFxuICBtYXJrczogWyBcbiAgICBQbG90LnJlY3RZKHBlbmd1aW5zLFxuICAgICAgICBQbG90LmJpblgoe3k6IFwiY291bnRcIiwgdGhyZXNob2xkczogYmluc30sIHt4OiBcImJpbGxfbGVuZ3RoX21tXCJ9KVxuICAgIClcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnYmlucycpIn1dfQ==
     </script>
     <script type="module">
     if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }

@@ -10,11 +10,11 @@ format:
 
 *Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
 
-# Data Analytics and Visualization: Week 8 - Conditional models and web visualization
+# Data Analytics and Visualization: Week 9 - Web visualization
 
 ## In-class questions
 
-#### Which model is more suited to each data?
+#### What were your takeaways from the story you looked at?
 
 
 |
@@ -26,7 +26,18 @@ format:
 |
 |
 
-####  What would you like to learn from the Olympian data?
+####  How did this story make use of visualization?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  How did this story utilize the properties of the web? What benefits did this give over a static visualization?
 
 |
 |
@@ -38,26 +49,4 @@ format:
 |
 
 
-## Reflection (*complete at the end of class*)
 
-#### Where would you like this course to go next?
-
-|
-|
-|
-|
-|
-|
-|
-|
-
-#### Are there other topics from statistics you'd like to cover?
-
-|
-|
-|
-|
-|
-|
-|
-|

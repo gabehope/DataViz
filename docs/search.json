@@ -2440,7 +2440,7 @@
     "href": "calendar/calendar.html",
     "title": "Course Calendar",
     "section": "",
-    "text": "This is the tentative course calendar for Data Analytics and Visualization. This calendar is subject to change depending on the pace of the class and student interest.\n\n\n\n\n\n\n\n\nDate\nEvent\nTopics\nReadings\nMaterials\n\n\n\n\nWeek 1\n\n\nAug 26, 2024\nLecture 0\nCourse introduction\n538\nSlides Handout\n\n\nAug 28, 2024\nLecture 1\nTidy data, data types\nMDSR 6.1\nSlides Handout\n\n\nWeek 2\n\n\nSep 2, 2024\nLabor day\n\n\n\n\n\nSep 4, 2024\nLecture 2\nIntroduction to visualization\nDV ch. 1 MDSR 2.1-2.5\nSlides Handout\n\n\nWeek 3\n\n\nSep 9, 2024\nLecture 3\nPrinciples for effective visualization\n\nSlides Handout\n\n\nSep 11, 2024\nLecture 4\nSingle variable analysis & visualization\n\nSlides Handout\n\n\nWeek 4\n\n\nSep 16, 2024\nLecture 5\nSimulation-based inference\n\nSlides Handout\n\n\nSep 18, 2024\nLecture 6\nModeling and maximum likelihood\n\nSlides Handout\n\n\nSep 19, 2024\nQuiz 0 Due\nVisualization\n\nNotebook Gradescope\n\n\nWeek 5\n\n\nSep 23, 2024\nLecture 7\nMore on maximum likelihood\n\nSlides Handout\n\n\nSep 25, 2024\nLecture 8\nData wrangling for multiple variables\n\nSlides\n\n\nSep 26, 2024\nQuiz 1 Due\nClustering and mixtures\n\nNotebook Gradescope\n\n\nSep 27, 2024\nHomework 1 Due\nSingle variable analysis & visualization\n\nAssignment Gradescope\n\n\nWeek 6\n\n\nSep 30, 2024\nLecture 9\n2-D Visualizations\n\nnotebook\n\n\nOct 2, 2024\nLecture 10\nModeling with multiple variables\n\nNotebook\n\n\nWeek 7\n\n\nOct 7, 2024\nLecture 11\nConditional models\n\nNotebook Slides\n\n\nOct 9, 2024\nFall break\n\n\n\n\n\nWeek 8\n\n\nOct 14, 2024\nLecture 12\nConditional models (cont.) + Intro to Javascript\n\nSlides\n\n\nOct 16, 2024\nLecture 13\nBootstrapping and simulation\n\n\n\n\nOct 21, 2024\nRead before lecture\nMachine bias reading\n\nArticle Methods\n\n\nOct 22, 2024\nQuiz 2 Due\nInference\n\nNotebook Gradescope\n\n\nWeek 9\n\n\nOct 21, 2024\nLecture 14\nHigh dimensional data, dimensionality reduction\n\n\n\n\nOct 23, 2024\nLecture 15\nWorking with timeseries\n\n\n\n\nOct 25, 2024\nQuiz 3 Due\nMulti-variable data\n\nNotebook Data Gradescope\n\n\nWeek 10\n\n\nOct 28, 2024\nLecture 16\nTimeseries data\n\n\n\n\nOct 29, 2024\nHomework 2 Due\nMulti-variable visualization\n\nAssignment Canvas TBD\n\n\nOct 30, 2024\nLecture 17\nTimeseries models and analysis\n\n\n\n\nWeek 11\n\n\nNov 4, 2024\nLecture 18\nSpatial analysis and visualization\n\n\n\n\nNov 6, 2024\nLecture 19\nGeographic data, projections and maps\n\n\n\n\nWeek 12\n\n\nNov 11, 2024\nLecture 20\nClimate data\n\n\n\n\nNov 13, 2024\nLecture 21\nMoving to the web\n\n\n\n\nWeek 13\n\n\nNov 18, 2024\nLecture 22\nInteraction and animation\n\n\n\n\nNov 20, 2024\nLecture 23\nInteraction and animation\n\n\n\n\nWeek 14\n\n\nNov 25, 2024\nLecture 24\nNetwork data\n\n\n\n\nNov 27, 2024\nThanksgiving\n\n\n\n\n\nWeek 15\n\n\nDec 2, 2024\nLecture 26\nNetwork visualization\n\n\n\n\nDec 4, 2024\nLecture 27\nNetwork modeling\n\n\n\n\nFinals\n\n\nDec 9, 2024\nFinal project due\n\n\n\n\n\nDec 13, 2024\nFinal project feedback due"
+    "text": "This is the tentative course calendar for Data Analytics and Visualization. This calendar is subject to change depending on the pace of the class and student interest.\n\n\n\n\n\n\n\n\nDate\nEvent\nTopics\nReadings\nMaterials\n\n\n\n\nWeek 1\n\n\nAug 26, 2024\nLecture 0\nCourse introduction\n538\nSlides Handout\n\n\nAug 28, 2024\nLecture 1\nTidy data, data types\nMDSR 6.1\nSlides Handout\n\n\nWeek 2\n\n\nSep 2, 2024\nLabor day\n\n\n\n\n\nSep 4, 2024\nLecture 2\nIntroduction to visualization\nDV ch. 1 MDSR 2.1-2.5\nSlides Handout\n\n\nWeek 3\n\n\nSep 9, 2024\nLecture 3\nPrinciples for effective visualization\n\nSlides Handout\n\n\nSep 11, 2024\nLecture 4\nSingle variable analysis & visualization\n\nSlides Handout\n\n\nWeek 4\n\n\nSep 16, 2024\nLecture 5\nSimulation-based inference\n\nSlides Handout\n\n\nSep 18, 2024\nLecture 6\nModeling and maximum likelihood\n\nSlides Handout\n\n\nSep 19, 2024\nQuiz 0 Due\nVisualization\n\nNotebook Gradescope\n\n\nWeek 5\n\n\nSep 23, 2024\nLecture 7\nMore on maximum likelihood\n\nSlides Handout\n\n\nSep 25, 2024\nLecture 8\nData wrangling for multiple variables\n\nSlides\n\n\nSep 26, 2024\nQuiz 1 Due\nClustering and mixtures\n\nNotebook Gradescope\n\n\nSep 27, 2024\nHomework 1 Due\nSingle variable analysis & visualization\n\nAssignment Gradescope\n\n\nWeek 6\n\n\nSep 30, 2024\nLecture 9\n2-D Visualizations\n\nnotebook\n\n\nOct 2, 2024\nLecture 10\nModeling with multiple variables\n\nNotebook\n\n\nWeek 7\n\n\nOct 7, 2024\nLecture 11\nConditional models\n\nNotebook Slides\n\n\nOct 9, 2024\nFall break\n\n\n\n\n\nWeek 8\n\n\nOct 14, 2024\nLecture 12\nConditional models (cont.) + Intro to Javascript\n\nSlides\n\n\nOct 16, 2024\nLecture 13\nConditional models (cont.) + Intro to Javascript\n\nSlides\n\n\nOct 21, 2024\nRead before lecture\nMachine bias reading\n\nArticle Methods\n\n\nOct 22, 2024\nQuiz 2 Due\nInference\n\nNotebook Gradescope\n\n\nWeek 9\n\n\nOct 21, 2024\nLecture 14\nVisualization for the web + intro to javascript\nLearn just enough javascript Plot from ggplot\nSlides\n\n\nOct 23, 2024\nLecture 15\nWorking with timeseries\n\n\n\n\nOct 25, 2024\nQuiz 3 Due\nMulti-variable data\n\nNotebook Data Gradescope\n\n\nWeek 10\n\n\nOct 28, 2024\nLecture 16\nTimeseries data\n\n\n\n\nOct 29, 2024\nHomework 2 Due\nMulti-variable visualization\nQuarto setup\nAssignment Canvas TBD\n\n\nOct 30, 2024\nLecture 17\nTimeseries models and analysis\n\n\n\n\nWeek 11\n\n\nNov 4, 2024\nLecture 18\nSpatial analysis and visualization\n\n\n\n\nNov 6, 2024\nLecture 19\nGeographic data, projections and maps\n\n\n\n\nWeek 12\n\n\nNov 11, 2024\nLecture 20\nClimate data\n\n\n\n\nNov 13, 2024\nLecture 21\nMoving to the web\n\n\n\n\nWeek 13\n\n\nNov 18, 2024\nLecture 22\nInteraction and animation\n\n\n\n\nNov 20, 2024\nLecture 23\nInteraction and animation\n\n\n\n\nWeek 14\n\n\nNov 25, 2024\nLecture 24\nNetwork data\n\n\n\n\nNov 27, 2024\nThanksgiving\n\n\n\n\n\nWeek 15\n\n\nDec 2, 2024\nLecture 26\nNetwork visualization\n\n\n\n\nDec 4, 2024\nLecture 27\nNetwork modeling\n\n\n\n\nFinals\n\n\nDec 9, 2024\nFinal project due\n\n\n\n\n\nDec 13, 2024\nFinal project feedback due"
   },
   {
     "objectID": "calendar/calendar.html#week-0-826---830",
@@ -6052,7 +6052,7 @@
     "href": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#parametric-bootstrap-1",
     "title": "Data Analytics and Visualization",
     "section": "Parametric bootstrap",
-    "text": "Parametric bootstrap\n\ndef statistic(data):\n    return (data &gt;= 10).mean()\n\nestimates, lower, upper = simple_simulation_ci(clark['AST'], statistic, 10000)\nestimates = pd.DataFrame({\"Simulated fraction\": estimates})\n\nggplot() + geom_bar(data=estimates, mapping=aes(x=\"Simulated fraction\"))\\\n+ geom_vline(xintercept=lower, color='red', linetype='longdash')\\\n+ geom_vline(xintercept=upper, color='red', linetype='longdash') + ggsize(1000, 350)\n\n   \n   \n\n\n\nprint('95% confidence interval: ', [lower, upper])\n\n95% confidence interval:  [np.float64(0.2), np.float64(0.475)]"
+    "text": "Parametric bootstrap\n\ndef statistic(data):\n    return (data &gt;= 10).mean()\n\nestimates, lower, upper = simple_simulation_ci(clark['AST'], statistic, 10000)\nestimates = pd.DataFrame({\"Simulated fraction\": estimates})\n\nggplot() + geom_bar(data=estimates, mapping=aes(x=\"Simulated fraction\"))\\\n+ geom_vline(xintercept=lower, color='red', linetype='longdash')\\\n+ geom_vline(xintercept=upper, color='red', linetype='longdash') + ggsize(1000, 350)\n\n   \n   \n\n\n\nprint('95% confidence interval: ', [lower, upper])\n\n95% confidence interval:  [np.float64(0.2), np.float64(0.5)]"
   },
   {
     "objectID": "modules/01-Single-variable/lectures/Lecture-1-3/slides-1-3.html#non-parametric-bootstrap-for-lambda",
@@ -7725,21 +7725,21 @@
     "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#components-transforms-4",
     "title": "Data Analytics and Visualization",
     "section": "Components: Transforms",
-    "text": "Components: Transforms\nWe can create a 1-d histrogram by binning just the x coordinate with binX. The geometry rectY corresponds to bars.\n\nPlot.plot({height: 300, width: 600,\n  marks: [ \n    Plot.rectY(penguins,\n        Plot.binX({y: \"count\"}, {x: \"bill_length_mm\"})\n    )\n  ]\n})"
+    "text": "Components: Transforms\nWe can use color to group our data\n\n\n\nPlot.plot({height: 300, width: 600,\n  color: {legend: true},\n  marks: [ \n    Plot.hexgrid(),\n    Plot.dot(penguins,\n    Plot.hexbin({r: \"count\"}, \n    {x: \"bill_length_mm\", y: \"bill_depth_mm\", \n    stroke: 'species'})\n    )\n  ],\n})\n\n\n\n\n\n\n\n\nPlot.plot({height: 300, width: 600,\n  color: {legend: true},\n  marks: [ \n    Plot.hexgrid(),\n    Plot.dot(penguins,\n    Plot.hexbin({r: \"count\"}, \n    {x: \"bill_length_mm\", y: \"bill_depth_mm\", \n    stroke: 'island'})\n    )\n  ],\n})"
   },
   {
     "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#components-transforms-5",
     "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#components-transforms-5",
     "title": "Data Analytics and Visualization",
     "section": "Components: Transforms",
-    "text": "Components: Transforms\nThe dodge transform ensures that points don’t overlap (here by moving up the y axis).\n\nPlot.plot({height: 300, width: 600,\n  marks: [ \n    Plot.dot(penguins,\n        Plot.dodgeY({x: \"bill_length_mm\"})\n    )\n  ]\n})"
+    "text": "Components: Transforms\nWe can create a 1-d histrogram by binning just the x coordinate with binX. The geometry rectY corresponds to tightly packed bars.\n\nPlot.plot({height: 300, width: 600,\n  marks: [ \n    Plot.rectY(penguins,\n        Plot.binX({y: \"count\"}, {x: \"bill_length_mm\"})\n    )\n  ]\n})"
   },
   {
     "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#components-transforms-6",
     "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#components-transforms-6",
     "title": "Data Analytics and Visualization",
     "section": "Components: Transforms",
-    "text": "Components: Transforms\nThe sort transform sorts observations by some column. Here we’ll compose it with the dodge transform.\n\nPlot.plot({height: 300, width: 600,\n  marks: [ \n    Plot.dot(penguins,\n        Plot.dodgeY(Plot.sort(\"bill_length_mm\", {x: \"bill_length_mm\"}))\n    )\n  ]\n})"
+    "text": "Components: Transforms\nThe group transform does the equivalent for categorical variables.\n\nPlot.plot({height: 300, width: 600,\n  color: {legend: true},\n  marks: [ \n    Plot.barY(penguins,\n        Plot.groupX({y: \"count\"}, {x: \"island\", fill: \"species\"})\n    )\n  ]\n})"
   },
   {
     "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#other-plots",
@@ -7760,7 +7760,7 @@
     "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#components-transforms-7",
     "title": "Data Analytics and Visualization",
     "section": "Components: Transforms",
-    "text": "Components: Transforms\nThe sort transform sorts observations by some column. Here we’ll compose it with the dodge transform.\n\nPlot.plot({height: 300, width: 600,\n  marks: [ \n    Plot.dot(penguins,\n        Plot.dodgeY(Plot.sort(\"bill_length_mm\", {x: \"bill_length_mm\"}))\n    )\n  ]\n})"
+    "text": "Components: Transforms\nThe dodge transform ensures that points don’t overlap (here by moving up the y axis).\n\nPlot.plot({height: 300, width: 600,\n  marks: [ \n    Plot.dot(penguins,\n        Plot.dodgeY({x: \"bill_length_mm\"})\n    )\n  ]\n})"
   },
   {
     "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#lets-try-it-out",
@@ -7782,5 +7782,117 @@
     "title": "Election Prediction!",
     "section": "",
     "text": "import numpy as np\n\nfrom lets_plot import *\nimport pandas as pd\nimport vega_datasets\nimport seaborn as sns\nLetsPlot.setup_html()\n\n\n            \n            \n            \n\n\n\nelections = pd.read_csv('data/elections.tsv', delimiter='\\t')\nelections\n\n\n\n\n\n\n\n\nyear\nwinner\nparty\nEC votes\nEC pct\npop. pct\npop pct margin\npop votes\npop votes margin\nrunner-up\nrunner-up party\nturnout\n\n\n\n\n0\n1796\nJohn Adams\nFed.\n71/138\n51.45%\n53.45%\n6.90%\n35,726\n4,611\nThomas Jefferson\nD-R[b]\n20.1%\n\n\n1\n1800\nThomas Jefferson\nD-R\n73/138\n52.90%\n60.57%\n22.86%\n41,330\n15,378\nAaron Burr\nD-R[c]\n32.3%\n\n\n2\n1804\nThomas Jefferson\nD-R\n162/176\n92.05%\n73.20%\n45.58%\n104,110\n65,191\nCharles C. Pinckney\nFed.\n23.8%\n\n\n3\n1808\nJames Madison\nD-R\n122/175\n69.72%\n64.97%\n32.33%\n124,732\n62,301\nCharles C. Pinckney\nFed.\n36.8%\n\n\n4\n1812\nJames Madison\nD-R\n128/217\n58.99%\n52.30%\n2.74%\n140,431\n7,650\nDeWitt Clinton\nD-R[d]\n40.4%\n\n\n5\n1816\nJames Monroe\nD-R\n183/217\n84.33%\n72.90%\n37.24%\n76,592\n41,852\nRufus King\nFed.\n23.5%\n\n\n6\n1820\nJames Monroe\nD-R\n231/232\n99.57%\n78.34%\n64.69%\n87,343\n69,878\nJohn Quincy Adams\nD-R[e]\n10.1%\n\n\n7\n1824\nJohn Quincy Adams\nD-R\n84/261\n32.18%\n30.92%\n−10.44%\n113,142\n−38,221\nAndrew Jackson\nD-R[f]\n26.9%\n\n\n8\n1828\nAndrew Jackson\nDem.\n178/261\n68.20%\n55.93%\n12.25%\n642,806\n140,839\nJohn Quincy Adams\nNR\n57.3%\n\n\n9\n1832\nAndrew Jackson\nDem.\n219/286\n76.57%\n54.74%\n17.81%\n702,735\n228,628\nHenry Clay\nNR\n57.0%\n\n\n10\n1836\nMartin Van Buren\nDem.\n170/294\n57.82%\n50.79%\n14.20%\n763,291\n213,384\nWilliam Henry Harrison\nWhig\n56.5%\n\n\n11\n1840\nWilliam Henry Harrison\nWhig\n234/294\n79.59%\n52.87%\n6.05%\n1,275,583\n145,938\nMartin Van Buren\nDem.\n80.3%\n\n\n12\n1844\nJames K. Polk\nDem.\n170/275\n61.82%\n49.54%\n1.45%\n1,339,570\n39,413\nHenry Clay\nWhig\n79.2%\n\n\n13\n1848\nZachary Taylor\nWhig\n163/290\n56.21%\n47.28%\n4.79%\n1,360,235\n137,882\nLewis Cass\nDem.\n72.8%\n\n\n14\n1852\nFranklin Pierce\nDem.\n254/296\n85.81%\n50.83%\n6.95%\n1,605,943\n219,525\nWinfield Scott\nWhig\n69.5%\n\n\n15\n1856\nJames Buchanan\nDem.\n174/296\n58.78%\n45.29%\n12.20%\n1,835,140\n494,472\nJohn C. Frémont\nRep.\n79.4%\n\n\n16\n1860\nAbraham Lincoln\nRep.\n180/303\n59.41%\n39.65%\n10.13%\n1,855,993\n474,049\nJohn C. Breckinridge\nDem.[g]\n81.8%\n\n\n17\n1864\nAbraham Lincoln\nRep.\n212/233\n90.99%\n55.03%\n10.08%\n2,211,317\n405,090\nGeorge B. McClellan\nDem.\n76.3%\n\n\n18\n1868\nUlysses S. Grant\nRep.\n214/294\n72.79%\n52.66%\n5.32%\n3,013,790\n304,810\nHoratio Seymour\nDem.\n80.9%\n\n\n19\n1872\nUlysses S. Grant\nRep.\n286/352\n81.25%\n55.58%\n11.80%\n3,597,439\n763,729\nThomas A. Hendricks\nDem.[h]\n72.1%\n\n\n20\n1876\nRutherford B. Hayes\nRep.\n185/369\n50.14%\n47.92%\n−3.00%\n4,034,142\n−252,666\nSamuel J. Tilden\nDem.\n82.6%\n\n\n21\n1880\nJames A. Garfield\nRep.\n214/369\n57.99%\n48.31%\n0.09%\n4,453,337\n1,898\nWinfield Scott Hancock\nDem.\n80.5%\n\n\n22\n1884\nGrover Cleveland\nDem.\n219/401\n54.61%\n48.85%\n0.57%\n4,914,482\n57,579\nJames G. Blaine\nRep.\n78.2%\n\n\n23\n1888\nBenjamin Harrison\nRep.\n233/401\n58.10%\n47.80%\n−0.83%\n5,443,892\n−90,596\nGrover Cleveland\nDem.\n80.5%\n\n\n24\n1892\nGrover Cleveland\nDem.\n277/444\n62.39%\n46.02%\n3.01%\n5,553,898\n363,099\nBenjamin Harrison\nRep.\n75.8%\n\n\n25\n1896\nWilliam McKinley\nRep.\n271/447\n60.63%\n51.02%\n4.31%\n7,112,138\n601,331\nWilliam Jennings Bryan\nDem.\n79.6%\n\n\n26\n1900\nWilliam McKinley\nRep.\n292/447\n65.23%\n51.64%\n6.12%\n7,228,864\n857,932\nWilliam Jennings Bryan\nDem.\n73.7%\n\n\n27\n1904\nTheodore Roosevelt\nRep.\n336/476\n70.59%\n56.42%\n18.83%\n7,630,557\n2,546,677\nAlton Brooks Parker\nDem.\n65.5%\n\n\n28\n1908\nWilliam Howard Taft\nRep.\n321/483\n66.46%\n51.57%\n8.53%\n7,678,335\n1,269,356\nWilliam Jennings Bryan\nDem.\n65.7%\n\n\n29\n1912\nWoodrow Wilson\nDem.\n435/531\n81.92%\n41.84%\n14.44%\n6,296,284\n2,173,563\nTheodore Roosevelt\nProg.\n59.0%\n\n\n30\n1916\nWoodrow Wilson\nDem.\n277/531\n52.17%\n49.24%\n3.12%\n9,126,868\n578,140\nCharles Evans Hughes\nRep.\n61.8%\n\n\n31\n1920\nWarren G. Harding\nRep.\n404/531\n76.08%\n60.32%\n26.17%\n16,144,093\n7,004,432\nJames M. Cox\nDem.\n49.2%\n\n\n32\n1924\nCalvin Coolidge\nRep.\n382/531\n71.94%\n54.04%\n25.22%\n15,723,789\n7,337,547\nJohn W. Davis\nDem.\n48.9%\n\n\n33\n1928\nHerbert Hoover\nRep.\n444/531\n83.62%\n58.21%\n17.41%\n21,427,123\n6,411,659\nAl Smith\nDem.\n56.9%\n\n\n34\n1932\nFranklin D. Roosevelt\nDem.\n472/531\n88.89%\n57.41%\n17.76%\n22,821,277\n7,060,023\nHerbert Hoover\nRep.\n56.9%\n\n\n35\n1936\nFranklin D. Roosevelt\nDem.\n523/531\n98.49%\n60.80%\n24.26%\n27,752,648\n11,070,786\nAlf Landon\nRep.\n61.0%\n\n\n36\n1940\nFranklin D. Roosevelt\nDem.\n449/531\n84.56%\n54.74%\n9.96%\n27,313,945\n4,966,201\nWendell Willkie\nRep.\n62.4%\n\n\n37\n1944\nFranklin D. Roosevelt\nDem.\n432/531\n81.36%\n53.39%\n7.50%\n25,612,916\n3,594,987\nThomas E. Dewey\nRep.\n55.9%\n\n\n38\n1948\nHarry S Truman\nDem.\n303/531\n57.06%\n49.55%\n4.48%\n24,179,347\n2,188,055\nThomas E. Dewey\nRep.\n52.2%\n\n\n39\n1952\nDwight D. Eisenhower\nRep.\n442/531\n83.24%\n55.18%\n10.85%\n34,075,529\n6,700,439\nAdlai Stevenson II\nDem.\n62.3%\n\n\n40\n1956\nDwight D. Eisenhower\nRep.\n457/531\n86.06%\n57.37%\n15.40%\n35,579,180\n9,551,152\nAdlai Stevenson II\nDem.\n60.2%\n\n\n41\n1960\nJohn F. Kennedy\nDem.\n303/537\n56.42%\n49.72%\n0.17%\n34,220,984\n112,827\nRichard Nixon\nRep.\n63.8%\n\n\n42\n1964\nLyndon B. Johnson\nDem.\n486/538\n90.33%\n61.05%\n22.58%\n43,127,041\n15,951,287\nBarry Goldwater\nRep.\n62.8%\n\n\n43\n1968\nRichard Nixon\nRep.\n301/538\n55.95%\n43.42%\n0.70%\n31,783,783\n511,944\nHubert Humphrey\nDem.\n62.5%\n\n\n44\n1972\nRichard Nixon\nRep.\n520/538\n96.65%\n60.67%\n23.15%\n47,168,710\n17,995,488\nGeorge McGovern\nDem.\n56.2%\n\n\n45\n1976\nJimmy Carter\nDem.\n297/538\n55.20%\n50.08%\n2.06%\n40,831,881\n1,683,247\nGerald Ford\nRep.\n54.8%\n\n\n46\n1980\nRonald Reagan\nRep.\n489/538\n90.89%\n50.75%\n9.74%\n43,903,230\n8,423,115\nJimmy Carter\nDem.\n54.2%\n\n\n47\n1984\nRonald Reagan\nRep.\n525/538\n97.58%\n58.77%\n18.21%\n54,455,472\n16,878,120\nWalter Mondale\nDem.\n55.2%\n\n\n48\n1988\nGeorge H. W. Bush\nRep.\n426/538\n79.18%\n53.37%\n7.72%\n48,886,597\n7,077,121\nMichael Dukakis\nDem.\n52.8%\n\n\n49\n1992\nBill Clinton\nDem.\n370/538\n68.77%\n43.01%\n5.56%\n44,909,806\n5,805,256\nGeorge H. W. Bush\nRep.\n58.1%\n\n\n50\n1996\nBill Clinton\nDem.\n379/538\n70.45%\n49.23%\n8.51%\n47,400,125\n8,201,370\nBob Dole\nRep.\n51.7%\n\n\n51\n2000\nGeorge W. Bush\nRep.\n271/538\n50.47%\n47.87%\n−0.51%\n50,455,156\n−538,179\nAl Gore\nDem.\n54.2%\n\n\n52\n2004\nGeorge W. Bush\nRep.\n286/538\n53.16%\n50.73%\n2.46%\n62,040,610\n3,012,171\nJohn Kerry\nDem.\n60.1%\n\n\n53\n2008\nBarack Obama\nDem.\n365/538\n67.84%\n52.93%\n7.27%\n69,498,516\n9,550,193\nJohn McCain\nRep.\n61.6%\n\n\n54\n2012\nBarack Obama\nDem.\n332/538\n61.71%\n51.06%\n3.86%\n65,915,795\n4,982,291\nMitt Romney\nRep.\n58.6%\n\n\n55\n2016\nDonald Trump\nRep.\n304/538\n56.50%\n46.09%\n−2.09%\n62,984,828\n−2,868,686\nHillary Clinton\nDem.\n57.3%\n\n\n56\n2020\nJoe Biden\nDem.\n306/538\n56.88%\n51.31%\n4.45%\n81,284,666\n7,060,347\nDonald Trump\nRep.\n66.6%\n\n\n\n\n\n\n\n\nelections = elections.query('year &gt;= 1944')\n\n\nincumbent_won = elections.party.values[:-1] == elections.party.values[1:]\nyear = elections.year.values[1:]\n\nelections = pd.DataFrame({'incumbent won': incumbent_won, 'year': year})\nelections\n\n\n\n\n\n\n\n\nincumbent won\nyear\n\n\n\n\n0\nTrue\n1948\n\n\n1\nFalse\n1952\n\n\n2\nTrue\n1956\n\n\n3\nFalse\n1960\n\n\n4\nTrue\n1964\n\n\n5\nFalse\n1968\n\n\n6\nTrue\n1972\n\n\n7\nFalse\n1976\n\n\n8\nFalse\n1980\n\n\n9\nTrue\n1984\n\n\n10\nTrue\n1988\n\n\n11\nFalse\n1992\n\n\n12\nTrue\n1996\n\n\n13\nFalse\n2000\n\n\n14\nTrue\n2004\n\n\n15\nFalse\n2008\n\n\n16\nTrue\n2012\n\n\n17\nFalse\n2016\n\n\n18\nFalse\n2020\n\n\n\n\n\n\n\n\nspx = pd.read_csv('data/SPX.csv', parse_dates=['Date'])\n\n\nspx_oct = spx.query('Date.dt.month == 10')\nspx_oct['year'] = spx['Date'].dt.year\n\n/var/folders/ct/cvh0qs6j5rlbcp004rxwtwh80000gn/T/ipykernel_37127/789859583.py:2: SettingWithCopyWarning: \nA value is trying to be set on a copy of a slice from a DataFrame.\nTry using .loc[row_indexer,col_indexer] = value instead\n\nSee the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy\n  spx_oct['year'] = spx['Date'].dt.year\n\n\n\nspx\n\n\n\n\n\n\n\n\nDate\nOpen\n\n\n\n\n0\n1928-02-01\n17.530001\n\n\n1\n1928-03-01\n17.299999\n\n\n2\n1928-05-01\n19.780001\n\n\n3\n1928-06-01\n20.070000\n\n\n4\n1928-08-01\n19.420000\n\n\n...\n...\n...\n\n\n742\n2024-04-01\n5257.970000\n\n\n743\n2024-05-01\n5029.030000\n\n\n744\n2024-07-01\n5471.080000\n\n\n745\n2024-08-01\n5537.840000\n\n\n746\n2024-10-01\n5757.730000\n\n\n\n\n747 rows × 2 columns\n\n\n\n\nggplot() + geom_line(data=spx.query('Date.dt.year &gt; 2020'), mapping=aes(x='Date', y='Open'))"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#internal-exploratory-data-analysis",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#internal-exploratory-data-analysis",
+    "title": "Data Analytics and Visualization",
+    "section": "Internal: Exploratory data analysis",
+    "text": "Internal: Exploratory data analysis\nI don’t know anything about my data, how do I start to understand it?\nPenguins:\n\nPlot.plot({height: 300,\n  marks: [ \n    Plot.dot(penguins, {x: \"bill_length_mm\", y: \"bill_depth_mm\", stroke: \"species\"})\n  ]\n})"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#internal-model-and-assumption-checking",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#internal-model-and-assumption-checking",
+    "title": "Data Analytics and Visualization",
+    "section": "Internal: Model and assumption checking",
+    "text": "Internal: Model and assumption checking\nI’m making assumptions about my data, are they correct?\nCaitlin Clark model:"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#internal-debugging-and-question-answering",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#internal-debugging-and-question-answering",
+    "title": "Data Analytics and Visualization",
+    "section": "Internal: Debugging and question answering",
+    "text": "Internal: Debugging and question answering\nI have a question about my data, can I answer easily?\nMissing data?:"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#external-supporting-conclusions",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#external-supporting-conclusions",
+    "title": "Data Analytics and Visualization",
+    "section": "External: Supporting conclusions",
+    "text": "External: Supporting conclusions\nI want to showcase a result I found\nMy own work:"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#external-persuation",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#external-persuation",
+    "title": "Data Analytics and Visualization",
+    "section": "External: Persuation",
+    "text": "External: Persuation"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#external-visual-storytelling",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#external-visual-storytelling",
+    "title": "Data Analytics and Visualization",
+    "section": "External: Visual storytelling",
+    "text": "External: Visual storytelling\nUse visualization in service of a larger story\nNY Times:"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#example-applications-of-visualization",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#example-applications-of-visualization",
+    "title": "Data Analytics and Visualization",
+    "section": "Example applications of visualization",
+    "text": "Example applications of visualization"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#what-formats-could-our-visualization-software-produce",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#what-formats-could-our-visualization-software-produce",
+    "title": "Data Analytics and Visualization",
+    "section": "What formats could our visualization software produce?",
+    "text": "What formats could our visualization software produce?\nRaster images\nA specification of the color of each pixel to display.\nExamples: - .png, .jpg, .bmp\nVector images\nA specification of the color of each pixel to display.\nExamples: - .svg, .pdf"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#components-transforms-8",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#components-transforms-8",
+    "title": "Data Analytics and Visualization",
+    "section": "Components: Transforms",
+    "text": "Components: Transforms\nThe sort transform sorts observations by some column. Here we’ll compose it with the dodge transform.\n\nPlot.plot({height: 300, width: 600,\n  marks: [ \n    Plot.dot(penguins,\n        Plot.dodgeY(Plot.sort(\"bill_length_mm\", {x: \"bill_length_mm\"}))\n    )\n  ]\n})"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#penguins-1",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#penguins-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Penguins!",
+    "text": "Penguins!\n\nimport pandas as pd\nimport seaborn as sns\npenguins = sns.load_dataset('penguins')\nojs_define(data=penguins)"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#external-descision-making",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#external-descision-making",
+    "title": "Data Analytics and Visualization",
+    "section": "External: Descision making",
+    "text": "External: Descision making\nHelp users make good descisions\nCovid dashboards:"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#external-decision-making",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#external-decision-making",
+    "title": "Data Analytics and Visualization",
+    "section": "External: Decision making",
+    "text": "External: Decision making\nHelp users make good decisions\nCovid dashboards:"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#exercise-form-groups-and-analyze-one-story",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#exercise-form-groups-and-analyze-one-story",
+    "title": "Data Analytics and Visualization",
+    "section": "Exercise: form groups and analyze one story",
+    "text": "Exercise: form groups and analyze one story\n\nSegregation in U.S. Cities\nFires in California\nCovid Simulator\nFamily income vs college\nCollege mobility"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#exercise-form-groups-and-analyze-a-story",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#exercise-form-groups-and-analyze-a-story",
+    "title": "Data Analytics and Visualization",
+    "section": "Exercise: form groups and analyze a story",
+    "text": "Exercise: form groups and analyze a story\n\nSegregation in U.S. Cities\nFires in California\nCovid Simulator\nFamily income vs college\nCollege mobility"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#plot",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#plot",
+    "title": "Data Analytics and Visualization",
+    "section": "Plot",
+    "text": "Plot\n\n\n\n\n\n\n\n\nPurpose\nggplot2\nObservable Plot\n\n\n\n\nInitialize the plotSpecify geom or markFrom which dataset?Variable mappingsMark colorMark shapeMark opacity (constant)Mark size (constant)Reveal legendFacetAxis labelsAdd gridlines\nggplot()  +  geom_point(penguins,     aes(x = flipper_length_mm,           y = body_mass_g,           color = species,           shape = species),    alpha = 0.7,    size = 4    ) +  # N/A: legends revealed by default  facet_wrap(~island)  +  labs(x = \"Flipper length (mm)\",             y = \"Body mass (g)\")  # N/A: gridlines added by default\nPlot.plot({  marks: [      Plot.dot(penguins,          {x: \"flipper_length_mm\",          y: \"body_mass_g\",          fill: \"species\",          symbol: \"species\"          opacity: 0.7          r: 4})      ]  symbol: {legend: true},  facet: {data: penguins, x: \"island\"},  x: {label: \"Flipper length (mm)\"},  y: {label: \"Body mass (g)\"},  grid: true})"
+  },
+  {
+    "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#components-interactions-1",
+    "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#components-interactions-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Components: Interactions",
+    "text": "Components: Interactions"
   }
 ]

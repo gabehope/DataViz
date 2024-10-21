@@ -9,7 +9,83 @@ format:
         slideNumber: true
 ---
 
+
+# What do we use visualization for?
+
+## **Internal:** Exploratory data analysis
+I don't know anything about my data, how do I start to understand it?
+
+#### Penguins:
+
+```{ojs}
+//| echo: false
+Plot.plot({height: 300,
+  marks: [ 
+    Plot.dot(penguins, {x: "bill_length_mm", y: "bill_depth_mm", stroke: "species"})
+  ]
+})
+```
+
+## **Internal:** Model and assumption checking
+I'm making assumptions about my data, are they correct?
+
+#### Caitlin Clark model:
+
+![](pictures/fit.png)
+
+## **Internal:** Debugging and question answering
+I have a question about my data, can I answer easily?
+
+#### Missing data?:
+![](pictures/fit.png)
+
+
+## **External:** Supporting conclusions
+I want to showcase a result I found
+
+#### My own work:
+![](pictures/movies.png)
+
+## **External:** Decision making
+
+Help users make good decisions
+
+#### Covid dashboards:
+
+![](pictures/dashboard.png)
+
+## **External:** Visual storytelling
+Use visualization in service of a larger story
+
+#### NY Times:
+
+![](pictures/story.png)
+
+# Visualization on the Web
+
+## **Exercise:** form groups and analyze a story
+
+- [Segregation in U.S. Cities](https://www.washingtonpost.com/graphics/2018/national/segregation-us-cities/)
+- [Fires in California](https://www.washingtonpost.com/graphics/2020/climate-environment/north-complex-fire-california-climate-change/?itid=lk_inline_manual_2)
+- [Covid Simulator](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/?itid=lk_inline_manual_4)
+- [Family income vs college](https://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html)
+- [College mobility](https://www.nytimes.com/interactive/projects/college-mobility/harvey-mudd-college)
+
+
 # From ggplot to ObservablePlot
+
+## Let's try it out!
+
+An [observable notebook](https://observablehq.com/d/cf37ed064de497f1)
+
+## Plot
+
+| Purpose |`ggplot2`|`Observable Plot`|
+| -------| --------- | ---------- | 
+|<span class="coh hello"><u>Initialize the plot</span><br><br><br><span class="coh geom">Specify geom or mark</span><br><span class="coh data">From which dataset?</span><br><span class="coh variables">Variable mappings</span><br><span class="coh fill">Mark color</span><br><span class="coh symbol">Mark shape</span><br><span class="coh opacity">Mark opacity (constant)</span><br><span class="coh size">Mark size (constant)</span><br><br><br><span class="coh legend">Reveal legend</span><br><span class="coh facet">Facet</span><br><span class="coh axislabel">Axis labels</span><br><br><br><span class="coh grid">Add gridlines</span> | <span class="coh hello">`ggplot()`</span>&nbsp;&nbsp;` + `<br><br><br>&nbsp;&nbsp;<span class="coh geom">`geom_point`</span>`(`<span class="coh data">`penguins`</span>`,` <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh variables">`aes(x = flipper_length_mm,`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`y = body_mass_g,`</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh fill">`color = species,`</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh symbol">`shape = species`</span>`),`<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh opacity">`alpha = 0.7,`</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh size">`size = 4`</span><br>&nbsp;&nbsp;&nbsp;&nbsp;`) +`<br><br>&nbsp;&nbsp;<span style="color: gray;" class="coh legend"><i>`# N/A: legends revealed by default`</i></span><br>&nbsp;&nbsp;<span class="coh facet">`facet_wrap(~island)`</span>&nbsp;&nbsp;`+`<br>&nbsp;&nbsp;<span class="coh axislabel">`labs(x = "Flipper length (mm)",`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`y = "Body mass (g)")`</span><br><br>&nbsp;&nbsp;<span style="color: gray;" class="coh grid"><i>`# N/A: gridlines added by default`</i></span>| <span class="coh hello">`Plot.plot`</span>`({`<br><br>&nbsp;&nbsp;`marks: [`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh geom">`Plot.dot`</span>`(`<span class="coh data">`penguins`</span>`,` <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh variables">`{x: "flipper_length_mm",`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`y: "body_mass_g",`</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh fill">`fill: "species",`</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh symbol">`symbol: "species"`</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh opacity">`opacity: 0.7`</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coh size">`r: 4`</span>`})`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`]`<br><br>&nbsp;&nbsp;<span class="coh legend">`symbol: {legend: true},`</span><br>&nbsp;&nbsp;<span class="coh facet">`facet: {data: penguins, x: "island"},`</span><br>&nbsp;&nbsp;<span class="coh axislabel">`x: {label: "Flipper length (mm)"},`</span><br>&nbsp;&nbsp;<span class="coh axislabel">`y: {label: "Body mass (g)"},`</span><br><br>&nbsp;&nbsp;<span class="coh grid">`grid: true`</span><br><br>`})`</span>
+
+
+
 
 ## Penguins!
 
@@ -336,11 +412,48 @@ Plot.plot({height: 300, width: 600,
 })
 ```
 
+## Components: Transforms   
 
+We can use color to group our data
+
+::::: columns
+::: {.column}
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 600,
+  color: {legend: true},
+  marks: [ 
+    Plot.hexgrid(),
+    Plot.dot(penguins,
+    Plot.hexbin({r: "count"}, 
+    {x: "bill_length_mm", y: "bill_depth_mm", 
+    stroke: 'species'})
+    )
+  ],
+})
+```
+:::
+::: {.column}
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 600,
+  color: {legend: true},
+  marks: [ 
+    Plot.hexgrid(),
+    Plot.dot(penguins,
+    Plot.hexbin({r: "count"}, 
+    {x: "bill_length_mm", y: "bill_depth_mm", 
+    stroke: 'island'})
+    )
+  ],
+})
+```
+:::
+:::::
 
 ## Components: Transforms   
 
-We can create a 1-d histrogram by binning just the x coordinate with `binX`. The geometry `rectY` corresponds to bars.
+We can create a 1-d histrogram by binning just the x coordinate with `binX`. The geometry `rectY` corresponds to tightly packed bars.
 
 
 ```{ojs}
@@ -353,6 +466,25 @@ Plot.plot({height: 300, width: 600,
   ]
 })
 ```
+
+## Components: Transforms   
+
+The `group` transform does the equivalent for categorical variables.
+
+
+```{ojs}
+//| echo: true
+Plot.plot({height: 300, width: 600,
+  color: {legend: true},
+  marks: [ 
+    Plot.barY(penguins,
+        Plot.groupX({y: "count"}, {x: "island", fill: "species"})
+    )
+  ]
+})
+```
+
+
 
 ## Components: Transforms   
 
@@ -425,9 +557,7 @@ Plot.plot({
 })
 ```
 
-## Let's try it out!
 
-An [observable notebook](https://observablehq.com/d/cf37ed064de497f1)
 
 ## Components: **Interactions**
 `Inputs` allow for values that the user controls.
@@ -447,3 +577,4 @@ Plot.plot({height: 300, width: 600,
   ]
 })
 ```
+## Components: **Interactions**
