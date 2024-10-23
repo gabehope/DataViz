@@ -510,7 +510,7 @@ Prof.&nbsp;Gabe Hope
 </section>
 <section id="penguins-1" class="slide level2">
 <h2>Penguins!</h2>
-<div id="d38bb436" class="cell" data-execution_count="1">
+<div id="8b469fd7" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-2"><a></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb2-3"><a></a>penguins <span class="op">=</span> sns.load_dataset(<span class="st">'penguins'</span>)</span>
@@ -635,7 +635,7 @@ Prof.&nbsp;Gabe Hope
 <section id="components-aesthetic-mappings" class="slide level2">
 <h2>Components: Aesthetic mappings</h2>
 <p>Here our aesthetic mapping is defined as a dictionary (object)</p>
-<div id="ed0accf7" class="cell" data-execution_count="2">
+<div id="04003c0a" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>{x: <span class="st">"bill_length_mm"</span>, y: <span class="st">"bill_depth_mm"</span>, stroke: <span class="st">"species"</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Full code</p>
@@ -672,7 +672,7 @@ Prof.&nbsp;Gabe Hope
 <section id="components-geometries" class="slide level2">
 <h2>Components: Geometries</h2>
 <p>Like ggplot, our choice of geometry is defined via a function</p>
-<div id="4958ccea" class="cell" data-execution_count="3">
+<div id="e7bcc36b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>Plot.dot(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div style="font-size: 60%">
@@ -695,7 +695,7 @@ Prof.&nbsp;Gabe Hope
 <section id="layers" class="slide level2">
 <h2>Layers</h2>
 <p>The geometry plus data and aesthetic mapping forms a <strong>layer</strong></p>
-<div id="686bce14" class="cell" data-execution_count="4">
+<div id="781d643b" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>Plot.dot(penguins, {x: <span class="st">"bill_length_mm"</span>, y: <span class="st">"bill_depth_mm"</span>, stroke: <span class="st">"species"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div style="font-size: 60%">
@@ -746,7 +746,7 @@ Prof.&nbsp;Gabe Hope
 </div>
 </div>
 <p>The input to the <code>filter</code> method is an <em>anonymous function</em> in javascript. It’s equivalent in Python would be:</p>
-<div id="21023eab" class="cell" data-execution_count="5">
+<div id="0b8ea30e" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">lambda</span> d: d[<span class="st">'species'</span>] <span class="op">==</span> <span class="st">'Gentoo'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>filter</code> takes all entries where the function returns <code>true</code>. - Like pandas’ <code>query</code></p>
@@ -815,7 +815,7 @@ Prof.&nbsp;Gabe Hope
 <section id="components-transforms" class="slide level2">
 <h2>Components: Transforms</h2>
 <p>Transforms create new computed aesthetic mappings and usually have the form:</p>
-<div id="5351a440" class="cell" data-execution_count="6">
+<div id="f32df19d" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a>Plot.<span class="bu">bin</span>({transform options}, {aesthetic mappings})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
