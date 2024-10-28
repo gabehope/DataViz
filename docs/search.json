@@ -2440,7 +2440,7 @@
     "href": "calendar/calendar.html",
     "title": "Course Calendar",
     "section": "",
-    "text": "This is the tentative course calendar for Data Analytics and Visualization. This calendar is subject to change depending on the pace of the class and student interest.\n\n\n\n\n\n\n\n\nDate\nEvent\nTopics\nReadings\nMaterials\n\n\n\n\nWeek 1\n\n\nAug 26, 2024\nLecture 0\nCourse introduction\n538\nSlides Handout\n\n\nAug 28, 2024\nLecture 1\nTidy data, data types\nMDSR 6.1\nSlides Handout\n\n\nWeek 2\n\n\nSep 2, 2024\nLabor day\n\n\n\n\n\nSep 4, 2024\nLecture 2\nIntroduction to visualization\nDV ch. 1 MDSR 2.1-2.5\nSlides Handout\n\n\nWeek 3\n\n\nSep 9, 2024\nLecture 3\nPrinciples for effective visualization\n\nSlides Handout\n\n\nSep 11, 2024\nLecture 4\nSingle variable analysis & visualization\n\nSlides Handout\n\n\nWeek 4\n\n\nSep 16, 2024\nLecture 5\nSimulation-based inference\n\nSlides Handout\n\n\nSep 18, 2024\nLecture 6\nModeling and maximum likelihood\n\nSlides Handout\n\n\nSep 19, 2024\nQuiz 0 Due\nVisualization\n\nNotebook Gradescope\n\n\nWeek 5\n\n\nSep 23, 2024\nLecture 7\nMore on maximum likelihood\n\nSlides Handout\n\n\nSep 25, 2024\nLecture 8\nData wrangling for multiple variables\n\nSlides\n\n\nSep 26, 2024\nQuiz 1 Due\nClustering and mixtures\n\nNotebook Gradescope\n\n\nSep 27, 2024\nHomework 1 Due\nSingle variable analysis & visualization\n\nAssignment Gradescope\n\n\nWeek 6\n\n\nSep 30, 2024\nLecture 9\n2-D Visualizations\n\nnotebook\n\n\nOct 2, 2024\nLecture 10\nModeling with multiple variables\n\nNotebook\n\n\nWeek 7\n\n\nOct 7, 2024\nLecture 11\nConditional models\n\nNotebook Slides\n\n\nOct 9, 2024\nFall break\n\n\n\n\n\nWeek 8\n\n\nOct 14, 2024\nLecture 12\nConditional models (cont.) + Intro to Javascript\n\nSlides\n\n\nOct 16, 2024\nLecture 13\nConditional models (cont.) + Intro to Javascript\n\nSlides\n\n\nOct 21, 2024\nRead before lecture\nMachine bias reading\n\nArticle Methods\n\n\nWeek 9\n\n\nOct 21, 2024\nLecture 14\nVisualization for the web + intro to javascript\nLearn just enough javascript Plot from ggplot\nSlides\n\n\nOct 23, 2024\nQuiz 2 Due\nInference\n\nNotebook Gradescope\n\n\nOct 23, 2024\nLecture 15\nWorking with timeseries\n\n\n\n\nWeek 10\n\n\nOct 28, 2024\nLecture 16\nTimeseries data\n\n\n\n\nOct 29, 2024\nQuiz 3 Due\nMulti-variable data\n\nNotebook Data Gradescope\n\n\nOct 29, 2024\nHomework 2 Due\nMulti-variable visualization\nQuarto setup\nAssignment Canvas TBD\n\n\nOct 30, 2024\nLecture 17\nTimeseries models and analysis\n\n\n\n\nWeek 11\n\n\nNov 4, 2024\nLecture 18\nSpatial analysis and visualization\n\n\n\n\nNov 6, 2024\nLecture 19\nGeographic data, projections and maps\n\n\n\n\nWeek 12\n\n\nNov 11, 2024\nLecture 20\nClimate data\n\n\n\n\nNov 13, 2024\nLecture 21\nMoving to the web\n\n\n\n\nWeek 13\n\n\nNov 18, 2024\nLecture 22\nInteraction and animation\n\n\n\n\nNov 20, 2024\nLecture 23\nInteraction and animation\n\n\n\n\nWeek 14\n\n\nNov 25, 2024\nLecture 24\nNetwork data\n\n\n\n\nNov 27, 2024\nThanksgiving\n\n\n\n\n\nWeek 15\n\n\nDec 2, 2024\nLecture 26\nNetwork visualization\n\n\n\n\nDec 4, 2024\nLecture 27\nNetwork modeling\n\n\n\n\nFinals\n\n\nDec 9, 2024\nFinal project due\n\n\n\n\n\nDec 13, 2024\nFinal project feedback due"
+    "text": "This is the tentative course calendar for Data Analytics and Visualization. This calendar is subject to change depending on the pace of the class and student interest.\n\n\n\n\n\n\n\n\nDate\nEvent\nTopics\nReadings\nMaterials\n\n\n\n\nWeek 1\n\n\nAug 26, 2024\nLecture 0\nCourse introduction\n538\nSlides Handout\n\n\nAug 28, 2024\nLecture 1\nTidy data, data types\nMDSR 6.1\nSlides Handout\n\n\nWeek 2\n\n\nSep 2, 2024\nLabor day\n\n\n\n\n\nSep 4, 2024\nLecture 2\nIntroduction to visualization\nDV ch. 1 MDSR 2.1-2.5\nSlides Handout\n\n\nWeek 3\n\n\nSep 9, 2024\nLecture 3\nPrinciples for effective visualization\n\nSlides Handout\n\n\nSep 11, 2024\nLecture 4\nSingle variable analysis & visualization\n\nSlides Handout\n\n\nWeek 4\n\n\nSep 16, 2024\nLecture 5\nSimulation-based inference\n\nSlides Handout\n\n\nSep 18, 2024\nLecture 6\nModeling and maximum likelihood\n\nSlides Handout\n\n\nSep 19, 2024\nQuiz 0 Due\nVisualization\n\nNotebook Gradescope\n\n\nWeek 5\n\n\nSep 23, 2024\nLecture 7\nMore on maximum likelihood\n\nSlides Handout\n\n\nSep 25, 2024\nLecture 8\nData wrangling for multiple variables\n\nSlides\n\n\nSep 26, 2024\nQuiz 1 Due\nClustering and mixtures\n\nNotebook Gradescope\n\n\nSep 27, 2024\nHomework 1 Due\nSingle variable analysis & visualization\n\nAssignment Gradescope\n\n\nWeek 6\n\n\nSep 30, 2024\nLecture 9\n2-D Visualizations\n\nnotebook\n\n\nOct 2, 2024\nLecture 10\nModeling with multiple variables\n\nNotebook\n\n\nWeek 7\n\n\nOct 7, 2024\nLecture 11\nConditional models\n\nNotebook Slides\n\n\nOct 9, 2024\nFall break\n\n\n\n\n\nWeek 8\n\n\nOct 14, 2024\nLecture 12\nConditional models (cont.) + Intro to Javascript\n\nSlides\n\n\nOct 16, 2024\nLecture 13\nConditional models (cont.) + Intro to Javascript\n\nSlides\n\n\nOct 21, 2024\nRead before lecture\nMachine bias reading\n\nArticle Methods\n\n\nWeek 9\n\n\nOct 21, 2024\nLecture 14\nVisualization for the web + intro to javascript\nLearn just enough javascript Plot from ggplot\nSlides\n\n\nOct 23, 2024\nQuiz 2 Due\nInference\n\nNotebook Gradescope\n\n\nOct 23, 2024\nLecture 15\nWorking with timeseries\n\n\n\n\nWeek 10\n\n\nOct 28, 2024\nLecture 16\nTimeseries data\n\nSlides\n\n\nOct 29, 2024\nQuiz 3 Due\nMulti-variable data\n\nNotebook Data Gradescope\n\n\nOct 29, 2024\nHomework 2 Due\nMulti-variable visualization\nQuarto setup\nAssignment Canvas TBD\n\n\nOct 30, 2024\nLecture 17\nTimeseries models and analysis\n\n\n\n\nWeek 11\n\n\nNov 4, 2024\nLecture 18\nSpatial analysis and visualization\n\n\n\n\nNov 6, 2024\nLecture 19\nGeographic data, projections and maps\n\n\n\n\nWeek 12\n\n\nNov 11, 2024\nLecture 20\nClimate data\n\n\n\n\nNov 13, 2024\nLecture 21\nMoving to the web\n\n\n\n\nWeek 13\n\n\nNov 18, 2024\nLecture 22\nInteraction and animation\n\n\n\n\nNov 20, 2024\nLecture 23\nInteraction and animation\n\n\n\n\nWeek 14\n\n\nNov 25, 2024\nLecture 24\nNetwork data\n\n\n\n\nNov 27, 2024\nThanksgiving\n\n\n\n\n\nWeek 15\n\n\nDec 2, 2024\nLecture 26\nNetwork visualization\n\n\n\n\nDec 4, 2024\nLecture 27\nNetwork modeling\n\n\n\n\nFinals\n\n\nDec 9, 2024\nFinal project due\n\n\n\n\n\nDec 13, 2024\nFinal project feedback due"
   },
   {
     "objectID": "calendar/calendar.html#week-0-826---830",
@@ -6976,7 +6976,7 @@
     "href": "modules/02-Multiple-variables/lectures/Lecture-2-3/notebook-2-3.html#penguins-c-c-conditional-model",
     "title": "Previous distributions",
     "section": "Penguins C | C conditional model",
-    "text": "Penguins C | C conditional model\n\\[p(y\\mid x) = \\frac{p(x, y)}{p(x)}\\]\n\np_x\n\n\n\n\n\n\n\n\nspecies\nprob_x\n\n\n\n\n0\nAdelie\n0.438438\n\n\n1\nChinstrap\n0.204204\n\n\n2\nGentoo\n0.357357\n\n\n\n\n\n\n\n\np_x = data_spsx[['species', 'prob']].groupby('species').sum().reset_index().rename(columns={'prob': 'prob_x'})\np_xy = data_spsx.merge(p_x, on='species')\np_xy\n\n\n\n\n\n\n\n\nspecies\nsex\ncount\nprob\nprob_x\n\n\n\n\n0\nAdelie\nFemale\n73\n0.219219\n0.438438\n\n\n1\nAdelie\nMale\n73\n0.219219\n0.438438\n\n\n2\nChinstrap\nFemale\n34\n0.102102\n0.204204\n\n\n3\nChinstrap\nMale\n34\n0.102102\n0.204204\n\n\n4\nGentoo\nFemale\n58\n0.174174\n0.357357\n\n\n5\nGentoo\nMale\n61\n0.183183\n0.357357\n\n\n\n\n\n\n\n\np_xy['prob_conditional'] = p_xy['prob'] / p_xy['prob_x']\np_xy[['species', 'sex', 'prob_conditional']].groupby('species').sum()\n\n\n\n\n\n\n\n\nsex\nprob_conditional\n\n\nspecies\n\n\n\n\n\n\nAdelie\nFemaleMale\n1.0\n\n\nChinstrap\nFemaleMale\n1.0\n\n\nGentoo\nFemaleMale\n1.0\n\n\n\n\n\n\n\nWe could also directly estimate our conditional model:\n\\[p(y \\mid x = \\text{Adelie})\\]\n\nadelie_data = data[['species', 'sex']].query('species == \"Adelie\"')\nadelie_data['count'] = 1\nadelie_data = adelie_data.groupby('sex').count()\nadelie_data['count'] / adelie_data['count'].sum()\n\nsex\nFemale    0.5\nMale      0.5\nName: count, dtype: float64\n\n\n\ndata_spsx = data[['species', 'sex', 'island']].copy()\ndata_spsx['count'] = 1\ndata_spsx = data_spsx.groupby(['species', 'sex', 'island']).count().reset_index()\ndata_spsx['prob'] = data_spsx['count'] / data_spsx['count'].sum()\ndata_spsx\n\n\n\n\n\n\n\n\nspecies\nsex\nisland\ncount\nprob\n\n\n\n\n0\nAdelie\nFemale\nBiscoe\n22\n0.066066\n\n\n1\nAdelie\nFemale\nDream\n27\n0.081081\n\n\n2\nAdelie\nFemale\nTorgersen\n24\n0.072072\n\n\n3\nAdelie\nMale\nBiscoe\n22\n0.066066\n\n\n4\nAdelie\nMale\nDream\n28\n0.084084\n\n\n5\nAdelie\nMale\nTorgersen\n23\n0.069069\n\n\n6\nChinstrap\nFemale\nDream\n34\n0.102102\n\n\n7\nChinstrap\nMale\nDream\n34\n0.102102\n\n\n8\nGentoo\nFemale\nBiscoe\n58\n0.174174\n\n\n9\nGentoo\nMale\nBiscoe\n61\n0.183183"
+    "text": "Penguins C | C conditional model\n\\[p(y\\mid x) = \\frac{p(x, y)}{p(x)}\\]\n\np_x\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[13], line 1\n----&gt; 1 p_x\n\nNameError: name 'p_x' is not defined\n\n\n\n\np_x = data_spsx[['species', 'prob']].groupby('species').sum().reset_index().rename(columns={'prob': 'prob_x'})\np_xy = data_spsx.merge(p_x, on='species')\np_xy\n\n\n\n\n\n\n\n\nspecies\nsex\ncount\nprob\nprob_x\n\n\n\n\n0\nAdelie\nFemale\n73\n0.219219\n0.438438\n\n\n1\nAdelie\nMale\n73\n0.219219\n0.438438\n\n\n2\nChinstrap\nFemale\n34\n0.102102\n0.204204\n\n\n3\nChinstrap\nMale\n34\n0.102102\n0.204204\n\n\n4\nGentoo\nFemale\n58\n0.174174\n0.357357\n\n\n5\nGentoo\nMale\n61\n0.183183\n0.357357\n\n\n\n\n\n\n\n\np_xy['prob_conditional'] = p_xy['prob'] / p_xy['prob_x']\np_xy[['species', 'sex', 'prob_conditional']].groupby('species').sum()\n\n\n\n\n\n\n\n\nsex\nprob_conditional\n\n\nspecies\n\n\n\n\n\n\nAdelie\nFemaleMale\n1.0\n\n\nChinstrap\nFemaleMale\n1.0\n\n\nGentoo\nFemaleMale\n1.0\n\n\n\n\n\n\n\nWe could also directly estimate our conditional model:\n\\[p(y \\mid x = \\text{Adelie})\\]\n\nadelie_data = data[['species', 'sex']].query('species == \"Adelie\"')\nadelie_data['count'] = 1\nadelie_data = adelie_data.groupby('sex').count()\nadelie_data['count'] / adelie_data['count'].sum()\n\nsex\nFemale    0.5\nMale      0.5\nName: count, dtype: float64\n\n\n\ndata_spsx = data[['species', 'sex', 'island']].copy()\ndata_spsx['count'] = 1\ndata_spsx = data_spsx.groupby(['species', 'sex', 'island']).count().reset_index()\ndata_spsx['prob'] = data_spsx['count'] / data_spsx['count'].sum()\ndata_spsx\n\n\n\n\n\n\n\n\nspecies\nsex\nisland\ncount\nprob\n\n\n\n\n0\nAdelie\nFemale\nBiscoe\n22\n0.066066\n\n\n1\nAdelie\nFemale\nDream\n27\n0.081081\n\n\n2\nAdelie\nFemale\nTorgersen\n24\n0.072072\n\n\n3\nAdelie\nMale\nBiscoe\n22\n0.066066\n\n\n4\nAdelie\nMale\nDream\n28\n0.084084\n\n\n5\nAdelie\nMale\nTorgersen\n23\n0.069069\n\n\n6\nChinstrap\nFemale\nDream\n34\n0.102102\n\n\n7\nChinstrap\nMale\nDream\n34\n0.102102\n\n\n8\nGentoo\nFemale\nBiscoe\n58\n0.174174\n\n\n9\nGentoo\nMale\nBiscoe\n61\n0.183183"
   },
   {
     "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-3/notebook-2-3.html#penguins-q-c-conditional-model",
@@ -6990,14 +6990,14 @@
     "href": "modules/02-Multiple-variables/lectures/Lecture-2-3/notebook-2-3.html#caitlin-clark-q-c-conidtional-model",
     "title": "Previous distributions",
     "section": "Caitlin Clark Q | C conidtional model",
-    "text": "Caitlin Clark Q | C conidtional model\n\nclark = pd.read_csv('data/clark.csv')\nclark.head()\n\n\n\n\n\n\n\n\nRk\nDate\nAge\nTm\nUnnamed: 4\nOpp\nOutcome\nGS\nMP\nFG\n...\nORB\nDRB\nTRB\nAST\nSTL\nBLK\nTOV\nPF\nPTS\nGmSc\n\n\n\n\n0\n1\n2024-05-14\n22-113\nIND\n@\nCON\nL (-21)\n1\n32:27\n5\n...\n0\n0\n0\n3\n2\n0\n10\n4\n20\n4.0\n\n\n1\n2\n2024-05-16\n22-115\nIND\nNaN\nNYL\nL (-36)\n1\n30:08\n2\n...\n0\n7\n7\n6\n0\n1\n3\n5\n9\n6.2\n\n\n2\n3\n2024-05-18\n22-117\nIND\n@\nNYL\nL (-11)\n1\n34:27\n9\n...\n2\n4\n6\n8\n1\n0\n8\n3\n22\n13.7\n\n\n3\n4\n2024-05-20\n22-119\nIND\nNaN\nCON\nL (-4)\n1\n27:24\n5\n...\n0\n3\n3\n5\n0\n2\n5\n5\n17\n10.1\n\n\n4\n5\n2024-05-22\n22-121\nIND\n@\nSEA\nL (-2)\n1\n32:56\n6\n...\n1\n6\n7\n7\n0\n2\n3\n0\n21\n17.2\n\n\n\n\n5 rows × 28 columns\n\n\n\n\ndf = clark[['PTS', 'AST']]\ndf['PTS'] = df['PTS'] &gt;= 10\ndf['AST'] = df['AST'] &gt;= 10\n\n/var/folders/ct/cvh0qs6j5rlbcp004rxwtwh80000gn/T/ipykernel_11823/1804349198.py:2: SettingWithCopyWarning: \nA value is trying to be set on a copy of a slice from a DataFrame.\nTry using .loc[row_indexer,col_indexer] = value instead\n\nSee the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy\n  df['PTS'] = df['PTS'] &gt;= 10\n/var/folders/ct/cvh0qs6j5rlbcp004rxwtwh80000gn/T/ipykernel_11823/1804349198.py:3: SettingWithCopyWarning: \nA value is trying to be set on a copy of a slice from a DataFrame.\nTry using .loc[row_indexer,col_indexer] = value instead\n\nSee the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy\n  df['AST'] = df['AST'] &gt;= 10\n\n\n\ndf.query('PTS == True').mean()\n\nPTS    1.000000\nAST    0.342857\ndtype: float64\n\n\n\nclark['Outcome'] = clark['Outcome'].map(lambda s: s[0])\nclark.head()\n\n\n\n\n\n\n\n\nRk\nDate\nAge\nTm\nUnnamed: 4\nOpp\nOutcome\nGS\nMP\nFG\n...\nORB\nDRB\nTRB\nAST\nSTL\nBLK\nTOV\nPF\nPTS\nGmSc\n\n\n\n\n0\n1\n2024-05-14\n22-113\nIND\n@\nCON\nL\n1\n32:27\n5\n...\n0\n0\n0\n3\n2\n0\n10\n4\n20\n4.0\n\n\n1\n2\n2024-05-16\n22-115\nIND\nNaN\nNYL\nL\n1\n30:08\n2\n...\n0\n7\n7\n6\n0\n1\n3\n5\n9\n6.2\n\n\n2\n3\n2024-05-18\n22-117\nIND\n@\nNYL\nL\n1\n34:27\n9\n...\n2\n4\n6\n8\n1\n0\n8\n3\n22\n13.7\n\n\n3\n4\n2024-05-20\n22-119\nIND\nNaN\nCON\nL\n1\n27:24\n5\n...\n0\n3\n3\n5\n0\n2\n5\n5\n17\n10.1\n\n\n4\n5\n2024-05-22\n22-121\nIND\n@\nSEA\nL\n1\n32:56\n6\n...\n1\n6\n7\n7\n0\n2\n3\n0\n21\n17.2\n\n\n\n\n5 rows × 28 columns\n\n\n\n\nclark['10pts'] = clark['PTS'] &gt;= 10\nclark['10ast'] = clark['AST'] &gt;= 10\nclark[['10pts', '10ast']].groupby(['10pts']).mean()\n\n\n\n\n\n\n\n\n10ast\n\n\n10pts\n\n\n\n\n\nFalse\n0.000000\n\n\nTrue\n0.342857\n\n\n\n\n\n\n\n\nclark['10pts'] = clark['PTS'] &gt;= 10\nclark['10ast'] = clark['AST'] &gt;= 10\nclark['counts'] = 1\nclark[['10pts', '10ast', 'counts']].groupby(['10pts', '10ast']).count().reset_index().pivot(index='10pts', columns='10ast', values='counts')\n\n\n\n\n\n\n\n10ast\nFalse\nTrue\n\n\n10pts\n\n\n\n\n\n\nFalse\n5.0\nNaN\n\n\nTrue\n23.0\n12.0\n\n\n\n\n\n\n\n\npts = clark[['AST', 'Outcome']].groupby('Outcome').mean()\npts\n\n\n\n\n\n\n\n\nAST\n\n\nOutcome\n\n\n\n\n\nL\n8.00\n\n\nW\n8.85\n\n\n\n\n\n\n\n\nfrom scipy.stats import poisson\n\nx = np.arange(50)\ndistW = poisson(pts.loc['W'])\ndistL = poisson(pts.loc['L'])\n\nyW = distW.pmf(x)\nyL = distL.pmf(x)\n\nggplot() + geom_point(mapping=aes(x=x, y=yW), color='red') + geom_line(mapping=aes(x=x, y=yW), color='red') \\\n    + geom_point(mapping=aes(x=x, y=yL), color='blue') + geom_line(mapping=aes(x=x, y=yL), color='blue')\n\n   \n   \n\n\n\ndistW.pmf(20)\n\narray([0.00051196])\n\n\n\ndistL.pmf(20)\n\narray([0.00015897])"
+    "text": "Caitlin Clark Q | C conidtional model\n\nclark = pd.read_csv('data/clark.csv')\nclark.head()\n\n\n\n\n\n\n\n\nRk\nDate\nAge\nTm\nUnnamed: 4\nOpp\nOutcome\nGS\nMP\nFG\n...\nORB\nDRB\nTRB\nAST\nSTL\nBLK\nTOV\nPF\nPTS\nGmSc\n\n\n\n\n0\n1\n2024-05-14\n22-113\nIND\n@\nCON\nL (-21)\n1\n32:27\n5\n...\n0\n0\n0\n3\n2\n0\n10\n4\n20\n4.0\n\n\n1\n2\n2024-05-16\n22-115\nIND\nNaN\nNYL\nL (-36)\n1\n30:08\n2\n...\n0\n7\n7\n6\n0\n1\n3\n5\n9\n6.2\n\n\n2\n3\n2024-05-18\n22-117\nIND\n@\nNYL\nL (-11)\n1\n34:27\n9\n...\n2\n4\n6\n8\n1\n0\n8\n3\n22\n13.7\n\n\n3\n4\n2024-05-20\n22-119\nIND\nNaN\nCON\nL (-4)\n1\n27:24\n5\n...\n0\n3\n3\n5\n0\n2\n5\n5\n17\n10.1\n\n\n4\n5\n2024-05-22\n22-121\nIND\n@\nSEA\nL (-2)\n1\n32:56\n6\n...\n1\n6\n7\n7\n0\n2\n3\n0\n21\n17.2\n\n\n\n\n5 rows × 28 columns\n\n\n\n\ndf = clark[['PTS', 'AST']]\ndf['PTS'] = df['PTS'] &gt;= 10\ndf['AST'] = df['AST'] &gt;= 10\n\n/var/folders/ct/cvh0qs6j5rlbcp004rxwtwh80000gn/T/ipykernel_45969/1804349198.py:2: SettingWithCopyWarning: \nA value is trying to be set on a copy of a slice from a DataFrame.\nTry using .loc[row_indexer,col_indexer] = value instead\n\nSee the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy\n  df['PTS'] = df['PTS'] &gt;= 10\n/var/folders/ct/cvh0qs6j5rlbcp004rxwtwh80000gn/T/ipykernel_45969/1804349198.py:3: SettingWithCopyWarning: \nA value is trying to be set on a copy of a slice from a DataFrame.\nTry using .loc[row_indexer,col_indexer] = value instead\n\nSee the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy\n  df['AST'] = df['AST'] &gt;= 10\n\n\n\ndf.query('PTS == True').mean()\n\nPTS    1.000000\nAST    0.342857\ndtype: float64\n\n\n\nclark['Outcome'] = clark['Outcome'].map(lambda s: s[0])\nclark.head()\n\n\n\n\n\n\n\n\nRk\nDate\nAge\nTm\nUnnamed: 4\nOpp\nOutcome\nGS\nMP\nFG\n...\nORB\nDRB\nTRB\nAST\nSTL\nBLK\nTOV\nPF\nPTS\nGmSc\n\n\n\n\n0\n1\n2024-05-14\n22-113\nIND\n@\nCON\nL\n1\n32:27\n5\n...\n0\n0\n0\n3\n2\n0\n10\n4\n20\n4.0\n\n\n1\n2\n2024-05-16\n22-115\nIND\nNaN\nNYL\nL\n1\n30:08\n2\n...\n0\n7\n7\n6\n0\n1\n3\n5\n9\n6.2\n\n\n2\n3\n2024-05-18\n22-117\nIND\n@\nNYL\nL\n1\n34:27\n9\n...\n2\n4\n6\n8\n1\n0\n8\n3\n22\n13.7\n\n\n3\n4\n2024-05-20\n22-119\nIND\nNaN\nCON\nL\n1\n27:24\n5\n...\n0\n3\n3\n5\n0\n2\n5\n5\n17\n10.1\n\n\n4\n5\n2024-05-22\n22-121\nIND\n@\nSEA\nL\n1\n32:56\n6\n...\n1\n6\n7\n7\n0\n2\n3\n0\n21\n17.2\n\n\n\n\n5 rows × 28 columns\n\n\n\n\nclark['10pts'] = clark['PTS'] &gt;= 10\nclark['10ast'] = clark['AST'] &gt;= 10\nclark[['10pts', '10ast']].groupby(['10pts']).mean()\n\n\n\n\n\n\n\n\n10ast\n\n\n10pts\n\n\n\n\n\nFalse\n0.000000\n\n\nTrue\n0.342857\n\n\n\n\n\n\n\n\nclark['10pts'] = clark['PTS'] &gt;= 10\nclark['10ast'] = clark['AST'] &gt;= 10\nclark['counts'] = 1\nclark[['10pts', '10ast', 'counts']].groupby(['10pts', '10ast']).count().reset_index().pivot(index='10pts', columns='10ast', values='counts')\n\n\n\n\n\n\n\n10ast\nFalse\nTrue\n\n\n10pts\n\n\n\n\n\n\nFalse\n5.0\nNaN\n\n\nTrue\n23.0\n12.0\n\n\n\n\n\n\n\n\npts = clark[['AST', 'Outcome']].groupby('Outcome').mean()\npts\n\n\n\n\n\n\n\n\nAST\n\n\nOutcome\n\n\n\n\n\nL\n8.00\n\n\nW\n8.85\n\n\n\n\n\n\n\n\nfrom scipy.stats import poisson\n\nx = np.arange(50)\ndistW = poisson(pts.loc['W'])\ndistL = poisson(pts.loc['L'])\n\nyW = distW.pmf(x)\nyL = distL.pmf(x)\n\nggplot() + geom_point(mapping=aes(x=x, y=yW), color='red') + geom_line(mapping=aes(x=x, y=yW), color='red') \\\n    + geom_point(mapping=aes(x=x, y=yL), color='blue') + geom_line(mapping=aes(x=x, y=yL), color='blue')\n\n   \n   \n\n\n\ndistW.pmf(20)\n\narray([0.00051196])\n\n\n\ndistL.pmf(20)\n\narray([0.00015897])"
   },
   {
     "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-3/notebook-2-3.html#penguins-c-q-conditional-model",
     "href": "modules/02-Multiple-variables/lectures/Lecture-2-3/notebook-2-3.html#penguins-c-q-conditional-model",
     "title": "Previous distributions",
     "section": "Penguins C | Q conditional model",
-    "text": "Penguins C | Q conditional model\n\ncond_data = data.query('(species == \"Gentoo\") | (species == \"Chinstrap\")')\ncond_data.head()\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\n\n\n\n\n152\nChinstrap\nDream\n46.5\n17.9\n192.0\n3500.0\nFemale\n\n\n153\nChinstrap\nDream\n50.0\n19.5\n196.0\n3900.0\nMale\n\n\n154\nChinstrap\nDream\n51.3\n19.2\n193.0\n3650.0\nMale\n\n\n155\nChinstrap\nDream\n45.4\n18.7\n188.0\n3525.0\nFemale\n\n\n156\nChinstrap\nDream\n52.7\n19.8\n197.0\n3725.0\nMale\n\n\n\n\n\n\n\n\nggplot() + geom_histogram(data=data.query('species == \"Chinstrap\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_histogram(data=data.query('species == \"Gentoo\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + ggsize(800, 300)\n\n\np_gentoo = (cond_data['species'] == 'Gentoo').mean()\np_chinstrap = 1 - p_gentoo\n\ndef p_gentoo_given_mass(mass):\n    p_mass_given_gentoo = dists['Gentoo'].pdf(mass)\n    p_mass_given_chinstrap = dists['Chinstrap'].pdf(mass)\n    return p_mass_given_gentoo * p_gentoo / (p_mass_given_gentoo * p_gentoo + p_mass_given_chinstrap * p_chinstrap)\n\nx = np.linspace(2500, 6500, 1000)\nggplot() + geom_line(mapping=aes(x=x, y=p_gentoo_given_mass(x))) + ggsize(800, 300)\n\n   \n   \n\n\n\nggplot() + geom_histogram(data=data.query('species == \"Chinstrap\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_histogram(data=data.query('species == \"Gentoo\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_line(mapping=aes(x=x, y=p_gentoo_given_mass(x) / 5))\\\n    + ggsize(800, 300)\n\n   \n   \n\n\n\ncond_data = data.query('(species == \"Adelie\") | (species == \"Chinstrap\")')\ncond_data.head()\n\n\np_adelie = (cond_data['species'] == 'Gentoo').mean()\np_chinstrap = 1 - p_adelie\n\ndef p_gentoo_given_mass(mass):\n    p_mass_given_adelie = dists['Adelie'].pdf(mass)\n    p_mass_given_chinstrap = dists['Chinstrap'].pdf(mass)\n    return p_mass_given_adelie * p_adelie / (p_mass_given_adelie * p_adelie + p_mass_given_chinstrap * p_chinstrap)\n\nx = np.linspace(2500, 6500, 1000)\nggplot() + geom_line(mapping=aes(x=x, y=p_gentoo_given_mass(x))) + ggsize(800, 300)\n\n   \n   \n\n\n\nggplot() + geom_histogram(data=data.query('species == \"Chinstrap\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_histogram(data=data.query('species == \"Adelie\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_line(mapping=aes(x=x, y=p_gentoo_given_mass(x) / 5))\\\n    + ggsize(800, 300)\n\n   \n   \n\n\n\nfrom sklearn.linear_model import LogisticRegression\n\ncond_data = data.query('(species == \"Gentoo\") | (species == \"Chinstrap\")')\n\nmodel = LogisticRegression(None)\nmodel.fit(cond_data['body_mass_g'].values.reshape((-1, 1)), (cond_data['species'] == 'Gentoo').values)\n\n\n\nx = np.linspace(2500, 6500, 1000)\nggplot() + geom_line(mapping=aes(x=x, y=model.predict_proba(x.reshape((-1, 1)))[:, 1])) + ggsize(800, 300)\n\n   \n   \n\n\n\nggplot() + geom_histogram(data=data.query('species == \"Chinstrap\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_histogram(data=data.query('species == \"Gentoo\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_line(mapping=aes(x=x, y=model.predict_proba(x.reshape((-1, 1)))[:, 1] / 5))\\\n    + ggsize(800, 300)\n\n   \n   \n\n\n\nfrom sklearn.linear_model import LogisticRegression\n\ncond_data = data.query('(species == \"Adelie\") | (species == \"Chinstrap\")')\n\nmodel = LogisticRegression(None)\nmodel.fit(cond_data['body_mass_g'].values.reshape((-1, 1)), (cond_data['species'] == 'Adelie').values)\n\n\n\nx = np.linspace(2500, 6500, 1000)\nggplot() + geom_line(mapping=aes(x=x, y=model.predict_proba(x.reshape((-1, 1)))[:, 1])) + ggsize(800, 300)\n\n   \n   \n\n\n\nggplot() + geom_histogram(data=data.query('species == \"Chinstrap\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_histogram(data=data.query('species == \"Adelie\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_line(mapping=aes(x=x, y=model.predict_proba(x.reshape((-1, 1)))[:, 1] / 5))\\\n    + ggsize(800, 300)"
+    "text": "Penguins C | Q conditional model\n\ncond_data = data.query('(species == \"Gentoo\") | (species == \"Chinstrap\")')\ncond_data.head()\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\n\n\n\n\n152\nChinstrap\nDream\n46.5\n17.9\n192.0\n3500.0\nFemale\n\n\n153\nChinstrap\nDream\n50.0\n19.5\n196.0\n3900.0\nMale\n\n\n154\nChinstrap\nDream\n51.3\n19.2\n193.0\n3650.0\nMale\n\n\n155\nChinstrap\nDream\n45.4\n18.7\n188.0\n3525.0\nFemale\n\n\n156\nChinstrap\nDream\n52.7\n19.8\n197.0\n3725.0\nMale\n\n\n\n\n\n\n\n\nggplot() + geom_histogram(data=data.query('species == \"Chinstrap\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2, bins=15)\\\n    + geom_histogram(data=data.query('species == \"Gentoo\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2, bins=15)\\\n    + ggsize(800, 300)\n\n   \n   \n\n\n\nggplot() + geom_histogram(data=data.query('species == \"Chinstrap\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2, bins=15)\\\n    + geom_histogram(data=data.query('species == \"Adelie\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2, bins=15)\\\n    + ggsize(800, 300)\n\n   \n   \n\n\n\np_gentoo = (cond_data['species'] == 'Gentoo').mean()\np_chinstrap = 1 - p_gentoo\n\ndef p_gentoo_given_mass(mass):\n    p_mass_given_gentoo = dists['Gentoo'].pdf(mass)\n    p_mass_given_chinstrap = dists['Chinstrap'].pdf(mass)\n    return p_mass_given_gentoo * p_gentoo / (p_mass_given_gentoo * p_gentoo + p_mass_given_chinstrap * p_chinstrap)\n\nx = np.linspace(2500, 6500, 1000)\n\nggplot() + geom_histogram(data=data.query('species == \"Chinstrap\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_histogram(data=data.query('species == \"Gentoo\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_line(mapping=aes(x=x, y=p_gentoo_given_mass(x) / 5))\\\n    + ggsize(800, 300)\n\n   \n   \n\n\n\nfrom sklearn.linear_model import LogisticRegression\n\ncond_data = data.query('(species == \"Gentoo\") | (species == \"Chinstrap\")')\nmodel = LogisticRegression(None)\nmodel.fit(cond_data['body_mass_g'].values.reshape((-1, 1)), (cond_data['species'] == 'Gentoo').values)\n\nggplot() + geom_histogram(data=data.query('species == \"Chinstrap\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_histogram(data=data.query('species == \"Gentoo\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_line(mapping=aes(x=x, y=model.predict_proba(x.reshape((-1, 1)))[:, 1] / 5))\\\n    + ggsize(800, 300)\n\n   \n   \n\n\n\ncond_data = data.query('(species == \"Adelie\") | (species == \"Chinstrap\")')\ncond_data.head()\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nMale\n\n\n1\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nFemale\n\n\n2\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nFemale\n\n\n4\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nFemale\n\n\n5\nAdelie\nTorgersen\n39.3\n20.6\n190.0\n3650.0\nMale\n\n\n\n\n\n\n\n\np_adelie = (cond_data['species'] == 'Adelie').mean()\np_chinstrap = 1 - p_adelie\n\ndef p_gentoo_given_mass(mass):\n    p_mass_given_adelie = dists['Adelie'].pdf(mass)\n    p_mass_given_chinstrap = dists['Chinstrap'].pdf(mass)\n    return p_mass_given_adelie * p_adelie / (p_mass_given_adelie * p_adelie + p_mass_given_chinstrap * p_chinstrap)\n\nx = np.linspace(2500, 6500, 1000)\n\nggplot() + geom_histogram(data=data.query('species == \"Chinstrap\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_histogram(data=data.query('species == \"Adelie\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_line(mapping=aes(x=x, y=p_gentoo_given_mass(x) / 5))\\\n    + ggsize(800, 300)\n\n   \n   \n\n\n\ncond_data = data.query('(species == \"Gentoo\") | (species == \"Chinstrap\")')\nmodel = LogisticRegression(None)\nmodel.fit(cond_data['body_mass_g'].values.reshape((-1, 1)), (cond_data['species'] == 'Gentoo').values)\n\nx = np.linspace(2500, 6500, 1000)\n\nggplot() + geom_histogram(data=data.query('species == \"Chinstrap\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_histogram(data=data.query('species == \"Adelie\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_line(mapping=aes(x=x, y=model.predict_proba(x.reshape((-1, 1)))[:, 1] / 5))\\\n    + ggsize(800, 300)\n\n   \n   \n\n\n\np_adelie = (cond_data['species'] == 'Adelie').mean()\np_chinstrap = 1 - p_adelie\n\ndef p_gentoo_given_mass(mass):\n    p_mass_given_adelie = dists['Adelie'].pdf(mass)\n    p_mass_given_chinstrap = dists['Chinstrap'].pdf(mass)\n    return p_mass_given_adelie * p_adelie / (p_mass_given_adelie * p_adelie + p_mass_given_chinstrap * p_chinstrap)\n\nx = np.linspace(2500, 6500, 1000)\nggplot() + geom_line(mapping=aes(x=x, y=p_gentoo_given_mass(x))) + ggsize(800, 300)\n\n   \n   \n\n\n\nfrom sklearn.linear_model import LogisticRegression\n\ncond_data = data.query('(species == \"Gentoo\") | (species == \"Chinstrap\")')\nmodel = LogisticRegression(None)\nmodel.fit(cond_data['body_mass_g'].values.reshape((-1, 1)), (cond_data['species'] == 'Gentoo').values)\n\nx = np.linspace(2500, 6500, 1000)\nggplot() + geom_line(mapping=aes(x=x, y=model.predict_proba(x.reshape((-1, 1)))[:, 1])) + ggsize(800, 300)\n\n   \n   \n\n\n\nfrom sklearn.linear_model import LogisticRegression\n\ncond_data = data.query('(species == \"Adelie\") | (species == \"Chinstrap\")')\n\nmodel = LogisticRegression(None)\nmodel.fit(cond_data['body_mass_g'].values.reshape((-1, 1)), (cond_data['species'] == 'Adelie').values)\n\n\n\nx = np.linspace(2500, 6500, 1000)\nggplot() + geom_line(mapping=aes(x=x, y=model.predict_proba(x.reshape((-1, 1)))[:, 1])) + ggsize(800, 300)\n\n   \n   \n\n\n\nggplot() + geom_histogram(data=data.query('species == \"Chinstrap\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_histogram(data=data.query('species == \"Adelie\"'), mapping=aes(x='body_mass_g', fill='species', y='..sumprop..'), alpha=0.2)\\\n    + geom_line(mapping=aes(x=x, y=model.predict_proba(x.reshape((-1, 1)))[:, 1] / 5))\\\n    + ggsize(800, 300)"
   },
   {
     "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-3/notebook-2-3.html#penguins-q-q-conditional-model",
@@ -7130,7 +7130,7 @@
     "href": "modules/01-Single-variable/assignments/quiz2-inference-solutions.html",
     "title": "Quiz 2",
     "section": "",
-    "text": "# Run if using Colab\n!pip install cairosvg\n!pip install lets-plot\nimport numpy as np\nimport pandas as pd\nimport scipy\nfrom vega_datasets import data\nfrom IPython.display import display, SVG\nfrom lets_plot import *\nimport seaborn as sns\nLetsPlot.setup_html()"
+    "text": "# Run if using Colab\n!pip install cairosvg\n!pip install lets-plot\n\nRequirement already satisfied: cairosvg in /Users/gabehope/Documents/DataViz/.venv/lib/python3.9/site-packages (2.7.1)\nRequirement already satisfied: cairocffi in /Users/gabehope/Documents/DataViz/.venv/lib/python3.9/site-packages (from cairosvg) (1.7.1)\nRequirement already satisfied: cssselect2 in /Users/gabehope/Documents/DataViz/.venv/lib/python3.9/site-packages (from cairosvg) (0.7.0)\nRequirement already satisfied: defusedxml in /Users/gabehope/Documents/DataViz/.venv/lib/python3.9/site-packages (from cairosvg) (0.7.1)\nRequirement already satisfied: pillow in /Users/gabehope/Documents/DataViz/.venv/lib/python3.9/site-packages (from cairosvg) (10.4.0)\nRequirement already satisfied: tinycss2 in /Users/gabehope/Documents/DataViz/.venv/lib/python3.9/site-packages (from cairosvg) (1.3.0)\nRequirement already satisfied: cffi&gt;=1.1.0 in /Users/gabehope/Documents/DataViz/.venv/lib/python3.9/site-packages (from cairocffi-&gt;cairosvg) (1.17.1)\nRequirement already satisfied: webencodings in /Users/gabehope/Documents/DataViz/.venv/lib/python3.9/site-packages (from cssselect2-&gt;cairosvg) (0.5.1)\nRequirement already satisfied: pycparser in /Users/gabehope/Documents/DataViz/.venv/lib/python3.9/site-packages (from cffi&gt;=1.1.0-&gt;cairocffi-&gt;cairosvg) (2.22)\nRequirement already satisfied: lets-plot in /Users/gabehope/Documents/DataViz/.venv/lib/python3.9/site-packages (4.4.1)\nRequirement already satisfied: pypng in /Users/gabehope/Documents/DataViz/.venv/lib/python3.9/site-packages (from lets-plot) (0.20220715.0)\nRequirement already satisfied: palettable in /Users/gabehope/Documents/DataViz/.venv/lib/python3.9/site-packages (from lets-plot) (3.3.3)\nimport numpy as np\nimport pandas as pd\nimport scipy\nfrom vega_datasets import data\nfrom IPython.display import display, SVG\nfrom lets_plot import *\nimport seaborn as sns\nLetsPlot.setup_html()"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz2-inference-solutions.html#flipper-length",
@@ -7144,21 +7144,21 @@
     "href": "modules/01-Single-variable/assignments/quiz2-inference-solutions.html#q1-bootstrapping",
     "title": "Quiz 2",
     "section": "Q1: Bootstrapping",
-    "text": "Q1: Bootstrapping\nWe know that we can easily estimate the average flipper length by just computing the mean of our data.\n\npenguins['flipper_length_mm'].mean()\n\nnp.float64(200.96696696696696)\n\n\nBut before we publish this result, we want to be sure that the population mean won’t be too far off from this number. To do this, we’ll us bootstrapping to estimate a confidence interval for the mean. We can actually use the built-in bootstrap function from scipy.stats to do this.\n\nfrom scipy.stats import bootstrap\n\nresult = bootstrap(data=(penguins['flipper_length_mm'],), # We need to wrap the data array in a tuple or list\n                   statistic=np.mean,                     # Statistic to compute\n                   confidence_level=0.95,                 # Confident level\n                   n_resamples=10000,                     # Number of times to resample\n                ) \nresult\n\nBootstrapResult(confidence_interval=ConfidenceInterval(low=np.float64(199.4834834834835), high=np.float64(202.4668513045082)), bootstrap_distribution=array([199.55555556, 200.92192192, 199.22522523, ..., 200.41741742,\n       201.49249249, 200.66366366]), standard_error=np.float64(0.7670250764741565))\n\n\nWe see that this gives us an object that contains the results of our bootstrap.\nPlot the distribution of bootstrapped statistics and indicate the upper and lower bounds of the 95% confidence interval.\nExactly what kind of plot you use and how you indicate the bounds is up to you\n\n# YOUR CODE HERE\n\nRecall that the tradiational method for computing a confidence interval for the mean assumes that the distribution of sample means follows a Normal distribution. Based on this plot would you expect that this is a reasonable assumption?"
+    "text": "Q1: Bootstrapping\nWe know that we can easily estimate the average flipper length by just computing the mean of our data.\n\npenguins['flipper_length_mm'].mean()\n\nnp.float64(200.96696696696696)\n\n\nBut before we publish this result, we want to be sure that the population mean won’t be too far off from this number. To do this, we’ll us bootstrapping to estimate a confidence interval for the mean. We can actually use the built-in bootstrap function from scipy.stats to do this.\n\nfrom scipy.stats import bootstrap\n\nresult = bootstrap(data=(penguins['flipper_length_mm'],), # We need to wrap the data array in a tuple or list\n                   statistic=np.mean,                     # Statistic to compute\n                   confidence_level=0.95,                 # Confident level\n                   n_resamples=10000,                     # Number of times to resample\n                ) \nresult\n\nBootstrapResult(confidence_interval=ConfidenceInterval(low=np.float64(199.4843624346587), high=np.float64(202.51351351351352)), bootstrap_distribution=array([200.2972973 , 201.32432432, 202.83183183, ..., 202.00900901,\n       200.89189189, 200.13513514]), standard_error=np.float64(0.7681529001190525))\n\n\nWe see that this gives us an object that contains the results of our bootstrap.\nPlot the distribution of bootstrapped statistics and indicate the upper and lower bounds of the 95% confidence interval.\nExactly what kind of plot you use and how you indicate the bounds is up to you\n\n# YOUR CODE HERE\n\nRecall that the tradiational method for computing a confidence interval for the mean assumes that the distribution of sample means follows a Normal distribution. Based on this plot would you expect that this is a reasonable assumption?"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz2-inference-solutions.html#q2-estimating-probabilities-using-a-model",
     "href": "modules/01-Single-variable/assignments/quiz2-inference-solutions.html#q2-estimating-probabilities-using-a-model",
     "title": "Quiz 2",
     "section": "Q2: Estimating probabilities using a model",
-    "text": "Q2: Estimating probabilities using a model\nOur scientists friends are now interested in studying the biomechanics of penguins with exceptionally long flippers. In particular they’re hoping to find a penguin with a flipper length of at least 240mm. We want to give them an estimate of what the chances of them finding such a penguin are. As we haven’t seen any such penguins yet, we’ll need to create a model of our data.\nLet’s start by assuming our data follows a Normal distribution. We can fit a normal distribution to our data using the code below.\n\nfrom scipy.stats import norm\ndist = norm(penguins['flipper_length_mm'].mean(), penguins['flipper_length_mm'].std())\n\nUsing this distribution, estimate the probability that a randomly selected penguin will have a flipper length &gt; 240mm.\n\n## YOUR CODE HERE\ndist.cdf(240)\n\nnp.float64(0.9973230995083087)"
+    "text": "Q2: Estimating probabilities using a model\nOur scientists friends are now interested in studying the biomechanics of penguins with exceptionally long flippers. In particular they’re hoping to find a penguin with a flipper length of at least 240mm. We want to give them an estimate of what the chances of them finding such a penguin are. As we haven’t seen any such penguins yet, we’ll need to create a model of our data.\nLet’s start by assuming our data follows a Normal distribution. We can fit a normal distribution to our data using the code below.\n\nfrom scipy.stats import norm\ndist = norm(penguins['flipper_length_mm'].mean(), penguins['flipper_length_mm'].std())\n\nUsing this distribution, estimate the probability that a randomly selected penguin will have a flipper length &gt; 240mm.\n\n## YOUR CODE HERE\n1- dist.cdf(240)\n\nnp.float64(0.0026769004916913364)"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz2-inference-solutions.html#q3-examining-model-fit",
     "href": "modules/01-Single-variable/assignments/quiz2-inference-solutions.html#q3-examining-model-fit",
     "title": "Quiz 2",
     "section": "Q3: Examining model fit",
-    "text": "Q3: Examining model fit\nBefore we go off and give this number to the scientists, let’s make sure that the normal distribution is actually a good fit for our data.\nWe can get a simple version of an empirical CDF plot by just plotting 100 empirical quantiles of our data (0.01 - 0.99) as shown below\n\nquantiles = np.linspace(0, 1, 100)\nquantile_frame = penguins['flipper_length_mm'].quantile(quantiles).to_frame().reset_index()\nquantile_frame = quantile_frame.rename(columns=dict(index='quantile'))\n\n\nggplot() + geom_point(data=quantile_frame, mapping=aes(x='flipper_length_mm', y='quantile'))\n\n   \n   \n\n\nNow we’d like to compare this to our theoretical model. Create a QQ-Plot by plotting these 100 empirical quantiles (on the y-axis) against the corresponding quantiles for our normal model (on the x-axis).\n\n## YOUR CODE HERE\n\nBased on this plot, would you expect that this normal model is a good fit to the data?\nIt may be helpful to add a reference line to your plot\nWe know that another way to compare how well distributions fit our data is to compare the likelihood. (The metric behind our maximum likelihood principle)\nCompute the\n\nquantile_frame['theoretical'] = dist.ppf(x)\nggplot() + geom_point(data=quantile_frame, mapping=aes(x='theoretical', y='flipper_length_mm'))"
+    "text": "Q3: Examining model fit\nBefore we go off and give this number to the scientists, let’s make sure that the normal distribution is actually a good fit for our data.\nWe can get a simple version of an empirical CDF plot by just plotting 100 empirical quantiles of our data (0.01 - 0.99) as shown below\n\nquantiles = np.linspace(0, 1, 100)\nquantile_frame = penguins['flipper_length_mm'].quantile(quantiles).to_frame().reset_index()\nquantile_frame = quantile_frame.rename(columns=dict(index='quantile'))\n\n\nggplot() + geom_point(data=quantile_frame, mapping=aes(x='flipper_length_mm', y='quantile'))\n\n   \n   \n\n\nNow we’d like to compare this to our theoretical model. Create a QQ-Plot by plotting these 100 empirical quantiles (on the y-axis) against the corresponding quantiles for our normal model (on the x-axis).\n\n## YOUR CODE HERE\n\nBased on this plot, would you expect that this normal model is a good fit to the data?\nIt may be helpful to add a reference line to your plot\nWe know that another way to compare how well distributions fit our data is to compare the likelihood. (The metric behind our maximum likelihood principle)\nCompute the\n\nquantile_frame['theoretical'] = dist.ppf(x)\nggplot() + geom_point(data=quantile_frame, mapping=aes(x='theoretical', y='flipper_length_mm'))\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[23], line 1\n----&gt; 1 quantile_frame['theoretical'] = dist.ppf(x)\n      2 ggplot() + geom_point(data=quantile_frame, mapping=aes(x='theoretical', y='flipper_length_mm'))\n\nNameError: name 'x' is not defined"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz2-inference-solutions.html#q4-mixture-distributions",
@@ -7172,7 +7172,7 @@
     "href": "modules/01-Single-variable/assignments/quiz2-inference-solutions.html#q5-evaluating-probabilities-with-mixtures",
     "title": "Quiz 2",
     "section": "Q5: Evaluating probabilities with mixtures",
-    "text": "Q5: Evaluating probabilities with mixtures\nUnfortunately sklearn does not provide a way to compute the CDF of a mixture distribution. However we can create our own function to do so. We’ll first get the mean, standard deviation and probability of each component under the model using the code below:\n\nmean = mixture_model.means_.flatten()\nstd = np.sqrt(mixture_model.covariances_)\np = mixture_model.weights_\n\nprint('p(x) = %.3f * N(%.3f, %.3f) + %.3f * N(%.3f, %.3f)' % (p[0], mean[0], std[0], p[1], mean[1], std[1]))\n\np(x) = 0.607 * N(191.138, 6.533) + 0.393 * N(216.129, 7.294)\n\n\nUsing this values, complete the mixture cdf function below and use it to compute the probability of seeing a penguin with a flipper length &gt; 240mm under this model.\n\ndef mixture_cdf(x, mean, std, p):\n    output_cdf = 0.\n    # Iterate over the components\n    for mean_i, std_i, p_i in zip(mean, std, p):\n        # YOUR CODE HERE\n    return output_cdf\n\n# YOUR CODE HERE\n\n\nstd = np.sqrt(mixture_model.covariances_)\nmean = mixture_model.means_.flatten()\np = mixture_model.weights_\n\ndef cdf(x, mean, std, p):\n    output_cdf = 0.\n    # Iterate over the \n    for mi, si, pi in zip(mean, std, p):\n        d = norm(mi, si)\n        output += d.cdf(x) * pi\n    return output_cdf\n\ncdf(240, mean, std, p)\n\n\n---------------------------------------------------------------------------\nUnboundLocalError                         Traceback (most recent call last)\nCell In[290], line 13\n     10         output += d.cdf(x) * pi\n     11     return output_cdf\n---&gt; 13 cdf(240, mean, std, p)\n\nCell In[290], line 10, in cdf(x, mean, std, p)\n      8 for mi, si, pi in zip(mean, std, p):\n      9     d = norm(mi, si)\n---&gt; 10     output += d.cdf(x) * pi\n     11 return output_cdf\n\nUnboundLocalError: local variable 'output' referenced before assignment"
+    "text": "Q5: Evaluating probabilities with mixtures\nUnfortunately sklearn does not provide a way to compute the CDF of a mixture distribution. However we can create our own function to do so. We’ll first get the mean, standard deviation and probability of each component under the model using the code below:\n\nmean = mixture_model.means_.flatten()\nstd = np.sqrt(mixture_model.covariances_)\np = mixture_model.weights_\n\nprint('p(x) = %.3f * N(%.3f, %.3f) + %.3f * N(%.3f, %.3f)' % (p[0], mean[0], std[0], p[1], mean[1], std[1]))\n\np(x) = 0.393 * N(216.129, 7.294) + 0.607 * N(191.138, 6.533)\n\n\nUsing this values, complete the mixture cdf function below and use it to compute the probability of seeing a penguin with a flipper length &gt; 240mm under this model.\n\ndef mixture_cdf(x, mean, std, p):\n    output_cdf = 0.\n    # Iterate over the components\n    for mean_i, std_i, p_i in zip(mean, std, p):\n        # YOUR CODE HERE\n    return output_cdf\n\n# YOUR CODE HERE\n\n\nstd = np.sqrt(mixture_model.covariances_)\nmean = mixture_model.means_.flatten()\np = mixture_model.weights_\n\ndef cdf(x, mean, std, p):\n    output_cdf = 0.\n    # Iterate over the \n    for mi, si, pi in zip(mean, std, p):\n        d = norm(mi, si)\n        output_cdf += d.cdf(x) * pi\n    return output_cdf\n\n1 - cdf(240, mean, std, p)\n\nnp.float64(0.00020938135712178507)"
   },
   {
     "objectID": "modules/01-Single-variable/assignments/quiz2-inference-solutions.html#q6-choosing-a-number-of-components",
@@ -7781,7 +7781,7 @@
     "href": "modules/02-Multiple-variables/lectures/Lecture-2-4/notebook-2-4.html",
     "title": "Election Prediction!",
     "section": "",
-    "text": "import numpy as np\n\nfrom lets_plot import *\nimport pandas as pd\nimport vega_datasets\nimport seaborn as sns\nLetsPlot.setup_html()\n\n\n            \n            \n            \n\n\n\nelections = pd.read_csv('data/elections.tsv', delimiter='\\t')\nelections\n\n\n\n\n\n\n\n\nyear\nwinner\nparty\nEC votes\nEC pct\npop. pct\npop pct margin\npop votes\npop votes margin\nrunner-up\nrunner-up party\nturnout\n\n\n\n\n0\n1796\nJohn Adams\nFed.\n71/138\n51.45%\n53.45%\n6.90%\n35,726\n4,611\nThomas Jefferson\nD-R[b]\n20.1%\n\n\n1\n1800\nThomas Jefferson\nD-R\n73/138\n52.90%\n60.57%\n22.86%\n41,330\n15,378\nAaron Burr\nD-R[c]\n32.3%\n\n\n2\n1804\nThomas Jefferson\nD-R\n162/176\n92.05%\n73.20%\n45.58%\n104,110\n65,191\nCharles C. Pinckney\nFed.\n23.8%\n\n\n3\n1808\nJames Madison\nD-R\n122/175\n69.72%\n64.97%\n32.33%\n124,732\n62,301\nCharles C. Pinckney\nFed.\n36.8%\n\n\n4\n1812\nJames Madison\nD-R\n128/217\n58.99%\n52.30%\n2.74%\n140,431\n7,650\nDeWitt Clinton\nD-R[d]\n40.4%\n\n\n5\n1816\nJames Monroe\nD-R\n183/217\n84.33%\n72.90%\n37.24%\n76,592\n41,852\nRufus King\nFed.\n23.5%\n\n\n6\n1820\nJames Monroe\nD-R\n231/232\n99.57%\n78.34%\n64.69%\n87,343\n69,878\nJohn Quincy Adams\nD-R[e]\n10.1%\n\n\n7\n1824\nJohn Quincy Adams\nD-R\n84/261\n32.18%\n30.92%\n−10.44%\n113,142\n−38,221\nAndrew Jackson\nD-R[f]\n26.9%\n\n\n8\n1828\nAndrew Jackson\nDem.\n178/261\n68.20%\n55.93%\n12.25%\n642,806\n140,839\nJohn Quincy Adams\nNR\n57.3%\n\n\n9\n1832\nAndrew Jackson\nDem.\n219/286\n76.57%\n54.74%\n17.81%\n702,735\n228,628\nHenry Clay\nNR\n57.0%\n\n\n10\n1836\nMartin Van Buren\nDem.\n170/294\n57.82%\n50.79%\n14.20%\n763,291\n213,384\nWilliam Henry Harrison\nWhig\n56.5%\n\n\n11\n1840\nWilliam Henry Harrison\nWhig\n234/294\n79.59%\n52.87%\n6.05%\n1,275,583\n145,938\nMartin Van Buren\nDem.\n80.3%\n\n\n12\n1844\nJames K. Polk\nDem.\n170/275\n61.82%\n49.54%\n1.45%\n1,339,570\n39,413\nHenry Clay\nWhig\n79.2%\n\n\n13\n1848\nZachary Taylor\nWhig\n163/290\n56.21%\n47.28%\n4.79%\n1,360,235\n137,882\nLewis Cass\nDem.\n72.8%\n\n\n14\n1852\nFranklin Pierce\nDem.\n254/296\n85.81%\n50.83%\n6.95%\n1,605,943\n219,525\nWinfield Scott\nWhig\n69.5%\n\n\n15\n1856\nJames Buchanan\nDem.\n174/296\n58.78%\n45.29%\n12.20%\n1,835,140\n494,472\nJohn C. Frémont\nRep.\n79.4%\n\n\n16\n1860\nAbraham Lincoln\nRep.\n180/303\n59.41%\n39.65%\n10.13%\n1,855,993\n474,049\nJohn C. Breckinridge\nDem.[g]\n81.8%\n\n\n17\n1864\nAbraham Lincoln\nRep.\n212/233\n90.99%\n55.03%\n10.08%\n2,211,317\n405,090\nGeorge B. McClellan\nDem.\n76.3%\n\n\n18\n1868\nUlysses S. Grant\nRep.\n214/294\n72.79%\n52.66%\n5.32%\n3,013,790\n304,810\nHoratio Seymour\nDem.\n80.9%\n\n\n19\n1872\nUlysses S. Grant\nRep.\n286/352\n81.25%\n55.58%\n11.80%\n3,597,439\n763,729\nThomas A. Hendricks\nDem.[h]\n72.1%\n\n\n20\n1876\nRutherford B. Hayes\nRep.\n185/369\n50.14%\n47.92%\n−3.00%\n4,034,142\n−252,666\nSamuel J. Tilden\nDem.\n82.6%\n\n\n21\n1880\nJames A. Garfield\nRep.\n214/369\n57.99%\n48.31%\n0.09%\n4,453,337\n1,898\nWinfield Scott Hancock\nDem.\n80.5%\n\n\n22\n1884\nGrover Cleveland\nDem.\n219/401\n54.61%\n48.85%\n0.57%\n4,914,482\n57,579\nJames G. Blaine\nRep.\n78.2%\n\n\n23\n1888\nBenjamin Harrison\nRep.\n233/401\n58.10%\n47.80%\n−0.83%\n5,443,892\n−90,596\nGrover Cleveland\nDem.\n80.5%\n\n\n24\n1892\nGrover Cleveland\nDem.\n277/444\n62.39%\n46.02%\n3.01%\n5,553,898\n363,099\nBenjamin Harrison\nRep.\n75.8%\n\n\n25\n1896\nWilliam McKinley\nRep.\n271/447\n60.63%\n51.02%\n4.31%\n7,112,138\n601,331\nWilliam Jennings Bryan\nDem.\n79.6%\n\n\n26\n1900\nWilliam McKinley\nRep.\n292/447\n65.23%\n51.64%\n6.12%\n7,228,864\n857,932\nWilliam Jennings Bryan\nDem.\n73.7%\n\n\n27\n1904\nTheodore Roosevelt\nRep.\n336/476\n70.59%\n56.42%\n18.83%\n7,630,557\n2,546,677\nAlton Brooks Parker\nDem.\n65.5%\n\n\n28\n1908\nWilliam Howard Taft\nRep.\n321/483\n66.46%\n51.57%\n8.53%\n7,678,335\n1,269,356\nWilliam Jennings Bryan\nDem.\n65.7%\n\n\n29\n1912\nWoodrow Wilson\nDem.\n435/531\n81.92%\n41.84%\n14.44%\n6,296,284\n2,173,563\nTheodore Roosevelt\nProg.\n59.0%\n\n\n30\n1916\nWoodrow Wilson\nDem.\n277/531\n52.17%\n49.24%\n3.12%\n9,126,868\n578,140\nCharles Evans Hughes\nRep.\n61.8%\n\n\n31\n1920\nWarren G. Harding\nRep.\n404/531\n76.08%\n60.32%\n26.17%\n16,144,093\n7,004,432\nJames M. Cox\nDem.\n49.2%\n\n\n32\n1924\nCalvin Coolidge\nRep.\n382/531\n71.94%\n54.04%\n25.22%\n15,723,789\n7,337,547\nJohn W. Davis\nDem.\n48.9%\n\n\n33\n1928\nHerbert Hoover\nRep.\n444/531\n83.62%\n58.21%\n17.41%\n21,427,123\n6,411,659\nAl Smith\nDem.\n56.9%\n\n\n34\n1932\nFranklin D. Roosevelt\nDem.\n472/531\n88.89%\n57.41%\n17.76%\n22,821,277\n7,060,023\nHerbert Hoover\nRep.\n56.9%\n\n\n35\n1936\nFranklin D. Roosevelt\nDem.\n523/531\n98.49%\n60.80%\n24.26%\n27,752,648\n11,070,786\nAlf Landon\nRep.\n61.0%\n\n\n36\n1940\nFranklin D. Roosevelt\nDem.\n449/531\n84.56%\n54.74%\n9.96%\n27,313,945\n4,966,201\nWendell Willkie\nRep.\n62.4%\n\n\n37\n1944\nFranklin D. Roosevelt\nDem.\n432/531\n81.36%\n53.39%\n7.50%\n25,612,916\n3,594,987\nThomas E. Dewey\nRep.\n55.9%\n\n\n38\n1948\nHarry S Truman\nDem.\n303/531\n57.06%\n49.55%\n4.48%\n24,179,347\n2,188,055\nThomas E. Dewey\nRep.\n52.2%\n\n\n39\n1952\nDwight D. Eisenhower\nRep.\n442/531\n83.24%\n55.18%\n10.85%\n34,075,529\n6,700,439\nAdlai Stevenson II\nDem.\n62.3%\n\n\n40\n1956\nDwight D. Eisenhower\nRep.\n457/531\n86.06%\n57.37%\n15.40%\n35,579,180\n9,551,152\nAdlai Stevenson II\nDem.\n60.2%\n\n\n41\n1960\nJohn F. Kennedy\nDem.\n303/537\n56.42%\n49.72%\n0.17%\n34,220,984\n112,827\nRichard Nixon\nRep.\n63.8%\n\n\n42\n1964\nLyndon B. Johnson\nDem.\n486/538\n90.33%\n61.05%\n22.58%\n43,127,041\n15,951,287\nBarry Goldwater\nRep.\n62.8%\n\n\n43\n1968\nRichard Nixon\nRep.\n301/538\n55.95%\n43.42%\n0.70%\n31,783,783\n511,944\nHubert Humphrey\nDem.\n62.5%\n\n\n44\n1972\nRichard Nixon\nRep.\n520/538\n96.65%\n60.67%\n23.15%\n47,168,710\n17,995,488\nGeorge McGovern\nDem.\n56.2%\n\n\n45\n1976\nJimmy Carter\nDem.\n297/538\n55.20%\n50.08%\n2.06%\n40,831,881\n1,683,247\nGerald Ford\nRep.\n54.8%\n\n\n46\n1980\nRonald Reagan\nRep.\n489/538\n90.89%\n50.75%\n9.74%\n43,903,230\n8,423,115\nJimmy Carter\nDem.\n54.2%\n\n\n47\n1984\nRonald Reagan\nRep.\n525/538\n97.58%\n58.77%\n18.21%\n54,455,472\n16,878,120\nWalter Mondale\nDem.\n55.2%\n\n\n48\n1988\nGeorge H. W. Bush\nRep.\n426/538\n79.18%\n53.37%\n7.72%\n48,886,597\n7,077,121\nMichael Dukakis\nDem.\n52.8%\n\n\n49\n1992\nBill Clinton\nDem.\n370/538\n68.77%\n43.01%\n5.56%\n44,909,806\n5,805,256\nGeorge H. W. Bush\nRep.\n58.1%\n\n\n50\n1996\nBill Clinton\nDem.\n379/538\n70.45%\n49.23%\n8.51%\n47,400,125\n8,201,370\nBob Dole\nRep.\n51.7%\n\n\n51\n2000\nGeorge W. Bush\nRep.\n271/538\n50.47%\n47.87%\n−0.51%\n50,455,156\n−538,179\nAl Gore\nDem.\n54.2%\n\n\n52\n2004\nGeorge W. Bush\nRep.\n286/538\n53.16%\n50.73%\n2.46%\n62,040,610\n3,012,171\nJohn Kerry\nDem.\n60.1%\n\n\n53\n2008\nBarack Obama\nDem.\n365/538\n67.84%\n52.93%\n7.27%\n69,498,516\n9,550,193\nJohn McCain\nRep.\n61.6%\n\n\n54\n2012\nBarack Obama\nDem.\n332/538\n61.71%\n51.06%\n3.86%\n65,915,795\n4,982,291\nMitt Romney\nRep.\n58.6%\n\n\n55\n2016\nDonald Trump\nRep.\n304/538\n56.50%\n46.09%\n−2.09%\n62,984,828\n−2,868,686\nHillary Clinton\nDem.\n57.3%\n\n\n56\n2020\nJoe Biden\nDem.\n306/538\n56.88%\n51.31%\n4.45%\n81,284,666\n7,060,347\nDonald Trump\nRep.\n66.6%\n\n\n\n\n\n\n\n\nelections = elections.query('year &gt;= 1944')\n\n\nincumbent_won = elections.party.values[:-1] == elections.party.values[1:]\nyear = elections.year.values[1:]\n\nelections = pd.DataFrame({'incumbent won': incumbent_won, 'year': year})\nelections\n\n\n\n\n\n\n\n\nincumbent won\nyear\n\n\n\n\n0\nTrue\n1948\n\n\n1\nFalse\n1952\n\n\n2\nTrue\n1956\n\n\n3\nFalse\n1960\n\n\n4\nTrue\n1964\n\n\n5\nFalse\n1968\n\n\n6\nTrue\n1972\n\n\n7\nFalse\n1976\n\n\n8\nFalse\n1980\n\n\n9\nTrue\n1984\n\n\n10\nTrue\n1988\n\n\n11\nFalse\n1992\n\n\n12\nTrue\n1996\n\n\n13\nFalse\n2000\n\n\n14\nTrue\n2004\n\n\n15\nFalse\n2008\n\n\n16\nTrue\n2012\n\n\n17\nFalse\n2016\n\n\n18\nFalse\n2020\n\n\n\n\n\n\n\n\nspx = pd.read_csv('data/SPX.csv', parse_dates=['Date'])\n\n\nspx_oct = spx.query('Date.dt.month == 10')\nspx_oct['year'] = spx['Date'].dt.year\n\n/var/folders/ct/cvh0qs6j5rlbcp004rxwtwh80000gn/T/ipykernel_37127/789859583.py:2: SettingWithCopyWarning: \nA value is trying to be set on a copy of a slice from a DataFrame.\nTry using .loc[row_indexer,col_indexer] = value instead\n\nSee the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy\n  spx_oct['year'] = spx['Date'].dt.year\n\n\n\nspx\n\n\n\n\n\n\n\n\nDate\nOpen\n\n\n\n\n0\n1928-02-01\n17.530001\n\n\n1\n1928-03-01\n17.299999\n\n\n2\n1928-05-01\n19.780001\n\n\n3\n1928-06-01\n20.070000\n\n\n4\n1928-08-01\n19.420000\n\n\n...\n...\n...\n\n\n742\n2024-04-01\n5257.970000\n\n\n743\n2024-05-01\n5029.030000\n\n\n744\n2024-07-01\n5471.080000\n\n\n745\n2024-08-01\n5537.840000\n\n\n746\n2024-10-01\n5757.730000\n\n\n\n\n747 rows × 2 columns\n\n\n\n\nggplot() + geom_line(data=spx.query('Date.dt.year &gt; 2020'), mapping=aes(x='Date', y='Open'))"
+    "text": "import numpy as np\n\nfrom lets_plot import *\nimport pandas as pd\nimport vega_datasets\nimport seaborn as sns\nLetsPlot.setup_html()\n\n\n            \n            \n            \n\n\n\nsns.load_dataset('penguins').to_csv('data/penguins.csv', index=False)\n\n\nelections = pd.read_csv('data/elections.tsv', delimiter='\\t')\nelections\n\n\n\n\n\n\n\n\nyear\nwinner\nparty\nEC votes\nEC pct\npop. pct\npop pct margin\npop votes\npop votes margin\nrunner-up\nrunner-up party\nturnout\n\n\n\n\n0\n1796\nJohn Adams\nFed.\n71/138\n51.45%\n53.45%\n6.90%\n35,726\n4,611\nThomas Jefferson\nD-R[b]\n20.1%\n\n\n1\n1800\nThomas Jefferson\nD-R\n73/138\n52.90%\n60.57%\n22.86%\n41,330\n15,378\nAaron Burr\nD-R[c]\n32.3%\n\n\n2\n1804\nThomas Jefferson\nD-R\n162/176\n92.05%\n73.20%\n45.58%\n104,110\n65,191\nCharles C. Pinckney\nFed.\n23.8%\n\n\n3\n1808\nJames Madison\nD-R\n122/175\n69.72%\n64.97%\n32.33%\n124,732\n62,301\nCharles C. Pinckney\nFed.\n36.8%\n\n\n4\n1812\nJames Madison\nD-R\n128/217\n58.99%\n52.30%\n2.74%\n140,431\n7,650\nDeWitt Clinton\nD-R[d]\n40.4%\n\n\n5\n1816\nJames Monroe\nD-R\n183/217\n84.33%\n72.90%\n37.24%\n76,592\n41,852\nRufus King\nFed.\n23.5%\n\n\n6\n1820\nJames Monroe\nD-R\n231/232\n99.57%\n78.34%\n64.69%\n87,343\n69,878\nJohn Quincy Adams\nD-R[e]\n10.1%\n\n\n7\n1824\nJohn Quincy Adams\nD-R\n84/261\n32.18%\n30.92%\n−10.44%\n113,142\n−38,221\nAndrew Jackson\nD-R[f]\n26.9%\n\n\n8\n1828\nAndrew Jackson\nDem.\n178/261\n68.20%\n55.93%\n12.25%\n642,806\n140,839\nJohn Quincy Adams\nNR\n57.3%\n\n\n9\n1832\nAndrew Jackson\nDem.\n219/286\n76.57%\n54.74%\n17.81%\n702,735\n228,628\nHenry Clay\nNR\n57.0%\n\n\n10\n1836\nMartin Van Buren\nDem.\n170/294\n57.82%\n50.79%\n14.20%\n763,291\n213,384\nWilliam Henry Harrison\nWhig\n56.5%\n\n\n11\n1840\nWilliam Henry Harrison\nWhig\n234/294\n79.59%\n52.87%\n6.05%\n1,275,583\n145,938\nMartin Van Buren\nDem.\n80.3%\n\n\n12\n1844\nJames K. Polk\nDem.\n170/275\n61.82%\n49.54%\n1.45%\n1,339,570\n39,413\nHenry Clay\nWhig\n79.2%\n\n\n13\n1848\nZachary Taylor\nWhig\n163/290\n56.21%\n47.28%\n4.79%\n1,360,235\n137,882\nLewis Cass\nDem.\n72.8%\n\n\n14\n1852\nFranklin Pierce\nDem.\n254/296\n85.81%\n50.83%\n6.95%\n1,605,943\n219,525\nWinfield Scott\nWhig\n69.5%\n\n\n15\n1856\nJames Buchanan\nDem.\n174/296\n58.78%\n45.29%\n12.20%\n1,835,140\n494,472\nJohn C. Frémont\nRep.\n79.4%\n\n\n16\n1860\nAbraham Lincoln\nRep.\n180/303\n59.41%\n39.65%\n10.13%\n1,855,993\n474,049\nJohn C. Breckinridge\nDem.[g]\n81.8%\n\n\n17\n1864\nAbraham Lincoln\nRep.\n212/233\n90.99%\n55.03%\n10.08%\n2,211,317\n405,090\nGeorge B. McClellan\nDem.\n76.3%\n\n\n18\n1868\nUlysses S. Grant\nRep.\n214/294\n72.79%\n52.66%\n5.32%\n3,013,790\n304,810\nHoratio Seymour\nDem.\n80.9%\n\n\n19\n1872\nUlysses S. Grant\nRep.\n286/352\n81.25%\n55.58%\n11.80%\n3,597,439\n763,729\nThomas A. Hendricks\nDem.[h]\n72.1%\n\n\n20\n1876\nRutherford B. Hayes\nRep.\n185/369\n50.14%\n47.92%\n−3.00%\n4,034,142\n−252,666\nSamuel J. Tilden\nDem.\n82.6%\n\n\n21\n1880\nJames A. Garfield\nRep.\n214/369\n57.99%\n48.31%\n0.09%\n4,453,337\n1,898\nWinfield Scott Hancock\nDem.\n80.5%\n\n\n22\n1884\nGrover Cleveland\nDem.\n219/401\n54.61%\n48.85%\n0.57%\n4,914,482\n57,579\nJames G. Blaine\nRep.\n78.2%\n\n\n23\n1888\nBenjamin Harrison\nRep.\n233/401\n58.10%\n47.80%\n−0.83%\n5,443,892\n−90,596\nGrover Cleveland\nDem.\n80.5%\n\n\n24\n1892\nGrover Cleveland\nDem.\n277/444\n62.39%\n46.02%\n3.01%\n5,553,898\n363,099\nBenjamin Harrison\nRep.\n75.8%\n\n\n25\n1896\nWilliam McKinley\nRep.\n271/447\n60.63%\n51.02%\n4.31%\n7,112,138\n601,331\nWilliam Jennings Bryan\nDem.\n79.6%\n\n\n26\n1900\nWilliam McKinley\nRep.\n292/447\n65.23%\n51.64%\n6.12%\n7,228,864\n857,932\nWilliam Jennings Bryan\nDem.\n73.7%\n\n\n27\n1904\nTheodore Roosevelt\nRep.\n336/476\n70.59%\n56.42%\n18.83%\n7,630,557\n2,546,677\nAlton Brooks Parker\nDem.\n65.5%\n\n\n28\n1908\nWilliam Howard Taft\nRep.\n321/483\n66.46%\n51.57%\n8.53%\n7,678,335\n1,269,356\nWilliam Jennings Bryan\nDem.\n65.7%\n\n\n29\n1912\nWoodrow Wilson\nDem.\n435/531\n81.92%\n41.84%\n14.44%\n6,296,284\n2,173,563\nTheodore Roosevelt\nProg.\n59.0%\n\n\n30\n1916\nWoodrow Wilson\nDem.\n277/531\n52.17%\n49.24%\n3.12%\n9,126,868\n578,140\nCharles Evans Hughes\nRep.\n61.8%\n\n\n31\n1920\nWarren G. Harding\nRep.\n404/531\n76.08%\n60.32%\n26.17%\n16,144,093\n7,004,432\nJames M. Cox\nDem.\n49.2%\n\n\n32\n1924\nCalvin Coolidge\nRep.\n382/531\n71.94%\n54.04%\n25.22%\n15,723,789\n7,337,547\nJohn W. Davis\nDem.\n48.9%\n\n\n33\n1928\nHerbert Hoover\nRep.\n444/531\n83.62%\n58.21%\n17.41%\n21,427,123\n6,411,659\nAl Smith\nDem.\n56.9%\n\n\n34\n1932\nFranklin D. Roosevelt\nDem.\n472/531\n88.89%\n57.41%\n17.76%\n22,821,277\n7,060,023\nHerbert Hoover\nRep.\n56.9%\n\n\n35\n1936\nFranklin D. Roosevelt\nDem.\n523/531\n98.49%\n60.80%\n24.26%\n27,752,648\n11,070,786\nAlf Landon\nRep.\n61.0%\n\n\n36\n1940\nFranklin D. Roosevelt\nDem.\n449/531\n84.56%\n54.74%\n9.96%\n27,313,945\n4,966,201\nWendell Willkie\nRep.\n62.4%\n\n\n37\n1944\nFranklin D. Roosevelt\nDem.\n432/531\n81.36%\n53.39%\n7.50%\n25,612,916\n3,594,987\nThomas E. Dewey\nRep.\n55.9%\n\n\n38\n1948\nHarry S Truman\nDem.\n303/531\n57.06%\n49.55%\n4.48%\n24,179,347\n2,188,055\nThomas E. Dewey\nRep.\n52.2%\n\n\n39\n1952\nDwight D. Eisenhower\nRep.\n442/531\n83.24%\n55.18%\n10.85%\n34,075,529\n6,700,439\nAdlai Stevenson II\nDem.\n62.3%\n\n\n40\n1956\nDwight D. Eisenhower\nRep.\n457/531\n86.06%\n57.37%\n15.40%\n35,579,180\n9,551,152\nAdlai Stevenson II\nDem.\n60.2%\n\n\n41\n1960\nJohn F. Kennedy\nDem.\n303/537\n56.42%\n49.72%\n0.17%\n34,220,984\n112,827\nRichard Nixon\nRep.\n63.8%\n\n\n42\n1964\nLyndon B. Johnson\nDem.\n486/538\n90.33%\n61.05%\n22.58%\n43,127,041\n15,951,287\nBarry Goldwater\nRep.\n62.8%\n\n\n43\n1968\nRichard Nixon\nRep.\n301/538\n55.95%\n43.42%\n0.70%\n31,783,783\n511,944\nHubert Humphrey\nDem.\n62.5%\n\n\n44\n1972\nRichard Nixon\nRep.\n520/538\n96.65%\n60.67%\n23.15%\n47,168,710\n17,995,488\nGeorge McGovern\nDem.\n56.2%\n\n\n45\n1976\nJimmy Carter\nDem.\n297/538\n55.20%\n50.08%\n2.06%\n40,831,881\n1,683,247\nGerald Ford\nRep.\n54.8%\n\n\n46\n1980\nRonald Reagan\nRep.\n489/538\n90.89%\n50.75%\n9.74%\n43,903,230\n8,423,115\nJimmy Carter\nDem.\n54.2%\n\n\n47\n1984\nRonald Reagan\nRep.\n525/538\n97.58%\n58.77%\n18.21%\n54,455,472\n16,878,120\nWalter Mondale\nDem.\n55.2%\n\n\n48\n1988\nGeorge H. W. Bush\nRep.\n426/538\n79.18%\n53.37%\n7.72%\n48,886,597\n7,077,121\nMichael Dukakis\nDem.\n52.8%\n\n\n49\n1992\nBill Clinton\nDem.\n370/538\n68.77%\n43.01%\n5.56%\n44,909,806\n5,805,256\nGeorge H. W. Bush\nRep.\n58.1%\n\n\n50\n1996\nBill Clinton\nDem.\n379/538\n70.45%\n49.23%\n8.51%\n47,400,125\n8,201,370\nBob Dole\nRep.\n51.7%\n\n\n51\n2000\nGeorge W. Bush\nRep.\n271/538\n50.47%\n47.87%\n−0.51%\n50,455,156\n−538,179\nAl Gore\nDem.\n54.2%\n\n\n52\n2004\nGeorge W. Bush\nRep.\n286/538\n53.16%\n50.73%\n2.46%\n62,040,610\n3,012,171\nJohn Kerry\nDem.\n60.1%\n\n\n53\n2008\nBarack Obama\nDem.\n365/538\n67.84%\n52.93%\n7.27%\n69,498,516\n9,550,193\nJohn McCain\nRep.\n61.6%\n\n\n54\n2012\nBarack Obama\nDem.\n332/538\n61.71%\n51.06%\n3.86%\n65,915,795\n4,982,291\nMitt Romney\nRep.\n58.6%\n\n\n55\n2016\nDonald Trump\nRep.\n304/538\n56.50%\n46.09%\n−2.09%\n62,984,828\n−2,868,686\nHillary Clinton\nDem.\n57.3%\n\n\n56\n2020\nJoe Biden\nDem.\n306/538\n56.88%\n51.31%\n4.45%\n81,284,666\n7,060,347\nDonald Trump\nRep.\n66.6%\n\n\n\n\n\n\n\n\nelections = elections.query('year &gt;= 1944')\n\n\nincumbent_won = elections.party.values[:-1] == elections.party.values[1:]\nyear = elections.year.values[1:]\n\nelections = pd.DataFrame({'incumbent won': incumbent_won, 'year': year})\nelections\n\n\n\n\n\n\n\n\nincumbent won\nyear\n\n\n\n\n0\nTrue\n1948\n\n\n1\nFalse\n1952\n\n\n2\nTrue\n1956\n\n\n3\nFalse\n1960\n\n\n4\nTrue\n1964\n\n\n5\nFalse\n1968\n\n\n6\nTrue\n1972\n\n\n7\nFalse\n1976\n\n\n8\nFalse\n1980\n\n\n9\nTrue\n1984\n\n\n10\nTrue\n1988\n\n\n11\nFalse\n1992\n\n\n12\nTrue\n1996\n\n\n13\nFalse\n2000\n\n\n14\nTrue\n2004\n\n\n15\nFalse\n2008\n\n\n16\nTrue\n2012\n\n\n17\nFalse\n2016\n\n\n18\nFalse\n2020\n\n\n\n\n\n\n\n\nspx = pd.read_csv('data/SPX.csv', parse_dates=['Date'])\n\n\nspx_oct = spx.query('Date.dt.month == 10')\nspx_oct['year'] = spx['Date'].dt.year\n\n/var/folders/ct/cvh0qs6j5rlbcp004rxwtwh80000gn/T/ipykernel_37127/789859583.py:2: SettingWithCopyWarning: \nA value is trying to be set on a copy of a slice from a DataFrame.\nTry using .loc[row_indexer,col_indexer] = value instead\n\nSee the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy\n  spx_oct['year'] = spx['Date'].dt.year\n\n\n\nspx\n\n\n\n\n\n\n\n\nDate\nOpen\n\n\n\n\n0\n1928-02-01\n17.530001\n\n\n1\n1928-03-01\n17.299999\n\n\n2\n1928-05-01\n19.780001\n\n\n3\n1928-06-01\n20.070000\n\n\n4\n1928-08-01\n19.420000\n\n\n...\n...\n...\n\n\n742\n2024-04-01\n5257.970000\n\n\n743\n2024-05-01\n5029.030000\n\n\n744\n2024-07-01\n5471.080000\n\n\n745\n2024-08-01\n5537.840000\n\n\n746\n2024-10-01\n5757.730000\n\n\n\n\n747 rows × 2 columns\n\n\n\n\nggplot() + geom_line(data=spx.query('Date.dt.year &gt; 2020'), mapping=aes(x='Date', y='Open'))"
   },
   {
     "objectID": "modules/02-Multiple-variables/lectures/Lecture-2-4/slides-2-4-v2.html#internal-exploratory-data-analysis",
@@ -7894,5 +7894,656 @@
     "title": "Data Analytics and Visualization",
     "section": "Components: Interactions",
     "text": "Components: Interactions"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html",
+    "title": "Line plots",
+    "section": "",
+    "text": "import pandas as pd\nimport numpy as np\nimport vega_datasets"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/notebook-3-0.html",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/notebook-3-0.html",
+    "title": "Data Analytics and Visualization",
+    "section": "",
+    "text": "import pandas as pd\nimport numpy as np\nimport vega_datasets\n\n\npd.read_csv()"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#why-is-time-complicated",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#why-is-time-complicated",
+    "title": "Working with time data",
+    "section": "Why is time complicated?",
+    "text": "Why is time complicated?"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#representing-time",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#representing-time",
+    "title": "Working with time data",
+    "section": "Representing time",
+    "text": "Representing time"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#parsing-time",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#parsing-time",
+    "title": "Working with time data",
+    "section": "Parsing time",
+    "text": "Parsing time"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#components-of-time",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#components-of-time",
+    "title": "Working with time data",
+    "section": "Components of time",
+    "text": "Components of time"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#basic-line-plot",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#basic-line-plot",
+    "title": "Line plots",
+    "section": "Basic line plot",
+    "text": "Basic line plot\n\nnumbers = [0.25, 0.09, 0.58, 0.22, 0.38, 0.03, 0.45, 0.12, 0.87, 0.99, 0.85, 0.5, 0.64, 0.86, 0.6, 0.09, 0.14, 0.95, 0.92, 0.89]\n\nPlot.plot({\n  marks: [\n    Plot.lineY(numbers),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#point-marks",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#point-marks",
+    "title": "Line plots",
+    "section": "Point marks",
+    "text": "Point marks\n\nPlot.plot({\n  marks: [\n    Plot.lineY(numbers),\n    Plot.dotY(numbers, {x: (d, i) =&gt; i, fill: 'black'})\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#ordering",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#ordering",
+    "title": "Line plots",
+    "section": "Ordering",
+    "text": "Ordering\n\nfunction shuffle(array) {\n  let currentIndex = array.length;\n\n  // While there remain elements to shuffle...\n  while (currentIndex != 0) {\n\n    // Pick a remaining element...\n    let randomIndex = Math.floor(Math.random() * currentIndex);\n    currentIndex--;\n\n    // And swap it with the current element.\n    [array[currentIndex], array[randomIndex]] = [\n      array[randomIndex], array[currentIndex]];\n  }\n  return array;\n}\n\nshuffled = shuffle(numbers.map((d, i) =&gt; ({x: i, y: d})))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  marks: [\n    Plot.line(shuffled, {x: 'x', y: 'y', stroke: 'black'}),\n    Plot.dot(shuffled, {x: 'x', y: 'y', fill: 'black'})\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#multiple-lines",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#multiple-lines",
+    "title": "Line plots",
+    "section": "Multiple lines",
+    "text": "Multiple lines\n\naapl = pd.read_csv('data/aapl.csv')[['Date', 'Close']]\naapl['Date'] = pd.to_datetime(aapl['Date'])\naapl['Symbol'] = 'aapl'\n\namzn = pd.read_csv('data/amzn.csv')[['Date', 'Close']]\namzn['Date'] = pd.to_datetime(amzn['Date'])\namzn['Symbol'] = 'amzn'\n\nibm = pd.read_csv('data/ibm.csv')[['Date', 'Close']]\nibm['Date'] = pd.to_datetime(ibm['Date'])\nibm['Symbol'] = 'ibm'\n\ngoog = pd.read_csv('data/goog.csv')[['Date', 'Close']]\ngoog['Date'] = pd.to_datetime(goog['Date'])\ngoog['Symbol'] = 'goog'\n\nstocks = pd.concat([aapl, amzn, ibm, goog])\nojs_define(stocks_T=stocks)\n\n\n\n\n\nstocks = transpose(stocks_T)\nPlot.plot({\ncolor: {legend: true},\n  x: {type: 'utc'},\n  y: {grid: true},\n  marks: [\n    Plot.ruleY([0]),\n    Plot.lineY(stocks, {x: \"Date\", y: \"Close\", stroke: \"Symbol\"}),\n    Plot.text(stocks, Plot.selectLast({x: \"Date\", y: \"Close\", z: \"Symbol\", text: \"Symbol\", textAnchor: \"start\", dx: 3}))\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#normalization",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#normalization",
+    "title": "Line plots",
+    "section": "Normalization",
+    "text": "Normalization\n\nPlot.plot({\n  color: {legend: true},\n  x: {type: 'utc'},x: {type: 'utc'},\n  y: {\n    type: \"log\", label: \"Change in price (%)\",\n  },\n  marks: [\n    Plot.line(stocks, Plot.normalizeY({\n      x: \"Date\", y: \"Close\", stroke: \"Symbol\"\n    })),\n    Plot.text(stocks, Plot.selectLast(Plot.normalizeY({\n      x: \"Date\",  y: \"Close\", z: \"Symbol\",\n      text: \"Symbol\", textAnchor: \"start\", dx: 3\n    })))\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#area-plots",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#area-plots",
+    "title": "Line plots",
+    "section": "Area plots",
+    "text": "Area plots\n\nPlot.plot({\n  x: {type: 'utc'},\n  marks: [\n    Plot.areaY(aapl, {x: 'Date', y: 'Close'}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#line-coloring",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#line-coloring",
+    "title": "Line plots",
+    "section": "Line coloring",
+    "text": "Line coloring\n\nPlot.plot({\n  x: {type: 'utc'},\n  color: {scheme: 'Inferno'},\n  marks: [\n    Plot.line(aapl, {x: 'Date', y: 'Close', z: null, stroke: 'Close'}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-as-a-color-axis",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-as-a-color-axis",
+    "title": "Line plots",
+    "section": "Time as a color axis",
+    "text": "Time as a color axis\n\ndriving = FileAttachment(\"data/driving.csv\").csv({typed: true})\nPlot.plot({\n  x: {label: \"Miles driven (per person-year) →\"},\n  y: {label: \"↑ Cost of gasoline ($ per gallon)\"},\n  marks: [\n    Plot.line(driving, {x: \"miles\", y: \"gas\", curve: \"catmull-rom\", marker: true}),\n    Plot.text(driving, {filter: (d) =&gt; d.year % 5 === 0, x: \"miles\", y: \"gas\", text: (d) =&gt; `${d.year}`, dy: -8})\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-not-on-the-x-axis",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-not-on-the-x-axis",
+    "title": "Working with time data",
+    "section": "Time not on the x-axis",
+    "text": "Time not on the x-axis"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#grouping-by-time-element",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#grouping-by-time-element",
+    "title": "Line plots",
+    "section": "Grouping by time element",
+    "text": "Grouping by time element\n\nsf_day = sf.groupby(sf.date.dt.floor('d')).mean()\nojs_define(sf_day_T=sf_day)\n\n\n\n\n\nsf_day = transpose(sf_day_T)\nPlot.plot({\n  x: {type: 'utc'},\n  marks: [\n    Plot.line(sf_day, {x: 'date', y: 'temp'}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#reductions",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#reductions",
+    "title": "Line plots",
+    "section": "Reductions",
+    "text": "Reductions"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#showing-multiple-reductions",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#showing-multiple-reductions",
+    "title": "Line plots",
+    "section": "Showing multiple reductions",
+    "text": "Showing multiple reductions"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#candlestick-charts",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#candlestick-charts",
+    "title": "Line plots",
+    "section": "Candlestick charts",
+    "text": "Candlestick charts"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#windowed-smoothing",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#windowed-smoothing",
+    "title": "Line plots",
+    "section": "Windowed smoothing",
+    "text": "Windowed smoothing"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#showing-multiple-reductions-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#showing-multiple-reductions-1",
+    "title": "Line plots",
+    "section": "Showing multiple reductions",
+    "text": "Showing multiple reductions"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#window-position",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#window-position",
+    "title": "Line plots",
+    "section": "Window position",
+    "text": "Window position"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#bollinger-bands",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#bollinger-bands",
+    "title": "Line plots",
+    "section": "Bollinger bands",
+    "text": "Bollinger bands"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#weighted-windowing",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#weighted-windowing",
+    "title": "Line plots",
+    "section": "Weighted windowing",
+    "text": "Weighted windowing"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#gaussian-windowing",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#gaussian-windowing",
+    "title": "Line plots",
+    "section": "Gaussian windowing",
+    "text": "Gaussian windowing"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#exponential-windowing",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#exponential-windowing",
+    "title": "Line plots",
+    "section": "Exponential windowing",
+    "text": "Exponential windowing"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#linear-interpolation",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#linear-interpolation",
+    "title": "Line plots",
+    "section": "Linear interpolation",
+    "text": "Linear interpolation"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#spline-interpolation",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#spline-interpolation",
+    "title": "Line plots",
+    "section": "Spline interpolation",
+    "text": "Spline interpolation"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#catmull-rom",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#catmull-rom",
+    "title": "Line plots",
+    "section": "Catmull-Rom",
+    "text": "Catmull-Rom"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#cardinal-splines",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#cardinal-splines",
+    "title": "Line plots",
+    "section": "Cardinal splines",
+    "text": "Cardinal splines"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#natural-splines",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#natural-splines",
+    "title": "Line plots",
+    "section": "Natural splines",
+    "text": "Natural splines"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#upsampling",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#upsampling",
+    "title": "Line plots",
+    "section": "Upsampling",
+    "text": "Upsampling"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#using-statistics",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#using-statistics",
+    "title": "Line plots",
+    "section": "Using statistics",
+    "text": "Using statistics"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#using-conditional-models",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#using-conditional-models",
+    "title": "Line plots",
+    "section": "Using conditional models",
+    "text": "Using conditional models"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#using-interpolation",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#using-interpolation",
+    "title": "Line plots",
+    "section": "Using interpolation",
+    "text": "Using interpolation"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#cell-charts",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#cell-charts",
+    "title": "Line plots",
+    "section": "Cell charts",
+    "text": "Cell charts\n\nseattle = FileAttachment(\"data/seattle-weather.csv\").csv({ typed: true })\nPlot.plot({\n  padding: 0,\n  y: {tickFormat: Plot.formatMonth(\"en\", \"short\")},\n  marks: [\n    Plot.cell(seattle, Plot.group({fill: \"max\"}, {\n      x: (d) =&gt; d.date.getUTCDate(),\n      y: (d) =&gt; d.date.getUTCMonth(),\n      fill: \"temp_max\",\n      inset: 0.5\n    }))\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#stacked-area-charts",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#stacked-area-charts",
+    "title": "Line plots",
+    "section": "Stacked area charts",
+    "text": "Stacked area charts\n\nriaa = FileAttachment(\"data/riaa-us-revenue.csv\").csv({typed: true})\nPlot.plot({\n  y: {\n    grid: true,\n    label: \"↑ Annual revenue (billions, adj.)\",\n    transform: (d) =&gt; d / 1000\n  },\n  marks: [\n    Plot.areaY(riaa, {x: \"year\", y: \"revenue\", z: \"format\", fill: \"group\"})\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#proportion-plots",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#proportion-plots",
+    "title": "Line plots",
+    "section": "Proportion plots",
+    "text": "Proportion plots\n\nPlot.plot({\n  y: {\n    label: \"↑ Annual revenue (%)\",\n    percent: true\n  },\n  marks: [\n    Plot.areaY(riaa, Plot.stackY({offset: \"normalize\", order: \"group\", reverse: true}, {x: \"year\", y: \"revenue\", z: \"format\", fill: \"group\"})),\n    Plot.ruleY([0, 1])\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-with-faceting",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-with-faceting",
+    "title": "Line plots",
+    "section": "Time with faceting",
+    "text": "Time with faceting"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#ridgeline-plots",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#ridgeline-plots",
+    "title": "Line plots",
+    "section": "Ridgeline plots",
+    "text": "Ridgeline plots"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#sorting",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#sorting",
+    "title": "Line plots",
+    "section": "Sorting",
+    "text": "Sorting\n\nPlot.plot({\n  marks: [\n    Plot.line(shuffled, Plot.sort('x', {x: 'x', y: 'y', stroke: 'black'})),\n    Plot.dot(shuffled, Plot.sort('x', {x: 'x', y: 'y', fill: 'black'}))\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-as-an-axis",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-as-an-axis",
+    "title": "Line plots",
+    "section": "Time as an axis",
+    "text": "Time as an axis\n\naapl = pd.read_csv('data/aapl.csv')\naapl['Date'] = pd.to_datetime(aapl['Date'])\nojs_define(aapl_T=aapl)\n\n\n\n\n\naapl = transpose(aapl_T)\nPlot.plot({\n  x: {type: 'utc'},\n  marks: [\n    Plot.line(aapl, {x: 'Date', y: 'Close'}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-as-an-axis-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-as-an-axis-1",
+    "title": "Working with time data",
+    "section": "Time as an axis",
+    "text": "Time as an axis\n\nsf = vega_datasets.data.sf_temps()\nsf.date = pd.to_datetime(sf.date)\nojs_define(sf_T=sf)\n\n\n\n\n\nsf = transpose(sf_T)\nPlot.plot({\n  x: {type: 'utc'},\n  marks: [\n    Plot.line(sf, {x: 'date', y: 'temp'}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-as-an-axis-2",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-as-an-axis-2",
+    "title": "Working with time data",
+    "section": "Time as an axis",
+    "text": "Time as an axis\n\nsf_may = sf.query('(date.dt.month &gt;= 5) & (date.dt.month &lt; 6)')\nojs_define(sf_may_T=sf_may)\n\n\n\n\n\nsf_may = transpose(sf_may_T)\nPlot.plot({\n  x: {type: 'utc'},\n  marks: [\n    Plot.line(sf_may, {x: 'date', y: 'temp'}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#multiple-lines-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#multiple-lines-1",
+    "title": "Working with time data",
+    "section": "Multiple lines",
+    "text": "Multiple lines"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#area-plots-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#area-plots-1",
+    "title": "Working with time data",
+    "section": "Area plots",
+    "text": "Area plots"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-as-a-color-axis-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-as-a-color-axis-1",
+    "title": "Line plots",
+    "section": "Time as a color axis",
+    "text": "Time as a color axis\n\nPlot.plot({\n  x: {label: \"Miles driven (per person-year) →\"},\n  y: {label: \"↑ Cost of gasoline ($ per gallon)\"},\n  color: {legend: true, scheme: 'Blues'},\n  marks: [\n    Plot.line(driving, {x: \"miles\", y: \"gas\", z: null, stroke: 'year', curve: \"catmull-rom\", marker: true}),\n    Plot.text(driving, {filter: (d) =&gt; d.year % 5 === 0, x: \"miles\", y: \"gas\", text: (d) =&gt; `${d.year}`, dy: -8})\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-as-a-color-axis-2",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#time-as-a-color-axis-2",
+    "title": "Working with time data",
+    "section": "Time as a color axis",
+    "text": "Time as a color axis"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#high-frequency-plots",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#high-frequency-plots",
+    "title": "Line plots",
+    "section": "High-frequency plots",
+    "text": "High-frequency plots\n\nsf = vega_datasets.data.sf_temps()\nsf.date = pd.to_datetime(sf.date)\nojs_define(sf_T=sf)\n\n\n\n\n\nsf = transpose(sf_T)\nPlot.plot({\n  x: {type: 'utc'},\n  marks: [\n    Plot.line(sf, {x: 'date', y: 'temp'}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#high-frequency-plots-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#high-frequency-plots-1",
+    "title": "Line plots",
+    "section": "High-frequency plots",
+    "text": "High-frequency plots\n\nsf_may = sf.query('(date.dt.month &gt;= 5) & (date.dt.month &lt; 6)')\nojs_define(sf_may_T=sf_may)\n\n\n\n\n\nsf_may = transpose(sf_may_T)\nPlot.plot({\n  x: {type: 'utc'},\n  marks: [\n    Plot.line(sf_may, {x: 'date', y: 'temp'}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#high-frequency-plots-2",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#high-frequency-plots-2",
+    "title": "Working with time data",
+    "section": "High-frequency plots",
+    "text": "High-frequency plots\n\nsf_may = sf.query('(date.dt.month &gt;= 5) & (date.dt.month &lt; 6)')\nojs_define(sf_may_T=sf_may)\n\n\n\n\n\nsf_may = transpose(sf_may_T)\nPlot.plot({\n  x: {type: 'utc'},\n  marks: [\n    Plot.line(sf_may, {x: 'date', y: 'temp'}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#grouping-by-time-element-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#grouping-by-time-element-1",
+    "title": "Line plots",
+    "section": "Grouping by time element",
+    "text": "Grouping by time element\n\nsf_day_stats = sf.groupby(sf.date.dt.floor('d')).agg({'temp': ['min', 'max', 'mean']})\nsf_day_stats.columns = sf_day_stats.columns.to_flat_index()\nsf_day_stats.columns = [c[1] for c in sf_day_stats.columns]\nsf_day_stats= sf_day_stats.reset_index()\nojs_define(sf_day_stats_T=sf_day_stats)\nsf_day_stats\n\n\n\n\n\n\n\n\n\n\n\ndate\nmin\nmax\nmean\n\n\n\n\n0\n2010-01-01\n45.8\n53.3\n49.170833\n\n\n1\n2010-01-02\n46.0\n53.4\n49.304167\n\n\n2\n2010-01-03\n46.1\n53.5\n49.391667\n\n\n3\n2010-01-04\n46.1\n53.6\n49.445833\n\n\n4\n2010-01-05\n46.1\n53.8\n49.491667\n\n\n...\n...\n...\n...\n...\n\n\n360\n2010-12-27\n45.6\n53.2\n48.991667\n\n\n361\n2010-12-28\n45.6\n53.2\n49.000000\n\n\n362\n2010-12-29\n45.6\n53.2\n49.012500\n\n\n363\n2010-12-30\n45.6\n53.2\n49.012500\n\n\n364\n2010-12-31\n45.8\n53.2\n49.116667\n\n\n\n\n365 rows × 4 columns\n\n\n\n\nsf_day_stats = transpose(sf_day_stats_T)\nPlot.plot({\n  x: {type: 'utc'},\n  marks: [\n    Plot.line(sf_day_stats, {x: 'date', y: 'mean'}),\n    Plot.line(sf_day_stats, {x: 'date', y: 'min', stroke: 'blue'}),\n    Plot.line(sf_day_stats, {x: 'date', y: 'max', stroke: 'red'}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#grouping-by-time-element-2",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#grouping-by-time-element-2",
+    "title": "Line plots",
+    "section": "Grouping by time element",
+    "text": "Grouping by time element\n\nPlot.plot({\n  x: {type: 'utc'},\n  marks: [\n    Plot.areaY(sf_day_stats, {x: 'date', y1: 'min', y2: 'max', fill: 'lightgrey'}),\n    Plot.line(sf_day_stats, {x: 'date', y: 'mean'}),\n    Plot.line(sf_day_stats, {x: 'date', y: 'min', stroke: 'blue'}),\n    Plot.line(sf_day_stats, {x: 'date', y: 'max', stroke: 'red'}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#grouping-by-time-element-3",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#grouping-by-time-element-3",
+    "title": "Line plots",
+    "section": "Grouping by time element",
+    "text": "Grouping by time element\n\nticker = aapl.slice(-130)\nPlot.plot({\n  inset: 6,\n  width: 928,\n  grid: true,\n  y: {label: \"↑ Apple stock price ($)\"},\n  color: {domain: [-1, 0, 1], range: [\"#e41a1c\", \"currentColor\", \"#4daf4a\"]},\n  marks: [\n    Plot.ruleX(ticker, {\n      x: \"Date\",\n      y1: \"Low\",\n      y2: \"High\"\n    }),\n    Plot.ruleX(ticker, {\n      x: \"Date\",\n      y1: \"Open\",\n      y2: \"Close\",\n      stroke: (d) =&gt; Math.sign(d.Close - d.Open),\n      strokeWidth: 4,\n      strokeLinecap: \"round\"\n    })\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#grouping-by-time-element-4",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#grouping-by-time-element-4",
+    "title": "Line plots",
+    "section": "Grouping by time element",
+    "text": "Grouping by time element\n\nsf = sf.set_index('date')\nsf_rolling= sf.rolling(window=72, center=True).mean()\nojs_define(sf_rolling_T=sf_rolling.reset_index())\n\n\n\n\n\nsf_rolling = transpose(sf_rolling_T)\nPlot.plot({\n  x: {type: 'utc'},\n  marks: [\n    Plot.line(sf_rolling, {x: 'date', y: 'temp'}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#cell-charts-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#cell-charts-1",
+    "title": "Line plots",
+    "section": "Cell charts",
+    "text": "Cell charts\n\nsimpsons = FileAttachment(\"data/simpsons.csv\").csv({typed: true})\nPlot.plot({\n  padding: 0,\n  grid: true,\n  x: {axis: \"top\", label: \"Season\"},\n  y: {label: \"Episode\"},\n  color: {type: \"linear\", scheme: \"PiYG\"},\n  marks: [\n    Plot.cell(simpsons, {x: \"season\", y: \"number_in_season\", fill: \"imdb_rating\", inset: 0.5}),\n    Plot.text(simpsons, {x: \"season\", y: \"number_in_season\", text: (d) =&gt; d.imdb_rating?.toFixed(1), fill: \"black\", title: \"title\"})\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#curves",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-0/slides-3-0.html#curves",
+    "title": "Line plots",
+    "section": "Curves",
+    "text": "Curves\n\nviewof curve = Inputs.select([\"basis\",\n\"basis-open\",\n\"basis-closed\",\n\"bump-x\",\n\"bump-y\",\n\"bundle\",\n\"cardinal\",\n\"cardinal-open\",\n\"cardinal-closed\",\n\"catmull-rom\",\n\"catmull-rom-open\",\n\"catmull-rom-closed\",\n\"linear\",\n\"linear-closed\",\n\"monotone-x\",\n\"monotone-y\",\n\"natural\",\n\"step\",\n\"step-after\",\n\"step-before\"], { label: \"curve\", value: \"linear\" })\n\n\n\n\n\n\n\nPlot.plot({\n  marks: [\n    Plot.lineY(numbers, {curve}),\n    Plot.dotY(numbers, {x: (d, i) =&gt; i})\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#what-do-we-want-to-highlight-in-a-timeseries-visualization",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#what-do-we-want-to-highlight-in-a-timeseries-visualization",
+    "title": "Data Analytics and Visualization",
+    "section": "What do we want to highlight in a timeseries visualization?",
+    "text": "What do we want to highlight in a timeseries visualization?\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ Plot.lineY(sf, {x: 'date', y: 'low'})]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/recording_data.html",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/recording_data.html",
+    "title": "Data Analytics and Visualization",
+    "section": "",
+    "text": "import pandas as pd\nimport numpy as np\nfrom lets_plot import *\nimport vega_datasets\nLetsPlot.setup_html()\n\n\n            \n            \n            \n\n\n\nspx = vega_datasets.data.sp500()\nspx.date = spx.date.dt.floor('d')\n\n\nhousing = pd.read_csv('data/elections/HOUST.csv')\nhousing['date'] = pd.to_datetime(housing[\"DATE\"])\nhousing['housing'] = housing[\"HOUST\"]\nhousing = housing[['date', 'housing']]\nhousing = housing[housing.date.dt.month % 3 == 1]\nhousing = housing.query('(date &gt;= \"2000-01-01\") & (date &lt;= \"2010-03-01\")').reset_index()[['date', 'housing']]\n\n\nspx.head()\n\n\n\n\n\n\n\n\nDate\nClose\n\n\n\n\n0\n2000-01-03\n1455.219971\n\n\n1\n2000-01-04\n1399.420044\n\n\n2\n2000-01-05\n1402.109985\n\n\n3\n2000-01-06\n1403.449951\n\n\n4\n2000-01-07\n1441.469971\n\n\n\n\n\n\n\n\n(\n    ggplot(spx) + \n    geom_line(aes(x='date', y='price')) + ggtitle('S & P 500 Price ($)') + ggsize(1200, 400)\n\n   \n   \n\n\n\nhousing.head()\n\n\n\n\n\n\n\n\ndate\nhousing\n\n\n\n\n0\n2000-01-01\n1636.0\n\n\n1\n2000-04-01\n1626.0\n\n\n2\n2000-07-01\n1463.0\n\n\n3\n2000-10-01\n1549.0\n\n\n4\n2001-01-01\n1600.0\n\n\n\n\n\n\n\n\nggplot(housing) + geom_line(aes(x='date', y='housing')) + ggtitle('New housing construction (1000s of units)') + ggsize(1200, 400)\n\n   \n   \n\n\n\ndata = spx.merge(housing, on='date', how='outer')\ndata\n\n\n\n\n\n\n\n\ndate\nprice\nhousing\n\n\n\n\n0\n2000-01-01\n1394.46\n1636.0\n\n\n1\n2000-02-01\n1366.42\nNaN\n\n\n2\n2000-03-01\n1498.58\nNaN\n\n\n3\n2000-04-01\n1452.43\n1626.0\n\n\n4\n2000-05-01\n1420.60\nNaN\n\n\n...\n...\n...\n...\n\n\n118\n2009-11-01\n1095.63\nNaN\n\n\n119\n2009-12-01\n1115.10\nNaN\n\n\n120\n2010-01-01\n1073.87\n614.0\n\n\n121\n2010-02-01\n1104.49\nNaN\n\n\n122\n2010-03-01\n1140.45\nNaN\n\n\n\n\n123 rows × 3 columns\n\n\n\n\n( \n    ggplot(data.melt(id_vars='date').query('date &lt; \"2004-01-01\"'))\n        + geom_point(aes(x='date', y='value', color='variable')) \n        + geom_line(aes(x='date', y='value', color='variable'), alpha=0.2) \n        + facet_grid(y='variable', scales='free') + ggsize(1200, 600)\n)\n\n   \n   \n\n\n\nrange = pd.date_range('2017-01-01', '2017-04-01', 10000).to_frame().rename(columns={0: 'Datetime'})\nrange['day'] = range['Datetime'].dt.to_period('d').dt.to_timestamp()\nrange['week'] = range['Datetime'] .dt.to_period('w').dt.to_timestamp()\nrange['month'] = range['Datetime'].dt.to_period('M').dt.to_timestamp()\n#range['month_int'] = range['datetime'].dt.month\n#range['month_int_2'] = range['datetime'].dt.month\nrange = range.melt(id_vars='Datetime', var_name='Measure', value_name='Value' )\nrange\n\n/var/folders/ct/cvh0qs6j5rlbcp004rxwtwh80000gn/T/ipykernel_2088/296866072.py:3: FutureWarning: 'w' is deprecated and will be removed in a future version, please use 'W' instead.\n  range['week'] = range['Datetime'] .dt.to_period('w').dt.to_timestamp()\n\n\n\n\n\n\n\n\n\nDatetime\nMeasure\nValue\n\n\n\n\n0\n2017-01-01 00:00:00.000000000\nday\n2017-01-01\n\n\n1\n2017-01-01 00:12:57.677767776\nday\n2017-01-01\n\n\n2\n2017-01-01 00:25:55.355535553\nday\n2017-01-01\n\n\n3\n2017-01-01 00:38:53.033303330\nday\n2017-01-01\n\n\n4\n2017-01-01 00:51:50.711071107\nday\n2017-01-01\n\n\n...\n...\n...\n...\n\n\n29995\n2017-03-31 23:08:09.288928893\nmonth\n2017-03-01\n\n\n29996\n2017-03-31 23:21:06.966696670\nmonth\n2017-03-01\n\n\n29997\n2017-03-31 23:34:04.644464447\nmonth\n2017-03-01\n\n\n29998\n2017-03-31 23:47:02.322232224\nmonth\n2017-03-01\n\n\n29999\n2017-04-01 00:00:00.000000000\nmonth\n2017-04-01\n\n\n\n\n30000 rows × 3 columns\n\n\n\n\nggplot(range) + geom_line(aes(x='Datetime', y='Value', color='Measure')) + ggsize(1200, 600)\n\n   \n   \n\n\n\nggplot()+ geom_line(aes(x='datetime', y='month_int_2'), data=range.groupby('month_int').first().query('month_int_2 % 3 == 1'), color='grey') \\\n      + geom_line(aes(x='datetime', y='month_int_2'), data=range.groupby('month_int').first(), color='red') + ggsize(1200, 600) \\\n    \n\n   \n   \n\n\n\nrange.groupby('month_int').first()\n\n\n\n\n\n\n\n\ndatetime\nday\nweek\nmonth\n\n\nmonth_int\n\n\n\n\n\n\n\n\n1\n2017-01-01 00:00:00.000000000\n2017-01-01\n2016-12-26\n2017-01-01\n\n\n2\n2017-02-01 00:11:39.909990999\n2017-02-01\n2017-01-30\n2017-02-01\n\n\n3\n2017-03-01 00:01:17.767776778\n2017-03-01\n2017-02-27\n2017-03-01\n\n\n4\n2017-04-01 00:00:00.000000000\n2017-04-01\n2017-03-27\n2017-04-01\n\n\n\n\n\n\n\n\nimport time\nimport pandas as pd\nspx = pd.read_csv('data/SPX.csv')\nspx['Date'] = pd.to_datetime(spx.Date)\nspx.head()\n\n\n\n\n\n\n\n\nDate\nClose\n\n\n\n\n0\n2000-01-03\n1455.219971\n\n\n1\n2000-01-04\n1399.420044\n\n\n2\n2000-01-05\n1402.109985\n\n\n3\n2000-01-06\n1403.449951\n\n\n4\n2000-01-07\n1441.469971\n\n\n\n\n\n\n\n\nggplot(spx.query('Date &gt; \"2019-01-01\"')) + geom_line(aes(x='Date', y='Close')) + ggtitle('S&P 500 index price') + ggsize(1000, 400)\n\n   \n   \n\n\n\nspx['Date'] = pd.to_datetime(spx.Date)\nspx['Trend'] = spx.Close.rolling(window=28, center=True, min_periods=1).mean()\nspx['Residual'] = spx.Close - spx.Trend\n\n\nspx\n\n\n\n\n\n\n\n\nDate\nClose\nTrend\nResidual\n\n\n\n\n0\n2000-01-03\n1455.219971\n1430.637753\n24.582218\n\n\n1\n2000-01-04\n1399.420044\n1430.409019\n-30.988975\n\n\n2\n2000-01-05\n1402.109985\n1430.125688\n-28.015703\n\n\n3\n2000-01-06\n1403.449951\n1429.797177\n-26.347226\n\n\n4\n2000-01-07\n1441.469971\n1429.384684\n12.085287\n\n\n...\n...\n...\n...\n...\n\n\n5240\n2020-10-29\n3310.110107\n3402.186983\n-92.076876\n\n\n5241\n2020-10-30\n3269.959961\n3400.238041\n-130.278080\n\n\n5242\n2020-11-02\n3310.239990\n3398.149182\n-87.909192\n\n\n5243\n2020-11-03\n3369.159912\n3396.096544\n-26.936632\n\n\n5244\n2020-11-04\n3443.439941\n3393.995695\n49.444246\n\n\n\n\n5245 rows × 4 columns\n\n\n\n\nggplot(spx.query('Date &gt; \"2019-01-01\"')) + geom_line(aes(x='Date', y='Close'), color='lightgrey') + geom_line(aes(x='Date', y='Trend'), color='red') + ggsize(1000, 300)\n\n   \n   \n\n\n\nggplot(spx.query('Date &gt; \"2019-01-01\"')) + geom_line(aes(x='Date', y='Residual'), color='red') + ggsize(1000, 300)\n\n   \n   \n\n\n\nimport time\npd.Timestamp(time.time(), unit='s')\n\nTimestamp('2024-10-27 06:42:41.232217073')\n\n\n\nspx.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 5245 entries, 0 to 5244\nData columns (total 2 columns):\n #   Column  Non-Null Count  Dtype  \n---  ------  --------------  -----  \n 0   Date    5245 non-null   object \n 1   Close   5245 non-null   float64\ndtypes: float64(1), object(1)\nmemory usage: 82.1+ KB\n\n\n\ndelta = pd.to_datetime(spx.Date)[0].value - pd.Timestamp('2000-01-02 00:00:00').value\n\n\ndelta\n\n86400000000000\n\n\n\npd.Timestamp(0)\n\nTimestamp('1970-01-01 00:00:00')\n\n\n\npd.Timestamp('2024-01-03 00:00:00') &gt; pd.Timestamp('2000-01-02 00:00:00')\n\nTrue\n\n\n\npd.to_datetime(spx.Date)[0].value\n\n946857600000000000\n\n\n\ntime.time()\n\n1729970324.950159\n\n\n\npd.Timestamp(time.time(), unit='s')\n\nTimestamp('2024-10-26 19:20:32.004787922')\n\n\n\npd.Timestamp(time.time(), unit='s', tz='US/Pacific')\n\nTimestamp('2024-10-26 12:23:20.550533772-0700', tz='US/Pacific')\n\n\n\nspx = pd.read_csv('data/SPX.csv')\nspx['Date'] = pd.to_datetime(spx['Date'])\nspx = spx.query('(Date &lt; \"2019-09-01\") & (Date &gt;= \"2019-05-01\")')\n\n\nspx = pd.read_csv('data/SPX.csv')\nspx['Date'] = pd.to_datetime(spx['Date'])\nspx = spx.query('(Date &lt; \"2019-09-01\") & (Date &gt;= \"2019-05-01\")')\nspx = spx.reset_index()\nspx['Uniform'] = pd.date_range(spx['Date'][0], spx['Date'][len(spx) - 1], len(spx))\nspx = spx.reset_index()\n\n\nggplot(spx) + geom_line(aes(x='Date', y='Close')) + geom_line(aes(x='Uniform', y='Close'), color='red') + ggsize(1000, 400)\n\n   \n   \n\n\n\nggplot(spx) + geom_line(aes(x='Date', y='Uniform')) + geom_line(aes(x='Uniform', y='Uniform'), color='red')\n\n   \n   \n\n\n\nspx = pd.read_csv('/Users/gabehope/Downloads/archive(1)/dataset.csv', index_col=0, header=[0, 1]).sort_index(axis=1)\naapl = spx.loc[:, ('GOOG', 'high')].to_frame().reset_index()\naapl = pd.DataFrame(dict(Date=pd.to_datetime(aapl['timestamp']), AAPL=aapl[('GOOG', 'high')]))\n\n\naapl = pd.read_csv('data/aapl_hourly.csv')\naapl = aapl[['date', 'close']]\naapl['date'] = pd.to_datetime(aapl['date'])\n\n/var/folders/ct/cvh0qs6j5rlbcp004rxwtwh80000gn/T/ipykernel_2088/2747040944.py:3: FutureWarning: In a future version of pandas, parsing datetimes with mixed time zones will raise an error unless `utc=True`. Please specify `utc=True` to opt in to the new behaviour and silence this warning. To create a `Series` with mixed offsets and `object` dtype, please use `apply` and `datetime.datetime.strptime`\n  aapl['date'] = pd.to_datetime(aapl['date'])\n\n\n\nggplot(aapl) + geom_line(aes(x='date', y='close')) + ggsize(1200, 400)\n\n   \n   \n\n\n\nfrom scipy.signal.windows import gaussian\n\n\nspx = pd.read_csv('data/SPX.csv')\nspx['Date'] = pd.to_datetime(spx['Date'])\nspx = spx.query('(Date &lt; \"2020-01-01\") & (Date &gt;= \"2017-01-01\")')\nspx['Smoothed'] = spx.Close.rolling(30, center=True, win_type='gaussian').mean(std=14)\nspx['Smoothed'] = spx.Close.ewm(alpha=0.2).mean()\nggplot(spx) + geom_line(aes(x='Date', y='Smoothed'),  color='red') + geom_line(aes(x='Date', y='Close')) + ggsize(1200, 600)\n\n   \n   \n\n\n\nimport vega_datasets\nvega_datasets.data.seattle_temps()\n\n\n\n\n\n\n\n\ndate\ntemp\n\n\n\n\n0\n2010-01-01 00:00:00\n39.4\n\n\n1\n2010-01-01 01:00:00\n39.2\n\n\n2\n2010-01-01 02:00:00\n39.0\n\n\n3\n2010-01-01 03:00:00\n38.9\n\n\n4\n2010-01-01 04:00:00\n38.8\n\n\n...\n...\n...\n\n\n8754\n2010-12-31 19:00:00\n40.7\n\n\n8755\n2010-12-31 20:00:00\n40.5\n\n\n8756\n2010-12-31 21:00:00\n40.2\n\n\n8757\n2010-12-31 22:00:00\n40.0\n\n\n8758\n2010-12-31 23:00:00\n39.6\n\n\n\n\n8759 rows × 2 columns\n\n\n\n\nimport vega_datasets\nseattle = vega_datasets.data.seattle_temps()\nseattle['date'] = pd.to_datetime(seattle.date)\nseattle['Trend'] = seattle.temp.rolling(window=24).mean()\nseattle['Detrended'] = seattle.temp - seattle.Trend\nseattle['hour'] = seattle.date.dt.hour\nhourly_means = seattle.groupby('hour', as_index=False).mean()\n\nhourly_means"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#how-do-we-highlight-trends",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#how-do-we-highlight-trends",
+    "title": "Data Analytics and Visualization",
+    "section": "How do we highlight trends?",
+    "text": "How do we highlight trends?\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ Plot.lineY(sf, {x: 'date', y: 'low'})]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#time-series-formulation",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#time-series-formulation",
+    "title": "Data Analytics and Visualization",
+    "section": "Time series formulation",
+    "text": "Time series formulation\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ Plot.lineY(sf, {x: 'date', y: 'low'})]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#moving-average",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#moving-average",
+    "title": "Data Analytics and Visualization",
+    "section": "Moving average",
+    "text": "Moving average\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ \n        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),\n        Plot.lineY(sf, Plot.windowY({k: 28}, {x: 'date', y: 'low', stroke: 'red', strokeWidth: 3})),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#moving-average-pandas",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#moving-average-pandas",
+    "title": "Data Analytics and Visualization",
+    "section": "Moving average (Pandas)",
+    "text": "Moving average (Pandas)\n\n\nsf['MA'] = sf['low'].rolling(window=28, center=True).mean()\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ \n        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),\n        Plot.lineY(sf, {x: 'date', y: 'MA', stroke: 'red', strokeWidth: 3}),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#moving-average-observable-plot",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#moving-average-observable-plot",
+    "title": "Data Analytics and Visualization",
+    "section": "Moving average (Observable Plot)",
+    "text": "Moving average (Observable Plot)\n\n\nviewof k = Inputs.range([1, 100], {step: 1, value: 28, label: 'window'})\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ \n        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),\n        Plot.lineY(sf, Plot.windowY({k: k}, {x: 'date', y: 'low', stroke: 'red', strokeWidth: 3})),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#timeseries-decomposition",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#timeseries-decomposition",
+    "title": "Data Analytics and Visualization",
+    "section": "Timeseries Decomposition",
+    "text": "Timeseries Decomposition"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#moving-average-pandas-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#moving-average-pandas-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Moving average (Pandas)",
+    "text": "Moving average (Pandas)\n\n\nsf['std'] = sf['low'].rolling(window=28, center=True).std()\nsf['lower_band'] = sf['MA'] - sf['std']\nsf['upper_band'] = sf['MA'] + sf['std']\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [\n        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'lightgrey'}), \n        Plot.areaY(sf, {x: 'date', y1: 'lower_band', y2: 'upper_band', fill: 'lightgrey', fillOpacity: 0.5}),\n        Plot.lineY(sf, {x: 'date', y: 'lower_band', stroke: 'blue'}),\n        Plot.lineY(sf, {x: 'date', y: 'upper_band', stroke: 'red'}),\n        Plot.lineY(sf, {x: 'date', y: 'MA', stroke: 'black'}),\n    ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\nsf = transpose(sfT)"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#bands",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#bands",
+    "title": "Data Analytics and Visualization",
+    "section": "Bands",
+    "text": "Bands\n\n\nsf['std'] = sf['low'].rolling(window=28, center=True).std()\nsf['lower_band'] = sf['MA'] - sf['std']\nsf['upper_band'] = sf['MA'] + sf['std']\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [\n        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'lightgrey'}), \n        Plot.areaY(sf, {x: 'date', y1: 'lower_band', y2: 'upper_band', fill: 'lightgrey', fillOpacity: 0.5}),\n        Plot.lineY(sf, {x: 'date', y: 'lower_band', stroke: 'blue'}),\n        Plot.lineY(sf, {x: 'date', y: 'upper_band', stroke: 'red'}),\n        Plot.lineY(sf, {x: 'date', y: 'MA', stroke: 'black'}),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#bands-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#bands-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Bands",
+    "text": "Bands\n\n\nsf['min'] = sf['low'].rolling(window=28, center=True).min()\nsf['max'] = sf['low'].rolling(window=28, center=True).max()\nsf['median'] = sf['low'].rolling(window=28, center=True).median()\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [\n        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'lightgrey'}),\n        Plot.areaY(sf, {x: 'date', y1: 'min', y2: 'max', fill: 'lightgrey', fillOpacity: 0.5}), \n        Plot.lineY(sf, {x: 'date', y: 'min', stroke: 'blue'}),\n        Plot.lineY(sf, {x: 'date', y: 'max', stroke: 'red'}),\n        Plot.lineY(sf, {x: 'date', y: 'MA', stroke: 'black'}),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#timeseries-decomposition-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#timeseries-decomposition-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Timeseries Decomposition",
+    "text": "Timeseries Decomposition\n\n\nsf['residual'] = sf['low'] - sf['MA']\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 300,\n    marks: [\n        Plot.lineY(sf, {x: 'date', y: 'MA', stroke: 'black'}),\n    ]\n})\n\n\n\n\n\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Temperature residual'}, width: 1200, height: 300,\n    marks: [\n        Plot.lineY(sf, {x: 'date', y: 'residual', stroke: 'black'}),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#weighted-moving-average",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#weighted-moving-average",
+    "title": "Data Analytics and Visualization",
+    "section": "Weighted Moving average",
+    "text": "Weighted Moving average"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#weighted-moving-average-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#weighted-moving-average-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Weighted Moving average",
+    "text": "Weighted Moving average\n\n\nsf['WMA'] = sf['low'].rolling(window=100, center=True, win_type='gaussian').mean(std=21)\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ \n        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),\n        Plot.lineY(sf, {x: 'date', y: 'WMA', stroke: 'red', strokeWidth: 3}),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#boundary-effects",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#boundary-effects",
+    "title": "Data Analytics and Visualization",
+    "section": "Boundary effects",
+    "text": "Boundary effects\n\n\nsf_small = sf.query('date &lt; \"2011-01-18\"')\nsf_small['MA'] = sf_small['low'].rolling(window=14, center=True).mean()\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ \n        Plot.lineY(sf_small, {x: 'date', y: 'low', stroke: 'grey'}),\n        Plot.lineY(sf_small,  {x: 'date', y: 'MA', stroke: 'red', strokeWidth: 3}),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#boundary-effects-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#boundary-effects-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Boundary effects",
+    "text": "Boundary effects\n\n\nsf_small = sf.query('date &lt; \"2011-01-18\"')\nsf_small['MA'] = sf_small['low'].rolling(window=14, center=False).mean()\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ \n        Plot.lineY(sf_small, {x: 'date', y: 'low', stroke: 'grey'}),\n        Plot.lineY(sf_small,  {x: 'date', y: 'MA', stroke: 'red', strokeWidth: 3}),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#boundary-effects-2",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#boundary-effects-2",
+    "title": "Data Analytics and Visualization",
+    "section": "Boundary effects",
+    "text": "Boundary effects\n\n\nsf_small = sf.query('date &lt; \"2011-01-18\"')\nsf_small['EMA'] = sf_small['low'].ewm(alpha=0.2).mean()\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ \n        Plot.lineY(sf_small, {x: 'date', y: 'low', stroke: 'grey'}),\n        Plot.lineY(sf_small,  {x: 'date', y: 'EMA', stroke: 'red', strokeWidth: 3}),\n    ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsf = transpose(sfT)\nsf_small = transpose(sf_smallT)"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#exponential-moving-average",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#exponential-moving-average",
+    "title": "Data Analytics and Visualization",
+    "section": "Exponential Moving average",
+    "text": "Exponential Moving average\n\n\nsf_small = sf.query('date &lt; \"2011-01-18\"')\nsf_small['EMA'] = sf_small['low'].ewm(alpha=0.2).mean()\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ \n        Plot.lineY(sf_small, {x: 'date', y: 'low', stroke: 'grey'}),\n        Plot.lineY(sf_small,  {x: 'date', y: 'EMA', stroke: 'blue', strokeWidth: 3}),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#exponential-moving-average-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#exponential-moving-average-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Exponential Moving average",
+    "text": "Exponential Moving average\n\n\nsf['EMA'] = sf['low'].ewm(alpha=0.05).mean()\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ \n        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),\n        Plot.lineY(sf,  {x: 'date', y: 'MA', stroke: 'red', strokeWidth: 3}),\n        Plot.lineY(sf,  {x: 'date', y: 'EMA', stroke: 'blue', strokeWidth: 3}),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#exponential-moving-average-2",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#exponential-moving-average-2",
+    "title": "Data Analytics and Visualization",
+    "section": "Exponential Moving average",
+    "text": "Exponential Moving average\n\n\nfrom statsmodels.nonparametric.smoothers_lowess import lowess\nsf['lowess'] = lowess(sf['low'], np.arange(len(sf['low'])), return_sorted=False, it=1, frac=0.05)\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ \n        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),\n        Plot.lineY(sf,  {x: 'date', y: 'MA', stroke: 'red', strokeWidth: 3}),\n        Plot.lineY(sf,  {x: 'date', y: 'lowess', stroke: 'blue', strokeWidth: 3}),\n    ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsf = transpose(sfT)\nsf_small = transpose(sf_smallT)"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#lowess-smoothing",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#lowess-smoothing",
+    "title": "Data Analytics and Visualization",
+    "section": "LOWESS Smoothing",
+    "text": "LOWESS Smoothing\n\n\nfrom statsmodels.nonparametric.smoothers_lowess import lowess\nsf['lowess'] = lowess(sf['low'], np.arange(len(sf['low'])), return_sorted=False, it=1, frac=0.05)\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ \n        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),\n        Plot.lineY(sf,  {x: 'date', y: 'MA', stroke: 'red', strokeWidth: 3}),\n        Plot.lineY(sf,  {x: 'date', y: 'lowess', stroke: 'blue', strokeWidth: 3}),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#lowess-smoothing-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#lowess-smoothing-1",
+    "title": "Data Analytics and Visualization",
+    "section": "LOWESS Smoothing",
+    "text": "LOWESS Smoothing\n\n\nsf['lowess_01'] = lowess(sf['low'], np.arange(len(sf['low'])), return_sorted=False, it=1, frac=0.1)\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,\n    marks: [ \n        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),\n        Plot.lineY(sf,  {x: 'date', y: 'MA', stroke: 'red', strokeWidth: 3}),\n        Plot.lineY(sf,  {x: 'date', y: 'lowess_01', stroke: 'blue', strokeWidth: 3}),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#normalize-to-time",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#normalize-to-time",
+    "title": "Data Analytics and Visualization",
+    "section": "Normalize to time",
+    "text": "Normalize to time\n\nviewof date = Scrubber(d3.union(stocks.map((d) =&gt; d.Date)), {\n  format: Plot.formatIsoDate,\n  initial: 500,\n  loop: false,\n  autoplay: false\n})\n{\n  const bisector = d3.bisector((i) =&gt; stocks[i].Date);\n  const basis = (I, Y) =&gt; Y[I[bisector.center(I, date)]];\n  return Plot.plot({\n    style: \"overflow: visible;\",\n    width: 1200,\n    y: {\n      type: \"log\",\n      grid: true,\n      label: \"Change in price (%)\",\n      tickFormat: ((f) =&gt; (x) =&gt; f((x - 1) * 100))(d3.format(\"+d\"))\n    },\n    marks: [\n      Plot.ruleY([1]),\n      Plot.ruleX([date]),\n      Plot.lineY(stocks, Plot.normalizeY(basis, {\n        x: \"Date\",\n        y: \"Close\",\n        stroke: \"Symbol\"\n      })),\n      Plot.text(stocks, Plot.selectLast(Plot.normalizeY(basis, {\n        x: \"Date\",\n        y: \"Close\",\n        z: \"Symbol\",\n        text: \"Symbol\",\n        textAnchor: \"start\",\n        dx: 3\n      })))\n    ]\n  });\n}"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#log-transform",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#log-transform",
+    "title": "Data Analytics and Visualization",
+    "section": "Log transform",
+    "text": "Log transform\n\n\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'US GDP'}, width: 600, height: 400,\n    marks: [ \n        Plot.lineY(gdp, {x: 'DATE', y: 'GDP', stroke: 'grey'}),\n    ]\n})\n\n\n\n\n\n\n\n\nPlot.plot({\n    x: {type: 'utc'}, y: {label: 'Log US GDP'}, width: 600, height: 400,\n    marks: [ \n        Plot.lineY(gdp, {x: 'DATE', y: 'Log GDP', stroke: 'grey'}),\n    ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#population-adjustment",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#population-adjustment",
+    "title": "Data Analytics and Visualization",
+    "section": "Population Adjustment",
+    "text": "Population Adjustment"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#inflation-adjustment",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#inflation-adjustment",
+    "title": "Data Analytics and Visualization",
+    "section": "Inflation Adjustment",
+    "text": "Inflation Adjustment"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#seasonality",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#seasonality",
+    "title": "Data Analytics and Visualization",
+    "section": "Seasonality",
+    "text": "Seasonality\n\n\nPlot.plot({\n  width: 1200,\n  marks: [\n    Plot.lineY(seattle,  {x: 'date', y: 'temperature', stroke: 'lightgrey'}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#seasonality-1",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#seasonality-1",
+    "title": "Data Analytics and Visualization",
+    "section": "Seasonality",
+    "text": "Seasonality\n\n\nPlot.plot({\n  width: 1200,\n  y: {domain: [10, 22]},\n  marks: [\n    Plot.lineY(may,  {x: 'date', y: 'temperature', stroke: 'lightgrey'}),\n    Plot.dotY(may,  {x: 'date', y: 'temperature', fill: 'lightgrey', stroke: null}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#seasonality-2",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#seasonality-2",
+    "title": "Data Analytics and Visualization",
+    "section": "Seasonality",
+    "text": "Seasonality\n\n\nsimpsons = FileAttachment(\"data/simpsons.csv\").csv({typed: true})\n\n\n\n\n\n\n\nPlot.plot({\n  padding: 0 ,grid: true, x: {axis: \"top\", label: \"Season\"}, y: {label: \"Episode\"},color: {type: \"linear\", scheme: \"PiYG\"},\n  marks: [\n    Plot.cell(simpsons, {x: \"season\", y: \"number_in_season\", fill: \"imdb_rating\", inset: 0.5}),\n    Plot.text(simpsons, {x: \"season\", y: \"number_in_season\", text: (d) =&gt; d.imdb_rating?.toFixed(1), fill: \"black\", title: \"title\"})\n  ]})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#seasonality-3",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#seasonality-3",
+    "title": "Data Analytics and Visualization",
+    "section": "Seasonality",
+    "text": "Seasonality\n\n\nPlot.plot({\n  padding: 0 ,grid: true, x: {axis: \"top\", label: \"Season\"}, y: {label: \"Episode\"},color: {type: \"linear\", scheme: \"spectral\", legend: true}, width: 1200,\n  marks: [\n    Plot.lineY(simpsons, Plot.sort(\"number_in_season\", {stroke: \"season\", x: \"number_in_season\", y: \"imdb_rating\", inset: 0.5})),\n  ]})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#seasonality-4",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#seasonality-4",
+    "title": "Data Analytics and Visualization",
+    "section": "Seasonality",
+    "text": "Seasonality"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#seasonality-5",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#seasonality-5",
+    "title": "Data Analytics and Visualization",
+    "section": "Seasonality",
+    "text": "Seasonality"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#calendar-adjustments",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#calendar-adjustments",
+    "title": "Data Analytics and Visualization",
+    "section": "Calendar adjustments",
+    "text": "Calendar adjustments"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#how-are-dates-represented",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#how-are-dates-represented",
+    "title": "Data Analytics and Visualization",
+    "section": "How are dates represented?",
+    "text": "How are dates represented?\nAs text:\n\"2024-10-28 11:15:23.45 UTC-07:00\""
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#smoothing-seasonality",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#smoothing-seasonality",
+    "title": "Data Analytics and Visualization",
+    "section": "Smoothing seasonality",
+    "text": "Smoothing seasonality\n\n\nviewof hour = Inputs.range([0, stride-1], {step: 1, value: 0, label: 'Hour'})\nviewof stride = Inputs.range([0, 47], {step: 1, value: 0, label: 'Stride'})\nviewof windowsize = Inputs.range([1, 300], {step: 1, value: 1, label: 'Window'})\nviewof anchor = Inputs.select(['start', 'middle', 'end'], {value: 'middle', label: 'anchor'})\nviewof highlight = Inputs.range([1, may.length - 1], {step: 1, value: 1, label: 'highlight'})\n\narea = {\n  let output;\n  if (anchor == 'middle') {\n    return [\n          [may[Math.max(Math.floor(highlight - windowsize / 2), 0)].date, 100], \n          [may[Math.min(Math.floor(highlight + windowsize / 2), may.length - 1)].date, 100]\n         ];\n  } else if (anchor == 'start') {\n    return [\n          [may[Math.max(Math.floor(highlight), 0)].date, 100], \n          [may[Math.min(Math.floor(highlight + windowsize), may.length - 1)].date, 100]\n         ]\n  } else if (anchor == 'end') {\n    return [\n          [may[Math.max(Math.floor(highlight - windowsize ), 0)].date, 100], \n          [may[Math.min(Math.floor(highlight), may.length - 1)].date, 100]\n         ]\n  }\n  \n}\nPlot.plot({\n  width: 1200,\n  y: {domain: [10, 22]},\n  marks: [\n    Plot.lineY(may,  {x: 'date', y: 'temperature', stroke: 'lightgrey', strokeOpacity: 0.2}),\n    Plot.dotY(may,  {x: 'date', y: 'temperature', fill: 'lightgrey', stroke: null, fillOpacity: 0.2}),\n    Plot.lineY(may,  Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', stroke: 'lightgrey'})),\n    Plot.dotY(may,  Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', fill: 'lightgrey'})),\n    Plot.lineY(may,  Plot.filter((d, i) =&gt; ((i % stride) == hour), Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', stroke: 'black', }))),\n    Plot.dotY(may,  Plot.filter((d, i) =&gt; ((i % stride) == hour), Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', fill: 'red', }))),\n    Plot.dotY(may,  Plot.filter((d, i) =&gt; (i == highlight), Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', fill: 'firebrick'}))),\n    Plot.areaY(area,  {x: '0', y: '1', fill: 'red', fillOpacity: 0.1}),\n  ]\n})"
+  },
+  {
+    "objectID": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#decomposition-with-seasonality",
+    "href": "modules/03-Timeseries/lectures/Lecture-3-1/slides-3-1.html#decomposition-with-seasonality",
+    "title": "Data Analytics and Visualization",
+    "section": "Decomposition with seasonality",
+    "text": "Decomposition with seasonality\n\n\nPlot.plot({\n  width: 1200, x:{type: 'utc'},\n  marks: [ \n    Plot.lineY(seattlepd,  {x: 'date', y: 'Residuals', stroke: 'lightgrey'}),\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsf = transpose(sfT)\nsf_small = transpose(sf_smallT)\ngdp = transpose(gdpT)\n\nseattlepd = transpose(seattleT)\n\nstocks = (await Promise.all([\n  FileAttachment(\"data/aapl.csv\").csv({typed: true}).then((values) =&gt; [\"AAPL\", values]),\n  FileAttachment(\"data/amzn.csv\").csv({typed: true}).then((values) =&gt; [\"AMZN\", values]),\n  FileAttachment(\"data/goog.csv\").csv({typed: true}).then((values) =&gt; [\"GOOG\", values]),\n  FileAttachment(\"data/ibm.csv\").csv({typed: true}).then((values) =&gt; [\"IBM\", values]),\n])).flatMap(([Symbol, values]) =&gt; values.map(d =&gt; ({Symbol, ...d})))\n\n\nfunction Scrubber(values, {\n  format = value =&gt; value,\n  initial = 0,\n  direction = 1,\n  delay = null,\n  autoplay = true,\n  loop = true,\n  loopDelay = null,\n  alternate = false\n} = {}) {\n  values = Array.from(values);\n  const form = html`&lt;form style=\"font: 12px var(--sans-serif); font-variant-numeric: tabular-nums; display: flex; height: 33px; align-items: center;\"&gt;\n  &lt;button name=b type=button style=\"margin-right: 0.4em; width: 5em;\"&gt;&lt;/button&gt;\n  &lt;label style=\"display: flex; align-items: center;\"&gt;\n    &lt;input name=i type=range min=0 max=${values.length - 1} value=${initial} step=1 style=\"width: 180px;\"&gt;\n    &lt;output name=o style=\"margin-left: 0.4em;\"&gt;&lt;/output&gt;\n  &lt;/label&gt;\n&lt;/form&gt;`;\n  let frame = null;\n  let timer = null;\n  let interval = null;\n  function start() {\n    form.b.textContent = \"Pause\";\n    if (delay === null) frame = requestAnimationFrame(tick);\n    else interval = setInterval(tick, delay);\n  }\n  function stop() {\n    form.b.textContent = \"Play\";\n    if (frame !== null) cancelAnimationFrame(frame), frame = null;\n    if (timer !== null) clearTimeout(timer), timer = null;\n    if (interval !== null) clearInterval(interval), interval = null;\n  }\n  function running() {\n    return frame !== null || timer !== null || interval !== null;\n  }\n  function tick() {\n    if (form.i.valueAsNumber === (direction &gt; 0 ? values.length - 1 : direction &lt; 0 ? 0 : NaN)) {\n      if (!loop) return stop();\n      if (alternate) direction = -direction;\n      if (loopDelay !== null) {\n        if (frame !== null) cancelAnimationFrame(frame), frame = null;\n        if (interval !== null) clearInterval(interval), interval = null;\n        timer = setTimeout(() =&gt; (step(), start()), loopDelay);\n        return;\n      }\n    }\n    if (delay === null) frame = requestAnimationFrame(tick);\n    step();\n  }\n  function step() {\n    form.i.valueAsNumber = (form.i.valueAsNumber + direction + values.length) % values.length;\n    form.i.dispatchEvent(new CustomEvent(\"input\", {bubbles: true}));\n  }\n  form.i.oninput = event =&gt; {\n    if (event && event.isTrusted && running()) stop();\n    form.value = values[form.i.valueAsNumber];\n    form.o.value = format(form.value, form.i.valueAsNumber, values);\n  };\n  form.b.onclick = () =&gt; {\n    if (running()) return stop();\n    direction = alternate && form.i.valueAsNumber === values.length - 1 ? -1 : 1;\n    form.i.valueAsNumber = (form.i.valueAsNumber + direction) % values.length;\n    form.i.dispatchEvent(new CustomEvent(\"input\", {bubbles: true}));\n    start();\n  };\n  form.i.oninput();\n  if (autoplay) start();\n  else stop();\n  Inputs.disposal(form).then(stop);\n  return form;\n}\n\ndata = require('vega-datasets')\nseattle = data['seattle-weather-hourly-normals.csv']()\nmay = seattle.filter((d) =&gt; (new Date(d.date).getMonth()) == 5)"
   }
 ]

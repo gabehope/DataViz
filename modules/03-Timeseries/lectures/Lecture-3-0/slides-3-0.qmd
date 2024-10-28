@@ -1,0 +1,454 @@
+---
+format: html
+---
+
+```{python}
+import pandas as pd
+import numpy as np
+import vega_datasets
+```
+
+# Line plots
+
+## Basic line plot
+
+```{ojs}
+numbers = [0.25, 0.09, 0.58, 0.22, 0.38, 0.03, 0.45, 0.12, 0.87, 0.99, 0.85, 0.5, 0.64, 0.86, 0.6, 0.09, 0.14, 0.95, 0.92, 0.89]
+
+Plot.plot({
+  marks: [
+    Plot.lineY(numbers),
+  ]
+})
+```
+
+## Point marks
+
+```{ojs}
+Plot.plot({
+  marks: [
+    Plot.lineY(numbers),
+    Plot.dotY(numbers, {x: (d, i) => i, fill: 'black'})
+  ]
+})
+```
+
+
+## Ordering
+
+```{ojs}
+//| echo: false
+function shuffle(array) {
+  let currentIndex = array.length;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+  return array;
+}
+
+shuffled = shuffle(numbers.map((d, i) => ({x: i, y: d})))
+```
+
+```{ojs}
+Plot.plot({
+  marks: [
+    Plot.line(shuffled, {x: 'x', y: 'y', stroke: 'black'}),
+    Plot.dot(shuffled, {x: 'x', y: 'y', fill: 'black'})
+  ]
+})
+```
+
+## Sorting
+
+```{ojs}
+Plot.plot({
+  marks: [
+    Plot.line(shuffled, Plot.sort('x', {x: 'x', y: 'y', stroke: 'black'})),
+    Plot.dot(shuffled, Plot.sort('x', {x: 'x', y: 'y', fill: 'black'}))
+  ]
+})
+```
+
+## Time as an axis
+
+```{python}
+aapl = pd.read_csv('data/aapl.csv')
+aapl['Date'] = pd.to_datetime(aapl['Date'])
+ojs_define(aapl_T=aapl)
+```
+
+```{ojs}
+aapl = transpose(aapl_T)
+Plot.plot({
+  x: {type: 'utc'},
+  marks: [
+    Plot.line(aapl, {x: 'Date', y: 'Close'}),
+  ]
+})
+```
+
+## Area plots
+
+```{ojs}
+Plot.plot({
+  x: {type: 'utc'},
+  marks: [
+    Plot.areaY(aapl, {x: 'Date', y: 'Close'}),
+  ]
+})
+```
+
+## Curves
+```{ojs}
+//| echo: false
+viewof curve = Inputs.select(["basis",
+"basis-open",
+"basis-closed",
+"bump-x",
+"bump-y",
+"bundle",
+"cardinal",
+"cardinal-open",
+"cardinal-closed",
+"catmull-rom",
+"catmull-rom-open",
+"catmull-rom-closed",
+"linear",
+"linear-closed",
+"monotone-x",
+"monotone-y",
+"natural",
+"step",
+"step-after",
+"step-before"], { label: "curve", value: "linear" })
+```
+```{ojs}
+Plot.plot({
+  marks: [
+    Plot.lineY(numbers, {curve}),
+    Plot.dotY(numbers, {x: (d, i) => i})
+  ]
+})
+```
+
+
+## Multiple lines
+
+```{python}
+aapl = pd.read_csv('data/aapl.csv')[['Date', 'Close']]
+aapl['Date'] = pd.to_datetime(aapl['Date'])
+aapl['Symbol'] = 'aapl'
+
+amzn = pd.read_csv('data/amzn.csv')[['Date', 'Close']]
+amzn['Date'] = pd.to_datetime(amzn['Date'])
+amzn['Symbol'] = 'amzn'
+
+ibm = pd.read_csv('data/ibm.csv')[['Date', 'Close']]
+ibm['Date'] = pd.to_datetime(ibm['Date'])
+ibm['Symbol'] = 'ibm'
+
+goog = pd.read_csv('data/goog.csv')[['Date', 'Close']]
+goog['Date'] = pd.to_datetime(goog['Date'])
+goog['Symbol'] = 'goog'
+
+stocks = pd.concat([aapl, amzn, ibm, goog])
+ojs_define(stocks_T=stocks)
+```
+
+```{ojs}
+stocks = transpose(stocks_T)
+Plot.plot({
+color: {legend: true},
+  x: {type: 'utc'},
+  y: {grid: true},
+  marks: [
+    Plot.ruleY([0]),
+    Plot.lineY(stocks, {x: "Date", y: "Close", stroke: "Symbol"}),
+    Plot.text(stocks, Plot.selectLast({x: "Date", y: "Close", z: "Symbol", text: "Symbol", textAnchor: "start", dx: 3}))
+  ]
+})
+```
+
+## Normalization
+
+```{ojs}
+Plot.plot({
+  color: {legend: true},
+  x: {type: 'utc'},x: {type: 'utc'},
+  y: {
+    type: "log", label: "Change in price (%)",
+  },
+  marks: [
+    Plot.line(stocks, Plot.normalizeY({
+      x: "Date", y: "Close", stroke: "Symbol"
+    })),
+    Plot.text(stocks, Plot.selectLast(Plot.normalizeY({
+      x: "Date",  y: "Close", z: "Symbol",
+      text: "Symbol", textAnchor: "start", dx: 3
+    })))
+  ]
+})
+```
+
+## Line coloring
+
+```{ojs}
+Plot.plot({
+  x: {type: 'utc'},
+  color: {scheme: 'Inferno'},
+  marks: [
+    Plot.line(aapl, {x: 'Date', y: 'Close', z: null, stroke: 'Close'}),
+  ]
+})
+```
+
+## Time as a color axis
+
+```{ojs}
+driving = FileAttachment("data/driving.csv").csv({typed: true})
+Plot.plot({
+  x: {label: "Miles driven (per person-year) →"},
+  y: {label: "↑ Cost of gasoline ($ per gallon)"},
+  marks: [
+    Plot.line(driving, {x: "miles", y: "gas", curve: "catmull-rom", marker: true}),
+    Plot.text(driving, {filter: (d) => d.year % 5 === 0, x: "miles", y: "gas", text: (d) => `${d.year}`, dy: -8})
+  ]
+})
+```
+
+## Time as a color axis
+
+```{ojs}
+Plot.plot({
+  x: {label: "Miles driven (per person-year) →"},
+  y: {label: "↑ Cost of gasoline ($ per gallon)"},
+  color: {legend: true, scheme: 'Blues'},
+  marks: [
+    Plot.line(driving, {x: "miles", y: "gas", z: null, stroke: 'year', curve: "catmull-rom", marker: true}),
+    Plot.text(driving, {filter: (d) => d.year % 5 === 0, x: "miles", y: "gas", text: (d) => `${d.year}`, dy: -8})
+  ]
+})
+```
+
+
+
+
+# Smoothing, windowing and downsampling
+
+## High-frequency plots
+
+```{python}
+sf = vega_datasets.data.sf_temps()
+sf.date = pd.to_datetime(sf.date)
+ojs_define(sf_T=sf)
+```
+
+```{ojs}
+sf = transpose(sf_T)
+Plot.plot({
+  x: {type: 'utc'},
+  marks: [
+    Plot.line(sf, {x: 'date', y: 'temp'}),
+  ]
+})
+```
+
+## High-frequency plots
+
+```{python}
+sf_may = sf.query('(date.dt.month >= 5) & (date.dt.month < 6)')
+ojs_define(sf_may_T=sf_may)
+```
+
+```{ojs}
+sf_may = transpose(sf_may_T)
+Plot.plot({
+  x: {type: 'utc'},
+  marks: [
+    Plot.line(sf_may, {x: 'date', y: 'temp'}),
+  ]
+})
+```
+
+
+## Grouping by time element
+
+```{python}
+sf_day = sf.groupby(sf.date.dt.floor('d')).mean()
+ojs_define(sf_day_T=sf_day)
+```
+
+```{ojs}
+sf_day = transpose(sf_day_T)
+Plot.plot({
+  x: {type: 'utc'},
+  marks: [
+    Plot.line(sf_day, {x: 'date', y: 'temp'}),
+  ]
+})
+```
+
+## Grouping by time element
+
+```{python}
+sf_day_stats = sf.groupby(sf.date.dt.floor('d')).agg({'temp': ['min', 'max', 'mean']})
+sf_day_stats.columns = sf_day_stats.columns.to_flat_index()
+sf_day_stats.columns = [c[1] for c in sf_day_stats.columns]
+sf_day_stats= sf_day_stats.reset_index()
+ojs_define(sf_day_stats_T=sf_day_stats)
+sf_day_stats
+```
+
+```{ojs}
+sf_day_stats = transpose(sf_day_stats_T)
+Plot.plot({
+  x: {type: 'utc'},
+  marks: [
+    Plot.line(sf_day_stats, {x: 'date', y: 'mean'}),
+    Plot.line(sf_day_stats, {x: 'date', y: 'min', stroke: 'blue'}),
+    Plot.line(sf_day_stats, {x: 'date', y: 'max', stroke: 'red'}),
+  ]
+})
+```
+
+## Grouping by time element
+
+
+```{ojs}
+Plot.plot({
+  x: {type: 'utc'},
+  marks: [
+    Plot.areaY(sf_day_stats, {x: 'date', y1: 'min', y2: 'max', fill: 'lightgrey'}),
+    Plot.line(sf_day_stats, {x: 'date', y: 'mean'}),
+    Plot.line(sf_day_stats, {x: 'date', y: 'min', stroke: 'blue'}),
+    Plot.line(sf_day_stats, {x: 'date', y: 'max', stroke: 'red'}),
+  ]
+})
+```
+
+
+## Grouping by time element
+
+
+```{ojs}
+ticker = aapl.slice(-130)
+Plot.plot({
+  inset: 6,
+  width: 928,
+  grid: true,
+  y: {label: "↑ Apple stock price ($)"},
+  color: {domain: [-1, 0, 1], range: ["#e41a1c", "currentColor", "#4daf4a"]},
+  marks: [
+    Plot.ruleX(ticker, {
+      x: "Date",
+      y1: "Low",
+      y2: "High"
+    }),
+    Plot.ruleX(ticker, {
+      x: "Date",
+      y1: "Open",
+      y2: "Close",
+      stroke: (d) => Math.sign(d.Close - d.Open),
+      strokeWidth: 4,
+      strokeLinecap: "round"
+    })
+  ]
+})
+```
+
+
+## Grouping by time element
+
+```{python}
+sf = sf.set_index('date')
+sf_rolling= sf.rolling(window=72, center=True).mean()
+ojs_define(sf_rolling_T=sf_rolling.reset_index())
+```
+
+```{ojs}
+sf_rolling = transpose(sf_rolling_T)
+Plot.plot({
+  x: {type: 'utc'},
+  marks: [
+    Plot.line(sf_rolling, {x: 'date', y: 'temp'}),
+  ]
+})
+```
+
+
+## Cell charts
+
+```{ojs}
+seattle = FileAttachment("data/seattle-weather.csv").csv({ typed: true })
+Plot.plot({
+  padding: 0,
+  y: {tickFormat: Plot.formatMonth("en", "short")},
+  marks: [
+    Plot.cell(seattle, Plot.group({fill: "max"}, {
+      x: (d) => d.date.getUTCDate(),
+      y: (d) => d.date.getUTCMonth(),
+      fill: "temp_max",
+      inset: 0.5
+    }))
+  ]
+})
+```
+
+## Cell charts
+```{ojs}
+simpsons = FileAttachment("data/simpsons.csv").csv({typed: true})
+Plot.plot({
+  padding: 0,
+  grid: true,
+  x: {axis: "top", label: "Season"},
+  y: {label: "Episode"},
+  color: {type: "linear", scheme: "PiYG"},
+  marks: [
+    Plot.cell(simpsons, {x: "season", y: "number_in_season", fill: "imdb_rating", inset: 0.5}),
+    Plot.text(simpsons, {x: "season", y: "number_in_season", text: (d) => d.imdb_rating?.toFixed(1), fill: "black", title: "title"})
+  ]
+})
+```
+
+## Stacked area charts
+
+```{ojs}
+riaa = FileAttachment("data/riaa-us-revenue.csv").csv({typed: true})
+Plot.plot({
+  y: {
+    grid: true,
+    label: "↑ Annual revenue (billions, adj.)",
+    transform: (d) => d / 1000
+  },
+  marks: [
+    Plot.areaY(riaa, {x: "year", y: "revenue", z: "format", fill: "group"})
+  ]
+})
+```
+
+## Proportion plots
+
+```{ojs}
+Plot.plot({
+  y: {
+    label: "↑ Annual revenue (%)",
+    percent: true
+  },
+  marks: [
+    Plot.areaY(riaa, Plot.stackY({offset: "normalize", order: "group", reverse: true}, {x: "year", y: "revenue", z: "format", fill: "group"})),
+    Plot.ruleY([0, 1])
+  ]
+})
+```
+
+
+

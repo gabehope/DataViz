@@ -1,0 +1,714 @@
+---
+title: "Data Analytics and Visualization"
+subtitle: "3-1: Timeseries Properties and Smoothing"
+author: "Prof. Gabe Hope"
+format: 
+    revealjs:
+        theme: ["../../../../theme.scss"]
+        html-math-method: katex
+        slideNumber: true
+---
+
+# Properties of timeseries
+```{python}
+#| echo: false
+
+import pandas as pd
+import numpy as np
+from lets_plot import *
+import vega_datasets
+LetsPlot.setup_html()
+sf = pd.read_csv('data/sf-temperatures.csv')
+
+sf['date'] = pd.to_datetime(sf.date)
+```
+
+## What do we want to highlight in a timeseries visualization?
+
+::: {.small}
+```{ojs}
+//|echo: true
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [ Plot.lineY(sf, {x: 'date', y: 'low'})]
+})
+```
+:::
+
+
+
+## How do we highlight trends?
+
+
+::: {.small}
+```{ojs}
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [ Plot.lineY(sf, {x: 'date', y: 'low'})]
+})
+```
+:::
+
+## Time series formulation
+
+::: {.small}
+```{ojs}
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [ Plot.lineY(sf, {x: 'date', y: 'low'})]
+})
+```
+:::
+
+## Moving average
+
+::: {.small}
+```{ojs}
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [ 
+        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),
+        Plot.lineY(sf, Plot.windowY({k: 28}, {x: 'date', y: 'low', stroke: 'red', strokeWidth: 3})),
+    ]
+})
+```
+:::
+
+## Moving average (Observable Plot)
+
+::: {.small}
+```{ojs}
+//| echo: true
+
+viewof k = Inputs.range([1, 100], {step: 1, value: 28, label: 'window'})
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [ 
+        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),
+        Plot.lineY(sf, Plot.windowY({k: k}, {x: 'date', y: 'low', stroke: 'red', strokeWidth: 3})),
+    ]
+})
+```
+:::
+
+## Moving average (Pandas)
+
+::: {.small}
+```{python}
+#| echo: true
+sf['MA'] = sf['low'].rolling(window=28, center=True).mean()
+```
+
+```{ojs}
+//| echo: true
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [ 
+        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),
+        Plot.lineY(sf, {x: 'date', y: 'MA', stroke: 'red', strokeWidth: 3}),
+    ]
+})
+```
+:::
+
+
+## Timeseries Decomposition
+
+## Timeseries Decomposition
+
+::: {.small}
+```{python}
+#| echo: true
+sf['residual'] = sf['low'] - sf['MA']
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 300,
+    marks: [
+        Plot.lineY(sf, {x: 'date', y: 'MA', stroke: 'black'}),
+    ]
+})
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Temperature residual'}, width: 1200, height: 300,
+    marks: [
+        Plot.lineY(sf, {x: 'date', y: 'residual', stroke: 'black'}),
+    ]
+})
+
+```
+:::
+
+## Bands
+
+::: {.small}
+```{python}
+#| echo: true
+sf['std'] = sf['low'].rolling(window=28, center=True).std()
+sf['lower_band'] = sf['MA'] - sf['std']
+sf['upper_band'] = sf['MA'] + sf['std']
+```
+
+```{ojs}
+//| echo: true
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [
+        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'lightgrey'}), 
+        Plot.areaY(sf, {x: 'date', y1: 'lower_band', y2: 'upper_band', fill: 'lightgrey', fillOpacity: 0.5}),
+        Plot.lineY(sf, {x: 'date', y: 'lower_band', stroke: 'blue'}),
+        Plot.lineY(sf, {x: 'date', y: 'upper_band', stroke: 'red'}),
+        Plot.lineY(sf, {x: 'date', y: 'MA', stroke: 'black'}),
+    ]
+})
+```
+:::
+
+## Bands
+
+::: {.small}
+```{python}
+#| echo: true
+sf['min'] = sf['low'].rolling(window=28, center=True).min()
+sf['max'] = sf['low'].rolling(window=28, center=True).max()
+sf['median'] = sf['low'].rolling(window=28, center=True).median()
+```
+
+```{ojs}
+//| echo: true
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [
+        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'lightgrey'}),
+        Plot.areaY(sf, {x: 'date', y1: 'min', y2: 'max', fill: 'lightgrey', fillOpacity: 0.5}), 
+        Plot.lineY(sf, {x: 'date', y: 'min', stroke: 'blue'}),
+        Plot.lineY(sf, {x: 'date', y: 'max', stroke: 'red'}),
+        Plot.lineY(sf, {x: 'date', y: 'MA', stroke: 'black'}),
+    ]
+})
+```
+:::
+
+## Weighted Moving average
+
+
+## Weighted Moving average
+
+::: {.small}
+```{python}
+#| echo: true
+sf['WMA'] = sf['low'].rolling(window=100, center=True, win_type='gaussian').mean(std=21)
+```
+
+```{ojs}
+//| echo: true
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [ 
+        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),
+        Plot.lineY(sf, {x: 'date', y: 'WMA', stroke: 'red', strokeWidth: 3}),
+    ]
+})
+```
+:::
+
+## Boundary effects
+
+::: {.small}
+```{python}
+#| echo: true
+
+sf_small = sf.query('date < "2011-01-18"')
+sf_small['MA'] = sf_small['low'].rolling(window=14, center=True).mean()
+```
+
+```{ojs}
+//| echo: true
+
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [ 
+        Plot.lineY(sf_small, {x: 'date', y: 'low', stroke: 'grey'}),
+        Plot.lineY(sf_small,  {x: 'date', y: 'MA', stroke: 'red', strokeWidth: 3}),
+    ]
+})
+```
+:::
+
+## Boundary effects
+
+::: {.small}
+```{python}
+#| echo: true
+
+sf_small = sf.query('date < "2011-01-18"')
+sf_small['MA'] = sf_small['low'].rolling(window=14, center=False).mean()
+```
+
+```{ojs}
+//| echo: true
+
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [ 
+        Plot.lineY(sf_small, {x: 'date', y: 'low', stroke: 'grey'}),
+        Plot.lineY(sf_small,  {x: 'date', y: 'MA', stroke: 'red', strokeWidth: 3}),
+    ]
+})
+```
+:::
+
+## Exponential Moving average
+
+::: {.small}
+```{python}
+#| echo: true
+
+sf_small = sf.query('date < "2011-01-18"')
+sf_small['EMA'] = sf_small['low'].ewm(alpha=0.2).mean()
+```
+
+```{ojs}
+//| echo: true
+
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [ 
+        Plot.lineY(sf_small, {x: 'date', y: 'low', stroke: 'grey'}),
+        Plot.lineY(sf_small,  {x: 'date', y: 'EMA', stroke: 'blue', strokeWidth: 3}),
+    ]
+})
+```
+:::
+
+## Exponential Moving average
+
+::: {.small}
+```{python}
+#| echo: true
+sf['EMA'] = sf['low'].ewm(alpha=0.05).mean()
+```
+
+```{ojs}
+//| echo: true
+
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [ 
+        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),
+        Plot.lineY(sf,  {x: 'date', y: 'MA', stroke: 'red', strokeWidth: 3}),
+        Plot.lineY(sf,  {x: 'date', y: 'EMA', stroke: 'blue', strokeWidth: 3}),
+    ]
+})
+```
+:::
+
+
+## LOWESS Smoothing
+
+::: {.small}
+```{python}
+#| echo: true
+from statsmodels.nonparametric.smoothers_lowess import lowess
+sf['lowess'] = lowess(sf['low'], np.arange(len(sf['low'])), return_sorted=False, it=1, frac=0.05)
+```
+
+```{ojs}
+//| echo: true
+
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [ 
+        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),
+        Plot.lineY(sf,  {x: 'date', y: 'MA', stroke: 'red', strokeWidth: 3}),
+        Plot.lineY(sf,  {x: 'date', y: 'lowess', stroke: 'blue', strokeWidth: 3}),
+    ]
+})
+```
+:::
+
+
+## LOWESS Smoothing
+
+::: {.small}
+```{python}
+#| echo: true
+sf['lowess_01'] = lowess(sf['low'], np.arange(len(sf['low'])), return_sorted=False, it=1, frac=0.1)
+```
+
+```{ojs}
+//| echo: true
+
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Daily low temperature (f) in San Francisco'}, width: 1200, height: 400,
+    marks: [ 
+        Plot.lineY(sf, {x: 'date', y: 'low', stroke: 'grey'}),
+        Plot.lineY(sf,  {x: 'date', y: 'MA', stroke: 'red', strokeWidth: 3}),
+        Plot.lineY(sf,  {x: 'date', y: 'lowess_01', stroke: 'blue', strokeWidth: 3}),
+    ]
+})
+```
+:::
+
+## Population Adjustment
+
+::: {.small}
+
+
+::::: columns
+:::: {.column}
+![](pictures/gdp.png)
+::::
+:::: {.column}
+![](pictures/gdp_per_capita.png)
+::::
+:::::
+:::
+
+## Inflation Adjustment
+
+::: {.small}
+
+
+::::: columns
+:::: {.column}
+![](pictures/gdp.png)
+::::
+:::: {.column}
+![](pictures/real_GDP.png)
+::::
+:::::
+:::
+
+
+
+## Normalize to time
+
+```{ojs}
+viewof date = Scrubber(d3.union(stocks.map((d) => d.Date)), {
+  format: Plot.formatIsoDate,
+  initial: 500,
+  loop: false,
+  autoplay: false
+})
+{
+  const bisector = d3.bisector((i) => stocks[i].Date);
+  const basis = (I, Y) => Y[I[bisector.center(I, date)]];
+  return Plot.plot({
+    style: "overflow: visible;",
+    width: 1200,
+    y: {
+      type: "log",
+      grid: true,
+      label: "Change in price (%)",
+      tickFormat: ((f) => (x) => f((x - 1) * 100))(d3.format("+d"))
+    },
+    marks: [
+      Plot.ruleY([1]),
+      Plot.ruleX([date]),
+      Plot.lineY(stocks, Plot.normalizeY(basis, {
+        x: "Date",
+        y: "Close",
+        stroke: "Symbol"
+      })),
+      Plot.text(stocks, Plot.selectLast(Plot.normalizeY(basis, {
+        x: "Date",
+        y: "Close",
+        z: "Symbol",
+        text: "Symbol",
+        textAnchor: "start",
+        dx: 3
+      })))
+    ]
+  });
+}
+```
+
+## Log transform
+
+
+::: {.small}
+```{python}
+gdp = pd.read_csv('data/GDP.csv')
+gdp.DATE = pd.to_datetime(gdp.DATE)
+gdp['Log GDP'] = np.log(gdp['GDP']) 
+```
+
+::::: columns
+:::: {.column}
+```{ojs}
+//| echo: true
+
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'US GDP'}, width: 600, height: 400,
+    marks: [ 
+        Plot.lineY(gdp, {x: 'DATE', y: 'GDP', stroke: 'grey'}),
+    ]
+})
+```
+::::
+:::: {.column}
+```{ojs}
+//| echo: true
+
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Log US GDP'}, width: 600, height: 400,
+    marks: [ 
+        Plot.lineY(gdp, {x: 'DATE', y: 'Log GDP', stroke: 'grey'}),
+    ]
+})
+```
+::::
+:::::
+:::
+
+## Calendar adjustments
+
+![](pictures/sales.png)
+
+## How are dates represented?
+
+
+#### As text:
+
+`"2024-10-28 11:15:23.45 UTC-07:00"`
+
+## Seasonality
+
+::: {.small}
+```{ojs}
+Plot.plot({
+  width: 1200,
+  marks: [
+    Plot.lineY(seattle,  {x: 'date', y: 'temperature', stroke: 'lightgrey'}),
+  ]
+})
+```
+:::
+
+## Seasonality
+
+::: {.small}
+```{ojs}
+Plot.plot({
+  width: 1200,
+  y: {domain: [10, 22]},
+  marks: [
+    Plot.lineY(may,  {x: 'date', y: 'temperature', stroke: 'lightgrey'}),
+    Plot.dotY(may,  {x: 'date', y: 'temperature', fill: 'lightgrey', stroke: null}),
+  ]
+})
+```
+:::
+
+## Seasonality
+
+::: {.small}
+```{ojs}
+simpsons = FileAttachment("data/simpsons.csv").csv({typed: true})
+```
+```{ojs}
+//| echo: true
+Plot.plot({
+  padding: 0 ,grid: true, x: {axis: "top", label: "Season"}, y: {label: "Episode"},color: {type: "linear", scheme: "PiYG"},
+  marks: [
+    Plot.cell(simpsons, {x: "season", y: "number_in_season", fill: "imdb_rating", inset: 0.5}),
+    Plot.text(simpsons, {x: "season", y: "number_in_season", text: (d) => d.imdb_rating?.toFixed(1), fill: "black", title: "title"})
+  ]})
+```
+:::
+
+## Seasonality
+
+::: {.small}
+```{ojs}
+//| echo: true
+Plot.plot({
+  padding: 0 ,grid: true, x: {axis: "top", label: "Season"}, y: {label: "Episode"},color: {type: "linear", scheme: "spectral", legend: true}, width: 1200,
+  marks: [
+    Plot.lineY(simpsons, Plot.sort("number_in_season", {stroke: "season", x: "number_in_season", y: "imdb_rating", inset: 0.5})),
+  ]})
+```
+:::
+
+## Seasonality
+
+![](pictures/seasonality.png)
+
+## Smoothing seasonality
+
+::: {.small}
+```{ojs}
+viewof hour = Inputs.range([0, stride-1], {step: 1, value: 0, label: 'Hour'})
+viewof stride = Inputs.range([0, 47], {step: 1, value: 0, label: 'Stride'})
+viewof windowsize = Inputs.range([1, 300], {step: 1, value: 1, label: 'Window'})
+viewof anchor = Inputs.select(['start', 'middle', 'end'], {value: 'middle', label: 'anchor'})
+viewof highlight = Inputs.range([1, may.length - 1], {step: 1, value: 1, label: 'highlight'})
+
+area = {
+  let output;
+  if (anchor == 'middle') {
+    return [
+          [may[Math.max(Math.floor(highlight - windowsize / 2), 0)].date, 100], 
+          [may[Math.min(Math.floor(highlight + windowsize / 2), may.length - 1)].date, 100]
+         ];
+  } else if (anchor == 'start') {
+    return [
+          [may[Math.max(Math.floor(highlight), 0)].date, 100], 
+          [may[Math.min(Math.floor(highlight + windowsize), may.length - 1)].date, 100]
+         ]
+  } else if (anchor == 'end') {
+    return [
+          [may[Math.max(Math.floor(highlight - windowsize ), 0)].date, 100], 
+          [may[Math.min(Math.floor(highlight), may.length - 1)].date, 100]
+         ]
+  }
+  
+}
+Plot.plot({
+  width: 1200,
+  y: {domain: [10, 22]},
+  marks: [
+    Plot.lineY(may,  {x: 'date', y: 'temperature', stroke: 'lightgrey', strokeOpacity: 0.2}),
+    Plot.dotY(may,  {x: 'date', y: 'temperature', fill: 'lightgrey', stroke: null, fillOpacity: 0.2}),
+    Plot.lineY(may,  Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', stroke: 'lightgrey'})),
+    Plot.dotY(may,  Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', fill: 'lightgrey'})),
+    Plot.lineY(may,  Plot.filter((d, i) => ((i % stride) == hour), Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', stroke: 'black', }))),
+    Plot.dotY(may,  Plot.filter((d, i) => ((i % stride) == hour), Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', fill: 'red', }))),
+    Plot.dotY(may,  Plot.filter((d, i) => (i == highlight), Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', fill: 'firebrick'}))),
+    Plot.areaY(area,  {x: '0', y: '1', fill: 'red', fillOpacity: 0.1}),
+  ]
+})
+```
+:::
+
+## Decomposition with seasonality
+
+```{python}
+import vega_datasets
+seattle = vega_datasets.data.seattle_temps()
+seattle['date'] = pd.to_datetime(seattle.date)
+seattle['Trend'] = seattle.temp.rolling(window=24).mean()
+seattle['Detrended'] = seattle.temp - seattle.Trend
+seattle['hour'] = seattle.date.dt.hour
+hourly_means = seattle.groupby('hour', as_index=False).mean().rename(columns=dict(Detrended='hourly_temp'))
+seattle = seattle.merge(hourly_means[['hour', 'hourly_temp']], on='hour')
+seattle['Residuals'] = seattle.Detrended - seattle.hourly_temp
+```
+
+::: {.small}
+```{ojs}
+Plot.plot({
+  width: 1200, x:{type: 'utc'},
+  marks: [ 
+    Plot.lineY(seattlepd,  {x: 'date', y: 'Residuals', stroke: 'lightgrey'}),
+  ]
+})
+```
+:::
+
+
+
+```{python}
+ojs_define(sfT=sf)
+ojs_define(sf_smallT=sf_small)
+ojs_define(gdpT=gdp)
+ojs_define(seattleT=seattle)
+```
+
+```{ojs}
+sf = transpose(sfT)
+sf_small = transpose(sf_smallT)
+gdp = transpose(gdpT)
+
+seattlepd = transpose(seattleT)
+
+stocks = (await Promise.all([
+  FileAttachment("data/aapl.csv").csv({typed: true}).then((values) => ["AAPL", values]),
+  FileAttachment("data/amzn.csv").csv({typed: true}).then((values) => ["AMZN", values]),
+  FileAttachment("data/goog.csv").csv({typed: true}).then((values) => ["GOOG", values]),
+  FileAttachment("data/ibm.csv").csv({typed: true}).then((values) => ["IBM", values]),
+])).flatMap(([Symbol, values]) => values.map(d => ({Symbol, ...d})))
+
+
+function Scrubber(values, {
+  format = value => value,
+  initial = 0,
+  direction = 1,
+  delay = null,
+  autoplay = true,
+  loop = true,
+  loopDelay = null,
+  alternate = false
+} = {}) {
+  values = Array.from(values);
+  const form = html`<form style="font: 12px var(--sans-serif); font-variant-numeric: tabular-nums; display: flex; height: 33px; align-items: center;">
+  <button name=b type=button style="margin-right: 0.4em; width: 5em;"></button>
+  <label style="display: flex; align-items: center;">
+    <input name=i type=range min=0 max=${values.length - 1} value=${initial} step=1 style="width: 180px;">
+    <output name=o style="margin-left: 0.4em;"></output>
+  </label>
+</form>`;
+  let frame = null;
+  let timer = null;
+  let interval = null;
+  function start() {
+    form.b.textContent = "Pause";
+    if (delay === null) frame = requestAnimationFrame(tick);
+    else interval = setInterval(tick, delay);
+  }
+  function stop() {
+    form.b.textContent = "Play";
+    if (frame !== null) cancelAnimationFrame(frame), frame = null;
+    if (timer !== null) clearTimeout(timer), timer = null;
+    if (interval !== null) clearInterval(interval), interval = null;
+  }
+  function running() {
+    return frame !== null || timer !== null || interval !== null;
+  }
+  function tick() {
+    if (form.i.valueAsNumber === (direction > 0 ? values.length - 1 : direction < 0 ? 0 : NaN)) {
+      if (!loop) return stop();
+      if (alternate) direction = -direction;
+      if (loopDelay !== null) {
+        if (frame !== null) cancelAnimationFrame(frame), frame = null;
+        if (interval !== null) clearInterval(interval), interval = null;
+        timer = setTimeout(() => (step(), start()), loopDelay);
+        return;
+      }
+    }
+    if (delay === null) frame = requestAnimationFrame(tick);
+    step();
+  }
+  function step() {
+    form.i.valueAsNumber = (form.i.valueAsNumber + direction + values.length) % values.length;
+    form.i.dispatchEvent(new CustomEvent("input", {bubbles: true}));
+  }
+  form.i.oninput = event => {
+    if (event && event.isTrusted && running()) stop();
+    form.value = values[form.i.valueAsNumber];
+    form.o.value = format(form.value, form.i.valueAsNumber, values);
+  };
+  form.b.onclick = () => {
+    if (running()) return stop();
+    direction = alternate && form.i.valueAsNumber === values.length - 1 ? -1 : 1;
+    form.i.valueAsNumber = (form.i.valueAsNumber + direction) % values.length;
+    form.i.dispatchEvent(new CustomEvent("input", {bubbles: true}));
+    start();
+  };
+  form.i.oninput();
+  if (autoplay) start();
+  else stop();
+  Inputs.disposal(form).then(stop);
+  return form;
+}
+
+data = require('vega-datasets')
+seattle = data['seattle-weather-hourly-normals.csv']()
+may = seattle.filter((d) => (new Date(d.date).getMonth()) == 5)
+```
+
+
+
+
