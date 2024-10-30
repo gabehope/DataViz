@@ -1,0 +1,1204 @@
+---
+title: "Data Analytics and Visualization"
+subtitle: "3-1: Timeseries: Preprocessing, representation and analysis"
+author: "Prof. Gabe Hope"
+format: 
+    revealjs:
+        theme: ["../../../../theme.scss"]
+        html-math-method: katex
+        slideNumber: true
+---
+
+## How are dates represented?
+
+```{python}
+#| echo: false
+
+import pandas as pd
+import numpy as np
+from lets_plot import *
+import vega_datasets
+LetsPlot.setup_html()
+sf = pd.read_csv('data/sf-temperatures.csv')
+
+sf['date'] = pd.to_datetime(sf.date)
+
+spx = vega_datasets.data.sp500()
+spx.date = spx.date.dt.floor('d')
+housing = pd.read_csv('data/elections/HOUST.csv')
+housing['date'] = pd.to_datetime(housing["DATE"])
+housing['housing'] = housing["HOUST"]
+housing = housing[['date', 'housing']]
+housing = housing[housing.date.dt.month % 3 == 1]
+housing = housing.query('(date >= "2000-01-01") & (date <= "2010-03-01")').reset_index()[['date', 'housing']]
+
+sea = vega_datasets.data.seattle_temps()
+
+```
+
+#### As text:
+
+`"2024-10-28 11:15:23.45 UTC-07:00"`
+
+#### In Python
+```{python}
+#| echo: true
+import time
+time.time()
+```
+
+#### In Pandas
+
+```{python}
+#| echo: true
+pd.Timestamp(time.time(), unit='s')
+```
+
+
+## How are dates represented?
+
+#### As text:
+
+`"2024-10-28 11:15:23.45 UTC-07:00"`
+
+
+## How are dates represented?
+#### In Python
+```{python}
+#| echo: true
+import time
+time.time()
+```
+
+## How are dates represented?
+#### In Pandas
+
+```{python}
+#| echo: true
+pd.Timestamp(time.time(), unit='s')
+```
+
+Verify epoch
+```{python}
+#| echo: true
+pd.Timestamp(0, unit='s')
+```
+
+## How are dates represented?
+
+Time *deltas*
+
+```{python}
+#| echo: true
+pd.Timestamp(time.time(), unit='s') - pd.Timestamp(0, unit='s')
+```
+
+Delta math
+```{python}
+#| echo: true
+delta = pd.Timestamp(time.time(), unit='s') - pd.Timestamp(0, unit='s')
+pd.Timestamp(time.time(), unit='s') + delta
+```
+```{python}
+#| echo: true
+pd.Timestamp(time.time(), unit='s') - delta
+```
+```{python}
+#| echo: true
+delta * 5
+```
+Timestamp math ***Not allowed***
+```{python}
+#| echo: true
+#| eval: false
+pd.Timestamp(time.time(), unit='s') + pd.Timestamp(time.time(), unit='s')
+```
+
+
+
+# Properties of timeseries
+
+
+
+
+
+## Resampling
+
+Consider 2 data sets:
+
+::: {.smallish}
+::::: columns
+:::: {.column}
+#### S&P 500 Index
+
+- Collected *monthly*
+
+```{python}
+ojs_define(spxT=spx)
+spx.head()
+```
+
+```{ojs}
+Plot.plot({
+        x: {type: 'utc'},
+        height: 300,
+        marks: [
+            Plot.line(transpose(spxT), {x: 'date', y: 'price'})
+        ]
+})
+```
+::::
+:::: {.column}
+#### U.S. New Housing construction
+
+- Collected *quarterly*
+
+```{python}
+ojs_define(housingT=housing)
+housing.head()
+```
+
+```{ojs}
+Plot.plot({
+        x: {type: 'utc'},
+        height: 300,
+        marks: [
+            Plot.line(transpose(housingT), {x: 'date', y: 'housing'})
+        ]
+})
+```
+::::
+:::::
+:::
+
+## Resampling
+
+Joining The datasets
+
+- Housing variable is *missing* for many months.
+
+```{python}
+#| echo: true
+#| eval: false
+data = spx.merge(housing, on='date', how='outer')
+data.head(15)
+```
+
+
+::: {.smallish}
+::::: columns
+:::: {.column style="width: 30%"}
+
+
+```{python}
+#| echo: false
+data = spx.merge(housing, on='date', how='outer')
+data.head(15)
+```
+
+::::
+:::: {.column style="width: 70%"}
+
+```{python}
+ojs_define(econ_data=data.melt(id_vars='date', var_name='metric', value_name='number').dropna())
+```
+
+```{ojs}
+Plot.plot({
+        x: {type: 'utc'},
+        color: {legend: true},
+        height: 300,
+        width: 600,
+        marks: [
+            Plot.line(transpose(econ_data), {x: 'date', y: 'number', stroke: 'metric'}),
+            Plot.dot(transpose(econ_data), {x: 'date', y: 'number', fill: 'metric'})
+        ]
+})
+```
+::::
+:::::
+:::
+
+## Resampling
+
+2 options:
+
+- *Upsample* `housing` to match the frequency of S&P 500 `price` (use *interpolation*)
+- *Downsample* `price` to match the frequency of `housing` (how?)
+
+## Resampling
+
+*Upsample* `housing` to match the frequency of S&P 500 `price` (use *interpolation*)
+
+
+```{python}
+#| echo: true
+
+data = spx.merge(housing, on='date', how='outer')
+data = data.interpolate()
+```
+
+::: {.smallish}
+::::: columns
+:::: {.column style="width: 30%"}
+
+
+```{python}
+#| echo: false
+ojs_define(econ_interp = data.melt(id_vars='date', var_name='metric', value_name='number'))
+data.head(15)
+```
+
+::::
+:::: {.column style="width: 70%"}
+
+```{ojs}
+Plot.plot({
+        x: {type: 'utc'},
+        color: {legend: true},
+        height: 300,
+        width: 600,
+        marks: [
+            Plot.line(transpose(econ_interp), {x: 'date', y: 'number', stroke: 'metric'}),
+            Plot.dot(transpose(econ_interp), {x: 'date', y: 'number', fill: 'metric'})
+        ]
+})
+```
+::::
+:::::
+:::
+
+## Resampling
+
+*Downsample* `price` to match the frequency of `housing`
+
+- Could just drop the non-matching housing observations
+
+
+```{python}
+#| echo: true
+
+data = spx.merge(housing, on='date', how='outer')
+data = data.dropna()
+```
+
+::: {.smallish}
+::::: columns
+:::: {.column style="width: 30%"}
+
+
+```{python}
+#| echo: false
+ojs_define(econ_dropped = data.melt(id_vars='date', var_name='metric', value_name='number'))
+data.head(15)
+```
+
+::::
+:::: {.column style="width: 70%"}
+
+```{ojs}
+Plot.plot({
+        x: {type: 'utc'},
+        color: {legend: true},
+        height: 300,
+        width: 600,
+        marks: [
+            Plot.line(transpose(econ_dropped), {x: 'date', y: 'number', stroke: 'metric'}),
+            Plot.dot(transpose(econ_dropped), {x: 'date', y: 'number', fill: 'metric'})
+        ]
+})
+```
+::::
+:::::
+:::
+
+## Resampling
+
+*Downsample* `price` to match the frequency of `housing`
+
+- Does it make more sense to take the first, second or third value from the quarter?
+
+
+```{python}
+#| echo: true
+
+data = spx.merge(housing, on='date', how='outer')
+data_sparse = data.dropna()
+data_sparse['price_1'] = data['price'][data['date'].dt.month % 3 == 0].values
+data_sparse['price_2'] = data['price'][data['date'].dt.month % 3 == 1].values
+data_sparse['price_3'] = data['price'][data['date'].dt.month % 3 == 2].values
+```
+
+::: {.smallish}
+::::: columns
+:::: {.column style="width: 30%"}
+
+
+```{python}
+#| echo: false
+ojs_define(econ_sparse = data_sparse[['date', 'price_1', 'price_2', 'price_3', 'housing']].melt(id_vars='date', var_name='metric', value_name='number'))
+data.head(15)
+```
+
+::::
+:::: {.column style="width: 70%"}
+
+```{ojs}
+Plot.plot({
+        x: {type: 'utc'},
+        color: {legend: true},
+        height: 300,
+        width: 600,
+        marks: [
+            Plot.line(transpose(econ_sparse), {x: 'date', y: 'number', stroke: 'metric'}),
+            Plot.dot(transpose(econ_sparse), {x: 'date', y: 'number', fill: 'metric'})
+        ]
+})
+```
+::::
+:::::
+:::
+
+## Resampling
+
+Extreme variations in other datasets
+
+- Want to downsample Seattle temperature from hourly to daily
+- Do we take values from 12am, 9am, 5pm...?
+
+
+```{python}
+#| echo: false
+
+sea_by_time = pd.DataFrame(dict(
+    date = sea.query('date.dt.hour == 0')['date'].values,
+    midnight = sea.query('date.dt.hour == 0')['temp'].values,
+    morning = sea.query('date.dt.hour == 9')['temp'].values,
+    noon = sea.query('date.dt.hour == 12')['temp'].values,
+    afternoon = sea.query('date.dt.hour == 17')['temp'].values,
+)) 
+```
+
+```{python}
+#| echo: false
+ojs_define(sea_by_time = sea_by_time.melt('date', var_name='time', value_name='temperature'))
+ojs_define(sea = sea)
+
+```
+
+
+```{ojs}
+Plot.plot({
+        x: {type: 'utc'},
+        color: {legend: true},
+        height: 300,
+        width: 1000,
+        marks: [
+            Plot.line(transpose(sea), {x: 'date', y: 'temp', stroke: 'lightgrey'}),
+            Plot.line(transpose(sea_by_time), {x: 'date', y: 'temperature', stroke: 'time'}),
+        ]
+})
+```
+
+## Resampling
+
+Extreme variations in other datasets
+
+- Want to downsample Seattle temperature from hourly to daily
+- Do we take values from 12am, 9am, 5pm...?
+
+
+```{python}
+#| echo: false
+
+midnight = sea.query('date.dt.hour == 0')
+midnight['time'] = 'midnight'
+
+morning = sea.query('date.dt.hour == 8')
+morning['time'] = 'morning'
+
+noon = sea.query('date.dt.hour == 12')
+noon['time'] = 'noon'
+
+afternoon = sea.query('date.dt.hour == 17')
+afternoon['time'] = 'afternoon'
+
+sea_by_time = pd.concat([midnight, morning, noon, afternoon])
+```
+
+```{python}
+#| echo: false
+ojs_define(sea_may_by_time = sea_by_time.query('date.dt.month == 5'))
+ojs_define(sea_may = sea.query('date.dt.month == 5'))
+
+```
+
+
+```{ojs}
+Plot.plot({
+        x: {type: 'utc'},
+        color: {legend: true},
+        height: 300,
+        width: 1000,
+        marks: [
+            Plot.line(transpose(sea_may), {x: 'date', y: 'temp', stroke: 'lightgrey'}),
+            Plot.line(transpose(sea_may_by_time), {x: 'date', y: 'temp', stroke: 'time'}),
+            Plot.dot(transpose(sea_may_by_time), {x: 'date', y: 'temp', fill: 'time'}),
+        ]
+})
+```
+
+## Resampling
+
+Solution: Smooth then resample
+
+- Use a window size the same size you are downsampling! 
+
+```{python}
+#| echo: false
+
+sea_smoothed_24 = sea.copy()
+sea_smoothed_24['temp'] = sea_smoothed_24['temp'].rolling(window=24).mean()
+sea_smoothed_24['window'] = '24'
+
+sea_smoothed_20 = sea.copy()
+sea_smoothed_20['temp'] = sea_smoothed_20['temp'].rolling(window=18).mean()
+sea_smoothed_20['window'] = '20'
+
+sea_smoothed_22 = sea.copy()
+sea_smoothed_22['temp'] = sea_smoothed_22['temp'].rolling(window=22).mean()
+sea_smoothed_22['window'] = '22'
+
+sea_smoothed_26 = sea.copy()
+sea_smoothed_26['temp'] = sea_smoothed_26['temp'].rolling(window=26).mean()
+sea_smoothed_26['window'] = '26'
+
+sea_smoothed = pd.concat([sea_smoothed_24]).query('date.dt.hour == 0')
+```
+
+```{python}
+#| echo: false
+ojs_define(sea_smoothed = sea_smoothed.query('date.dt.month == 5'))
+#ojs_define(sea_may = sea.query('date.dt.month == 5'))
+
+```
+
+
+```{ojs}
+Plot.plot({
+        x: {type: 'utc'},
+        color: {legend: true},
+        height: 300,
+        width: 1000,
+        marks: [
+            Plot.line(transpose(sea_may), {x: 'date', y: 'temp', stroke: 'lightgrey'}),
+            Plot.line(transpose(sea_smoothed), {x: 'date', y: 'temp', stroke: 'window'}),
+            Plot.dot(transpose(sea_smoothed), {x: 'date', y: 'temp', fill: 'window'}),
+        ]
+})
+```
+
+
+## Population Adjustment
+
+::: {.small}
+
+
+::::: columns
+:::: {.column}
+![](pictures/gdp.png)
+::::
+:::: {.column}
+![](pictures/gdp_per_capita.png)
+::::
+:::::
+:::
+
+## Inflation Adjustment
+
+::: {.small}
+
+
+::::: columns
+:::: {.column}
+![](pictures/gdp.png)
+::::
+:::: {.column}
+![](pictures/real_GDP.png)
+::::
+:::::
+:::
+
+## Calendar adjustments
+
+![](pictures/sales.png)
+
+
+## Normalize to time
+
+```{ojs}
+viewof date = Scrubber(d3.union(stocks.map((d) => d.Date)), {
+  format: Plot.formatIsoDate,
+  initial: 500,
+  loop: false,
+  autoplay: false
+})
+{
+  const bisector = d3.bisector((i) => stocks[i].Date);
+  const basis = (I, Y) => Y[I[bisector.center(I, date)]];
+  return Plot.plot({
+    style: "overflow: visible;",
+    width: 1200,
+    y: {
+      type: "log",
+      grid: true,
+      label: "Change in price (%)",
+      tickFormat: ((f) => (x) => f((x - 1) * 100))(d3.format("+d"))
+    },
+    marks: [
+      Plot.ruleY([1]),
+      Plot.ruleX([date]),
+      Plot.lineY(stocks, Plot.normalizeY(basis, {
+        x: "Date",
+        y: "Close",
+        stroke: "Symbol"
+      })),
+      Plot.text(stocks, Plot.selectLast(Plot.normalizeY(basis, {
+        x: "Date",
+        y: "Close",
+        z: "Symbol",
+        text: "Symbol",
+        textAnchor: "start",
+        dx: 3
+      })))
+    ]
+  });
+}
+```
+
+
+
+## Log transform
+
+
+::: {.small}
+```{python}
+gdp = pd.read_csv('data/GDP.csv')
+gdp.DATE = pd.to_datetime(gdp.DATE)
+gdp['Log GDP'] = np.log(gdp['GDP']) 
+```
+
+::::: columns
+:::: {.column}
+```{ojs}
+//| echo: true
+
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'US GDP'}, width: 600, height: 400,
+    marks: [ 
+        Plot.lineY(gdp, {x: 'DATE', y: 'GDP', stroke: 'grey'}),
+    ]
+})
+```
+::::
+:::: {.column}
+```{ojs}
+//| echo: true
+
+Plot.plot({
+    x: {type: 'utc'}, y: {label: 'Log US GDP'}, width: 600, height: 400,
+    marks: [ 
+        Plot.lineY(gdp, {x: 'DATE', y: 'Log GDP', stroke: 'grey'}),
+    ]
+})
+```
+::::
+:::::
+:::
+
+## Seasonality
+
+::: {.small}
+```{ojs}
+Plot.plot({
+  width: 1200,
+  marks: [
+    Plot.lineY(seattle,  {x: 'date', y: 'temperature', stroke: 'lightgrey'}),
+  ]
+})
+```
+:::
+
+## Seasonality
+
+::: {.small}
+```{ojs}
+Plot.plot({
+  width: 1200,
+  y: {domain: [10, 22]},
+  marks: [
+    Plot.lineY(may,  {x: 'date', y: 'temperature', stroke: 'lightgrey'}),
+    Plot.dotY(may,  {x: 'date', y: 'temperature', fill: 'lightgrey', stroke: null}),
+  ]
+})
+```
+:::
+
+## Seasonality
+
+::: {.small}
+```{ojs}
+Plot.plot({
+  width: 1200,
+  y: {domain: [10, 22]},
+  marks: [
+    Plot.lineY(may,  {x: 'date', y: 'temperature', stroke: 'lightgrey'}),
+    Plot.dotY(may,  {x: 'date', y: 'temperature', fill: 'lightgrey', stroke: null}),
+  ]
+})
+```
+:::
+
+## Seasonality
+
+::: {.small}
+```{ojs}
+simpsons = FileAttachment("data/simpsons.csv").csv({typed: true})
+```
+```{ojs}
+//| echo: true
+Plot.plot({
+  padding: 0 ,grid: true, x: {axis: "top", label: "Season"}, y: {label: "Episode"},color: {type: "linear", scheme: "PiYG"},
+  marks: [
+    Plot.cell(simpsons, {x: "season", y: "number_in_season", fill: "imdb_rating", inset: 0.5}),
+    Plot.text(simpsons, {x: "season", y: "number_in_season", text: (d) => d.imdb_rating?.toFixed(1), fill: "black", title: "title"})
+  ]})
+```
+:::
+
+## Seasonality
+
+::: {.small}
+```{ojs}
+//| echo: true
+Plot.plot({
+  padding: 0 ,grid: true, x: {axis: "top", label: "Season"}, y: {label: "Episode"},color: {type: "linear", scheme: "spectral", legend: true}, width: 1200,
+  marks: [
+    Plot.lineY(simpsons, Plot.sort("number_in_season", {stroke: "season", x: "number_in_season", y: "imdb_rating", inset: 0.5})),
+  ]})
+```
+:::
+
+## Seasonality
+
+![](pictures/seasonality.png)
+
+## Smoothing seasonality
+
+::: {.small}
+```{ojs}
+viewof hour = Inputs.range([0, stride-1], {step: 1, value: 0, label: 'Hour'})
+viewof stride = Inputs.range([0, 47], {step: 1, value: 0, label: 'Stride'})
+viewof windowsize = Inputs.range([1, 300], {step: 1, value: 1, label: 'Window'})
+viewof anchor = Inputs.select(['start', 'middle', 'end'], {value: 'middle', label: 'anchor'})
+viewof highlight = Inputs.range([1, may.length - 1], {step: 1, value: 1, label: 'highlight'})
+
+area = {
+  let output;
+  if (anchor == 'middle') {
+    return [
+          [may[Math.max(Math.floor(highlight - windowsize / 2), 0)].date, 100], 
+          [may[Math.min(Math.floor(highlight + windowsize / 2), may.length - 1)].date, 100]
+         ];
+  } else if (anchor == 'start') {
+    return [
+          [may[Math.max(Math.floor(highlight), 0)].date, 100], 
+          [may[Math.min(Math.floor(highlight + windowsize), may.length - 1)].date, 100]
+         ]
+  } else if (anchor == 'end') {
+    return [
+          [may[Math.max(Math.floor(highlight - windowsize ), 0)].date, 100], 
+          [may[Math.min(Math.floor(highlight), may.length - 1)].date, 100]
+         ]
+  }
+  
+}
+Plot.plot({
+  width: 1200,
+  y: {domain: [10, 22]},
+  marks: [
+    Plot.lineY(may,  {x: 'date', y: 'temperature', stroke: 'lightgrey', strokeOpacity: 0.2}),
+    Plot.dotY(may,  {x: 'date', y: 'temperature', fill: 'lightgrey', stroke: null, fillOpacity: 0.2}),
+    Plot.lineY(may,  Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', stroke: 'lightgrey'})),
+    Plot.dotY(may,  Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', fill: 'lightgrey'})),
+    Plot.lineY(may,  Plot.filter((d, i) => ((i % stride) == hour), Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', stroke: 'black', }))),
+    Plot.dotY(may,  Plot.filter((d, i) => ((i % stride) == hour), Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', fill: 'red', }))),
+    Plot.dotY(may,  Plot.filter((d, i) => (i == highlight), Plot.windowY({k: windowsize, anchor: anchor}, {x: 'date', y: 'temperature', fill: 'firebrick'}))),
+    Plot.areaY(area,  {x: '0', y: '1', fill: 'red', fillOpacity: 0.1}),
+  ]
+})
+```
+:::
+
+## Decomposition with seasonality
+
+```{python}
+import vega_datasets
+seattle = vega_datasets.data.seattle_temps()
+seattle['date'] = pd.to_datetime(seattle.date)
+seattle['Trend'] = seattle.temp.rolling(window=24).mean()
+seattle['Detrended'] = seattle.temp - seattle.Trend
+seattle['hour'] = seattle.date.dt.hour
+hourly_means = seattle.groupby('hour', as_index=False).mean().rename(columns=dict(Detrended='hourly_temp'))
+seattle = seattle.merge(hourly_means[['hour', 'hourly_temp']], on='hour')
+seattle['Residuals'] = seattle.Detrended - seattle.hourly_temp
+```
+
+::: {.small}
+```{ojs}
+Plot.plot({
+  width: 1200, x:{type: 'utc'},
+  marks: [ 
+    Plot.lineY(seattlepd,  {x: 'date', y: 'Residuals', stroke: 'lightgrey'}),
+  ]
+})
+```
+:::
+
+
+
+```{python}
+ojs_define(sfT=sf)
+ojs_define(gdpT=gdp)
+ojs_define(seattleT=seattle)
+```
+
+```{ojs}
+sf = transpose(sfT)
+gdp = transpose(gdpT)
+
+seattlepd = transpose(seattleT)
+
+stocks = (await Promise.all([
+  FileAttachment("data/aapl.csv").csv({typed: true}).then((values) => ["AAPL", values]),
+  FileAttachment("data/amzn.csv").csv({typed: true}).then((values) => ["AMZN", values]),
+  FileAttachment("data/goog.csv").csv({typed: true}).then((values) => ["GOOG", values]),
+  FileAttachment("data/ibm.csv").csv({typed: true}).then((values) => ["IBM", values]),
+])).flatMap(([Symbol, values]) => values.map(d => ({Symbol, ...d})))
+
+aapl = stocks.filter((d) => d.Symbol == 'AAPL');
+
+function Scrubber(values, {
+  format = value => value,
+  initial = 0,
+  direction = 1,
+  delay = null,
+  autoplay = true,
+  loop = true,
+  loopDelay = null,
+  alternate = false
+} = {}) {
+  values = Array.from(values);
+  const form = html`<form style="font: 12px var(--sans-serif); font-variant-numeric: tabular-nums; display: flex; height: 33px; align-items: center;">
+  <button name=b type=button style="margin-right: 0.4em; width: 5em;"></button>
+  <label style="display: flex; align-items: center;">
+    <input name=i type=range min=0 max=${values.length - 1} value=${initial} step=1 style="width: 180px;">
+    <output name=o style="margin-left: 0.4em;"></output>
+  </label>
+</form>`;
+  let frame = null;
+  let timer = null;
+  let interval = null;
+  function start() {
+    form.b.textContent = "Pause";
+    if (delay === null) frame = requestAnimationFrame(tick);
+    else interval = setInterval(tick, delay);
+  }
+  function stop() {
+    form.b.textContent = "Play";
+    if (frame !== null) cancelAnimationFrame(frame), frame = null;
+    if (timer !== null) clearTimeout(timer), timer = null;
+    if (interval !== null) clearInterval(interval), interval = null;
+  }
+  function running() {
+    return frame !== null || timer !== null || interval !== null;
+  }
+  function tick() {
+    if (form.i.valueAsNumber === (direction > 0 ? values.length - 1 : direction < 0 ? 0 : NaN)) {
+      if (!loop) return stop();
+      if (alternate) direction = -direction;
+      if (loopDelay !== null) {
+        if (frame !== null) cancelAnimationFrame(frame), frame = null;
+        if (interval !== null) clearInterval(interval), interval = null;
+        timer = setTimeout(() => (step(), start()), loopDelay);
+        return;
+      }
+    }
+    if (delay === null) frame = requestAnimationFrame(tick);
+    step();
+  }
+  function step() {
+    form.i.valueAsNumber = (form.i.valueAsNumber + direction + values.length) % values.length;
+    form.i.dispatchEvent(new CustomEvent("input", {bubbles: true}));
+  }
+  form.i.oninput = event => {
+    if (event && event.isTrusted && running()) stop();
+    form.value = values[form.i.valueAsNumber];
+    form.o.value = format(form.value, form.i.valueAsNumber, values);
+  };
+  form.b.onclick = () => {
+    if (running()) return stop();
+    direction = alternate && form.i.valueAsNumber === values.length - 1 ? -1 : 1;
+    form.i.valueAsNumber = (form.i.valueAsNumber + direction) % values.length;
+    form.i.dispatchEvent(new CustomEvent("input", {bubbles: true}));
+    start();
+  };
+  form.i.oninput();
+  if (autoplay) start();
+  else stop();
+  Inputs.disposal(form).then(stop);
+  return form;
+}
+
+Plot = require('@observablehq/plot')
+data = require('vega-datasets')
+seattle = data['seattle-weather-hourly-normals.csv']()
+may = seattle.filter((d) => (new Date(d.date).getMonth()) == 5)
+```
+
+
+## Example: Retail employment
+
+```{python}
+#| echo: true
+retail = pd.read_csv('data/retail.csv')
+retail = retail.rename(columns=dict(CEU4200000001='retail'))
+retail.DATE = pd.to_datetime(retail.DATE)
+ggplot(retail) + geom_line(aes(x='DATE', y='retail')) + ggsize(1000, 400)
+```
+
+## Remove population component
+
+::: {.small}
+```{python}
+#| echo: true
+pop = pd.read_csv('data/population.csv')
+pop = pop.rename(columns=dict(POPTOTUSA647NWDB='population'))
+pop.DATE = pd.to_datetime(pop.DATE)
+pop.population = pop.population / 1000
+data = retail.merge(pop, how='left', on='DATE').interpolate().dropna().query('DATE < "2023-01-01"').reset_index(drop=True)
+data.retail = data.retail / data.population
+ggplot(data) + geom_line(aes(x='DATE', y='retail'))+ ggsize(1000, 400)
+```
+:::
+
+## Identify trend
+
+::: {.small}
+```{python}
+#| echo: true
+data['smoothed'] = data['retail'].rolling(window=12).mean()
+data['detrended'] = data['retail'] - data['smoothed']
+ggplot(data) + geom_line(aes(x='DATE', y='detrended')) + ggsize(1000, 300)
+```
+
+```{python}
+#| echo: true
+ggplot(data) + geom_line(aes(x='DATE', y='smoothed')) + ggsize(1000, 300)
+```
+:::
+
+## Identify seasonality
+
+::: {.small}
+```{python}
+#| echo: true
+data['month'] = data['DATE'].dt.month
+seasonal = data[['month', 'detrended']].groupby('month').mean().rename(columns=dict(detrended='seasonal'))
+data = data.merge(seasonal, on='month', how='left')
+data['residuals'] = data['detrended'] - data['seasonal']
+ggplot(data) + geom_line(aes(x='DATE', y='seasonal')) + ggsize(1000, 300)
+```
+
+```{python}
+#| echo: true
+ggplot(data) + geom_line(aes(x='DATE', y='residuals')) + ggsize(1000, 300)
+```
+:::
+
+## Correlation
+
+**Correlation coefficient:** Indicates the linear dependence between 2 variables ($X$ and $Y$)
+$$r = \frac{\sum_{i=1}^N (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^N(x_i - \bar{x})^2  \sum_{i=1}^N(y_i - \bar{y})^2}}$$
+
+
+## Correlation
+
+![](pictures/correlation.png)
+
+We modeled the linear relationship between variables with *linear regression* : $p(y\mid x) = \mathcal{N}(ax+ b, \sigma)$
+
+## Autocorrelation
+
+**Autocorrelation:** Indicates the linear dependence between a series and its *previous values* (at step $t-k$, where $k$ is the *order* of autocorrelation)
+$$r_k = \frac{\sum_{i=1}^N (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sqrt{\sum_{i=1}^N(y_t - \bar{y})^2}}$$
+
+## Autocorrelation
+
+::: {.small}
+```{python}
+#| echo: true
+ggplot(data) + geom_line(aes(x='DATE', y='residuals')) + ggsize(1000, 300)
+```
+
+```{python}
+#| echo: true
+autocorr = pd.DataFrame(dict(
+    lag=np.arange(1, 50),
+    corr=[data['residuals'].autocorr(i) for i in range(1, 50)]
+))
+ggplot(autocorr) + geom_lollipop(aes(x='lag', y='corr')) + ggsize(1000, 300)
+```
+
+:::
+
+## Autocorrelation
+
+::: {.small}
+```{python}
+#| echo: true
+ggplot(data) + geom_line(aes(x='DATE', y='residuals')) + ggsize(1000, 300)
+```
+
+```{python}
+#| echo: true
+lags = []
+for lag in range(1, 5):
+    lagframe = pd.DataFrame(dict(y_t=data['residuals'], y_lagged=data['residuals'].diff(lag))).dropna()
+    lagframe['lag'] = lag
+    lags.append(lagframe)
+lags = pd.concat(lags)
+
+ggplot(lags) + geom_point(aes(x='y_t', y='y_lagged')) + facet_grid(x='lag') + ggsize(1000, 300)
+```
+
+:::
+
+## Autoregression: AR(k)
+
+Model a timeseries using it's own past values!
+
+#### Using a single lag [AR(1)]
+$$p(y_t\mid y_{t-1}) = \mathcal{N}(a y_{t-1} + b, \sigma)$$
+
+#### Using k lags [AR(k)]
+$$p(y_t\mid y_{t-k}...y_{t-1}) = \mathcal{N}(\sum_{j=1}^k a_j y_{t-j} + b, \sigma)$$
+
+Fit with maximum likelihood!
+
+## Random Walk AR(1)
+
+::::: columns
+:::: {.column .small}
+```{ojs}
+viewof walks = Inputs.range([1, 10], {step: 1, value: 1, label: 'Number of walks'})
+viewof length = Inputs.range([100, 1000], {step: 1, value: 1, label: 'Length of walks'})
+```
+::::
+:::: {.column .small}
+```{ojs}
+viewof offset = Inputs.range([-3, 3], {step: 0.01, value: 0., label: 'Intercept'})
+viewof slope = Inputs.range([-1.3, 1.3], {step: 0.01, value: 0., label: 'Slope'})
+```
+::::
+:::::
+
+
+```{ojs}
+tex`p(x_t \mid x_{t-1}) = ${slope} x_{t-1} + ${offset} + \epsilon, \quad \epsilon \sim \mathcal{N}(0, 1)`
+```
+
+```{ojs}
+
+
+
+walk_data =  {
+    function randn() {
+        let u = 0, v = 0;
+        while(u === 0) u = Math.random(); //Converting [0,1) to (0,1)
+        while(v === 0) v = Math.random();
+        return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+    }
+
+    let data = [];
+
+    let step = {}
+
+    for (let walk = 0; walk < walks; walk++) {
+        let obs = {step: 0, value: 0, walk: walk};
+        data.push(obs)
+        for (let i = 1; i < length; i++) {
+            let value = obs.value * slope + offset + randn();
+            obs = {step: i, value: value, walk: walk};
+            data.push(obs)
+        }
+    }
+    return data;
+}
+
+Plot.plot({
+    y: {grid: true},
+    width: 1000, height: 300,
+    marks: [
+        Plot.lineY(walk_data,  {x: "step", y: "value", stroke: "walk"})
+    ]
+})
+```
+
+## Stationarity
+
+This model doesn't depend on $t$, therefore it is making an assumtion of **stationarity**
+
+A timeseries is **stationary** if the distribution of observations doesn't change over time. More formally *weak* stationarity says:
+
+![](pictures/stationarity.svg)
+
+:::: {.smallish}
+Note *seasonality* would violate these conditions!
+::::
+
+## Stationarity
+Which of these timeseries is **stationary**?
+![](pictures/stationary-1.png)
+
+## Making a timeseries stationary
+
+Removing *trends* and *seasonality* can get us towards stationarity
+
+- But removing trends with moving averages may not be good for forecasting
+
+## Making a timeseries stationary
+
+An alternative approach is *differencing*
+
+$$\hat{y}_t = y_t - y_{t-1}$$
+
+This can be repeated multiple times!
+
+
+## Differencing
+::::: columns
+:::: {.column}
+```{ojs}
+
+viewof shift = Inputs.range([0, 5], {step: 1, label: 'Shift', value: 1})
+```
+::::
+:::: {.column}
+```{ojs}
+viewof repeats = Inputs.range([0, 5], {step: 1, label: 'Repeats', value: 1})
+```
+::::
+:::::
+```{ojs}
+aapl_shift = {
+    let aapl_new = aapl.map((d) => ({Date: d.Date, Difference: d.Close, Close: d.Close, Reference: d.Close}))
+    
+    for (let i = 0; i < repeats; i++) {
+        let aapl_first = aapl_new.slice(0, -shift)
+        let aapl_second = aapl_new.slice(shift)
+
+        aapl_new = aapl_second.map((d, i) => ({Date: d.Date, Difference: d.Difference - (shift == 0 ? 0 : aapl_first[i].Difference), Close: d.Close, Reference: (shift == 0 ? d.Close : aapl_first[i].Close)}))
+    }
+
+    return aapl_new
+
+    // return aapl_second.map((d, i) => ({Date: d.Date, Difference: d.Close - (shift == 0 ? 0 : aapl_first[i].Close), Close: d.Close, Reference: (shift == 0 ? d.Close : aapl_first[i].Close)}))
+}
+
+
+Plot.plot({
+    y: {grid: true},
+    width: 1000, height: 300,
+    marks: [
+        Plot.lineY(aapl_shift, Plot.shiftX("25 days", {x: "Date", y: "Difference"}))
+    ]
+})
+
+```
+
+::::: columns
+:::: {.column}
+```{ojs}
+Plot.plot({
+    y: {grid: true},
+    width: 500, height: 300,
+    marks: [
+        Plot.differenceY(aapl_shift, {x: "Date", y1: "Close", y2: "Reference"})
+    ]
+})
+
+```
+::::
+:::: {.column}
+```{ojs}
+Plot.plot({
+    y: {grid: true},
+    width: 500, height: 300,
+    marks: [
+        Plot.dot(aapl_shift, {x: "Close", y: "Reference"})
+    ]
+})
+
+```
+::::
+:::::
+:::
+
+## Differencing
+
+::: {.small}
+```{python}
+#| echo: true
+ggplot(data) + geom_line(aes(x='DATE', y='residuals')) + ggsize(1000, 300)
+```
+
+```{python}
+#| echo: true
+autocorr = pd.DataFrame(dict(
+    lag=np.arange(1, 50),
+    corr=[data['residuals'].autocorr(i) for i in range(1, 50)]
+))
+ggplot(autocorr) + geom_lollipop(aes(x='lag', y='corr')) + ggsize(1000, 300)
+```
+
+:::
+
+## Differencing
+
+::: {.small}
+```{python}
+#| echo: true
+data['diff'] = data['residuals'].diff(1)
+ggplot(data) + geom_line(aes(x='DATE', y='diff')) + ggsize(1000, 300)
+```
+
+```{python}
+#| echo: true
+autocorr = pd.DataFrame(dict(
+    lag=np.arange(1, 50),
+    corr=[data['residuals'].diff(1).autocorr(i) for i in range(1, 50)]
+))
+ggplot(autocorr) + geom_lollipop(aes(x='lag', y='corr')) + ggsize(1000, 300)
+```
+
+:::
+
+
+
+
+
+
+
+
+

@@ -63,7 +63,7 @@ In designing your visualizations, you should focus on the following qualities fr
 
 ## Format and submission
 
-Assignments should follow the homework [Quarto/Jupyter template](https://github.com/gabehope/DataViz-Homework-Template). Each submission should be rendered as HTML and submitted through Canvas. 
+Assignments should follow the homework [Quarto/Jupyter template](https://github.com/gabehope/DataViz-Homework-Template). Each submission should be rendered as HTML and submitted through Canvas. Submission page is available [here](https://harveymuddcollege.instructure.com/courses/1728/assignments/10319).
 
 ## Rubric
 

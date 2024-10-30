@@ -1,0 +1,42 @@
+---
+format: 
+    pdf:
+        include-in-header: 
+            text: '\pagenumbering{gobble}'
+---
+
+
+# Name:
+
+*Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
+
+# Data Analytics and Visualization: Week 10 - Timeseries Models
+
+## In-class questions
+
+#### What examples of seasonality might we consider?
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  How could we use an autoregressive model for forecasting?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+
+
