@@ -1,0 +1,63 @@
+---
+format: 
+    pdf:
+        include-in-header: 
+            text: '\pagenumbering{gobble}'
+---
+
+
+# Name:
+
+*Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
+
+# Data Analytics and Visualization: Week 10 - Web visualization
+
+## In-class questions
+
+#### How would add years to the population pyramid plot?
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  How could one improve the effectiveness of the dynamic Pyramid?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  Choose an example from the taxonomy: how does this technique aid the viewer and reinforce good interaction priciples?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  Sketch how you might visualize and interact with the cars data 
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+
+

@@ -97,3 +97,12 @@ and Engagement with Pictographs](https://dl.acm.org/doi/pdf/10.1145/2702123.2702
 
 [Malofiej awards](https://www.malofiejgraphics.com/historia-y-ediciones-anteriores)
 
+## Blogs and articles
+
+[The Architecture of a Data Visualization](https://medium.com/accurat-in-sight/the-architecture-of-a-data-visualization-470b807799b4)
+
+[The death of interactive infographics?](https://medium.com/@dominikus/the-end-of-interactive-visualizations-52c585dcafcb)
+
+[The parable of polygons](https://ncase.me/polygons/)
+
+[One pixel wealth](https://mkorostoff.github.io/1-pixel-wealth/)
