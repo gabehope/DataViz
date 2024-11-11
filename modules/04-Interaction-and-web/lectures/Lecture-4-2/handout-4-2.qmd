@@ -6,7 +6,7 @@ format:
 ---
 
 
-# Name:
+# Name: 
 
 *Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
 
