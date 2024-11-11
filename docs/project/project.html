@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Prof.&nbsp;Gabe Hope">
+<meta name="dcterms.date" content="2024-08-01">
+
+<title>Useful references – Data Analytics and Visualization</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Data Analytics and Visualization</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../calendar/calendar.html"> 
+<span class="menu-text">Calendar</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-syllabus" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Syllabus</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-syllabus">    
+        <li>
+    <a class="dropdown-item" href="../syllabus/policies.html">
+ <span class="dropdown-text">Policies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../syllabus/rubric.html">
+ <span class="dropdown-text">Grading</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="../project/project.html">
+ <span class="dropdown-text">Project</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../resources/references.html">
+ <span class="dropdown-text">Reference materials</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../resources/software.html">
+ <span class="dropdown-text">Software &amp; tools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../resources/datasets.html">
+ <span class="dropdown-text">Datasets</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/gabehope/DataViz-Homework-Template">
+ <span class="dropdown-text">Homework template</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-links" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Links</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-links">    
+        <li>
+    <a class="dropdown-item" href="https://harveymuddcollege.instructure.com/courses/1728">
+ <span class="dropdown-text">Canvas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.gradescope.com/courses/839547">
+ <span class="dropdown-text">Gradescope</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#final-project" id="toc-final-project" class="nav-link active" data-scroll-target="#final-project">Final Project</a>
+  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#logistics" id="toc-logistics" class="nav-link" data-scroll-target="#logistics">Logistics</a>
+  <ul class="collapse">
+  <li><a href="#timeline" id="toc-timeline" class="nav-link" data-scroll-target="#timeline">Timeline</a></li>
+  <li><a href="#groups" id="toc-groups" class="nav-link" data-scroll-target="#groups">Groups</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  </ul></li>
+  <li><a href="#choosing-a-topic" id="toc-choosing-a-topic" class="nav-link" data-scroll-target="#choosing-a-topic">Choosing a Topic</a></li>
+  <li><a href="#proposal" id="toc-proposal" class="nav-link" data-scroll-target="#proposal">Proposal</a></li>
+  <li><a href="#final-deliverables" id="toc-final-deliverables" class="nav-link" data-scroll-target="#final-deliverables">Final Deliverables</a>
+  <ul class="collapse">
+  <li><a href="#article" id="toc-article" class="nav-link" data-scroll-target="#article">1. Article</a></li>
+  <li><a href="#technical-report" id="toc-technical-report" class="nav-link" data-scroll-target="#technical-report">2. Technical Report</a></li>
+  </ul></li>
+  <li><a href="#guidelines-and-grading-criteria" id="toc-guidelines-and-grading-criteria" class="nav-link" data-scroll-target="#guidelines-and-grading-criteria">Guidelines and Grading Criteria</a>
+  <ul class="collapse">
+  <li><a href="#proposal-10-of-total-grade" id="toc-proposal-10-of-total-grade" class="nav-link" data-scroll-target="#proposal-10-of-total-grade">Proposal (10% of Total Grade)</a></li>
+  <li><a href="#article-grading-criteria-45-of-total-grade" id="toc-article-grading-criteria-45-of-total-grade" class="nav-link" data-scroll-target="#article-grading-criteria-45-of-total-grade">Article Grading Criteria (45% of Total Grade)</a></li>
+  <li><a href="#technical-report-grading-criteria-45-of-total-grade" id="toc-technical-report-grading-criteria-45-of-total-grade" class="nav-link" data-scroll-target="#technical-report-grading-criteria-45-of-total-grade">Technical Report Grading Criteria (45% of Total Grade)</a></li>
+  </ul></li>
+  <li><a href="#additional-guidelines" id="toc-additional-guidelines" class="nav-link" data-scroll-target="#additional-guidelines">Additional Guidelines</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Useful references</h1>
+<p class="subtitle lead">Harvey Mudd College</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Prof.&nbsp;Gabe Hope </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 1, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="final-project" class="level1">
+<h1>Final Project</h1>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The final project for this course is an opportunity for you to apply the data analytics and visualization techniques you’ve learned to a real-world problem of your choice. Working in teams of 2-3, you will select a topic and dataset to analyze, focusing on a central thesis or research question. Your goal is to create insightful visualizations and analyses that illuminate your topic and provide valuable insights to readers.</p>
+<p>As in the homeworks, you’ll put youselves in the shoes of a researcher or data journalist. You’ll submit two separate reports:</p>
+<ol type="1">
+<li><strong>An Article</strong>: Aimed at a general audience, explaining the importance of your topic and illuminating it through compelling narratives and visualizations.</li>
+<li><strong>A Technical Report</strong>: Intended for a technical audience, detailing your data collection, processing, analysis methods, and the rationale behind your visualization choices.</li>
+</ol>
+<p>Additionally, as a first step, you’ll submit a proposal outlining the topic you’d like to explore and how you plan to apporach it. This will allow me to give feedback before you start on the assignment proper.</p>
+</section>
+<section id="logistics" class="level2">
+<h2 class="anchored" data-anchor-id="logistics">Logistics</h2>
+<section id="timeline" class="level3">
+<h3 class="anchored" data-anchor-id="timeline">Timeline</h3>
+<ul>
+<li>Friday, October 18 11:59pm Create a gradescope submission for your assignment with all group members.</li>
+<li>Friday, October 25 11:59pm Submit your final assignment on Gradescope</li>
+<li>Friday, October 25 11:59pm Submit your reflections on Gradescope.</li>
+<li>Tuesday, October 29 11:59pm Submit your peer feedback on Gradescope.</li>
+</ul>
+</section>
+<section id="groups" class="level3">
+<h3 class="anchored" data-anchor-id="groups">Groups</h3>
+<p>This assignment must be completed in groups of 2-3 students. You are free to switch groups from previous assignments if you’d like. The instructor reserves the right to add students to a group as needed.</p>
+</section>
+<section id="submission" class="level3">
+<h3 class="anchored" data-anchor-id="submission">Submission</h3>
+<p>All parts of the assignment should be submitted through Canvas.</p>
+</section>
+</section>
+<section id="choosing-a-topic" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-a-topic">Choosing a Topic</h2>
+<p>For this project, you are welcome (and encouraged) to revisit topics you looked at in prior assignments or to choose an entirely new area. In either case you should focus on exploring the topic in more depth than in previous assignments. In particular, you should consider a central focus for your assignment in the form of a thesis or research question. This could take a number of different forms depending on the data and your goals. Below are some broad approaches you could consider with some specific examples.</p>
+<section id="educating-the-public-on-an-important-issue" class="level4">
+<h4 class="anchored" data-anchor-id="educating-the-public-on-an-important-issue">Educating the public on an important issue</h4>
+<p>It can be difficult for non-experts to appreaciate the importance and nuances of a given topic. Visualization can be powerful tool for educating and persuading the general public. In the class we’ve discussed visualizations that help illustrate the scope and urgency of issues like climate change, wealth inequality, COVID spread and others.</p>
+<p>For an educational project you could consider creating a series of visualizations that help provide context for a given topic. For inspiration consider the following works that we’ve discussed in class:</p>
+<ul>
+<li><a href="https://www.washingtonpost.com/graphics/2018/national/segregation-us-cities/">Segregation in U.S. Cities</a></li>
+<li><a href="https://www.washingtonpost.com/graphics/2020/climate-environment/north-complex-fire-california-climate-change/?itid=lk_inline_manual_2">Fires in California</a></li>
+<li><a href="https://www.washingtonpost.com/graphics/2020/world/corona-simulator/?itid=lk_inline_manual_4">Covid Simulator</a></li>
+</ul>
+<p>You could also go a step beyond education on an issue by making a concrete recommendation. If you have a strong belief that we should implement a particular policy for climate change, criminal justice or just what kind of food the Hoc should serve can you support your case using the tools we’ve seen in class? Consider making visualizations that compare multiple alternatives or analysis that shows better outcomes with your proposal.</p>
+</section>
+<section id="answering-a-research-question" class="level4">
+<h4 class="anchored" data-anchor-id="answering-a-research-question">Answering a research question</h4>
+<p>We’ve explored quite a bit of probabalistic modeling in the class. A different approach to a project could be to try to answer a research question and support your answer through analysis and visualization. This could mean predicting the outcome of a future event such as an election or a sporting event using a probabilistic model or it could mean analyzing the relationship between multiple variables. For inspiration consider the following works that we’ve discussed in class:</p>
+<ul>
+<li><a href="https://projects.fivethirtyeight.com/2024-election-forecast/">FiveThirtyEight election model</a></li>
+<li><a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">Machine bias</a></li>
+</ul>
+</section>
+</section>
+<section id="proposal" class="level2">
+<h2 class="anchored" data-anchor-id="proposal">Proposal</h2>
+<p>Before diving into the full project, you are required to submit a proposal. The proposal serves to:</p>
+<ul>
+<li><strong>Clarify your project’s direction</strong>: Ensure that your topic, dataset, and research question are well-defined and feasible.</li>
+<li><strong>Receive feedback</strong>: Allow the instructor to provide guidance on your proposed approach.</li>
+</ul>
+<p>Your proposal should be a concise document (1-2 pages) that includes:</p>
+<ol type="1">
+<li><strong>Team Information</strong>:
+<ul>
+<li>Names of all (2-3) team members.</li>
+</ul></li>
+<li><strong>Topic Overview</strong>:
+<ul>
+<li>A brief description of the topic you have chosen.</li>
+<li>Explanation of the importance and relevance of the topic.</li>
+</ul></li>
+<li><strong>Dataset Description</strong>:
+<ul>
+<li>Source of the dataset (include a link if available).</li>
+<li>Summary of the dataset contents, including the number of observations, variables, and any notable features.</li>
+<li>Justification of why the dataset is appropriate for your topic.</li>
+</ul></li>
+<li><strong>Central Thesis or Research Question</strong>:
+<ul>
+<li>Clearly state your central thesis or research question. Think about the following questions:
+<ul>
+<li>What questions are you hoping to answer?</li>
+<li>What you you hope a reader will take away from your work?</li>
+</ul></li>
+</ul></li>
+<li><strong>Preliminary Plan for Visualization and Analysis</strong>:
+<ul>
+<li>Briefly outline the analytical methods and visualization techniques you plan to use.</li>
+</ul></li>
+<li><strong>Expected Challenges</strong>:
+<ul>
+<li>Identify potential obstacles or limitations you foresee in your project.</li>
+<li>Propose strategies for addressing these challenges.</li>
+</ul></li>
+</ol>
+<p>After proposals are submitted, I will schedule a short (5-10 mintue) meeting with each team either during class or in office hours.</p>
+</section>
+<section id="final-deliverables" class="level2">
+<h2 class="anchored" data-anchor-id="final-deliverables">Final Deliverables</h2>
+<p>You are required to submit two separate reports:</p>
+<section id="article" class="level3">
+<h3 class="anchored" data-anchor-id="article">1. Article</h3>
+<ul>
+<li><p><strong>Purpose</strong>: Present your findings in a format accessible to a general audience.</p></li>
+<li><p><strong>Content</strong>:</p>
+<ul>
+<li><strong>Introduction</strong>: Describe the importance of your topic and set the context.</li>
+<li><strong>Visualizations</strong>: Include at least 2-3 well-designed visualizations that support your central thesis or answer your research question.</li>
+<li><strong>Analysis</strong>: Explain how your visualizations and findings illuminate the topic.</li>
+<li><strong>Conclusion</strong>: Summarize your insights and their implications.</li>
+</ul></li>
+<li><p><strong>Visualizations</strong>:</p>
+<ul>
+<li>Use tools and techniques learned in class, such as:
+<ul>
+<li>Time series visualization</li>
+<li>Geo-spatial visualization</li>
+<li>Interaction and animation</li>
+<li>Dimensionality reduction</li>
+<li>Distribution fitting</li>
+<li>Predictive modeling</li>
+<li>Clustering</li>
+<li>Uncertainty quantification</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="technical-report" class="level3">
+<h3 class="anchored" data-anchor-id="technical-report">2. Technical Report</h3>
+<ul>
+<li><p><strong>Purpose</strong>: Provide a detailed account of your methodology for a technical audience.</p></li>
+<li><p><strong>Content</strong>:</p>
+<ul>
+<li><strong>Data Collection and Processing</strong>: Describe how you obtained and prepared your data.</li>
+<li><strong>Visualization Choices</strong>: Explain why you chose specific visualization techniques and what alternatives you considered.</li>
+<li><strong>Alignment with Goals</strong>: Discuss how your visualizations support your project’s goals and meet the criteria for good visualizations.</li>
+<li><strong>Statistical Models and Techniques</strong>: Detail any models or analytical methods used, including relevant equations and technical specifics.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="guidelines-and-grading-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="guidelines-and-grading-criteria">Guidelines and Grading Criteria</h2>
+<section id="proposal-10-of-total-grade" class="level3">
+<h3 class="anchored" data-anchor-id="proposal-10-of-total-grade">Proposal (10% of Total Grade)</h3>
+<p>Proposals will be <strong>only graded for completeness</strong> in providing a clear answer to the requirements outlined above.</p>
+<p>As you work on the proposal, though, you should consider the following guidelines:</p>
+<section id="clarity-and-completeness" class="level4">
+<h4 class="anchored" data-anchor-id="clarity-and-completeness">1. Clarity and Completeness</h4>
+<ul>
+<li>Include all required sections as specified in the proposal requirements.</li>
+<li>Convey your ideas clearly and concisely.</li>
+</ul>
+</section>
+<section id="feasibility-and-relevance" class="level4">
+<h4 class="anchored" data-anchor-id="feasibility-and-relevance">2. Feasibility and Relevance</h4>
+<ul>
+<li>The project scope is appropriate for the course timeline.</li>
+<li>The topic and dataset are relevant and significant.</li>
+</ul>
+</section>
+<section id="alignment-with-course-objectives" class="level4">
+<h4 class="anchored" data-anchor-id="alignment-with-course-objectives">3. Alignment with Course Objectives</h4>
+<ul>
+<li>Proposed methods align with techniques learned in class.</li>
+<li>Plan to use appropriate visualization tools and methods.</li>
+</ul>
+</section>
+</section>
+<section id="article-grading-criteria-45-of-total-grade" class="level3">
+<h3 class="anchored" data-anchor-id="article-grading-criteria-45-of-total-grade">Article Grading Criteria (45% of Total Grade)</h3>
+<p>Your article will be evaluated based on the following criteria:</p>
+<section id="motivation-20" class="level4">
+<h4 class="anchored" data-anchor-id="motivation-20">1. Motivation (20%)</h4>
+<ul>
+<li><strong>Significance</strong>: Clearly explain why the topic is of interest. A reader should believe that the topic is important and relevant.</li>
+<li><strong>Dataset Relevance</strong>: Justify how the dataset is appropriate for exploring your topic. Explain at a high-leve where the data came from and why it should be trusted.</li>
+</ul>
+</section>
+<section id="completeness-of-visualizations-20" class="level4">
+<h4 class="anchored" data-anchor-id="completeness-of-visualizations-20">2. Completeness of Visualizations (20%)</h4>
+<ul>
+<li><strong>Comprehensiveness</strong>: Ensure your visualizations cover all necessary aspects to provide a full understanding of the data. If nessecary, interactive visualizations can help readers explore data further.</li>
+<li><strong>Variety</strong>: Use different types of visualizations to capture various dimensions of the data. Make sure the the choices are justified in showing different properties.</li>
+<li><strong>Detail</strong>: Include sufficient detail in your visualizations to allow readers to grasp complex information. Don’t miss aspects such as legends or explanations where the context or readability of a visualization might be unclear.</li>
+</ul>
+</section>
+<section id="support-of-central-claims-or-questions-20" class="level4">
+<h4 class="anchored" data-anchor-id="support-of-central-claims-or-questions-20">3. Support of Central Claims or Questions (20%)</h4>
+<ul>
+<li><strong>Direct Connection</strong>: At least 1 visualization should directly relate to and support your thesis or answer your research question. That is, it should back up assertions made in the text. Other visualizations may serve the role of allowing readers to explore the data.</li>
+<li><strong>Evidence Presentation</strong>: Use data effectively to back up your claims.</li>
+<li><strong>Insightfulness</strong>: Make sure that the visualizations and analysis presented provide meaningful interpretations that go beyond surface-level observations.</li>
+</ul>
+</section>
+<section id="quality-of-visualizations-20" class="level4">
+<h4 class="anchored" data-anchor-id="quality-of-visualizations-20">4. Quality of Visualizations (20%)</h4>
+<ul>
+<li><strong>Effectiveness</strong>: Visualizations should communicate information clearly and accurately.</li>
+<li><strong>Expressiveness</strong>: Choose the right type of visualization for the data and message.</li>
+<li><strong>Accessibility</strong>: Ensure visualizations are easy to understand for your intended audience.</li>
+<li><strong>Impact</strong>: Design visualizations that are engaging and leave a lasting impression.</li>
+</ul>
+</section>
+<section id="clarity-of-writing-10" class="level4">
+<h4 class="anchored" data-anchor-id="clarity-of-writing-10">5. Clarity of Writing (10%)</h4>
+<ul>
+<li><strong>Coherence</strong>: Present ideas in a logical order with smooth transitions.</li>
+<li><strong>Language</strong>: Use clear, concise, and compelling language appropriate for a general audience.</li>
+<li><strong>Persuasion</strong>: Effectively convince the reader of your points through strong arguments and evidence.</li>
+</ul>
+</section>
+<section id="alignment-of-conclusions-with-analysis-10" class="level4">
+<h4 class="anchored" data-anchor-id="alignment-of-conclusions-with-analysis-10">6. Alignment of Conclusions with Analysis (10%)</h4>
+<ul>
+<li><strong>Consistency</strong>: Conclusions should logically follow from the data presented and analyzed.</li>
+<li><strong>Reflection</strong>: Discuss the implications of your findings thoughtfully.</li>
+<li><strong>Limitations</strong>: Acknowledge any limitations in your analysis that may affect your conclusions.</li>
+</ul>
+</section>
+</section>
+<section id="technical-report-grading-criteria-45-of-total-grade" class="level3">
+<h3 class="anchored" data-anchor-id="technical-report-grading-criteria-45-of-total-grade">Technical Report Grading Criteria (45% of Total Grade)</h3>
+<p>Your technical report will be evaluated based on the following criteria:</p>
+<section id="clarity-of-writing-25" class="level4">
+<h4 class="anchored" data-anchor-id="clarity-of-writing-25">1. Clarity of Writing (25%)</h4>
+<ul>
+<li><strong>Technical Precision</strong>: Use appropriate technical terminology accurately.</li>
+<li><strong>Organization</strong>: Structure the report logically with clear headings and subheadings.</li>
+<li><strong>Detail</strong>: Provide sufficient detail for replication of your work.</li>
+</ul>
+</section>
+<section id="alignment-of-choices-with-goals-25" class="level4">
+<h4 class="anchored" data-anchor-id="alignment-of-choices-with-goals-25">2. Alignment of Choices with Goals (25%)</h4>
+<ul>
+<li><strong>Methodological Justification</strong>: Explain how your data processing and visualization choices support your central thesis or research question.</li>
+<li><strong>Alternative Consideration</strong>: Discuss other methods or visualizations you considered and why they were not chosen.</li>
+<li><strong>Goal Consistency</strong>: Ensure all analytical steps are aligned with your project’s objectives.</li>
+</ul>
+</section>
+<section id="appropriateness-of-choices-for-the-data-25" class="level4">
+<h4 class="anchored" data-anchor-id="appropriateness-of-choices-for-the-data-25">3. Appropriateness of Choices for the Data (25%)</h4>
+<ul>
+<li><strong>Suitability</strong>: Use methods and visualizations appropriate for the type and quality of your data.</li>
+<li><strong>Data Integrity</strong>: Show how you handled data issues such as missing values or outliers.</li>
+<li><strong>Optimization</strong>: Explain how your choices maximize the effectiveness of data representation.</li>
+</ul>
+</section>
+<section id="technical-correctness-of-analysis-25" class="level4">
+<h4 class="anchored" data-anchor-id="technical-correctness-of-analysis-25">4. Technical Correctness of Analysis (25%)</h4>
+<ul>
+<li><strong>Accuracy</strong>: Ensure all calculations, models, and visualizations are technically correct.</li>
+<li><strong>Methodological Rigor</strong>: Apply statistical and analytical techniques properly.</li>
+<li><strong>Validation</strong>: Provide evidence or reasoning to support the validity of your analysis.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="additional-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="additional-guidelines">Additional Guidelines</h2>
+<ul>
+<li><strong>Academic Integrity</strong>: Ensure all work is original and properly cite any external sources.</li>
+<li><strong>Collaboration</strong>: All team members should contribute equally and will receive the same grade unless otherwise noted.</li>
+<li><strong>Consultation</strong>: Feel free to discuss your project with the instructor during office hours for guidance.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

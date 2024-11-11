@@ -18,6 +18,8 @@ website:
             text: Grading
       - text: Resources
         menu:
+          - href: project/project.qmd
+            text: Project
           - href: resources/references.qmd
             text: Reference materials
           - href: resources/software.qmd

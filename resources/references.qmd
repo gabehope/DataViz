@@ -106,3 +106,5 @@ and Engagement with Pictographs](https://dl.acm.org/doi/pdf/10.1145/2702123.2702
 [The parable of polygons](https://ncase.me/polygons/)
 
 [One pixel wealth](https://mkorostoff.github.io/1-pixel-wealth/)
+
+[Perception in visualization](https://www.csc2.ncsu.edu/faculty/healey/PP/)

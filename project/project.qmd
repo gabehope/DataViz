@@ -1,0 +1,227 @@
+---
+title: Useful references
+subtitle: Harvey Mudd College
+author: Prof. Gabe Hope
+date: August 2024
+format: html
+---
+
+# Final Project
+
+## Overview
+
+The final project for this course is an opportunity for you to apply the data analytics and visualization techniques you've learned to a real-world problem of your choice. Working in teams of 2-3, you will select a topic and dataset to analyze, focusing on a central thesis or research question. Your goal is to create insightful visualizations and analyses that illuminate your topic and provide valuable insights to readers. 
+
+As in the homeworks, you'll put youselves in the shoes of a researcher or data journalist. You'll submit two separate reports:
+
+1. **An Article**: Aimed at a general audience, explaining the importance of your topic and illuminating it through compelling narratives and visualizations.
+2. **A Technical Report**: Intended for a technical audience, detailing your data collection, processing, analysis methods, and the rationale behind your visualization choices.
+
+Additionally, as a first step, you'll submit a proposal outlining the topic you'd like to explore and how you plan to apporach it. This will allow me to give feedback before you start on the assignment proper.
+
+
+## Logistics
+### Timeline
+- Tuesday, November 19 11:59pm Submit a proposal with your group
+- Monday, December 9 11:59pm Submit your final assignment on Canvas
+- Friday, December 13 11:59pm Submit your final reflections and feedback on Canvas
+
+### Groups
+This assignment must be completed in groups of 2-3 students. You are free to switch groups from previous assignments if you’d like. The instructor reserves the right to add students to a group as needed.
+
+### Submission
+
+All parts of the assignment should be submitted through Canvas.
+
+## Choosing a Topic
+
+For this project, you are welcome (and encouraged) to revisit topics you looked at in prior assignments or to choose an entirely new area. In either case you should focus on exploring the topic in more depth than in previous assignments. In particular, you should consider a central focus for your assignment in the form of a thesis or research question. This could take a number of different forms depending on the data and your goals. Below are some broad approaches you could consider with some specific examples.
+
+#### Educating the public on an important issue 
+
+It can be difficult for non-experts to appreaciate the importance and nuances of a given topic. Visualization can be powerful tool for educating and persuading the general public. In the class we've discussed visualizations that help illustrate the scope and urgency of issues like climate change, wealth inequality, COVID spread and others. 
+
+For an educational project you could consider creating a series of visualizations that help provide context for a given topic. For inspiration consider the following works that we've discussed in class:
+
+- [Segregation in U.S. Cities](https://www.washingtonpost.com/graphics/2018/national/segregation-us-cities/)
+- [Fires in California](https://www.washingtonpost.com/graphics/2020/climate-environment/north-complex-fire-california-climate-change/?itid=lk_inline_manual_2)
+- [Covid Simulator](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/?itid=lk_inline_manual_4)
+
+
+You could also go a step beyond education on an issue by making a concrete recommendation. If you have a strong belief that we should implement a particular policy for climate change, criminal justice or just what kind of food the Hoc should serve can you support your case using the tools we've seen in class? Consider making visualizations that compare multiple alternatives or analysis that shows better outcomes with your proposal.
+
+#### Answering a research question
+
+We've explored quite a bit of probabalistic modeling in the class. A different approach to a project could be to try to answer a research question and support your answer through analysis and visualization. This could mean predicting the outcome of a future event such as an election or a sporting event using a probabilistic model or it could mean analyzing the relationship between multiple variables. For inspiration consider the following works that we've discussed in class:
+
+- [FiveThirtyEight election model](https://projects.fivethirtyeight.com/2024-election-forecast/)
+- [Machine bias](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)
+
+## Proposal
+
+Before diving into the full project, you are required to submit a proposal. The proposal serves to:
+
+- **Clarify your project's direction**: Ensure that your topic, dataset, and research question are well-defined and feasible.
+- **Receive feedback**: Allow the instructor to provide guidance on your proposed approach.
+
+Your proposal should be a concise document (1-2 pages) that includes:
+
+1. **Team Information**:
+   - Names of all (2-3) team members.
+   
+2. **Topic Overview**:
+   - A brief description of the topic you have chosen.
+   - Explanation of the importance and relevance of the topic.
+
+3. **Dataset Description**:
+   - Source of the dataset (include a link if available).
+   - Summary of the dataset contents, including the number of observations, variables, and any notable features.
+   - Justification of why the dataset is appropriate for your topic.
+
+4. **Central Thesis or Research Question**:
+   - Clearly state your central thesis or research question. Think about the following questions:
+        - What questions are you hoping to answer?
+        - What you you hope a reader will take away from your work?
+
+5. **Preliminary Plan for Visualization and Analysis**:
+   - Briefly outline the analytical methods and visualization techniques you plan to use.
+
+6. **Expected Challenges**:
+   - Identify potential obstacles or limitations you foresee in your project.
+   - Propose strategies for addressing these challenges.
+
+After proposals are submitted, I will schedule a short (5-10 mintue) meeting with each team either during class or in office hours.
+
+## Final Deliverables
+
+You are required to submit two separate reports:
+
+### 1. Article
+
+- **Purpose**: Present your findings in a format accessible to a general audience.
+
+- **Content**:
+  - **Introduction**: Describe the importance of your topic and set the context.
+  - **Visualizations**: Include at least 2-3 well-designed visualizations that support your central thesis or answer your research question.
+  - **Analysis**: Explain how your visualizations and findings illuminate the topic.
+  - **Conclusion**: Summarize your insights and their implications.
+
+- **Visualizations**:
+  - Use tools and techniques learned in class, such as:
+    - Time series visualization
+    - Geo-spatial visualization
+    - Interaction and animation
+    - Dimensionality reduction
+    - Distribution fitting
+    - Predictive modeling
+    - Clustering
+    - Uncertainty quantification
+
+### 2. Technical Report
+
+- **Purpose**: Provide a detailed account of your methodology for a technical audience.
+
+- **Content**:
+  - **Data Collection and Processing**: Describe how you obtained and prepared your data.
+  - **Visualization Choices**: Explain why you chose specific visualization techniques and what alternatives you considered.
+  - **Alignment with Goals**: Discuss how your visualizations support your project's goals and meet the criteria for good visualizations.
+  - **Statistical Models and Techniques**: Detail any models or analytical methods used, including relevant equations and technical specifics.
+
+## Guidelines and Grading Criteria
+
+### Proposal  (10% of Total Grade)
+
+Proposals will be **only graded for completeness** in providing a clear answer to the requirements outlined above. 
+
+As you work on the proposal, though, you should consider the following guidelines:
+
+#### 1. Clarity and Completeness
+
+  - Include all required sections as specified in the proposal requirements.
+  - Convey your ideas clearly and concisely.
+
+#### 2. Feasibility and Relevance
+
+  - The project scope is appropriate for the course timeline.
+  - The topic and dataset are relevant and significant.
+
+#### 3. Alignment with Course Objectives
+
+  - Proposed methods align with techniques learned in class.
+  - Plan to use appropriate visualization tools and methods.
+
+### Article Grading Criteria (45% of Total Grade)
+
+Your article will be evaluated based on the following criteria:
+
+#### 1. Motivation (20%)
+
+- **Significance**: Clearly explain why the topic is of interest. A reader should believe that the topic is important and relevant.
+- **Dataset Relevance**: Justify how the dataset is appropriate for exploring your topic. Explain at a high-leve where the data came from and why it should be trusted.
+
+#### 2. Completeness of Visualizations (20%)
+
+  - **Comprehensiveness**: Ensure your visualizations cover all necessary aspects to provide a full understanding of the data. If nessecary, interactive visualizations can help readers explore data further.
+  - **Variety**: Use different types of visualizations to capture various dimensions of the data. Make sure the the choices are justified in showing different properties.
+  - **Detail**: Include sufficient detail in your visualizations to allow readers to grasp complex information. Don't miss aspects such as legends or explanations where the context or readability of a visualization might be unclear.
+
+#### 3. Support of Central Claims or Questions (20%)
+
+  - **Direct Connection**: At least 1 visualization should directly relate to and support your thesis or answer your research question. That is, it should back up assertions made in the text. Other visualizations may serve the role of allowing readers to explore the data.
+  - **Evidence Presentation**: Use data effectively to back up your claims.
+  - **Insightfulness**: Make sure that the visualizations and analysis presented provide meaningful interpretations that go beyond surface-level observations.
+
+#### 4. Quality of Visualizations (20%)
+
+  - **Effectiveness**: Visualizations should communicate information clearly and accurately.
+  - **Expressiveness**: Choose the right type of visualization for the data and message.
+  - **Accessibility**: Ensure visualizations are easy to understand for your intended audience.
+  - **Impact**: Design visualizations that are engaging and leave a lasting impression.
+
+#### 5. Clarity of Writing (10%)
+
+  - **Coherence**: Present ideas in a logical order with smooth transitions.
+  - **Language**: Use clear, concise, and compelling language appropriate for a general audience.
+  - **Persuasion**: Effectively convince the reader of your points through strong arguments and evidence.
+
+#### 6. Alignment of Conclusions with Analysis (10%)
+
+  - **Consistency**: Conclusions should logically follow from the data presented and analyzed.
+  - **Reflection**: Discuss the implications of your findings thoughtfully.
+  - **Limitations**: Acknowledge any limitations in your analysis that may affect your conclusions.
+
+### Technical Report Grading Criteria (45% of Total Grade)
+
+Your technical report will be evaluated based on the following criteria:
+
+#### 1. Clarity of Writing (25%)
+
+  - **Technical Precision**: Use appropriate technical terminology accurately.
+  - **Organization**: Structure the report logically with clear headings and subheadings.
+  - **Detail**: Provide sufficient detail for replication of your work.
+
+#### 2. Alignment of Choices with Goals (25%)
+
+  - **Methodological Justification**: Explain how your data processing and visualization choices support your central thesis or research question.
+  - **Alternative Consideration**: Discuss other methods or visualizations you considered and why they were not chosen.
+  - **Goal Consistency**: Ensure all analytical steps are aligned with your project's objectives.
+
+#### 3. Appropriateness of Choices for the Data (25%)
+
+- **Suitability**: Use methods and visualizations appropriate for the type and quality of your data.
+- **Data Integrity**: Show how you handled data issues such as missing values or outliers.
+- **Optimization**: Explain how your choices maximize the effectiveness of data representation.
+
+#### 4. Technical Correctness of Analysis (25%)
+
+- **Accuracy**: Ensure all calculations, models, and visualizations are technically correct.
+- **Methodological Rigor**: Apply statistical and analytical techniques properly.
+- **Validation**: Provide evidence or reasoning to support the validity of your analysis.
+
+
+## Additional Guidelines
+
+- **Academic Integrity**: Ensure all work is original and properly cite any external sources.
+- **Collaboration**: All team members should contribute equally and will receive the same grade unless otherwise noted.
+- **Consultation**: Feel free to discuss your project with the instructor during office hours for guidance.
+

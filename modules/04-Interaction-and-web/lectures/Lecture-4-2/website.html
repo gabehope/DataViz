@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Data Visualization</h1>
+    <p>
+        <button onclick="addCircle()">Show</button>
+        <button onclick="removeCircle()">Hide</button>
+    </p>
+    <svg width="400" height="300" >
+        <g id="circles">
+            <circle id="bluecircle" cx="150" cy="90" r="30" fill="blue"></circle>
+            <circle id="redcircle" cx="50" cy="50" r="30" fill="red"></circle>
+        </g>
+    </svg>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script>
+    let redcircle = document.getElementById('redcircle');
+    let circles = document.getElementById('circles');
+
+    function removeCircle() {
+        redcircle.remove()
+    }
+
+    function addCircle() {
+        circles.appendChild(redcircle);
+    }
+
+    function moveCircle() {
+        const duration = 1000;
+        let i = 0;
+        setInterval(() => {
+            const t = Math.min(i++ / duration, 1);
+            redcircle.setAttribute('cx', t * 150 + (1 - t) * 50);
+            redcircle.setAttribute('cy', t * 90 + (1 - t) * 50);
+        }, 1);
+    }
+    redcircle.addEventListener('click', moveCircle);
+    
+    </script>
+</body>
+</html> 
