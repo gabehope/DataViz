@@ -18,8 +18,6 @@ website:
             text: Grading
       - text: Resources
         menu:
-          - href: project/project.qmd
-            text: Project
           - href: resources/references.qmd
             text: Reference materials
           - href: resources/software.qmd
@@ -34,6 +32,8 @@ website:
             text: Canvas
           - href: https://www.gradescope.com/courses/839547
             text: Gradescope
+      - href: project/project.qmd
+        text: Project
 
 
 format:
