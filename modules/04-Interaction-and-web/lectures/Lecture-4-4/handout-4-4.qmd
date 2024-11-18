@@ -1,0 +1,61 @@
+---
+format: 
+    pdf:
+        include-in-header: 
+            text: '\pagenumbering{gobble}'
+---
+
+
+# Name: 
+
+*Complete this worksheet during class and turn it in at the end. Please **print your full name above** to ensure participation credit.*
+
+# Data Analytics and Visualization: Week 12 - Perception and animation
+
+## In-class questions
+
+#### Did you find any of the pre-attentive features or Gestalt principles surprising?
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  What changed in the dollar bill image?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  What happened in the story?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
+####  Do you agree with the animation principles?
+
+|
+|
+|
+|
+|
+|
+|
+|
+
